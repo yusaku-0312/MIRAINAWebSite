@@ -6,12 +6,12 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://miraina.co.jp/new-app/services.html</loc>
+    <loc>https://miraina.co.jp/services.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://miraina.co.jp/new-app/contact.html</loc>
+    <loc>https://miraina.co.jp/contact.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
