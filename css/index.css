@@ -27,9 +27,6 @@
     padding: 0 20px;
     width: 100%;
     max-width: 100%;
-    animation: none; /* アニメーションをJSで制御するため削除 */
-    opacity: 0;
-    transform: translateY(20px);
     transition: opacity 1.5s ease, transform 1.5s ease;
 }
 
