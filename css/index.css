@@ -1,0 +1,620 @@
+/* ===== Hero Section Styles ===== */
+
+.hero-section {
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+.hero-animation-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 100%;
+    animation: none; /* アニメーションをJSで制御するため削除 */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    background: linear-gradient(70deg, #4e74ff, #FFFFFF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* 以下のアニメーション関連スタイルを削除 */
+    opacity: 1;
+    transform: none;
+    animation: none;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    font-weight: 400;
+    color: #CCCCCC;
+    margin-bottom: 40px;
+    /* 以下のアニメーション関連スタイルを削除 */
+    opacity: 1;
+    transform: none;
+    animation: none;
+}
+
+.hero-cta {
+    /* 以下のアニメーション関連スタイルを削除 */
+    opacity: 1;
+    transform: none;
+    animation: none;
+}
+  
+  .cta-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #1E90FF;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(30, 144, 255, 0.3);
+  }
+  
+  .cta-button:hover {
+    background: linear-gradient(45deg, #5FA8FF, #9DB3FF);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(95, 168, 255, 0.4);
+}
+
+  /* ===== Scroll Indicator Styles ===== */
+  .scroll-indicator {
+    position: absolute;
+    bottom: 100px;   /* ← 好みで調整 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    opacity: 0;
+    animation: heroFadeIn 1.5s ease forwards 2s;
+    cursor: pointer;
+}
+  
+  .scroll-arrow {
+    font-size: 24px;
+    color: #FFFFFF;
+    animation: heroBounce 2s infinite;
+  }
+  
+  .scroll-text {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #CCCCCC;
+  }
+  
+  /* ===== Hero Animations ===== */
+  @keyframes heroFadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes heroBounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  /* ===== Services Section ===== */
+.services-section {
+    padding: 0;
+    background: #fff;
+}
+
+/* --- ヘッダー帯 --- */
+.services-header {
+    background: linear-gradient(135deg, #0f2b4c 20%, #1e90ff 80%, #67c6ff 100%);
+    margin-top: 120px;
+    padding: 60px 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+.services-title {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.services-subtitle {
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+/* --- サービス一覧 --- */
+.services-content {
+    background: #ffffff;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* サービスカード */
+.service-item {
+    background: #f5f8ff;
+    border-radius: 12px;
+    padding: 30px 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* 小見出し */
+.service-heading {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #0f2b4c;
+}
+
+/* 説明文 */
+.service-description {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+}
+  
+  /* ===== Responsive Styles ===== */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 36px;
+    }
+    
+    .hero-subtitle {
+      font-size: 18px;
+    }
+    
+    .cta-button {
+      padding: 12px 30px;
+      font-size: 16px;
+    }
+    
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .works-section {
+    padding: 100px 0;
+    margin-bottom: 50px;
+    background-color: #f5f5f5; /* 薄いグレー */
+}
+
+
+/* ===== Blog Section ===== */
+.blog-section {
+    padding: 0;
+}
+
+/* 見出し部分 */
+.blog-header {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url('/static/images/blog_background.png');
+
+}
+
+.blog-header-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+
+.blog-header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+}
+
+.blog-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.blog-subtitle {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* ===== Blog Grid ===== */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+/* ===== Blog Card ===== */
+.blog-card {
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #ffffff;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.blog-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.blog-content {
+    padding: 20px;
+}
+
+.blog-date {
+    font-size: 14px;
+    color: #888888;
+    margin-bottom: 5px;
+}
+
+.blog-card-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #222222;
+}
+
+.blog-excerpt {
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.6;
+}
+
+/* ===== Contact Section Styles ===== */
+.contact-section {
+  margin-top: 50px;
+  padding: 100px 0;
+  background: linear-gradient(135deg, #0a192f 0%, #102a43 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated background elements */
+
+.contact-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Section header styling */
+.contact-section .section-header {
+  text-align: center;
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.contact-section .section-header.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-section .section-title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #FFFFFF;
+  position: relative;
+  display: inline-block;
+}
+
+.contact-section .section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(45deg, #4E74FF, #87CEFA);
+  transform: translateX(-50%);
+  transition: width 1.2s ease;
+}
+
+.contact-section .section-header.animate .section-title::after {
+  width: 150px;
+}
+
+.contact-section .section-description {
+  font-size: 18px;
+  color: #CCCCCC;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+/* Contact content layout */
+.contact-section .contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.contact-section .contact-text {
+  flex: 1;
+  min-width: 300px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transform: translateX(-50px);
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  text-align: center;
+}
+
+.contact-section .contact-text.animate {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.contact-section .contact-text p {
+  font-size: 18px;
+  color: #FFFFFF;
+  margin-bottom: 25px;
+  line-height: 1.7;
+}
+
+.contact-section .contact-features {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0 0 0;
+}
+
+.contact-section .contact-features li {
+  padding-left: 0px;
+  margin-bottom: 15px;
+  position: relative;
+  text-align: center;
+  color: #CCCCCC;
+  font-size: 16px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+
+.contact-section .contact-features li.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-section .contact-features li::before {
+  content: "✓";
+  position: relative;
+  left: 0;
+  margin-right: 5px;
+  top: 0;
+  color: #39ff14;
+  font-weight: bold;
+}
+
+
+.contact-section .contact-button-container {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(50px);
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.contact-section .contact-button-container.animate {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.contact-section .contact-button {
+  display: inline-block;
+  padding: 18px 40px;
+  background: linear-gradient(45deg, #1E90FF, #4e74ff);
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(30, 144, 255, 0.4);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.contact-section .contact-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(45deg, #4E74FF, #87CEFA);
+  transition: width 0.5s ease;
+  z-index: -1;
+}
+
+.contact-section .contact-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(30, 144, 255, 0.5);
+}
+
+.contact-section .contact-button:hover::before {
+  width: 100%;
+}
+
+
+/* Animation keyframes */
+@keyframes floatElement {
+  0%, 100% {
+      transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+      transform: translate(15px, -15px) rotate(5deg);
+  }
+  50% {
+      transform: translate(0, 10px) rotate(0deg);
+  }
+  75% {
+      transform: translate(-15px, -5px) rotate(-5deg);
+  }
+}
+
+/* ===== More Link ===== */
+.more-link-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.more-link {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #1e90ff;
+    color: #ffffff;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.more-link:hover {
+    background: #39ff14;
+}
+
+
+  @media (max-width: 480px) {
+    .hero-title {
+      font-size: 28px;
+    }
+    
+    .hero-subtitle {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+    
+    .cta-button {
+      padding: 10px 24px;
+      font-size: 14px;
+    }
+  }
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .contact-section {
+      padding: 80px 0;
+  }
+  
+  .contact-section .section-title {
+      font-size: 32px;
+  }
+  
+  .contact-section .section-description {
+      font-size: 16px;
+  }
+  
+  .contact-section .contact-content {
+      flex-direction: column;
+      gap: 30px;
+  }
+  
+  .contact-section .contact-text, 
+  .contact-section .contact-button-container {
+      width: 100%;
+      transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+      padding: 60px 0;
+  }
+  
+  .contact-section .section-title {
+      font-size: 28px;
+  }
+  
+  .contact-section .contact-text p {
+      font-size: 16px;
+  }
+  
+  .contact-section .contact-features li {
+      font-size: 14px;
+  }
+  
+  .contact-section .contact-button {
+      padding: 15px 30px;
+      font-size: 16px;
+      width: 100%;
+      text-align: center;
+  }
+}

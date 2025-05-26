@@ -1,0 +1,46 @@
+/* ===== Contact Hero Section ===== */
+.contact-hero {
+  padding: 100px 0 60px;
+  background: linear-gradient(135deg, #0f2b4c, #1e90ff);
+  color: #fff;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.contact-subtitle {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* ===== Contact Form Section ===== */
+.contact-form-section {
+  background-color: #f5f5f5;
+  padding: 60px 20px;
+}
+
+.form-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 28px;
+  }
+  .contact-subtitle {
+    font-size: 16px;
+  }
+  .form-wrapper {
+    padding: 20px;
+  }
+}
