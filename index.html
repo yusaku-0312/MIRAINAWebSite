@@ -61,10 +61,13 @@
 <body>
     <header class="site-header">
         <div class="header-container">
-            <h1 class="site-logo"><a href="/index.html">MIRAINA</a></h1>
+            <h1 class="site-logo"><a href="/index.html"><img src="/images/company-logo.png" alt="MIRAINAロゴ" class="logo-img"></a></h1>
             <nav class="global-nav">
                 <ul>
                     <li><a href="/services.html" class="nav-link">サービス</a></li>
+                    <li><a href="/about.html" class="nav-link">会社情報</a></li>
+                    <li><a href="/works.html" class="nav-link">実績</a></li>
+                    <li><a href="/blogs.html" class="nav-link">ブログ</a></li>
                     <li><a href="/contact.html" class="nav-link contact-btn">お問い合わせ</a></li>
                 </ul>
             </nav>
@@ -78,6 +81,9 @@
     <nav class="mobile-nav">
         <ul>
             <li><a href="/services.html">サービス</a></li>
+            <li><a href="/about.html">会社情報</a></li>
+            <li><a href="/works.html">実績</a></li>
+            <li><a href="/blogs.html">ブログ</a></li>
             <li><a href="/contact.html">お問い合わせ</a></li>
         </ul>
     </nav>
@@ -114,6 +120,115 @@
                 </div>
             </div>
         </section>
+        <!-- Works Section -->
+        <section class="works-section" id="works">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">実績</h2>
+                    <p class="section-description">様々な業種・業界のAI導入を<br>成功に導いた事例をご紹介します</p>
+                </div>
+                <div class="works-grid">
+                    <div class="work-card">
+                        <div class="work-image">
+                            <img src="/static/images/work-1.jpg" alt="製造業A社の事例" width="400" height="260">
+                        </div>
+                        <div class="work-content">
+                            <p class="work-category">製造業</p>
+                            <h3 class="work-title">生産管理プロセスの自動化によるコスト削減</h3>
+                            <p class="work-description">生成AIを活用した在庫最適化システムの導入により、年間コストを30%削減に成功しました。</p>
+                            <a href="/works/manufacturing-case" class="work-link">詳細を見る</a>
+                        </div>
+                    </div>
+                    <div class="work-card">
+                        <div class="work-image">
+                            <img src="/static/images/work-2.jpg" alt="小売業B社の事例" width="400" height="260" loading="lazy">
+                        </div>
+                        <div class="work-content">
+                            <p class="work-category">小売業</p>
+                            <h3 class="work-title">顧客体験向上のためのAIチャットボット導入</h3>
+                            <p class="work-description">24時間対応のAIチャットボットにより、顧客満足度が25%向上し、問い合わせ対応コストを削減。</p>
+                            <a href="/works/retail-case" class="work-link">詳細を見る</a>
+                        </div>
+                    </div>
+                    <div class="work-card">
+                        <div class="work-image">
+                            <img src="/static/images/work-3.jpg" alt="サービス業C社の事例" width="400" height="260" loading="lazy">
+                        </div>
+                        <div class="work-content">
+                            <p class="work-category">サービス業</p>
+                            <h3 class="work-title">社内ナレッジ管理システムの構築</h3>
+                            <p class="work-description">大量の社内ドキュメントをAIで分析・整理し、検索効率を10倍に改善。情報共有が活性化しました。</p>
+                            <a href="/works/service-case" class="work-link">詳細を見る</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="more-link-container">
+                    <a href="/works.html" class="more-link">AI導入による業務効率化事例一覧を見る</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+       <section class="blog-section" id="blog">
+
+            <!-- Blog Header -->
+            <div class="blog-header">
+                <div class="blog-header-content">
+                    <h2 class="blog-title">ブログ</h2>
+                    <p class="blog-subtitle">AI活用のヒントとなる<br>最新情報をお届けします</p>
+                </div>
+            </div>
+
+            <!-- Blog Cards -->
+            <div class="container">
+                <div class="blog-grid">
+                    <div class="blog-card">
+                        <a href="https://note.com/miraina/articles/example1" target="_blank" rel="noopener noreferrer" class="blog-link">
+                            <div class="blog-image">
+                                <img src="/static/images/blog_card1.png" alt="中小企業におけるAI活用の最新トレンド" width="400" height="240" loading="lazy">
+                            </div>
+                            <div class="blog-content">
+                                <p class="blog-date">2025.03.15</p>
+                                <h3 class="blog-card-title">中小企業におけるAI活用の最新トレンド</h3>
+                                <p class="blog-excerpt">2025年に注目すべき生成AIの活用法と導入のポイントについて解説します。</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="blog-card">
+                        <a href="https://note.com/miraina/articles/example2" target="_blank" rel="noopener noreferrer" class="blog-link">
+                            <div class="blog-image">
+                                <img src="/static/images/blog_card2.png" alt="成功するAI導入プロジェクトの進め方" width="400" height="240" loading="lazy">
+                            </div>
+                            <div class="blog-content">
+                                <p class="blog-date">2025.03.01</p>
+                                <h3 class="blog-card-title">成功するAI導入プロジェクトの進め方</h3>
+                                <p class="blog-excerpt">AI導入プロジェクトで多くの企業が陥る失敗とその解決策を徹底解説します。</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="blog-card">
+                        <a href="https://note.com/miraina/articles/example3" target="_blank" rel="noopener noreferrer" class="blog-link">
+                            <div class="blog-image">
+                                <img src="/static/images/blog_card3.png" alt="生成AIツールの比較検証" width="400" height="240" loading="lazy">
+                            </div>
+                            <div class="blog-content">
+                                <p class="blog-date">2025.02.15</p>
+                                <h3 class="blog-card-title">生成AIツールの比較検証</h3>
+                                <p class="blog-excerpt">主要な生成AIツールの機能・コスト・使いやすさを徹底的に比較検証しました。</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="more-link-container">
+                    <a href="/blogs.html" class="more-link">AI活用コラム・最新ニュースをすべて見る</a>
+                </div>
+            </div>
+        </section>
+
+
         <!-- Contact Section -->
         <section class="contact-section" id="contact">
             <div class="container">
@@ -145,6 +260,9 @@
             <div class="footer-nav">
                 <ul>
                     <li><a href="/services.html">サービス</a></li>
+                    <li><a href="/about.html">会社情報</a></li>
+                    <li><a href="/works.html">実績</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
                     <li><a href="/contact.html">お問い合わせ</a></li>
                     <li><a href="https://www.notion.so/1cbc499245c180c19d13d1674064825e?pvs=4">プライバシーポリシー</a></li>
                 </ul>
