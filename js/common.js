@@ -103,4 +103,23 @@ document.addEventListener('DOMContentLoaded', function() {
         link.classList.add('active');
       }
     });
+    
+    // === Aboutページ用：MVVセクションのフェードイン ===
+    var mvvSections = document.querySelectorAll('.mvv-section');
+    if (!mvvSections.length) return;
+    var observer = new window.IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    mvvSections.forEach(function(section) {
+      observer.observe(section);
+    });
+    
+    if (window.location.pathname.match(/about\.html$/)) {
+      document.body.classList.add('about-page');
+    }
   });
