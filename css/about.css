@@ -1,0 +1,173 @@
+/* about.html専用: Vision, Mission, Values セクション */
+.about-section-block {
+  text-align: center;
+  margin: 60px 0 40px 0;
+}
+.about-section-block .about-section-title {
+  font-size: 2.4rem;
+  color: #1976d2;
+  margin-bottom: 1.2rem;
+}
+.about-section-block .about-section-catch {
+  font-size: 1.4rem;
+  color: #333;
+  font-weight: bold;
+}
+.about-section-block .about-section-desc {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 0.7em;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-values-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+}
+.about-values-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(30,144,255,0.08);
+  width: 340px;
+  padding: 28px 22px;
+  text-align: left;
+}
+.about-values-card-title {
+  color: #1976d2;
+  font-size: 1.3rem;
+  margin-bottom: 0.7em;
+}
+.about-values-card-strong {
+  font-size: 1.05rem;
+}
+.about-values-card-list {
+  font-size: 0.98rem;
+  margin: 0.7em 0 0 1.1em;
+  color: #444;
+}
+
+.about-main-visual {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  display: block;
+  margin: 0 auto 40px auto;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(30,144,255,0.10);
+}
+
+/* 会社概要ブロック - 上端揃え配置 */
+.about-company-block {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  margin: 80px auto 60px auto;
+  max-width: 1000px;
+  padding: 0 40px;
+}
+
+/* 左側：会社情報ブロック */
+.about-company-content {
+  flex: 1 1 400px;
+  max-width: 450px;
+  min-width: 300px;
+  text-align: left;
+}
+.about-company-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 2rem;
+  margin-top: 0;
+  text-align: left;
+}
+.about-company-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 24px;
+  font-size: 1.1rem;
+}
+.about-company-table th {
+  text-align: left;
+  font-weight: 600;
+  padding-right: 2rem;
+  color: #666;
+  white-space: nowrap;
+  width: 80px;
+}
+.about-company-table td {
+  font-weight: 500;
+  color: #222;
+}
+
+/* 右側：会社写真ブロック */
+.about-company-image {
+  flex: 1 1 350px;
+  max-width: 350px;
+  min-width: 250px;
+}
+.about-company-image img {
+  width: 100%;
+  height: auto;
+  max-height: 280px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  object-fit: cover;
+  display: block;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 900px) {
+  .about-company-block {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin: 60px auto 40px auto;
+    text-align: center;
+  }
+  
+  .about-company-content {
+    max-width: 100%;
+  }
+  
+  .about-company-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-company-table {
+    font-size: 1.1rem;
+    margin: 0 auto;
+    max-width: 300px;
+  }
+  
+  .about-company-table th {
+    padding-right: 1.5rem;
+  }
+  
+  .about-company-image {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-company-title {
+    font-size: 1.8rem;
+  }
+  
+  .about-company-table {
+    font-size: 1rem;
+  }
+  
+  .about-company-block {
+    gap: 30px;
+    margin: 40px auto 30px auto;
+  }
+}
