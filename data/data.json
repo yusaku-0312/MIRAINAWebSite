@@ -746,6 +746,24 @@
       "alt": "GPT-5.4 Thinking OSWorld人間超え 3モデル構成 ChatGPT ビジネス活用",
       "link": "/blogs/blog083.html",
       "date": "2026-04-07"
+    },
+    {
+      "id": 84,
+      "title": "【2026年4月最新】Claude vs ChatGPT完全比較：コスト・機能・用途別の使い分けガイド",
+      "description": "Claude Opus 4.6（$5/100万トークン）とGPT-5.4（$2.5/100万トークン）を料金・性能・用途別に徹底比較。長文書処理ならClaude、マルチモーダル活用ならGPT-5.4という具体的な判断基準と失敗事例を解説。",
+      "thumbnail": "/images/blogs_images/blog-card084.webp",
+      "alt": "Claude vs ChatGPT 2026年比較 コスト 機能 使い分けガイド",
+      "link": "/blogs/blog084.html",
+      "date": "2026-04-07"
+    },
+    {
+      "id": 85,
+      "title": "【2026年4月最新】AnthropicがOpenAI収益を超えた背景と中小企業のAI選定戦略",
+      "description": "2026年4月、AnthropicがOpenAIを上回る年間収益ランレート300億ドルを達成。Fortune 10の8社がClaude採用、エンタープライズ顧客2ヶ月で倍増の背景と日本の中小企業が学べるAI選定の視点を解説。",
+      "thumbnail": "/images/blogs_images/blog-card085.webp",
+      "alt": "Anthropic OpenAI 収益 超え 2026年4月 中小企業 AI選定",
+      "link": "/blogs/blog085.html",
+      "date": "2026-04-07"
     }
   ],
   "works": [
