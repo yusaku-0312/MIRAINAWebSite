@@ -737,6 +737,15 @@
       "alt": "Gemma 4 Apache 2.0 商用解禁 オープンAI 中小企業活用",
       "link": "/blogs/blog082.html",
       "date": "2026-04-06"
+    },
+    {
+      "id": 83,
+      "title": "【2026年3月最新】GPT-5.4 Thinkingとは？OSWorld人間超え・3モデル構成で変わるChatGPTビジネス活用ガイド",
+      "description": "2026年3月5日にOpenAIが発表したGPT-5.4の3モデル構成（Standard・Thinking・Pro）とOSWorld 75.0%・GDPval 83.0%の意味を解説。Thinking機能の「途中介入」で変わる業務活用と、中小企業が今日から始めるChatGPT実践ガイド。",
+      "thumbnail": "/images/blogs_images/blog-card083.webp",
+      "alt": "GPT-5.4 Thinking OSWorld人間超え 3モデル構成 ChatGPT ビジネス活用",
+      "link": "/blogs/blog083.html",
+      "date": "2026-04-07"
     }
   ],
   "works": [

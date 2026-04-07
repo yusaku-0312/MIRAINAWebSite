@@ -77,6 +77,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: GPT-4o終了とは？ChatGPTモデル移行で企業が確認すべき3つのこと](https://miraina-ai.com/blogs/blog051.html): OpenAIが案内したGPT-4o終了を解説。2026年2月13日のChatGPT退役、4月3日のCustom GPT完全終了、企業が今すぐ進めるべきモデル移行の確認ポイントを整理した記事。
 - [最新ブログ: Work IQとは？Copilotが社内文脈を理解する仕組み](https://miraina-ai.com/blogs/blog050.html): Microsoftが2026年3月9日に打ち出したWork IQを解説。Microsoft 365 Copilotがメール・会議・文書・チャットを横断して社内文脈を理解する仕組み、Copilot CoworkやE7との関係、中小企業での活用ポイントを整理した記事。
 - [最新ブログ: GPT-5.4 MiniとNanoとは？高速・低コストな小型AIモデルの活用法](https://miraina-ai.com/blogs/blog047.html): OpenAIが2026年3月17日に発表したGPT-5.4 MiniとNanoを解説。Miniはフラッグシップ比で入力コスト70%削減・速度3倍以上、Nanoは入力$0.20/1Mトークンの最安クラス。サブエージェント構成での活用法と中小企業のコスト最適化ポイントを整理した記事。
+- [最新ブログ: GPT-5.4 Thinkingとは？OSWorld人間超え・3モデル構成で変わるChatGPTビジネス活用ガイド](https://miraina-ai.com/blogs/blog083.html): 2026年3月5日にOpenAIが発表したGPT-5.4を解説。OSWorld-Verified 75.0%で人間の正答率72.4%を超えた意味、GDPval 83.0%・BrowseComp 82.7%・SWE-Bench Pro 57.7%・Financial Modeling 87.3%のベンチマーク読み解き、Standard・Thinking・Proの3バリアント構成と料金比較、Thinking機能の「計画提示＋途中介入」という新インタラクション、中小企業向け営業提案書・財務自動化・競合調査・PC業務自動化の4活用例、ChatGPT Plus から始める3ステップを整理した記事。
 - [最新ブログ: Gemma 4とは？Apache 2.0商用解禁・4モデル構成で変わるオープンAIの中小企業活用ガイド](https://miraina-ai.com/blogs/blog082.html): 2026年4月2日にGoogleが公開したGemma 4を解説。Gemmaシリーズ初のApache 2.0商用解禁、E2B〜31B Denseの4モデル構成、AIME数学4.3倍・LiveCodeBench 2.7倍向上のベンチマーク結果、オンプレ社内RAG・モバイルオフライン・エージェント業務自動化の活用シーン別実装例、中小企業が試す3ステップを整理した記事。
 - [最新ブログ: AIエージェント導入ガイド：SOMPO30,000人導入に見る中小企業向け3つの成功パターン](https://miraina-ai.com/blogs/blog081.html): SOMPOが2026年1月に開始した30,000人規模のAIエージェント導入から見える、中小企業向けの3つの成功パターン（ノーコード基盤・複数システム連携・組織設計の変革）を解説。ノーコード実装の3ステップ、営業・マーケティング自動化の活用シーン別実装フロー、ROI測定の4つの重要指標、導入失敗回避チェックリストを整理した記事。
 - [最新ブログ: LLMO効果測定とは？AI引用シェアを可視化する3指標と実践ツール比較](https://miraina-ai.com/blogs/blog080.html): LLMO効果測定の3指標（AI言及シェア・引用ドメインランキング・AI経由CV率）と2026年最新ツールを解説。Keywordmap「AI検索結果レポート（β版）」（2026年3月31日リリース）の機能、Otterly.ai・Ahrefsとの比較、8割超の企業が対策中のいまLLMO測定を始める3ステップを整理した記事。
@@ -110,6 +111,6 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - **キーワード:** 生成AI, ChatGPT, Claude, Gemini, n8n, AI導入, AI研修, AI開発, AIチャットボット, RAG, LLMO, AIO, SEO, AI検索, 業務自動化, 業務効率化。
 - **方向性:** AI導入で「週休4日制」が当たり前になる未来を、九州から全国へ。
 - **代表:** 芝 優作
-- **コンテンツの厚み:** 2026-04-05時点でブログ77本、事例8件を掲載。AIニュースの解説だけでなく、LLMO対策、導入実務、LLMO/AIO、業務改善、n8n活用、AIコーディング導入、AIエージェント評価、RAG・社内検索基盤、物理AI・工場自動化、カスタマイズAI、AIコンタクトセンター、社内文脈を扱うCopilot基盤、ChatGPTのファイル再利用・社内資料活用、AI検索経由の商品発見とEC対策、AIインフラ投資の読み解き、AIメモリと会話履歴引き継ぎの実務解説、OpenAIスーパーアプリ戦略などの長文記事を含みます。
+- **コンテンツの厚み:** 2026-04-07時点でブログ83本、事例9件を掲載。AIニュースの解説だけでなく、LLMO対策、導入実務、LLMO/AIO、業務改善、n8n活用、AIコーディング導入、AIエージェント評価、RAG・社内検索基盤、物理AI・工場自動化、カスタマイズAI、AIコンタクトセンター、社内文脈を扱うCopilot基盤、ChatGPTのファイル再利用・社内資料活用、AI検索経由の商品発見とEC対策、AIインフラ投資の読み解き、AIメモリと会話履歴引き継ぎの実務解説、OpenAIスーパーアプリ戦略などの長文記事を含みます。
 - **詳細ページのパターン:** ブログは `/blogs/blogXXX.html`、事例は `/works/workXXX.html`、サービス詳細は `/services/*.html`。
 - **信頼情報:** `/about.html` に理念・代表情報、`/works.html` に具体的実績、`/blogs.html` に専門解説記事が集約されています。

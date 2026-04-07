@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年3月最新】GPT-5.4 Thinkingとは？OSWorld人間超え・3モデル構成で変わるChatGPTビジネス活用ガイド | MIRAINAブログ</title>
+    <meta name="description"
+        content="2026年3月5日にOpenAIが発表したGPT-5.4の3モデル構成（Standard・Thinking・Pro）とOSWorld 75.0%・GDPval 83.0%の意味を解説。Thinking機能の「途中介入」で変わる業務活用と、中小企業が今日から始めるChatGPT実践ガイド。">
+    <meta property="og:title" content="【2026年3月最新】GPT-5.4 Thinkingとは？OSWorld人間超え・3モデル構成で変わるChatGPTビジネス活用ガイド">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog083.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog083-1.webp">
+    <meta property="og:description"
+        content="2026年3月5日にOpenAIが発表したGPT-5.4の3モデル構成（Standard・Thinking・Pro）とOSWorld 75.0%・GDPval 83.0%の意味を解説。Thinking機能の「途中介入」で変わる業務活用と、中小企業が今日から始めるChatGPT実践ガイド。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>GPT-5.4 Thinkingとは？OSWorld人間超え・3モデル構成で変わるChatGPTビジネス活用ガイド</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.04.07</span>
+                    <div class="article-tags">
+                        <p class="article-tag">GPT-5.4</p>
+                        <p class="article-tag">OpenAI</p>
+                        <p class="article-tag">ChatGPT</p>
+                        <p class="article-tag">AI活用</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年3月最新】GPT-5.4 Thinkingとは？OSWorld人間超え・3モデル構成で変わるChatGPTビジネス活用ガイド</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog083-1.webp" alt="GPT-5.4 Thinking OSWorld人間超え 3モデル構成 ChatGPT ビジネス活用" width="800" height="450"
+                        fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    2026年3月5日、OpenAIは新フロンティアモデル「GPT-5.4」を正式発表した。
+                    最大の特徴は<strong>PCデスクトップ操作（OSWorld）で人間の正答率72.4%を超える75.0%</strong>を達成したこと——AIが初めてPC作業で人間を上回ったことを意味する。
+                    GPT-5.4はStandard・Thinking・Proの<strong>3バリアント構成</strong>で提供され、
+                    Thinking版では「事前に作業計画を提示→途中から方向修正できる」という新しいインタラクションが可能になった。
+                    専門知識業務（GDPval）では<strong>83.0%</strong>、ソフトウェアエンジニアリング（SWE-Bench Pro）では<strong>57.7%</strong>を記録。
+                    本記事では、GPT-5.4の3モデル構成とベンチマークの意味、中小企業が業務で今日から使える実践ガイドを解説する。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. GPT-5.4とは？2026年3月5日発表の概要と3モデル構成</a></li>
+                    <li><a href="#section2">2. Thinking機能の仕組み：計画提示と「途中介入」で変わるAIとの協働</a></li>
+                    <li><a href="#section3">3. ベンチマーク解説：OSWorld人間超え75.0%・GDPval 83.0%の意味</a></li>
+                    <li><a href="#section4">4. 中小企業向け活用シーン：営業・財務分析・業務自動化の具体例</a></li>
+                    <li><a href="#section5">5. まとめ：GPT-5.4 Thinkingを今日から試す3ステップ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="section1">1. GPT-5.4とは？2026年3月5日発表の概要と3モデル構成</h2>
+
+                <p>
+                    【公式情報】GPT-5.4はOpenAIが2026年3月5日にリリースしたフロンティアモデルで、
+                    推論・コーディング・エージェント機能を1つのモデルに統合したのが最大の特徴だ。
+                    最大<strong>約105万トークンのコンテキストウィンドウ</strong>（API版）をサポートし、
+                    長期にわたるタスクの計画・実行・検証をエージェントが単独でこなせるようになった。
+                </p>
+
+                <p>
+                    GPT-5.4は用途と予算に応じた<strong>3つのバリアント</strong>で提供される。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>モデル名</th>
+                                <th>主な特徴</th>
+                                <th>API料金（入力/出力 per 1Mトークン）</th>
+                                <th>推奨用途</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>GPT-5.4 Standard</th>
+                                <td>高速・汎用。日常的なビジネスタスク向け</td>
+                                <td>$2.50 / $15.00</td>
+                                <td>文書作成、要約、Q&amp;A</td>
+                            </tr>
+                            <tr>
+                                <th>GPT-5.4 Thinking</th>
+                                <td>推論特化。作業計画提示＋途中介入が可能</td>
+                                <td>（Standardより高め）</td>
+                                <td>複雑分析、多段階ワークフロー</td>
+                            </tr>
+                            <tr>
+                                <th>GPT-5.4 Pro</th>
+                                <td>最高性能。精度が最優先の高度な専門業務向け</td>
+                                <td>$30.00 / $180.00</td>
+                                <td>法律・金融モデリング、研究</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    【解釈】ChatGPT Plusユーザーは3時間ウィンドウ内でThinkingを最大80メッセージまで利用できる。
+                    API経由では272,000トークンを超えるリクエストで入力料金が2倍・出力料金が1.5倍に変わる点に注意が必要だ。
+                    日常的な問い合わせにはStandard、複雑な推論が必要なタスクにはThinking、
+                    法律・金融など精度最優先の場面にはProという使い分けが基本になる。
+                </p>
+
+                <p>
+                    【仮説】GPT-5.4の最も革新的な点は「PC操作のネイティブ対応」だ。
+                    Codex版・API版では、エージェントがスクリーンショットを参照しながら
+                    マウスクリックやキーボード入力を自律的に実行できる。
+                    Excelの集計・メール返信・ブラウザ操作といった「人間がPCで行う反復業務」をそのままAIに委譲できる時代が到来したことを意味する。
+                </p>
+
+                <h2 id="section2">2. Thinking機能の仕組み：計画提示と「途中介入」で変わるAIとの協働</h2>
+
+                <p>
+                    【公式情報】GPT-5.4 Thinkingには、従来の推論モデルにはない2つの固有機能がある。
+                </p>
+
+                <p>
+                    <strong>機能①：事前作業計画の提示（Short Work Plan）</strong><br>
+                    複雑なクエリに対してThinkingは、最終回答を出力する前に
+                    「どのような手順でこのタスクを解くか」の短い計画を先に提示する。
+                    ユーザーは計画を見て「この方向性で進めて」と承認するか、
+                    「この部分は別のアプローチにして」と修正してから処理を進められる。
+                    これまでのAIは「入力→出力」の一方通行だったが、
+                    Thinkingは<strong>設計段階での人間のフィードバックを受け取る設計</strong>になっている。
+                </p>
+
+                <p>
+                    <strong>機能②：途中介入（Mid-Response Steering）</strong><br>
+                    処理中でも方向を変更できるのがThinkingの最大の差別化ポイントだ。
+                    AIが長い回答を生成している途中で「やはり要点だけ3行にまとめて」と指示を変えられる。
+                    長大なレポートや複雑な分析を依頼したとき、出力が完了するまで待つ必要がなくなり、
+                    <strong>人間とAIが並走しながら成果物を仕上げる協働スタイル</strong>が実現する。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">従来モデル（Standard）</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>入力→出力の一方向</li>
+                                    <li>出力完了まで修正不可</li>
+                                    <li>方向性のズレは再入力で対処</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">→</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">GPT-5.4 Thinking</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>計画提示→承認→実行</strong></li>
+                                    <li>処理途中でも方向修正OK</li>
+                                    <li>人間とAIが並走して成果物を作成</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">図1：StandardとThinkingのインタラクション比較</p>
+                </div>
+
+                <p>
+                    【解釈】この設計は特に「正解が一つではない業務」で威力を発揮する。
+                    マーケティング戦略の立案、事業計画書の作成、M&amp;Aのデューデリジェンスといった
+                    「人間のジャッジが入ることで初めて価値が出る業務」では、
+                    計画段階で方向性を合わせてから深掘りできるThinkingのほうが
+                    Standard版より最終成果物の質が上がりやすい。
+                </p>
+
+                <h2 id="section3">3. ベンチマーク解説：OSWorld人間超え75.0%・GDPval 83.0%の意味</h2>
+
+                <p>
+                    【公式情報】OpenAIが発表したGPT-5.4のベンチマーク結果は以下の通り。
+                    いずれもGPT-5.2（旧モデル）から大幅な改善が見られる。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>ベンチマーク</th>
+                                <th>GPT-5.2（旧）</th>
+                                <th>GPT-5.4（新）</th>
+                                <th>人間ベースライン</th>
+                                <th>評価対象</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>OSWorld-Verified</th>
+                                <td>—</td>
+                                <td><strong>75.0%</strong></td>
+                                <td>72.4%</td>
+                                <td>PCデスクトップ操作全般</td>
+                            </tr>
+                            <tr>
+                                <th>GDPval</th>
+                                <td>70.9%</td>
+                                <td><strong>83.0%</strong></td>
+                                <td>—</td>
+                                <td>44職種の専門知識業務</td>
+                            </tr>
+                            <tr>
+                                <th>BrowseComp</th>
+                                <td>65.8%</td>
+                                <td><strong>82.7%</strong></td>
+                                <td>—</td>
+                                <td>Web上の複合情報収集</td>
+                            </tr>
+                            <tr>
+                                <th>SWE-Bench Pro</th>
+                                <td>—</td>
+                                <td><strong>57.7%</strong></td>
+                                <td>—</td>
+                                <td>ソフトウェアエンジニアリング</td>
+                            </tr>
+                            <tr>
+                                <th>Financial Modeling</th>
+                                <td>68.4%</td>
+                                <td><strong>87.3%</strong></td>
+                                <td>—</td>
+                                <td>投資銀行業務タスク</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    【解釈】OSWorld 75.0%が意味するのは「AIが一般的なPCユーザーよりも正確にデスクトップ操作をこなせるようになった」ということだ。
+                    ただし、これはベンチマーク環境での数値であり、実業務の特定のソフトウェアや社内システムで
+                    同等の精度が出るとは限らない。
+                    パイロット実証（PoC）で自社環境との相性を確認することが導入の前提になる。
+                </p>
+
+                <p>
+                    GDPval 83.0%は44職種にわたる専門知識業務での正答率で、
+                    前モデルGPT-5.2の70.9%から<strong>12ポイント改善</strong>している。
+                    特に金融モデリングでは87.3%（GPT-5.2比+19ポイント）という大幅な向上が見られ、
+                    財務・会計系の定型分析タスクは今後AIに委譲できる範囲が広がると予想される。
+                </p>
+
+                <p>
+                    【仮説】BrowseComp 82.7%の向上が経営者・マーケターにとって最も実感しやすい改善かもしれない。
+                    競合調査、市場トレンドの把握、補助金情報の収集といった
+                    「複数のWebページを横断して答えを組み合わせる調査業務」が、
+                    GPT-5.4では大幅に精度が上がった。
+                    情報収集に費やしていた時間を大幅に短縮できる可能性がある。
+                </p>
+
+                <h2 id="section4">4. 中小企業向け活用シーン：営業・財務分析・業務自動化の具体例</h2>
+
+                <p>
+                    GPT-5.4の3バリアントをビジネス用途別に整理すると、中小企業がすぐに活用できる場面が見えてくる。
+                </p>
+
+                <p>
+                    <strong>活用例①：営業提案書・企画書の作成（Thinking推奨）</strong><br>
+                    顧客の課題や要件を入力するとThinkingが「どの課題を優先し、どのような構成にするか」の計画を提示する。
+                    営業担当者が計画に修正を入れてから詳細化する流れで、
+                    <strong>1件あたりの作成時間を大幅に短縮</strong>しながら提案の質を高められる。
+                    実際に、投資対効果（ROI）の試算や30日間パイロット計画を含む提案書を
+                    Thinkingで生成できたという報告が複数ある。
+                </p>
+
+                <p>
+                    <strong>活用例②：月次財務レポートの自動化（Standard推奨）</strong><br>
+                    GPT-5.4はExcel・Google Sheetsとの直接連携機能を備えており、
+                    売上データを貼り付けると月次P&amp;Lの集計・グラフ生成・コメント作成を自動化できる。
+                    専門の財務アナリストを雇わなくても、<strong>毎月の財務報告書を1時間以内に完成させる</strong>ことが可能になる。
+                </p>
+
+                <p>
+                    <strong>活用例③：競合・市場調査の効率化（Thinking推奨）</strong><br>
+                    BrowseComp 82.7%の精度を活かした用途だ。
+                    「〇〇業界の競合5社の価格戦略と差別化ポイントを調べてまとめて」という指示に対し、
+                    複数の情報源を横断収集して構造化したレポートを生成する。
+                    従来2〜3時間かかっていた調査が、<strong>15〜30分に短縮</strong>できる場合がある。
+                </p>
+
+                <p>
+                    <strong>活用例④：PC反復業務の自動化（Codex版・エージェント活用）</strong><br>
+                    Codex版GPT-5.4はPC操作のネイティブ対応により、
+                    「受注メールをExcelに転記→請求書PDFを作成→クライアントにメール送信」といった
+                    複数アプリをまたぐ反復ワークフローを自律実行できる。
+                    月間数十時間に及ぶ定型作業を大幅に削減できるが、
+                    実装にはエンジニアリングの知識が必要なため、外部支援の活用も検討したい。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">ChatGPT Plus<br>でThinkingを<br>体験</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">自社業務で<br>PoC実施<br>（2〜4週間）</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">ROI確認後<br>APIで本番<br>実装</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図2：中小企業がGPT-5.4を導入する3ステップ</p>
+                </div>
+
+                <h2 id="section5">5. まとめ：GPT-5.4 Thinkingを今日から試す3ステップ</h2>
+
+                <p>
+                    GPT-5.4は「AIがPCで人間を超えた」という一行で語られがちだが、
+                    経営者・マーケターにとってより重要なのは<strong>「Thinkingによって人間とAIの協働が双方向になった」</strong>という変化だ。
+                    計画段階で方向性を合わせ、途中で修正しながら成果物を仕上げるスタイルは、
+                    「AIが生成したものをそのまま使う」という受け身の使い方から、
+                    「AIをチームメンバーとして業務に組み込む」段階への移行を意味する。
+                </p>
+
+                <p>
+                    ただし、OSWorld 75.0%という数字はベンチマーク環境での結果であり、
+                    自社の特定ツールやワークフローで同等の精度が出るかは実証が必要だ。
+                    「まずChatGPT PlusでThinkingの体験→2〜4週間のPoC→ROI確認後にAPI実装」という
+                    3ステップで、小さく始めて効果を検証してから本格投資に進むことを推奨する。
+                </p>
+
+                <p>
+                    GPT-5.4 Thinking、Claude Opus 4.6、Gemini 3.1 Proなど2026年のAIモデルは
+                    いずれも高水準に達しており、「どのモデルが最強か」よりも
+                    「自社の業務フローにどう組み込むか」の設計が競争力の差になる時代に入っている。
+                </p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://openai.com/index/introducing-gpt-5-4/" target="_blank" rel="noopener">OpenAI公式：Introducing GPT-5.4（2026年3月5日）</a></li>
+                        <li><a href="https://help.openai.com/ja-jp/articles/11909943-gpt-5-in-chatgpt" target="_blank" rel="noopener">OpenAI ヘルプセンター：ChatGPTにおけるGPT-5.3とGPT-5.4</a></li>
+                        <li><a href="https://www.itmedia.co.jp/aiplus/articles/2603/06/news073.html" target="_blank" rel="noopener">ITmedia AI+：OpenAI、「GPT-5.4」リリース PC操作のネイティブ対応、思考の途中変更も可能に（2026年3月6日）</a></li>
+                        <li><a href="https://weel.co.jp/media/tech/gpt5-4/" target="_blank" rel="noopener">WEEL：まさかの人間越え！？GPT-5.4とは？PC自動操作・105万トークン対応モデルを徹底解説</a></li>
+                        <li><a href="https://www.ai-souken.com/article/what-is-gpt-5-4" target="_blank" rel="noopener">AI総合研究所：GPT-5.4とは？使い方や料金、Pro・Thinkingの違いを解説</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">GPT-5.4の自社活用でお悩みですか？</h2>
+                    <p class="cta-text">MIRAINAでは、ChatGPT・Claude・Geminiを活用した<br>業務自動化・AI導入支援をサポートします。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog079.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card079.webp" alt="Gemini 3.1 Pro関連記事" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.05</div>
+                            <div class="related-text">【2026年2月最新】Gemini 3.1 Proとは？16ベンチマーク13冠・GPQA 94.3%で変わるAIモデル選びの判断基準</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog082.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card082.webp" alt="Gemma 4関連記事" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.06</div>
+                            <div class="related-text">【2026年4月最新】Gemma 4とは？Apache 2.0商用解禁・4モデル構成で変わるオープンAIの中小企業活用ガイド</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog078.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card078.webp" alt="Claude Opus 4.6関連記事" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.05</div>
+                            <div class="related-text">【2026年4月最新】Claude Opus 4.6とは？1Mトークン・Agent Teamsが中小企業のAI活用を変える実装ガイド</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p class="footer-copy">&copy; 2025 MIRAINA All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>
