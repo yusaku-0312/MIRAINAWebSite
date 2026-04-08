@@ -764,6 +764,24 @@
       "alt": "Anthropic OpenAI 収益 超え 2026年4月 中小企業 AI選定",
       "link": "/blogs/blog085.html",
       "date": "2026-04-07"
+    },
+    {
+      "id": 86,
+      "title": "【2026年4月最新】MCPとは？9700万DL突破・Linux Foundation移管で変わるAIエージェント接続標準ガイド",
+      "description": "2025年12月、AnthropicのMCP（Model Context Protocol）が月間9700万SDKダウンロードを達成しLinux Foundation傘下に移管。ChatGPT・Claude・Cursor・VS Codeが対応する事実上の標準規格となった背景と中小企業のAIエージェント活用への影響を解説。",
+      "thumbnail": "/images/blogs_images/blog-card086.webp",
+      "alt": "MCP Model Context Protocol 9700万DL Linux Foundation AIエージェント接続標準",
+      "link": "/blogs/blog086.html",
+      "date": "2026-04-07"
+    },
+    {
+      "id": 87,
+      "title": "【2026年4月最新】OpenAI 1220億ドル調達：ChatGPT週間9億人・月商20億ドルが中小企業AI活用に示す3つの変化",
+      "description": "2026年4月、OpenAIが史上最大1220億ドル（約19兆円）の資金調達を完了し評価額8520億ドルに到達。ChatGPT週間ユーザー9億人・月商20億ドル・企業向け売上比率40%超の意味と、中小企業がいまAI活用を本格化すべき3つの理由を解説。",
+      "thumbnail": "/images/blogs_images/blog-card087.webp",
+      "alt": "OpenAI 1220億ドル資金調達 ChatGPT週間9億人 中小企業AI活用",
+      "link": "/blogs/blog087.html",
+      "date": "2026-04-08"
     }
   ],
   "works": [
