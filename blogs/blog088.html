@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年4月最新】AnthropicのProject Glasswingで変わるAIセキュリティ導入の新常識 | MIRAINAブログ</title>
+    <meta name="description"
+        content="AnthropicのProject Glasswingは2026年4月7日に始まった防御型AIセキュリティ連携です。参画企業、100Mドルの利用枠、脆弱性検出の実例をもとに、中小企業が生成AI導入前に決めるべき安全ルールを解説します。">
+    <meta property="og:title" content="【2026年4月最新】AnthropicのProject Glasswingで変わるAIセキュリティ導入の新常識">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog088.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog088-1.webp">
+    <meta property="og:description"
+        content="AnthropicのProject Glasswingは2026年4月7日に始まった防御型AIセキュリティ連携です。参画企業、100Mドルの利用枠、脆弱性検出の実例をもとに、中小企業が生成AI導入前に決めるべき安全ルールを解説します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>AnthropicのProject Glasswingで変わるAIセキュリティ導入の新常識</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.04.08</span>
+                    <div class="article-tags">
+                        <p class="article-tag">Anthropic</p>
+                        <p class="article-tag">Project Glasswing</p>
+                        <p class="article-tag">AIセキュリティ</p>
+                        <p class="article-tag">生成AI導入</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年4月最新】AnthropicのProject Glasswingで変わるAIセキュリティ導入の新常識</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog088-1.webp" alt="Anthropic Project Glasswing AIセキュリティ導入の新常識" width="800" height="450"
+                        fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    2026年4月7日、Anthropicは防御型サイバーセキュリティ連携
+                    <strong>Project Glasswing</strong>を発表した。
+                    Amazon Web Services、Apple、Google、Microsoft、Linux Foundationなど12組織が参加し、
+                    未公開モデル「Claude Mythos Preview」を使って重要ソフトウェアの脆弱性を先回りで発見・修正する取り組みだ。
+                    これは単なる大手テック企業の実験ではなく、
+                    <strong>「生成AIを安全に使うなら、導入前にルール設計が必要」</strong>という新常識を示している。
+                    本記事では、Project Glasswingの事実関係と、
+                    中小企業がAIセキュリティ導入で先に決めるべき実務ルールを整理する。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. Project Glasswing発表でまず押さえるべき事実</a></li>
+                    <li><a href="#section2">2. なぜ今「AIセキュリティ」が急に経営課題になったのか</a></li>
+                    <li><a href="#section3">3. Project Glasswingの中身：参加企業・予算・検出実績</a></li>
+                    <li><a href="#section4">4. 中小企業が先に決めるべき3つの安全ルール</a></li>
+                    <li><a href="#section5">5. 境界例：すぐAI導入してはいけないケース</a></li>
+                    <li><a href="#section6">6. まとめ：安全導入はツール選びより運用設計</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="section1">1. Project Glasswing発表でまず押さえるべき事実</h2>
+
+                <p>
+                    【公式情報】Anthropicは2026年4月7日、重要ソフトウェアを守るための共同イニシアチブ
+                    <strong>Project Glasswing</strong>を発表した。
+                    参加組織はAmazon Web Services、Apple、Google、Microsoft、Linux Foundation、Cisco、
+                    CrowdStrike、JPMorganChase、NVIDIA、Palo Alto Networks、Broadcom、Anthropicの12組織。
+                    さらに、重要インフラやオープンソースを支える<strong>40超の追加組織</strong>にも
+                    Claude Mythos Previewの研究利用枠が提供される。
+                </p>
+
+                <p>
+                    Anthropicはこの取り組みに対して、
+                    <strong>最大1億ドルの利用クレジット</strong>と<strong>400万ドルの直接寄付</strong>を拠出すると明言した。
+                    目的は「AIで脆弱性を見つける力」が攻撃者側に広がる前に、
+                    まず防御側に先行導入して重要ソフトウェアを堅牢化することにある。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>事実</th>
+                                <th>意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>発表日</th>
+                                <td><strong>2026年4月7日</strong></td>
+                                <td>AIセキュリティが実験ではなく共同実装段階に入った</td>
+                            </tr>
+                            <tr>
+                                <th>主要参加組織</th>
+                                <td><strong>12組織</strong>＋40超の追加組織</td>
+                                <td>単独企業ではなく業界横断で進める案件</td>
+                            </tr>
+                            <tr>
+                                <th>Anthropicの拠出</th>
+                                <td><strong>$100M</strong>の利用枠＋<strong>$4M</strong>の寄付</td>
+                                <td>本気度の高い長期的な防御投資</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    【引用可能ユニット】<strong>Project Glasswingは「AIは便利か危険か」を議論する段階ではなく、
+                    AIが危険にも有効にもなりうる前提で、防御側が先に仕組みを持つべきだと示した発表だ。</strong>
+                </p>
+
+                <h2 id="section2">2. なぜ今「AIセキュリティ」が急に経営課題になったのか</h2>
+
+                <p>
+                    【公式情報】Anthropicは、Claude Mythos Previewが
+                    <strong>「脆弱性の発見と悪用で、最上位の専門家を除く大半の人間を上回りうる」</strong>水準に達したと説明している。
+                    Microsoftも同日公開したMSRCブログで、
+                    サイバー防御はもはや「純粋に人間の処理能力だけ」に縛られない段階へ入ったと述べた。
+                </p>
+
+                <p>
+                    【解釈】ここで重要なのは、AIセキュリティが大企業のSOCやCSIRTだけの話ではなくなったことだ。
+                    中小企業でもすでに、議事録要約、提案書ドラフト、FAQ作成、コード補助などで
+                    ChatGPTやClaudeを使い始めている。
+                    つまり「AIを導入するかどうか」ではなく、
+                    <strong>「どの業務に、どのデータを、どの条件で使わせるか」</strong>を決めないまま
+                    現場利用だけが先に進むリスクが高まっている。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">従来の前提</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>脆弱性発見は専門家の仕事</li>
+                                    <li>対応速度は人員数に依存</li>
+                                    <li>一般企業は「使う側」に留まる</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">→</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">AI時代の前提</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>AIが24時間で候補を洗い出す</strong></li>
+                                    <li>攻撃も防御も速度が上がる</li>
+                                    <li>一般企業も運用ルールが必要</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">図1：AI導入で変わるセキュリティの前提条件</p>
+                </div>
+
+                <p>
+                    【解釈】AIに不慣れな人が「会社でAIを使って大丈夫？」「ChatGPTは情報漏えいしない？」と検索する背景には、
+                    この前提変化がある。
+                    一方で、すでにAIを使っている担当者は
+                    「最新の公式発表を踏まえて、社内導入の安全ルールを整理して」とAIに聞くはずだ。
+                    Project Glasswingは、その両方の疑問に対して
+                    <strong>「便利さより先に運用設計」</strong>という答えを返すニュースだと言える。
+                </p>
+
+                <h2 id="section3">3. Project Glasswingの中身：参加企業・予算・検出実績</h2>
+
+                <p>
+                    【公式情報】Anthropicによると、Claude Mythos Previewはここ数週間で
+                    <strong>数千件の高重大度なゼロデイ脆弱性</strong>を発見した。
+                    その中には、27年間見逃されていたOpenBSDの脆弱性、
+                    16年間見逃されていたFFmpegの脆弱性、
+                    さらにLinuxカーネルで一般権限から完全権限へ昇格可能な脆弱性連鎖が含まれる。
+                    公開済みの代表例はすでに修正済みで、Anthropicは90日以内に学びを公開報告する方針も示している。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>検出例</th>
+                                <th>内容</th>
+                                <th>示唆</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>OpenBSD</th>
+                                <td><strong>27年物</strong>の脆弱性を発見</td>
+                                <td>長年の人手レビューでも埋もれる欠陥がある</td>
+                            </tr>
+                            <tr>
+                                <th>FFmpeg</th>
+                                <td><strong>16年物</strong>の脆弱性を発見</td>
+                                <td>広く使われる基盤ソフトほど影響が大きい</td>
+                            </tr>
+                            <tr>
+                                <th>Linux kernel</th>
+                                <td>複数の脆弱性を連鎖させて権限昇格</td>
+                                <td>単発検知より攻撃シナリオ理解が重要になる</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">AIが脆弱性候補を発見</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">参加組織が検証・修正</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">開示可能な範囲を90日以内に共有</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図2：Project Glasswingが目指す防御フロー</p>
+                </div>
+
+                <p>
+                    【解釈】ここで読むべき本質は、AIモデル単体の性能競争ではない。
+                    重要なのは、AWS・Google Cloud・Microsoft Foundryのような
+                    実運用基盤の上で「AIを安全に使う運用」が同時に設計され始めた点だ。
+                    つまり今後は、AIツールの比較だけでなく、
+                    <strong>ログ・承認・アクセス制御・データ持ち出し制御まで含めた導入設計</strong>が
+                    選定基準になる。
+                </p>
+
+                <h2 id="section4">4. 中小企業が先に決めるべき3つの安全ルール</h2>
+
+                <p>
+                    【実務】Project Glasswingの発表を見て、
+                    中小企業が明日から全部SOC化する必要はない。
+                    ただし、生成AI導入前に最低限決めるべきルールはある。
+                    ここを曖昧にすると、便利なはずのAIが「怖いから使うな」か「勝手に使っている」の二択になりやすい。
+                </p>
+
+                <h3>ルール1：投入してよいデータを3段階で分類する</h3>
+                <p>
+                    まず「公開情報」「社内限定」「顧客・個人情報を含む機微情報」に分ける。
+                    この区分がないままAI利用を始めると、
+                    現場は何を入れてよいか判断できない。
+                    とくに契約書、採用情報、顧客台帳、未公開の見積もり情報は
+                    デフォルトでAI投入禁止にした方が安全だ。
+                </p>
+
+                <h3>ルール2：許可する用途を先に決める</h3>
+                <p>
+                    「文章のたたき台」「議事録要約」「社内FAQ検索補助」のように、
+                    許可用途を明文化する。
+                    <a href="/blogs/blog024.html">AI導入が失敗する本当の理由</a>でも触れた通り、
+                    AI導入はツール起点より業務起点の方が失敗しにくい。
+                    先に業務を決めれば、ClaudeかChatGPTかの比較も
+                    <a href="/blogs/blog084.html">用途別の選定軸</a>で判断しやすくなる。
+                </p>
+
+                <h3>ルール3：人間レビューとログ保存を外さない</h3>
+                <p>
+                    AI出力をそのまま対外送信しない、人間の確認を1回入れる、重要業務では入出力ログを残す。
+                    この3点だけでも事故率は大きく下げられる。
+                    とくに営業提案、採用文面、顧客返信、コード変更のように
+                    外部影響が大きい業務では、
+                    「AIが作る」「人が承認する」という役割分担が前提になる。
+                </p>
+
+                <p>
+                    MIRAINAでは、こうした運用設計を含めた
+                    <a href="/services/ai_consulting.html">生成AI活用支援</a>を行っている。
+                    セキュリティ不安が強い企業ほど、ツール選びより先にルール設計から始める方が実装が早い。
+                </p>
+
+                <h2 id="section5">5. 境界例：すぐAI導入してはいけないケース</h2>
+
+                <p>
+                    【中立性】Project Glasswingは防御の強化を示す前向きな発表だが、
+                    だからといって全企業が即座にAI利用を広げるべきとは限らない。
+                    以下のケースでは、先に条件整備を行うべきだ。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>ケース</th>
+                                <th>主なリスク</th>
+                                <th>先にやること</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>医療・金融・士業など規制が強い業務</th>
+                                <td>契約・法令・監査要件に抵触する可能性</td>
+                                <td>ベンダー契約とデータ管理要件を先に確認する</td>
+                            </tr>
+                            <tr>
+                                <th>責任者不在のまま現場が個別利用している</th>
+                                <td>入力データ・品質基準・承認責任が曖昧</td>
+                                <td>AI利用のオーナーを1人決める</td>
+                            </tr>
+                            <tr>
+                                <th>無料ツールへ個人情報や顧客情報を投入している</th>
+                                <td>情報漏えい・利用規約違反の危険</td>
+                                <td>利用停止し、許可環境を再定義する</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    【中立性】なお、Project Glasswingは重要ソフトウェア防御向けの上流施策であり、
+                    そのまま中小企業向けの完成済みサービスではない。
+                    したがって、この記事の実務示唆は
+                    「今すぐGlasswingを使うべき」ではなく、
+                    <strong>「大手各社が安全運用を前提にAI導入を再設計し始めた」</strong>と読むのが正確だ。
+                </p>
+
+                <h2 id="section6">6. まとめ：安全導入はツール選びより運用設計</h2>
+
+                <p>
+                    Project Glasswingの発表から読み取れるポイントを整理すると、次の4点に集約される。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>ポイント</th>
+                                <th>内容</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>潮目の変化</th>
+                                <td>AIセキュリティは研究テーマから経営課題へ移った</td>
+                            </tr>
+                            <tr>
+                                <th>発表の重み</th>
+                                <td>12組織参加、40超の追加組織、$100Mの利用枠は業界横断の本気度を示す</td>
+                            </tr>
+                            <tr>
+                                <th>実務の含意</th>
+                                <td>便利なAI導入ほど、データ分類・用途定義・人間承認が先に必要</td>
+                            </tr>
+                            <tr>
+                                <th>最初の一歩</th>
+                                <td>「AIに任せたい業務」と「入れてはいけない情報」を1枚で言語化する</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    AIに不慣れな人ほど「何を禁止するか」から考えがちだが、
+                    実務では「どの業務なら安全に早く効果が出るか」を先に決める方が前へ進む。
+                    そのうえで、禁止事項と承認フローを重ねるのが現実的だ。
+                    生成AI導入で止まっている企業ほど、
+                    まずは1業務だけを対象に安全ルール付きで試すことをおすすめする。
+                </p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://www.anthropic.com/glasswing" target="_blank" rel="noopener">Anthropic公式：Project Glasswing: Securing critical software for the AI era</a></li>
+                        <li><a href="https://www.microsoft.com/en-us/msrc/blog/2026/04/strengthening-secure-software-global-scale-how-msrc-is-evolving-with-ai" target="_blank" rel="noopener">Microsoft公式：Strengthening secure software at global scale: How MSRC is evolving with AI</a></li>
+                        <li><a href="https://www.anthropic.com/news/google-broadcom-partnership-compute" target="_blank" rel="noopener">Anthropic公式：Anthropic expands partnership with Google and Broadcom for multiple gigawatts of next-generation compute</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">AIを安全に現場導入したい方へ</h2>
+                    <p class="cta-text">MIRAINAでは、業務設計とセキュリティ運用を踏まえた<br>実装しやすいAI活用プランをご提案します。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog084.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card084.webp" alt="Claude vs ChatGPT完全比較" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.05</div>
+                            <div class="related-text">【2026年4月最新】Claude vs ChatGPT完全比較：コスト・機能・用途別の使い分けガイド</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog024.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card024.webp" alt="AI導入が失敗する本当の理由" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.05</div>
+                            <div class="related-text">【2026年最新】AI導入が失敗する本当の理由｜業務課題ベースで進める成功の鉄則</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog085.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card085.webp" alt="AnthropicがOpenAI収益を超えた背景" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.06</div>
+                            <div class="related-text">【2026年4月最新】AnthropicがOpenAI収益を超えた背景と中小企業のAI選定戦略</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+
+</body>
+
+</html>
