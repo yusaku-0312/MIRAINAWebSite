@@ -77,6 +77,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: GPT-4o終了とは？ChatGPTモデル移行で企業が確認すべき3つのこと](https://miraina-ai.com/blogs/blog051.html): OpenAIが案内したGPT-4o終了を解説。2026年2月13日のChatGPT退役、4月3日のCustom GPT完全終了、企業が今すぐ進めるべきモデル移行の確認ポイントを整理した記事。
 - [最新ブログ: Work IQとは？Copilotが社内文脈を理解する仕組み](https://miraina-ai.com/blogs/blog050.html): Microsoftが2026年3月9日に打ち出したWork IQを解説。Microsoft 365 Copilotがメール・会議・文書・チャットを横断して社内文脈を理解する仕組み、Copilot CoworkやE7との関係、中小企業での活用ポイントを整理した記事。
 - [最新ブログ: GPT-5.4 MiniとNanoとは？高速・低コストな小型AIモデルの活用法](https://miraina-ai.com/blogs/blog047.html): OpenAIが2026年3月17日に発表したGPT-5.4 MiniとNanoを解説。Miniはフラッグシップ比で入力コスト70%削減・速度3倍以上、Nanoは入力$0.20/1Mトークンの最安クラス。サブエージェント構成での活用法と中小企業のコスト最適化ポイントを整理した記事。
+- [最新ブログ: Microsoftが日本へ1.6兆円投資、国内AI基盤はどう変わるか](https://miraina-ai.com/blogs/blog089.html): Microsoftが2026年4月3日に発表した日本向け100億ドル投資を解説。Azure×SoftBank×さくらの国内AI基盤構想、GitHub Enterprise Cloudの日本国内データ保管、2030年までの100万人育成計画をもとに、中小企業が今決めるべきデータ分類・本番要件・運用責任者設計を整理した記事。
 - [最新ブログ: AnthropicのProject Glasswingで変わるAIセキュリティ導入の新常識](https://miraina-ai.com/blogs/blog088.html): Anthropicが2026年4月7日に発表したProject Glasswingを解説。12組織参加、最大1億ドルの利用クレジット、OpenBSD・FFmpeg・Linux kernelで見つかった脆弱性事例をもとに、中小企業が生成AI導入前に決めるべきデータ分類・許可用途・人間承認の安全ルールを整理した記事。
 - [最新ブログ: OpenAI 1220億ドル調達：ChatGPT週間9億人・月商20億ドルが中小企業AI活用に示す3つの変化](https://miraina-ai.com/blogs/blog087.html): 2026年4月2〜5日、OpenAIが史上最大1220億ドル（約19兆円）の資金調達を完了し評価額8520億ドルに到達。Amazon（500億ドル）・SoftBank（300億ドル）・Nvidia（300億ドル）の投資意図、ChatGPT週間9億人・月商20億ドル・法人売上比率40%超が示す「AIの電気化」、中小企業が今すぐAI活用を本格化すべき3つの構造変化（ツール低価格化・機能高度化・競争劣位化）、AI活用に向かない境界例を整理した記事。
 - [最新ブログ: MCPとは？9700万DL突破・Linux Foundation移管で変わるAIエージェント接続標準ガイド](https://miraina-ai.com/blogs/blog086.html): 2025年12月9日、AnthropicがMCP（Model Context Protocol）をLinux Foundation傘下のAgentic AI Foundation（AAIF）に寄贈。月間9700万SDKダウンロード・1万以上のアクティブサーバーを達成した背景、ChatGPT・Claude・Cursor・Gemini・Copilot・VS Codeが対応する業界標準化の意味、中小企業がMCPを活用できる3つの業務シナリオ（社内DB接続・Slack/Notion自動化・マルチAI構成）、MCPが向かない境界例と注意点を整理した記事。
@@ -116,7 +117,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - **キーワード:** 生成AI, ChatGPT, Claude, Gemini, n8n, AI導入, AI研修, AI開発, AIチャットボット, RAG, LLMO, AIO, SEO, AI検索, 業務自動化, 業務効率化。
 - **方向性:** AI導入で「週休4日制」が当たり前になる未来を、九州から全国へ。
 - **代表:** 芝 優作
-- **コンテンツの厚み:** 2026-04-08時点でブログ87本、事例9件を掲載。AIニュースの解説だけでなく、LLMO対策、導入実務、LLMO/AIO、業務改善、n8n活用、AIコーディング導入、AIエージェント評価、RAG・社内検索基盤、物理AI・工場自動化、カスタマイズAI、AIコンタクトセンター、社内文脈を扱うCopilot基盤、ChatGPTのファイル再利用・社内資料活用、AI検索経由の商品発見とEC対策、AIインフラ投資の読み解き、AIメモリと会話履歴引き継ぎの実務解説、OpenAIスーパーアプリ戦略、OpenAI 1220億ドル調達分析などの長文記事を含みます。
+- **コンテンツの厚み:** 2026-04-09時点でブログ89本、事例9件を掲載。AIニュースの解説だけでなく、LLMO対策、導入実務、LLMO/AIO、業務改善、n8n活用、AIコーディング導入、AIエージェント評価、RAG・社内検索基盤、物理AI・工場自動化、カスタマイズAI、AIコンタクトセンター、社内文脈を扱うCopilot基盤、ChatGPTのファイル再利用・社内資料活用、AI検索経由の商品発見とEC対策、AIインフラ投資の読み解き、AIメモリと会話履歴引き継ぎの実務解説、OpenAIスーパーアプリ戦略、OpenAI 1220億ドル調達分析、国内AI基盤とデータ主権の実務解説などの長文記事を含みます。
 - **詳細ページのパターン:** ブログは `/blogs/blogXXX.html`、事例は `/works/workXXX.html`、サービス詳細は `/services/*.html`。
 - **信頼情報:** `/about.html` に理念・代表情報、`/works.html` に具体的実績、`/blogs.html` に専門解説記事が集約されています。
 
