@@ -800,6 +800,15 @@
       "alt": "Microsoft 日本 AI投資 国内AI基盤の変化",
       "link": "/blogs/blog089.html",
       "date": "2026-04-09"
+    },
+    {
+      "id": 90,
+      "title": "【2026年4月最新】AI teammateとは？中小企業の経理・問い合わせ対応を変える実務設計",
+      "description": "AI teammateとは何かを、MicrosoftとMYOBの2026年4月8日発表をもとに解説。経理、問い合わせ対応、コンプライアンス準備をAIと人でどう分担するか、中小企業向けに整理します。",
+      "thumbnail": "/images/blogs_images/blog-card090.webp",
+      "alt": "AI teammateで経理と問い合わせ対応を効率化するイメージ",
+      "link": "/blogs/blog090.html",
+      "date": "2026-04-09"
     }
   ],
   "works": [
