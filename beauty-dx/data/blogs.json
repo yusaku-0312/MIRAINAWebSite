@@ -26,10 +26,19 @@
             "category": "LLMO",
             "date": "2026-03-15",
             "link": "/beauty-dx/blogs/blog003.html"
+        },
+        {
+            "id": 4,
+            "slug": "blog004",
+            "title": "美容室のChatGPT活用は、まず予約前後の導線から",
+            "excerpt": "問い合わせ返信、事前案内、来店後フォロー。美容室でChatGPTを使うなら、まず予約前後のやり取りを整える方が、現場負荷もお客様体験も安定しやすくなります。",
+            "category": "予約導線",
+            "date": "2026-04-10",
+            "link": "/beauty-dx/blogs/blog004.html"
         }
     ],
     "meta": {
         "perPage": 5,
-        "total": 3
+        "total": 4
     }
 }
