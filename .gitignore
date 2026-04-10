@@ -1,5 +1,6 @@
-.claude/
+.claude
 .codex
+.agent
 CLAUDE.md
 llms-v1.txt
 template.html
@@ -19,3 +20,5 @@ miraina_ui_check.mjs
 miraina_ref_*.png
 miraina_check_*.png
 .playwright-cli/
+
+AGENTS.md
