@@ -77,6 +77,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: GPT-4o終了とは？ChatGPTモデル移行で企業が確認すべき3つのこと](https://miraina-ai.com/blogs/blog051.html): OpenAIが案内したGPT-4o終了を解説。2026年2月13日のChatGPT退役、4月3日のCustom GPT完全終了、企業が今すぐ進めるべきモデル移行の確認ポイントを整理した記事。
 - [最新ブログ: Work IQとは？Copilotが社内文脈を理解する仕組み](https://miraina-ai.com/blogs/blog050.html): Microsoftが2026年3月9日に打ち出したWork IQを解説。Microsoft 365 Copilotがメール・会議・文書・チャットを横断して社内文脈を理解する仕組み、Copilot CoworkやE7との関係、中小企業での活用ポイントを整理した記事。
 - [最新ブログ: GPT-5.4 MiniとNanoとは？高速・低コストな小型AIモデルの活用法](https://miraina-ai.com/blogs/blog047.html): OpenAIが2026年3月17日に発表したGPT-5.4 MiniとNanoを解説。Miniはフラッグシップ比で入力コスト70%削減・速度3倍以上、Nanoは入力$0.20/1Mトークンの最安クラス。サブエージェント構成での活用法と中小企業のコスト最適化ポイントを整理した記事。
+- [最新ブログ: 東京都A1（えいいち）とは？6万人が使う生成AI基盤から中小企業が学べること](https://miraina-ai.com/blogs/blog094.html): 東京都が2026年4月9日に生成AIプラットフォーム「A1（えいいち）」を6万人の職員向けに本格運用開始。ノーコードAIアプリ開発・デジタル公共財の仕組みと、中小企業が取り入れられるAI導入の考え方を整理した記事。
 - [最新ブログ: AnthropicがTPU大型契約、中小企業のAIコストはどう変わるか](https://miraina-ai.com/blogs/blog093.html): Anthropicが2026年4月6日にGoogle・Broadcomとの計算資源拡大を発表。複数ギガワット級TPU確保が、AIコスト、供給安定、ベンダー選定をどう変えるかを整理した記事。
 - [最新ブログ: OpenAIがSafety Fellowshipを開始、企業のAI安全評価はどう変わるか](https://miraina-ai.com/blogs/blog092.html): OpenAIが2026年4月6日に発表したSafety Fellowshipをもとに、募集日程・重点領域・支援内容を整理。中小企業がAI安全評価を内製化するための運用設計と実装ステップを解説した記事。
 - [最新ブログ: OpenAIで企業売上40%超、enterprise AI導入はどう変わるか](https://miraina-ai.com/blogs/blog091.html): OpenAIが2026年4月8日に公開したenterprise AI戦略を解説。企業売上比率40%超、Codex週次300万人、API毎分150億トークン超という指標をもとに、AI導入が実験フェーズを越えた背景と、中小企業が今決めるべき業務単位・承認設計・KPI設計を整理した記事。
