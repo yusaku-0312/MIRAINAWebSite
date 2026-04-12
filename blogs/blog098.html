@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>美容サロン向けAIアプリは何で作る？バイブコーディング向けツール5選 | MIRAINAブログ</title>
+    <meta name="description"
+        content="美容サロン向けAIアプリを作るなら何を使うべきかを整理。Glide、Replit Agent、Lovable、AppSheet、Power Appsの向き不向きを実務目線で解説します。">
+    <meta property="og:title" content="美容サロン向けAIアプリは何で作る？バイブコーディング向けツール5選">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog098.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog098-1.webp">
+    <meta property="og:description"
+        content="美容サロン向けAIアプリを作るなら何を使うべきかを整理。Glide、Replit Agent、Lovable、AppSheet、Power Appsの向き不向きを実務目線で解説します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>美容サロン向けAIアプリは何で作る？</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.04.12</span>
+                    <div class="article-tags">
+                        <p class="article-tag">美容サロン</p>
+                        <p class="article-tag">バイブコーディング</p>
+                        <p class="article-tag">AIアプリ</p>
+                        <p class="article-tag">ツール比較</p>
+                    </div>
+                </div>
+                <h1 class="article-title">美容サロン向けAIアプリは何で作る？バイブコーディング向けツール5選</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog098-1.webp" alt="美容サロン向けAIアプリを作るツール比較のイメージ" width="800" height="450"
+                        fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    前回の
+                    <a href="/blogs/blog097.html">美容サロンで使えるバイブコーディング実例5選</a>
+                    では、予約FAQ、カルテ補助、在庫管理、採用対応、店販フォローのような小さなAIアプリがサロン業務と相性がいいことを整理しました。
+                    次に気になるのは「では実際に何で作るのがよいか」です。
+                    本記事では、<strong>Glide、Replit Agent、Lovable、AppSheet、Power Apps</strong>を中心に、
+                    どんなサロンに向いているか、何から始めるべきかを実務目線で整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. 先に決めるべき判断軸</a></li>
+                    <li><a href="#section2">2. 美容サロン向けツール5選</a></li>
+                    <li><a href="#section3">3. 用途別のおすすめ</a></li>
+                    <li><a href="#section4">4. 最初に選びやすい組み合わせ</a></li>
+                    <li><a href="#section5">5. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="section1">1. 先に決めるべき判断軸</h2>
+                <p>
+                    ツール比較の前に、まず決めるべきことがあります。
+                    それは「誰が使うアプリなのか」「どのデータを使うのか」「どこまで本番運用したいのか」の3点です。
+                    ここが曖昧だと、どのツールを選んでも定着しません。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>判断軸</th>
+                                <th>見るポイント</th>
+                                <th>サロンでの例</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>利用者</th>
+                                <td>オーナーだけか、スタッフ全員か</td>
+                                <td>採用管理は店長中心、カルテ補助はスタッフ全員</td>
+                            </tr>
+                            <tr>
+                                <th>データ源</th>
+                                <td>スプレッドシート、Google Workspace、社内DBのどれか</td>
+                                <td>在庫管理はSheets、応募管理はフォーム連携</td>
+                            </tr>
+                            <tr>
+                                <th>運用段階</th>
+                                <td>試作か、本番か、複数店舗展開か</td>
+                                <td>まず1店舗、次に本部集約という順で考える</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    この3つを決めるだけで、かなり候補は絞れます。
+                    小さく試す段階なら、開発速度を優先してよいです。
+                    一方で複数店舗や権限管理まで入るなら、運用管理の強さも見ないと後で苦しくなります。
+                </p>
+
+                <h2 id="section2">2. 美容サロン向けツール5選</h2>
+                <p>
+                    ここから、サロンの現場で比較対象になりやすい5つを整理します。
+                </p>
+
+                <h3>1. Glide</h3>
+                <p>
+                    Glideは、スプレッドシートを元に業務アプリを作りやすいのが最大の強みです。
+                    公式サイトでも「スプレッドシートをAI対応アプリに変える」ことと、
+                    <strong>10万社超</strong>が利用していることを前面に出しています。
+                    在庫管理、採用進捗、簡易CRMのように、一覧と入力フォームが中心の業務とは相性が良いです。
+                </p>
+                <p>
+                    サロンで言えば、店販在庫、見学管理、材料発注のような
+                    「いまSheetsで回しているもの」をまずアプリ化したい時に向いています。
+                    逆に、複雑な画面遷移や独自UIを細かく作り込みたい場合はやや制約を感じやすいです。
+                </p>
+
+                <h3>2. Replit Agent</h3>
+                <p>
+                    Replit Agentは、自然文で要件を伝えながらWebアプリを作る初稿づくりがかなり速いです。
+                    公式ガイドでも、プロンプトから数分で最初のアプリを立ち上げる流れが案内されています。
+                    「こういう画面で、こう動いてほしい」というイメージを会話しながら詰めたい時に向いています。
+                </p>
+                <p>
+                    サロン向けでは、予約前FAQ、受付補助、スタッフ向けの簡易社内ツールなど、
+                    画面の見せ方をある程度自由に作りたい時に使いやすいです。
+                    一方で、現場の非ITスタッフが保守し続ける前提だと、少し難易度は上がります。
+                </p>
+
+                <h3>3. Lovable</h3>
+                <p>
+                    Lovableも会話ベースでアプリのたたき台を作るのが得意です。
+                    2026年4月2日の公式更新では、ファイル生成やデータ分析をチャットの中で扱えるようになっており、
+                    「CSVを読んでダッシュボードにする」「表をもとに運用画面を作る」といった流れがかなりやりやすくなっています。
+                </p>
+                <p>
+                    既存の台帳やCSVを起点に形にしたい場合は、Replit Agentより入りやすい場面があります。
+                    サロンで言えば、応募者リスト、在庫表、店販履歴などをベースにまず画面を作りたい時に相性が良いです。
+                </p>
+
+                <h3>4. AppSheet</h3>
+                <p>
+                    AppSheetは、Google Workspaceとの相性が非常に強いノーコード基盤です。
+                    Google Workspace Blogでは、
+                    <strong>Gemini in AppSheetが自然文からアプリ構造やデータベースを作れる</strong>ことが説明されています。
+                    さらにMarketplace上でも、写真、署名、GPS、バーコードなどを扱えることが明記されています。
+                </p>
+                <p>
+                    GoogleフォームやGoogleスプレッドシートをすでに使っているサロンなら、
+                    「フォームで集めたデータをそのままアプリ化する」流れを作りやすいです。
+                    特に、見学申込、在庫入力、店販確認のようなモバイル入力が多い業務と相性が良いです。
+                </p>
+
+                <h3>5. Power Apps</h3>
+                <p>
+                    Power Appsは、複数店舗運用や本部管理を見据える段階で有力です。
+                    Microsoftの2024年9月の公式ブログでは、
+                    Forrester調査結果として
+                    <strong>アプリ開発時間50%短縮</strong>、
+                    <strong>ROI 206%</strong>が紹介されています。
+                </p>
+                <p>
+                    すべてのサロンに最初から必要ではありません。
+                    ただ、スタッフ権限、監査、複数システム連携、本部集約まで考えるなら、
+                    後から作り直すより最初から候補に入れる価値があります。
+                    単店舗の試作より、法人サロン向けの選択肢です。
+                </p>
+
+                <h2 id="section3">3. 用途別のおすすめ</h2>
+                <p>
+                    何を作るかごとに見ると、選び方はかなりシンプルになります。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>作りたいもの</th>
+                                <th>最有力</th>
+                                <th>理由</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>在庫管理・発注管理</th>
+                                <td>Glide / AppSheet</td>
+                                <td>表形式のデータをそのまま画面化しやすい</td>
+                            </tr>
+                            <tr>
+                                <th>予約FAQ・受付補助</th>
+                                <td>Replit Agent / Lovable</td>
+                                <td>会話設計や画面導線を柔軟に作りやすい</td>
+                            </tr>
+                            <tr>
+                                <th>採用管理・見学管理</th>
+                                <td>Glide / AppSheet</td>
+                                <td>フォームと一覧の相性が良い</td>
+                            </tr>
+                            <tr>
+                                <th>本部向けの複数店舗管理</th>
+                                <td>Power Apps</td>
+                                <td>権限や統制を入れやすい</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section4">4. 最初に選びやすい組み合わせ</h2>
+                <p>
+                    最初から1つに決め打ちするより、役割で組み合わせた方がうまくいくことも多いです。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">単店舗で始める場合</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>台帳系はGlideかAppSheet</li>
+                                    <li>画面試作はReplit AgentかLovable</li>
+                                    <li>まず1業務だけ回してみる</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">→</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">法人サロンで広げる場合</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>本部管理はPower Apps系</strong></li>
+                                    <li>現場入力はAppSheet系</li>
+                                    <li>まず権限設計を決める</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">図1：ツールは1つに統一するより、役割で分けた方が現実的な場合がある</p>
+                </div>
+
+                <p>
+                    実務で一番無理がないのは、
+                    「一覧や入力が中心のものはGlideやAppSheet」
+                    「見せ方を工夫したい試作はReplit AgentやLovable」
+                    という分け方です。
+                    97番の記事で挙げたようなアプリを本当に作るなら、
+                    このくらいの切り分けから始めるのが現実的です。
+                </p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://www.glideapps.com/" target="_blank" rel="noopener">Glide公式サイト</a></li>
+                        <li><a href="https://docs.replit.com/getting-started/quickstarts/ask-ai" target="_blank" rel="noopener">Replit Docs: Build your first App</a></li>
+                        <li><a href="https://docs.lovable.dev/changelog" target="_blank" rel="noopener">Lovable changelog</a></li>
+                        <li><a href="https://workspace.google.com/blog/ai-and-machine-learning/democratizing-app-development-using-appsheet-gemini" target="_blank" rel="noopener">Google Workspace Blog: Gemini in AppSheet</a></li>
+                        <li><a href="https://www.microsoft.com/en-us/power-platform/blog/audience/business-leader/page/2/?paged=3" target="_blank" rel="noopener">Microsoft Power Platform Blog</a></li>
+                    </ul>
+                </div>
+
+                <h2 id="section5">5. まとめ</h2>
+                <p>
+                    97番のような美容サロン向けAIアプリを実際に作るなら、
+                    まずは「表データ中心か」「画面導線中心か」「単店舗か複数店舗か」で選ぶのが正解です。
+                </p>
+                <p>
+                    小さく始めるならGlideかAppSheet、試作を早く回すならReplit AgentかLovable、
+                    本部管理まで見据えるならPower Apps。
+                    この整理だけでも、ツール選びで迷う時間はかなり減ります。
+                </p>
+
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">サロン向けAIアプリの選定で迷っていませんか？</h2>
+                    <p class="cta-text">業務整理からツール選定、試作の優先順位づけまで<br>現場に合う形で一緒に設計します。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog097.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card097.webp" alt="美容サロンで使えるバイブコーディング実例5選" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.12</div>
+                            <div class="related-text">美容サロンで使えるバイブコーディング実例5選｜小さく作れるAIアプリを紹介</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog024.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card024.webp" alt="AI導入が失敗する本当の理由" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.05</div>
+                            <div class="related-text">AI導入が失敗する本当の理由｜業務課題ベースで進める成功の鉄則</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog036.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card036.webp" alt="Codexとは？楽天事例でわかるAI開発導入法" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.11</div>
+                            <div class="related-text">Codexとは？楽天事例でわかるAI開発導入法</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

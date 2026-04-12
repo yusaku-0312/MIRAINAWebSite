@@ -863,6 +863,24 @@
       "alt": "NotebookLMとGeminiの統合でAIリサーチ業務が変わるイメージ",
       "link": "/blogs/blog096.html",
       "date": "2026-04-12"
+    },
+    {
+      "id": 97,
+      "title": "美容サロンで使えるバイブコーディング実例5選｜小さく作れるAIアプリを紹介",
+      "description": "美容サロンで使えるバイブコーディング実例を5つ紹介。予約FAQ、カルテ補助、在庫管理、採用対応、店販フォローを小さくアプリ化する考え方を解説します。",
+      "thumbnail": "/images/blogs_images/blog-card097.webp",
+      "alt": "美容サロンで使えるバイブコーディング実例のイメージ",
+      "link": "/blogs/blog097.html",
+      "date": "2026-04-12"
+    },
+    {
+      "id": 98,
+      "title": "美容サロン向けAIアプリは何で作る？バイブコーディング向けツール5選",
+      "description": "美容サロン向けAIアプリを作るなら何を使うべきかを整理。Glide、Replit Agent、Lovable、AppSheet、Power Appsの向き不向きを実務目線で解説します。",
+      "thumbnail": "/images/blogs_images/blog-card098.webp",
+      "alt": "美容サロン向けAIアプリを作るツール比較のイメージ",
+      "link": "/blogs/blog098.html",
+      "date": "2026-04-12"
     }
   ],
   "works": [
