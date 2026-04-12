@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年4月最新】NotebookLMがGeminiに統合、AIリサーチ業務はどう変わるか | MIRAINAブログ</title>
+    <meta name="description"
+        content="GoogleがNotebookLMをGeminiに統合した「Notebooks」機能を2026年4月8日に発表。グラウンディングによるハルシネーション抑制と業務リサーチ効率化を中小企業視点で解説します。">
+    <meta property="og:title" content="【2026年4月最新】NotebookLMがGeminiに統合、AIリサーチ業務はどう変わるか">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog096.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog096-1.webp">
+    <meta property="og:description"
+        content="GoogleがNotebookLMをGeminiに統合した「Notebooks」機能を2026年4月8日に発表。グラウンディングによるハルシネーション抑制と業務リサーチ効率化を中小企業視点で解説します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>NotebookLMがGeminiに統合、AIリサーチ業務はどう変わるか</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.04.12</span>
+                    <div class="article-tags">
+                        <p class="article-tag">Google</p>
+                        <p class="article-tag">NotebookLM</p>
+                        <p class="article-tag">Gemini</p>
+                        <p class="article-tag">AI活用</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年4月最新】NotebookLMがGeminiに統合、AIリサーチ業務はどう変わるか</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog096-1.webp" alt="NotebookLMとGeminiの統合でAIリサーチ業務が変わるイメージ" width="800" height="450"
+                        fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    2026年4月8日、GoogleはAIリサーチツール<strong>NotebookLM</strong>をGeminiアプリに統合した
+                    新機能<strong>「Notebooks」</strong>を発表した。注目すべきは、アップロードした資料だけを根拠に回答する
+                    <strong>グラウンディング（根拠付け）</strong>の仕組みが、Geminiの汎用機能と一体化した点だ。
+                    本記事ではGoogle公式発表をもとに、Notebooks機能の要点と、
+                    中小企業のリサーチ・提案業務で今すぐ試せる活用法を解説する。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. 4月8日の発表でまず押さえるべき事実</a></li>
+                    <li><a href="#section2">2. NotebookLM×Gemini統合はなぜ重要なのか</a></li>
+                    <li><a href="#section3">3. ビジネスリサーチと提案業務で何が変わるか</a></li>
+                    <li><a href="#section4">4. 中小企業が今すぐ試せる3つの活用法</a></li>
+                    <li><a href="#section5">5. すぐ効果が出にくい境界例</a></li>
+                    <li><a href="#section6">6. まとめ：AIリサーチは「聞く」から「知識ベースに問う」へ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="section1">1. 4月8日の発表でまず押さえるべき事実</h2>
+
+                <p>
+                    【公式情報】Googleは2026年4月8日、Geminiアプリのサイドバーに
+                    <strong>「Notebooks」セクション</strong>を新設し、
+                    NotebookLMとの双方向同期を開始した。
+                    Senior Product ManagerのRebecca Zapfelによる公式ブログでは、
+                    「Notebooks in Gemini help you organize your chats and projects in the Gemini app,
+                    with our AI-powered research partner, NotebookLM, for easier learning and working」と説明されている。
+                </p>
+
+                <p>
+                    【公式情報】Notebooksはプロジェクト単位の<strong>個人ナレッジベース</strong>として機能する。
+                    PDFファイル、Googleドキュメント、Webサイト、コピーしたテキストなどを
+                    ソースとして取り込み、Geminiはそのソースを根拠にして回答を生成する。
+                    ソースを追加すればGeminiとNotebookLMの両方に自動で反映される。
+                </p>
+
+                <figure class="article-figure">
+                    <img src="/images/blogs_images/blog096-2.webp" alt="Google公式ブログ NotebookLMとGeminiの統合発表ページ" width="800" height="450" loading="lazy">
+                    <figcaption>Google公式ブログ「Try notebooks in Gemini to easily keep track of projects」（2026年4月8日）</figcaption>
+                </figure>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>発表内容</th>
+                                <th>実務での意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>発表日</th>
+                                <td>2026年4月8日</td>
+                                <td>今週からウェブ版で順次利用開始</td>
+                            </tr>
+                            <tr>
+                                <th>機能名</th>
+                                <td>Notebooks（Geminiサイドバー内）</td>
+                                <td>ツール切り替え不要でリサーチ開始できる</td>
+                            </tr>
+                            <tr>
+                                <th>ソース上限</th>
+                                <td>最大100件</td>
+                                <td>プロジェクト規模の資料を一括管理可能</td>
+                            </tr>
+                            <tr>
+                                <th>対象ユーザー</th>
+                                <td>Google AI Ultra / Pro / Plus（ウェブ版から順次）</td>
+                                <td>モバイル・無料ユーザーは数週間後に拡大予定</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    【公式情報】NotebookLM側の新機能も同時に発表されており、
+                    <strong>ビデオオーバービュー</strong>や<strong>インフォグラフィック</strong>の自動生成も
+                    Notebooks経由でシームレスにアクセスできる。
+                    つまり今回の発表は、単なるツール統合ではなく、
+                    <strong>情報インプットからアウトプットまでを1つのプラットフォームで完結させる設計</strong>だと理解した方がよい。
+                </p>
+
+                <h2 id="section2">2. NotebookLM×Gemini統合はなぜ重要なのか</h2>
+
+                <p>
+                    これまでAIチャットで業務リサーチをする際、最大の課題は
+                    <strong>ハルシネーション（事実に基づかない回答）</strong>だった。
+                    ChatGPTやGeminiに業界レポートの要約を頼んでも、
+                    元資料にない数字や事例が混入するリスクがあるため、
+                    結局人間がファクトチェックする必要があった。
+                </p>
+
+                <p>
+                    NotebookLMは、指定したソースの内容だけに基づいて回答する
+                    <strong>「グラウンディング」</strong>方式を採用しているため、
+                    汎用チャットと比べて根拠のない回答が大幅に減る。
+                    ある調査報告によれば、グラウンディング非対応のAIチャットでの
+                    ハルシネーション率が約40%だったのに対し、
+                    NotebookLMでは約13%にとどまったとされる。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">従来のAIリサーチ</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>汎用AIに質問する</li>
+                                    <li>回答の出典が不明</li>
+                                    <li>毎回ファクトチェックが必要</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">→</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">Notebooks統合後</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>資料をソースとして指定</strong></li>
+                                    <li>ソース内の情報だけで回答</li>
+                                    <li>引用元を直接確認できる</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">図1：AIリサーチは「何でも答える」から「根拠付きで答える」へ移行する</p>
+                </div>
+
+                <p>
+                    【解釈】中小企業にとってこの統合が重要なのは、
+                    <strong>リサーチの精度と速度を同時に上げられる</strong>可能性があるからだ。
+                    これまでは「AIは速いが信用できない」という理由で
+                    結局手作業に戻るケースが多かった。
+                    グラウンディング付きのAIリサーチなら、
+                    提案書や競合調査のベース作成をAIに任せつつ、
+                    根拠の確認コストを下げられる。
+                </p>
+
+                <h2 id="section3">3. ビジネスリサーチと提案業務で何が変わるか</h2>
+
+                <p>
+                    Notebooks機能は、特に以下のような業務フローで効果が期待できる。
+                    いずれも「資料を読み込み、分析し、アウトプットする」プロセスが含まれる業務だ。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>業務</th>
+                                <th>従来の進め方</th>
+                                <th>Notebooks活用後</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>競合調査</th>
+                                <td>複数レポートを手動で読み比べ、要点を抜き出す</td>
+                                <td>レポートをソースに追加し、比較表や要約を自動生成</td>
+                            </tr>
+                            <tr>
+                                <th>提案書作成</th>
+                                <td>過去資料を探し、手動でテンプレートに落とし込む</td>
+                                <td>過去提案と顧客資料をソースに、ドラフトを自動生成</td>
+                            </tr>
+                            <tr>
+                                <th>社内ナレッジ検索</th>
+                                <td>共有フォルダを検索し、該当ファイルを1つずつ開く</td>
+                                <td>マニュアル・FAQをノートブックに集約し、質問で検索</td>
+                            </tr>
+                            <tr>
+                                <th>新人研修</th>
+                                <td>分厚いマニュアルを順に読ませる</td>
+                                <td>研修資料をソースに追加し、新人が質問形式で学習</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    【公式情報】Gemini NotebooksにはPersistent Memory（永続記憶）機能もあり、
+                    過去のチャット内容やカスタム指示を保持できる。
+                    これは長期プロジェクトの調査やクライアント別の提案作成で特に有効だ。
+                    「先週の会話を覚えていないから、また最初から説明する」という問題が起きにくくなる。
+                </p>
+
+                <p>
+                    【解釈】以前の<a href="/blogs/blog084.html">Claude vs ChatGPT比較の記事</a>で触れたように、
+                    AIツールの選び方は「性能」だけでなく「業務との接続方法」で決まる。
+                    GoogleドキュメントやGoogleドライブと直結するNotebooksは、
+                    Google Workspaceを業務基盤にしている企業ほど移行コストが低い。
+                </p>
+
+                <h2 id="section4">4. 中小企業が今すぐ試せる3つの活用法</h2>
+
+                <p>
+                    Notebooksは有料プランで利用可能になっている。
+                    全社導入の前に、まず個人レベルで以下の3つを試すとよい。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">1プロジェクトのリサーチを集約する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">社内マニュアルをAI検索可能にする</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">提案書の下書きをAIで生成する</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図2：小さく始める3ステップ</p>
+                </div>
+
+                <h3>Step 1：1プロジェクトのリサーチを集約する</h3>
+                <p>
+                    まず、進行中のプロジェクトに関する資料（競合レポート、市場データ、顧客要件書など）を
+                    1つのノートブックにまとめる。
+                    ソースを追加した上で「この市場の主な課題を3点に整理して」と聞けば、
+                    資料に基づいた回答が得られる。
+                    AIに聞く前に「どの資料を根拠にするか」を自分で選べるのが、
+                    汎用チャットとの最大の違いだ。
+                </p>
+
+                <h3>Step 2：社内マニュアルをAI検索可能にする</h3>
+                <p>
+                    業務マニュアルやFAQ、社内規程などをPDFでアップロードし、
+                    ノートブックを作成する。
+                    「経費精算の手順を教えて」「リモートワーク時の申請方法は？」など、
+                    日常的に発生する問い合わせをAIが社内ドキュメントから回答できるようになる。
+                    <a href="/blogs/blog094.html">東京都A1の記事</a>で触れた
+                    「全員が使える」設計を、ノーコードで実現できる手段だ。
+                </p>
+
+                <h3>Step 3：提案書の下書きをAIで生成する</h3>
+                <p>
+                    過去の提案書と新規顧客の要件資料をソースとして追加し、
+                    「この顧客向けの提案骨子を作成して」と指示する。
+                    グラウンディングが効いているため、過去提案の実績数値を正しく引用しつつ、
+                    新規顧客の課題に合わせた構成案が出てくる。
+                    完全な提案書にはならないが、初稿の作成時間は大幅に短縮できる。
+                </p>
+
+                <p>
+                    【MIRAINA視点】MIRAINAでは
+                    <a href="/services/ai_consulting.html">生成AI活用支援</a>で、
+                    業務別のAIツール選定から運用ルール整備まで伴走している。
+                    NotebookLMのようなツールは導入自体は簡単だが、
+                    「どの業務に、どの資料を、誰が管理するか」を設計しないと定着しにくい。
+                    <a href="/services/ai_training.html">AI研修</a>と組み合わせることで、
+                    全社展開への土台を作れる。
+                </p>
+
+                <h2 id="section5">5. すぐ効果が出にくい境界例</h2>
+
+                <p>
+                    Notebooks機能は万能ではない。
+                    次のケースでは先に環境を整えた方がよい。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>自社の状態</th>
+                                <th>起きやすい問題</th>
+                                <th>先にやること</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>資料がデジタル化されていない</th>
+                                <td>ソースとして追加できる文書がない</td>
+                                <td>主要マニュアルをPDF化する</td>
+                            </tr>
+                            <tr>
+                                <th>情報管理ルールが未整備</th>
+                                <td>機密資料を外部AIにアップロードする事故が起きる</td>
+                                <td>アップロード可否のルールを先に決める</td>
+                            </tr>
+                            <tr>
+                                <th>Google Workspace以外が業務基盤</th>
+                                <td>Googleドライブ連携の恩恵が薄い</td>
+                                <td>自社基盤に合うAIツールを比較検討する</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    また、NotebookLM Plusは月額20ドル（Google One AI Premiumに含まれる）、
+                    Enterprise版はGoogle Cloud経由でVPC-SC対応・IAM管理が可能だが、
+                    <strong>Enterprise版は中小企業にはオーバースペックな場合が多い</strong>。
+                    まずは個人プランで業務フィットを検証し、
+                    効果が確認できてから組織導入を検討する方が合理的だ。
+                </p>
+
+                <h2 id="section6">6. まとめ：AIリサーチは「聞く」から「知識ベースに問う」へ</h2>
+
+                <p>
+                    NotebookLMのGemini統合が示したのは、
+                    AIリサーチの使い方が<strong>「何でも聞けるチャット」から
+                    「自社資料を根拠に答えるナレッジベース」</strong>へ移行するという方向だ。
+                    グラウンディングにより根拠のない回答が減り、
+                    引用元を確認するコストも下がる。
+                </p>
+
+                <p>
+                    中小企業が今やるべきことは、
+                    まず1つのプロジェクト資料をノートブックにまとめ、
+                    リサーチや提案書作成の初稿をAIに任せてみることだ。
+                    大がかりなシステム導入ではなく、
+                    <strong>手持ちの資料をAIが読める状態にする</strong>だけで、
+                    業務リサーチの精度と速度は確実に変わる。
+                </p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://blog.google/innovation-and-ai/products/gemini-app/notebooks-gemini-notebooklm/" target="_blank" rel="noopener">Google公式：Try notebooks in Gemini to easily keep track of projects（2026年4月8日）</a></li>
+                        <li><a href="https://9to5google.com/2026/04/08/gemini-app-notebooks/" target="_blank" rel="noopener">9to5Google：Gemini app rolling out 'notebooks' to organize chats & files, integrates with NotebookLM</a></li>
+                        <li><a href="https://www.buildfastwithai.com/blogs/notebooklm-added-to-gemini-notebooks" target="_blank" rel="noopener">BuildFastWithAI：Google Adds Notebooks to Gemini: What Changed?</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">AIリサーチツールの業務導入を検討中の方へ</h2>
+                    <p class="cta-text">MIRAINAでは、業務別のAIツール選定から運用ルール整備まで<br>中小企業向けに伴走支援しています。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog084.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card084.webp" alt="Claude vs ChatGPT完全比較" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.07</div>
+                            <div class="related-text">【2026年4月最新】Claude vs ChatGPT完全比較：コスト・機能・用途別の使い分けガイド</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog094.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card094.webp" alt="東京都A1（えいいち）とは？" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.11</div>
+                            <div class="related-text">【2026年4月最新】東京都A1（えいいち）とは？6万人が使う生成AI基盤から中小企業が学べること</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog024.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card024.webp" alt="AI導入が失敗する本当の理由" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.05</div>
+                            <div class="related-text">【2026年最新】AI導入が失敗する本当の理由｜業務課題ベースで進める成功の鉄則</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+
+</body>
+
+</html>
