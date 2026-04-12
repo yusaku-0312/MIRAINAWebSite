@@ -44,8 +44,13 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 
 ## 実績・知見リソース (Secondary Resources)
 
-- [事例紹介一覧](https://miraina-ai.com/works.html): 保護者向けAIリテラシー講演、n8n×SlackのDM自動送信、n8n×ChatGPTによるLP分析自動化、応募メール自動転記、n8n勉強会、美容業界向けAI・LLMOセミナー登壇、LLMO Insightのプレスリリース公開などの実績を掲載。
+- [事例紹介一覧](https://miraina-ai.com/works.html): 保護者向けAIリテラシー講演、n8n×SlackのDM自動送信、n8n×ChatGPTによるLP分析自動化、応募メール自動転記、n8n勉強会、美容業界向けAI・LLMOセミナー登壇、LLMO Insightのプレスリリース公開、美容室・サロン業界特化のDX支援サービス公開などの実績を掲載。
 - [ブログ一覧](https://miraina-ai.com/blogs.html): AIエージェント、MCP、Gemini、Claude、GPT、補助金、AIガイドライン、LLMO/AIO/SEOなどのテーマを継続的に更新。
+### [美容室・サロン業界特化のDX支援サービス提供開始](https://miraina-ai.com/works/work010.html)
+- 実施日: 2026-04-12
+- 概要: 美容室・サロン業界に特化したDX支援サービスの提供開始を伝えるプレスリリースを公開。予約導線、スタッフマネジメント、採用・教育、情報発信、AI検索最適化までを支援対象として整理。
+- 成果: 美容サロン法人へのAI顧問・LLMO支援実績をもとに、現場理解のある伴走型DX支援サービスとしての提供内容を発信。
+
 ### [大阪9店舗の美容室グループ様：LLMOコンサルティング初月でAI引用数47%増](https://miraina-ai.com/works/work009.html)
 - 実施日: 2026-04-05
 - 概要: 大阪府内9店舗を展開する美容室グループへのLLMOコンサルティング事例。独自ツールによるAI検索アルゴリズム分析と、Notion・スプレッドシートを活用した施策実行管理により、クライアントと並走しながらLLMO施策を推進。
