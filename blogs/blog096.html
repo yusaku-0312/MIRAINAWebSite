@@ -143,10 +143,11 @@
                 </p>
 
                 <p>
-                    【公式情報】Notebooksはプロジェクト単位の<strong>個人ナレッジベース</strong>として機能する。
-                    PDFファイル、Googleドキュメント、Webサイト、コピーしたテキストなどを
-                    ソースとして取り込み、Geminiはそのソースを根拠にして回答を生成する。
-                    ソースを追加すればGeminiとNotebookLMの両方に自動で反映される。
+                    【公式情報】Gemini Apps Helpでは、Notebooksは
+                    <strong>「専用の集中スペース」</strong>として説明されており、
+                    ソース、指示、進行中の議論を継続的に記憶したまま会話できる。
+                    さらにNotebookLMと情報が同期されるため、
+                    ファイルやURLを追加するとGemini側とNotebookLM側の両方で同じ文脈を共有できる。
                 </p>
 
                 <figure class="article-figure">
@@ -176,43 +177,44 @@
                             </tr>
                             <tr>
                                 <th>ソース上限</th>
-                                <td>最大100件</td>
-                                <td>プロジェクト規模の資料を一括管理可能</td>
+                                <td>プランに応じて拡大。現行ヘルプでは最大600件</td>
+                                <td>提案書・競合調査・社内文書を1冊に寄せやすい</td>
                             </tr>
                             <tr>
-                                <th>対象ユーザー</th>
-                                <td>Google AI Ultra / Pro / Plus（ウェブ版から順次）</td>
-                                <td>モバイル・無料ユーザーは数週間後に拡大予定</td>
+                                <th>利用条件</th>
+                                <td>現行ヘルプでは個人Googleアカウント向け。仕事/学校アカウントは未対応</td>
+                                <td>まず個人検証から始める前提で見た方がよい</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
                 <p>
-                    【公式情報】NotebookLM側の新機能も同時に発表されており、
-                    <strong>ビデオオーバービュー</strong>や<strong>インフォグラフィック</strong>の自動生成も
-                    Notebooks経由でシームレスにアクセスできる。
+                    【公式情報】NotebookLM Helpでは、ノートブック内のStudio機能として
+                    <strong>Audio Overview、Video Overviews、Mind Maps、Reports、Slide Decks、Infographics</strong>
+                    などの生成が案内されている。
                     つまり今回の発表は、単なるツール統合ではなく、
-                    <strong>情報インプットからアウトプットまでを1つのプラットフォームで完結させる設計</strong>だと理解した方がよい。
+                    <strong>情報収集、会話、資料化までを1つの作業面に寄せる設計</strong>だと理解した方がよい。
                 </p>
 
                 <h2 id="section2">2. NotebookLM×Gemini統合はなぜ重要なのか</h2>
 
                 <p>
                     これまでAIチャットで業務リサーチをする際、最大の課題は
-                    <strong>ハルシネーション（事実に基づかない回答）</strong>だった。
-                    ChatGPTやGeminiに業界レポートの要約を頼んでも、
-                    元資料にない数字や事例が混入するリスクがあるため、
-                    結局人間がファクトチェックする必要があった。
+                    <strong>「どこまでを根拠に答えているのかが曖昧」</strong>なことだった。
+                    汎用AIに業界レポートの要約を頼むと、
+                    手元資料の内容とWeb上の一般知識が混ざりやすく、
+                    結局人間が「どの数字がどの資料由来か」を再確認する必要があった。
                 </p>
 
                 <p>
-                    NotebookLMは、指定したソースの内容だけに基づいて回答する
-                    <strong>「グラウンディング」</strong>方式を採用しているため、
-                    汎用チャットと比べて根拠のない回答が大幅に減る。
-                    ある調査報告によれば、グラウンディング非対応のAIチャットでの
-                    ハルシネーション率が約40%だったのに対し、
-                    NotebookLMでは約13%にとどまったとされる。
+                    【公式情報】NotebookLM Helpでは、
+                    ノートブックは<strong>特定プロジェクト向けのソース集合</strong>として扱われ、
+                    Chatパネルではそのソースについて質問したり、
+                    指示を出して作業させたりできると説明されている。
+                    Gemini側のNotebooksも、ソースと指示と会話を継続保持するため、
+                    AIを「何でも答える相手」ではなく
+                    <strong>選んだ資料だけを前提に考える相手</strong>へ近づけられる。
                 </p>
 
                 <div class="diagram-container">
@@ -243,13 +245,11 @@
                 </div>
 
                 <p>
-                    【解釈】中小企業にとってこの統合が重要なのは、
-                    <strong>リサーチの精度と速度を同時に上げられる</strong>可能性があるからだ。
-                    これまでは「AIは速いが信用できない」という理由で
-                    結局手作業に戻るケースが多かった。
-                    グラウンディング付きのAIリサーチなら、
-                    提案書や競合調査のベース作成をAIに任せつつ、
-                    根拠の確認コストを下げられる。
+                    【解釈】中小企業にとって重要なのは、
+                    <strong>検索と会話を分けずに、案件単位の文脈を維持できる</strong>ことだ。
+                    競合調査、提案書作成、社内FAQ整備のような仕事では、
+                    1回の回答精度よりも「前提資料を持ったまま会話を続けられるか」が効く。
+                    Notebooksは、この継続文脈をGemini本体に持ち込んだ点に価値がある。
                 </p>
 
                 <h2 id="section3">3. ビジネスリサーチと提案業務で何が変わるか</h2>
@@ -294,10 +294,12 @@
                 </div>
 
                 <p>
-                    【公式情報】Gemini NotebooksにはPersistent Memory（永続記憶）機能もあり、
-                    過去のチャット内容やカスタム指示を保持できる。
-                    これは長期プロジェクトの調査やクライアント別の提案作成で特に有効だ。
-                    「先週の会話を覚えていないから、また最初から説明する」という問題が起きにくくなる。
+                    【公式情報】Gemini Apps Helpでは、
+                    Notebooksは<strong>継続チャット</strong>として動作し、
+                    ソース、指示、進行中の議論を記憶すると案内されている。
+                    また、既存チャットをノートブックへ追加でき、
+                    その内容はNotebookLM側にも同期される。
+                    長期案件ほど「前回の前提説明を毎回やり直す」負担を減らしやすい。
                 </p>
 
                 <p>
@@ -312,6 +314,11 @@
                 <p>
                     Notebooksは有料プランで利用可能になっている。
                     全社導入の前に、まず個人レベルで以下の3つを試すとよい。
+                    このテーマを選んだ理由もここにある。AIが苦手な人は
+                    「AI 資料 要約 方法」「提案書 AI まとめ方」「社内マニュアル AI 検索」
+                    のように検索しやすく、すでにAIを使っている人は
+                    「このPDF群を根拠に比較表を作って」「過去提案を参照して骨子を作って」
+                    のようなプロンプトを投げやすい。
                 </p>
 
                 <div class="diagram-container">
@@ -341,6 +348,19 @@
                     AIに聞く前に「どの資料を根拠にするか」を自分で選べるのが、
                     汎用チャットとの最大の違いだ。
                 </p>
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-dot red"></span>
+                        <span class="code-block-dot yellow"></span>
+                        <span class="code-block-dot green"></span>
+                        <span class="code-block-label">prompt examples</span>
+                    </div>
+                    <pre><code>この市場レポート3本と競合サイトURLを根拠に、比較表を作って。根拠にしたソース名も併記して。
+
+この顧客要件書と過去提案書2本をもとに、提案骨子を3案出して。資料にないことは推測と明記して。
+
+この社内マニュアル群を読んで、新人が最初の1週間で読むべき順番と想定Q&amp;Aを20問作って。</code></pre>
+                </div>
 
                 <h3>Step 2：社内マニュアルをAI検索可能にする</h3>
                 <p>
@@ -408,11 +428,13 @@
                 </div>
 
                 <p>
-                    また、NotebookLM Plusは月額20ドル（Google One AI Premiumに含まれる）、
-                    Enterprise版はGoogle Cloud経由でVPC-SC対応・IAM管理が可能だが、
-                    <strong>Enterprise版は中小企業にはオーバースペックな場合が多い</strong>。
-                    まずは個人プランで業務フィットを検証し、
-                    効果が確認できてから組織導入を検討する方が合理的だ。
+                    また、Google OneとGemini/NotebookLMの公式ヘルプでは、
+                    ソース上限がプランに応じて増え、
+                    NotebookLM Plusで100件、Google AI Proで300件、
+                    Google AI Ultraで600件まで拡張されると案内されている。
+                    逆に言えば、まずは
+                    <strong>1冊に何件の資料を入れたいか</strong>を決めないまま上位プランへ進む必要はない。
+                    多くの中小企業は、1案件30〜50件程度の資料整理から始めれば十分だ。
                 </p>
 
                 <h2 id="section6">6. まとめ：AIリサーチは「聞く」から「知識ベースに問う」へ</h2>
@@ -438,8 +460,10 @@
                     <div class="ref-title">参考リンク</div>
                     <ul>
                         <li><a href="https://blog.google/innovation-and-ai/products/gemini-app/notebooks-gemini-notebooklm/" target="_blank" rel="noopener">Google公式：Try notebooks in Gemini to easily keep track of projects（2026年4月8日）</a></li>
-                        <li><a href="https://9to5google.com/2026/04/08/gemini-app-notebooks/" target="_blank" rel="noopener">9to5Google：Gemini app rolling out 'notebooks' to organize chats & files, integrates with NotebookLM</a></li>
-                        <li><a href="https://www.buildfastwithai.com/blogs/notebooklm-added-to-gemini-notebooks" target="_blank" rel="noopener">BuildFastWithAI：Google Adds Notebooks to Gemini: What Changed?</a></li>
+                        <li><a href="https://support.google.com/gemini/answer/16972047?hl=en&ref_topic=13194540" target="_blank" rel="noopener">Gemini Apps Help：Create and use notebooks in Gemini Apps</a></li>
+                        <li><a href="https://support.google.com/gemini/answer/14903178?co=GENIE.Platform%3DDesktop&hl=en" target="_blank" rel="noopener">Gemini Apps Help：Upload &amp; analyze files in Gemini Apps</a></li>
+                        <li><a href="https://support.google.com/notebooklm/answer/16206563" target="_blank" rel="noopener">NotebookLM Help：Create a notebook in NotebookLM</a></li>
+                        <li><a href="https://support.google.com/googleone/answer/16105039?hl=en" target="_blank" rel="noopener">Google One Help：Google One benefit restrictions</a></li>
                     </ul>
                 </div>
 

@@ -858,7 +858,7 @@
     {
       "id": 96,
       "title": "【2026年4月最新】NotebookLMがGeminiに統合、AIリサーチ業務はどう変わるか",
-      "description": "GoogleがNotebookLMをGeminiに統合した「Notebooks」機能を2026年4月8日に発表。グラウンディングによるハルシネーション抑制と業務リサーチ効率化を中小企業視点で解説します。",
+      "description": "GoogleがNotebookLMをGeminiに統合した「Notebooks」機能を2026年4月8日に発表。ソース・指示・会話を継続保持するAIリサーチの新しい進め方を中小企業視点で解説します。",
       "thumbnail": "/images/blogs_images/blog-card096.webp",
       "alt": "NotebookLMとGeminiの統合でAIリサーチ業務が変わるイメージ",
       "link": "/blogs/blog096.html",

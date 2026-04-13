@@ -87,7 +87,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年4月最新】Adobe Firefly新機能で画像編集はどう変わるか](https://miraina-ai.com/blogs/blog099.html): Adobeが2026年4月9日に発表したFireflyのPrecision FlowとAI Markupをもとに、画像生成後の微修正、ブランド一貫性の維持、SNS運用やLP改善での実務的な使いどころを整理した記事。
 - [最新ブログ: 美容サロン向けAIアプリは何で作る？バイブコーディング向けツール5選](https://miraina-ai.com/blogs/blog098.html): Glide、Replit Agent、Lovable、AppSheet、Power Appsを比較し、美容サロン向けAIアプリを作る時の判断軸と用途別の選び方を整理した記事。
 - [最新ブログ: 美容サロンで使えるバイブコーディング実例5選｜小さく作れるAIアプリを紹介](https://miraina-ai.com/blogs/blog097.html): 予約FAQ、カルテ補助、在庫管理、採用対応、店販フォローを題材に、美容サロンで小さく始められるAIアプリの作り方と導入順序を整理した記事。
-- [最新ブログ: NotebookLMがGeminiに統合、AIリサーチ業務はどう変わるか](https://miraina-ai.com/blogs/blog096.html): Googleが2026年4月8日にNotebookLMをGeminiに統合した「Notebooks」機能を発表。指定ソースだけを根拠に回答するグラウンディング方式によるハルシネーション抑制、最大100件のソース管理、永続記憶機能を活用した業務リサーチ・提案書作成・社内ナレッジ検索の効率化を中小企業視点で解説した記事。
+- [最新ブログ: NotebookLMがGeminiに統合、AIリサーチ業務はどう変わるか](https://miraina-ai.com/blogs/blog096.html): Googleが2026年4月8日にNotebookLMをGeminiに統合した「Notebooks」機能を発表。ソース・指示・会話を継続保持する新しいAIリサーチの進め方と、中小企業が提案書作成・競合調査・社内ナレッジ検索へ落とし込む手順を整理した記事。
 - [最新ブログ: MetaがMuse Sparkを公開、AI検索とSNS集客はどう変わるか](https://miraina-ai.com/blogs/blog095.html): Metaが2026年4月8日にMuse Sparkを発表。Instagram・Threads・WhatsAppへ広がるMeta AIの新機能をもとに、SNS投稿がAI検索の引用候補になる時代の実務対応を整理した記事。
 - [最新ブログ: AnthropicがTPU大型契約、中小企業のAIコストはどう変わるか](https://miraina-ai.com/blogs/blog093.html): Anthropicが2026年4月6日にGoogle・Broadcomとの計算資源拡大を発表。複数ギガワット級TPU確保が、AIコスト、供給安定、ベンダー選定をどう変えるかを整理した記事。
 - [最新ブログ: OpenAIがSafety Fellowshipを開始、企業のAI安全評価はどう変わるか](https://miraina-ai.com/blogs/blog092.html): OpenAIが2026年4月6日に発表したSafety Fellowshipをもとに、募集日程・重点領域・支援内容を整理。中小企業がAI安全評価を内製化するための運用設計と実装ステップを解説した記事。
