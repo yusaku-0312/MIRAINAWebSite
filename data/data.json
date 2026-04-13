@@ -899,6 +899,15 @@
       "alt": "AI時代に必要なスキルと5Cのイメージ",
       "link": "/blogs/blog100.html",
       "date": "2026-04-13"
+    },
+    {
+      "id": 101,
+      "title": "【2026年4月最新】ChatGPT Businessとは？Codex席で中小企業のAI導入はどう変わるか",
+      "description": "ChatGPT Businessとは何かを、OpenAIの2026年4月2日改定をもとに解説。標準ChatGPT席とCodex席の違い、料金、クレジット、Enterpriseへ切り替える境界線を整理します。",
+      "thumbnail": "/images/blogs_images/blog-card101.webp",
+      "alt": "ChatGPT BusinessとCodex席の導入設計イメージ",
+      "link": "/blogs/blog101.html",
+      "date": "2026-04-11"
     }
   ],
   "works": [
