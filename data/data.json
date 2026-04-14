@@ -908,6 +908,15 @@
       "alt": "ChatGPT BusinessとCodex席の導入設計イメージ",
       "link": "/blogs/blog101.html",
       "date": "2026-04-11"
+    },
+    {
+      "id": 102,
+      "title": "【2026年4月最新】サイバーエージェントのChatGPT Enterprise事例、定着率93%はどう作られたか",
+      "description": "サイバーエージェントのChatGPT Enterprise事例を、OpenAIの2026年4月9日公開情報とAIオペレーション室発表から整理。定着率93%を支えた運用設計と、中小企業が全社導入前に整える順番を解説します。",
+      "thumbnail": "/images/blogs_images/blog-card102.webp",
+      "alt": "サイバーエージェントのChatGPT Enterprise事例と定着率93%のイメージ",
+      "link": "/blogs/blog102.html",
+      "date": "2026-04-14"
     }
   ],
   "works": [

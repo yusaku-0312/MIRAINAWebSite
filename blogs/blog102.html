@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年4月最新】サイバーエージェントのChatGPT Enterprise事例、定着率93%はどう作られたか | MIRAINAブログ</title>
+    <meta name="description"
+        content="サイバーエージェントのChatGPT Enterprise事例を、OpenAIの2026年4月9日公開情報とAIオペレーション室発表から整理。定着率93%を支えた運用設計と、中小企業が全社導入前に整える順番を解説します。">
+    <meta property="og:title" content="【2026年4月最新】サイバーエージェントのChatGPT Enterprise事例、定着率93%はどう作られたか">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog102.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog102-1.webp">
+    <meta property="og:description"
+        content="サイバーエージェントのChatGPT Enterprise事例を、OpenAIの2026年4月9日公開情報とAIオペレーション室発表から整理。定着率93%を支えた運用設計と、中小企業が全社導入前に整える順番を解説します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>サイバーエージェントのChatGPT Enterprise事例、定着率93%はどう作られたか</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.04.14</span>
+                    <div class="article-tags">
+                        <p class="article-tag">ChatGPT Enterprise</p>
+                        <p class="article-tag">CyberAgent</p>
+                        <p class="article-tag">Codex</p>
+                        <p class="article-tag">AI導入</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年4月最新】サイバーエージェントのChatGPT Enterprise事例、定着率93%はどう作られたか</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog102-1.webp" alt="サイバーエージェントのChatGPT Enterprise事例と定着率93%のイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    2026年4月9日、OpenAIはサイバーエージェントの導入事例を公開し、
+                    <strong>ChatGPT Enterpriseの月間アクティブ利用率93%</strong>という数値を示した。
+                    重要なのは、単に全社配布したから定着したのではなく、
+                    <strong>AI Lab、AIオペレーション室、研修、利用可視化、Codex活用</strong>を連動させていた点だ。
+                    本記事では、OpenAIの公式事例とサイバーエージェントの公式発表をもとに、
+                    日本企業でAIを全社導入するときに何を先に整えるべきかを整理する。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. 4月9日の事例でまず押さえるべき事実</a></li>
+                    <li><a href="#section2">2. なぜ定着率93%まで広がったのか</a></li>
+                    <li><a href="#section3">3. Codexは実装前の判断をどう変えたか</a></li>
+                    <li><a href="#section4">4. 中小企業が真似すべき導入順序</a></li>
+                    <li><a href="#section5">5. すぐ全社展開しない方がよい境界例</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="section1">1. 4月9日の事例でまず押さえるべき事実</h2>
+
+                <p>
+                    【公式情報】OpenAIが2026年4月9日に公開した事例ページでは、
+                    サイバーエージェントは<strong>ChatGPT Enterpriseの月間アクティブ利用率93%</strong>を実現し、
+                    ChatGPTを調査、下書き、論点整理の標準ツールとして使っていると紹介されている。
+                    またCodexは、設計議論、コードレビュー、ドキュメント整備の速度と確度を高める役割で使われている。
+                </p>
+
+                <p>
+                    【公式情報】さらにサイバーエージェントは2023年10月18日の公式発表で、
+                    全社員のAIリテラシー向上と、<strong>2026年までにオペレーション業務を6割削減</strong>する方針のもと、
+                    「AIオペレーション室」を新設したと公表している。
+                    つまり今回の93%は、突然の成功事例ではなく、
+                    2023年から積み上げた組織設計の延長線上にある。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>観点</th>
+                                <th>公式情報</th>
+                                <th>実務での意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>利用定着</th>
+                                <td>ChatGPT Enterpriseの月間アクティブ利用率93%</td>
+                                <td>配布だけでなく継続利用の設計まで回っている</td>
+                            </tr>
+                            <tr>
+                                <th>推進組織</th>
+                                <td>2023年10月にAIオペレーション室を新設</td>
+                                <td>現場任せではなく、全社推進の責任主体がある</td>
+                            </tr>
+                            <tr>
+                                <th>目標</th>
+                                <td>2026年までにオペレーション業務を6割削減</td>
+                                <td>AI導入が話題づくりでなく業務KPIに紐づいている</td>
+                            </tr>
+                            <tr>
+                                <th>技術基盤</th>
+                                <td>2016年設立のAI Labと業務実装の両輪</td>
+                                <td>研究・評価・運用を分けて積み上げられる</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section2">2. なぜ定着率93%まで広がったのか</h2>
+
+                <p>
+                    OpenAIの事例で重要なのは、「全社必須にしたから使われた」とは書かれていない点だ。
+                    むしろ、何を入れてよいか迷わないセキュアな環境、
+                    管理者による一元管理、部署横断の知見共有が揃ったことで、
+                    日常業務へ自然に入り込んだ構図が見える。
+                    導入の障害はモデル性能よりも、
+                    <strong>入力してよい情報が曖昧なこと</strong>と
+                    <strong>部署ごとに使い方がバラバラなこと</strong>である。
+                </p>
+
+                <p>
+                    【公式情報】同事例では、サイバーエージェントは100人超が参加する研修を10回以上実施し、
+                    利用率の見える化や、一定期間使っていない社員へのSlackフォローまで行っている。
+                    これは「AIが苦手な人ほど放置されやすい」問題への対策だ。
+                    AIが得意な人に使わせるだけではなく、
+                    使っていない人に戻ってくる導線を作ることで定着率は上がる。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">失敗しやすい全社導入</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>ツールだけ配る</li>
+                                    <li>入力ルールが曖昧</li>
+                                    <li>使わない人を追わない</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">→</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">定着しやすい導入</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>推進組織を置く</strong></li>
+                                    <li>研修と利用可視化を回す</li>
+                                    <li>未利用者へ再参加導線を作る</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">図1：定着率は「配布枚数」ではなく「再利用の仕組み」で決まる</p>
+                </div>
+
+                <p>
+                    MIRAINA視点で言えば、
+                    これは<a href="/blogs/blog024.html">AI導入が失敗する本当の理由</a>で整理した
+                    「AI起点で考えると現場に定着しない」という話と一致する。
+                    ツール導入、利用ルール、教育、フォローを別々に発注すると、
+                    途中で責任の所在が曖昧になりやすい。
+                    だから中小企業でも、担当者1人に押し込まず、
+                    推進責任と運用責任を分けておく方が結果的に速い。
+                </p>
+
+                <h2 id="section3">3. Codexは実装前の判断をどう変えたか</h2>
+
+                <p>
+                    【公式情報】OpenAIは、サイバーエージェントがCodexを
+                    設計議論、コードレビュー、ドキュメント作成に使っていると説明している。
+                    ここで注目すべきは、Codexが「コードを書くためだけの席」ではなく、
+                    <strong>実装前の判断を速める道具</strong>として機能している点だ。
+                    仕様の抜け漏れ確認、レビュー観点の洗い出し、依存関係の把握が早くなると、
+                    実装そのものより手前の詰まりが減る。
+                </p>
+
+                <p>
+                    既存記事の<a href="/blogs/blog036.html">楽天のCodex事例</a>が
+                    開発速度と修正サイクルの改善に寄っていたのに対し、
+                    今回のサイバーエージェント事例は
+                    <strong>非開発部門も含む全社運用の中でCodexがどう位置づくか</strong>を示している。
+                    つまり、ChatGPT Enterpriseで土台を整え、
+                    Codexを判断と実装の境界に置く形が見えてきた。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>使いどころ</th>
+                                <th>Codexで速くなること</th>
+                                <th>人が残す判断</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>設計議論</th>
+                                <td>仕様の抜け漏れ整理、実装案の比較</td>
+                                <td>何を優先し、何を捨てるか</td>
+                            </tr>
+                            <tr>
+                                <th>コードレビュー</th>
+                                <td>変更点の要約、論点の先出し</td>
+                                <td>受け入れる品質基準の最終決定</td>
+                            </tr>
+                            <tr>
+                                <th>ドキュメント</th>
+                                <td>README、手順書、議事メモの初稿作成</td>
+                                <td>社内運用に合う表現への調整</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section4">4. 中小企業が真似すべき導入順序</h2>
+
+                <p>
+                    サイバーエージェントの規模をそのまま真似する必要はない。
+                    ただし順番は参考になる。
+                    先に作るべきは、高度な自動化よりも
+                    <strong>入力ルール、担当者、研修、再定着の仕組み</strong>だ。
+                    ChatGPT Businessの席設計を整理した
+                    <a href="/blogs/blog101.html">こちらの記事</a>ともつながるが、
+                    料金や席種の前に運用責任を決めておかないと利用は続かない。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">入力してよい情報の範囲を決める</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">よく使う3業務で研修を回す</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">未利用者の再参加導線を作る</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図2：中小企業は「全社配布」より「定着導線の3点セット」から始める</p>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-dot red"></span>
+                        <span class="code-block-dot yellow"></span>
+                        <span class="code-block-dot green"></span>
+                        <span class="code-block-label">prompt example</span>
+                    </div>
+                    <pre><code>社員20人の会社です。
+営業、制作、管理部でChatGPT EnterpriseまたはBusinessを導入したいです。
+
+1. 入力してよい情報の線引き
+2. 最初の30日で研修すべき業務3つ
+3. 使わなくなった社員を再定着させるフォロー方法
+
+を表で整理してください。</code></pre>
+                </div>
+
+                <p>
+                    MIRAINAでは、この3ステップを
+                    <a href="/services/ai_consulting.html">生成AI活用支援</a>と
+                    <a href="/services/ai_training.html">AI研修</a>で一体で設計している。
+                    導入の成否は、派手なデモではなく、
+                    30日後に誰が何回使っているかで判断した方がぶれにくい。
+                </p>
+
+                <h2 id="section5">5. すぐ全社展開しない方がよい境界例</h2>
+
+                <p>
+                    サイバーエージェントの事例は魅力的だが、
+                    すべての会社がいきなり93%を目指すべきではない。
+                    まず小さく始めた方がよいのは、
+                    機密情報の分類が未整備、
+                    部署ごとの業務差が大きい、
+                    研修を回す担当者がいない場合だ。
+                    この状態で全社展開すると、
+                    「誰もが少しだけ触ったが、結局戻った」で終わりやすい。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>状況</th>
+                                <th>急いで全社展開しない理由</th>
+                                <th>先にやること</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>情報区分が曖昧</th>
+                                <td>入力ルール違反が起きやすい</td>
+                                <td>データ分類と禁止例の整理</td>
+                            </tr>
+                            <tr>
+                                <th>担当者が兼務だらけ</th>
+                                <td>研修とフォローが後回しになる</td>
+                                <td>推進責任と運用責任を分ける</td>
+                            </tr>
+                            <tr>
+                                <th>対象業務が広すぎる</th>
+                                <td>効果測定がぼやける</td>
+                                <td>最初の3業務に絞る</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    逆に言えば、
+                    入力ルール、研修テーマ、月次の利用確認さえ決めれば、
+                    中小企業でも全社定着は十分狙える。
+                    大企業の事例をそのまま真似るのではなく、
+                    <strong>何が再現可能な要素か</strong>を抜き出すことが重要だ。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+
+                <p>
+                    サイバーエージェントのChatGPT Enterprise事例が示したのは、
+                    AI導入の勝負どころが「高性能モデルを選ぶこと」ではなく、
+                    <strong>誰が推進し、どう教え、どう再定着させるか</strong>にあるという事実だ。
+                    定着率93%という数字は大きいが、
+                    背景を見ると再現不能な特殊事例ではない。
+                    推進組織、研修、可視化、未利用者フォローという基本動作を、
+                    先に整えていたことが強い。
+                </p>
+
+                <p>
+                    ChatGPTやCodexを入れる前に、
+                    どの業務から始めるか、入力してよい情報は何か、誰が使わなくなった人を追うか。
+                    ここまで決めてから入れる会社ほど、導入効果は伸びやすい。
+                    MIRAINAでは、こうした全社定着の設計から運用開始後の改善まで伴走している。
+                </p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://openai.com/index/cyber-agent/" target="_blank" rel="noopener">OpenAI：CyberAgent moves faster with ChatGPT Enterprise and Codex（2026年4月9日）</a></li>
+                        <li><a href="https://www.cyberagent.co.jp/news/detail/id=29442" target="_blank" rel="noopener">サイバーエージェント公式：AIオペレーション室を新設（2023年10月18日）</a></li>
+                        <li><a href="https://www.cyberagent.co.jp/en/service/ai/" target="_blank" rel="noopener">CyberAgent公式：AI / AI Lab紹介ページ</a></li>
+                        <li><a href="https://openai.com/business/customer-stories/" target="_blank" rel="noopener">OpenAI：Customer stories</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">ChatGPTの全社定着設計を進めたい方へ</h2>
+                    <p class="cta-text">MIRAINAでは、生成AIの導入判断から研修、利用ルール整備、運用改善まで<br>中小企業向けに伴走しています。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog101.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card101.webp" alt="ChatGPT Businessとは？" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.11</div>
+                            <div class="related-text">【2026年4月最新】ChatGPT Businessとは？Codex席で中小企業のAI導入はどう変わるか</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog091.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card091.webp" alt="OpenAIで企業売上40%超" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.10</div>
+                            <div class="related-text">【2026年4月最新】OpenAIで企業売上40%超、enterprise AI導入はどう変わるか</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog036.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card036.webp" alt="Codexとは？楽天事例でわかるAI開発導入法" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.11</div>
+                            <div class="related-text">【2026年3月最新】Codexとは？楽天事例でわかるAI開発導入法</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>
