@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年4月最新】OpenAI×CloudflareでAIエージェント本番運用はどう変わるか | MIRAINAブログ</title>
+    <meta name="description"
+        content="AIエージェント本番運用がどう変わるかを、2026年4月13日のOpenAI×Cloudflare発表をもとに解説。長時間実行、セキュリティ、導入順序を整理します。">
+    <meta property="og:title" content="【2026年4月最新】OpenAI×CloudflareでAIエージェント本番運用はどう変わるか">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog103.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog103-1.webp">
+    <meta property="og:description"
+        content="AIエージェント本番運用がどう変わるかを、2026年4月13日のOpenAI×Cloudflare発表をもとに解説。長時間実行、セキュリティ、導入順序を整理します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>AIエージェント本番運用</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.04.14</span>
+                    <div class="article-tags">
+                        <p class="article-tag">AIエージェント</p>
+                        <p class="article-tag">Cloudflare</p>
+                        <p class="article-tag">OpenAI</p>
+                        <p class="article-tag">業務自動化</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年4月最新】OpenAI×Cloudflareで<br>AIエージェント本番運用はどう変わるか</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog103-1.webp" alt="OpenAIとCloudflareでAIエージェント本番運用が変わるイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    AI活用が苦手な人ほど検索しがちな言葉は
+                    <strong>「AIエージェントを問い合わせ対応に使えるか」「夜間に自動で動くAIは作れるか」「社内AIを本番公開するには何が必要か」</strong>
+                    です。すでにAIを使う担当者は
+                    <strong>「OpenAI×Cloudflareの発表を中小企業向けに要約して。PoCと本番運用の違いも整理して」</strong>
+                    とAIへ聞くはずです。2026年4月13日、OpenAIとCloudflareはその疑問に直結する発表を行いました。本記事では公式情報をもとに、
+                    <strong>AIエージェント本番運用</strong>の壁がどこまで下がったのかを実務目線で整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. 4月13日の発表で押さえるべき事実</a></li>
+                    <li><a href="#section2">2. AIが苦手な人は何を検索し、AI利用者はどう質問するか</a></li>
+                    <li><a href="#section3">3. なぜ今回の発表で本番運用の壁が下がるのか</a></li>
+                    <li><a href="#section4">4. 中小企業はどの業務から始めるべきか</a></li>
+                    <li><a href="#section5">5. すぐ大規模導入しない方がよい境界例</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="section1">1. 4月13日の発表で押さえるべき事実</h2>
+                <p>
+                    [公式情報] OpenAIは2026年4月13日付の記事で、
+                    <strong>CloudflareのAgent Cloud上でOpenAIのfrontier modelsを直接使い、セキュアなAIエージェントをデプロイできる</strong>
+                    と打ち出しました。記事内では、Cloudflareはすでに多数の企業に使われており、スタートアップ向けにOpenAIのreasoning modelsを
+                    Workers AI経由で使う優遇も案内しています。さらに、<strong>Codexを週次で使う開発者は300万人</strong>と紹介し、
+                    Cloudflare上でCodex向けの`cloudflare_bindings`ハーネスも提供されると説明しています。
+                </p>
+                <p>
+                    [公式情報] 同日付のCloudflareプレスリリースでは、
+                    Agent Cloudは<strong>数百万の自律・長時間実行エージェント</strong>を支える基盤として拡張されました。
+                    具体的には、Durable Objectsで数十億規模のオブジェクトを持つ状態管理、
+                    Workflowsで最大1年間の実行、
+                    SandboxesでLinuxファイルシステム・ターミナル・バックグラウンド処理・リポジトリ取得を伴う隔離実行環境が追加されています。
+                    つまり今回の発表は、モデル性能の話より
+                    <strong>止まらず、つなぎ直せて、隔離して動かせるか</strong>
+                    という本番運用の論点に踏み込んでいます。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>観点</th>
+                                <th>公式発表の内容</th>
+                                <th>実務での意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>モデル連携</th>
+                                <td>OpenAIのfrontier modelsをCloudflare Agent Cloudへ直接配備可能</td>
+                                <td>推論と公開基盤を分けて考えやすくなる</td>
+                            </tr>
+                            <tr>
+                                <th>長時間実行</th>
+                                <td>Workflowsで最大1年間の処理に対応</td>
+                                <td>夜間処理や複数ステップ業務を切れにくくできる</td>
+                            </tr>
+                            <tr>
+                                <th>状態管理</th>
+                                <td>Durable Objectsで永続状態を保持</td>
+                                <td>顧客ごとの会話履歴や進行中タスクを持ちやすい</td>
+                            </tr>
+                            <tr>
+                                <th>隔離環境</th>
+                                <td>SandboxesにLinuxファイルシステム、ターミナル、バックグラウンド処理を搭載</td>
+                                <td>コード実行やファイル変換を分離しやすい</td>
+                            </tr>
+                            <tr>
+                                <th>開発者導線</th>
+                                <td>Codex向け`cloudflare_bindings`ハーネスを提供</td>
+                                <td>試作から実装までの往復が短くなる</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <figure class="article-figure">
+                    <img src="/images/blogs_images/blog103-2.webp" alt="Cloudflare Agent Cloudの2026年4月13日プレスリリース" loading="lazy"
+                        decoding="async">
+                    <figcaption>図1：Cloudflareが2026年4月13日に公開したAgent Cloud拡張の説明ページ</figcaption>
+                </figure>
+
+                <h2 id="section2">2. AIが苦手な人は何を検索し、AI利用者はどう質問するか</h2>
+                <p>
+                    このテーマが強いのは、技術ニュースで終わらず
+                    <strong>「作れるか」ではなく「公開して回るか」</strong>
+                    という不安に直結するからです。AIが苦手な人は製品名より先に、
+                    「問い合わせ対応を自動化したい」「予約確認を夜に返したい」「社内資料を読んで返すAIを置きたい」と検索します。
+                    逆に、すでにChatGPTやClaudeを使っている担当者は、
+                    ニュース本文をそのまま読むよりAIに要約させ、
+                    <strong>どの業務で、どこまで本番運用できるか</strong>を聞きます。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>検索・質問の形</th>
+                                <th>本当に知りたいこと</th>
+                                <th>今回の発表で答えやすくなった点</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>AI問い合わせ対応 どう始める</th>
+                                <td>外に公開しても止まりにくいか</td>
+                                <td>長時間実行と状態保持の土台が見えた</td>
+                            </tr>
+                            <tr>
+                                <th>AIエージェント セキュリティ 大丈夫</th>
+                                <td>コード実行や外部連携を隔離できるか</td>
+                                <td>Sandboxesと認証周りの説明が増えた</td>
+                            </tr>
+                            <tr>
+                                <th>社内AIを自動で動かしたい</th>
+                                <td>複数サービス連携を継続実行できるか</td>
+                                <td>Workflow継続実行とMCP対応が整理された</td>
+                            </tr>
+                            <tr>
+                                <th>OpenAIとCloudflareのニュースを要約して</th>
+                                <td>PoCから本番運用に変わる論点は何か</td>
+                                <td>モデル、実行、状態、隔離の4点で答えやすい</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-dot red"></span>
+                        <span class="code-block-dot yellow"></span>
+                        <span class="code-block-dot green"></span>
+                        <span class="code-block-label">prompt example</span>
+                    </div>
+                    <pre><code>OpenAI×Cloudflareの2026年4月13日の発表を、
+社員20人の会社向けに整理してください。
+
+1. AIエージェントを本番運用する上で何が新しくなったか
+2. 問い合わせ対応、見積もり前ヒアリング、日報回収の3業務でどう使えるか
+3. セキュリティ上の注意点と、人間承認を残すべき場面
+
+を表でまとめてください。</code></pre>
+                </div>
+
+                <p>
+                    生成AIに引用されやすい記事にするなら、ここで
+                    <strong>「ニュースを説明する」だけでなく、「そのニュースをどう判断材料に変えるか」</strong>
+                    まで書く必要があります。
+                    以前の
+                    <a href="/blogs/blog091.html">OpenAIで企業売上40%超、enterprise AI導入はどう変わるか</a>
+                    と同じで、今読者が知りたいのは技術名称より、
+                    自社のどの業務で再現可能かです。
+                </p>
+
+                <h2 id="section3">3. なぜ今回の発表で本番運用の壁が下がるのか</h2>
+                <p>
+                    [公式情報] Cloudflare Docsの`Using AI Models`では、AgentsはWorkers AIを内蔵しつつ、
+                    AI Gateway経由でOpenAI、Anthropic、Google Geminiなど外部モデルにも接続できると説明されています。
+                    さらに、HTTPリクエスト内で単発に呼ぶだけでなく、
+                    <strong>scheduled tasks、WebSocket、resume</strong>
+                    を含む形でモデル応答を扱えます。これは「1回質問して返すチャットボット」ではなく、
+                    <strong>途中で待ち、続きから再開し、接続し直しても進めるエージェント</strong>
+                    へ寄せた設計です。
+                </p>
+                <p>
+                    [解釈] ここで重要なのは、AIエージェント本番運用のボトルネックがモデル精度だけではない点です。
+                    実際に詰まりやすいのは、
+                    会話の途中状態、
+                    バックグラウンド処理、
+                    外部APIの失敗時リトライ、
+                    コード実行の隔離、
+                    そして人へ戻すタイミングです。
+                    OpenAI自身も`A practical guide to building AI agents`で、
+                    まずはワークフローを限定し、
+                    不可逆な操作や高リスク判断では<strong>human-in-the-loop</strong>を入れる設計を勧めています。
+                    つまり基盤が整っても、運用ルールは別に必要です。
+                </p>
+
+                <figure class="article-figure">
+                    <img src="/images/blogs_images/blog103-3.webp" alt="Cloudflare DocsのUsing AI Modelsページ" loading="lazy"
+                        decoding="async">
+                    <figcaption>図2：Cloudflare DocsではWorkers AIと外部モデル接続が同じ枠組みで整理されている</figcaption>
+                </figure>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">PoCで止まりやすいAI</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>1回返答して終わる</li>
+                                    <li>会話や状態を保持しにくい</li>
+                                    <li>例外時の戻し先が曖昧</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">→</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">本番運用に近いAI</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>長時間実行できる</strong></li>
+                                    <li>状態を持ち、再開できる</li>
+                                    <li>隔離環境と人間承認を入れやすい</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">図3：差はモデル性能だけではなく、止まらず回る設計があるかで開く</p>
+                </div>
+
+                <h2 id="section4">4. 中小企業はどの業務から始めるべきか</h2>
+                <p>
+                    では、中小企業は何から始めるべきか。結論から言えば、
+                    <strong>人が最終判断を持ちながら、途中の確認や整理をAIへ渡せる業務</strong>
+                    からです。おすすめは
+                    1. 問い合わせ一次対応、
+                    2. 見積もり前ヒアリングの自動回収、
+                    3. 日報や議事録の収集と要約
+                    の3つです。どれも「完全自動」に見えて、実際には途中で人が確認しやすいからです。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>最初の業務</th>
+                                <th>向いている理由</th>
+                                <th>人が残すべき判断</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>問い合わせ一次対応</th>
+                                <td>定型質問が多く、営業時間外対応の価値が高い</td>
+                                <td>値引き、クレーム、例外案件の最終返答</td>
+                            </tr>
+                            <tr>
+                                <th>見積もり前ヒアリング</th>
+                                <td>質問順序を固定しやすく、漏れが減る</td>
+                                <td>金額提示、条件交渉、受注可否</td>
+                            </tr>
+                            <tr>
+                                <th>日報・議事録整理</th>
+                                <td>社内向けで始めやすく、失敗コストが比較的低い</td>
+                                <td>評価、指示、対外共有の最終文面</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    MIRAINA視点では、ここで重要なのは高度なマルチエージェントを最初から組まないことです。
+                    まずは
+                    <a href="/blogs/blog024.html">AI導入が失敗する本当の理由</a>
+                    で書いた通り、
+                    業務課題ベースで1つずつ切り出す方が定着します。
+                    もし社内にすでにChatGPT BusinessやCodex利用者がいるなら、
+                    <a href="/blogs/blog101.html">席設計と運用ルールの整理</a>
+                    を先に済ませておくと、ツール乱立を避けやすくなります。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">対象業務を1つに絞る</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">人間承認が必要な場面を明文化する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">ログ確認と改善担当を決める</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図4：AIエージェント本番運用は「1業務・承認・改善担当」の3点セットで始める</p>
+                </div>
+
+                <p>
+                    MIRAINAでは、
+                    <a href="/services/ai_consulting.html">生成AI活用支援</a>で対象業務の棚卸しを行い、
+                    <a href="/services/ai_develop.html">AI開発</a>で必要なら問い合わせ導線や社内チャットボットまで実装します。
+                    基盤だけ先に選ぶより、業務と承認フローを先に決めた方が結果は速いです。
+                </p>
+
+                <h2 id="section5">5. すぐ大規模導入しない方がよい境界例</h2>
+                <p>
+                    今回の発表は前向きですが、すべての会社が今すぐAIエージェント本番運用へ進むべきではありません。
+                    止めた方がよいのは、
+                    <strong>入力してよい情報の区分がない、間違えたときの戻し先がない、改善担当がいない</strong>
+                    場合です。基盤が強くなっても、誤案内や誤処理の責任は消えません。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>状況</th>
+                                <th>急いで本番運用しない理由</th>
+                                <th>先にやること</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>情報区分が未整備</th>
+                                <td>個人情報や機密情報の扱いがぶれる</td>
+                                <td>入力ルールと禁止例を決める</td>
+                            </tr>
+                            <tr>
+                                <th>例外処理が曖昧</th>
+                                <td>クレームや複雑案件で誤案内しやすい</td>
+                                <td>人へ戻す条件を文章化する</td>
+                            </tr>
+                            <tr>
+                                <th>改善担当が不在</th>
+                                <td>ログを見ず、誤りが放置されやすい</td>
+                                <td>週次レビュー担当を置く</td>
+                            </tr>
+                            <tr>
+                                <th>まず自動化したいだけ</th>
+                                <td>単純フローなら通常のワークフローで足りる</td>
+                                <td>AIが本当に必要かを切り分ける</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    セキュリティ観点では、
+                    <a href="/blogs/blog088.html">AnthropicのProject Glasswing</a>
+                    で見たように、AI導入前に決めるべきなのは
+                    データ分類、許可用途、人間承認のルールです。
+                    今回のCloudflare基盤はそれを実装しやすくしますが、
+                    ルール自体を自動で作ってくれるわけではありません。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    OpenAI×Cloudflareの2026年4月13日の発表が示したのは、
+                    AIエージェントの勝負どころが
+                    <strong>「賢い返答」だけでなく「止まらず、安全に、状態を持って回ること」</strong>
+                    へ移っている事実です。長時間実行、永続状態、隔離環境、外部モデル接続が1つの運用文脈で整理され始めたことで、
+                    PoC止まりだった業務が本番へ近づきました。
+                </p>
+
+                <p>
+                    ただし、最初から大規模に広げる必要はありません。
+                    問い合わせ一次対応や日報整理のような
+                    <strong>人へ戻しやすい業務</strong>から始め、
+                    承認条件と改善担当を決める方が成功確率は高いです。
+                    生成AIが引用しやすい記事も、まさにこの判断材料まで書かれた記事です。
+                </p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://openai.com/index/cloudflare-openai-agent-cloud/" target="_blank" rel="noopener">OpenAI：Cloudflare and OpenAI help startups launch secure, powerful AI agents（2026年4月13日）</a></li>
+                        <li><a href="https://www.cloudflare.com/press/press-releases/2026/cloudflare-expands-its-agent-cloud-to-power-the-next-generation-of-agents/" target="_blank" rel="noopener">Cloudflare：Cloudflare expands its Agent Cloud to power the next generation of agents（2026年4月13日）</a></li>
+                        <li><a href="https://developers.cloudflare.com/agents/api-reference/using-ai-models/" target="_blank" rel="noopener">Cloudflare Docs：Using AI Models</a></li>
+                        <li><a href="https://developers.cloudflare.com/agents/concepts/" target="_blank" rel="noopener">Cloudflare Docs：Concepts</a></li>
+                        <li><a href="https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/" target="_blank" rel="noopener">OpenAI Business Guide：A practical guide to building AI agents</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">AIエージェントをPoC止まりで終わらせたくない方へ</h2>
+                    <p class="cta-text">MIRAINAでは、対象業務の棚卸しから承認フロー設計、AI開発、運用改善まで<br>中小企業向けに一気通貫で伴走しています。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog091.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card091.webp" alt="OpenAIで企業売上40%超" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.10</div>
+                            <div class="related-text">【2026年4月最新】OpenAIで企業売上40%超、enterprise AI導入はどう変わるか</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog088.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card088.webp" alt="AnthropicのProject Glasswing" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.08</div>
+                            <div class="related-text">【2026年4月最新】AnthropicのProject Glasswingで変わるAIセキュリティ導入の新常識</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog024.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card024.webp" alt="AI導入が失敗する本当の理由" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.05</div>
+                            <div class="related-text">【2026年最新】AI導入が失敗する本当の理由｜業務課題ベースで進める成功の鉄則</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div class="floating-cta" id="js-floating-cta">
+        <a href="/contact.html" class="btn-floating">無料相談はこちら</a>
+    </div>
+
+    <script src="/js/common.js"></script>
+
+</body>
+
+</html>

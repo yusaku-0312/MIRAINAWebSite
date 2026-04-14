@@ -917,6 +917,15 @@
       "alt": "サイバーエージェントのChatGPT Enterprise事例と定着率93%のイメージ",
       "link": "/blogs/blog102.html",
       "date": "2026-04-14"
+    },
+    {
+      "id": 103,
+      "title": "【2026年4月最新】OpenAI×CloudflareでAIエージェント本番運用はどう変わるか",
+      "description": "AIエージェント本番運用がどう変わるかを、2026年4月13日のOpenAI×Cloudflare発表をもとに解説。長時間実行、セキュリティ、導入順序を整理します。",
+      "thumbnail": "/images/blogs_images/blog-card103.webp",
+      "alt": "OpenAIとCloudflareによるAIエージェント本番運用のイメージ",
+      "link": "/blogs/blog103.html",
+      "date": "2026-04-14"
     }
   ],
   "works": [
