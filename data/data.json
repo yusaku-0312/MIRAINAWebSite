@@ -926,6 +926,15 @@
       "alt": "OpenAIとCloudflareによるAIエージェント本番運用のイメージ",
       "link": "/blogs/blog103.html",
       "date": "2026-04-14"
+    },
+    {
+      "id": 104,
+      "title": "【2026年4月最新】OpenAIがTACを拡大、GPT-5.4-Cyberで企業防御はどう変わるか",
+      "description": "TAC（Trusted Access for Cyber）拡大とGPT-5.4-Cyber公開をもとに、本人確認ベースのAIセキュリティ運用設計、権限ティア、人間承認境界の決め方を解説します。",
+      "thumbnail": "/images/blogs_images/blog-card104.webp",
+      "alt": "OpenAI TAC拡大とGPT-5.4-Cyberで進むAIセキュリティ運用設計のイメージ",
+      "link": "/blogs/blog104.html",
+      "date": "2026-04-15"
     }
   ],
   "works": [
