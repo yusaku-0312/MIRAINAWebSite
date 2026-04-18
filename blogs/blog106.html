@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年4月最新】AI Max移行でGoogle広告運用はどう変わるか | MIRAINAブログ</title>
+    <meta name="description"
+        content="AI Max移行をGoogleの2026年4月15日発表と広告安全性レポートから解説。DSA自動アップグレード、広告審査、運用設計を整理します。">
+    <meta property="og:title" content="【2026年4月最新】AI Max移行でGoogle広告運用はどう変わるか">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog106.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog106-1.webp">
+    <meta property="og:description"
+        content="AI Max移行をGoogleの2026年4月15日発表と広告安全性レポートから解説。DSA自動アップグレード、広告審査、運用設計を整理します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>AI Max移行でGoogle広告運用はどう変わるか</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.04.18</span>
+                    <div class="article-tags">
+                        <p class="article-tag">AI Max</p>
+                        <p class="article-tag">Google広告</p>
+                        <p class="article-tag">広告運用AI</p>
+                        <p class="article-tag">LLMO</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年4月最新】AI Max移行でGoogle広告運用はどう変わるか</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog106-1.webp" alt="AI Max移行でGoogle広告運用が変わるイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    AI活用が苦手な人は、機能名ではなく
+                    <strong>「Google広告 AI 何が変わる」「動的検索広告 終了」「広告審査 AI 厳しくなる」</strong>
+                    のように検索するはずです。一方で、すでにAIを使っている担当者は
+                    <strong>「GoogleのAI Max移行とAds Safety Reportを中小企業向けに要約して。広告運用で今確認すべきことを表にして」</strong>
+                    と聞く可能性が高い。2026年4月15日、GoogleはDynamic Search Adsなどを9月からAI Maxへ自動アップグレードすると発表しました。翌16日には、Geminiで広告違反を事前検知する2025 Ads Safety Reportも公開されています。本記事では、AI Max移行を単なる機能変更ではなく、
+                    <strong>検索広告・広告審査・サイト情報設計が一体化する変化</strong>
+                    として整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. 4月15日の発表で押さえるべき事実</a></li>
+                    <li><a href="#section2">2. AIが苦手な人は何を検索し、AI利用者はどう質問するか</a></li>
+                    <li><a href="#section3">3. AI Max移行でGoogle広告運用は何が変わるか</a></li>
+                    <li><a href="#section4">4. Geminiによる広告安全性強化が意味すること</a></li>
+                    <li><a href="#section5">5. 中小企業が今確認すべき3つの準備</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="section1">1. 4月15日の発表で押さえるべき事実</h2>
+                <p>
+                    【公式情報】Googleは2026年4月15日、Dynamic Search Ads（DSA）、自動作成アセット、
+                    キャンペーン単位の部分一致設定を、2026年9月から
+                    <strong>AI Max for Search campaigns</strong>
+                    へ自動アップグレードすると発表しました。9月以降は対象キャンペーンが順次移行され、
+                    Google Ads、Google Ads Editor、Google Ads APIから新しいDSAキャンペーンを作れなくなると説明されています。
+                </p>
+                <p>
+                    【公式情報】AI Maxは、広告主が用意した広告文やWebサイト情報に加え、
+                    より広いリアルタイムの検索意図シグナルを使って検索語句を広げ、広告文や最終URLを調整する仕組みです。
+                    Googleは、AI Maxのフル機能を使った検索キャンペーンでは、
+                    検索語句マッチングのみを使う場合と比べて
+                    <strong>同程度のCPA/ROASで平均7%多いコンバージョンまたはコンバージョン価値</strong>
+                    が見られるとしています。
+                </p>
+                <p>
+                    【解釈】つまり、AI Max移行は「キーワードを広げる便利機能」ではありません。
+                    サイト内の情報、広告アセット、ブランド・地域・テキストの制御、最終URLの扱いまで含めて、
+                    <strong>検索広告の成果をAIが組み立てる比率が上がる</strong>
+                    という変化です。広告担当者の仕事は、細かい入稿作業から、AIが参照する情報と止める条件を設計する仕事へ移ります。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>Google発表の内容</th>
+                                <th>実務で見るべき点</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>移行時期</th>
+                                <td>2026年9月から対象キャンペーンを自動アップグレード</td>
+                                <td>夏までにテスト移行し、想定外のURLや訴求を確認する</td>
+                            </tr>
+                            <tr>
+                                <th>対象</th>
+                                <td>DSA、自動作成アセット、キャンペーン単位の部分一致設定</td>
+                                <td>過去に放置した設定がないか棚卸しする</td>
+                            </tr>
+                            <tr>
+                                <th>主な機能</th>
+                                <td>検索語句マッチング、テキストカスタマイズ、最終URL拡張</td>
+                                <td>どこまでAIに任せ、どこを人が固定するか決める</td>
+                            </tr>
+                            <tr>
+                                <th>期待効果</th>
+                                <td>フル機能利用で平均7%多いコンバージョンまたは価値</td>
+                                <td>成果増だけでなく粗利、商談品質、返品率も見る</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section2">2. AIが苦手な人は何を検索し、AI利用者はどう質問するか</h2>
+                <p>
+                    AIが苦手な人は、AI Maxという名称を知らないまま不安から検索します。
+                    たとえば
+                    <strong>「動的検索広告 なくなる」「Google広告 自動化 怖い」「AI広告 審査 落ちる理由」</strong>
+                    です。知りたいのは機能一覧ではなく、
+                    「いまの広告費が勝手に増えないか」「間違った商品ページへ飛ばされないか」「審査停止で売上が止まらないか」です。
+                </p>
+                <p>
+                    一方で、ChatGPTやGeminiを日常的に使う担当者は、公式発表やレポートをAIへ読ませて
+                    <strong>自社のキャンペーンに置き換えたチェックリスト</strong>
+                    を作らせます。そのときAIが引用しやすいのは、Google公式ブログ、Ads Safety Report、Google Adsヘルプのように、
+                    日付、対象機能、移行時期、数値が明確な一次情報です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>検索・プロンプト</th>
+                                <th>本当に知りたいこと</th>
+                                <th>記事側で答えるべき内容</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>AI Max いつから</th>
+                                <td>自社アカウントに影響が出る時期</td>
+                                <td>2026年9月開始、対象設定、事前移行の有無</td>
+                            </tr>
+                            <tr>
+                                <th>DSA 自動アップグレード 何を確認</th>
+                                <td>移行前に事故を減らす手順</td>
+                                <td>URL除外、広告文ルール、CV定義、予算上限</td>
+                            </tr>
+                            <tr>
+                                <th>Ads Safety Reportを広告主目線で要約して</th>
+                                <td>審査が厳しくなるのか、誤停止は減るのか</td>
+                                <td>Gemini検知、99%事前ブロック、誤停止80%減の読み方</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-dot red"></span>
+                        <span class="code-block-dot yellow"></span>
+                        <span class="code-block-dot green"></span>
+                        <span class="code-block-label">prompt example</span>
+                    </div>
+                    <pre><code>Googleの2026年4月15日のAI Max発表と、
+2026年4月16日のAds Safety Reportを読んだ前提で、
+月広告費30万円の中小企業向けチェックリストを作ってください。
+
+条件:
+- 現在は検索広告とDSAを利用
+- LPは5ページ、商品ページは20ページ
+- 広告文の最終承認は代表が行う
+
+出力:
+1. 2026年9月までに確認する設定
+2. AIに任せてもよい範囲
+3. 人が固定すべき表現とURL
+4. 審査停止を避けるためのサイト改善</code></pre>
+                </div>
+
+                <h2 id="section3">3. AI Max移行でGoogle広告運用は何が変わるか</h2>
+                <p>
+                    AI Max移行で最初に変わるのは、運用担当者の作業単位です。
+                    これまでは「キーワードを足す」「広告文を入れる」「URLを指定する」といった粒度で改善していました。
+                    今後は、AIが検索意図を広げ、広告文を調整し、最終URL候補を広げるため、
+                    <strong>AIが参照するWebサイトと広告アセットの品質</strong>
+                    が成果に直結しやすくなります。
+                </p>
+                <p>
+                    たとえば、サービスページに料金、対象者、提供範囲、実績、よくある質問が不足していると、
+                    AIは広告を出せても、強い訴求を作りにくくなります。逆に、ページごとに目的と対象者が明確で、
+                    不要なページを除外できていれば、AI Maxは新しい検索語句を拾いやすくなります。
+                    これは広告運用だけでなく、
+                    <a href="/blogs/blog074.html">LLMO対策</a>
+                    とも近い考え方です。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">従来のDSA運用</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>Webサイト内容から検索語句を補完</li>
+                                    <li>入稿と除外設定が中心</li>
+                                    <li>広告文とLPの個別管理</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">→</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">AI Max運用</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>検索意図シグナルまで活用</strong></li>
+                                    <li>広告文と最終URLをAIが調整</li>
+                                    <li>制御ルールと情報設計が中心</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">図1：AI Max移行後は、入稿作業より「AIが読める情報設計」が重要になる</p>
+                </div>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>変化</th>
+                                <th>任せやすいこと</th>
+                                <th>人が握るべきこと</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>検索語句拡張</th>
+                                <td>未発見の検索意図を拾う</td>
+                                <td>除外語句、対象外顧客、地域制限を決める</td>
+                            </tr>
+                            <tr>
+                                <th>広告文調整</th>
+                                <td>見出しや説明文の複数案を試す</td>
+                                <td>誇張表現、価格表現、ブランドトーンを固定する</td>
+                            </tr>
+                            <tr>
+                                <th>最終URL拡張</th>
+                                <td>意図に近いページへ誘導する</td>
+                                <td>飛ばしたくないページ、在庫切れページを除外する</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section4">4. Geminiによる広告安全性強化が意味すること</h2>
+                <p>
+                    翌日の2026年4月16日、Googleは2025 Ads Safety Reportを公開しました。
+                    公式ブログによると、Geminiを活用したツールは2025年に
+                    <strong>ポリシー違反広告の99%超を配信前に検知</strong>
+                    し、Googleは
+                    <strong>83億件超の広告をブロックまたは削除、2,490万件超の広告主アカウントを停止</strong>
+                    しました。詐欺関連では、6億200万件超の広告と400万件超のアカウントが対象になっています。
+                </p>
+                <p>
+                    ここで広告主が見るべきなのは「審査が怖い」だけではありません。
+                    同レポートと関連発表では、Geminiによる検知精度の向上で
+                    <strong>不正確な広告主停止が80%減少</strong>
+                    し、広告主の申し立ての99%が24時間以内に解決されるとも説明されています。
+                    つまりGoogle広告のAI化は、配信拡張だけでなく、違反検知と正当な広告主保護の両面で進んでいます。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>公式数値</th>
+                                <th>何を示すか</th>
+                                <th>中小企業の対策</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>99%超</th>
+                                <td>違反広告の大半を配信前に検知</td>
+                                <td>曖昧な表現や根拠のない断定を避ける</td>
+                            </tr>
+                            <tr>
+                                <th>83億件超</th>
+                                <td>広告ブロック・削除の規模が大きい</td>
+                                <td>審査に通る情報設計をLP側にも整える</td>
+                            </tr>
+                            <tr>
+                                <th>80%減</th>
+                                <td>誤停止の改善も進んでいる</td>
+                                <td>会社情報、連絡先、実績、料金条件を明確化する</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section5">5. 中小企業が今確認すべき3つの準備</h2>
+                <p>
+                    MIRAINA視点では、AI Max移行前に見るべき場所は広告管理画面だけではありません。
+                    重要なのは、
+                    <strong>Webサイト、広告アセット、承認ルール</strong>
+                    の3つです。AIはWebサイトを材料に広告を組み立てるため、サイト情報が古い、料金が曖昧、対象外サービスが混ざっている状態では、良い自動化になりません。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">LP棚卸し</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">除外URL設定</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">表現ルール化</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">小額テスト</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図2：9月の自動移行前に、サイトと承認の土台を先に整える</p>
+                </div>
+
+                <p>
+                    まず、LPやサービスページには対象者、料金、提供範囲、実績、FAQを明記します。
+                    次に、広告から送客したくないページを洗い出します。採用ページ、古いキャンペーンページ、
+                    価格改定前のページ、在庫切れ商品ページは特に注意が必要です。最後に、AIが作った広告文を誰が承認し、
+                    どの表現を禁止するかを決めます。
+                </p>
+                <p>
+                    この作業は、広告だけでなくAI検索で引用されるための土台にもなります。
+                    <a href="/services/ai_consulting.html">生成AI活用支援</a>
+                    ではAI導入前の業務棚卸しとガードレール設計を、
+                    <a href="/services/llmo_insight.html">LLMO Insight</a>
+                    ではAI検索に引用されやすい情報設計と改善計測を支援しています。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    AI Max移行は、Google広告の一機能が増える話ではなく、
+                    検索広告が
+                    <strong>キーワード中心から、検索意図・Webサイト・広告文・審査品質を横断する運用</strong>
+                    へ進むサインです。2026年9月の自動アップグレードまでに、
+                    DSAや自動作成アセットを使っているアカウントは、対象キャンペーン、除外URL、広告文ルール、CV定義を確認しておくべきです。
+                </p>
+                <p>
+                    さらに、Ads Safety Reportが示すように、Geminiは広告違反の検知と誤停止改善の両方に使われています。
+                    AIに広告運用を任せるほど、企業側は
+                    <strong>正確なサイト情報、根拠ある表現、承認境界</strong>
+                    を整える必要があります。AI Maxをうまく使う会社は、広告管理画面だけを見る会社ではなく、
+                    AIが読んでも人が読んでも誤解しない情報設計を先に作る会社です。
+                </p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://blog.google/products/ads-commerce/dsa-upgrade-to-ai-max-2026/"
+                                target="_blank" rel="noopener">Google Ads：We’re upgrading Dynamic Search Ads to AI Max（2026年4月15日）</a></li>
+                        <li><a href="https://blog.google/products/ads-commerce/2025-ads-safety-report/"
+                                target="_blank" rel="noopener">Google Ads：Gemini is stopping harmful ads before people ever see them（2026年4月16日）</a></li>
+                        <li><a href="https://services.google.com/fh/files/blogs/global_2025_adssafetyreport.pdf"
+                                target="_blank" rel="noopener">Google：2025 Ads Safety Report（PDF）</a></li>
+                        <li><a href="https://blog.google/products/ads-commerce/improved-accuracy-account-suspensions/"
+                                target="_blank" rel="noopener">Google Ads：We’ve significantly improved the accuracy of advertiser account suspensions</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">広告とAI検索の情報設計を整えたい方へ</h2>
+                    <p class="cta-text">MIRAINAでは、広告運用AIの導入前整理からLLMO対策、AI活用研修まで<br>中小企業向けに一気通貫で支援しています。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog105.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card105.webp" alt="広告運用AIはどこまで自動化できるか"
+                                loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.16</div>
+                            <div class="related-text">【2026年4月最新】MicrosoftとPublicisが提携拡大、広告運用AIはどこまで自動化できるか</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog074.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card074.webp" alt="LLMO対策とは？" loading="lazy"
+                                decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.05</div>
+                            <div class="related-text">LLMO対策とは？中小企業がAI検索で引用されるための実装ガイド</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog053.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card053.webp" alt="ChatGPT shopping updatesとは？AI検索で商品が売れる条件"
+                                loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.26</div>
+                            <div class="related-text">【2026年3月最新】ChatGPT shopping updatesとは？AI検索で商品が売れる条件</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div class="floating-cta" id="js-floating-cta">
+        <a href="/contact.html" class="btn-floating">無料相談はこちら</a>
+    </div>
+
+    <script src="/js/common.js"></script>
+
+</body>
+
+</html>
