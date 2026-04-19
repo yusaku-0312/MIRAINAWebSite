@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年4月最新】Chrome AI Modeで検索行動はどう変わるか | MIRAINAブログ</title>
+    <meta name="description"
+        content="Chrome AI ModeがGoogleの2026年4月16日発表でどう変わったか。横並び閲覧、最近のタブ検索、LLMO対策を中小企業向けに解説します。">
+    <meta property="og:title" content="【2026年4月最新】Chrome AI Modeで検索行動はどう変わるか">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog108.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog108-1.webp">
+    <meta property="og:description"
+        content="Chrome AI ModeがGoogleの2026年4月16日発表でどう変わったか。横並び閲覧、最近のタブ検索、LLMO対策を中小企業向けに解説します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>Chrome AI Modeで検索行動はどう変わるか</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.04.19</span>
+                    <div class="article-tags">
+                        <p class="article-tag">Chrome AI Mode</p>
+                        <p class="article-tag">AI検索</p>
+                        <p class="article-tag">LLMO</p>
+                        <p class="article-tag">Google検索</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年4月最新】Chrome AI Modeで検索行動はどう変わるか</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog108-1.webp" alt="Chrome AI Modeで検索行動が変わるイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    AI活用が苦手な人は、機能名よりも
+                    <strong>「ChromeでAI検索する方法」「AI検索で比較されると自社サイトはどうなる」「検索してもサイトを読まれない理由」</strong>
+                    のように検索するはずです。すでにAIを使う担当者は
+                    <strong>「GoogleのChrome AI Mode発表を中小企業向けに要約して。自社サイトが引用・比較されるために直すべき情報を整理して」</strong>
+                    とAIへ聞く可能性が高い。Googleは2026年4月16日、Chrome上のAI ModeでWebページとAI回答を横並びに表示し、最近のタブ・画像・PDFなどを検索文脈に加えられる新機能を発表しました。本記事では、Chrome AI Modeを
+                    <strong>LLMOとWeb接客の境界が近づく変化</strong>
+                    として整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. 4月16日の発表で押さえるべき事実</a></li>
+                    <li><a href="#section2">2. AIが苦手な人は何を検索し、AI利用者はどう質問するか</a></li>
+                    <li><a href="#section3">3. 横並び閲覧でWebサイトの評価軸が変わる</a></li>
+                    <li><a href="#section4">4. 最近のタブ・PDF・画像を読むAI検索が示す実務変化</a></li>
+                    <li><a href="#section5">5. 中小企業が今整えるべきLLMO対策</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="section1">1. 4月16日の発表で押さえるべき事実</h2>
+                <p>
+                    【公式情報】Googleは2026年4月16日、Chrome上の
+                    <strong>AI Mode</strong>
+                    を更新し、ChromeデスクトップでAI Modeの回答からリンクを開くと、WebページとAI Modeを横並びで表示できるようにしたと発表しました。ユーザーはページを読みながら追加質問でき、AI Modeはそのページの文脈とWeb全体の情報を踏まえて回答すると説明されています。
+                </p>
+                <p>
+                    【公式情報】同時に、Chromeデスクトップまたはモバイルで、最近開いたタブをAI Modeの検索に追加できるようになります。さらに、タブだけでなく画像やPDFなどのファイルも組み合わせられるとされています。Googleは、これらのアップデートは米国で提供開始済みで、今後ほかの地域にも拡大すると説明しています。
+                </p>
+                <p>
+                    【解釈】これは単なる「AI検索の回答が便利になった」という話ではありません。
+                    <strong>ユーザーがWebサイトを開いたあとも、同じ画面でAIに比較・要約・確認を続ける</strong>
+                    という行動が標準化していく可能性があります。つまり、Webページは「読まれる場所」であると同時に、AIに読み込まれて評価される資料にもなります。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>発表内容</th>
+                                <th>ユーザー側の変化</th>
+                                <th>企業サイトへの影響</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>横並び閲覧</th>
+                                <td>Webページを開いたままAIへ追加質問できる</td>
+                                <td>ページ内の根拠・料金・FAQがその場で比較対象になる</td>
+                            </tr>
+                            <tr>
+                                <th>最近のタブ検索</th>
+                                <td>複数サイトをまとめてAIに読ませられる</td>
+                                <td>競合比較で表記の曖昧さが不利に働きやすい</td>
+                            </tr>
+                            <tr>
+                                <th>画像・PDFの文脈追加</th>
+                                <td>資料や画像も含めて質問できる</td>
+                                <td>会社案内、料金表、事例PDFもAI可読性が問われる</td>
+                            </tr>
+                            <tr>
+                                <th>米国から提供開始</th>
+                                <td>日本では今後の展開を待つ段階</td>
+                                <td>先に情報設計を整える猶予がある</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section2">2. AIが苦手な人は何を検索し、AI利用者はどう質問するか</h2>
+                <p>
+                    AI活用が苦手な人は、Chrome AI Modeという正式名称を知らないまま検索します。
+                    たとえば
+                    <strong>「Chrome AI検索 どこ」「Google検索 AI 横に出る」「サイトをAIに比較される 対策」</strong>
+                    です。知りたいのは機能説明ではなく、自分の業務や集客にどう影響するかです。
+                </p>
+                <p>
+                    一方で、日常的にAIを使う担当者は、公式発表や競合ページをAIに読ませて
+                    <strong>自社ページの不足点を抽出する</strong>
+                    使い方を始めます。AIが引用しそうな一次情報は、Google公式ブログ、Chrome関連の公式発表、そして自社サイト上の料金・事例・FAQ・著者情報です。二次記事よりも、日付、対象機能、提供範囲、使い方が明確なページが参照されやすくなります。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>検索・プロンプト</th>
+                                <th>本当に知りたいこと</th>
+                                <th>記事側で答えるべき内容</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Chrome AI Mode 使い方</th>
+                                <td>自分の環境で使えるか、何ができるか</td>
+                                <td>米国提供開始、横並び閲覧、タブ検索の要点</td>
+                            </tr>
+                            <tr>
+                                <th>AI検索で自社サイトが比較される</th>
+                                <td>競合と並べられたとき何が不利か</td>
+                                <td>料金、対応範囲、実績、FAQの明確化</td>
+                            </tr>
+                            <tr>
+                                <th>Google公式発表を中小企業向けに要約して</th>
+                                <td>いま直すべきWebページはどこか</td>
+                                <td>サービスページ、事例、PDF、llms.txtの優先順位</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-dot red"></span>
+                        <span class="code-block-dot yellow"></span>
+                        <span class="code-block-dot green"></span>
+                        <span class="code-block-label">prompt example</span>
+                    </div>
+                    <pre><code>Googleの2026年4月16日のChrome AI Mode発表を読んだ前提で、
+BtoBサービス企業のWebサイト改善点を整理してください。
+
+条件:
+- サービスページ、料金表PDF、導入事例ページがある
+- 競合3社と比較検討されることが多い
+- 問い合わせ前にAI検索で比較される前提
+
+出力:
+1. AIが引用しやすい情報
+2. 競合比較で負けやすい曖昧表現
+3. 今月直すべきページ
+4. llms.txtに追記すべき内容</code></pre>
+                </div>
+
+                <h2 id="section3">3. 横並び閲覧でWebサイトの評価軸が変わる</h2>
+                <p>
+                    これまでのSEOでは、検索結果からクリックされることが大きな中間目標でした。しかしChrome AI Modeの横並び閲覧では、ユーザーはページを開いたあとに
+                    <strong>「この会社は他社より何が強い？」「料金は妥当？」「問い合わせ前に確認すべきリスクは？」</strong>
+                    とAIへ聞けます。ページは読者だけでなく、読者の隣にいるAIにも評価される構造になります。
+                </p>
+                <p>
+                    そのため、抽象的なキャッチコピーだけのページは弱くなります。「最適なソリューションを提供します」よりも、「月額〇円から」「対応業務は〇〇」「導入前に必要な準備は〇〇」「向かないケースは〇〇」と書かれているページの方が、AIに比較されるときに説明しやすいからです。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">従来の検索導線</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>検索結果で上位表示</li>
+                                    <li>クリック後にページを読ませる</li>
+                                    <li>CVRは人の理解に依存</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">→</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">Chrome AI Mode後の導線</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>ページとAI回答を同時に見られる</strong></li>
+                                    <li>競合ページとまとめて比較される</li>
+                                    <li>AIが説明しやすい根拠がCVRに影響</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">図1：検索順位だけでなく、AIがページ内容をどう要約・比較するかが重要になる</p>
+                </div>
+
+                <h2 id="section4">4. 最近のタブ・PDF・画像を読むAI検索が示す実務変化</h2>
+                <p>
+                    最近のタブをAI Modeに追加できる機能は、比較検討のやり方を大きく変えます。たとえばユーザーが3社のサービスページを開き、AIに
+                    <strong>「この3社の違いを表にして。初心者向けで、サポートが厚い順に並べて」</strong>
+                    と聞く行動が自然になります。ページごとの見栄えだけでなく、同じ条件で比較されたときの情報密度が問われます。
+                </p>
+                <p>
+                    さらにPDFや画像が文脈に入るなら、会社案内、提案資料、料金表、導入事例PDFも対象です。Webページだけ整っていても、PDF内の料金や条件が古い、画像化された表でテキスト抽出しにくい、事例に日付や成果がない、といった状態ではAIが正しく説明できません。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>対象</th>
+                                <th>AIが比較しやすい状態</th>
+                                <th>避けたい状態</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>サービスページ</th>
+                                <td>対象業務、料金目安、導入期間、向かないケースを明記</td>
+                                <td>抽象的な強みだけで具体条件がない</td>
+                            </tr>
+                            <tr>
+                                <th>事例ページ</th>
+                                <td>業種、課題、施策、成果、日付が揃っている</td>
+                                <td>「成果が出ました」だけで数値や背景がない</td>
+                            </tr>
+                            <tr>
+                                <th>料金表PDF</th>
+                                <td>テキスト選択でき、更新日と条件が明記されている</td>
+                                <td>画像だけの表、旧価格、但し書き不明</td>
+                            </tr>
+                            <tr>
+                                <th>ブログ記事</th>
+                                <td>一次情報、解釈、実務アクションが分かれている</td>
+                                <td>ニュース要約だけで自社読者への示唆がない</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    Googleは4月14日にも、Chromeで繰り返し使うAIプロンプトを「Skills」として保存し、ページや選択したタブに対してワンクリックで実行できる機能を発表しています。これは、比較・要約・チェックリスト化のプロンプトがブラウザ内の反復作業になる流れを示しています。つまり企業側は、
+                    <strong>ユーザーが毎回同じ比較プロンプトを使う前提</strong>
+                    で情報を整える必要があります。
+                </p>
+
+                <h2 id="section5">5. 中小企業が今整えるべきLLMO対策</h2>
+                <p>
+                    MIRAINA視点では、Chrome AI Modeへの備えは派手な新技術より先に、ページ内の「答えやすさ」を上げることです。
+                    <a href="/blogs/blog107.html">AI検索利用率の急増</a>
+                    と合わせて見ると、ユーザーは検索結果だけでなく、開いたページそのものをAIに読ませながら意思決定する方向へ進んでいます。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">重要ページの棚卸し</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">比較項目を明文化</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">FAQと向かないケース追加</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">llms.txtを更新</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図2：Chrome AI Mode時代のLLMO対策は、比較される前提の情報整備から始める</p>
+                </div>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>優先度</th>
+                                <th>取り組み</th>
+                                <th>狙い</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>高</th>
+                                <td>サービスページに料金目安・対象外範囲・導入期間を追加</td>
+                                <td>AIが比較表を作るときに空欄を減らす</td>
+                            </tr>
+                            <tr>
+                                <th>高</th>
+                                <td>FAQを「質問文そのもの」に近い見出しで整備</td>
+                                <td>AI検索の質問に直接答えやすくする</td>
+                            </tr>
+                            <tr>
+                                <th>中</th>
+                                <td>事例ページに業種・規模・成果・実施日を明記</td>
+                                <td>地域性や専門性をAIに説明させやすくする</td>
+                            </tr>
+                            <tr>
+                                <th>中</th>
+                                <td>PDFをテキスト可読にし、更新日を入れる</td>
+                                <td>ブラウザ内AIに古い情報を拾わせない</td>
+                            </tr>
+                            <tr>
+                                <th>中</th>
+                                <td><a href="/blogs/blog074.html">LLMO対策</a>としてllms.txtと内部リンクを更新</td>
+                                <td>AIが重要ページを見つけやすくする</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    逆に、今すぐ大規模なリニューアルをする必要はありません。先にやるべきなのは、問い合わせに近いページから順に、AIが読みやすい見出し、比較しやすい表、根拠のある事例、明確な更新日を足すことです。MIRAINAでは
+                    <a href="/services/llmo_insight.html">LLMO Insight</a>
+                    でAI検索上の引用状況を可視化し、
+                    <a href="/services/ai_consulting.html">生成AI活用支援</a>
+                    で業務棚卸しからWeb情報設計まで一気通貫で支援しています。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    Chrome AI Modeの更新は、AI検索がブラウザ体験の中に深く入り込む流れを示しています。ユーザーは検索結果で完結するだけでなく、Webページを開いたあともAIに質問し、複数タブやPDFをまとめて比較するようになります。
+                    <strong>サイトに来てもらえたら終わり</strong>
+                    ではなく、
+                    <strong>サイトを開いた状態でAIに何と説明されるか</strong>
+                    が重要になります。
+                </p>
+                <p>
+                    中小企業にとっての初手は明確です。料金、対象業務、導入期間、事例、FAQ、向かないケースをAIが読める形で整えること。Chrome AI Modeが日本へ広がる前に、検索順位だけでなくAI比較に耐える情報設計へ移行できれば、AI検索時代の問い合わせ導線を先に作れます。
+                </p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://blog.google/products-and-platforms/products/search/ai-mode-chrome/"
+                                target="_blank" rel="noopener">Google The Keyword：A new way to explore the web with AI Mode in Chrome（2026年4月16日）</a></li>
+                        <li><a href="https://blog.google/products-and-platforms/products/chrome/skills-in-chrome/"
+                                target="_blank" rel="noopener">Google The Keyword：Turn your best AI prompts into one-click tools in Chrome（2026年4月14日）</a></li>
+                        <li><a href="https://blog.google/products/ads-commerce/dsa-upgrade-to-ai-max-2026/"
+                                target="_blank" rel="noopener">Google Ads & Commerce Blog：We're upgrading Dynamic Search Ads to AI Max（2026年4月15日）</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">AI検索で比較されても選ばれる情報設計へ</h2>
+                    <p class="cta-text">MIRAINAでは、AI検索での引用状況計測からLLMO対策、サービスページ改善まで<br>中小企業向けに一気通貫で支援しています。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog107.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card107.webp" alt="AI検索利用率が8ヶ月で3.5倍に急増"
+                                loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.18</div>
+                            <div class="related-text">【2026年4月最新】AI検索利用率が8ヶ月で3.5倍に急増：AI検索白書2026が示す検索行動の変化</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog106.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card106.webp" alt="AI Max移行でGoogle広告運用はどう変わるか"
+                                loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.18</div>
+                            <div class="related-text">【2026年4月最新】AI Max移行でGoogle広告運用はどう変わるか</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog074.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card074.webp" alt="LLMO対策とは？"
+                                loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.05</div>
+                            <div class="related-text">LLMO対策とは？中小企業がAI検索で引用されるための実装ガイド</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div class="floating-cta" id="js-floating-cta">
+        <a href="/contact.html" class="btn-floating">無料相談はこちら</a>
+    </div>
+
+    <script src="/js/common.js"></script>
+
+</body>
+
+</html>
