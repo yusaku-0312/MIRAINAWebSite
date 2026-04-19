@@ -971,6 +971,15 @@
       "alt": "Chrome AI Modeで検索行動が変わるイメージ",
       "link": "/blogs/blog108.html",
       "date": "2026-04-19"
+    },
+    {
+      "id": 109,
+      "title": "【2026年4月最新】Gemma 4とは？Google無料オープンAIを中小企業の業務に活かす方法",
+      "description": "Gemma 4はGoogleが2026年4月2日に公開したApache 2.0完全無料のオープンAIモデル。4サイズ展開でスマホからPCまで動作し、商用利用も自由。中小企業での活用方法をわかりやすく解説します。",
+      "thumbnail": "/images/blogs_images/blog-card109.webp",
+      "alt": "Gemma 4 Google オープンAIモデルを中小企業が活用するイメージ",
+      "link": "/blogs/blog109.html",
+      "date": "2026-04-19"
     }
   ],
   "works": [
