@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年4月最新】Claude Opus 4.7とは？SWE-bench 87.6%・高解像度画像で変わるエージェントAI活用ガイド | MIRAINAブログ</title>
+    <meta name="description"
+        content="AnthropicがClaude Opus 4.7を2026年4月16日に公開。SWE-bench 87.6%・画像認識3倍強化・Task Budgets搭載で何が変わるかを解説。中小企業がエージェントAIを使い始めるための実践ガイドです。">
+    <meta property="og:title" content="【2026年4月最新】Claude Opus 4.7とは？SWE-bench 87.6%・高解像度画像で変わるエージェントAI活用ガイド">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog110.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog110-1.webp">
+    <meta property="og:description"
+        content="AnthropicがClaude Opus 4.7を2026年4月16日に公開。SWE-bench 87.6%・画像認識3倍強化・Task Budgets搭載で何が変わるかを解説。中小企業がエージェントAIを使い始めるための実践ガイドです。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>Claude Opus 4.7とは？SWE-bench 87.6%・高解像度画像で変わるエージェントAI活用ガイド</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.04.21</span>
+                    <div class="article-tags">
+                        <p class="article-tag">Claude Opus 4.7</p>
+                        <p class="article-tag">Anthropic</p>
+                        <p class="article-tag">生成AI</p>
+                        <p class="article-tag">AIエージェント</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年4月最新】Claude Opus 4.7とは？SWE-bench 87.6%・高解像度画像で変わるエージェントAI活用ガイド</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog110-1.webp" alt="Claude Opus 4.7 Anthropic 最新AIモデル エージェント活用ガイド"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    AI活用に慣れていない経営者・担当者は
+                    <strong>「Claude Opus 4.7とは」「Anthropic 新モデル 何が変わった」「Claude 最新版 ビジネス活用」</strong>
+                    のように検索するはずです。すでに生成AIを使っている担当者は
+                    <strong>「Opus 4.7のSWE-benchスコアはどう使うべきか」「Task BudgetsをAIエージェントに組み込む方法」</strong>
+                    とAIへ直接聞く可能性が高い。Anthropicは2026年4月16日、最上位フラッグシップモデル
+                    <strong>Claude Opus 4.7</strong>
+                    を一般提供開始しました。SWE-bench Verified 87.6%・画像処理3倍超強化・Task Budgets搭載という3つの変化が、
+                    <strong>AIエージェントを業務に組み込もうとしている企業</strong>
+                    に直結します。本記事では、発表内容の事実確認と、中小企業がOpus 4.7を実務でどう使えるかを整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. Claude Opus 4.7とは？Anthropicが2026年4月16日に発表した最新フラッグシップモデル</a></li>
+                    <li><a href="#section2">2. 5つの主要アップデート：コーディング・画像認識・思考モードの変化</a></li>
+                    <li><a href="#section3">3. SWE-bench 87.6%の意味：本番環境で何が変わるのか</a></li>
+                    <li><a href="#section4">4. Task BudgetsとAdaptive Thinkingで変わるエージェントAI活用</a></li>
+                    <li><a href="#section5">5. 中小企業がClaude Opus 4.7を使い始めるための実践ガイド</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="section1">1. Claude Opus 4.7とは？Anthropicが2026年4月16日に発表した最新フラッグシップモデル</h2>
+                <p>
+                    【公式情報】Claude Opus 4.7は、AnthropicがClaude 4シリーズのフラッグシップとして2026年4月16日に一般公開した最新AIモデルです。エージェント作業・知識タスク・高解像度の画像理解を中心に設計されており、長時間稼働する自律タスクに対して前世代（Opus 4.6）より一貫性が高まりました。
+                </p>
+                <p>
+                    【公式情報】Opus 4.7はAnthropicのAPI、Amazon Bedrock、Google Cloud Vertex AI、Microsoft Foundryの4プラットフォームから利用できます。料金はOpus 4.6から据え置きで、入力100万トークンあたり5ドル、出力100万トークンあたり25ドルです。ただし新しいトークナイザーが採用されており、同じプロンプトでもOpus 4.6比で1.0〜1.35倍のトークンを消費するため、実質コストの試算は必要です。
+                </p>
+
+                <figure class="article-figure">
+                    <img src="/images/blogs_images/blog110-2.webp" alt="Anthropic公式サイト「Introducing Claude Opus 4.7」発表ページのスクリーンショット" width="800" height="450" loading="lazy">
+                    <figcaption>Anthropic 公式ページ「Introducing Claude Opus 4.7」（2026年4月16日）</figcaption>
+                </figure>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>Claude Opus 4.7</th>
+                                <th>Claude Opus 4.6（前世代）</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>公開日</th>
+                                <td>2026年4月16日</td>
+                                <td>2026年2月</td>
+                            </tr>
+                            <tr>
+                                <th>SWE-bench Verified</th>
+                                <td><strong>87.6%</strong></td>
+                                <td>80.8%</td>
+                            </tr>
+                            <tr>
+                                <th>SWE-bench Pro</th>
+                                <td><strong>64.3%</strong></td>
+                                <td>53.4%</td>
+                            </tr>
+                            <tr>
+                                <th>画像処理上限</th>
+                                <td><strong>2,576px（3.75MP）</strong></td>
+                                <td>1,568px（1.15MP）</td>
+                            </tr>
+                            <tr>
+                                <th>思考モード</th>
+                                <td>Adaptive Thinking（唯一のモード）</td>
+                                <td>Extended Thinking（budget指定式）</td>
+                            </tr>
+                            <tr>
+                                <th>effortレベル</th>
+                                <td>low / medium / high / xhigh / max</td>
+                                <td>low / medium / high / max</td>
+                            </tr>
+                            <tr>
+                                <th>Task Budgets</th>
+                                <td>ベータ提供あり</td>
+                                <td>なし</td>
+                            </tr>
+                            <tr>
+                                <th>API料金（入力）</th>
+                                <td>$5 / 100万トークン</td>
+                                <td>$5 / 100万トークン</td>
+                            </tr>
+                            <tr>
+                                <th>利用プラットフォーム</th>
+                                <td>Anthropic API / Bedrock / Vertex AI / Foundry</td>
+                                <td>同左</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section2">2. 5つの主要アップデート：コーディング・画像認識・思考モードの変化</h2>
+                <p>
+                    Opus 4.7のアップデートは大きく5つに整理できます。それぞれが「AI活用の自動化精度を上げる」という方向で一貫しています。
+                </p>
+
+                <p>
+                    <strong>① コーディング性能の大幅向上</strong><br>
+                    SWE-bench Verified（実際の GitHub Issues を解決するベンチマーク）で 87.6% を達成し、前世代の 80.8% から 6.8 ポイント向上しました。Anthropicによると、本番環境相当のタスク解決数は従来比3倍に達しています。開発担当者への聞き取りでも「以前は手直しが必要だった複雑なコード修正をOpus 4.7は一度で仕上げる」という報告が増えています。
+                </p>
+
+                <p>
+                    <strong>② 高解像度画像サポートの拡張</strong><br>
+                    処理可能な画像の最大解像度が 1,568px（1.15MP）から 2,576px（3.75MP）へ3倍超に拡大しました。化学構造式の読み取り、複雑な技術図面の解釈、製品写真の詳細分析など、従来は画質不足で精度が落ちていた用途に対応できるようになっています。
+                </p>
+
+                <p>
+                    <strong>③ Adaptive Thinking（適応的思考）への移行</strong><br>
+                    従来の Extended Thinking はトークン上限（budget）を手動で指定する方式でした。Opus 4.7 では Adaptive Thinking が唯一の思考モードとなり、モデルが問題の難易度に応じて思考の深さを自律的に調整します。「どこまで考えさせるか」を都度設定する手間がなくなり、エージェント実装が簡素化されます。
+                </p>
+
+                <p>
+                    <strong>④ xhigh effortレベルの追加</strong><br>
+                    推論コストを調整するeffortパラメータに新たに xhigh が追加され、5段階（low / medium / high / xhigh / max）になりました。high より深く推論しつつ、max ほどトークンを使わないバランス設定として、コーディングや複雑なエージェントタスクに向いています。
+                </p>
+
+                <p>
+                    <strong>⑤ 指示順守の精度向上</strong><br>
+                    複数の条件が重なる複雑な指示、出力フォーマットの厳密な指定、長時間のタスクにおける途中での方針維持など、「言ったことをその通りやり続ける」能力が明確に向上しています。マルチステップワークフロー全体での精度はOpus 4.6比 14% 向上、ツールエラーは3分の1に減少しています。
+                </p>
+
+                <h2 id="section3">3. SWE-bench 87.6%の意味：本番環境で何が変わるのか</h2>
+                <p>
+                    SWE-bench は、実際の GitHub リポジトリにある未解決のバグや機能追加タスクを AI がどれだけ自律的に解決できるかを測るベンチマークです。「Verified」は人手で検証された高品質なサブセットで、「Pro」は特に難易度の高いタスクで構成されています。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>ベンチマーク</th>
+                                <th>Opus 4.7</th>
+                                <th>GPT-5.4</th>
+                                <th>Gemini 3.1 Pro</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>SWE-bench Verified</th>
+                                <td><strong>87.6%</strong></td>
+                                <td>約84%</td>
+                                <td>約83%</td>
+                            </tr>
+                            <tr>
+                                <th>SWE-bench Pro</th>
+                                <td><strong>64.3%</strong></td>
+                                <td>約60%</td>
+                                <td>約58%</td>
+                            </tr>
+                            <tr>
+                                <th>BigLaw Bench（法務）</th>
+                                <td><strong>90.9%</strong></td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <th>Finance Agent v1.1（財務）</th>
+                                <td><strong>64.4%</strong></td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    【解釈】SWE-bench Pro で 64.3% というスコアは、「現場エンジニアが手をかけなければ対処できなかった難易度の高いタスクを、3件に2件は AI が一人で解決できる」水準を示しています。コーディングに不慣れな経営者・マーケターにとっては「Claude Code などを使ったバイブコーディングの精度が上がる」「社内ツールの自動修正を AI に任せやすくなる」という変化として現れます。
+                </p>
+                <p>
+                    BigLaw Bench（法務文書評価）で 90.9%、Finance Agent v1.1（財務分析エージェント）で 64.4% という数字は、コード以外の専門タスクでも有効なことを示しています。契約書のレビュー補助や、財務データを参照しながらの分析レポート作成など、知識集約型の業務への活用が現実味を帯びてきます。
+                </p>
+
+                <h2 id="section4">4. Task BudgetsとAdaptive Thinkingで変わるエージェントAI活用</h2>
+                <p>
+                    Opus 4.7 の最も注目すべき実装上の変化は、<strong>Task Budgets（ベータ）</strong>の導入です。従来のエージェントループでは、AI が途中でトークンを使い切ると突然タスクを打ち切るか、出力が不完全になるという問題がありました。
+                </p>
+                <p>
+                    Task Budgets は、エージェントループ全体に対してトークン予算を設定する機能です。モデルは残りトークン数を把握しながら作業ペースを自己調整し、予算が少なくなると優先度の低い処理を省いて、最後まで意味のある出力を完成させます。「途中で切れる」ではなく「自分でまとめて終わる」という動作に変わります。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">Opus 4.6 以前のエージェント</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>トークン上限を超えると強制終了</li>
+                                    <li>思考モードのbudgetを手動設定</li>
+                                    <li>長時間タスクで方針がぶれやすい</li>
+                                    <li>ツールエラーが多い</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">Opus 4.7 のエージェント</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>Task Budgetsで予算内に自己完結</strong></li>
+                                    <li><strong>Adaptive Thinkingで自律的に深さを調整</strong></li>
+                                    <li>長時間タスクでも指示を厳守</li>
+                                    <li>ツールエラーが3分の1に減少</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">図1：Opus 4.7でエージェントAIの安定性がどう変わるか</p>
+                </div>
+
+                <p>
+                    Adaptive Thinking と Task Budgets を組み合わせると、「指示を出したら最後まで一人で完結させる」エージェントが作りやすくなります。例えば、「競合他社のウェブサイトを5社確認して比較表を作る」「受信した問い合わせメールを分類してSlackに転送する」といった複数ステップの自動化タスクで、途中の手動介入なしに完走できる可能性が高まります。
+                </p>
+
+                <h2 id="section5">5. 中小企業がClaude Opus 4.7を使い始めるための実践ガイド</h2>
+                <p>
+                    Opus 4.7はフラッグシップモデルのため料金はSonnet 4.6より高く（Sonnet入力$3/100万トークン vs Opus入力$5/100万トークン）、全業務に使う必要はありません。Anthropicも「90%のビジネスユースケースにはSonnet 4.6で十分」と述べています。Opus 4.7 を選ぶべき場面を見極めることが、コスト効率の鍵です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>業務カテゴリ</th>
+                                <th>Opus 4.7が有効な用途</th>
+                                <th>Sonnet 4.6で十分な用途</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>コーディング</th>
+                                <td>複数ファイルにまたがる複雑なバグ修正・本番コードの自動生成</td>
+                                <td>簡単なスクリプト作成・コード補完</td>
+                            </tr>
+                            <tr>
+                                <th>文書作成</th>
+                                <td>契約書レビュー・複雑な仕様書の作成・財務レポートの分析</td>
+                                <td>メール下書き・議事録要約・FAQ生成</td>
+                            </tr>
+                            <tr>
+                                <th>画像理解</th>
+                                <td>技術図面・医療画像・高精細な製品写真の解析</td>
+                                <td>一般的な画像の説明・OCR補助</td>
+                            </tr>
+                            <tr>
+                                <th>AIエージェント</th>
+                                <td>長時間の多段階タスク・複数ツールを連携する自動化</td>
+                                <td>単一ステップの自動処理・定型応答</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">Claude.ai（Proプラン）で体験</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">Opus 4.7が有効な業務を1つ選ぶ</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">APIまたはBedrock/Vertex AIで試作</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">Task Budgetsでエージェント安定化</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 05</span>
+                            <span class="step-text">SonnetとOpusのコスト比較→最適化</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図2：中小企業がClaude Opus 4.7を活用するまでの流れ</p>
+                </div>
+
+                <p>
+                    まず<strong>Step 01</strong>として、Claude.ai の Pro プランから試すのが最短路です。API 接続なしで Opus 4.7 を直接使えるため、業務での使い心地を確認してから開発投資を判断できます。
+                </p>
+                <p>
+                    <strong>Step 04</strong>のTask Budgets活用は、現時点でベータ版のため本番への組み込みは慎重に進めてください。まずはテスト環境でエージェントループを動かし、予算設定値とタスク完了率の関係を把握してから展開することを推奨します。
+                </p>
+                <p>
+                    MIRAINAの<a href="/services/ai_consulting.html">生成AI活用支援</a>では、Claudeを含む複数モデルの選定から、APIを使ったエージェント実装・業務フローへの組み込みまで一気通貫でサポートしています。「どのモデルを使えばいいかわからない」「AIエージェントを自社業務に導入したい」という相談から気軽に始めることができます。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    Claude Opus 4.7は2026年4月16日にAnthropicが公開した最新フラッグシップモデルです。SWE-bench Verified 87.6%・画像処理3倍超・Task Budgets搭載の3点が主要な変化で、いずれも「AIエージェントを長時間・自律的に動かす」という方向で一貫しています。
+                </p>
+                <p>
+                    中小企業にとっての現実的な使い方は、<strong>高度なコーディング・複雑な文書分析・多段階の自動化タスク</strong>に絞ってOpus 4.7を使い、日常的なテキスト生成・要約・チャット対応はSonnet 4.6で賄うという役割分担です。料金はOpus 4.6から据え置きですが、トークナイザー刷新による実質コスト増（最大1.35倍）があるため、導入前の試算は必須です。
+                </p>
+                <p>
+                    「AIを試す段階」から「AIが一人で仕事をする段階」へ移行するための基盤が、Opus 4.7で一歩前進しました。まず Claude.ai の Pro プランで体感し、自社業務への応用可能性を確かめることから始めてみてください。<a href="/blogs/blog078.html">Claude Opus 4.6の実装ガイド</a>も合わせて読むと、世代間の変化をより具体的に把握できます。
+                </p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://www.anthropic.com/news/claude-opus-4-7"
+                                target="_blank" rel="noopener">Anthropic 公式：Introducing Claude Opus 4.7（2026年4月16日）</a></li>
+                        <li><a href="https://gigazine.net/news/20260417-anthropic-claude-opus-4-7/"
+                                target="_blank" rel="noopener">GIGAZINE：Claude Opus 4.7が登場、指示追従性や画像認識能力が向上してOpus 4.6から価格据え置き（2026年4月17日）</a></li>
+                        <li><a href="https://www.sbbit.jp/article/cont1/184682"
+                                target="_blank" rel="noopener">SBビジネスメディア：AnthropicがClaude Opus 4.7公開、コーディング能力と指示順守が大幅向上</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">Claude Opus 4.7の業務活用をご支援します</h2>
+                    <p class="cta-text">MIRAINAでは、Claude・GPT・Geminiのモデル選定から<br>エージェント実装・業務フロー組み込みまで中小企業向けに一気通貫でサポートします。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog078.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card078.webp" alt="Claude Opus 4.6 1Mトークン Agent Teams 中小企業AI活用"
+                                loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.05</div>
+                            <div class="related-text">【2026年4月最新】Claude Opus 4.6とは？1Mトークン・Agent Teamsが中小企業のAI活用を変える実装ガイド</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog084.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card084.webp" alt="Claude vs ChatGPT 2026年比較 コスト 機能 使い分けガイド"
+                                loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.07</div>
+                            <div class="related-text">【2026年4月最新】Claude vs ChatGPT完全比較：コスト・機能・用途別の使い分けガイド</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog085.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card085.webp" alt="Anthropic OpenAI 収益 超え 2026年4月 中小企業 AI選定"
+                                loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.07</div>
+                            <div class="related-text">【2026年4月最新】AnthropicがOpenAI収益を超えた背景と中小企業のAI選定戦略</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div class="floating-cta" id="js-floating-cta">
+        <a href="/contact.html" class="btn-floating">無料相談はこちら</a>
+    </div>
+
+    <script src="/js/common.js"></script>
+
+</body>
+
+</html>

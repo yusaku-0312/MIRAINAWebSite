@@ -980,6 +980,15 @@
       "alt": "Gemma 4 Google オープンAIモデルを中小企業が活用するイメージ",
       "link": "/blogs/blog109.html",
       "date": "2026-04-19"
+    },
+    {
+      "id": 110,
+      "title": "【2026年4月最新】Claude Opus 4.7とは？SWE-bench 87.6%・高解像度画像で変わるエージェントAI活用ガイド",
+      "description": "AnthropicがClaude Opus 4.7を2026年4月16日に公開。SWE-bench 87.6%・画像認識3倍強化・Task Budgets搭載で何が変わるかを解説。中小企業がエージェントAIを使い始めるための実践ガイドです。",
+      "thumbnail": "/images/blogs_images/blog-card110.webp",
+      "alt": "Claude Opus 4.7 Anthropic 最新AIモデル エージェント活用ガイド",
+      "link": "/blogs/blog110.html",
+      "date": "2026-04-21"
     }
   ],
   "works": [
