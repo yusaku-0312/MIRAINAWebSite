@@ -989,6 +989,15 @@
       "alt": "Claude Opus 4.7 Anthropic 最新AIモデル エージェント活用ガイド",
       "link": "/blogs/blog110.html",
       "date": "2026-04-21"
+    },
+    {
+      "id": 111,
+      "title": "【2026年4月最新】ChatGPT Images 2.0（gpt-image-2）とは？日本語対応・思考機能でマーケティング制作が変わる",
+      "description": "OpenAIが2026年4月21日に公開したChatGPT Images 2.0（gpt-image-2）を解説。日本語テキスト対応・Web検索連携・最大8枚一括生成でSNS・広告制作がどう変わるか、中小企業の活用法を紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card111.webp",
+      "alt": "ChatGPT Images 2.0 gpt-image-2 日本語対応 思考機能 マーケティング制作",
+      "link": "/blogs/blog111.html",
+      "date": "2026-04-22"
     }
   ],
   "works": [
