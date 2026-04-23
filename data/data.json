@@ -1007,6 +1007,15 @@
       "alt": "ChatGPT workspace agents 社内AI活用 AIエージェント導入ガイド",
       "link": "/blogs/blog112.html",
       "date": "2026-04-23"
+    },
+    {
+      "id": 113,
+      "title": "【2026年4月最新】Gemini Enterprise Agent Platformとは？$750M投資・4本柱で企業AIエージェントが変わる",
+      "description": "Googleが2026年4月22日のCloud Next '26で発表したGemini Enterprise Agent Platformを解説。Build・Scale・Govern・Optimizeの4本柱と$750M投資が、日本の中小企業のAIエージェント活用をどう変えるかを整理します。",
+      "thumbnail": "/images/blogs_images/blog-card113.webp",
+      "alt": "Gemini Enterprise Agent Platform Google Cloud Next 2026 企業AIエージェント導入ガイド",
+      "link": "/blogs/blog113.html",
+      "date": "2026-04-23"
     }
   ],
   "works": [
