@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年4月最新】ChatGPT workspace agentsで社内AI活用が変わる | MIRAINAブログ</title>
+    <meta name="description"
+        content="ChatGPT workspace agentsをOpenAIの2026年4月22日発表から解説。個人プロンプト運用から共有AIエージェントへ移る流れと中小企業の始め方を整理します。">
+    <meta property="og:title" content="【2026年4月最新】ChatGPT workspace agentsで社内AI活用が変わる">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog112.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog112-1.webp">
+    <meta property="og:description"
+        content="ChatGPT workspace agentsをOpenAIの2026年4月22日発表から解説。個人プロンプト運用から共有AIエージェントへ移る流れと中小企業の始め方を整理します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>ChatGPT workspace agentsで社内AI活用が変わる</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.04.23</span>
+                    <div class="article-tags">
+                        <p class="article-tag">ChatGPT</p>
+                        <p class="article-tag">AIエージェント</p>
+                        <p class="article-tag">業務自動化</p>
+                        <p class="article-tag">AI活用</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年4月最新】ChatGPT workspace agentsで社内AI活用が変わる</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog112-1.webp" alt="ChatGPT workspace agents 社内AI活用 AIエージェント導入ガイド"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    AI活用がまだ苦手な経営者・担当者は
+                    <strong>「AI 何から始める 仕事」「ChatGPT 仕事 使い方 例」「AIエージェント わかりやすく」</strong>
+                    のように検索するはずです。一方で、すでにChatGPTを使っている人は
+                    <strong>「営業フォローを自動化するAIエージェント設計を作って。参考になる公式発表も引用して」</strong>
+                    とAIに投げる可能性が高い。OpenAIは2026年4月22日、ChatGPTでチーム共有できる
+                    <strong>workspace agents</strong>を発表しました。これは「個人が毎回プロンプトを書く段階」から、
+                    <strong>社内の定型業務を共有AIエージェントとして運用する段階</strong>へ移るサインです。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. まず押さえるべき事実：ChatGPTに共有AIエージェントが入った</a></li>
+                    <li><a href="#section2">2. AIが苦手な人は何を検索し、どんな記事を読むのか</a></li>
+                    <li><a href="#section3">3. すでにAIを使う人はどんなプロンプトを投げるのか</a></li>
+                    <li><a href="#section4">4. 中小企業で最初にエージェント化すべき3業務</a></li>
+                    <li><a href="#section5">5. 導入前に決めるべき権限・承認・評価ルール</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="section1">1. まず押さえるべき事実：ChatGPTに共有AIエージェントが入った</h2>
+                <p>
+                    【公式情報】OpenAIは2026年4月22日、ChatGPT Business、Enterprise、Edu、Teachers向けに
+                    <strong>workspace agents</strong>を研究プレビューとして提供すると発表しました。チームはChatGPT内で共有エージェントを作り、レポート作成、コード作成、メッセージ返信、営業フォロー、週次指標レポートなどの複雑な業務を任せられます。
+                </p>
+                <p>
+                    【公式情報】workspace agentsはCodexで動き、クラウド上の作業環境、ファイル、コード、ツール、メモリを使えます。ChatGPTとSlackから利用でき、スケジュール実行や、Slack内での依頼受付も想定されています。OpenAIの例では、営業チームが通話メモやアカウント調査をまとめ、リードを評価し、フォローアップメールを作成するエージェントを使っています。
+                </p>
+                <p>
+                    【解釈】重要なのは「新しいAI機能が増えた」ことではありません。個人が毎回プロンプトを工夫する運用から、チームが一度作った業務手順を共有し、改善し続ける運用へ変わることです。中小企業にとっては、AI担当者だけが使える状態から、現場全体に使い方を広げる入口になります。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>比較軸</th>
+                                <th>従来のChatGPT活用</th>
+                                <th>workspace agents後の活用</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>使い方</th>
+                                <td>個人が毎回プロンプトを書く</td>
+                                <td>業務手順をエージェントとして保存・共有する</td>
+                            </tr>
+                            <tr>
+                                <th>対象業務</th>
+                                <td>文章作成、要約、調査の補助</td>
+                                <td>調査、判断、下書き、連携、承認依頼までの流れ</td>
+                            </tr>
+                            <tr>
+                                <th>運用単位</th>
+                                <td>個人のスキルに依存</td>
+                                <td>チームの標準手順として改善できる</td>
+                            </tr>
+                            <tr>
+                                <th>管理</th>
+                                <td>利用状況が見えにくい</td>
+                                <td>管理者が権限、共有、接続ツール、実行状況を確認できる</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section2">2. AIが苦手な人は何を検索し、どんな記事を読むのか</h2>
+                <p>
+                    AI活用に苦手意識がある人は、いきなり「workspace agents」とは検索しません。まず
+                    <strong>「AI 何から始める 仕事」「ChatGPT 業務効率化 例」「AIでできること 中小企業」</strong>
+                    のように、専門用語ではなく不安や目的から検索します。読みたい記事も、機能一覧ではなく「自分の仕事に置き換えると何が変わるか」が見える記事です。
+                </p>
+                <p>
+                    この層に刺さる切り口は、AIモデルの性能比較よりも「毎週やっている面倒な作業が、どこまで自動化できるか」です。たとえば、問い合わせメールの分類、議事録からのToDo化、営業リストの調査、SNS投稿案の作成、社内FAQの回答などです。AIが苦手な人ほど、難しいプロンプト集ではなく、業務名から逆引きできる記事を読みます。
+                </p>
+                <p>
+                    つまり記事テーマとしては、単なる発表解説よりも
+                    <strong>「AIエージェントをどう始めるか」「プロンプトを共有ワークフローに変える方法」</strong>
+                    が適しています。MIRAINAの読者である中小企業経営者・DX担当者にとっても、「すごいAIが出た」より「自社で最初にどの業務を切り出すか」の方が意思決定につながります。
+                </p>
+
+                <h2 id="section3">3. すでにAIを使う人はどんなプロンプトを投げるのか</h2>
+                <p>
+                    すでにChatGPTやClaudeを使っている担当者は、検索エンジンではなくAIに直接聞きます。たとえば次のようなプロンプトです。
+                </p>
+                <div class="code-block">
+                    <pre><code>中小企業の営業チーム向けに、ChatGPT workspace agentsを使った
+リード対応自動化の設計案を作ってください。
+OpenAI、Google Cloud、Microsoftの公式発表を引用し、
+人間の承認が必要な箇所と、最初に測るKPIも整理してください。</code></pre>
+                </div>
+                <p>
+                    このプロンプトに対してAIが引用しそうなのは、OpenAIのworkspace agents公式発表、Google Cloud Next '26のGemini Enterprise Agent Platform、Microsoft Power AppsのCopilot/agents発表です。いずれも共通しているのは、AIを単発のチャットではなく、業務アプリ、データ、権限、承認フローと結びつける方向に進んでいる点です。
+                </p>
+                <p>
+                    LLMOの観点では、記事側もこの使われ方を前提に設計する必要があります。「発表日」「対象プラン」「できる業務」「制限」「導入手順」「承認境界」を明確に書くほど、AIが回答の根拠として扱いやすくなります。検索から読む人にも、AI経由で要約される人にも届く記事は、抽象的な感想ではなく、判断に使える単位で情報を置いています。
+                </p>
+
+                <h2 id="section4">4. 中小企業で最初にエージェント化すべき3業務</h2>
+                <p>
+                    workspace agentsのような共有AIエージェントは、最初から全社業務を任せるものではありません。失敗しにくいのは、繰り返しが多く、入力データが明確で、最終判断を人が握れる業務です。
+                </p>
+
+                <p>
+                    <strong>① 営業フォロー</strong><br>
+                    問い合わせ内容、商談メモ、会社情報をもとに、見込み度を整理し、返信文の下書きを作る業務です。AIが候補を作り、担当者が送信前に確認する形なら、成果と安全性のバランスを取りやすいです。
+                </p>
+
+                <p>
+                    <strong>② 週次レポート</strong><br>
+                    売上、広告、問い合わせ、サイト流入などの数字を集め、先週との差分と次アクションをまとめる業務です。OpenAIの例にも週次指標レポートのエージェントが含まれており、スケジュール実行との相性が高い領域です。
+                </p>
+
+                <p>
+                    <strong>③ 社内問い合わせ対応</strong><br>
+                    就業規則、業務マニュアル、FAQ、過去の議事録をもとに、社員の質問へ回答する業務です。SlackやChatGPT内で答えを返し、必要に応じてチケット化する運用にすると、担当者の確認漏れを減らせます。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">繰り返し業務を1つ選ぶ</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">必要な入力情報を決める</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">AIの出力形式を固定する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">人間承認の位置を決める</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 05</span>
+                            <span class="step-text">週次で改善する</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図1：中小企業が共有AIエージェントを始める基本ステップ</p>
+                </div>
+
+                <h2 id="section5">5. 導入前に決めるべき権限・承認・評価ルール</h2>
+                <p>
+                    【公式情報】OpenAIはworkspace agentsについて、接続できるツールやデータ、実行できるアクション、承認が必要な操作を組織側で制御できると説明しています。スプレッドシート編集、メール送信、カレンダー追加のような敏感な操作では、エージェントが実行前に許可を求める設定も可能です。
+                </p>
+                <p>
+                    【解釈】中小企業が導入時に先に決めるべきなのは、ツール選定よりも運用ルールです。誰がエージェントを作れるのか、どのデータへ接続してよいのか、どの操作は人間承認を必須にするのか、誤回答が起きたとき誰が修正するのか。この4点が曖昧なまま導入すると、便利さよりも不安が先に立ち、現場定着が止まります。
+                </p>
+                <p>
+                    MIRAINA視点では、最初のKPIは「AIで何時間削減したか」だけにしない方が現実的です。初期は、下書き作成数、承認通過率、差し戻し理由、担当者の再利用率を見るべきです。AIエージェントは一度作って終わりではなく、チームの業務手順そのものを改善する仕組みだからです。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    ChatGPT workspace agentsは、2026年4月22日のOpenAI発表によって見えた「社内AI活用の次の段階」です。個人がChatGPTに毎回プロンプトを書く段階から、チームがよく使う手順を共有エージェント化し、SlackやChatGPT内で繰り返し使う段階へ進みます。
+                </p>
+                <p>
+                    AIが苦手な人は「AI 何から始める 仕事」と検索し、すでに使っている人は「自社業務をAIエージェント化する設計案」をAIへ投げます。どちらにも届く記事テーマは、機能名の説明だけではなく、検索意図、プロンプト、AIが引用しそうな一次情報、導入手順をまとめた実務ガイドです。
+                </p>
+                <p>
+                    まずは営業フォロー、週次レポート、社内問い合わせ対応のどれか1つを選び、入力情報、出力形式、人間承認、改善KPIを決めてください。AIエージェント導入や社内AI活用の設計でお悩みの方は、MIRAINAの生成AI活用支援・AI研修にお気軽にご相談ください。
+                </p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://openai.com/index/introducing-workspace-agents-in-chatgpt/" target="_blank" rel="noopener">OpenAI: Introducing workspace agents in ChatGPT（公式）</a></li>
+                        <li><a href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/next-2026/" target="_blank" rel="noopener">Google: Google Cloud Next '26（公式）</a></li>
+                        <li><a href="https://www.microsoft.com/en-us/power-platform/blog/2026/04/15/making-business-apps-smarter-with-ai-copilot-and-agents-in-power-apps/" target="_blank" rel="noopener">Microsoft: Making business apps smarter with AI, Copilot, and agents in Power Apps（公式）</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">社内AI活用の設計でお悩みですか？</h2>
+                    <p class="cta-text">MIRAINAでは、貴社の業務に合わせた<br>AIエージェント導入と研修をご提案します。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog091.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card091.webp" alt="OpenAIで企業売上40%超、enterprise AI導入はどう変わるか" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.09</div>
+                            <div class="related-text">OpenAIで企業売上40%超、enterprise AI導入はどう変わるか</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog102.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card102.webp" alt="サイバーエージェントのChatGPT Enterprise事例" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.14</div>
+                            <div class="related-text">【2026年4月最新】サイバーエージェントのChatGPT Enterprise事例、定着率93%はどう作られたか</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog111.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card111.webp" alt="ChatGPT Images 2.0とは？" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.22</div>
+                            <div class="related-text">【2026年4月最新】ChatGPT Images 2.0（gpt-image-2）とは？日本語対応・思考機能でマーケティング制作が変わる</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>
