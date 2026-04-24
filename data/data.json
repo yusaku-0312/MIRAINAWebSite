@@ -1025,6 +1025,15 @@
       "alt": "Claude Designで提案資料とプロトタイプ制作を進めるイメージ",
       "link": "/blogs/blog114.html",
       "date": "2026-04-24"
+    },
+    {
+      "id": 115,
+      "title": "【2026年4月最新】GPT-5.5とは？Codex対応・エージェントAIで業務自動化が変わる",
+      "description": "OpenAIが2026年4月23日に発表したGPT-5.5を解説。エージェントコーディング・コンピュータユース・Codex連携の強化点を整理し、中小企業の業務自動化への活用方法を紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card115.webp",
+      "alt": "GPT-5.5 OpenAI Codex エージェントAI 業務自動化 2026年4月",
+      "link": "/blogs/blog115.html",
+      "date": "2026-04-24"
     }
   ],
   "works": [
