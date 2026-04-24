@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年4月最新】Claude Designとは？提案資料・試作が会話で進む | MIRAINAブログ</title>
+    <meta name="description"
+        content="Claude DesignをAnthropicの2026年4月17日発表ベースで解説。Opus 4.7の視覚理解、ブランド反映、PPTX/HTML/Canva出力を整理し、中小企業の提案資料やLP試作への活用法を紹介します。">
+    <meta property="og:title" content="【2026年4月最新】Claude Designとは？提案資料・試作が会話で進む">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog114.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog114-1.webp">
+    <meta property="og:description"
+        content="Claude DesignをAnthropicの2026年4月17日発表ベースで解説。Opus 4.7の視覚理解、ブランド反映、PPTX/HTML/Canva出力を整理し、中小企業の提案資料やLP試作への活用法を紹介します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>Claude Designとは？提案資料・試作が会話で進む</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.04.24</span>
+                    <div class="article-tags">
+                        <p class="article-tag">Claude Design</p>
+                        <p class="article-tag">Anthropic</p>
+                        <p class="article-tag">デザインAI</p>
+                        <p class="article-tag">業務効率化</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年4月最新】Claude Designとは？提案資料・試作が会話で進む</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog114-1.webp" alt="Claude Designで提案資料とプロトタイプ制作を進めるイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    AI活用に興味が出てきた担当者は
+                    <strong>「Claude Designとは」「AIで提案資料を作れるか」「デザインが苦手でもLPを試作できるか」</strong>
+                    のように検索するはずです。すでにClaudeやChatGPTを使っている担当者は
+                    <strong>「Claude Design Canva export」「Claude Design PPTX」「Claude Design Claude Code handoff」</strong>
+                    とAIへ直接聞く可能性が高い。Anthropicは2026年4月17日、
+                    <strong>Claude Design</strong>をAnthropic Labsの新製品として公開しました。
+                    これは単なる画像生成ではなく、
+                    <strong>提案資料・プロトタイプ・ワイヤーフレーム・LPたたき台を会話で作り、組織内で共有し、そのまま実装に渡す</strong>
+                    ための作業空間です。本記事では公式発表をもとに、何ができるのか、中小企業がどこから使うべきかを整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. Claude Designとは？2026年4月17日に始まったresearch preview</a></li>
+                    <li><a href="#section2">2. Claude Designで何ができるのか</a></li>
+                    <li><a href="#section3">3. なぜ今のClaudeでデザイン業務が進みやすくなったのか</a></li>
+                    <li><a href="#section4">4. 中小企業が最初に使うべき3つの業務</a></li>
+                    <li><a href="#section5">5. 導入前に決めておきたい運用ルール</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="section1">1. Claude Designとは？2026年4月17日に始まったresearch preview</h2>
+                <p>
+                    【公式情報】Claude Designは、Anthropicが2026年4月17日に発表したAnthropic Labsの新製品です。デザイン、プロトタイプ、スライド、ワンペーパーなどのビジュアル成果物を、Claudeとの会話を通じて作ることを目的にしています。利用形態は<strong>research preview</strong>で、対象プランは<strong>Claude Pro / Max / Team / Enterprise</strong>です。
+                </p>
+                <p>
+                    【公式情報】重要なのは、Claude Designが「画像を1枚きれいに出すツール」ではなく、<strong>作る → 直す → 共有する → 出力する → 実装へ渡す</strong>までを一続きで扱う点です。Anthropicは公式発表の中で、プロトタイプ、ワイヤーフレーム、提案資料、マーケティング素材、コード付きの表現までを利用例として挙げています。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>Claude Design</th>
+                                <th>実務上の意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>公開日</th>
+                                <td>2026年4月17日</td>
+                                <td>4月後半時点では新機能を早めに試す先行枠</td>
+                            </tr>
+                            <tr>
+                                <th>提供形態</th>
+                                <td>Anthropic Labs の research preview</td>
+                                <td>本番運用前提なら社内ルール整備が必要</td>
+                            </tr>
+                            <tr>
+                                <th>対象プラン</th>
+                                <td>Pro / Max / Team / Enterprise</td>
+                                <td>無料プラン前提では使えない</td>
+                            </tr>
+                            <tr>
+                                <th>主な成果物</th>
+                                <td>スライド、試作、ワイヤー、ワンペーパー、LP素材</td>
+                                <td>営業・広報・プロダクトの初稿作成が速くなる</td>
+                            </tr>
+                            <tr>
+                                <th>連携の方向</th>
+                                <td>Canva / PDF / PPTX / HTML / Claude Code</td>
+                                <td>作って終わりではなく配布と実装に接続しやすい</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section2">2. Claude Designで何ができるのか</h2>
+                <p>
+                    【公式情報】Claude Designの機能は、見た目の生成よりも「編集と受け渡し」の整備が目立ちます。まずテキスト指示から初稿を作れます。その後は会話だけでなく、<strong>インラインコメント、直接編集、Claudeが作るスライダー</strong>で細かく修正できます。つまり「もっと余白を詰めたい」「色を少し落ち着かせたい」「このカードだけ文言を変えたい」を段階的に詰められます。
+                </p>
+                <p>
+                    【公式情報】入力も柔軟です。テキストプロンプトに加え、画像や文書ファイル、さらに<strong>DOCX / PPTX / XLSX</strong>の読み込み、コードベースの参照、Web captureによる既存サイト要素の取り込みに対応しています。これにより、営業資料の骨子、既存LP、社内テンプレート、ブランド資料をまとめて渡して「このトーンで新しい案を作る」がしやすくなります。
+                </p>
+                <p>
+                    【公式情報】出力先も明確です。組織内共有URL、フォルダ保存、<strong>Canva / PDF / PPTX / standalone HTML</strong>への書き出しに対応し、さらにClaude Codeへ渡すハンドオフ用バンドルも作成できます。ここが、画像生成中心のツールと一番違うところです。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>機能</th>
+                                <th>できること</th>
+                                <th>向いている担当</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>初稿生成</th>
+                                <td>文章からスライド、ワイヤー、デザイン案を作る</td>
+                                <td>営業、広報、事業責任者</td>
+                            </tr>
+                            <tr>
+                                <th>細かな修正</th>
+                                <td>コメント、直編集、スライダーで一部調整</td>
+                                <td>デザイナー、マーケター</td>
+                            </tr>
+                            <tr>
+                                <th>ブランド反映</th>
+                                <td>コードやデザイン資料を読んで配色や部品を寄せる</td>
+                                <td>プロダクト、制作会社</td>
+                            </tr>
+                            <tr>
+                                <th>組織共有</th>
+                                <td>閲覧権限、編集権限を分けて共同作業する</td>
+                                <td>チーム利用全般</td>
+                            </tr>
+                            <tr>
+                                <th>エクスポート</th>
+                                <td>PPTX、PDF、HTML、Canvaへ渡す</td>
+                                <td>営業、広報、開発</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section3">3. なぜ今のClaudeでデザイン業務が進みやすくなったのか</h2>
+                <p>
+                    【公式情報】Claude Designは<strong>Claude Opus 4.7</strong>を基盤にしています。Anthropicは2026年4月16日のOpus 4.7発表で、同モデルが従来より高解像度の画像を扱え、長辺<strong>2,576px</strong>までの画像入力に対応すると説明しました。さらに、インターフェース、スライド、ドキュメントのような「見た目の整い方」が重要な仕事で、よりクリエイティブで質の高い出力ができるとしています。
+                </p>
+                <p>
+                    【解釈】これにより、Claude Designは「雰囲気だけ合った画像を出す」より一歩進み、<strong>既存画面の読み取り、密度の高いレイアウトの把握、資料やLPの構造化</strong>を伴う仕事へ入りやすくなりました。たとえば営業資料なら、前提資料の読み込み、構成整理、トーン調整、最終的なPPTX書き出しまでを一連で扱いやすい。画像生成中心の記事としては<a href="/blogs/blog111.html">ChatGPT Images 2.0の解説</a>がありますが、Claude Designは静止画1枚の生成より<strong>成果物のワークフロー全体</strong>を前に進める製品と見る方が正確です。
+                </p>
+                <p>
+                    【解釈】もう一つ大きいのは、デザインシステムの扱いです。Anthropicは、Claudeがオンボーディング時にコードベースやデザインファイルを読み、チームの色、タイポグラフィ、コンポーネントを使えるようにすると説明しています。これは、バラバラのブランド表現になりやすい中小企業にとって、デザイン外注前の下書き品質を底上げする可能性があります。モデル自体の特徴は<a href="/blogs/blog110.html">Claude Opus 4.7の解説記事</a>でも整理しています。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">既存資料・サイト・ブランド情報を渡す</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">Claude Designで初稿を作る</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">コメントと編集で方向を詰める</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">PPTXやHTMLで共有し、必要なら実装へ渡す</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図1：Claude Designを使った制作初稿の基本フロー</p>
+                </div>
+
+                <h2 id="section4">4. 中小企業が最初に使うべき3つの業務</h2>
+                <p>
+                    Claude Designは何でも作れそうに見えますが、最初は「情報の元が手元にあり、レビュー者がはっきりしている業務」から始める方が失敗しにくいです。中小企業で特に相性が良いのは次の3つです。
+                </p>
+
+                <p>
+                    <strong>① 提案資料の初稿作成</strong><br>
+                    ヒアリングメモ、過去提案書、会社案内、実績資料を渡して、まず10枚前後の骨子を作る用途です。最初から完成版を狙うのではなく、営業担当が「論点整理にかける時間」を減らすのが狙いです。PPTXへ出力できるため、PowerPoint運用を崩さずに入りやすいです。
+                </p>
+
+                <p>
+                    <strong>② LPや新機能の試作</strong><br>
+                    新しいサービスページやキャンペーンLPをいきなり本番実装する前に、見出し、セクション構成、CTA配置、導線のラフを作る用途です。HTML書き出しやClaude Codeへのハンドオフがあるため、制作会社や社内開発との橋渡しに向きます。MIRAINAでも、<a href="/services/ai_develop.html">AI開発支援</a>で「いきなり実装に入って認識齟齬が出る」問題はよく見ますが、試作が先にあるとズレが減ります。
+                </p>
+
+                <p>
+                    <strong>③ マーケ・広報素材のたたき台</strong><br>
+                    展示会資料、採用説明資料、SNSキャンペーンのワンペーパー、簡易なバナーや告知ビジュアルの方向出しです。最終仕上げをデザイナーが行う前提でも、非デザイナーが「何を作りたいか」を言語化しやすくなります。AI活用を広げたい企業は、<a href="/services/ai_training.html">AI研修</a>でプロンプトとレビュー基準を一緒に整えると定着しやすいです。
+                </p>
+
+                <h2 id="section5">5. 導入前に決めておきたい運用ルール</h2>
+                <p>
+                    【公式情報】Claude Designは対象プラン加入者向けで、Enterpriseでは初期状態でオフになっています。さらに使用量はサブスクリプション制限に含まれ、必要に応じてextra usageを有効化する形です。つまり「現場が勝手に使い始めても費用も権限も問題になりにくい」とは言えません。
+                </p>
+                <p>
+                    【解釈】運用面では、少なくとも3つのルールが必要です。1つ目は<strong>入力してよい資料の範囲</strong>。未公開の顧客名、契約条件、機密数値をどこまで投入するかを明確にすること。2つ目は<strong>レビュー責任者</strong>。提案資料なら営業責任者、LPならマーケ責任者、ブランド表現ならデザイナーなど、最終判断を人が持つこと。3つ目は<strong>完成の定義</strong>。Claude Designは初稿を早くする道具であって、法務確認やブランド監修まで自動化する道具ではありません。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>決めること</th>
+                                <th>最低限のルール</th>
+                                <th>理由</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>入力データ</th>
+                                <td>顧客機密・未公開数値の扱いを定義する</td>
+                                <td>便利さ優先で情報統制が崩れやすい</td>
+                            </tr>
+                            <tr>
+                                <th>レビュー責任</th>
+                                <td>用途ごとに承認者を決める</td>
+                                <td>AI出力をそのまま外へ出さないため</td>
+                            </tr>
+                            <tr>
+                                <th>ブランド管理</th>
+                                <td>配色・表現・禁止事項の基準を共有する</td>
+                                <td>下書き品質を安定させるため</td>
+                            </tr>
+                            <tr>
+                                <th>費用管理</th>
+                                <td>対象プランとextra usageの扱いを決める</td>
+                                <td>部門横断利用でコストが読みにくくなる</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    Claude Designは、Anthropicが2026年4月17日に公開した新しいデザイン作業空間です。特徴は、見た目の生成だけでなく、コメント修正、組織共有、PPTXやHTMLへの書き出し、Claude Codeへの受け渡しまでを一気通貫で扱えることです。
+                </p>
+                <p>
+                    中小企業にとっての本質は「デザイナーを完全に置き換えること」ではありません。営業、広報、事業責任者が<strong>自分の頭の中にある構想を、外注や開発へ渡せる形まで早く持っていく</strong>ことです。提案資料やLP試作で毎回ゼロから整理している企業ほど、Claude Designの価値が出やすいでしょう。
+                </p>
+                <p>
+                    MIRAINAでは、AIを使った資料作成や業務フロー設計だけでなく、AI導入時の運用ルールづくりも支援しています。Claude Designのような新しいツールを現場へ定着させたい方は、<a href="/services/ai_consulting.html">生成AI活用支援</a>からご相談ください。
+                </p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://www.anthropic.com/news/claude-design-anthropic-labs" target="_blank" rel="noopener">Anthropic: Introducing Claude Design by Anthropic Labs（公式）</a></li>
+                        <li><a href="https://www.anthropic.com/news/claude-opus-4-7" target="_blank" rel="noopener">Anthropic: Introducing Claude Opus 4.7（公式）</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">AIで提案資料や試作を速くしたいですか？</h2>
+                    <p class="cta-text">MIRAINAでは、貴社の業務に合わせた<br>AI導入設計と活用研修をご提案します。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog110.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card110.webp" alt="Claude Opus 4.7関連記事" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.21</div>
+                            <div class="related-text">【2026年4月最新】Claude Opus 4.7とは？SWE-bench 87.6%・高解像度画像で変わるエージェントAI活用ガイド</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog111.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card111.webp" alt="ChatGPT Images 2.0関連記事" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.22</div>
+                            <div class="related-text">【2026年4月最新】ChatGPT Images 2.0（gpt-image-2）とは？日本語対応・思考機能でマーケティング制作が変わる</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog099.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card099.webp" alt="Adobe Firefly関連記事" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.13</div>
+                            <div class="related-text">【2026年4月最新】Adobe Firefly新機能で画像編集はどう変わるか</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

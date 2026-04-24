@@ -1016,6 +1016,15 @@
       "alt": "Gemini Enterprise Agent Platform Google Cloud Next 2026 企業AIエージェント導入ガイド",
       "link": "/blogs/blog113.html",
       "date": "2026-04-23"
+    },
+    {
+      "id": 114,
+      "title": "【2026年4月最新】Claude Designとは？提案資料・試作が会話で進む",
+      "description": "Anthropicが2026年4月17日に公開したClaude Designを解説。Claude Opus 4.7の視覚理解、ブランド反映、PPTX/HTML/Canva出力をもとに、中小企業が提案資料やLP試作をどう内製化できるかを整理します。",
+      "thumbnail": "/images/blogs_images/blog-card114.webp",
+      "alt": "Claude Designで提案資料とプロトタイプ制作を進めるイメージ",
+      "link": "/blogs/blog114.html",
+      "date": "2026-04-24"
     }
   ],
   "works": [
