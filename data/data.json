@@ -1043,6 +1043,15 @@
       "alt": "Anthropic Google Amazon 400億ドル投資 Claude活用 2026年4月",
       "link": "/blogs/blog116.html",
       "date": "2026-04-25"
+    },
+    {
+      "id": 117,
+      "title": "【2026年4月最新】OpenAI Privacy Filterとは？個人情報をローカルで伏せる新モデル",
+      "description": "OpenAI Privacy Filterを2026年4月22日の公式発表ベースで解説。ローカル実行、128K文脈、Apache 2.0、PII検出精度96%超を整理し、社内文書をAI活用する実務手順を紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card117.webp",
+      "alt": "OpenAI Privacy Filterで個人情報をローカルでマスキングするイメージ",
+      "link": "/blogs/blog117.html",
+      "date": "2026-04-26"
     }
   ],
   "works": [

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年4月最新】OpenAI Privacy Filterとは？個人情報をローカルで伏せる新モデル | MIRAINAブログ</title>
+    <meta name="description"
+        content="OpenAI Privacy Filterを2026年4月22日の公式発表ベースで解説。ローカル実行、128K文脈、Apache 2.0、PII検出精度96%超を整理し、社内文書をAI活用する実務手順を紹介します。">
+    <meta property="og:title" content="【2026年4月最新】OpenAI Privacy Filterとは？個人情報をローカルで伏せる新モデル">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog117.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog117-1.webp">
+    <meta property="og:description"
+        content="OpenAI Privacy Filterを2026年4月22日の公式発表ベースで解説。ローカル実行、128K文脈、Apache 2.0、PII検出精度96%超を整理し、社内文書をAI活用する実務手順を紹介します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>OpenAI Privacy Filterとは？個人情報をローカルで伏せる新モデル</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.04.26</span>
+                    <div class="article-tags">
+                        <p class="article-tag">OpenAI</p>
+                        <p class="article-tag">Privacy Filter</p>
+                        <p class="article-tag">個人情報保護</p>
+                        <p class="article-tag">AI導入</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年4月最新】OpenAI Privacy Filterとは？個人情報をローカルで伏せる新モデル</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog117-1.webp" alt="OpenAI Privacy Filterで個人情報をローカルでマスキングするイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    AIを社内文書に使いたい担当者は
+                    <strong>「個人情報を含むメールをそのままAIへ入れてよいのか」「顧客名や電話番号を伏せてから要約できないか」</strong>
+                    と悩みます。OpenAIは2026年4月22日、<strong>OpenAI Privacy Filter</strong>を公開しました。これは、
+                    <strong>個人情報やAPIキーなどを文脈付きで検出し、ローカル環境でマスキングできる小型モデル</strong>です。
+                    本記事では公式発表と公式リポジトリをもとに、何ができるのか、どんな業務で効くのか、中小企業が導入前に決めるべき運用ルールを整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. OpenAI Privacy Filterとは？2026年4月22日の公開内容</a></li>
+                    <li><a href="#section2">2. OpenAI Privacy Filterで何ができるのか</a></li>
+                    <li><a href="#section3">3. なぜ今の企業AI運用で重要なのか</a></li>
+                    <li><a href="#section4">4. 中小企業が先に使うべき3つの場面</a></li>
+                    <li><a href="#section5">5. 導入前に決めておきたい運用ルール</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="section1">1. OpenAI Privacy Filterとは？2026年4月22日の公開内容</h2>
+                <p>
+                    【公式情報】OpenAI Privacy Filterは、OpenAIが2026年4月22日に公開した
+                    <strong>PII（Personally Identifiable Information：個人を特定し得る情報）検出・マスキング用のオープンウェイトモデル</strong>です。
+                    目的は、社内文書、ログ、学習データ、検索インデックス、レビュー用テキストなどに含まれる個人情報を、
+                    AI処理の前段で自動的に伏せることにあります。
+                </p>
+                <p>
+                    【公式情報】OpenAIは公式記事で、このモデルが<strong>ローカル実行できる小型モデル</strong>であり、
+                    <strong>1回の推論で長文をまとめて判定できる</strong>と説明しています。公開ライセンスは
+                    <strong>Apache 2.0</strong>で、Hugging FaceとGitHubから取得可能です。つまり、外部SaaSへ未加工データを送らず、
+                    自社環境で検出・マスキング処理を組み込めます。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>OpenAI Privacy Filter</th>
+                                <th>実務上の意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>公開日</th>
+                                <td>2026年4月22日</td>
+                                <td>4月後半時点の最新の公式公開モデル</td>
+                            </tr>
+                            <tr>
+                                <th>提供形態</th>
+                                <td>オープンウェイト / Apache 2.0</td>
+                                <td>商用運用や社内カスタマイズに使いやすい</td>
+                            </tr>
+                            <tr>
+                                <th>実行環境</th>
+                                <td>ローカル、オンプレ、ノートPC相当でも可</td>
+                                <td>未加工の顧客データを外へ出さずに済む</td>
+                            </tr>
+                            <tr>
+                                <th>文脈長</th>
+                                <td>128,000トークン</td>
+                                <td>長い議事録や複数ページ文書も分割せず扱いやすい</td>
+                            </tr>
+                            <tr>
+                                <th>モデル規模</th>
+                                <td>総計1.5B / アクティブ50M</td>
+                                <td>重すぎず、実運用に組み込みやすい</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section2">2. OpenAI Privacy Filterで何ができるのか</h2>
+                <p>
+                    【公式情報】Privacy Filterは、メールアドレスや電話番号のような単純な形式一致だけでなく、
+                    <strong>文脈を見ながら個人名、住所、日付、口座番号、秘密情報</strong>を検出できるのが特徴です。
+                    公開された分類カテゴリは8つで、`private_person`、`private_address`、`private_email`、
+                    `private_phone`、`private_url`、`private_date`、`account_number`、`secret` が含まれます。
+                </p>
+                <p>
+                    【公式情報】ベンチマークでは、OpenAIはPII-Masking-300kで<strong>F1 96%</strong>、
+                    注釈修正版では<strong>F1 97.43%</strong>と報告しています。さらに、少量の追加データで
+                    <strong>ドメイン適応のF1が54%から96%まで伸びた</strong>とも説明しており、医療、法務、金融、
+                    カスタマーサポートなど各社独自の文書形式へ寄せやすい設計です。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">従来の正規表現中心</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>メールや電話は見つけやすい</li>
+                                    <li>文脈依存の個人名に弱い</li>
+                                    <li>長文で抜け漏れが出やすい</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">→</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">Privacy Filter</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>文脈込みでPIIを判定</strong></li>
+                                    <li>APIキーや口座番号も対象</li>
+                                    <li>長文を1パスで処理しやすい</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">図1：従来のルールベース検出とPrivacy Filterの違い</p>
+                </div>
+
+                <p>
+                    【解釈】重要なのは、このモデルが「AI本体」ではなく<strong>AIの前処理レイヤー</strong>に置けることです。
+                    たとえば顧客対応メールを要約するとき、まずPrivacy Filterで氏名・電話番号・口座番号・APIキーを伏せ、
+                    その後に要約モデルへ渡す。これにより、現場はAI活用のスピードを落とさず、
+                    情報管理ルールにも合わせやすくなります。
+                </p>
+
+                <h2 id="section3">3. なぜ今の企業AI運用で重要なのか</h2>
+                <p>
+                    【解釈】2026年の企業AI活用は、「使うかどうか」より
+                    <strong>どのデータを、どの順番で、どの環境に流すか</strong>が差になります。
+                    既存の最新記事で扱った<a href="/blogs/blog115.html">GPT-5.5</a>や
+                    <a href="/blogs/blog112.html">workspace agents</a>のように、
+                    AIは複数ツールをまたいで仕事を進める方向へ進化しています。その分、
+                    入力データの統制が甘いと、社内文書や顧客情報が思わぬ形で外部処理へ流れるリスクも上がります。
+                </p>
+                <p>
+                    【公式情報】OpenAI自身もPrivacy Filterを、学習、インデックス、ログ、レビューのような
+                    <strong>高スループットなプライバシーワークフロー</strong>向けと位置づけています。
+                    つまり、単発の匿名化ツールではなく、社内のAIパイプラインへ差し込む基盤部品として使う前提です。
+                </p>
+                <p>
+                    【MIRAINA視点】中小企業では「まずChatGPTに貼って試す」から導入が始まりがちですが、
+                    本番運用ではこの順番を逆にすべきです。先に
+                    <strong>入力ルール、マスキング、権限、レビュー責任者</strong>を決め、
+                    そのうえで要約・分類・下書き生成へつなげる方が、定着も監査も楽になります。
+                    <a href="/blogs/blog025.html">AI事業者ガイドライン改定</a>の文脈でも、
+                    人の判断を残す設計はますます重要です。
+                </p>
+
+                <h2 id="section4">4. 中小企業が先に使うべき3つの場面</h2>
+                <p>
+                    OpenAI Privacy Filterは、すべてのAI活用に入れる必要はありません。まずは
+                    <strong>顧客情報が混ざりやすいが、AI化メリットも大きい業務</strong>から始めるのが現実的です。
+                </p>
+
+                <p>
+                    <strong>① 問い合わせメールの要約・分類</strong><br>
+                    氏名、電話番号、メールアドレス、住所を先に伏せてから、要件分類や返信草案に回します。
+                    カスタマーサポートや営業窓口で最も効果が出やすい領域です。
+                </p>
+
+                <p>
+                    <strong>② 議事録・面談メモの要約</strong><br>
+                    社内会議や顧客商談の議事録には、参加者名、日付、案件番号、非公開URL、秘密情報が混ざります。
+                    128Kコンテキストにより長文も処理しやすく、要約やTODO抽出前の安全弁として使えます。
+                </p>
+
+                <p>
+                    <strong>③ RAGや社内検索の前処理</strong><br>
+                    社内ナレッジを検索基盤へ入れる前に個人情報を落とす使い方です。
+                    <a href="/blogs/blog065.html">RAG導入</a>や社内FAQ整備を進める場合、
+                    インデックス化前にPrivacy Filterを挟むと、再利用しやすいデータだけを残しやすくなります。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>場面</th>
+                                <th>伏せたい情報</th>
+                                <th>その後のAI処理</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>問い合わせ対応</th>
+                                <td>氏名、電話、メール、住所</td>
+                                <td>分類、要約、返信草案</td>
+                            </tr>
+                            <tr>
+                                <th>議事録整理</th>
+                                <td>参加者名、日付、案件番号、秘密情報</td>
+                                <td>要約、TODO抽出、共有文作成</td>
+                            </tr>
+                            <tr>
+                                <th>RAG前処理</th>
+                                <td>個人情報、口座番号、APIキー</td>
+                                <td>検索インデックス化、社内FAQ化</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section5">5. 導入前に決めておきたい運用ルール</h2>
+                <p>
+                    【公式情報】OpenAIはPrivacy Filterについて、<strong>匿名化そのものを保証するツールではなく、
+                    高リスク分野では人による確認が重要</strong>だと明記しています。法務、医療、金融のような領域では、
+                    マスキング後のテキストを人が確認する工程を外してはいけません。
+                </p>
+                <p>
+                    中小企業が導入前に決めるべき最低ラインは3つです。1つ目は
+                    <strong>何を必ず伏せるか</strong>の定義です。2つ目は
+                    <strong>どこまで自動化し、どこから人が確認するか</strong>の線引きです。3つ目は
+                    <strong>マスキング済みデータをどこへ保存するか</strong>の保存ポリシーです。
+                    この3点が曖昧だと、便利でも現場は怖くて使いません。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">対象業務を決める</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">伏せる情報のルールを定義する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">Privacy Filterで前処理する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">要約・分類・検索へ接続する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 05</span>
+                            <span class="step-text">人が最終確認して運用を改善する</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図2：Privacy Filterを含む実務導入の最短フロー</p>
+                </div>
+
+                <p>
+                    MIRAINAでは、こうしたAI前処理を含む運用設計を
+                    <a href="/services/ai_consulting.html">生成AI活用支援</a>で整理しています。
+                    ツールだけ入れて終わらず、部門ごとの業務に合わせたルール設計や
+                    <a href="/services/ai_training.html">AI研修</a>まで含めて進めると、PoC止まりを避けやすくなります。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    OpenAI Privacy Filterは、2026年4月22日に公開された個人情報検出・マスキング用のオープンウェイトモデルです。
+                    ローカル実行、128Kコンテキスト、Apache 2.0、PII-Masking-300kでのF1 96%超という特徴から、
+                    社内文書をAI活用する前段の安全弁として使いやすい設計になっています。
+                </p>
+                <p>
+                    重要なのは、Privacy Filterを単体で見ることではありません。問い合わせ要約、議事録整理、RAG前処理など、
+                    <strong>既存業務のAI化フローへ差し込む部品</strong>として考えることです。AIが強くなるほど、
+                    入力データをどう整えて渡すかの設計が成果を左右します。
+                </p>
+                <p>
+                    社内データを安全に使えるAI運用を整えたい場合は、マスキング、権限、レビュー責任の3点を先に決めるのが近道です。
+                    MIRAINAでは、最新モデル動向を踏まえたAI導入設計から定着支援までをサポートしています。
+                </p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://openai.com/index/introducing-openai-privacy-filter/" target="_blank" rel="noopener">OpenAI: Introducing OpenAI Privacy Filter（2026年4月22日）</a></li>
+                        <li><a href="https://github.com/openai/privacy-filter" target="_blank" rel="noopener">GitHub: openai/privacy-filter README</a></li>
+                        <li><a href="https://cdn.openai.com/pdf/c66281ed-b638-456a-8ce1-97e9f5264a90/OpenAI-Privacy-Filter-Model-Card.pdf" target="_blank" rel="noopener">OpenAI Privacy Filter Model Card（PDF）</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">社内文書を安全にAI活用したいですか？</h2>
+                    <p class="cta-text">MIRAINAでは、個人情報の扱いを含めた<br>AI運用ルール設計と定着支援をご提案します。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog104.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card104.webp" alt="OpenAI GPT-5.4-Cyber 企業防御" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.15</div>
+                            <div class="related-text">【2026年4月最新】OpenAIがTACを拡大、GPT-5.4-Cyberで企業防御はどう変わるか</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog103.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card103.webp" alt="OpenAI Cloudflare AIエージェント本番運用" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.14</div>
+                            <div class="related-text">【2026年4月最新】OpenAI×CloudflareでAIエージェント本番運用はどう変わるか</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog115.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card115.webp" alt="GPT-5.5 Codex エージェントAI" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.24</div>
+                            <div class="related-text">【2026年4月最新】GPT-5.5とは？Codex対応・エージェントAIで業務自動化が変わる</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>
