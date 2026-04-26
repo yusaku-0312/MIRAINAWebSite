@@ -1052,6 +1052,15 @@
       "alt": "OpenAI Privacy Filterで個人情報をローカルでマスキングするイメージ",
       "link": "/blogs/blog117.html",
       "date": "2026-04-26"
+    },
+    {
+      "id": 118,
+      "title": "【2026年4月最新】デジタル庁「源内」とは？ガバメントAIのオープンソース化で中小企業のAI活用が変わる理由",
+      "description": "デジタル庁が2026年4月24日、ガバメントAI「源内」の一部をMITライセンスでオープンソース公開。AWS RAG・Azure LLM・Google Cloud法令AIテンプレートの内容と、民間企業・中小企業が注目すべき3つのポイントを解説します。",
+      "thumbnail": "/images/blogs_images/blog-card118.webp",
+      "alt": "デジタル庁ガバメントAI源内のオープンソース化と中小企業AI活用のイメージ",
+      "link": "/blogs/blog118.html",
+      "date": "2026-04-26"
     }
   ],
   "works": [

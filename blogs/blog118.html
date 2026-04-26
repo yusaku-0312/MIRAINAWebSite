@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年4月最新】デジタル庁「源内」とは？ガバメントAIのオープンソース化で中小企業のAI活用が変わる理由 | MIRAINAブログ</title>
+    <meta name="description"
+        content="デジタル庁が2026年4月24日、ガバメントAI「源内」の一部をMITライセンスでオープンソース公開。AWS RAG・Azure LLM・Google Cloud法令AIテンプレートの内容と、民間企業・中小企業が注目すべき3つのポイントを解説します。">
+    <meta property="og:title" content="【2026年4月最新】デジタル庁「源内」とは？ガバメントAIのオープンソース化で中小企業のAI活用が変わる理由">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog118.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog118-1.webp">
+    <meta property="og:description"
+        content="デジタル庁が2026年4月24日、ガバメントAI「源内」の一部をMITライセンスでオープンソース公開。AWS RAG・Azure LLM・Google Cloud法令AIテンプレートの内容と、民間企業・中小企業が注目すべき3つのポイントを解説します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>デジタル庁「源内」とは？ガバメントAIのオープンソース化で中小企業のAI活用が変わる理由</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.04.26</span>
+                    <div class="article-tags">
+                        <p class="article-tag">デジタル庁</p>
+                        <p class="article-tag">ガバメントAI</p>
+                        <p class="article-tag">AI活用</p>
+                        <p class="article-tag">生成AI</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年4月最新】デジタル庁「源内」とは？ガバメントAIのオープンソース化で中小企業のAI活用が変わる理由</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog118-1.webp" alt="デジタル庁ガバメントAI源内のオープンソース化と中小企業AI活用のイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    AI活用を検討している経営者・担当者は
+                    <strong>「源内 デジタル庁 どんなAI」「ガバメントAI 民間 使えるの」「政府AI 企業 関係あるの」</strong>
+                    と疑問を持ちます。デジタル庁は2026年4月24日、内製で開発してきた政府向け生成AI基盤
+                    <strong>「源内（げんない）」</strong>の一部をオープンソースとしてGitHubに公開しました。
+                    商用利用可能なMITライセンスで提供され、AWS・Azure・Google Cloudに対応した
+                    <strong>RAGや法令照合AIのテンプレートが誰でも利用・改変できる状態</strong>になっています。
+                    本記事では公式情報をもとに、源内の公開内容と、民間企業・中小企業にとって何が変わるのかを整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. デジタル庁「源内」とは？2026年4月24日のオープンソース公開の全容</a></li>
+                    <li><a href="#section2">2. 公開された3つのAIテンプレートで何ができるのか</a></li>
+                    <li><a href="#section3">3. なぜ今、政府はAIをオープンソース化したのか</a></li>
+                    <li><a href="#section4">4. 民間企業・中小企業が注目すべき3つのポイント</a></li>
+                    <li><a href="#section5">5. 源内公開をきっかけにするAI導入の第一歩</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="section1">1. デジタル庁「源内」とは？2026年4月24日のオープンソース公開の全容</h2>
+                <p>
+                    【公式情報】「源内（げんない）」は、デジタル庁が内製開発してきた
+                    <strong>政府向け生成AI利用環境（ガバメントAI）</strong>です。全府省庁の約18万人の職員を対象に、
+                    2026年度中に大規模な実証・運用が予定されているAI基盤で、文書作成の補助、社内FAQ照合、
+                    法令参照など行政実務を支援するAIアプリを一元提供します。
+                </p>
+                <p>
+                    【公式情報】デジタル庁は2026年4月24日、源内のウェブインターフェース部分のソースコードと
+                    構築手順、および一部のAIアプリの開発テンプレートをGitHub上に公開しました。
+                    適用ライセンスは<strong>MITライセンス等</strong>で、<strong>商用利用・改変・再配布が可能</strong>です。
+                    公開リポジトリは「genai-web（源内Webインターフェース）」と
+                    「genai-ai-api（行政実務用AIアプリ）」の2つです。
+                </p>
+
+                <figure class="article-figure">
+                    <img src="/images/blogs_images/blog118-2.webp" alt="デジタル庁公式note「ガバメントAI源内をオープンソースとして公開します」のスクリーンショット" width="800" height="450" loading="lazy">
+                    <figcaption>デジタル庁公式note「ガバメントAI「源内」をオープンソースとして公開します」（2026年4月24日）</figcaption>
+                </figure>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>内容</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>公開日</th>
+                                <td>2026年4月24日</td>
+                            </tr>
+                            <tr>
+                                <th>公開主体</th>
+                                <td>デジタル庁（GitHub: digital-go-jp）</td>
+                            </tr>
+                            <tr>
+                                <th>ライセンス</th>
+                                <td>MITライセンス等（商用利用・改変・再配布可）</td>
+                            </tr>
+                            <tr>
+                                <th>公開内容</th>
+                                <td>Webインターフェース・RAGテンプレート・LLMテンプレート・法令AIテンプレート</td>
+                            </tr>
+                            <tr>
+                                <th>対象規模</th>
+                                <td>全府省庁 約18万人の職員（2026年度中に本格展開予定）</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section2">2. 公開された3つのAIテンプレートで何ができるのか</h2>
+                <p>
+                    【公式情報】今回のオープンソース公開で提供された開発テンプレートは、主に以下の3種類です。
+                </p>
+
+                <p>
+                    <strong>① AWS上の行政実務用RAGテンプレート</strong><br>
+                    Amazon Web Services（AWS）を使い、社内文書や規程集を検索して回答する
+                    RAG（Retrieval Augmented Generation）の構築テンプレートです。
+                    社内ナレッジを検索できるAIチャットボットの土台として活用できます。
+                    RAGの仕組みについては<a href="/blogs/blog065.html">こちらの記事</a>も参考にしてください。
+                </p>
+
+                <p>
+                    <strong>② Azure上のLLMセルフデプロイテンプレート</strong><br>
+                    Microsoft Azureの環境で大規模言語モデル（LLM）を自社の管理下に置いて運用するためのテンプレートです。
+                    外部のSaaSに依存せず、自社インフラでLLMを動かしたい企業向けの構成例が含まれています。
+                </p>
+
+                <p>
+                    <strong>③ Google Cloud上の法令照合AIテンプレート</strong><br>
+                    Google Cloud環境で、最新の法律条文データを参照しながら回答するAIアプリの実装例です。
+                    法令や規程を常に最新状態に保ちながらAIが参照する構成で、
+                    コンプライアンス確認や規則照合の自動化に応用できます。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">公開前（源内）</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>政府内部のみで利用</li>
+                                    <li>民間は参考にできない</li>
+                                    <li>各組織が個別に開発</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">→</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">公開後（OSS化）</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>民間企業も商用利用・改変可</strong></li>
+                                    <li>AWS・Azure・GCPのテンプレート入手可</li>
+                                    <li>重複開発コストを削減できる</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">図1：源内オープンソース化による変化（公式情報をもとに作成）</p>
+                </div>
+
+                <h2 id="section3">3. なぜ今、政府はAIをオープンソース化したのか</h2>
+                <p>
+                    【公式情報】デジタル庁によると、今回のOSS化の背景には
+                    <strong>「政府機関や地方公共団体での類似AI基盤の重複開発を防ぐ」</strong>という目的があります。
+                    各機関が同じような機能を個別に開発するのは、予算・人材の無駄です。
+                    共通基盤を公開することで、各機関は独自の要件に合わせた部分の開発に集中できます。
+                </p>
+                <p>
+                    【公式情報】デジタル庁は同時に、
+                    <strong>「民間企業がOSSをベースとして独自のサービスを開発・提供すること」も推奨</strong>しています。
+                    政府が率先してAI基盤を公開することで、民間のAI投資や活用を後押しする狙いがあります。
+                    日本全体でAI社会実装を加速させる起点として、源内を位置付けているのです。
+                </p>
+                <p>
+                    【解釈】人口減少と少子高齢化で行政職員の担い手が不足する中、
+                    日本の公共サービスを維持するにはAI活用が不可欠です。
+                    政府が自ら使っているAI基盤を公開することは、
+                    <strong>「国が生成AI活用を本格的なインフラとして捉えた」というシグナル</strong>でもあります。
+                    これは2026年の日本企業にとっても、AI導入の必要性を再認識する契機になります。
+                </p>
+
+                <h2 id="section4">4. 民間企業・中小企業が注目すべき3つのポイント</h2>
+                <p>
+                    源内のOSS公開は政府向けですが、民間企業・中小企業にも直接関係する3つのポイントがあります。
+                </p>
+
+                <p>
+                    <strong>① 実績のある構成例をそのまま参考にできる</strong><br>
+                    「AIチャットボットを作りたいが、どう構成すればいいかわからない」という段階の企業にとって、
+                    政府が実際に運用しているシステムの設計パターンが公開されることは大きな参考になります。
+                    特にAWS RAGテンプレートは、社内文書を検索するAIの基本構成として、
+                    中小企業の社内チャットボット開発にも流用しやすい内容です。
+                </p>
+
+                <p>
+                    <strong>② ベンダーロックインを避ける考え方が広がる</strong><br>
+                    源内の設計思想は「特定のベンダー・サービスに過度に依存しない」ことです。
+                    AWS・Azure・Google Cloudそれぞれのテンプレートが用意されているのも、
+                    クラウド選択の柔軟性を保つためです。中小企業がAIを導入する際も、
+                    <strong>特定のSaaSに完全依存するより、自社要件に合った構成を選ぶ視点</strong>が重要になります。
+                </p>
+
+                <p>
+                    <strong>③ 政府AI活用の実態が「見える化」される</strong><br>
+                    これまで政府内部でどのようにAIが使われているかは外部から把握しにくい状況でした。
+                    源内のOSS公開によって、行政実務でどんな課題にAIが使われているかが明確になります。
+                    <strong>法令照合・社内Q&A・文書検索といった業務は、民間企業の日常業務と本質的に重なります。</strong>
+                    政府が解決しようとした課題は、多くの民間企業が抱える課題でもあるのです。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>源内テンプレート</th>
+                                <th>民間企業での活用イメージ</th>
+                                <th>対象業務</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>AWS RAGテンプレート</th>
+                                <td>社内規程・マニュアルを検索するAIチャットボット</td>
+                                <td>社内FAQ・ナレッジ管理</td>
+                            </tr>
+                            <tr>
+                                <th>Azure LLMテンプレート</th>
+                                <td>自社環境で動かすAI文書作成・要約ツール</td>
+                                <td>報告書・提案書の初稿生成</td>
+                            </tr>
+                            <tr>
+                                <th>Google Cloud法令AIテンプレート</th>
+                                <td>規約・規制・コンプライアンス確認AI</td>
+                                <td>契約確認・コンプライアンス業務</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section5">5. 源内公開をきっかけにするAI導入の第一歩</h2>
+                <p>
+                    【MIRAINA視点】「政府がAIを使い始めた」という事実は、
+                    まだAI導入に踏み出せていない中小企業の経営者にとっても判断を後押しします。
+                    しかし、政府向けのOSSをそのまま自社に適用するのは現実的ではありません。
+                    重要なのは<strong>「何のためにAIを使うか」を先に決めること</strong>です。
+                </p>
+                <p>
+                    最も導入効果が出やすいのは、<strong>繰り返し発生する定型業務</strong>です。
+                    問い合わせ対応、議事録整理、社内Q&A、定期レポートの初稿作成など、
+                    「毎回同じような判断や文章を必要とする業務」がAI化に向いています。
+                    源内のRAGテンプレートが解決しようとした「社内文書から正確に答えを引き出す」課題は、
+                    多くの中小企業でも同じように発生します。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">AI化したい業務を1つ選ぶ（例：社内Q&A対応）</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">必要なデータ（マニュアル・規程・FAQ）を整理する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">ChatGPTや既存SaaS、またはRAGで小規模に試す</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">利用ルールと確認担当者を決めて運用を開始する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 05</span>
+                            <span class="step-text">効果を測定し、対象業務を段階的に広げる</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図2：中小企業が始めやすいAI導入の最短フロー</p>
+                </div>
+
+                <p>
+                    MIRAINAでは、こうした業務AI化の入り口から構成設計・社内ルール整備までを
+                    <a href="/services/ai_consulting.html">生成AI活用支援</a>でサポートしています。
+                    社内文書を使ったRAG構築に関心がある場合は、
+                    <a href="/services/ai_develop.html">AI開発</a>でご相談いただけます。
+                    「まず試せる形にしてから判断したい」という段階から一緒に進めることができます。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    デジタル庁は2026年4月24日、ガバメントAI「源内」の一部をMITライセンスでオープンソース公開しました。
+                    全府省庁約18万人の職員向けに運用している生成AI基盤の設計パターンが、
+                    商用利用・改変可能な形で誰でも入手できるようになっています。
+                </p>
+                <p>
+                    公開されたのは、AWS RAGテンプレート・Azure LLMテンプレート・Google Cloud法令AIテンプレートの3種類です。
+                    重複開発を防ぎ、官民協働でAI社会実装を進める狙いがあります。
+                </p>
+                <p>
+                    民間企業・中小企業にとっての意味は、<strong>実績のある構成例の参考・ベンダーロックイン回避の考え方・
+                    行政実務と民間業務の共通課題の可視化</strong>の3点です。
+                    政府がAIを業務基盤として整備する動きは、民間企業にとっても「AI導入が当たり前になる時代」が
+                    着実に進んでいることを示しています。
+                    MIRAINAでは、最新AI動向をふまえた業務活用設計から研修まで、
+                    <a href="/services/ai_consulting.html">生成AI活用支援</a>でサポートしています。
+                </p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://digital-gov.note.jp/n/n84aeba282e60" target="_blank" rel="noopener">デジタル庁公式note: ガバメントAI「源内」をオープンソースとして公開します（2026年4月24日）</a></li>
+                        <li><a href="https://www.itmedia.co.jp/aiplus/articles/2604/24/news103.html" target="_blank" rel="noopener">ITmedia: 政府AI「源内」オープンソース化 GitHubで公開、商用利用もOK 民間と共創へ（2026年4月24日）</a></li>
+                        <li><a href="https://github.com/digital-go-jp/genai-web" target="_blank" rel="noopener">GitHub: digital-go-jp/genai-web（源内Webインターフェース）</a></li>
+                        <li><a href="https://github.com/digital-go-jp/genai-ai-api" target="_blank" rel="noopener">GitHub: digital-go-jp/genai-ai-api（源内AIアプリ）</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">自社業務にAIを導入したいですか？</h2>
+                    <p class="cta-text">MIRAINAでは、業務AI化の入り口から<br>RAG構築・社内ルール整備まで一緒に進めます。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog117.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card117.webp" alt="OpenAI Privacy Filter 個人情報保護" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.26</div>
+                            <div class="related-text">【2026年4月最新】OpenAI Privacy Filterとは？個人情報をローカルで伏せる新モデル</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog116.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card116.webp" alt="Anthropic Google Amazon 投資 Claude" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.25</div>
+                            <div class="related-text">【2026年4月最新】Anthropic 400億ドル投資とは？Google・Amazon注目でClaude活用が加速する理由</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog065.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card065.webp" alt="RAG 社内文書 AI活用" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2025.01.01</div>
+                            <div class="related-text">RAGとは？社内文書をAIで検索する仕組みをわかりやすく解説</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>
