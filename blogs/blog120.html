@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年4月最新】OpenAIがAWS Bedrock対応、企業のAI基盤選定はどう変わるか | MIRAINAブログ</title>
+    <meta name="description"
+        content="OpenAI AWS Bedrock対応を2026年4月28日のAWS公式発表と4月27日のOpenAI・Microsoft契約改定から解説。Codex、Managed Agents、企業のAI基盤選定で確認すべき点を整理します。">
+    <meta property="og:title" content="【2026年4月最新】OpenAIがAWS Bedrock対応、企業のAI基盤選定はどう変わるか">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog120.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog120-1.webp">
+    <meta property="og:description"
+        content="OpenAI AWS Bedrock対応を2026年4月28日のAWS公式発表と4月27日のOpenAI・Microsoft契約改定から解説。Codex、Managed Agents、企業のAI基盤選定で確認すべき点を整理します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>OpenAIがAWS Bedrock対応、企業のAI基盤選定はどう変わるか</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.04.29</span>
+                    <div class="article-tags">
+                        <p class="article-tag">OpenAI</p>
+                        <p class="article-tag">AWS Bedrock</p>
+                        <p class="article-tag">Codex</p>
+                        <p class="article-tag">AI導入</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年4月最新】OpenAIがAWS Bedrock対応、企業のAI基盤選定はどう変わるか</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog120-1.webp" alt="OpenAI AWS Bedrock対応と企業AI基盤選定のイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    企業でAI導入を進める担当者は
+                    <strong>「OpenAIはAzure前提なのか」「AWS環境のままChatGPT系モデルやCodexを使えるのか」「AIエージェントの監査や権限管理をどう設計するのか」</strong>
+                    と悩みます。2026年4月27日にOpenAIとMicrosoftが契約改定を発表し、翌4月28日にAWSは
+                    <strong>OpenAIモデル、Codex、Amazon Bedrock Managed Agents powered by OpenAI</strong>
+                    をAmazon Bedrockの限定プレビューで提供すると発表しました。本記事では公式情報をもとに、
+                    企業のAI基盤選定で何が変わるのか、中小企業が今確認すべきポイントを整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. まず押さえるべき事実：OpenAIがAWS Bedrock対応</a></li>
+                    <li><a href="#section2">2. なぜMicrosoft契約改定とセットで見るべきか</a></li>
+                    <li><a href="#section3">3. 企業のAI基盤選定で変わる3つのこと</a></li>
+                    <li><a href="#section4">4. Codex on Amazon BedrockとManaged Agentsの実務インパクト</a></li>
+                    <li><a href="#section5">5. 中小企業が今確認すべき導入判断</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="section1">1. まず押さえるべき事実：OpenAIがAWS Bedrock対応</h2>
+                <p>
+                    【公式情報】AWSは2026年4月28日、Amazon BedrockでOpenAIの最新モデル、Codex、
+                    Amazon Bedrock Managed Agents powered by OpenAIを<strong>限定プレビュー</strong>として提供すると発表しました。
+                    これにより、AWS利用企業は既存のBedrockのAPI、モデル管理、オーケストレーション、セキュリティ統制の中で
+                    OpenAIモデルを評価・利用できるようになります。
+                </p>
+                <p>
+                    【公式情報】AWSの発表では、OpenAIモデル on BedrockはIAM、AWS PrivateLink、ガードレール、
+                    保存時・転送時の暗号化、CloudTrailログなど、既存のAWS統制を継承すると説明されています。
+                    さらにCodexはCodex CLI、デスクトップアプリ、Visual Studio Code拡張から利用でき、
+                    OpenAIモデルとCodexの利用分を既存のAWSクラウドコミットメントに充当できるとされています。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>発表内容</th>
+                                <th>公式発表日</th>
+                                <th>企業側の意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>OpenAIモデル on Amazon Bedrock</th>
+                                <td>2026年4月28日</td>
+                                <td>AWSの統制下でOpenAIモデルを評価・運用しやすくなる</td>
+                            </tr>
+                            <tr>
+                                <th>Codex on Amazon Bedrock</th>
+                                <td>2026年4月28日</td>
+                                <td>AWS環境で開発エージェントを利用し、既存コミットに費用を寄せられる</td>
+                            </tr>
+                            <tr>
+                                <th>Bedrock Managed Agents powered by OpenAI</th>
+                                <td>2026年4月28日</td>
+                                <td>OpenAIモデルを使うAIエージェントをAWS上で本番運用しやすくなる</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section2">2. なぜMicrosoft契約改定とセットで見るべきか</h2>
+                <p>
+                    【公式情報】OpenAIとMicrosoftは2026年4月27日、両社の契約改定を発表しました。
+                    Microsoftは引き続きOpenAIの主要クラウドパートナーであり、OpenAI製品は原則としてAzureで先行提供されます。
+                    一方で、OpenAIはすべての製品を他クラウドの顧客にも提供できるようになり、
+                    MicrosoftのOpenAI IPライセンスは2032年まで継続しつつ非独占になります。
+                </p>
+                <p>
+                    【解釈】翌日にAWSがBedrock対応を発表したことで、企業にとっての論点は
+                    <strong>「どのAIモデルを使うか」だけでなく「どのクラウド統制の中で使うか」</strong>
+                    に移りました。OpenAIモデルを使いたい企業でも、既存のデータ基盤や監査ログ、権限管理がAWS中心なら、
+                    Bedrock経由の選択肢が検討対象に入ります。逆にMicrosoft 365やAzureが中核なら、従来通りAzureとの親和性が強いままです。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">従来の見方</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>モデル性能を中心に比較</li>
+                                    <li>OpenAIはAzure寄りで検討</li>
+                                    <li>PoCごとに個別契約になりやすい</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">→</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">今回以降の見方</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>既存クラウド統制も含めて比較</strong></li>
+                                    <li>AWS上でOpenAIを使う選択肢が増える</li>
+                                    <li>ログ・権限・費用管理をまとめやすい</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">図1：OpenAIのクラウド提供選択肢が広がったことで変わる検討軸</p>
+                </div>
+
+                <h2 id="section3">3. 企業のAI基盤選定で変わる3つのこと</h2>
+                <p>
+                    【解釈】今回のOpenAI AWS Bedrock対応で、企業のAI基盤選定は大きく3つ変わります。
+                </p>
+                <p>
+                    <strong>① AIモデル比較がクラウド横断になる</strong><br>
+                    About Amazonの発表では、Bedrock上でOpenAIモデルをAnthropic、Meta、Mistral、Cohere、Amazonなどのモデルと並べて評価・導入できると説明されています。
+                    これは「用途ごとに最適なモデルを選ぶ」運用を、同じ管理画面・同じ統制の中で進めやすくなるという意味です。
+                </p>
+                <p>
+                    <strong>② セキュリティ・監査の説明がしやすくなる</strong><br>
+                    AI導入で止まりやすいのは、性能よりも情報管理です。既存のIAM、PrivateLink、暗号化、CloudTrailを使えるなら、
+                    情シスや監査担当に「誰が、どの権限で、どのモデルを使い、どんなログが残るか」を説明しやすくなります。
+                </p>
+                <p>
+                    <strong>③ 既存クラウド費用との整合が取りやすくなる</strong><br>
+                    AWSはOpenAIモデルとCodexの利用を既存のAWSクラウドコミットメントに充当できるとしています。
+                    すでにAWS契約を持つ企業にとって、AI予算を別枠で立てるよりも、クラウド費用全体の中で整理しやすくなります。
+                </p>
+
+                <h2 id="section4">4. Codex on Amazon BedrockとManaged Agentsの実務インパクト</h2>
+                <p>
+                    【公式情報】About Amazonは、Codexの週次利用者が<strong>400万人超</strong>に達していると説明しています。
+                    Codex on Amazon Bedrockでは、AWS認証情報で利用し、推論をBedrockインフラ経由で処理できます。
+                    開発チームにとっては、既存のAWS権限、ログ、コスト管理の中でコーディングエージェントを扱える点が大きな変化です。
+                </p>
+                <p>
+                    【公式情報】Bedrock Managed Agents powered by OpenAIは、OpenAIのフロンティアモデルとエージェント機能を、
+                    AWSのセキュリティ・運用基盤と組み合わせるサービスです。AWSの説明では、各エージェントが独自のIDを持ち、
+                    すべてのアクションをログに残し、推論はAmazon Bedrock上で実行されます。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>業務</th>
+                                <th>使いどころ</th>
+                                <th>確認すべき統制</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>開発・保守</th>
+                                <td>Codexでコード修正、テスト生成、仕様調査を進める</td>
+                                <td>リポジトリ権限、レビュー必須条件、実行ログ</td>
+                            </tr>
+                            <tr>
+                                <th>社内FAQ・RAG</th>
+                                <td>Bedrock上でOpenAIモデルを含めて回答品質を比較する</td>
+                                <td>参照データの権限、引用元表示、監査ログ</td>
+                            </tr>
+                            <tr>
+                                <th>定型業務エージェント</th>
+                                <td>問い合わせ分類、レポート作成、定期チェックを自動化する</td>
+                                <td>エージェントID、実行範囲、失敗時の人間確認</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    【MIRAINA視点】中小企業にとって重要なのは、Bedrock対応そのものより
+                    <strong>「AIを本番運用する時の説明責任が少し整理しやすくなった」</strong>ことです。
+                    既存記事で解説した<a href="/blogs/blog115.html">GPT-5.5とCodex</a>や
+                    <a href="/blogs/blog103.html">OpenAI×Cloudflareのエージェント運用</a>も同じ流れにあります。
+                    AIは単発チャットから、権限・ログ・実行環境を持つ業務基盤へ移っています。
+                </p>
+
+                <h2 id="section5">5. 中小企業が今確認すべき導入判断</h2>
+                <p>
+                    今回の発表を見て、すぐにAWS Bedrockへ移行する必要はありません。まず確認すべきなのは、
+                    自社のAI活用が<strong>チャット利用、API組み込み、業務エージェント運用</strong>のどの段階にあるかです。
+                </p>
+                <p>
+                    まだ社内利用がChatGPT中心なら、最初にやるべきことはプランや社内ルールの整理です。
+                    APIやRAGを使い始めているなら、モデル選定だけでなく、データの置き場所、ログの残し方、
+                    誰が設定を変更できるかを確認します。複数部門でエージェントを動かす段階なら、
+                    Bedrock Managed Agentsのような「ID・権限・ログを前提にした基盤」が検討対象になります。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">AI利用段階を確認する（チャット・API・業務エージェント）</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">既存クラウドとデータ基盤を棚卸しする</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">モデル性能だけでなく、権限・ログ・費用管理を比較する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">まず1業務でPoCし、人間の確認点を残す</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 05</span>
+                            <span class="step-text">本番化する前に運用責任者と停止条件を決める</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図2：中小企業がOpenAI AWS Bedrock対応を検討する順番</p>
+                </div>
+
+                <p>
+                    MIRAINAでは、こうしたAI基盤選定や社内ルール設計を
+                    <a href="/services/ai_consulting.html">生成AI活用支援</a>で整理しています。
+                    社内文書や既存システムとつなぐ場合は<a href="/services/ai_develop.html">AI開発</a>、
+                    AI検索で自社情報が正しく引用される状態を作りたい場合は
+                    <a href="/services/llmo_insight.html">LLMO Insight</a>も組み合わせて支援できます。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    2026年4月27日にOpenAIとMicrosoftが契約改定を発表し、翌4月28日にAWSはAmazon Bedrockで
+                    OpenAIモデル、Codex、Managed Agents powered by OpenAIを限定プレビューとして提供すると発表しました。
+                    Microsoftは引き続き主要クラウドパートナーですが、OpenAI製品の提供先はよりクラウド横断になっています。
+                </p>
+                <p>
+                    企業にとっての変化は、OpenAIモデルを使うかどうかだけではありません。
+                    AWS、Azure、その他クラウドのどの統制の中でAIを動かし、どのログを残し、どの費用枠で管理するかが、
+                    AI導入の成否を左右します。
+                </p>
+                <p>
+                    中小企業は、まず自社のAI利用段階と既存クラウドを整理し、1つの業務で小さく検証するのが現実的です。
+                    モデル性能、権限、ログ、費用管理、人間の確認点をセットで見れば、AI活用はPoCから本番運用へ進めやすくなります。
+                </p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://openai.com/index/next-phase-of-microsoft-partnership/" target="_blank" rel="noopener">OpenAI: The next phase of the Microsoft OpenAI partnership（2026年4月27日）</a></li>
+                        <li><a href="https://blogs.microsoft.com/blog/2026/04/27/the-next-phase-of-the-microsoft-openai-partnership/" target="_blank" rel="noopener">Microsoft: The next phase of the Microsoft-OpenAI partnership（2026年4月27日）</a></li>
+                        <li><a href="https://aws.amazon.com/about-aws/whats-new/2026/04/bedrock-openai-models-codex-managed-agents/" target="_blank" rel="noopener">AWS: Amazon Bedrock now offers OpenAI models, Codex, and Managed Agents（2026年4月28日）</a></li>
+                        <li><a href="https://www.aboutamazon.com/news/aws/bedrock-openai-models" target="_blank" rel="noopener">About Amazon: AWS and OpenAI announce expanded partnership（2026年4月28日）</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">自社に合うAI基盤を整理したいですか？</h2>
+                    <p class="cta-text">MIRAINAでは、モデル選定から権限・ログ・運用ルールまで<br>AI導入の全体設計を支援します。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog115.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card115.webp" alt="GPT-5.5 Codex エージェントAI" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.24</div>
+                            <div class="related-text">【2026年4月最新】GPT-5.5とは？Codex対応・エージェントAIで業務自動化が変わる</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog103.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card103.webp" alt="OpenAI Cloudflare AIエージェント本番運用" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.14</div>
+                            <div class="related-text">【2026年4月最新】OpenAI×CloudflareでAIエージェント本番運用はどう変わるか</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog091.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card091.webp" alt="OpenAI enterprise AI 企業導入" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.10</div>
+                            <div class="related-text">【2026年4月最新】OpenAIで企業売上40%超、enterprise AI導入はどう変わるか</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copy">© 2025 MIRAINA Inc. All rights reserved.</div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

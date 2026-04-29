@@ -1070,6 +1070,15 @@
       "alt": "Claude Opus 4.7 SWE-bench ビジョン強化 コーディングAI",
       "link": "/blogs/blog119.html",
       "date": "2026-04-27"
+    },
+    {
+      "id": 120,
+      "title": "【2026年4月最新】OpenAIがAWS Bedrock対応、企業のAI基盤選定はどう変わるか",
+      "description": "OpenAI AWS Bedrock対応を2026年4月28日のAWS公式発表と4月27日のOpenAI・Microsoft契約改定から解説。Codex、Managed Agents、企業のAI基盤選定で確認すべき点を整理します。",
+      "thumbnail": "/images/blogs_images/blog-card120.webp",
+      "alt": "OpenAI AWS Bedrock対応と企業AI基盤選定のイメージ",
+      "link": "/blogs/blog120.html",
+      "date": "2026-04-29"
     }
   ],
   "works": [
