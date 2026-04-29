@@ -158,7 +158,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 
 ## 美容室・サロンDX支援 (MIRAINA beauty-dx)
 
-MIRAINAの美容業界特化サービス。美容室・サロン向けにAI活用支援、LLMOコンサルティング、OEM LP制作を提供。
+MIRAINAの美容業界特化サービス。美容室・サロン向けにAI活用支援、LLMOコンサルティング、OEM LP制作、Google口コミ投稿作成支援を提供。
 
 - [美容室・サロンのDX支援トップ](https://miraina-ai.com/beauty-dx/)
 - サイト内パス: `/beauty-dx/`
@@ -166,7 +166,7 @@ MIRAINAの美容業界特化サービス。美容室・サロン向けにAI活�
 
 - [サービス一覧（beauty-dx）](https://miraina-ai.com/beauty-dx/services.html)
 - サイト内パス: `/beauty-dx/services.html`
-- 内容: 生成AI活用支援、LLMOコンサルティング、OEM向けLP制作の3サービス一覧。
+- 内容: 生成AI活用支援、LLMOコンサルティング、OEM向けLP制作、Google口コミ投稿作成支援など、美容室・サロン向けDXサービスの一覧。
 
 - [事例紹介（beauty-dx）](https://miraina-ai.com/beauty-dx/works.html)
 - サイト内パス: `/beauty-dx/works.html`
@@ -181,6 +181,7 @@ MIRAINAの美容業界特化サービス。美容室・サロン向けにAI活�
 - [美容室・サロン特化型AI活用支援](https://miraina-ai.com/beauty-dx/services/gen-ai-support.html): 美容室・サロンの業務にAIを活用した効率化・仕組み化を支援。業務棚卸しからAI設計・ワークフロー構築・定着支援まで。月額98,000円〜。
 - [LLMOコンサルティング](https://miraina-ai.com/beauty-dx/services/llmo-consulting.html): ChatGPT・PerplexityなどAI検索で自社サロンが「一番のおすすめ」として表示されるためのコンサルティング。情報設計・サイト改善・コンテンツ設計・参照施策の4本柱で支援。月額50,000円〜。
 - [OEM向けLP制作](https://miraina-ai.com/beauty-dx/services/oem-lp.html): 美容室が展開する自社ブランド商品向けに、AIを活用した高速LP制作。5LPセット100,000円。ABテスト前提の検証型LP設計。
+- [Google口コミ投稿作成支援](https://miraina-ai.com/beauty-dx/services/google-review-support.html): 美容室・サロンのGoogle口コミ投稿を増やすための投稿下書き作成支援。施術内容や満足度を選ぶだけで口コミ案を作り、お客様の投稿負担を減らす。MEO強化、Google経由予約、HPB依存緩和、AI検索で参照されやすい評判情報の蓄積を支援。初期構築4,980円、月額1店舗1,980円。
 
 ### beauty-dx ブログ
 
@@ -188,3 +189,4 @@ MIRAINAの美容業界特化サービス。美容室・サロン向けにAI活�
 - [ヘアサロンで使える生成AIツール5選——現場スタッフでも始めやすいものを厳選](https://miraina-ai.com/beauty-dx/blogs/blog002.html): サロン研修でよく聞かれる「ChatGPTを何に使えばいいか」という疑問に、仕事の流れに沿ったツール選びと実際のプロンプト例で回答。
 - [LLMOとは？サロン経営者向けにわかりやすく解説](https://miraina-ai.com/beauty-dx/blogs/blog003.html): ホットペッパービューティー登場時と同じ変化がAI検索で今起きている。ChatGPTに「おすすめサロン」として引用されるために何が必要かを専門用語なしで解説。
 - [美容室のChatGPT活用は、まず予約前後の導線から](https://miraina-ai.com/beauty-dx/blogs/blog004.html): 問い合わせ返信、事前案内、来店後フォローなど、予約前後のやり取りをChatGPTで整える考え方を実務目線で解説。現場負荷とお客様体験を同時に安定させる初手を整理。
+- [美容室がGoogle口コミを増やす方法](https://miraina-ai.com/beauty-dx/blogs/blog005.html): Google公式ポリシーを踏まえ、来店直後の投稿導線、声かけ、口コミ下書き、返信運用まで、美容室がGoogle口コミを増やす実務を解説。MEO、Google経由予約、HPB依存緩和、AI検索で選ばれやすい評判情報の蓄積につなげる記事。

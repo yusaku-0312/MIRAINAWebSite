@@ -35,10 +35,19 @@
             "category": "予約導線",
             "date": "2026-04-10",
             "link": "/beauty-dx/blogs/blog004.html"
+        },
+        {
+            "id": 5,
+            "slug": "blog005",
+            "title": "美容室がGoogle口コミを増やす方法",
+            "excerpt": "美容室がGoogle口コミを増やすには、お願いだけでなく、来店直後に投稿しやすい導線を整えることが重要です。Google公式ポリシーを踏まえ、MEO・AI検索・HPB依存緩和につながる口コミ運用を解説します。",
+            "category": "集客",
+            "date": "2026-04-29",
+            "link": "/beauty-dx/blogs/blog005.html"
         }
     ],
     "meta": {
         "perPage": 5,
-        "total": 4
+        "total": 5
     }
 }
