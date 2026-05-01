@@ -1079,6 +1079,42 @@
       "alt": "OpenAI AWS Bedrock対応と企業AI基盤選定のイメージ",
       "link": "/blogs/blog120.html",
       "date": "2026-04-29"
+    },
+    {
+      "id": 121,
+      "title": "【2026年4月最新】AnthropicとNECが提携、3万人導入で日本企業のAI内製はどう変わるか",
+      "description": "Anthropic NEC 提携を2026年4月24日の公式発表から解説。ClaudeをNECグループ約3万人へ展開し、日本初のグローバルパートナー化で何が変わるのか、AI Native Company戦略と中小企業への示唆を整理します。",
+      "thumbnail": "/images/blogs_images/blog-card121.webp",
+      "alt": "AnthropicとNECの提携とAI内製化のイメージ",
+      "link": "/blogs/blog121.html",
+      "date": "2026-04-30"
+    },
+    {
+      "id": 122,
+      "title": "【2026年5月最新】OpenAIがFedRAMP Moderate取得、公共・大企業のAI導入はどう変わるか",
+      "description": "OpenAI FedRAMP Moderate取得を2026年4月27日の公式発表から解説。ChatGPT EnterpriseとAPI Platformの対応範囲、gov.api.openai.com移行、公共・規制業界のAI導入判断を整理します。",
+      "thumbnail": "/images/blogs_images/blog-card122.webp",
+      "alt": "OpenAIのFedRAMP Moderate取得と公共・大企業向けAI導入のイメージ",
+      "link": "/blogs/blog122.html",
+      "date": "2026-05-01"
+    },
+    {
+      "id": 123,
+      "title": "【2026年5月最新】ChatGPTの高度アカウント保護とは？社内情報を守る新設定を解説",
+      "description": "ChatGPTの高度アカウント保護を2026年4月30日のOpenAI公式発表と最新ヘルプから解説。MFAとの違い、パスキー、社内利用で先に確認すべき運用ポイントを整理します。",
+      "thumbnail": "/images/blogs_images/blog-card123.webp",
+      "alt": "ChatGPTの高度アカウント保護と社内情報保護のイメージ",
+      "link": "/blogs/blog123.html",
+      "date": "2026-05-01"
+    },
+    {
+      "id": 124,
+      "title": "【2026年4月最新】Google が Anthropic に $40B投資、AI業界の覇権争いはどう変わるか",
+      "description": "Google が Anthropic に最大400億ドル投資発表（2026年4月24日）。Amazon との競争激化、Claude の成長、インフラ拡充、日本企業への示唆を解説します。",
+      "thumbnail": "/images/blogs_images/blog-card124.webp",
+      "alt": "Google Anthropic 投資発表と AI業界の競争構図",
+      "link": "/blogs/blog124.html",
+      "date": "2026-04-25"
     }
   ],
   "works": [
