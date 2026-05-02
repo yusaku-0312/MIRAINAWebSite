@@ -1115,6 +1115,15 @@
       "alt": "Google Anthropic 投資発表と AI業界の競争構図",
       "link": "/blogs/blog124.html",
       "date": "2026-04-25"
+    },
+    {
+      "id": 125,
+      "title": "【2026年5月最新】OpenAI GPT-5.5とは？エージェント機能の進化と日本企業の活用ポイント",
+      "description": "OpenAI GPT-5.5を2026年4月23日の公式発表から解説。GDPval 84.9%・Tau2-bench 98.0%の実績、Workspace Agents搭載、API料金、日本企業のAI自動化戦略をまとめます。",
+      "thumbnail": "/images/blogs_images/blog-card125.webp",
+      "alt": "OpenAI GPT-5.5 エージェント機能の進化と日本企業の活用ポイント",
+      "link": "/blogs/blog125.html",
+      "date": "2026-05-02"
     }
   ],
   "works": [
