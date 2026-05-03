@@ -1124,6 +1124,15 @@
       "alt": "OpenAI GPT-5.5 エージェント機能の進化と日本企業の活用ポイント",
       "link": "/blogs/blog125.html",
       "date": "2026-05-02"
+    },
+    {
+      "id": 126,
+      "title": "【2026年4月最新】Claude Designとは？Anthropicの新AIデザインツール機能・料金・使い方まとめ",
+      "description": "Anthropicが2026年4月17日に発表したClaude Designを解説。プロンプトでスライド・UI・LPを生成、Canvaへエクスポート可能。機能・料金・Figmaとの違いを整理します。",
+      "thumbnail": "/images/blogs_images/blog-card126.webp",
+      "alt": "Claude Design Anthropicの新AIデザインツール機能と使い方",
+      "link": "/blogs/blog126.html",
+      "date": "2026-05-03"
     }
   ],
   "works": [
