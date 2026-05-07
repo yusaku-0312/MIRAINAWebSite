@@ -1142,6 +1142,15 @@
       "alt": "AnthropicがAI導入支援会社を設立し中堅企業のAI実装が変わるイメージ",
       "link": "/blogs/blog128.html",
       "date": "2026-05-06"
+    },
+    {
+      "id": 129,
+      "title": "【2026年5月最新】ChatGPTメモリ機能が強化、過去会話とGmail参照で何が変わるか",
+      "description": "ChatGPT メモリ機能の2026年5月5日更新を解説。過去会話・保存メモリ・Gmail参照の仕組み、消し方、社内ルールの決め方を整理します。",
+      "link": "/blogs/blog129.html",
+      "thumbnail": "/images/blogs_images/blog-card129.webp",
+      "alt": "ChatGPTメモリ機能の強化とGmail参照のイメージ",
+      "date": "2026-05-07"
     }
   ],
   "works": [
