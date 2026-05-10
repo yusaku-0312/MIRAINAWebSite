@@ -1151,6 +1151,60 @@
       "thumbnail": "/images/blogs_images/blog-card129.webp",
       "alt": "ChatGPTメモリ機能の強化とGmail参照のイメージ",
       "date": "2026-05-07"
+    },
+    {
+      "id": 130,
+      "title": "【2026年5月最新】OpenAIが音声AIを刷新、リアルタイム通話と多言語対応はどう変わるか",
+      "description": "OpenAIの新音声AIモデルを解説。GPT-Realtime-2、Realtime-Translate、Realtime-Whisperの違い、料金、業務活用、導入判断を整理します。",
+      "thumbnail": "/images/blogs_images/blog-card130.webp",
+      "alt": "OpenAIの新音声AIモデルとリアルタイム通話のイメージ",
+      "link": "/blogs/blog130.html",
+      "date": "2026-05-08"
+    },
+    {
+      "id": 131,
+      "title": "【2026年5月最新】Google AI Mode更新、AI検索で企業サイトは何を変えるべきか",
+      "description": "Google AI Mode更新を解説。AI Overviewsの新導線、公式が示すサイト運営側の考え方、企業が今やるべきLLMO対応を整理します。",
+      "thumbnail": "/images/blogs_images/blog-card131.webp",
+      "alt": "Google AI Mode更新とAI検索で企業サイトが変わるイメージ",
+      "link": "/blogs/blog131.html",
+      "date": "2026-05-08"
+    },
+    {
+      "id": 132,
+      "title": "【2026年5月最新】ChatGPT for Excel/Google Sheets拡大、表計算業務はどう変わるか",
+      "description": "ChatGPT for Excel/Google Sheetsの提供拡大を解説。無料枠、Business/Enterprise向け条件、権限制御、表計算業務の使いどころを整理します。",
+      "thumbnail": "/images/blogs_images/blog-card132.webp",
+      "alt": "ChatGPT for ExcelとGoogle Sheetsの活用イメージ",
+      "link": "/blogs/blog132.html",
+      "date": "2026-05-09"
+    },
+    {
+      "id": 134,
+      "title": "【2026年5月最新】Amazon Bedrock AgentCore Payments登場、AIエージェント決済は何を変えるか",
+      "description": "Amazon Bedrock AgentCore Paymentsを解説。AIエージェントがAPI・MCPサーバー・有料コンテンツへ自律決済する仕組み、x402、支出上限、日本企業の導入判断を整理します。",
+      "thumbnail": "/images/blogs_images/blog-card134.webp",
+      "alt": "Amazon Bedrock AgentCore PaymentsとAIエージェント決済のイメージ",
+      "link": "/blogs/blog134.html",
+      "date": "2026-05-10"
+    },
+    {
+      "id": 135,
+      "title": "【2026年5月最新】ChatGPT広告拡大、AI検索時代に企業は何を変えるべきか",
+      "description": "ChatGPT広告の拡大をOpenAI公式情報で解説。対象国、表示場所、CPC、Ads Manager、回答との分離、企業が今やるべき集客設計を整理します。",
+      "thumbnail": "/images/blogs_images/blog-card135.webp",
+      "alt": "ChatGPT広告拡大とAI検索時代の集客変化を表すイメージ",
+      "link": "/blogs/blog135.html",
+      "date": "2026-05-10"
+    },
+    {
+      "id": 136,
+      "title": "【2026年5月最新】GPT-5.5 Instantとは？誤答52%減・パーソナライズ強化でChatGPTはどう変わるか",
+      "description": "GPT-5.5 Instantの新機能をOpenAI公式情報で解説。誤答52.5%減、語彙30%削減、メモリソース機能、API料金、GPT-5.3との比較、企業の活用ポイントを整理します。",
+      "thumbnail": "/images/blogs_images/blog-card136.webp",
+      "alt": "GPT-5.5 Instantの新機能とChatGPTの変化を解説するイメージ",
+      "link": "/blogs/blog136.html",
+      "date": "2026-05-10"
     }
   ],
   "works": [
