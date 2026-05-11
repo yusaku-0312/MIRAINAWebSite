@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年5月最新】ChatGPT BusinessのAgents管理とは？社内AI運用はどう変わるか | MIRAINAブログ</title>
+    <meta name="description"
+        content="ChatGPT BusinessのAgents管理を解説。5月6日に追加されたAnalyticsとAgents画面で何が見えるか、権限設計、運用ルール、中小企業の始め方を整理します。">
+    <meta property="og:title" content="【2026年5月最新】ChatGPT BusinessのAgents管理とは？社内AI運用はどう変わるか">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog137.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog137-1.webp">
+    <meta property="og:description"
+        content="ChatGPT BusinessのAgents管理を解説。5月6日に追加されたAnalyticsとAgents画面で何が見えるか、権限設計、運用ルール、中小企業の始め方を整理します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>ChatGPT BusinessのAgents管理とは？社内AI運用はどう変わるか</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.05.11</span>
+                    <div class="article-tags">
+                        <p class="article-tag">ChatGPT</p>
+                        <p class="article-tag">AIエージェント</p>
+                        <p class="article-tag">Business</p>
+                        <p class="article-tag">運用管理</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年5月最新】ChatGPT BusinessのAgents管理とは？社内AI運用はどう変わるか</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog137-1.webp" alt="ChatGPT BusinessのAgents管理と社内AI運用を解説するイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    「社内でAIエージェントを増やしたいが、誰が何を動かしているのか見えない」「ChatGPT Businessで管理者が確認できる範囲を知りたい」と感じる企業は増えています。
+                    OpenAIは2026年5月6日、ChatGPT Businessのグローバル管理コンソールに <strong>Analytics</strong> と <strong>Agents</strong> を追加しました。
+                    これにより、単に社員がChatGPTを使う段階から、社内のAIエージェントを見える化して運用する段階へ進み始めています。
+                    本記事では、今回の更新で何が変わったのか、既存の<a href="/blogs/blog054.html">Workspace Analytics</a>や<a href="/blogs/blog132.html">ChatGPT for Excel / Google Sheets</a>とどうつながるのか、中小企業が最初に決めるべき運用ルールを整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. 5月6日に何が追加されたのか</a></li>
+                    <li><a href="#section2">2. Agents画面で見えるようになった情報</a></li>
+                    <li><a href="#section3">3. Analytics画面は何に効くのか</a></li>
+                    <li><a href="#section4">4. 中小企業が先に決めるべき運用ルール</a></li>
+                    <li><a href="#section5">5. 導入を始める実務ステップ</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="section1">1. 5月6日に何が追加されたのか</h2>
+                <p>
+                    2026年5月6日に更新された ChatGPT Business のリリースノートでは、グローバル管理コンソールに
+                    <strong>Analytics</strong> と <strong>Agents</strong> の2つの管理領域が追加されたと案内されています。
+                    これまでの ChatGPT Business は「使えるかどうか」「アプリを許可するかどうか」の管理が中心でしたが、
+                    今回は一歩進んで <strong>誰がどのAIエージェントを使い、どの程度定着しているかを横断管理するための面</strong> が整い始めた形です。
+                </p>
+                <p>
+                    あわせて OpenAI の Global Admin Console ドキュメントでは、この管理画面が
+                    ChatGPT Business と Enterprise の管理者向けに提供され、ID管理、分析、エージェント、ガバナンスを
+                    1つの面で扱う設計だと説明されています。つまり今回の更新は、単なるUI追加ではなく、
+                    <strong>ChatGPTを個人利用ツールから組織運用基盤へ寄せる更新</strong> と見た方が実態に近いです。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>更新日</th>
+                                <th>機能</th>
+                                <th>管理者が見られること</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>2026年5月6日</th>
+                                <td>Analytics</td>
+                                <td>アクティブユーザー、メッセージ活動、GPT・Projects・Skills・Tool/Connector利用状況、Workspace health</td>
+                            </tr>
+                            <tr>
+                                <th>2026年5月6日</th>
+                                <td>Agents</td>
+                                <td>Agent ID、最近の活動、接続アプリ、memory files、schedule、ユーザー数、実行回数</td>
+                            </tr>
+                            <tr>
+                                <th>2026年5月5日</th>
+                                <td>ChatGPT for Excel / Google Sheets</td>
+                                <td>表計算内のAI利用をBusiness環境で有効化。AppsやSkillsと組み合わせた運用が可能</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    重要なのは、5月5日の Sheets/Excel 更新と 5月6日の Agents 管理更新が別の話ではないことです。
+                    社員が表計算、社内ファイル、アプリ連携をまたいで AI を使い始めるほど、管理者は
+                    「どのエージェントが何に接続し、どこまで権限を持つか」を後追いではなく事前に設計する必要があります。
+                </p>
+
+                <h2 id="section2">2. Agents画面で見えるようになった情報</h2>
+                <p>
+                    OpenAIの案内によると、Agents 画面ではワークスペース内のエージェントを一覧化し、
+                    管理者が各エージェントの詳細を確認できます。見られる項目は
+                    <strong>Agent ID、recent activity、connected apps、memory files、schedules、unique users、runs over time</strong> です。
+                    ここで意味が大きいのは、単に「AIを使っている人」を見るのではなく、
+                    <strong>AIエージェント単位で接続先と稼働実績を把握できる</strong> 点です。
+                </p>
+                <p>
+                    たとえば営業部が見積もり補助エージェントを使い、管理部が議事録整形エージェントを使う場合、
+                    従来は利用ログが個人チャットに散らばりやすく、どの仕組みが定着しているか判断しにくい状態でした。
+                    Agents 画面があると、「どのエージェントが誰に使われているか」「どのエージェントは接続先が多すぎるか」
+                    「放置された scheduled agent がないか」といった運用上の確認がしやすくなります。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>確認項目</th>
+                                <th>意味</th>
+                                <th>実務での使い道</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Connected apps</th>
+                                <td>どの外部アプリやデータに触るか</td>
+                                <td>不要な接続や権限過多を洗い出す</td>
+                            </tr>
+                            <tr>
+                                <th>Memory files</th>
+                                <td>エージェントが参照する記憶・資料</td>
+                                <td>古い社内資料の混入を防ぐ</td>
+                            </tr>
+                            <tr>
+                                <th>Schedules</th>
+                                <td>定期実行の有無</td>
+                                <td>勝手に動き続けるタスクを止める基準を作る</td>
+                            </tr>
+                            <tr>
+                                <th>Runs over time</th>
+                                <td>利用頻度の推移</td>
+                                <td>PoC止まりか定着しているかを判断する</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    MIRAINA視点では、この更新の本質は「AIエージェントを作ること」よりも
+                    <strong>AIエージェントを棚卸しして責任境界を引けるようになること</strong> にあります。
+                    AI導入が失敗する企業の多くは、モデル性能より先に、所有者不明・権限不明・停止条件不明の運用で詰まります。
+                    管理画面が出てきた今こそ、社内ルールまで含めた実装が必要です。
+                </p>
+
+                <h2 id="section3">3. Analytics画面は何に効くのか</h2>
+                <p>
+                    Analytics では、アクティブユーザーやメッセージ量だけでなく、GPTs、Projects、Skills、users、
+                    tool interactions、connector interactions、workspace health までドリルダウンできると案内されています。
+                    これは、以前の<a href="/blogs/blog054.html">Workspace Analytics</a>よりも、
+                    「社内AI活用のどこで詰まり、どこで広がっているか」を立体的に見やすくする方向の更新です。
+                </p>
+                <p>
+                    たとえば、アクティブユーザーは増えているのに connector interactions が伸びていないなら、
+                    社内データとつながった実務利用に進めていない可能性があります。逆に tools や apps の利用だけが急増しているなら、
+                    利便性は出ている一方で監査や権限統制が追いついていないかもしれません。
+                    単純な「利用者数」ではなく、<strong>利用の質を観察できる点</strong> が今回の分析面の価値です。
+                </p>
+
+                <h3>3-1. 利用率を見るだけでは足りない</h3>
+                <p>
+                    生成AI導入では「何人が使ったか」が先に報告されがちですが、それだけでは投資判断が難しいです。
+                    本当に見たいのは、どの部署で、どの用途が、どの接続先を伴って定着しているかです。
+                    Analytics と Agents を組み合わせると、数字と実体の両方を見ながら、残すエージェントと止めるエージェントを分けやすくなります。
+                </p>
+
+                <h3>3-2. ガバナンス指標としても使える</h3>
+                <p>
+                    OpenAIのグローバル管理コンソールは、分析とガバナンスを同じ面で扱う思想が明確です。
+                    そのため Analytics は、利用促進のためだけでなく、<strong>管理者が異常利用や無秩序な拡張に気づくための早期警戒指標</strong> としても使えます。
+                    中小企業では専任のAIガバナンス担当を置けないことも多いため、管理画面で確認できる数値を月次レビューに組み込むだけでも前進です。
+                </p>
+
+                <h2 id="section4">4. 中小企業が先に決めるべき運用ルール</h2>
+                <p>
+                    機能が増えたからといって、すぐに全社展開する必要はありません。むしろ先に決めるべきなのは、エージェントを増やすルールです。
+                    管理画面があるとはいえ、接続先や memory files の設計が曖昧だと、後から見える化しても整理コストが膨らみます。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>先に決めること</th>
+                                <th>理由</th>
+                                <th>最小ルール例</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>オーナー</th>
+                                <td>放置エージェントを防ぐため</td>
+                                <td>各エージェントに部門責任者を1人付ける</td>
+                            </tr>
+                            <tr>
+                                <th>接続権限</th>
+                                <td>権限過多を防ぐため</td>
+                                <td>最初は読み取り中心、書き込みは例外承認</td>
+                            </tr>
+                            <tr>
+                                <th>停止条件</th>
+                                <td>scheduleの暴走や放置を防ぐため</td>
+                                <td>30日未使用なら停止候補として見直す</td>
+                            </tr>
+                            <tr>
+                                <th>参照資料</th>
+                                <td>古い社内情報の再利用を防ぐため</td>
+                                <td>memory filesは更新日付きの正式資料だけに限定</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    特に重要なのは、<strong>「AIができること」ではなく「AIに許すこと」から設計する</strong> ことです。
+                    問い合わせ下書き、会議要約、社内FAQ整理のような読み取り中心の業務から始めれば、
+                    効果を出しつつ、権限事故のリスクを抑えられます。いきなり更新系や送信系まで任せると、
+                    運用設計より先に例外対応が増え、現場が離れやすくなります。
+                </p>
+
+                <h2 id="section5">5. 導入を始める実務ステップ</h2>
+                <p>
+                    ChatGPT Business の Agents 管理を活かすなら、導入順序はシンプルな方がよいです。
+                    最初から複雑なマルチエージェント構成を目指すより、1部署1用途の小さな成功を作り、
+                    その利用実績を管理画面で見ながら広げる方が定着しやすいです。
+                </p>
+
+                <h3>1. 部署ごとに1つだけ候補業務を選ぶ</h3>
+                <p>
+                    営業なら提案書たたき台、管理部なら会議メモ整形、マーケなら競合記事整理のように、
+                    入出力が比較的明確な業務を1つに絞ります。これにより、成功判定と停止判定の両方を付けやすくなります。
+                </p>
+
+                <h3>2. 接続アプリを最小限で始める</h3>
+                <p>
+                    Global Admin Console で許可するアプリは、最初は最小限に留めるべきです。
+                    5月5日に広がった ChatGPT for Excel / Google Sheets も便利ですが、いきなり全員に開くより、
+                    業務上必要なチームだけ先に許可し、利用の質を Analytics 側で追う方が安全です。
+                </p>
+
+                <h3>3. 月次レビューで残す・止めるを決める</h3>
+                <p>
+                    runs over time や unique users を見れば、使われていないエージェントはすぐ分かります。
+                    数字だけで残すのではなく、「何分削減したか」「人の確認工程が減ったか」まで簡単にメモしておくと、
+                    AI活用がPoC止まりになりにくくなります。MIRAINAでは、この月次レビュー設計まで含めて支援することが多いです。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    2026年5月6日の ChatGPT Business 更新で重要なのは、新しいAIエージェントが増えたこと自体ではありません。
+                    <strong>AIエージェントを組織として管理し、利用実績と接続先を見ながら運用できる土台が見え始めたこと</strong> が変化の本質です。
+                </p>
+                <p>
+                    5月5日の Excel / Google Sheets 拡張と合わせて見ると、ChatGPT は個人の便利ツールから、
+                    社内データ・業務アプリ・定期実行をまたぐ実務基盤へ近づいています。だからこそ企業側も、
+                    利用促進だけでなく、オーナー・権限・停止条件までセットで決める必要があります。
+                </p>
+                <p>
+                    MIRAINAでは、生成AI導入を「使ってみる」で終わらせず、業務課題の整理、権限設計、運用定着まで伴走しています。
+                    ChatGPT Business や AI エージェントの社内展開で迷っている場合は、お気軽にご相談ください。
+                </p>
+
+                <div class="article-references">
+                    <h3>参考情報</h3>
+                    <ul>
+                        <li><a href="https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes" target="_blank" rel="noopener">OpenAI Help Center: ChatGPT Business - Release Notes</a></li>
+                        <li><a href="https://help.openai.com/en/articles/12289294-global-admin-console" target="_blank" rel="noopener">OpenAI Help Center: Global Admin Console</a></li>
+                        <li><a href="https://help.openai.com/en/articles/20001063-chatgpt-for-excel-and-google-sheets-in-beta" target="_blank" rel="noopener">OpenAI Help Center: ChatGPT for Excel and Google Sheets in beta</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="article-cta">
+                <h2>社内AI運用ルールの設計から伴走します</h2>
+                <p>ChatGPT Businessの導入、AIエージェントの権限設計、運用定着の相談はMIRAINAへ。</p>
+                <a href="/contact.html" class="cta-button">無料相談はこちら</a>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-label">この記事の監修者</div>
+                <div class="editor-name">芝 優作</div>
+                <p>
+                    MIRAINA代表。生成AI導入、LLMO、業務自動化の支援を行う。中小企業が「AIを入れたが定着しない」状態を避けるため、
+                    業務課題ベースでの導入設計と、現場に残る運用ルールづくりを重視している。
+                </p>
+            </div>
+
+            <div class="article-related">
+                <h3>関連記事</h3>
+                <div class="related-grid">
+                    <a href="/blogs/blog054.html" class="related-card">
+                        <img src="/images/blogs_images/blog-card054.webp" alt="ChatGPT Workspace Analyticsの関連記事" loading="lazy"
+                            decoding="async">
+                        <div class="related-card-title">ChatGPT Workspace Analyticsとは？社内AI活用の定着度を見える化する方法</div>
+                    </a>
+                    <a href="/blogs/blog132.html" class="related-card">
+                        <img src="/images/blogs_images/blog-card132.webp" alt="ChatGPT for ExcelとGoogle Sheetsの関連記事" loading="lazy"
+                            decoding="async">
+                        <div class="related-card-title">【2026年5月最新】ChatGPT for Excel/Google Sheets拡大、表計算業務はどう変わるか</div>
+                    </a>
+                    <a href="/blogs/blog063.html" class="related-card">
+                        <img src="/images/blogs_images/blog-card063.webp" alt="AIエージェント導入失敗パターンの関連記事" loading="lazy"
+                            decoding="async">
+                        <div class="related-card-title">AIエージェント導入失敗パターン徹底解説｜成功企業との5つの差・ガバナンス対策・セキュリティチェックリスト</div>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

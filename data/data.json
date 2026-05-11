@@ -1205,6 +1205,15 @@
       "alt": "GPT-5.5 Instantの新機能とChatGPTの変化を解説するイメージ",
       "link": "/blogs/blog136.html",
       "date": "2026-05-10"
+    },
+    {
+      "id": 137,
+      "title": "【2026年5月最新】ChatGPT BusinessのAgents管理とは？社内AI運用はどう変わるか",
+      "description": "ChatGPT BusinessのAgents管理を解説。5月6日に追加されたAnalyticsとAgents画面で何が見えるか、権限設計、運用ルール、中小企業の始め方を整理します。",
+      "thumbnail": "/images/blogs_images/blog-card137.webp",
+      "alt": "ChatGPT BusinessのAgents管理と社内AI運用を解説するイメージ",
+      "link": "/blogs/blog137.html",
+      "date": "2026-05-11"
     }
   ],
   "works": [
