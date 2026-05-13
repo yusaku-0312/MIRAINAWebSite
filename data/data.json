@@ -1214,6 +1214,24 @@
       "alt": "ChatGPT BusinessのAgents管理と社内AI運用を解説するイメージ",
       "link": "/blogs/blog137.html",
       "date": "2026-05-11"
+    },
+    {
+      "id": 138,
+      "title": "【2026年5月最新】Gemini API File Searchとは？検証できるマルチモーダルRAGの作り方",
+      "description": "Gemini API File Searchの新機能をGoogle公式情報で解説。マルチモーダル検索、metadata filter、page-level citations、料金の考え方、中小企業のRAG設計ポイントを整理します。",
+      "thumbnail": "/images/blogs_images/blog-card138.webp",
+      "alt": "Gemini API File Searchで検証できるマルチモーダルRAGを構築するイメージ",
+      "link": "/blogs/blog138.html",
+      "date": "2026-05-12"
+    },
+    {
+      "id": 139,
+      "title": "【2026年5月最新】Gemini API Webhooksとは？長時間AIジョブの待ち受けを変える実装ガイド",
+      "description": "Gemini API WebhooksをGoogle公式情報で解説。polling削減、Static/Dynamic webhook、署名検証、Batch APIとの使い分けを整理します。",
+      "link": "/blogs/blog139.html",
+      "thumbnail": "/images/blogs_images/blog-card139.webp",
+      "alt": "Gemini API Webhooksで長時間AIジョブを待ち受けるイメージ",
+      "date": "2026-05-13"
     }
   ],
   "works": [
