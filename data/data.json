@@ -1232,6 +1232,15 @@
       "thumbnail": "/images/blogs_images/blog-card139.webp",
       "alt": "Gemini API Webhooksで長時間AIジョブを待ち受けるイメージ",
       "date": "2026-05-13"
+    },
+    {
+      "id": 142,
+      "title": "【2026年5月最新】Gates財団AI提携で公共AI活用は何が変わるか",
+      "description": "Gates財団 AI提携を解説。Anthropicが2026年5月14日に発表した2億ドル提携、AI公共財、教育・医療・農業での活用と企業の学びを整理します。",
+      "link": "/blogs/blog142.html",
+      "thumbnail": "/images/blogs_images/blog-card142.webp",
+      "alt": "Gates財団 AI提携と公共AI活用を解説するイメージ",
+      "date": "2026-05-16"
     }
   ],
   "works": [
