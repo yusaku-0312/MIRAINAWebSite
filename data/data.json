@@ -1234,6 +1234,24 @@
       "date": "2026-05-13"
     },
     {
+      "id": 140,
+      "title": "【2026年5月最新】Claude for Small Business発表、中小企業のAI活用は何から始めるべきか",
+      "description": "Claude for Small Business発表を解説。Anthropicが5月13日に公開した中小企業向けAIパッケージの中身、15ワークフロー、導入順序、運用ルールを整理します。",
+      "link": "/blogs/blog140.html",
+      "thumbnail": "/images/blogs_images/blog-card140.webp",
+      "alt": "Claude for Small Businessと中小企業のAI活用を解説するイメージ",
+      "date": "2026-05-14"
+    },
+    {
+      "id": 141,
+      "title": "【2026年5月最新】Frontier Firmとは？Microsoftが示した4つの人間×AI協業モデルを解説",
+      "description": "Frontier Firmとは何かを解説。Microsoftが2026年5月5日に示した4つの人間×AI協業モデル、2万人調査の主要データ、中小企業が業務設計を見直す手順を整理します。",
+      "link": "/blogs/blog141.html",
+      "thumbnail": "/images/blogs_images/blog-card141.webp",
+      "alt": "Frontier Firmと4つの人間×AI協業モデルを解説するイメージ",
+      "date": "2026-05-15"
+    },
+    {
       "id": 142,
       "title": "【2026年5月最新】Gates財団AI提携で公共AI活用は何が変わるか",
       "description": "Gates財団 AI提携を解説。Anthropicが2026年5月14日に発表した2億ドル提携、AI公共財、教育・医療・農業での活用と企業の学びを整理します。",
@@ -1241,6 +1259,60 @@
       "thumbnail": "/images/blogs_images/blog-card142.webp",
       "alt": "Gates財団 AI提携と公共AI活用を解説するイメージ",
       "date": "2026-05-16"
+    },
+    {
+      "id": 143,
+      "title": "ChatGPTでGoogleスプレッドシートを直接編集する方法｜APIなしでタスク管理表を作る手順",
+      "description": "ChatGPTでGoogleスプレッドシートを直接編集する方法を一次情報ベースで整理。共有設定の変更、タスク管理表の作成手順、CSVインポートとの違い、注意点をまとめます。",
+      "link": "/blogs/blog143.html",
+      "thumbnail": "/images/blogs_images/blog-card143.webp",
+      "alt": "ChatGPTでGoogleスプレッドシートを直接編集してタスク管理表を作るイメージ",
+      "date": "2026-05-16"
+    },
+    {
+      "id": 144,
+      "title": "【2026年5月最新】AWS Security Agentのコードレビュー拡張で脆弱性診断はどう変わるか",
+      "description": "AWS Security Agentのコードレビュー拡張を解説。2026年5月12日に追加されたフルリポジトリレビュー、修正提案、GitHub連携をもとにAIセキュリティ運用の変化を整理します。",
+      "link": "/blogs/blog144.html",
+      "thumbnail": "/images/blogs_images/blog-card144.webp",
+      "alt": "AWS Security Agentのフルリポジトリコードレビューを解説するイメージ",
+      "date": "2026-05-17"
+    },
+    {
+      "id": 145,
+      "title": "【2026年5月最新】AnthropicがStainlessを買収、MCP接続はどう変わるか",
+      "description": "AnthropicのStainless買収を解説。2026年5月18日の公式発表をもとに、SDK自動生成、MCPサーバー、API連携の実装コストがどう変わるかを整理します。",
+      "link": "/blogs/blog145.html",
+      "thumbnail": "/images/blogs_images/blog-card145.webp",
+      "alt": "AnthropicによるStainless買収とMCP接続の変化を解説するイメージ",
+      "date": "2026-05-19"
+    },
+    {
+      "id": 146,
+      "title": "【2026年5月最新】Google Universal Cart登場、AI購買フローはどう変わるか",
+      "description": "Google Universal Cart登場を解説。2026年5月19日の公式発表とUCP更新をもとに、AI代理購入、価格監視、EC運用の変化を整理します。",
+      "link": "/blogs/blog146.html",
+      "thumbnail": "/images/blogs_images/blog-card146.webp",
+      "alt": "Google Universal CartとAI購買フローの変化を解説するイメージ",
+      "date": "2026-05-20"
+    },
+    {
+      "id": 147,
+      "title": "【2026年5月最新】OpenAIがコンテンツ来歴検証を強化、AI画像の信頼性対応はどう変わるか",
+      "description": "OpenAIのコンテンツ来歴検証強化を解説。2026年5月19日の公式発表をもとに、C2PA、SynthID、公開検証ツールがAI画像運用をどう変えるか整理します。",
+      "link": "/blogs/blog147.html",
+      "thumbnail": "/images/blogs_images/blog-card147.webp",
+      "alt": "OpenAIのコンテンツ来歴検証強化を解説するイメージ",
+      "date": "2026-05-21"
+    },
+    {
+      "id": 148,
+      "title": "【2026年5月最新】Gemini Spark登場、24時間AI秘書はどう変わるか",
+      "description": "Gemini Spark登場を解説。2026年5月19日のGoogle公式発表をもとに、Daily Brief、常駐型AIエージェント、MCP接続が中小企業の業務設計をどう変えるか整理します。",
+      "link": "/blogs/blog148.html",
+      "thumbnail": "/images/blogs_images/blog-card148.webp",
+      "alt": "Gemini Sparkと24時間常駐型AI秘書の変化を解説するイメージ",
+      "date": "2026-05-22"
     }
   ],
   "works": [
