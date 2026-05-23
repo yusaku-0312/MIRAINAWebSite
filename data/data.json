@@ -1313,6 +1313,15 @@
       "thumbnail": "/images/blogs_images/blog-card148.webp",
       "alt": "Gemini Sparkと24時間常駐型AI秘書の変化を解説するイメージ",
       "date": "2026-05-22"
+    },
+    {
+      "id": 149,
+      "title": "【2026年5月最新】Gemini Omni発表、動画制作AIはどう変わるか",
+      "description": "Gemini Omni発表を解説。2026年5月19日のGoogle公式発表をもとに、会話型動画編集、Google Flow、YouTube Shorts展開が動画制作業務をどう変えるか整理します。",
+      "link": "/blogs/blog149.html",
+      "thumbnail": "/images/blogs_images/blog-card149.webp",
+      "alt": "Gemini Omniと会話型動画編集の変化を解説するイメージ",
+      "date": "2026-05-23"
     }
   ],
   "works": [
