@@ -804,6 +804,8 @@ img {
 .pagination {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 0.5rem;
     margin: 1rem 0 3rem;
 }
@@ -816,12 +818,16 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    min-width: 40px;
     width: 40px;
     height: 40px;
     border: 1px solid #ddd;
     color: var(--color-text-gray);
     font-family: var(--font-gothic);
     font-size: var(--font-size-sm);
+    line-height: 1;
+    border-radius: 999px;
+    background-color: var(--color-white);
     transition: all var(--transition-fast);
 }
 
@@ -836,4 +842,34 @@ img {
     opacity: 0.5;
     pointer-events: none;
     border-color: #eee;
+}
+
+.page-link-ellipsis {
+    border-color: transparent;
+    background-color: transparent;
+    color: #999;
+    pointer-events: none;
+}
+
+.page-link-arrow {
+    font-size: 0.95rem;
+}
+
+@media (max-width: 767px) {
+    .pagination {
+        gap: 0.35rem;
+        margin: 0.5rem 0 2rem;
+    }
+
+    .page-link {
+        min-width: 36px;
+        width: 36px;
+        height: 36px;
+        font-size: 0.82rem;
+    }
+
+    .page-link-ellipsis {
+        min-width: 28px;
+        width: 28px;
+    }
 }
