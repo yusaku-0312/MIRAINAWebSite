@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年5月最新】Gemini API File Searchとは？検証できるマルチモーダルRAGの作り方 | MIRAINAブログ</title>
+    <meta name="description"
+        content="Gemini API File Searchの新機能をGoogle公式情報で解説。マルチモーダル検索、metadata filter、page-level citations、料金の考え方、中小企業のRAG設計ポイントを整理します。">
+    <meta property="og:title" content="【2026年5月最新】Gemini API File Searchとは？検証できるマルチモーダルRAGの作り方">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog138.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog138-1.webp">
+    <meta property="og:description"
+        content="Gemini API File Searchの新機能をGoogle公式情報で解説。マルチモーダル検索、metadata filter、page-level citations、料金の考え方、中小企業のRAG設計ポイントを整理します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>Gemini API File Searchとは？検証できるマルチモーダルRAGの作り方</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.05.12</span>
+                    <div class="article-tags">
+                        <p class="article-tag">Gemini</p>
+                        <p class="article-tag">RAG</p>
+                        <p class="article-tag">AI開発</p>
+                        <p class="article-tag">Google</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年5月最新】Gemini API File Searchとは？検証できるマルチモーダルRAGの作り方</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog138-1.webp" alt="Gemini API File Searchで検証できるマルチモーダルRAGを構築するイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    「社内資料をAIに読ませても、どのページを根拠に答えたのか分からない」「画像入りPDFや提案書までまとめて検索したい」と感じる企業は多いはずです。
+                    Googleは2026年5月5日、<strong>Gemini API File Search</strong> の更新として
+                    <strong>マルチモーダル検索、metadata filter、page-level citations</strong> を公開しました。
+                    これにより、RAGは「それっぽく答える仕組み」から、「どの資料のどの箇所を根拠にしたかを確認しやすい仕組み」へ一歩進みます。
+                    本記事では、既存の<a href="/blogs/blog040.html">Gemini Embedding 2</a>や<a href="/blogs/blog065.html">RAG解説</a>と重複しない形で、
+                    今回の更新が実装現場に何を変えるのかを整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. 2026年5月5日に何が変わったのか</a></li>
+                    <li><a href="#section2">2. 3つの更新ポイントを実務目線で整理する</a></li>
+                    <li><a href="#section3">3. なぜ「検証できるRAG」に近づいたのか</a></li>
+                    <li><a href="#section4">4. 中小企業はどの業務から使うべきか</a></li>
+                    <li><a href="#section5">5. 導入前に決めるべき注意点</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="section1">1. 2026年5月5日に何が変わったのか</h2>
+                <p>
+                    Googleの開発者向け公式ブログによると、2026年5月5日に Gemini API の
+                    <strong>File Search がマルチモーダル対応</strong> となり、
+                    さらに <strong>metadata filtering</strong> と <strong>page-level citations</strong> が追加されました。
+                    従来のRAGは、テキスト抽出した断片を返せても、「表や図が入った資料の意味をうまく拾えない」「答えの根拠ページを追いにくい」という弱点がありました。
+                    今回の更新は、その弱点をGoogleのマネージド機能側でかなり補うものです。
+                </p>
+                <p>
+                    2026年5月12日時点の公式ドキュメントでは、PDFやMarkdown、CSV、HTMLだけでなく、
+                    <strong>JPEG、PNG、WebP、HEIC、HEIFなどの画像ファイル</strong> も入力対象として案内されています。
+                    一方で <strong>音声と動画はまだ未対応</strong> です。つまり今回の本質は「何でも検索できる」ことではなく、
+                    <strong>文章資料と画像資料をまたいだ業務検索が現実的になった</strong> と捉えるのが正確です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>更新項目</th>
+                                <th>何ができるか</th>
+                                <th>実務インパクト</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Multimodal</th>
+                                <td>画像や図表を含むファイルを検索対象にできる</td>
+                                <td>提案書、商品資料、マニュアルの検索精度を上げやすい</td>
+                            </tr>
+                            <tr>
+                                <th>Metadata filtering</th>
+                                <td>部門、年度、文書種別などで絞り込める</td>
+                                <td>古い資料や別部署資料の混入を抑えやすい</td>
+                            </tr>
+                            <tr>
+                                <th>Page-level citations</th>
+                                <td>回答の根拠ページを返せる</td>
+                                <td>人の確認工程と説明責任を組み込みやすい</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    既存記事の<a href="/blogs/blog040.html">Gemini Embedding 2</a>が「マルチモーダル埋め込みという土台」を解説した記事だとすれば、
+                    今回の File Search はその上で <strong>アプリ実装側がどう検索・根拠表示・絞り込みを持つか</strong> を前進させる話です。
+                    そのためテーマは近くても、読者が持ち帰れる実務論点は別物です。
+                </p>
+
+                <h2 id="section2">2. 3つの更新ポイントを実務目線で整理する</h2>
+                <h3>2-1. マルチモーダル検索で「画像入り資料」が読める</h3>
+                <p>
+                    営業資料、商品カタログ、操作マニュアルは、文章より図やUIキャプチャに重要情報が載っていることが珍しくありません。
+                    マルチモーダル対応によって、File Search はそうした画像要素を含む資料も検索対象にできます。
+                    これにより「表紙は読めるが図解部分が抜ける」「PDFからテキスト抽出した結果だけでは意味が崩れる」といった問題を減らしやすくなります。
+                </p>
+
+                <h3>2-2. metadata filterで“別の資料を拾う事故”を減らす</h3>
+                <p>
+                    RAGの失敗はモデル性能以前に、<strong>検索母集団の混ざり方</strong> で起こることが多いです。
+                    例えば営業部の提案書と管理部の社内規程を同じ箱に入れると、AIは場違いな根拠を拾いやすくなります。
+                    metadata filter があると、「2026年度」「営業資料」「公開可」「製品A」のように事前タグを付け、
+                    質問時に検索範囲を絞る設計がしやすくなります。
+                </p>
+                <p>
+                    MIRAINA視点では、この機能は単なる便利機能ではありません。
+                    <strong>AIに何を読ませるかを、ファイル単位ではなく運用ルール単位で管理しやすくする機能</strong> です。
+                    RAGが社内で定着しない理由の一つは、「最新資料だけを読ませる仕組み」が弱いことにあります。
+                    metadata 設計を入れるだけで、回答品質と運用保守性の両方が上がります。
+                </p>
+
+                <h3>2-3. page-level citationsで確認作業が短くなる</h3>
+                <p>
+                    今回もっとも大きいのは、やはり page-level citations です。
+                    RAGを業務で使うと、人は「その回答が合っているか」だけでなく、
+                    「どの資料のどのページに書いてあるか」を確認したくなります。特に見積条件、契約条項、仕様差分のような仕事では、
+                    根拠位置が見えない回答はそのまま使えません。
+                </p>
+                <p>
+                    page-level citations が返ると、AI回答をそのまま採用するのではなく、
+                    <strong>根拠ページへ飛んで人が承認するワークフロー</strong> を組みやすくなります。
+                    これはハルシネーションをゼロにする話ではなく、<strong>検証しやすい形に変える話</strong> です。
+                    その意味で、RAGを本番業務に近づける重要な一歩と言えます。
+                </p>
+
+                <h2 id="section3">3. なぜ「検証できるRAG」に近づいたのか</h2>
+                <p>
+                    RAGの本質は「AIに社内知識を追加すること」ではなく、<strong>正しい資料にたどり着く時間を短縮すること</strong> にあります。
+                    ところが現場では、検索精度よりも「根拠が見えないので結局人が全部読み直す」という理由で止まるケースが少なくありません。
+                    今回の File Search 更新は、そのボトルネックにかなり正面から向き合っています。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>従来の悩み</th>
+                                <th>File Search更新で改善しやすい点</th>
+                                <th>残る人の役割</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>画像入り資料が拾いにくい</th>
+                                <td>マルチモーダル検索で図表やUI情報を扱いやすい</td>
+                                <td>どの資料を登録するかを決める</td>
+                            </tr>
+                            <tr>
+                                <th>古い資料が混ざる</th>
+                                <td>metadata filterで対象資料を絞れる</td>
+                                <td>タグ設計と更新ルールを保守する</td>
+                            </tr>
+                            <tr>
+                                <th>根拠確認に時間がかかる</th>
+                                <td>page-level citationsで確認先を示せる</td>
+                                <td>最終承認と例外判断を行う</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    さらに公式ドキュメントでは、<strong>File storage と query time の embedding generation は無料</strong> と案内されています。
+                    一方で、初回インデックス時の埋め込み生成や通常のモデルトークンは課金対象です。
+                    これは「小さく試しやすいが、何でも大量投入してよいわけではない」という設計です。
+                    まずは対象業務を絞って検証し、使われる資料だけを整備する進め方が合理的です。
+                </p>
+
+                <h2 id="section4">4. 中小企業はどの業務から使うべきか</h2>
+                <p>
+                    では、中小企業はどこから試すべきでしょうか。今回の更新が効きやすいのは、
+                    <strong>画像入りPDFや複数版の資料を頻繁に参照する業務</strong> です。
+                    たとえば営業提案、カスタマーサポート、社内マニュアル検索は相性が良いです。
+                </p>
+
+                <h3>1. 営業提案資料の検索</h3>
+                <p>
+                    商品比較表や導入事例スライドは、図表と文章が混在しています。
+                    File Search を使えば、商材ごとの資料を metadata で絞り込みながら、過去提案から近い説明を引きやすくなります。
+                    提案作成を全自動にするのではなく、「似た提案の根拠ページを先に探す」用途から始めるのが安全です。
+                </p>
+
+                <h3>2. FAQ・問い合わせ一次対応</h3>
+                <p>
+                    サポート担当が毎回マニュアルを探している業務では、根拠ページ付き回答が役立ちます。
+                    AIが回答案と参照ページを同時に返せれば、人が確認して送るまでの時間を削減しやすくなります。
+                    これは<a href="/services/ai_develop.html">AI開発サービス</a>で支援しやすい典型領域でもあります。
+                </p>
+
+                <h3>3. 社内手順書・研修資料の横断検索</h3>
+                <p>
+                    現場教育では「最新版の手順書はどれか」が曖昧になりがちです。
+                    metadata に版数、部門、更新日を入れておけば、古い資料を誤参照するリスクを下げられます。
+                    特に多店舗運営や複数担当者がいる企業では、こうした整備の価値が大きいです。
+                </p>
+
+                <h2 id="section5">5. 導入前に決めるべき注意点</h2>
+                <p>
+                    便利に見える一方で、今回の更新だけでRAGが完成するわけではありません。先に決めるべき注意点は3つあります。
+                </p>
+
+                <h3>5-1. metadata の設計を先に作る</h3>
+                <p>
+                    metadata filter は、タグがなければ効きません。部門、公開範囲、資料種別、製品名、年度、版数など、
+                    何を絞り込み軸にするかを先に決める必要があります。ここが曖昧だと、検索母集団の整理に失敗します。
+                </p>
+
+                <h3>5-2. 画像が読めても、元資料の質は別問題</h3>
+                <p>
+                    マルチモーダル対応でも、解像度の低い図や古い画面キャプチャが正しく使えるとは限りません。
+                    また、音声・動画は未対応なので、会議録音や接客音声まで一気通貫で扱うには別設計が必要です。
+                    「何が対象外か」を先に理解しておく方が、PoCは成功しやすくなります。
+                </p>
+
+                <h3>5-3. citations が出ても最終承認は人が持つ</h3>
+                <p>
+                    page-level citations は便利ですが、引用ページがあることと回答解釈が正しいことは同義ではありません。
+                    契約、料金、対外説明のような重要業務では、最終承認者を必ず残すべきです。
+                    これはAIの性能問題というより、業務設計の問題です。
+                </p>
+
+                <p>
+                    MIRAINAでは、こうしたRAG導入を「モデル選び」だけで終わらせず、
+                    <strong>対象業務の選定、資料整備、metadata設計、確認フロー設計</strong> まで一体で考えることを重視しています。
+                    その方が、現場に残る仕組みになりやすいからです。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    2026年5月5日の Gemini API File Search 更新は、単なる機能追加ではなく、
+                    <strong>RAGを「検索できる」から「検証しやすい」へ寄せる更新</strong> でした。
+                    マルチモーダル検索で画像入り資料を扱いやすくし、metadata filter で検索対象を絞り、
+                    page-level citations で人の確認工程を短くする。この3点セットに意味があります。
+                </p>
+                <p>
+                    既存の<a href="/blogs/blog040.html">Gemini Embedding 2</a>が基盤技術の進化を示した記事だとすれば、
+                    今回はそれを業務アプリとしてどう使うかの話です。中小企業にとって重要なのは、
+                    いきなり大規模な社内検索を作ることではなく、営業資料、FAQ、手順書のような狭い領域から始めて、
+                    根拠確認まで含めて設計することです。
+                </p>
+                <p>
+                    RAGや社内検索の実装方針で迷う場合は、MIRAINAまでご相談ください。業務課題に合わせて、AI活用の対象整理から実装・定着まで伴走します。
+                </p>
+
+                <div class="article-references">
+                    <h3>参考情報</h3>
+                    <ul>
+                        <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/expanded-gemini-api-file-search-multimodal-rag/" target="_blank" rel="noopener">Google Developers Blog: Expanded Gemini API File Search brings multimodal RAG, metadata filtering and citations</a></li>
+                        <li><a href="https://ai.google.dev/gemini-api/docs/file-search?hl=ja" target="_blank" rel="noopener">Google AI for Developers: File Search</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="article-cta">
+                <h2>社内検索・RAGの設計から伴走します</h2>
+                <p>資料整理、metadata設計、AI検索実装まで一緒に進めたい企業様はMIRAINAへご相談ください。</p>
+                <a href="/contact.html" class="cta-button">無料相談はこちら</a>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-label">この記事の監修者</div>
+                <div class="editor-name">芝 優作</div>
+                <p>
+                    MIRAINA代表。生成AI導入、LLMO、業務自動化の支援を行う。AIを実務に定着させるため、
+                    モデル性能だけでなく、資料構造、検索設計、確認フローまで含めた導入支援を重視している。
+                </p>
+            </div>
+
+            <div class="article-related">
+                <h3>関連記事</h3>
+                <div class="related-grid">
+                    <a href="/blogs/blog040.html" class="related-card">
+                        <img src="/images/blogs_images/blog-card040.webp" alt="Gemini Embedding 2の関連記事" loading="lazy"
+                            decoding="async">
+                        <div class="related-card-title">【2026年3月最新】Gemini Embedding 2とは？マルチモーダルRAG・社内検索を変えるGoogle新基盤</div>
+                    </a>
+                    <a href="/blogs/blog065.html" class="related-card">
+                        <img src="/images/blogs_images/blog-card065.webp" alt="RAGの完全ガイド関連記事" loading="lazy"
+                            decoding="async">
+                        <div class="related-card-title">【2026年4月最新】RAG（検索拡張生成）とは？企業の自社データ活用とハルシネーション対策の完全ガイド</div>
+                    </a>
+                    <a href="/blogs/blog131.html" class="related-card">
+                        <img src="/images/blogs_images/blog-card131.webp" alt="Google AI Mode更新の関連記事" loading="lazy"
+                            decoding="async">
+                        <div class="related-card-title">【2026年5月最新】Google AI Mode更新、AI検索で企業サイトは何を変えるべきか</div>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>ChatGPTでGoogleスプレッドシートを直接編集する方法｜APIなしでタスク管理表を作る手順 | MIRAINAブログ</title>
+    <meta name="description"
+        content="ChatGPTでGoogleスプレッドシートを直接編集する方法を、共有設定の変更から実際の作成結果まで一次情報ベースで整理。APIなしでタスク管理表を作る手順、CSVインポートとの違い、注意点をまとめます。">
+    <meta property="og:title" content="ChatGPTでGoogleスプレッドシートを直接編集する方法｜APIなしでタスク管理表を作る手順">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog143.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog143-1.webp">
+    <meta property="og:description"
+        content="ChatGPTでGoogleスプレッドシートを直接編集する方法を、共有設定の変更から実際の作成結果まで一次情報ベースで整理。APIなしでタスク管理表を作る手順、CSVインポートとの違い、注意点をまとめます。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>ChatGPTでGoogleスプレッドシートを直接編集する方法</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.05.16</span>
+                    <div class="article-tags">
+                        <p class="article-tag">ChatGPT</p>
+                        <p class="article-tag">Googleスプレッドシート</p>
+                        <p class="article-tag">業務効率化</p>
+                        <p class="article-tag">一次情報</p>
+                    </div>
+                </div>
+                <h1 class="article-title">ChatGPTでGoogleスプレッドシートを直接編集する方法｜APIなしでタスク管理表を作る手順</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog143-1.webp" alt="ChatGPTでGoogleスプレッドシートを直接編集する手順のイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    ChatGPTでGoogleスプレッドシートを触らせたいと思っても、多くの人はそこで止まります。API連携、Apps Script、外部ツール接続といった言葉が先に浮かび、「便利そうだけど、そこまでやるのは重い」と感じやすいからです。
+                </p>
+                <p>
+                    ただ、テンプレートを1枚作る、見やすい管理表をすぐ整える、といった用途なら話は別です。<strong>共有設定を調整し、ブラウザ版ChatGPTにシートURLと要件を渡すだけで、Googleスプレッドシートを直接更新できる</strong>場面があります。
+                    実際に作成された例では、タスク管理表の列設計、色分け、プルダウン、チェックボックス、行固定、ダミーデータ入力まで反映されていました。この記事では、なぜこのやり方が見落とされがちなのか、どう進めるのか、どこが便利で何に注意すべきかを順番に整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. なぜこの方法は見落とされやすいのか</a></li>
+                    <li><a href="#section2">2. まず知っておきたいこと</a></li>
+                    <li><a href="#section3">3. ChatGPTで直接編集する手順</a></li>
+                    <li><a href="#section4">4. 実際に作られたタスク管理表の中身</a></li>
+                    <li><a href="#section5">5. CSVインポートより楽な理由</a></li>
+                    <li><a href="#section6">6. 向いている用途と活用アイデア</a></li>
+                    <li><a href="#section7">7. 使う前に押さえたい注意点</a></li>
+                    <li><a href="#section8">8. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="section1">1. なぜこの方法は見落とされやすいのか</h2>
+                <p>
+                    「ChatGPTでスプレッドシートを操作する」と聞くと、多くの人は最初にAPI接続やスクリプト開発を思い浮かべます。たしかに、既存データベースとつなぐ、定期実行する、承認フローまで含める、といった本格運用ならその方向が必要になります。
+                </p>
+                <p>
+                    ただ、「まずテンプレートを1枚作りたい」「見やすい管理表をその場で整えたい」という段階なら、もっと軽い進め方があります。最初の一歩と本格運用を同じ難易度で考えてしまうために、実は試しやすい方法まで見落とされやすい、というのがこのテーマのややこしいところです。
+                </p>
+
+                <h2 id="section2">2. まず知っておきたいこと</h2>
+                <p>
+                    今回のやり方が面白いのは、単に「シートへ文字を入れられる」という話で終わっていないところです。共有設定、指示の出し方、更新確認、完成後の仕上がりを見ると、実務で使うための最低限の型までまとめて作れていることが分かります。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>確認対象</th>
+                                <th>実際の内容</th>
+                                <th>ここが重要</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>共有設定</th>
+                                <td>「リンクを知っている全員」「編集者」に変更されている</td>
+                                <td>ChatGPTが対象シートを書き換えられる状態にしている</td>
+                            </tr>
+                            <tr>
+                                <th>指示方法</th>
+                                <td>プロンプト内にスプレッドシートURLと作成要件をまとめて入力している</td>
+                                <td>別途API実装せず、自然文で仕様を渡している</td>
+                            </tr>
+                            <tr>
+                                <th>更新確認</th>
+                                <td>ChatGPTがGoogle Sheet contentの更新許可を求めている</td>
+                                <td>勝手に更新せず、最終確認のステップが入る</td>
+                            </tr>
+                            <tr>
+                                <th>出力結果</th>
+                                <td>タスク管理表が整形され、プルダウンやチェックボックスまで設定されている</td>
+                                <td>単なる表の生成ではなく、運用しやすいUIまで構築している</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    特に重要なのは、最終結果がCSVのようなプレーンデータではなく、<strong>そのまま使い始められるスプレッドシート</strong>として仕上がっている点です。列名を並べるだけでなく、優先度やステータスのプルダウン、完了チェック、色分け、固定行まで含めて整えられていました。
+                </p>
+
+                <h2 id="section3">3. ChatGPTで直接編集する手順</h2>
+                <p>
+                    実際の進め方はシンプルです。やることは大きく分けて、共有設定を整える、URLと要件を渡す、更新を許可する、出来上がりを確認する、の4段階です。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">Googleスプレッドシートの共有設定を開き<br>リンクを知っている全員を編集者にする</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">ChatGPTのプロンプトに<br>シートURLと要件をまとめて渡す</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">更新確認のダイアログが出たら<br>許可する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">生成後に列構成、見た目、権限を<br>人が最終確認する</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">GoogleスプレッドシートをChatGPTで整える基本フロー</p>
+                </div>
+
+                <p>
+                    このとき、単に「タスク管理表を作って」と書くだけでは仕上がりがぶれやすくなります。色分け、セル幅調整、プルダウンやチェックリストの活用、ダミーデータ3行、行固定といった条件を先に書いておくと、かなり実用寄りのシートになりやすいです。
+                </p>
+
+                <figure class="article-figure">
+                    <img src="/images/blog_images/blog143-step1.webp"
+                        alt="Googleスプレッドシートの共有設定でリンクを知っている全員を編集者に変更している画面" loading="lazy" decoding="async">
+                    <figcaption>図1: 最初に共有設定を開き、リンクを知っている全員が編集できる状態にする</figcaption>
+                </figure>
+
+                <figure class="article-figure">
+                    <img src="/images/blog_images/blog143-step2.webp"
+                        alt="ChatGPTの入力欄にタスク管理表の要件を箇条書きで入力している画面" loading="lazy" decoding="async">
+                    <figcaption>図2: 共有リンクとあわせて、見た目やプルダウン、ダミーデータなどの要件を具体的に指示する</figcaption>
+                </figure>
+
+                <h3>仕上がりを安定させやすい指示</h3>
+                <ul>
+                    <li>視覚的に見やすくすること</li>
+                    <li>セル幅を整えること</li>
+                    <li>プルダウンに色を付けること</li>
+                    <li>記入例としてダミーデータを3行入れること</li>
+                    <li>行固定をしておくこと</li>
+                </ul>
+
+                <figure class="article-figure">
+                    <img src="/images/blog_images/blog143-step4.webp"
+                        alt="Googleドライブ経由でChatGPTがGoogleスプレッドシートの更新確認を求めている画面" loading="lazy" decoding="async">
+                    <figcaption>図3: 更新前にGoogle Sheetsの変更確認が表示されるので、内容を確認して許可する</figcaption>
+                </figure>
+
+                <h2 id="section4">4. 実際に作られたタスク管理表の中身</h2>
+                <p>
+                    完成したシートを見ると、単に列を追加しただけではありません。実務でそのまま使うことを前提に、必要な要素が最初からかなり揃っています。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>要素</th>
+                                <th>確認できた内容</th>
+                                <th>実務上の利点</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>列設計</th>
+                                <td>タスク名、詳細、担当、優先度、ステータス、開始日、期限、残日数などが設定されている</td>
+                                <td>入力ルールを最初から揃えやすい</td>
+                            </tr>
+                            <tr>
+                                <th>チェックボックス</th>
+                                <td>完了列にチェックボックスが入っている</td>
+                                <td>進捗更新が軽い</td>
+                            </tr>
+                            <tr>
+                                <th>プルダウン</th>
+                                <td>優先度やステータスに色付きプルダウンが入っている</td>
+                                <td>入力ゆれを防ぎやすい</td>
+                            </tr>
+                            <tr>
+                                <th>見た目</th>
+                                <td>ヘッダー色、サマリー表示、セル幅調整がされている</td>
+                                <td>配布直後から見やすい</td>
+                            </tr>
+                            <tr>
+                                <th>初期データ</th>
+                                <td>ダミーの記入例が3行入っている</td>
+                                <td>チームメンバーが入力方法を理解しやすい</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    この点は、以前まとめた<a href="/blogs/blog132.html">ChatGPT for Excel/Google Sheets拡大の記事</a>ともつながります。
+                    表計算で本当に手間がかかるのは、関数そのものより、列設計、入力ルール、見た目の整備、チームで使い回せる初期状態を作る工程です。
+                    このやり方の価値は、まさにその前工程をブラウザ上の対話だけでかなり短縮できるところにあります。
+                </p>
+
+                <figure class="article-figure">
+                    <img src="/images/blog_images/blog143-step3.webp"
+                        alt="ChatGPTが構築したタスク管理表で、色付きプルダウンやチェックボックスが設定されているGoogleスプレッドシート画面"
+                        loading="lazy" decoding="async">
+                    <figcaption>図4: 完成したタスク管理表。ヘッダー整形、色付きプルダウン、チェックボックス、ダミー行まで入っている</figcaption>
+                </figure>
+
+                <h2 id="section5">5. CSVインポートより楽な理由</h2>
+                <p>
+                    AIで表を作るときは、CSVを出力して人がスプレッドシートへインポートする流れがよくあります。もちろんそれでも作業は進みますが、今回のようなテンプレート作成では直接編集のほうが楽です。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">CSVインポート中心</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>データ移し替えが別作業になる</li>
+                                    <li>列幅や色分けを後から直しがち</li>
+                                    <li>プルダウンやチェックボックスを人が足すことが多い</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">直接編集</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>インポート工程が要らない</strong></li>
+                                    <li>見た目と入力ルールをまとめて作れる</li>
+                                    <li>使い始めるまでの時間を短くできる</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">CSVインポート方式と直接編集方式の違い</p>
+                </div>
+
+                <p>
+                    CSV方式は、出力までは速くても、最後の整形を人が引き受ける構成になりやすいです。
+                    それに対してこのやり方は、最初から完成イメージを渡し、そのまま使える体裁まで一気に組んでもらえる点が大きな違いです。
+                </p>
+
+                <h2 id="section6">6. 向いている用途と活用アイデア</h2>
+                <p>
+                    このやり方が特に効くのは、テンプレート化しやすい業務です。
+                </p>
+                <p>
+                    具体的には、<strong>構成がほぼ決まっていて、毎回ゼロから整えるのが面倒なシート</strong>と相性が良いです。たとえば次のような用途が考えられます。
+                </p>
+                <ul>
+                    <li>営業案件の進捗管理表</li>
+                    <li>採用候補者の面談管理シート</li>
+                    <li>コンテンツ制作の進行表</li>
+                    <li>会議の議題、決定事項、次アクションの記録表</li>
+                    <li>社内申請や依頼受付のテンプレート</li>
+                </ul>
+
+                <p>
+                    特に効果が出やすいのは、入力ルールが曖昧で、使うたびに表の形が崩れやすい業務です。
+                    以前の<a href="/blogs/blog024.html">AI導入が失敗する本当の理由</a>でも触れた通り、AIの価値は生成そのものより「業務の型」を作れるかどうかで決まる場面が多いです。スプレッドシートは現場の型を残しやすいので、ChatGPTと相性が良い部類の業務だと考えています。
+                </p>
+
+                <h3>プロンプトで先に決めておくと良い項目</h3>
+                <p>
+                    筆者の意見としては、見た目よりも先に次の条件を書くと実用度が上がります。
+                </p>
+                <ul>
+                    <li>誰が入力するシートか</li>
+                    <li>更新頻度は毎日か毎週か</li>
+                    <li>必須入力項目と任意項目</li>
+                    <li>プルダウン候補の一覧</li>
+                    <li>人が最終確認する列はどこか</li>
+                </ul>
+
+                <h2 id="section7">7. 使う前に押さえたい注意点</h2>
+                <p>
+                    便利な一方で、この手順には明確な注意点があります。最大の論点は、<strong>「リンクを知っている全員」が編集できる状態を一時的に作っている</strong>ことです。
+                </p>
+                <p>
+                    そのため、機密情報や実運用中の重要シートでいきなり試すのは避けたほうが安全です。まずは新規シートやダミーデータ入りのテンプレートで試し、作成完了後に共有権限を元へ戻す運用が現実的です。
+                </p>
+
+                <h3>先に決めておきたい運用ルール</h3>
+                <ul>
+                    <li>試すのは新規シートか複製シートに限定する</li>
+                    <li>個人情報、機密情報、実顧客データは入れない</li>
+                    <li>作成後に共有設定を必ず戻す</li>
+                    <li>ChatGPTに渡す指示内容を簡単に記録しておく</li>
+                </ul>
+
+                <p>
+                    また、ChatGPTのプラン種別やGoogle Workspace側の管理設定によっては挙動が変わる可能性があります。
+                    いきなり本番シートで試すのではなく、まずは新規シートや複製シートで動きを確認する進め方が現実的です。
+                </p>
+
+                <h2 id="section8">8. まとめ</h2>
+                <p>
+                    このやり方を見ると、「スプレッドシート操作=API連携が必要」という先入観は、少なくともテンプレート作成の段階では当てはまらないことが分かります。
+                    共有設定を適切に調整し、URLと完成条件をプロンプトにまとめれば、ブラウザ版ChatGPTでもタスク管理表のような実務テンプレートをかなり高い完成度で組み立てられます。
+                </p>
+                <p>
+                    特に、CSVを吐き出して終わりではなく、色分け、プルダウン、チェックボックス、行固定まで一気に整えたい人には向いた進め方です。
+                    まずはダミーデータ入りの新規シートで試し、使える型になったらチーム用テンプレートへ展開する、という順番で進めると扱いやすいはずです。
+                </p>
+            </div>
+
+            <div class="article-cta">
+                <h2>AI活用を、実際に回る業務フローまで落とし込みます</h2>
+                <p>プロンプト作成だけでなく、シート設計、入力ルール、チーム運用まで含めてMIRAINAが支援します。</p>
+                <a href="/contact.html" class="cta-button">無料相談はこちら</a>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-label">この記事の監修者</div>
+                <div class="editor-name">芝 優作</div>
+                <p>
+                    MIRAINA代表。生成AI導入、LLMO、業務自動化の支援を行う。AIを現場に定着させるため、
+                    モデル比較だけでなく、業務設計、承認ルール、情報設計まで含めた導入支援を重視している。
+                </p>
+            </div>
+
+            <div class="article-related">
+                <h3>関連記事</h3>
+                <div class="related-grid">
+                    <a href="/blogs/blog132.html" class="related-card">
+                        <img src="/images/blogs_images/blog-card132.webp" alt="ChatGPT for ExcelとGoogle Sheetsの関連記事" loading="lazy"
+                            decoding="async">
+                        <div class="related-card-title">【2026年5月最新】ChatGPT for Excel/Google Sheets拡大、表計算業務はどう変わるか</div>
+                    </a>
+                    <a href="/blogs/blog052.html" class="related-card">
+                        <img src="/images/blogs_images/blog-card052.webp" alt="ChatGPT File Libraryの関連記事" loading="lazy"
+                            decoding="async">
+                        <div class="related-card-title">ChatGPT File Libraryとは？Google Drive統合で社内資料の再利用が変わる</div>
+                    </a>
+                    <a href="/blogs/blog024.html" class="related-card">
+                        <img src="/images/blogs_images/blog-card024.webp" alt="AI導入設計の関連記事" loading="lazy"
+                            decoding="async">
+                        <div class="related-card-title">【2026年最新】AI導入が失敗する本当の理由｜業務課題ベースで進める成功の鉄則</div>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

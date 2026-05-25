@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年5月最新】AWS Security Agentのコードレビュー拡張で脆弱性診断はどう変わるか | MIRAINAブログ</title>
+    <meta name="description"
+        content="AWS Security Agentのコードレビュー拡張を解説。2026年5月12日に追加されたフルリポジトリレビュー、修正提案、GitHub連携をもとにAIセキュリティ運用の変化を整理します。">
+    <meta property="og:title" content="【2026年5月最新】AWS Security Agentのコードレビュー拡張で脆弱性診断はどう変わるか">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog144.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog144-1.webp">
+    <meta property="og:description"
+        content="AWS Security Agentのコードレビュー拡張を解説。2026年5月12日に追加されたフルリポジトリレビュー、修正提案、GitHub連携をもとにAIセキュリティ運用の変化を整理します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>AWS Security Agentのコードレビュー拡張で脆弱性診断はどう変わるか</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.05.17</span>
+                    <div class="article-tags">
+                        <p class="article-tag">AWS</p>
+                        <p class="article-tag">AIセキュリティ</p>
+                        <p class="article-tag">コードレビュー</p>
+                        <p class="article-tag">GitHub</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年5月最新】AWS Security Agentのコードレビュー拡張で脆弱性診断はどう変わるか</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog144-1.webp" alt="AWS Security Agentのフルリポジトリコードレビューを解説するイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    AIにコードを書かせる会社が増える一方で、セキュリティ確認はまだPull Request単位やスポット診断に止まりやすく、
+                    「全体設計を見ないままリリース速度だけ上がる」状態になりがちです。2026年5月12日、AWSは
+                    <strong>AWS Security Agentのfull repository code review</strong> を追加し、リポジトリ全体を対象にした
+                    文脈付きのセキュリティレビューをプレビュー提供すると発表しました。
+                </p>
+                <p>
+                    本記事では、今回の機能で何が変わるのか、従来の静的解析やPRレビューとどこが違うのか、
+                    そして中小企業が社内開発や受託開発のチェック体制をどう見直すべきかを実務目線で整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. まず押さえるべき事実</a></li>
+                    <li><a href="#section2">2. 何が従来と違うのか</a></li>
+                    <li><a href="#section3">3. 実際のレビュー手順と運用イメージ</a></li>
+                    <li><a href="#section4">4. 中小企業の開発体制への影響</a></li>
+                    <li><a href="#section5">5. 導入前に決めておきたいルール</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. まず押さえるべき事実</h2>
+                <p>
+                    AWSの公式発表によると、2026年5月12日に追加されたfull repository code reviewは、
+                    <strong>リポジトリ全体を対象に、アーキテクチャ、信頼境界、データフローまで見ながら脆弱性を探す</strong> 機能です。
+                    単に既知パターンへ照合する静的解析とは異なり、コードのつながりや設計上の抜けを見にいく点が今回の主眼です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>公式情報の要点</th>
+                                <th>実務上の意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>発表日</th>
+                                <td>2026年5月12日</td>
+                                <td>直近のAIセキュリティ運用機能として把握価値が高い</td>
+                            </tr>
+                            <tr>
+                                <th>対象範囲</th>
+                                <td>PR差分ではなくリポジトリ全体</td>
+                                <td>局所修正では見えない構造的な抜けを拾いやすい</td>
+                            </tr>
+                            <tr>
+                                <th>出力</th>
+                                <td>ファイルと行番号に紐づく修正提案</td>
+                                <td>開発者が次の修正アクションへ進みやすい</td>
+                            </tr>
+                            <tr>
+                                <th>料金</th>
+                                <td>既存顧客向けにプレビュー期間は追加料金なし</td>
+                                <td>まずは限定導入で試しやすい</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    AWSドキュメントでは、コードレビュー作成時にGitHubリポジトリまたはS3上のZIPを選び、
+                    IAMロールやログ設定を決めたうえで実行できるとされています。レビュー完了後は、
+                    重大度、リスク種別、コード位置、リスク reasoning、修正案まで確認できます。
+                    これは「検知して終わり」のツールではなく、<strong>発見から修正判断までを1つの運用面に寄せる</strong> 方向の機能です。
+                </p>
+
+                <h2 id="section2">2. 何が従来と違うのか</h2>
+                <p>
+                    既存のセキュリティレビューは、PRごとの差分確認、SAST、年1回の診断に分かれやすく、
+                    それぞれに抜けがあります。差分レビューは速い反面、過去から残る設計負債は見落としやすく、
+                    パターン照合型SASTは既知ルールに強くても文脈をまたぐ問題に弱いことがあります。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">従来の確認</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>PR差分中心で見る範囲が狭い</li>
+                                    <li>既知パターン検知に寄りやすい</li>
+                                    <li>修正の優先順位づけが人任せになりやすい</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">今回の拡張</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>リポジトリ全体を一度に評価できる</strong></li>
+                                    <li>信頼境界やデータフローまで見にいく</li>
+                                    <li>ファイル単位の修正提案につながる</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">局所レビューから全体レビューへ重心が移る</p>
+                </div>
+
+                <p>
+                    特に重要なのは、AWSが「architecture」「trust boundaries」「data flows」を明示している点です。
+                    これは、認証処理は正しそうでも権限移譲で穴が開いている、入力値検証はしていても保存先で露出する、
+                    といった<strong>複数ファイルをまたぐ実装不整合</strong>を念頭に置いていると読めます。
+                    既存の<a href="/blogs/blog088.html">Project Glasswingのセキュリティ記事</a>でも触れた通り、
+                    AI時代の防御はモデル選定より運用設計の一貫性が重要です。
+                </p>
+
+                <h2 id="section3">3. 実際のレビュー手順と運用イメージ</h2>
+                <p>
+                    AWSのドキュメントに沿うと、流れは大きく4段階です。まず対象ソースを選び、次に権限とログを設定し、
+                    必要なら自動修正を有効化し、その後にレビューを走らせます。進行はPreflight、Static analysis、Finalizingの3段階で表示されます。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">GitHubリポジトリ<br>またはS3ソースを選ぶ</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">IAMロールと<br>ログ出力先を設定する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">必要なら自動修正を有効化し<br>レビューを開始する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">重大度、根拠、コード位置、<br>修正案を人が判断する</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">AWS Security Agentのコードレビュー運用フロー</p>
+                </div>
+
+                <p>
+                    GitHubソースでは、自動修正を有効にするとPull Requestで修正提案を返せる一方、
+                    読み取り権限のある人にはPRが見える点もAWSは明記しています。つまり便利さだけでなく、
+                    <strong>誰がレビューし、誰がマージ承認するか</strong> を先に決めておかないと、
+                    AI修正が新しい混乱を作る可能性があります。
+                </p>
+                <p>
+                    findings画面では、重大度、信頼度、リスクタイプ、説明、検証手順、コード位置、リスク reasoning を確認できます。
+                    ここまで揃うなら、MIRAINAとしては「AIに丸投げする道具」より、
+                    <strong>人間のレビュー会議を速くする道具</strong> として導入するのが現実的だと見ています。
+                </p>
+
+                <h2 id="section4">4. 中小企業の開発体制への影響</h2>
+                <p>
+                    この機能が効くのは、大規模エンタープライズだけではありません。少人数開発ではむしろ、
+                    セキュリティ専任者がいない、レビューが属人化している、外注と内製が混ざっている、といった課題が出やすいからです。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>よくある状況</th>
+                                <th>起きやすい問題</th>
+                                <th>今回の機能の使いどころ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>社内ツールを急ぎ開発</th>
+                                <td>認可やログ設計が後回しになる</td>
+                                <td>リリース前に全体レビューを入れる</td>
+                            </tr>
+                            <tr>
+                                <th>外注と内製が混在</th>
+                                <td>責任範囲が曖昧になる</td>
+                                <td>共通のレビュー観点を置ける</td>
+                            </tr>
+                            <tr>
+                                <th>AIコーディング比率が増加</th>
+                                <td>実装速度に対して確認が追いつかない</td>
+                                <td>定期スキャンで見落としを減らす</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    以前の<a href="/blogs/blog024.html">AI導入設計の記事</a>でも、人とAIの役割分担を先に決める重要性を整理しました。
+                    今回のAWS Security Agentも同じで、価値は「AIが脆弱性を全部直すこと」ではなく、
+                    レビュー観点を標準化し、開発速度と安全性のバランスを崩しにくくすることにあります。
+                    セキュリティ担当がいない会社ほど、判断基準を機能に埋め込む意義は大きいです。
+                </p>
+
+                <h2 id="section5">5. 導入前に決めておきたいルール</h2>
+                <p>
+                    便利だからこそ、最初に運用ルールを切っておく必要があります。特に重要なのは、
+                    本番反映の承認者、AI修正PRの扱い、重大度ごとの対応期限、誤検知時の扱いです。
+                </p>
+                <ul>
+                    <li>High重大度の指摘は誰が何営業日以内に判断するか</li>
+                    <li>自動修正PRをそのままマージしないこと</li>
+                    <li>月次かリリース前か、全体レビューの実行タイミングを固定すること</li>
+                    <li>誤検知の記録方法と再発時の判断ルールを残すこと</li>
+                </ul>
+
+                <p>
+                    これは<a href="/blogs/blog024.html">AI導入が失敗する本当の理由</a>でも繰り返し述べてきた話ですが、
+                    AI機能の導入効果はツール性能だけでなく、業務フローへどう埋め込むかで決まります。
+                    セキュリティ領域は特に、未整備なまま使い始めると「AIが見ているから大丈夫」という誤解を生みやすいため、
+                    承認境界と責任分担を最初に置くべきです。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    AWS Security Agentの今回の拡張は、AIセキュリティレビューをPR差分中心の確認から、
+                    リポジトリ全体の構造確認へ広げる動きとして見るのが自然です。特に、信頼境界やデータフローを含めて見にいくという整理は、
+                    AIコーディングが当たり前になるこれからの開発体制と相性が良いです。
+                </p>
+                <p>
+                    まずは重要な社内ツールや顧客データに触るアプリを対象に、小さく試すのが現実的です。
+                    速度を落とさずに安全性を底上げしたい会社ほど、AIレビュー機能を「自動修正の魔法」ではなく
+                    「人の判断を早く揃える仕組み」として使うと効果が出やすいはずです。
+                </p>
+            </div>
+
+            <div class="article-cta">
+                <h2>AI開発の速度と安全性を、両立できる運用へ整えます</h2>
+                <p>AI導入だけでなく、レビュー体制、承認ルール、社内定着まで含めてMIRAINAが支援します。</p>
+                <a href="/contact.html" class="cta-button">無料相談はこちら</a>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-label">この記事の監修者</div>
+                <div class="editor-name">芝 優作</div>
+                <p>
+                    MIRAINA代表。生成AI導入、LLMO、業務自動化の支援を行う。AIを現場に定着させるため、
+                    モデル比較だけでなく、業務設計、承認ルール、情報設計まで含めた導入支援を重視している。
+                </p>
+            </div>
+
+            <div class="article-related">
+                <h3>関連記事</h3>
+                <div class="related-grid">
+                    <a href="/blogs/blog088.html" class="related-card">
+                        <img src="/images/blogs_images/blog-card088.webp" alt="AIセキュリティの関連記事" loading="lazy"
+                            decoding="async">
+                        <div class="related-card-title">【2026年4月最新】AnthropicのProject Glasswingで変わるAIセキュリティ導入の新常識</div>
+                    </a>
+                    <a href="/blogs/blog142.html" class="related-card">
+                        <img src="/images/blogs_images/blog-card142.webp" alt="公共AI活用の関連記事" loading="lazy"
+                            decoding="async">
+                        <div class="related-card-title">【2026年5月最新】Gates財団AI提携で公共AI活用は何が変わるか</div>
+                    </a>
+                    <a href="/blogs/blog024.html" class="related-card">
+                        <img src="/images/blogs_images/blog-card024.webp" alt="AI導入設計の関連記事" loading="lazy"
+                            decoding="async">
+                        <div class="related-card-title">【2026年最新】AI導入が失敗する本当の理由｜業務課題ベースで進める成功の鉄則</div>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

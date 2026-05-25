@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年5月最新】ChatGPT for Excel/Google Sheets拡大、表計算業務はどう変わるか | MIRAINAブログ</title>
+    <meta name="description"
+        content="ChatGPT for Excel/Google Sheetsの提供拡大を解説。無料枠、Business/Enterprise向け条件、権限制御、表計算業務の使いどころを整理します。">
+    <meta property="og:title" content="【2026年5月最新】ChatGPT for Excel/Google Sheets拡大、表計算業務はどう変わるか">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog132.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog132-1.webp">
+    <meta property="og:description"
+        content="ChatGPT for Excel/Google Sheetsの提供拡大を解説。無料枠、Business/Enterprise向け条件、権限制御、表計算業務の使いどころを整理します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>ChatGPT for Excel/Google Sheets拡大、表計算業務はどう変わるか</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.05.09</span>
+                    <div class="article-tags">
+                        <p class="article-tag">ChatGPT</p>
+                        <p class="article-tag">Excel</p>
+                        <p class="article-tag">Google Sheets</p>
+                        <p class="article-tag">業務効率化</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年5月最新】ChatGPT for Excel/Google Sheets拡大、表計算業務はどう変わるか</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog132-1.webp" alt="ChatGPT for ExcelとGoogle Sheetsの活用イメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    「Excel作業をAIでどこまで任せられるのか」「Google Sheetsでも同じことができるのか」と気になっている企業は多いはずです。
+                    一方で、すでに生成AIを使っている担当者は「どのプランで使えるのか」「社内データを触らせても大丈夫か」を先に確認します。
+                    OpenAIのHelp Centerでは2026年5月時点で、ChatGPT for Excel/Google Sheetsの提供範囲、料金の考え方、Business/Enterprise向け統制機能が整理されました。
+                    本記事では、現時点の一次情報をもとに、何ができるのか、どこまで安全に使えるのか、表計算業務がどう変わるのかを中小企業向けにまとめます。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. まず押さえるべき事実：5月時点で何が使えるのか</a></li>
+                    <li><a href="#section2">2. なぜ重要か：表計算が「入力作業」から「判断作業」に寄る</a></li>
+                    <li><a href="#section3">3. プラン別の違いと料金の見方</a></li>
+                    <li><a href="#section4">4. 企業・現場への影響：どの業務から効くか</a></li>
+                    <li><a href="#section5">5. 今やるべきこと：中小企業向け3ステップ</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="section1">1. まず押さえるべき事実：5月時点で何が使えるのか</h2>
+                <p>
+                    2026年5月9日時点でOpenAI Help Centerの案内を確認すると、ChatGPT for Excel/Google Sheetsは
+                    <strong>Free、Go、Plus、Pro、Business、Enterprise、Edu、K-12</strong> まで広く案内されています。
+                    画面の中心はスプレッドシート内サイドバーで、自然言語で表の作成、既存シートの説明、数式提案、複数タブをまたぐ更新依頼ができる構成です。
+                    ここで重要なのは、単なるコピペ補助ではなく、<strong>シートの文脈を見ながらその場で更新する</strong>体験として整理されている点です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>確認項目</th>
+                                <th>2026年5月時点の整理</th>
+                                <th>現場での意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>対応プラン</th>
+                                <td>Free/Go/Plus/Pro/Business/Enterprise/Edu/K-12</td>
+                                <td>個人検証から法人導入まで同じ機能系統で試しやすい</td>
+                            </tr>
+                            <tr>
+                                <th>主な機能</th>
+                                <td>作成、更新、理解、自然言語での指示</td>
+                                <td>集計、整形、下書き、説明作成の手戻りを減らせる</td>
+                            </tr>
+                            <tr>
+                                <th>利用条件</th>
+                                <td>プランの利用枠、管理者設定、接続権限に依存</td>
+                                <td>便利でも全員が即使えるとは限らない</td>
+                            </tr>
+                            <tr>
+                                <th>Enterprise統制</th>
+                                <td>データ/推論レジデンシー、KMS、RBAC、Compliance API対応</td>
+                                <td>監査やアクセス管理を前提に導入設計しやすい</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    つまり今回の変化は、「Excel連携が付いた」ではなく、<strong>表計算をAIエージェントの作業面として扱う前提</strong>が広がったことにあります。
+                    既存の<a href="/blogs/blog028.html">GPT-5.4の業務自動化記事</a>ではPC操作やExcel連携が広い機能の一部として触れられていましたが、
+                    今回はスプレッドシート業務そのものが独立した体験として整理された点が、重みのある違いです。
+                </p>
+
+                <h2 id="section2">2. なぜ重要か：表計算が「入力作業」から「判断作業」に寄る</h2>
+                <p>
+                    多くの企業でExcelやGoogle Sheetsは、売上管理、見積一覧、広告レポート、採用進捗、在庫表の土台になっています。
+                    ただし実際の負荷は「分析」より前の、整形、列追加、重複チェック、説明文作成、関数の修正に偏りがちです。
+                    ChatGPT for Excel/Google Sheetsが効くのは、この前工程です。人が毎回ゼロから式や表現を考えるのではなく、
+                    AIが叩き台を出し、人はそれを承認し、例外だけ見る形に寄せやすくなります。
+                </p>
+                <p>
+                    これはAIが苦手な人にも伝わりやすい変化です。検索では「Excel AI できること」「ChatGPT スプレッドシート 安全」と調べる人が多い一方、
+                    AI利用者は「この売上表を四半期ごとに再集計して、異常値だけメモして」と直接依頼します。
+                    つまり、表計算はチャットUIよりも、<strong>業務成果に近い単位でAIの価値を測りやすい</strong>領域です。
+                    MIRAINAの支援でも、AI導入は「何のモデルを使うか」より「どの作業を減らすか」から決めた方が失敗しにくいと見ています。
+                </p>
+
+                <h2 id="section3">3. プラン別の違いと料金の見方</h2>
+                <p>
+                    2026年5月9日時点のOpenAI Help Centerでは、FreeとGoは限定利用、PlusとProは各プランのagentic usage limit内で利用、
+                    Business/Enterprise/Edu/K-12は2026年6月2日まで無料プレビュー、その後はクレジットや利用条件に従うと整理されています。
+                    さらにFlexible Usageの案内では、ChatGPT for Excelはクレジット対象機能として扱われ、Plus/ProではCodexなど他のエージェント機能と利用枠が関連します。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>プラン帯</th>
+                                <th>使い方の考え方</th>
+                                <th>導入判断のポイント</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Free / Go</th>
+                                <td>限定利用でまず検証</td>
+                                <td>個人で効果を見たい段階向け</td>
+                            </tr>
+                            <tr>
+                                <th>Plus / Pro</th>
+                                <td>利用枠内で実務試験、超過時はクレジットを検討</td>
+                                <td>担当者単位のPoCに向く</td>
+                            </tr>
+                            <tr>
+                                <th>Business / Enterprise / Edu</th>
+                                <td>管理者設定と統制を前提に全社展開しやすい</td>
+                                <td>権限制御、監査、追加利用時の課金設計が重要</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    この料金構造から見えてくるのは、「全社に一斉展開する前に、対象業務を絞って使わせる」方が合理的だということです。
+                    たとえば営業管理表の整形、広告レポートの要約、採用進捗表の更新など、1回あたりの価値が見えやすい作業から始めれば、
+                    利用量と効果のバランスを追いやすくなります。ここは<a href="/blogs/blog024.html">AI導入が失敗する本当の理由</a>で書いた、
+                    業務課題ベースで始める考え方と一致します。
+                </p>
+
+                <h2 id="section4">4. 企業・現場への影響：どの業務から効くか</h2>
+                <p>
+                    現場で効果が出やすいのは、表を読む作業より、表を整える作業が多いチームです。具体的には、営業、マーケティング、バックオフィスの3領域が先行候補になります。
+                    営業なら案件一覧の更新や失注理由の分類、マーケティングなら広告レポートの整形とコメント下書き、バックオフィスなら請求一覧や勤怠データの整理です。
+                    反対に、機密度が極端に高い財務データや、数式の誤りが即事故につながる最終帳票は、いきなり全面委任しない方が安全です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>部門</th>
+                                <th>向いている使い方</th>
+                                <th>最初に決めるべきこと</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>営業</th>
+                                <td>案件一覧の整形、要約、更新支援</td>
+                                <td>承認前に誰が確認するか</td>
+                            </tr>
+                            <tr>
+                                <th>マーケティング</th>
+                                <td>広告/SEOレポートの要約、異常値の抽出</td>
+                                <td>どの列をAIに見せるか</td>
+                            </tr>
+                            <tr>
+                                <th>管理部門</th>
+                                <td>台帳の整理、説明文下書き、分類補助</td>
+                                <td>機密列のマスキング基準</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    OpenAIはEnterprise管理向けに、role-based access controls、Enterprise Key Management、Compliance API対応も案内しています。
+                    ここは単なる安心材料ではなく、<strong>「どのシートを、誰が、どこまでAIに触らせるか」</strong>を制度化できるという意味です。
+                    5月7日に公開された<a href="/blogs/blog130.html">OpenAIの音声AI刷新</a>や、5月5日に整理された<a href="/blogs/blog129.html">ChatGPTメモリ強化</a>と同じく、
+                    ChatGPTは個別機能追加ではなく、社内業務に深く入る方向へ揃って進んでいます。
+                </p>
+
+                <h2 id="section5">5. 今やるべきこと：中小企業向け3ステップ</h2>
+                <p>
+                    第1に、ExcelやGoogle Sheetsが多い業務を3つだけ選び、更新頻度、担当者数、ミスコストを確認してください。
+                    第2に、AIへ渡してよい列と渡してはいけない列を分け、マスキングや別シート化の運用を決めます。
+                    第3に、1週間だけ試験運用し、「作業時間が何分減ったか」「手戻りが増えたか」「承認者の負荷は下がったか」を記録します。
+                    この順番なら、AIが便利かどうかではなく、<strong>自社の表計算業務に投資対効果があるか</strong>で判断できます。
+                </p>
+                <p>
+                    MIRAINAとしては、まずは高度な自動化より、表計算の前処理を減らす用途から始めるのを勧めます。
+                    ここで運用ルールを作れれば、その先の社内RAG、エージェント導入、部門横断ワークフローにもつなげやすくなります。
+                    逆にこの段階を飛ばして全社展開すると、便利さより先に権限管理と責任分界で止まりやすくなります。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    ChatGPT for Excel/Google Sheetsの本質は、表計算をAIで自動化することではなく、表計算に付随する整形、説明、更新判断を軽くすることです。
+                    2026年5月9日時点では、対象プランが広く、Business/Enterprise向け統制も揃いつつあり、試す条件は整ってきました。
+                    ただし成功の分かれ目は、ツール選定そのものより、どの業務から始め、どこに人の確認を残すかです。
+                    表計算の負荷が大きい会社ほど、今は「AIを入れるべきか」ではなく、「どのシートを最初の対象にするか」を決める段階に入っています。
+                </p>
+
+                <div class="article-references">
+                    <h3>参考情報</h3>
+                    <ul>
+                        <li><a href="https://help.openai.com/en/articles/20001063-chatgpt-for-excel-and-google-sheets" target="_blank" rel="noopener">OpenAI Help Center: ChatGPT for Excel and Google Sheets</a></li>
+                        <li><a href="https://help.openai.com/en/articles/12642688-using-credits-for-flexible-usage-in-chatgpt-freegopluspro" target="_blank" rel="noopener">OpenAI Help Center: Using Credits for Flexible Usage in ChatGPT (Free/Go/Plus/Pro)</a></li>
+                        <li><a href="https://help.openai.com/en/articles/11481834-chatgpt-rate-card-business-enterpriseedu" target="_blank" rel="noopener">OpenAI Help Center: ChatGPT Rate Card (Business, Enterprise/Edu)</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="article-cta">
+                <h2>AI導入を、実務に落ちる形で進めたい方へ</h2>
+                <p>業務の棚卸しから、AIツール選定、社内定着まで支援します。</p>
+                <a href="/contact.html" class="cta-button">無料相談はこちら</a>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-label">この記事の監修者</div>
+                <div class="editor-name">芝 優作</div>
+                <p>
+                    MIRAINA代表。生成AI導入、LLMO、業務自動化の支援を行う。中小企業が「AIを入れたが定着しない」状態を避けるため、
+                    業務課題ベースでの導入設計と、現場に残る運用ルールづくりを重視している。
+                </p>
+            </div>
+
+            <div class="article-related">
+                <h3>関連記事</h3>
+                <div class="related-grid">
+                    <a href="/blogs/blog028.html" class="related-card">
+                        <img src="/images/blogs_images/blog-card028.webp" alt="GPT-5.4とExcel連携の関連記事" loading="lazy"
+                            decoding="async">
+                        <div class="related-card-title">GPT-5.4とは？PC自動操作・Excel連携で変わるAI業務活用の最前線</div>
+                    </a>
+                    <a href="/blogs/blog129.html" class="related-card">
+                        <img src="/images/blogs_images/blog-card129.webp" alt="ChatGPTメモリ機能強化の関連記事" loading="lazy"
+                            decoding="async">
+                        <div class="related-card-title">ChatGPTメモリ機能が強化、過去会話とGmail参照で何が変わるか</div>
+                    </a>
+                    <a href="/blogs/blog024.html" class="related-card">
+                        <img src="/images/blogs_images/blog-card024.webp" alt="AI導入失敗理由の関連記事" loading="lazy"
+                            decoding="async">
+                        <div class="related-card-title">AI導入が失敗する本当の理由｜業務課題ベースで進める成功の鉄則</div>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年5月最新】Google AI Mode更新、AI検索で企業サイトは何を変えるべきか | MIRAINAブログ</title>
+    <meta name="description"
+        content="Google AI Mode更新を解説。AI Overviewsの新導線、公式が示すサイト運営側の考え方、企業が今やるべきLLMO対応を整理します。">
+    <meta property="og:title" content="【2026年5月最新】Google AI Mode更新、AI検索で企業サイトは何を変えるべきか">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog131.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog131-1.webp">
+    <meta property="og:description"
+        content="Google AI Mode更新を解説。AI Overviewsの新導線、公式が示すサイト運営側の考え方、企業が今やるべきLLMO対応を整理します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>Google AI Mode更新、AI検索で企業サイトは何を変えるべきか</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.05.08</span>
+                    <div class="article-tags">
+                        <p class="article-tag">Google</p>
+                        <p class="article-tag">AI Mode</p>
+                        <p class="article-tag">AI検索</p>
+                        <p class="article-tag">LLMO</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年5月最新】Google AI Mode更新、AI検索で企業サイトは何を変えるべきか</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog131-1.webp" alt="Google AI Mode更新とAI検索の変化を表すイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    「AI Modeって何が変わったのか」「AI検索で自社サイトはクリックされなくなるのか」と気になって検索する人が増えています。
+                    一方で、すでにAIを使っている人は「今回のGoogle更新はSEOやLLMOにどう影響する？」とAIへ直接聞きます。
+                    Googleは2026年5月6日、AI ModeとAI Overviewsに関して5つの導線改善を発表しました。
+                    本記事では、AIが苦手な人の検索、AI利用者のプロンプト、そしてGoogle公式がサイト運営者へ示している考え方をつなげて、
+                    企業サイトが今どこを変えるべきかを整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. まず押さえるべき事実：Googleが5月6日に更新した5つの導線</a></li>
+                    <li><a href="#section2">2. AIが苦手な人は何を検索し、AI利用者はどう聞くのか</a></li>
+                    <li><a href="#section3">3. Google公式はサイト運営側に何を求めているか</a></li>
+                    <li><a href="#section4">4. 企業・現場への影響：AI検索でクリックされる条件が変わる</a></li>
+                    <li><a href="#section5">5. 今やるべきこと：中小企業向け3ステップ</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="section1">1. まず押さえるべき事実：Googleが5月6日に更新した5つの導線</h2>
+                <p>
+                    Googleは2026年5月6日、AI ModeとAI Overviewsについて、ユーザーがウェブ上の情報源へ移動しやすくなる5つの更新を案内しました。
+                    中身は単なる見た目変更ではありません。AI回答の末尾に深掘り先を出す、購読中メディアのリンクを目立たせる、
+                    体験談やコミュニティ視点を見せる、本文の近くにリンクを差し込む、リンク先のプレビューを出す、という流れです。
+                    つまりGoogleは、AI回答の中で完結させるより、<strong>AIを起点に外部サイトへ送る導線を強める</strong>方向へ舵を切っています。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>更新項目</th>
+                                <th>ユーザー側の変化</th>
+                                <th>サイト運営側の意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>深掘り先の提案</th>
+                                <td>AI回答のあとに関連記事や分析へ進みやすくなる</td>
+                                <td>比較記事や事例記事が拾われやすくなる</td>
+                            </tr>
+                            <tr>
+                                <th>購読リンクの強調</th>
+                                <td>信頼している媒体へ戻りやすい</td>
+                                <td>ブランド指名や継続読者の価値が上がる</td>
+                            </tr>
+                            <tr>
+                                <th>体験談プレビュー</th>
+                                <td>一次体験やコミュニティ知見を探しやすい</td>
+                                <td>現場知見の薄い一般論だけでは弱くなる</td>
+                            </tr>
+                            <tr>
+                                <th>本文横のインラインリンク</th>
+                                <td>気になった論点からすぐ元サイトへ飛べる</td>
+                                <td>段落ごとの論点設計が重要になる</td>
+                            </tr>
+                            <tr>
+                                <th>リンク先プレビュー</th>
+                                <td>どのサイトへ飛ぶか事前に判断できる</td>
+                                <td>タイトル、サイト名、要旨の明快さが効く</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <figure class="article-figure">
+                    <img src="/images/blogs_images/blog131-2.webp" alt="Google公式ブログのAI Mode更新案内画面" loading="lazy" decoding="async">
+                    <figcaption>Google公式ブログ。AI ModeとAI Overviewsの導線改善が2026年5月6日に案内された</figcaption>
+                </figure>
+
+                <p>
+                    Googleは同じ記事で、こうした改善の裏側に <strong>query fan-out</strong> の考え方があるとも説明しています。
+                    1つの質問を複数の小さな論点に分け、関連する情報源を同時に探す設計です。
+                    そのため、企業サイト側も「1ページで1つの広い話題をぼんやり説明する」より、
+                    <strong>比較、事例、一次情報、判断条件</strong>を明確に分けた方が拾われやすくなります。
+                </p>
+
+                <h2 id="section2">2. AIが苦手な人は何を検索し、AI利用者はどう聞くのか</h2>
+                <p>
+                    今回のテーマが強い理由は、検索行動とAIへの質問行動がはっきり分かれるからです。
+                    AIに不慣れな人はまず検索窓で不安を言語化します。すでにAIを使っている人は、公式情報を自分で読む前にAIへ「要点」「影響」「次アクション」を聞きます。
+                    つまり記事側は、検索クエリに答えるだけでは足りず、<strong>AIが引用しやすい一次情報の整理</strong>にもなっている必要があります。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>AIが苦手な人の検索</th>
+                                <th>AI利用者のプロンプト</th>
+                                <th>AIが引用しやすい情報</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>AI Mode 何が変わった</th>
+                                <td>「今回のGoogle更新を3分でわかるように教えて」</td>
+                                <td>Google公式ブログの5つの更新一覧</td>
+                            </tr>
+                            <tr>
+                                <th>AI検索 クリック減る</th>
+                                <td>「AI Overviewsでサイト流入はどう変わる？」</td>
+                                <td>インラインリンク、プレビュー、深掘り導線の説明</td>
+                            </tr>
+                            <tr>
+                                <th>AI Overviews SEO 対策</th>
+                                <td>「AI Mode時代にサイト側は何を直すべき？」</td>
+                                <td>Search Centralの運営者向けガイド</td>
+                            </tr>
+                            <tr>
+                                <th>Google AI検索 公式</th>
+                                <td>「一次情報ベースでまとめて。憶測は省いて」</td>
+                                <td>Google公式ブログ、Help、Search Central</td>
+                            </tr>
+                            <tr>
+                                <th>AI検索で引用される方法</th>
+                                <td>「LLMO観点で今やるべきことを3つにして」</td>
+                                <td>query fan-out、people-first content、情報源明示</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    実際、AI Modeの公式ヘルプでは、AI Modeはテキスト、音声、画像で質問でき、
+                    複雑な問いや比較に向いていると整理されています。さらに、質問を複数のサブトピックへ分けて横断検索する仕組みも明記されています。
+                    だからAIに「この更新の意味を教えて」と聞いたとき、AIは感想記事よりも<strong>公式ブログ、ヘルプ、運営者向けドキュメント</strong>を引きやすいのです。
+                </p>
+                <p>
+                    ここはLLMOの観点でも重要です。AI検索で拾われる記事は、単に早く出した記事ではなく、
+                    <strong>一次情報の意味を翻訳し、ユーザーの意思決定に必要な条件まで分解している記事</strong>です。
+                    MIRAINAが<a href="/services/llmo_insight.html">LLMO Insight</a>で見ているのも、まさにこの引用構造です。
+                </p>
+
+                <h2 id="section3">3. Google公式はサイト運営側に何を求めているか</h2>
+                <p>
+                    ここで誤解しやすいのは、「AI Mode専用の新しい裏技が必要になるのでは」という見方です。
+                    しかしGoogle Search Centralの公式ガイドは、AI OverviewsやAI Modeに出るための<strong>追加の特別要件はない</strong>と明記しています。
+                    既存のSEOの基本、技術要件の順守、そして helpful / reliable / people-first な内容づくりが引き続き中心です。
+                </p>
+
+                <figure class="article-figure">
+                    <img src="/images/blogs_images/blog131-3.webp" alt="Google Search CentralのAI features and your websiteページ" loading="lazy" decoding="async">
+                    <figcaption>Google Search Central。AI Mode向けに特別な別ルールを作るより、基本的なSEOと有益性が重要だと示している</figcaption>
+                </figure>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">よくある誤解</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>AI検索専用の裏設定が必要</li>
+                                    <li>キーワードを増やせば出やすい</li>
+                                    <li>長文なら何でも有利</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">Google公式の立場</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>追加要件より基本SEO</strong></li>
+                                    <li>役立つ情報源としての信頼性</li>
+                                    <li>複雑な質問に答える構造化</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">AI検索向けに魔法の設定が増えたわけではなく、評価軸の見え方が変わっている</p>
+                </div>
+
+                <p>
+                    ただし、「今まで通りでよい」という意味でもありません。GoogleはAI featuresの説明で、
+                    AI ModeやAI Overviewsは従来検索よりも幅広い関連ページを見つけるため、より多様なサイトに機会があると述べています。
+                    逆に言えば、表面的な定義だけのページより、<strong>比較、一次体験、実務判断、出典のある説明</strong>を持つページの方が相対的に強くなります。
+                </p>
+
+                <h2 id="section4">4. 企業・現場への影響：AI検索でクリックされる条件が変わる</h2>
+                <p>
+                    今回の更新が企業サイトに与える影響は、「検索結果1位を取る」だけでは足りなくなる点です。
+                    AI回答の中に直接リンクが置かれ、リンク先の雰囲気まで事前に見えるようになると、
+                    クリックは順位だけでなく<strong>文脈一致</strong>で決まります。
+                    たとえば「AI Mode 更新 何が変わった」であれば、ニュース要約だけのページより、
+                    企業向けの影響や次アクションまで整理しているページの方が選ばれやすくなります。
+                </p>
+                <p>
+                    また、Googleは体験談やコミュニティ視点の見せ方も強めています。
+                    これはBtoBサイトでも同じで、抽象論だけでなく「実際の現場では何が論点になるか」を持つ記事が強くなります。
+                    MIRAINAブログで<a href="/blogs/blog107.html">AI検索白書2026</a>や
+                    <a href="/blogs/blog008.html">AI Mode解説</a>のような記事が読まれるのも、
+                    定義だけでなく実務判断へ落としているからです。
+                </p>
+                <p>
+                    MIRAINA視点で言えば、今回の変化はSEOの終わりではなく、<strong>SEOの評価単位が「ページ」から「論点の役立ち方」へ少しずつ移るサイン</strong>です。
+                    タイトル、要約、見出し、図表、参考リンクまで含めて「AIが要点を抜き出しやすいか」「人がそこからクリックしたくなるか」を同時に設計する必要があります。
+                </p>
+
+                <h2 id="section5">5. 今やるべきこと：中小企業向け3ステップ</h2>
+                <p>
+                    中小企業が最初にやるべきことは、全部のページを書き直すことではありません。AI検索で拾われやすいテーマから順に、
+                    役割を明確にしたページへ整える方が現実的です。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">複雑な質問を洗い出す<br>比較・費用・導入判断の検索を整理</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">一次情報と実務判断を足す<br>出典、事例、向き不向きを追記</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">AI引用を計測する<br>AI回答でどう見られるかを確認</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">AI検索対応は「書くこと」より先に、どの質問へ答えるかを決めると進めやすい</p>
+                </div>
+
+                <p>
+                    まずは「比較されるページ」「導入判断で読まれるページ」「不安解消に使われるページ」を洗い出してください。
+                    たとえば、AI導入支援なら価格、対象業務、他社ツールとの違い、失敗パターンが代表的な論点です。
+                    こうした複雑な質問はAI Modeと相性がよく、単発のサービス紹介ページだけでは答えきれません。
+                </p>
+                <p>
+                    次に、一次情報と現場判断を1ページの中で接続します。公式発表へのリンク、更新日、対象読者、向いているケース・向かないケース、
+                    具体例があるだけで、AIにも人にも使いやすいページになります。
+                    ここは<a href="/services/ai_consulting.html">生成AI活用支援</a>でもよく整備する部分です。
+                </p>
+                <p>
+                    最後に、公開後は「AIにどう引用されたか」を見ます。検索順位だけでは、AI回答内でどの論点が拾われたか分かりません。
+                    だからこそ、AI検索上の見え方を定点観測する<a href="/services/llmo_insight.html">LLMO Insight</a>のような視点が重要になります。
+                    AI Mode時代は、公開して終わりではなく、<strong>引用され方まで含めて改善する運用</strong>が必要です。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    Googleの2026年5月6日の更新は、AI ModeとAI Overviewsを「AI回答だけを読む場」ではなく、
+                    ウェブ上の有益な情報源へ移動する起点として強める内容でした。深掘りリンク、購読リンク、体験談、インラインリンク、プレビューの5つが中心です。
+                </p>
+                <p>
+                    サイト運営者に必要なのは、AI向けの裏技ではありません。Google公式が示す通り、基本的なSEO、有益で信頼できる情報、
+                    そして複雑な質問に答えられる構造です。AIが苦手な人の検索にも、AI利用者のプロンプトにも答えられるページを増やすことが、
+                    AI検索時代の実務的な打ち手になります。
+                </p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://blog.google/products-and-platforms/products/search/explore-web-generative-ai-search/" target="_blank" rel="noopener">Google: 5 new ways to explore the web with generative AI in Search（2026年5月6日）</a></li>
+                        <li><a href="https://developers.google.com/search/docs/appearance/ai-features?hl=en" target="_blank" rel="noopener">Google Search Central: AI features and your website</a></li>
+                        <li><a href="https://support.google.com/websearch/answer/16011537?co=GENIE.Platform%3DDesktop&hl=en" target="_blank" rel="noopener">Google Search Help: Get AI-powered responses with AI Mode in Google Search</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">AI検索で自社サイトが選ばれる導線、設計できていますか？</h2>
+                    <p class="cta-text">MIRAINAでは、AI検索での見え方分析から<br>LLMO設計・記事改善・運用伴走まで支援します。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、生成AI活用支援・AI研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog008.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card008.webp" alt="AI Modeとは何かの関連記事" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2025.10.05</div>
+                            <div class="related-text">AIモード（AI Mode）とは？検索が“会話”に変わる新時代のはじまり</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog107.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card107.webp" alt="AI検索白書2026の関連記事" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.17</div>
+                            <div class="related-text">AI検索利用率が8ヶ月で3.5倍に急増：AI検索白書2026が示す検索行動の変化</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

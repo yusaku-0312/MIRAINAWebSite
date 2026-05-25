@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年5月最新】ChatGPTの高度アカウント保護とは？社内情報を守る新設定を解説 | MIRAINAブログ</title>
+    <meta name="description"
+        content="ChatGPTの高度アカウント保護を2026年4月30日のOpenAI公式発表と最新ヘルプから解説。MFAとの違い、パスキー、社内利用で先に確認すべき運用ポイントを整理します。">
+    <meta property="og:title" content="【2026年5月最新】ChatGPTの高度アカウント保護とは？社内情報を守る新設定を解説">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog123.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog123-1.webp">
+    <meta property="og:description"
+        content="ChatGPTの高度アカウント保護を2026年4月30日のOpenAI公式発表と最新ヘルプから解説。MFAとの違い、パスキー、社内利用で先に確認すべき運用ポイントを整理します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>ChatGPTの高度アカウント保護とは？社内情報を守る新設定を解説</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.05.01</span>
+                    <div class="article-tags">
+                        <p class="article-tag">ChatGPT</p>
+                        <p class="article-tag">セキュリティ</p>
+                        <p class="article-tag">OpenAI</p>
+                        <p class="article-tag">AI導入</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年5月最新】ChatGPTの高度アカウント保護とは？社内情報を守る新設定を解説</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog123-1.webp" alt="ChatGPTの高度アカウント保護と社内情報保護のイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    ChatGPTを仕事で使い始めた人ほど、
+                    <strong>「社内資料を入れているけどアカウント乗っ取りは大丈夫か」「MFAだけで十分か」「退職者や外部委託者の端末にログインが残っていないか」</strong>
+                    と不安になります。OpenAIは2026年4月30日、
+                    <strong>Advanced Account Security（高度アカウント保護）</strong>を発表しました。
+                    この記事では、AIに不慣れでもすでにChatGPTを業務利用している人が検索しそうな疑問に合わせて、
+                    新機能の中身、従来のMFAとの違い、社内運用で先に決めるべきことを整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. ChatGPTの高度アカウント保護とは？OpenAIが追加した新設定の概要</a></li>
+                    <li><a href="#section2">2. 何が強化される？パスキー・復旧制限・セッション管理</a></li>
+                    <li><a href="#section3">3. 従来のMFAと何が違うのか</a></li>
+                    <li><a href="#section4">4. AIを仕事で使う人が先に確認すべき注意点</a></li>
+                    <li><a href="#section5">5. 中小企業が今やるべきアカウント運用ルール</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+
+                <h2 id="section1">1. ChatGPTの高度アカウント保護とは？OpenAIが追加した新設定の概要</h2>
+                <p>
+                    【公式情報】OpenAIは2026年4月30日、ChatGPTアカウント向けの
+                    <strong>Advanced Account Security</strong>を公開しました。これはWeb版の
+                    Security設定から任意で有効化する追加保護で、ChatGPTだけでなく
+                    <strong>同じログインで使うCodexにも適用</strong>されます。対象は、攻撃リスクの高い人だけでなく、
+                    「とにかく最も強い保護を使いたい」利用者です。
+                </p>
+                <p>
+                    【解釈】この発表が重要なのは、ChatGPTが単なるチャットではなく、
+                    <strong>社内文書、会話履歴、接続アプリ、開発作業の入口</strong>になってきたからです。
+                    既存の<a href="/blogs/blog052.html">ChatGPT File Library</a>や
+                    <a href="/blogs/blog112.html">workspace agents</a>のように、AIが社内文脈へ近づくほど、
+                    「回答の精度」だけでなく「誰がそのアカウントを使えるのか」が経営課題になります。
+                </p>
+
+                <h2 id="section2">2. 何が強化される？パスキー・復旧制限・セッション管理</h2>
+                <p>
+                    【公式情報】高度アカウント保護では、サインイン方法、復旧方法、セッション管理、学習利用の扱いがまとめて強化されます。
+                    普通の「2段階認証を足す」発想ではなく、
+                    <strong>乗っ取りや復旧悪用の経路自体を狭める</strong>設計です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>高度アカウント保護の内容</th>
+                                <th>実務での意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>サインイン</th>
+                                <td>パスキーまたは物理セキュリティキー必須、パスワードログイン無効化</td>
+                                <td>フィッシング耐性を上げやすい</td>
+                            </tr>
+                            <tr>
+                                <th>アカウント復旧</th>
+                                <td>メール・SMS復旧を無効化し、バックアップ用パスキーや復旧キーを使用</td>
+                                <td>メール乗っ取り経由の侵入を減らせる</td>
+                            </tr>
+                            <tr>
+                                <th>セッション</th>
+                                <td>セッション短縮、ログイン通知、アクティブ端末の確認機能</td>
+                                <td>放置端末や不審ログインの発見がしやすい</td>
+                            </tr>
+                            <tr>
+                                <th>学習利用</th>
+                                <td>会話は自動で学習不使用</td>
+                                <td>個人設定の抜け漏れを減らせる</td>
+                            </tr>
+                            <tr>
+                                <th>復旧サポート</th>
+                                <td>有効化後はOpenAI Supportが復旧支援できない</td>
+                                <td>管理ルールなしに有効化すると逆に危険</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    【公式情報】OpenAIはYubicoとも連携し、YubiKeyの優遇価格提供を始めました。
+                    つまり今回の主眼は「設定項目を増やすこと」ではなく、
+                    <strong>パスワード中心の運用から、パスキー・ハードウェアキー中心へ移すこと</strong>にあります。
+                </p>
+
+                <h2 id="section3">3. 従来のMFAと何が違うのか</h2>
+                <p>
+                    【公式情報】通常のMFAでは、認証アプリ、プッシュ通知、SMS/WhatsApp、パスキーなど複数の検証方法を使えます。
+                    一方で、OpenAI Help Centerには
+                    <strong>MFAを有効にしても他端末のログインは自動で切れず、組織全体への強制も現時点ではできない</strong>
+                    と明記されています。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">通常のMFA</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>パスワード運用が残る</li>
+                                    <li>SMSやメール経由の回避余地がある</li>
+                                    <li>既存セッションは自動終了しない</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">→</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">高度アカウント保護</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>パスキー中心に寄せる</strong></li>
+                                    <li>メール/SMS復旧を止める</li>
+                                    <li>短いセッションと通知で監視しやすい</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">図1：MFAを足す段階から、アカウント運用そのものを強くする段階への変化</p>
+                </div>
+
+                <p>
+                    【重要な補足】ただし高度アカウント保護は万能ではありません。
+                    OpenAIの最新ヘルプでは、
+                    <strong>対象は eligible consumer ChatGPT accounts に限られ、ChatGPT Enterpriseや企業管理ドメインでは使えない</strong>
+                    とされています。つまり、企業の本命は依然として
+                    <strong>SSO、権限管理、退職時の失効、共有禁止ルール</strong>です。高度アカウント保護は個人利用や小規模チームの守りを強くする機能であり、
+                    組織管理の代替ではありません。
+                </p>
+
+                <h2 id="section4">4. AIを仕事で使う人が先に確認すべき注意点</h2>
+                <p>
+                    ChatGPTのセキュリティを考えるとき、実務では
+                    <strong>「会話の安全」と「アカウントの安全」と「APIキーの安全」</strong>を分けて考える必要があります。
+                    例えば、個人情報をローカルで伏せてから使う発想は
+                    <a href="/blogs/blog117.html">OpenAI Privacy Filter</a>が参考になりますが、
+                    それだけでアカウント乗っ取りやAPIキー漏えいは防げません。
+                </p>
+                <p>
+                    【公式情報】OpenAIは別のヘルプ記事で、APIキーは環境変数で管理し、第三者ツールに安易に渡さず、
+                    公開リポジトリへ出さないことを推奨しています。つまり、
+                    <strong>社内でAIを使っている人が困る事故は、ChatGPT画面内だけでなく、連携アプリや開発環境でも起こる</strong>
+                    ということです。
+                </p>
+                <p>
+                    【MIRAINA視点】AIに不慣れな企業ほど「便利そうだからまず使う」から始まり、
+                    あとで権限とルールを付け足します。この順番だと、
+                    誰がどの端末でログインし、どの会話に社内情報が入り、どのAPIキーがどこに埋まっているか分からなくなります。
+                    高度アカウント保護は有効ですが、それ以上に
+                    <strong>個人アカウント運用の棚卸し</strong>を先にやるべきです。
+                </p>
+
+                <h2 id="section5">5. 中小企業が今やるべきアカウント運用ルール</h2>
+                <p>
+                    中小企業が今すぐやるべきことは、全員に難しい設定を求めることではありません。
+                    まずは「どのアカウントが危ないか」を切り分けることです。営業責任者、採用担当、経営者、外部委託者のように、
+                    社内資料や顧客情報に近い人から運用を固める方が現実的です。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">個人課金・共有アカウント・API利用を棚卸しする</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">重要ユーザーからMFAとパスキーを標準化する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">高度アカウント保護を使う人だけ復旧手順を文書化する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">APIキーは環境変数・利用用途別分割・定期ローテーションに切り替える</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 05</span>
+                            <span class="step-text">退職・委託終了時のログアウトと権限剥奪を手順化する</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図2：ChatGPTを業務利用する会社が最初に整えるべき5ステップ</p>
+                </div>
+
+                <p>
+                    もし「どこまで個人アカウントで許容するか」「ChatGPT BusinessやEnterpriseへ上げるべきか」が曖昧なら、
+                    <a href="/services/ai_consulting.html">生成AI活用支援</a>で業務と情報区分を整理し、
+                    現場向けには<a href="/services/ai_training.html">AI研修</a>で安全な使い方を標準化するのが有効です。
+                    実装を伴う場合は<a href="/services/ai_develop.html">AI開発</a>と合わせて、
+                    アカウント運用とAPI運用を分離して設計すると事故が起きにくくなります。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    OpenAIの高度アカウント保護は、2026年4月30日に公開された
+                    <strong>ChatGPTアカウント向けの強化設定</strong>です。パスキーや物理キー必須化、
+                    メール/SMS復旧の停止、短いセッション、学習不使用の自動化により、
+                    ChatGPTを仕事で使う人の守りを一段強くできます。
+                </p>
+                <p>
+                    ただし本質は、機能をオンにすることだけではありません。
+                    <strong>個人アカウント運用、APIキー管理、退職時の失効、Enterprise/SSOへの移行判断</strong>を含めて、
+                    会社としての運用ルールを作れるかどうかです。
+                    「ChatGPTに社内情報を入れて大丈夫か」と感じた時点で、便利さの議論だけでなく守りの設計も始めるべき段階に入っています。
+                </p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://openai.com/index/advanced-account-security/" target="_blank" rel="noopener">OpenAI: Introducing Advanced Account Security（2026年4月30日）</a></li>
+                        <li><a href="https://help.openai.com/en/articles/8304786-how-can-i-keep-my-openai-accounts-secure" target="_blank" rel="noopener">OpenAI Help Center: How can I keep my OpenAI accounts secure?（2026年5月1日更新確認）</a></li>
+                        <li><a href="https://help.openai.com/en/articles/7967234-does-openai-offer-multi-factor-authentication-mfa-two-factor-authentication-2fa" target="_blank" rel="noopener">OpenAI Help Center: Enabling or disabling MFA（2026年4月25日更新確認）</a></li>
+                        <li><a href="https://help.openai.com/en/articles/20001039-passkeys-to-secure-your-openai-account" target="_blank" rel="noopener">OpenAI Help Center: Passkeys to Secure Your OpenAI Account（2026年4月25日更新確認）</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">ChatGPTを業務利用する前に、守りのルールも整えたいですか？</h2>
+                    <p class="cta-text">MIRAINAでは、AI導入の活用設計だけでなく、<br>アカウント運用・情報管理・現場定着まで伴走します。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog117.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card117.webp" alt="OpenAI Privacy Filterと個人情報保護" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.26</div>
+                            <div class="related-text">【2026年4月最新】OpenAI Privacy Filterとは？個人情報をローカルで伏せる新モデル</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog112.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card112.webp" alt="ChatGPT workspace agentsと社内AI活用" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.04.23</div>
+                            <div class="related-text">【2026年4月最新】ChatGPT workspace agentsで社内AI活用が変わる</div>
+                        </div>
+                    </a>
+                    <a href="/blogs/blog052.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/blogs_images/blog-card052.webp" alt="ChatGPT File LibraryとGoogle Drive統合" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2026.03.25</div>
+                            <div class="related-text">ChatGPT File Libraryとは？Google Drive統合で社内資料の再利用が変わる</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copy">© 2025 MIRAINA Inc. All rights reserved.</div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

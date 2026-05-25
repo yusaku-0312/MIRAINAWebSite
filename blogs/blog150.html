@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年5月最新】OpenAIとDell提携でCodexの社内導入はどう変わるか | MIRAINAブログ</title>
+    <meta name="description"
+        content="OpenAIとDellのCodex提携を解説。2026年5月18日の公式発表をもとに、ハイブリッド環境、オンプレ接続、監査ログ対応が日本企業の社内AI導入をどう変えるか整理します。">
+    <meta property="og:title" content="【2026年5月最新】OpenAIとDell提携でCodexの社内導入はどう変わるか">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog150.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog150-1.webp">
+    <meta property="og:description"
+        content="OpenAIとDellのCodex提携を解説。2026年5月18日の公式発表をもとに、ハイブリッド環境、オンプレ接続、監査ログ対応が日本企業の社内AI導入をどう変えるか整理します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>OpenAIとDell提携でCodexの社内導入はどう変わるか</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.05.25</span>
+                    <div class="article-tags">
+                        <p class="article-tag">OpenAI</p>
+                        <p class="article-tag">Dell</p>
+                        <p class="article-tag">Codex</p>
+                        <p class="article-tag">社内AI導入</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年5月最新】OpenAIとDell提携でCodexの社内導入はどう変わるか</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog150-1.webp" alt="OpenAIとDellのCodex提携を解説するイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    2026年5月18日、OpenAIは <strong>Dell Technologies と連携し、Codex をハイブリッド環境やオンプレミス環境へ広げる方針</strong> を発表しました。
+                    直近の<a href="/blogs/blog149.html">Gemini Omniの記事</a>が動画制作、<a href="/blogs/blog148.html">Gemini Sparkの記事</a>が常駐型AI秘書を扱ったのに対し、
+                    本記事では <strong>社内データの近くでAIエージェントを安全に動かす導入基盤</strong> に絞って整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. まず押さえるべき事実</a></li>
+                    <li><a href="#section2">2. なぜ今回の提携が重要なのか</a></li>
+                    <li><a href="#section3">3. 日本企業の社内AI導入はどう変わるか</a></li>
+                    <li><a href="#section4">4. 導入前に決めるべき設計項目</a></li>
+                    <li><a href="#section5">5. 先に見ておきたい注意点</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. まず押さえるべき事実</h2>
+                <p>
+                    OpenAIは2026年5月18日、<strong>Codex を Dell AI Data Platform と Dell AI Factory に近い形で活用しやすくする提携</strong>を公表しました。
+                    公式発表によれば、Codex はすでに <strong>週あたり400万人超の開発者</strong> に使われており、用途もコード生成だけでなく、
+                    レポート準備、プロダクトフィードバック整理、リード選別、フォローアップ文面作成などへ広がり始めています。
+                </p>
+                <p>
+                    重要なのは、今回の発表が「新しいモデルを出した」話ではなく、<strong>企業がすでに持っている社内データ、業務システム、統制環境の近くで Codex を動かす道筋</strong>を示したことです。
+                    OpenAIは、コードベース、ドキュメント、業務システム、運用知識、チームワークフローといった内部文脈へ Codex を近づけると説明しています。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>公式発表の要点</th>
+                                <th>実務上の意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>発表日</th>
+                                <td>2026年5月18日</td>
+                                <td>AIエージェント導入が機能比較から基盤設計へ移った節目</td>
+                            </tr>
+                            <tr>
+                                <th>利用規模</th>
+                                <td>Codexは週400万人超の開発者が利用</td>
+                                <td>一部検証段階を超え、実務投入前提の導入論点が増えた</td>
+                            </tr>
+                            <tr>
+                                <th>連携先</th>
+                                <td>Dell AI Data Platform と Dell AI Factory</td>
+                                <td>社内データを外へ出しにくい組織でも検討しやすい</td>
+                            </tr>
+                            <tr>
+                                <th>対象業務</th>
+                                <td>コード、レポート、顧客対応、業務調整まで拡大</td>
+                                <td>AI開発部門だけでなく管理部門や営業部門にも波及する</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    さらにOpenAIは別記事で、Codexの実運用には <strong>OpenTelemetry ログ出力、承認判断、ツール実行結果、MCP利用状況、ネットワーク許可・拒否の記録</strong> が重要だと説明しています。
+                    つまり今回の提携は、単に「社内で動かせる」ではなく、<strong>社内で監査しながら動かせる構成</strong> を取りにいった動きと見た方が実務的です。
+                </p>
+
+                <h2 id="section2">2. なぜ今回の提携が重要なのか</h2>
+                <p>
+                    多くの企業でAIエージェント導入が止まる理由は、モデル性能よりも <strong>データ配置、権限制御、監査ログ、責任分界</strong> にあります。
+                    チャットで便利でも、社内の設計書、顧客情報、運用マニュアル、システム記録に安全に触れられないと、本番業務では使い切れません。
+                </p>
+                <p>
+                    Dell側も同日の発表で、企業が求めているのはAIコンポーネントではなく <strong>AIの成果</strong> であり、そのためには
+                    「環境内で性能と運用が成り立つ証明」「オンプレミスの統制」「本番前の検証済みブループリント」が必要だと整理しています。
+                    既存の<a href="/blogs/blog122.html">OpenAI FedRAMPの記事</a>が公共・大企業向けの規制対応を扱ったのに対し、
+                    今回は <strong>より広い企業向けに、ハイブリッド導入の現実解</strong> を提示した発表です。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">従来のAI導入検討</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>まずモデル性能だけを比較する</li>
+                                    <li>社内データ接続は後回しになる</li>
+                                    <li>権限や監査はPoC後に詰まりやすい</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">今回の提携後</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>データ配置と統制を前提に導入設計する</strong></li>
+                                    <li>オンプレとクラウドの役割分担を先に決める</li>
+                                    <li>ログと承認境界を本番前に組み込める</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">論点が「AIが賢いか」から「社内で安全に回るか」へ移っている</p>
+                </div>
+
+                <p>
+                    MIRAINA視点では、この変化は中小企業にも無関係ではありません。自社サーバーを大規模に持っていない企業でも、
+                    社外に出しにくい契約情報、提案書、顧客対応履歴、開発資産はあります。そこへAIを接続したいなら、
+                    今後は機能比較だけでなく <strong>どの情報をどこまで渡すか、どの操作に承認を挟むか</strong> が導入成否を左右します。
+                </p>
+
+                <h2 id="section3">3. 日本企業の社内AI導入はどう変わるか</h2>
+                <p>
+                    一番変わるのは、AIを「質問に答える窓口」ではなく、<strong>社内文脈を読んで作業を進める担当者</strong>として設計しやすくなる点です。
+                    OpenAIは今回、Codexの活用先をコードレビューやテストだけでなく、報告準備、プロダクトフィードバック整理、リード判定、業務調整まで広げています。
+                    これは開発部門専用ツールから、全社的な業務エージェント基盤への拡張を示しています。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>業務シーン</th>
+                                <th>これまで詰まりやすかった点</th>
+                                <th>提携後に見直しやすい点</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>社内開発</th>
+                                <td>コードは読めても社内規約や運用事情を参照しにくい</td>
+                                <td>コード、設計書、運用手順を近い場所で扱いやすくなる</td>
+                            </tr>
+                            <tr>
+                                <th>営業支援</th>
+                                <td>顧客履歴と提案テンプレの接続が弱い</td>
+                                <td>社内ナレッジを参照した下書き生成を設計しやすい</td>
+                            </tr>
+                            <tr>
+                                <th>管理部門</th>
+                                <td>監査ログがなく本番利用に踏み切りにくい</td>
+                                <td>承認履歴や操作ログを残す前提で試しやすい</td>
+                            </tr>
+                            <tr>
+                                <th>顧客対応</th>
+                                <td>FAQと最新業務ルールの更新差分が反映しづらい</td>
+                                <td>内部文脈に近い構成で回答精度を上げやすい</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    既存の<a href="/blogs/blog036.html">Codex導入の記事</a>では、開発速度と役割分担の変化を扱いました。今回その続きとして重要なのは、
+                    「便利なAIを入れる」ではなく、<strong>社内システムの近くで、権限付きで、記録を残しながら動かす</strong> という本番条件が見え始めたことです。
+                    日本企業では特に、情報システム部門、法務、管理部門が同席した導入設計が増えるはずです。
+                </p>
+
+                <h2 id="section4">4. 導入前に決めるべき設計項目</h2>
+                <p>
+                    ここで先に決めるべきなのは、どのモデルを使うかだけではありません。むしろ重要なのは、<strong>AIに見せるデータ範囲、実行してよい操作、必ず人が承認する境界</strong>の3点です。
+                    ここが曖昧だと、PoCで動いても本番移行で止まります。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">参照させる社内データを<br>業務単位で分ける</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">実行系操作と閲覧系操作の<br>権限を分離する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">承認必須の操作を決め<br>ログ保存先を決める</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">小さな1業務で検証し<br>成功条件を数値化する</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">基盤より先に業務境界を決めると導入がぶれにくい</p>
+                </div>
+
+                <p>
+                    MIRAINAとしては、まず <a href="/services/ai_consulting.html">生成AI活用支援</a> で業務単位の権限設計を整理し、
+                    次に <a href="/services/ai_develop.html">AI開発</a> で必要な接続とログ設計を詰める流れを勧めます。
+                    その上で、現場側には <a href="/services/ai_training.html">AI研修</a> で「どこまで任せてよいか」「どこで確認するか」を揃えると、PoC止まりを避けやすくなります。
+                </p>
+
+                <h2 id="section5">5. 先に見ておきたい注意点</h2>
+                <p>
+                    第一に、今回の発表は <strong>すべての企業がすぐ同じ構成で使える</strong> という意味ではありません。OpenAIは「explore」と表現しており、
+                    Dell AI Data Platform や AI Factory とどう接続するかは、今後の具体展開も見ながら判断する必要があります。
+                </p>
+                <p>
+                    第二に、ハイブリッド化しても統制は自動では完成しません。OpenAIが説明する OpenTelemetry や Compliance Platform のようなログ基盤を入れても、
+                    どのログを誰が見て、異常時にどう止めるかを決めなければ運用は回りません。既存の<a href="/blogs/blog144.html">AWS Security Agentの記事</a>でも触れた通り、
+                    AIの本番活用では <strong>監査設計そのものが業務要件</strong> になります。
+                </p>
+                <p>
+                    第三に、社内導入は「全部つなぐ」ほど危険です。最初はソースコード、社内FAQ、提案書テンプレートなど、
+                    失敗時の影響範囲が読める領域から始めた方が安全です。特に個人情報や契約判断を伴う業務は、最初から自動実行まで進めず、
+                    下書き生成や候補提示までに留める方が現実的です。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    OpenAIとDellの今回の提携は、Codexの性能アピールというより、<strong>社内データの近くでAIエージェントを動かす本番導入の道筋</strong> を示した発表です。
+                    週400万人超という利用規模、業務用途の拡大、オンプレやハイブリッド環境との接続、監査ログ前提の運用がそろい、
+                    AI導入の論点はますます <strong>機能比較から運用設計へ</strong> 移っています。
+                </p>
+                <p>
+                    中小企業にとっても、今後は「どのAIが賢いか」より「自社のどの業務で、どの情報まで、どの承認付きで使うか」を決める方が重要です。
+                    その整理が先にできれば、CodexのようなAIエージェントは開発だけでなく、営業、管理、顧客対応の速度も大きく変える可能性があります。
+                </p>
+
+                <h3>参考ソース</h3>
+                <ul>
+                    <li><a href="https://openai.com/index/dell-codex-enterprise-partnership/" target="_blank"
+                            rel="noopener">OpenAI公式: OpenAI and Dell Technologies partner to bring Codex to hybrid and on-premises enterprise environments</a></li>
+                    <li><a href="https://openai.com/index/running-codex-safely/" target="_blank"
+                            rel="noopener">OpenAI公式: Running Codex safely at OpenAI</a></li>
+                    <li><a href="https://www.dell.com/en-us/blog/simplifying-enterprise-ai-introducing-the-dell-ai-ecosystem-program/" target="_blank"
+                            rel="noopener">Dell公式: Simplifying Enterprise AI: Introducing the Dell AI Ecosystem Program</a></li>
+                </ul>
+            </div>
+
+            <div class="article-cta">
+                <h2>社内データを活かしたAI導入設計を進めたい企業へ</h2>
+                <p>業務整理、権限設計、ログ前提の運用づくりまでMIRAINAが伴走します。</p>
+                <a href="/contact.html" class="cta-button">無料相談はこちら</a>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-label">この記事の監修者</div>
+                <div class="editor-name">芝 優作</div>
+                <p>
+                    MIRAINA代表。生成AI導入、LLMO、業務自動化の支援を行う。AIツール単体の紹介ではなく、
+                    現場で回る運用ルールと再現性のある業務設計を重視している。
+                </p>
+            </div>
+
+            <div class="article-related">
+                <h3>関連記事</h3>
+                <div class="related-grid">
+                    <a href="/blogs/blog036.html" class="related-card">
+                        <img src="/images/blogs_images/blog-card036.webp" alt="Codex導入の関連記事" loading="lazy"
+                            decoding="async">
+                        <div class="related-card-title">Codexとは？楽天事例でわかるAI開発導入法</div>
+                    </a>
+                    <a href="/blogs/blog122.html" class="related-card">
+                        <img src="/images/blogs_images/blog-card122.webp" alt="OpenAI FedRAMPの関連記事" loading="lazy"
+                            decoding="async">
+                        <div class="related-card-title">【2026年5月最新】OpenAIがFedRAMP Moderate取得、公共・大企業のAI導入はどう変わるか</div>
+                    </a>
+                    <a href="/blogs/blog144.html" class="related-card">
+                        <img src="/images/blogs_images/blog-card144.webp" alt="AWS Security Agentの関連記事" loading="lazy"
+                            decoding="async">
+                        <div class="related-card-title">【2026年5月最新】AWS Security Agentのコードレビュー拡張で脆弱性診断はどう変わるか</div>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>
