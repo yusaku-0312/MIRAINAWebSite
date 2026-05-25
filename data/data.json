@@ -103,7 +103,7 @@
       "id": 12,
       "title": "【最新版】Google Antigravityとは？次世代AIエディターの全貌を徹底解説",
       "description": "Google Deepmindが開発した次世代AIエディター「Antigravity」とは何かを徹底解説。Agentic AIとしての特徴、既存エディターとの違い、開発フローへの影響などを専門家視点でまとめた2025年最新ガイド。",
-      "thumbnail": "/images/blogs_images/blog-card012.png",
+      "thumbnail": "/images/blogs_images/blog-card012.webp",
       "alt": "【最新版】Google Antigravityとは？次世代AIエディターの全貌を徹底解説",
       "link": "/blogs/blog012.html",
       "date": "2025-10-25"
@@ -1135,6 +1135,15 @@
       "date": "2026-05-03"
     },
     {
+      "id": 127,
+      "title": "【2026年5月最新】OpenAIがAWS対応、Microsoft提携見直しで企業のAI導入はどう変わるか",
+      "description": "OpenAIが2026年4月27日にMicrosoft提携見直し、4月28日にAWS対応を発表。Azure独占緩和の要点と、中小企業のAI導入・クラウド選定への影響を解説します。",
+      "thumbnail": "/images/blogs_images/blog-card127.webp",
+      "alt": "OpenAIのAWS対応とMicrosoft提携見直し",
+      "link": "/blogs/blog127.html",
+      "date": "2026-05-04"
+    },
+    {
       "id": 128,
       "title": "【2026年5月最新】AnthropicがAI導入支援会社を設立、中堅企業のAI実装はどう変わるか",
       "description": "Anthropicが2026年5月4日に発表したAI導入支援会社設立を解説。中堅企業向けの実装伴走モデル、既存SIとの違い、日本企業への影響を整理します。",
@@ -1177,6 +1186,15 @@
       "thumbnail": "/images/blogs_images/blog-card132.webp",
       "alt": "ChatGPT for ExcelとGoogle Sheetsの活用イメージ",
       "link": "/blogs/blog132.html",
+      "date": "2026-05-09"
+    },
+    {
+      "id": 133,
+      "title": "【2026年5月最新】Claude Dreamingとは？AIエージェントが自己改善する新機能と企業への影響",
+      "description": "Anthropicが発表したClaude Dreamingの仕組み・導入事例・Outcomes・マルチエージェント機能を解説。Harvey完了率6倍、Wisedocs50%短縮の実績と中小企業の活用法を整理します。",
+      "thumbnail": "/images/blogs_images/blog-card133.webp",
+      "alt": "Claude DreamingによるAIエージェント自己改善の概念図",
+      "link": "/blogs/blog133.html",
       "date": "2026-05-09"
     },
     {
@@ -1322,6 +1340,24 @@
       "thumbnail": "/images/blogs_images/blog-card149.webp",
       "alt": "Gemini Omniと会話型動画編集の変化を解説するイメージ",
       "date": "2026-05-23"
+    },
+    {
+      "id": 150,
+      "title": "【2026年5月最新】OpenAIとDell提携でCodexの社内導入はどう変わるか",
+      "description": "OpenAIとDellのCodex提携を解説。2026年5月18日の公式発表をもとに、ハイブリッド環境、オンプレ接続、監査ログ対応が日本企業の社内AI導入をどう変えるか整理します。",
+      "link": "/blogs/blog150.html",
+      "thumbnail": "/images/blogs_images/blog-card150.webp",
+      "alt": "OpenAIとDellのCodex提携を解説するイメージ",
+      "date": "2026-05-25"
+    },
+    {
+      "id": 151,
+      "title": "【2026年5月最新】Google AI Modeで検索は長文化、AIに引用される記事設計はどう変わるか",
+      "description": "Google AI Modeの最新データをもとに、検索語の長文化、Planningクエリ増加、Personal Intelligence拡大がAIに引用される記事設計をどう変えるか解説します。",
+      "link": "/blogs/blog151.html",
+      "thumbnail": "/images/blogs_images/blog-card151.webp",
+      "alt": "Google AI Modeの検索長文化と記事設計の変化を解説するイメージ",
+      "date": "2026-05-25"
     }
   ],
   "works": [
