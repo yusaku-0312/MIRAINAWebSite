@@ -85,6 +85,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年4月最新】MicrosoftとPublicisが提携拡大、広告運用AIはどこまで自動化できるか](https://miraina-ai.com/blogs/blog105.html): MicrosoftとPublicisの2026年4月8日の提携拡大と、4月14日のPublicis決算をもとに、広告運用AIが担える範囲、人が握るべき承認境界、中小企業の導入順序を整理した記事。
 - [最新ブログ: 【2026年4月最新】AI Max移行でGoogle広告運用はどう変わるか](https://miraina-ai.com/blogs/blog106.html): Googleの2026年4月15日のAI Max移行発表と4月16日のAds Safety Reportをもとに、DSA自動アップグレード、Geminiによる広告審査、広告運用AIで中小企業が確認すべき情報設計を整理した記事。
 - [最新ブログ: 【2026年4月最新】AI検索利用率が8ヶ月で3.5倍に急増：AI検索白書2026が示す検索行動の変化](https://miraina-ai.com/blogs/blog107.html): Hakuhodo DY ONE「AI検索白書2026」の発表をもとに、AI検索利用率の3.5倍急増、ゼロクリックサーチ23.9%の実態、中小企業がAI検索で引用されるためのLLMO対策を整理した記事。
+- [最新ブログ: 【2026年5月最新】Google AI Ultra発表、AI内製の試作速度はどう変わるか](https://miraina-ai.com/blogs/blog152.html): Googleが2026年5月19日に発表したGoogle AI Ultraをもとに、月額100ドル新プラン、Gemini 3.5 Flash、Managed Agents対応がAI内製の試作速度をどう変えるか整理した記事。
 - [最新ブログ: 【2026年5月最新】Google AI Modeで検索は長文化、AIに引用される記事設計はどう変わるか](https://miraina-ai.com/blogs/blog151.html): Googleが2026年5月19日に公開したAI Mode利用データとSearch更新をもとに、検索語の長文化、Planningクエリ増加、Personal Intelligence拡大がAIに引用される記事設計をどう変えるか整理した記事。
 - [最新ブログ: 【2026年5月最新】OpenAIとDell提携でCodexの社内導入はどう変わるか](https://miraina-ai.com/blogs/blog150.html): OpenAIとDellが2026年5月18日に発表したCodex提携をもとに、ハイブリッド環境、オンプレ接続、監査ログ対応が日本企業の社内AI導入をどう変えるか整理した記事。
 - [最新ブログ: 【2026年5月最新】OpenAIがコンテンツ来歴検証を強化、AI画像の信頼性対応はどう変わるか](https://miraina-ai.com/blogs/blog147.html): OpenAIが2026年5月19日に発表したコンテンツ来歴強化をもとに、C2PA準拠、SynthID、公開検証ツールがAI画像の信頼性運用をどう変えるか整理した記事。

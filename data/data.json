@@ -1358,6 +1358,15 @@
       "thumbnail": "/images/blogs_images/blog-card151.webp",
       "alt": "Google AI Modeの検索長文化と記事設計の変化を解説するイメージ",
       "date": "2026-05-25"
+    },
+    {
+      "id": 152,
+      "title": "【2026年5月最新】Google AI Ultra発表、AI内製の試作速度はどう変わるか",
+      "description": "Google AI Ultra発表をもとに、月額100ドル新プラン、5倍利用枠、Managed Agents対応がAI内製の試作速度をどう変えるか解説します。",
+      "link": "/blogs/blog152.html",
+      "thumbnail": "/images/blogs_images/blog-card152.webp",
+      "alt": "Google AI Ultra発表とAI内製の試作速度変化を解説するイメージ",
+      "date": "2026-05-26"
     }
   ],
   "works": [
