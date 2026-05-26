@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>Lark Baseとは？kintone・Airtableとの違いと業務管理の始め方 | MIRAINAブログ</title>
+    <meta name="description"
+        content="Lark Baseとは何かを、機能、使いどころ、kintoneやAirtableとの違い、導入手順、失敗しやすい点まで解説します。Larkで案件管理や業務台帳をまとめたい企業向けの記事です。">
+    <meta property="og:title" content="Lark Baseとは？kintone・Airtableとの違いと業務管理の始め方">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog154.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog154-1.webp">
+    <meta property="og:description"
+        content="Lark Baseとは何かを、機能、使いどころ、kintoneやAirtableとの違い、導入手順まで解説します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+            </nav>
+        </div>
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>Lark Baseとは？kintone・Airtableとの違いと業務管理の始め方</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.05.26</span>
+                    <div class="article-tags">
+                        <p class="article-tag">Lark Base</p>
+                        <p class="article-tag">データベース</p>
+                        <p class="article-tag">業務管理</p>
+                        <p class="article-tag">ノーコード</p>
+                    </div>
+                </div>
+                <h1 class="article-title">Lark Baseとは？kintone・Airtableとの違いと業務管理の始め方</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog154-1.webp" alt="Lark Baseの使いどころを解説するイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    Lark Baseは、Lark上で使えるノーコードのデータベース機能です。表形式の管理にとどまらず、
+                    <strong>フォーム、ダッシュボード、オートメーション、複数ビュー</strong> までひとつの基盤で扱えるため、
+                    案件管理や採用管理、日報、台帳業務の置き換え先として検討されやすくなっています。
+                </p>
+                <p>
+                    この記事では、Lark全体像を整理した <a href="/blogs/blog153.html">Larkとは何かの記事</a> を前提に、
+                    Baseをどの業務で使うと効果が出やすいかを掘り下げます。承認連携まで含めて見たい方は
+                    <a href="/blogs/blog155.html">Lark 承認の記事</a> もあわせて確認してください。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. Lark Baseとは何か</a></li>
+                    <li><a href="#section2">2. 何ができるのか</a></li>
+                    <li><a href="#section3">3. kintone・Airtableとの違い</a></li>
+                    <li><a href="#section4">4. 向いている業務</a></li>
+                    <li><a href="#section5">5. 導入の進め方と注意点</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. Lark Baseとは何か</h2>
+                <p>
+                    公式のLark Baseページでは、Baseは「ノーコードで業務を動かすための基盤」として紹介されています。
+                    グリッド、カンバン、ガント、フォーム、ダッシュボード、オートメーションを組み合わせ、
+                    現場のデータ入力から管理者の可視化までを一気通貫で作れるのが特徴です。
+                </p>
+                <p>
+                    重要なのは、単体データベースとして見るだけでなく、<strong>Larkのチャット、Docs、承認とつながる前提で使う</strong>ことです。
+                    それによって、案件が更新されたら通知する、申請データを同期して集計する、会議メモからタスクを起票する、といった
+                    一連の流れを同じ環境で回しやすくなります。
+                </p>
+
+                <h2 id="section2">2. 何ができるのか</h2>
+                <p>
+                    Baseの検索意図は「表計算の代わりになるのか」から始まりやすいですが、実際の価値は
+                    <strong>表の先にある業務設計</strong> にあります。単なる一覧表ではなく、入力、更新、可視化、通知までつながるためです。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>機能</th>
+                                <th>できること</th>
+                                <th>向いている用途</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>複数ビュー</th>
+                                <td>Grid、Kanban、Gantt、Galleryなどを切り替え</td>
+                                <td>案件管理、進捗管理、制作管理</td>
+                            </tr>
+                            <tr>
+                                <th>フォーム</th>
+                                <td>入力フォームを作って現場から収集</td>
+                                <td>問い合わせ、日報、採用応募、現場報告</td>
+                            </tr>
+                            <tr>
+                                <th>ダッシュボード</th>
+                                <td>グラフや集計を自動反映</td>
+                                <td>KPI可視化、週次報告、経営会議</td>
+                            </tr>
+                            <tr>
+                                <th>オートメーション</th>
+                                <td>更新を起点に通知、担当割当、条件分岐</td>
+                                <td>営業進捗、依頼受付、社内運用</td>
+                            </tr>
+                            <tr>
+                                <th>AI補助</th>
+                                <td>AI分析や式生成などを支援</td>
+                                <td>入力補助、要約、初期構築の時短</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section3">3. kintone・Airtableとの違い</h2>
+                <p>
+                    Baseは、kintoneやAirtableの代替候補として比較されることが多い機能です。ただし、
+                    優劣というより、どのレイヤーに強みがあるかで見たほうが実務では正確です。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">専用DBツール起点</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>データベース機能が主役</li>
+                                    <li>周辺連携を後から組む</li>
+                                    <li>既存ツールとの共存前提</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">Lark Base起点</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>チャットや承認と同居</li>
+                                    <li>運用導線を一体で設計</li>
+                                    <li>通知や会話が近い</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">Baseは単体機能よりも、Lark全体の中にあることが差別化要素です。</p>
+                </div>
+
+                <p>
+                    kintoneが強いのは、業務アプリとしての定着実績やカスタマイズ文化です。Airtableは柔軟なデータモデリングと外部連携で強みがあります。
+                    一方のLark Baseは、<strong>チャットや承認との距離が近く、非エンジニアが業務基盤をまとめやすい</strong>ところに価値があります。
+                    そのため、「管理表そのもの」より「管理表のまわりのやり取りまで減らしたい」企業に向きます。
+                </p>
+
+                <h2 id="section4">4. 向いている業務</h2>
+                <p>
+                    Baseは最初の1つ目のユースケース選定が重要です。はじめから基幹業務すべてを載せるより、
+                    更新頻度が高く、関係者が多く、現状は表計算やチャットで散っている業務から始めると成功しやすくなります。
+                </p>
+                <p>
+                    具体的には、営業案件管理、採用進捗、制作ディレクション、店舗オペレーション、問い合わせ台帳あたりが相性の良い領域です。
+                    さらに、公式ヘルプでは <strong>Lark 承認のデータをBaseへ同期できる</strong>ことも案内されており、
+                    稟議や経費精算の見える化までつなげたい場合は
+                    <a href="/blogs/blog155.html">Lark 承認</a> との組み合わせが有効です。
+                </p>
+
+                <h2 id="section5">5. 導入の進め方と注意点</h2>
+                <p>
+                    Base導入でありがちな失敗は、「スプレッドシートをそのまま移すだけ」で終わることです。これでは閲覧先が変わるだけで、
+                    業務はほとんど改善しません。重要なのは、どの入力をフォーム化し、どの更新を通知し、どの数字をダッシュボードで追うかを決めることです。
+                </p>
+                <p>
+                    おすすめは、1つの台帳に対して次の4点を決めることです。誰が入力するか。何を自動通知するか。誰がどのビューを見るか。
+                    どの数字を週次で確認するか。この4点が決まると、Baseは「きれいな表」ではなく「回る運用」に近づきます。
+                </p>
+
+                <div class="article-cta">
+                    <h2>Lark Baseを業務に乗せたい企業へ</h2>
+                    <p>台帳設計、ビュー設計、ダッシュボード、通知ルールまでMIRAINAが初期構築を支援します。</p>
+                    <a href="/contact.html" class="cta-button">無料相談はこちら</a>
+                </div>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    Lark Baseは、表計算の延長ではなく、業務を流すためのノーコード基盤として使うと真価が出ます。
+                    特に、チャットや承認との往復まで含めて整理したい企業には、単体データベースよりも導入メリットが見えやすいツールです。
+                </p>
+                <p>
+                    Lark全体の判断軸を先に整理したい方は <a href="/blogs/blog153.html">Larkとは何かの記事</a>、
+                    稟議や経費精算までつなげたい方は <a href="/blogs/blog155.html">Lark 承認の記事</a> をあわせて確認してください。
+                </p>
+            </div>
+
+            <div class="article-source">
+                <h3>参考情報</h3>
+                <ul>
+                    <li><a href="https://www.larksuite.com/en_us/product/base" target="_blank"
+                            rel="noopener">Lark公式: Base</a></li>
+                    <li><a href="https://www.larksuite.com/hc/ja-JP/articles/500960426158-%E6%89%BF%E8%AA%8D%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92-base-%E3%81%AB%E5%90%8C%E6%9C%9F%E3%81%99%E3%82%8B"
+                            target="_blank" rel="noopener">Lark公式ヘルプ: 承認のデータをBaseに同期する</a></li>
+                    <li><a href="https://www.larksuite.com/ja_jp/product/overview" target="_blank"
+                            rel="noopener">Lark公式: 機能概要</a></li>
+                </ul>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-label">この記事の監修者</div>
+                <div class="editor-name">芝 優作</div>
+                <p>
+                    MIRAINA代表。AI導入、業務自動化、ノーコード実装支援を行う。管理表を作るだけで終わらず、
+                    現場で更新され続ける運用設計を重視している。
+                </p>
+            </div>
+
+            <div class="article-related">
+                <h3>関連記事</h3>
+                <div class="related-grid">
+                    <a href="/blogs/blog153.html" class="related-card">
+                        <img src="/images/blogs_images/blog-card153.webp" alt="Lark全体像の記事" loading="lazy"
+                            decoding="async">
+                        <div class="related-card-title">Larkとは？機能・料金・できることをわかりやすく解説</div>
+                    </a>
+                    <a href="/blogs/blog155.html" class="related-card">
+                        <img src="/images/blogs_images/blog-card155.webp" alt="Lark 承認の記事" loading="lazy"
+                            decoding="async">
+                        <div class="related-card-title">Lark 承認とは？稟議・経費精算を止めないワークフロー設計</div>
+                    </a>
+                    <a href="/blogs/blog065.html" class="related-card">
+                        <img src="/images/blogs_images/blog-card065.webp" alt="RAGの記事" loading="lazy"
+                            decoding="async">
+                        <div class="related-card-title">RAG（検索拡張生成）とは？企業の自社データ活用ガイド</div>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+            <div class="footer-center"></div>
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

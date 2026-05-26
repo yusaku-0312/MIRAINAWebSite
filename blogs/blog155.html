@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>Lark 承認とは？稟議・経費精算を止めないワークフロー設計 | MIRAINAブログ</title>
+    <meta name="description"
+        content="Lark 承認とは何かを、できること、向いている業務、ワークフロー設計の考え方、Base連携、導入時の注意点まで解説します。紙やスプレッドシートの稟議運用を見直したい企業向けの記事です。">
+    <meta property="og:title" content="Lark 承認とは？稟議・経費精算を止めないワークフロー設計">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog155.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog155-1.webp">
+    <meta property="og:description"
+        content="Lark 承認とは何かを、できること、向いている業務、ワークフロー設計の考え方まで解説します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+            </nav>
+        </div>
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>Lark 承認とは？稟議・経費精算を止めないワークフロー設計</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.05.26</span>
+                    <div class="article-tags">
+                        <p class="article-tag">Lark 承認</p>
+                        <p class="article-tag">ワークフロー</p>
+                        <p class="article-tag">稟議</p>
+                        <p class="article-tag">経費精算</p>
+                    </div>
+                </div>
+                <h1 class="article-title">Lark 承認とは？稟議・経費精算を止めないワークフロー設計</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog155-1.webp" alt="Lark 承認のワークフロー設計を解説するイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    Lark 承認は、申請、承認、処理、通知までをLark上で完結させるワークフロー機能です。
+                    公式ページでは、<strong>数百のテンプレート、ノーコードのワークフロー設計、チャット連携</strong> が強調されており、
+                    紙やメール、スプレッドシートで分断された稟議業務をまとめたい企業で有力な選択肢になります。
+                </p>
+                <p>
+                    この記事では、Lark全体像を整理した <a href="/blogs/blog153.html">Larkとは何かの記事</a> と、
+                    台帳運用を解説した <a href="/blogs/blog154.html">Lark Baseの記事</a> を踏まえ、
+                    承認機能がどこで効くのかを具体化します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. Lark 承認とは何か</a></li>
+                    <li><a href="#section2">2. 何ができるのか</a></li>
+                    <li><a href="#section3">3. 向いている業務</a></li>
+                    <li><a href="#section4">4. ワークフロー設計の考え方</a></li>
+                    <li><a href="#section5">5. Base連携と導入時の注意点</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. Lark 承認とは何か</h2>
+                <p>
+                    Lark 承認は、稟議、経費精算、購買申請、休暇申請などの承認業務をデジタル化する機能です。
+                    公式の承認ページでは、外出先でもワンクリックで確認・承認できることや、
+                    ノーコードで自社のプロセスに合わせてワークフローを設計できることが案内されています。
+                </p>
+                <p>
+                    ここで重要なのは、「フォームを作れること」よりも「承認の前後にある会話や記録と接続できること」です。
+                    申請後にチャットグループを作って詳細共有をしたり、最終結果を台帳へ同期したりできるため、
+                    承認だけが孤立しにくい設計になっています。
+                </p>
+
+                <h2 id="section2">2. 何ができるのか</h2>
+                <p>
+                    Lark 承認の実務価値は、単に紙を置き換えることではありません。誰が止めているか、どこで差し戻されたか、
+                    どの条件で承認ルートが変わるかを見える化し、承認そのものを業務改善の対象にできる点にあります。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>機能</th>
+                                <th>概要</th>
+                                <th>効果</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>テンプレート</th>
+                                <td>数百のテンプレートから開始できる</td>
+                                <td>ゼロから設計しなくても初期導入しやすい</td>
+                            </tr>
+                            <tr>
+                                <th>ノーコード設計</th>
+                                <td>条件分岐や役割設定が可能</td>
+                                <td>金額や部門で承認ルートを変えられる</td>
+                            </tr>
+                            <tr>
+                                <th>チャット連携</th>
+                                <td>承認グループをワンクリックで作成</td>
+                                <td>背景共有が早くなり、差し戻しが減りやすい</td>
+                            </tr>
+                            <tr>
+                                <th>モバイル対応</th>
+                                <td>外出先でも承認処理しやすい</td>
+                                <td>役員承認や現場承認の滞留を減らしやすい</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section3">3. 向いている業務</h2>
+                <p>
+                    もっとも相性が良いのは、承認者が複数いて、金額や条件でルートが変わり、進捗確認の問い合わせが頻発する業務です。
+                    具体的には、経費精算、購買申請、採用稟議、キャンペーン実施申請、契約レビューなどが挙げられます。
+                </p>
+                <p>
+                    一方で、承認者が1人だけで、月に数件しか発生しない単純業務なら、まずは
+                    <a href="/blogs/blog154.html">Lark Base</a> やフォームで十分なこともあります。
+                    そのため、Lark 承認は「複雑さがあるか」「止まるコストが高いか」で判断すると導入優先度が見えやすくなります。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">止まりやすい稟議</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>誰が承認者かわからない</li>
+                                    <li>口頭確認が必要</li>
+                                    <li>差し戻し理由が残らない</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">設計された承認</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>条件で自動ルーティング</li>
+                                    <li>チャットで背景共有</li>
+                                    <li>履歴と処理状況が残る</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">承認ツールの価値は、申請速度よりも「滞留と差し戻しの減少」にあります。</p>
+                </div>
+
+                <h2 id="section4">4. ワークフロー設計の考え方</h2>
+                <p>
+                    公式ヘルプでは、Lark 承認は申請、処理、承認、Cc通知などのステップを自由に設計でき、
+                    条件分岐型のルートも組めると説明されています。ここで大事なのは、
+                    最初から例外処理を全部盛りにしないことです。
+                </p>
+                <p>
+                    設計の順番としては、まず「誰が何を見て判断するか」を絞り、その後で金額や部署条件の分岐を足すのが安全です。
+                    申請フォームの項目を増やしすぎると入力で止まり、ルートを複雑にしすぎると管理者しか理解できなくなります。
+                    承認設計は、制度を完全再現するより、<strong>現場で回る最小限のルール</strong>から始めるべきです。
+                </p>
+
+                <h2 id="section5">5. Base連携と導入時の注意点</h2>
+                <p>
+                    Lark 承認の強みは、結果データをBaseへ同期し、一覧・集計・ダッシュボードに展開できる点です。
+                    公式ヘルプでも、承認データをBaseに同期して分析や可視化に使えることが案内されています。
+                    これにより、「承認する」だけでなく、「どの承認が詰まりやすいか」を管理できるようになります。
+                </p>
+                <p>
+                    注意点は、承認を電子化しただけで満足しないことです。紙からフォームに変わっても、
+                    差し戻し理由が曖昧、承認基準が人依存、申請内容の粒度が揃っていない状態では滞留は減りません。
+                    申請項目、ルート、通知先、集計先を一体で設計してはじめて、Lark 承認は効果を出します。
+                </p>
+
+                <div class="article-cta">
+                    <h2>稟議フローを止めたくない企業へ</h2>
+                    <p>Lark 承認の初期設計、フォーム整理、Base連携、運用ルール策定までMIRAINAが支援します。</p>
+                    <a href="/contact.html" class="cta-button">無料相談はこちら</a>
+                </div>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    Lark 承認は、申請の電子化ツールというより、意思決定の滞留を減らすための業務設計ツールです。
+                    とくに、チャット連携とBase連携まで含めると、稟議の前後にある確認や集計まで短くできます。
+                </p>
+                <p>
+                    Lark全体の導入判断を整理したい方は <a href="/blogs/blog153.html">Larkとは何かの記事</a>、
+                    台帳やダッシュボード設計まで深掘りしたい方は <a href="/blogs/blog154.html">Lark Baseの記事</a> をあわせて確認してください。
+                </p>
+            </div>
+
+            <div class="article-source">
+                <h3>参考情報</h3>
+                <ul>
+                    <li><a href="https://www.larksuite.com/ja_jp/product/approval" target="_blank"
+                            rel="noopener">Lark公式: 承認</a></li>
+                    <li><a href="https://www.larksuite.com/hc/ja-JP/articles/360041315273-%E7%AE%A1%E7%90%86%E8%80%85-%E6%89%BF%E8%AA%8D%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%82%92%E8%A8%AD%E8%A8%88%E3%81%99%E3%82%8B"
+                            target="_blank" rel="noopener">Lark公式ヘルプ: 承認ワークフローを設計する</a></li>
+                    <li><a href="https://www.larksuite.com/hc/ja-JP/articles/500960426158-%E6%89%BF%E8%AA%8D%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92-base-%E3%81%AB%E5%90%8C%E6%9C%9F%E3%81%99%E3%82%8B"
+                            target="_blank" rel="noopener">Lark公式ヘルプ: 承認のデータをBaseに同期する</a></li>
+                </ul>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-label">この記事の監修者</div>
+                <div class="editor-name">芝 優作</div>
+                <p>
+                    MIRAINA代表。AI導入、業務設計、現場運用改善を支援。制度に合わせるだけでなく、
+                    実際に承認が止まらない設計を重視している。
+                </p>
+            </div>
+
+            <div class="article-related">
+                <h3>関連記事</h3>
+                <div class="related-grid">
+                    <a href="/blogs/blog153.html" class="related-card">
+                        <img src="/images/blogs_images/blog-card153.webp" alt="Lark全体像の記事" loading="lazy"
+                            decoding="async">
+                        <div class="related-card-title">Larkとは？機能・料金・できることをわかりやすく解説</div>
+                    </a>
+                    <a href="/blogs/blog154.html" class="related-card">
+                        <img src="/images/blogs_images/blog-card154.webp" alt="Lark Baseの記事" loading="lazy"
+                            decoding="async">
+                        <div class="related-card-title">Lark Baseとは？kintone・Airtableとの違いと業務管理の始め方</div>
+                    </a>
+                    <a href="/blogs/blog062.html" class="related-card">
+                        <img src="/images/blogs_images/blog-card062.webp" alt="LLMO対策の記事" loading="lazy"
+                            decoding="async">
+                        <div class="related-card-title">LLMO対策で企業が埋もれない戦略ガイド</div>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+            <div class="footer-center"></div>
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

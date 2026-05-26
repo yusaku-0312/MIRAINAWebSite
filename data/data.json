@@ -1367,6 +1367,33 @@
       "thumbnail": "/images/blogs_images/blog-card152.webp",
       "alt": "Google AI Ultra発表とAI内製の試作速度変化を解説するイメージ",
       "date": "2026-05-26"
+    },
+    {
+      "id": 153,
+      "title": "Larkとは？機能・料金・できることをわかりやすく解説",
+      "description": "Larkとは何かを、機能、料金、できること、向いている企業、導入手順までまとめて解説します。SlackやNotion、kintoneを別々に使っている企業向けの記事です。",
+      "link": "/blogs/blog153.html",
+      "thumbnail": "/images/blogs_images/blog-card153.webp",
+      "alt": "Larkの機能と導入判断を解説するイメージ",
+      "date": "2026-05-26"
+    },
+    {
+      "id": 154,
+      "title": "Lark Baseとは？kintone・Airtableとの違いと業務管理の始め方",
+      "description": "Lark Baseとは何かを、機能、使いどころ、kintoneやAirtableとの違い、導入手順、失敗しやすい点まで解説します。",
+      "link": "/blogs/blog154.html",
+      "thumbnail": "/images/blogs_images/blog-card154.webp",
+      "alt": "Lark Baseの使いどころを解説するイメージ",
+      "date": "2026-05-26"
+    },
+    {
+      "id": 155,
+      "title": "Lark 承認とは？稟議・経費精算を止めないワークフロー設計",
+      "description": "Lark 承認とは何かを、できること、向いている業務、ワークフロー設計の考え方、Base連携、導入時の注意点まで解説します。",
+      "link": "/blogs/blog155.html",
+      "thumbnail": "/images/blogs_images/blog-card155.webp",
+      "alt": "Lark 承認のワークフロー設計を解説するイメージ",
+      "date": "2026-05-26"
     }
   ],
   "works": [
