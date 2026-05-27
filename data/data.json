@@ -1394,6 +1394,24 @@
       "thumbnail": "/images/blogs_images/blog-card155.webp",
       "alt": "Lark 承認のワークフロー設計を解説するイメージ",
       "date": "2026-05-26"
+    },
+    {
+      "id": 156,
+      "title": "【2026年5月最新】KPMGがClaudeを全社展開、AI導入設計はどう変わるか",
+      "description": "KPMG Claude提携をもとに、276,000人規模の全社AI導入、Digital Gateway組み込み、税務・法務での業務設計を解説します。",
+      "link": "/blogs/blog156.html",
+      "thumbnail": "/images/blogs_images/blog-card156.webp",
+      "alt": "KPMG Claude提携と全社AI導入設計を解説するイメージ",
+      "date": "2026-05-27"
+    },
+    {
+      "id": 157,
+      "title": "【2026年5月最新】Google検索の代理電話で予約導線はどう変わるか",
+      "description": "Google検索の代理電話と予約支援を解説。2026年5月19日のGoogle公式発表をもとに、美容室・サロンが予約導線で今やるべき情報整備を整理します。",
+      "link": "/blogs/blog157.html",
+      "thumbnail": "/images/blogs_images/blog-card157.webp",
+      "alt": "Google検索の代理電話と美容室の予約導線変化を解説するイメージ",
+      "date": "2026-05-27"
     }
   ],
   "works": [
