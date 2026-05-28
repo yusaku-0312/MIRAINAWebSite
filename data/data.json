@@ -1412,6 +1412,15 @@
       "thumbnail": "/images/blogs_images/blog-card157.webp",
       "alt": "Google検索の代理電話と美容室の予約導線変化を解説するイメージ",
       "date": "2026-05-27"
+    },
+    {
+      "id": 158,
+      "title": "【2026年5月最新】自己改善エージェントはどう作るか｜OpenAI Tax AI事例",
+      "description": "自己改善エージェントをOpenAI Tax AI事例で解説。現場訂正、評価データ、Codex改善ループを業務AI導入に落とし込む方法を整理します。",
+      "link": "/blogs/blog158.html",
+      "thumbnail": "/images/blogs_images/blog-card158.webp",
+      "alt": "自己改善エージェントとOpenAI Tax AI事例を解説するイメージ",
+      "date": "2026-05-28"
     }
   ],
   "works": [
