@@ -1421,6 +1421,15 @@
       "thumbnail": "/images/blogs_images/blog-card158.webp",
       "alt": "自己改善エージェントとOpenAI Tax AI事例を解説するイメージ",
       "date": "2026-05-28"
+    },
+    {
+      "id": 159,
+      "title": "【2026年5月最新】OpenAIがFrontier Governance Frameworkを公開、AIガバナンス設計はどう変わるか",
+      "description": "OpenAIが2026年5月28日に公開したFrontier Governance Frameworkをもとに、cyber offense、CBRN、監査、インシデント対応を踏まえたAIガバナンス設計を解説します。",
+      "link": "/blogs/blog159.html",
+      "thumbnail": "/images/blogs_images/blog-card159.webp",
+      "alt": "OpenAI Frontier Governance FrameworkとAIガバナンス設計を解説するイメージ",
+      "date": "2026-05-29"
     }
   ],
   "works": [
