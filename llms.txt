@@ -89,6 +89,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年5月最新】KPMGがClaudeを全社展開、AI導入設計はどう変わるか](https://miraina-ai.com/blogs/blog156.html): KPMG Claude提携をもとに、276,000人規模の全社AI導入、Digital Gateway組み込み、税務・法務での業務設計を整理した記事。
 - [最新ブログ: 【2026年5月最新】Google検索の代理電話で予約導線はどう変わるか](https://miraina-ai.com/blogs/blog157.html): Google検索の代理電話と予約支援をもとに、美容室・サロンが予約導線で今やるべき情報整備を整理した記事。
 - [最新ブログ: 【2026年5月最新】自己改善エージェントはどう作るか｜OpenAI Tax AI事例](https://miraina-ai.com/blogs/blog158.html): OpenAI Tax AI事例をもとに、自己改善エージェント、現場訂正、評価データ、Codex改善ループを業務AI導入に落とし込む方法を整理した記事。
+- [最新ブログ: 【2026年5月最新】ChatGPT app templatesで社内アプリ連携はどう変わるか](https://miraina-ai.com/blogs/blog160.html): ChatGPT app templatesをもとに、GitHub Enterprise、Snowflake、Databricks連携、MCP、ロール権限、アクション承認を中小企業の社内AI導入向けに整理した記事。
 - [最新ブログ: Lark Baseとは？kintone・Airtableとの違いと業務管理の始め方](https://miraina-ai.com/blogs/blog154.html): Lark Baseの複数ビュー、フォーム、ダッシュボード、オートメーションを整理し、kintoneやAirtableとの違いと向いている業務を解説した記事。
 - [最新ブログ: Larkとは？機能・料金・できることをわかりやすく解説](https://miraina-ai.com/blogs/blog153.html): Lark全体の機能、料金、できること、向いている企業、導入ステップを整理し、統合型業務基盤としての判断軸を解説した記事。
 - [最新ブログ: 【2026年5月最新】Google AI Ultra発表、AI内製の試作速度はどう変わるか](https://miraina-ai.com/blogs/blog152.html): Googleが2026年5月19日に発表したGoogle AI Ultraをもとに、月額100ドル新プラン、Gemini 3.5 Flash、Managed Agents対応がAI内製の試作速度をどう変えるか整理した記事。

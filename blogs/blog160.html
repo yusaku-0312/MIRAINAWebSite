@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年5月最新】ChatGPT app templatesで社内アプリ連携はどう変わるか | MIRAINAブログ</title>
+    <meta name="description"
+        content="ChatGPT app templatesを解説。2026年5月28日のOpenAI公式更新をもとに、GitHub Enterprise、Snowflake、Databricks連携と権限設計を整理します。">
+    <meta property="og:title" content="【2026年5月最新】ChatGPT app templatesで社内アプリ連携はどう変わるか">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog160.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog160-1.webp">
+    <meta property="og:description"
+        content="ChatGPT app templatesをもとに、社内アプリ連携、MCP、権限設計、承認設定を中小企業向けに整理します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>ChatGPT app templatesで社内アプリ連携はどう変わるか</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.05.30</span>
+                    <div class="article-tags">
+                        <p class="article-tag">ChatGPT</p>
+                        <p class="article-tag">MCP</p>
+                        <p class="article-tag">社内データ連携</p>
+                        <p class="article-tag">AI導入</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年5月最新】ChatGPT app templatesで社内アプリ連携はどう変わるか</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog160-1.webp" alt="ChatGPT app templatesと社内アプリ連携を解説するイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    2026年5月28日、OpenAIはChatGPT Businessの更新で
+                    <strong>ChatGPT app templates</strong> を案内しました。管理者が
+                    GitHub Enterprise、Snowflake、Databricks向けにワークスペース専用アプリを作り、
+                    OAuth、Webhook、MCP、アクセス権限を設定してから社内メンバーへ公開できる仕組みです。
+                </p>
+                <p>
+                    この記事では、既存の <a href="/blogs/blog112.html">ChatGPT workspace agents</a> の話と重複しないように、
+                    「エージェントで何を自動化するか」ではなく、<strong>社内アプリ連携を誰がどう管理するか</strong> に絞って解説します。
+                    中小企業がChatGPT BusinessやEnterpriseで社内データを扱う前に決めるべき権限、承認、テスト手順を整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. まず押さえるべき事実</a></li>
+                    <li><a href="#section2">2. なぜ社内アプリ連携の管理が変わるのか</a></li>
+                    <li><a href="#section3">3. app templatesで管理者が決めること</a></li>
+                    <li><a href="#section4">4. 中小企業が導入前に確認する順番</a></li>
+                    <li><a href="#section5">5. AI導入で今やるべきこと</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. まず押さえるべき事実</h2>
+                <p>
+                    OpenAIの2026年5月28日のChatGPT Businessリリースノートでは、Businessプランのワークスペース管理者とオーナーが、
+                    <strong>GitHub Enterprise、Snowflake、Databricks</strong> 向けの
+                    ChatGPT app templatesを使えるようになったと説明されています。
+                    これは一般公開されたアプリをそのまま有効化するのではなく、自社のホスト名、OAuth情報、Webhook、管理対象のMCPサーバー、
+                    ワークスペースのアクセス制御を入れて、社内専用のアプリを作る流れです。
+                </p>
+                <p>
+                    公式ヘルプでは、テンプレートはあくまでセットアップ経路であり、メンバーが使う最終アプリではないと整理されています。
+                    管理者が必要情報を入力すると下書きアプリが作られ、レビュー後に公開し、公開後は
+                    Workspace settings の Apps からロールごとのアクセス、アクション制御、確認動作を管理します。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>OpenAI公式の内容</th>
+                                <th>実務で見る意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>更新日</th>
+                                <td>2026年5月28日</td>
+                                <td>ChatGPT Businessの社内アプリ連携が管理者主導に近づいた</td>
+                            </tr>
+                            <tr>
+                                <th>対象</th>
+                                <td>GitHub Enterprise、Snowflake、Databricks</td>
+                                <td>コード、データ基盤、分析基盤がChatGPT利用の入口になる</td>
+                            </tr>
+                            <tr>
+                                <th>設定要素</th>
+                                <td>OAuth、callback URL、Webhook、MCP、アクセス制御</td>
+                                <td>情シス・開発・データ管理者の関与が必須になる</td>
+                            </tr>
+                            <tr>
+                                <th>公開後の管理</th>
+                                <td>ロール、アクション、確認動作を管理</td>
+                                <td>誰が読めるか、誰が書けるかを分けて運用できる</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section2">2. なぜ社内アプリ連携の管理が変わるのか</h2>
+                <p>
+                    これまで多くの企業では、ChatGPTの活用は「個人がファイルを入れて質問する」「許可されたコネクタをつなぐ」という使い方が中心でした。
+                    しかし、AIエージェントがGitHub、データウェアハウス、BI基盤、CRMへ触るようになると、
+                    便利さと同じ速度でリスクも大きくなります。検索だけならまだしも、Issue作成、Pull Request操作、データ抽出、
+                    ワークフロー起動まで進むと、社内の権限設計そのものがAI導入の成否を左右します。
+                </p>
+                <p>
+                    ChatGPT app templatesの意味は、AIに接続先を増やすことだけではありません。
+                    <strong>接続先ごとに、自社の認証情報、許可範囲、公開対象、確認ルールを管理者が持つ</strong> 方向へ進んだことです。
+                    これは<a href="/blogs/blog122.html">OpenAIのFedRAMP Moderate取得</a>で扱った統制の話とつながりますが、今回の主語はより現場に近い
+                    「GitHubやSnowflakeにChatGPTをどう安全につなぐか」です。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">個人利用中心</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>ユーザーが個別に接続する</li>
+                                    <li>権限の見え方が属人的になりやすい</li>
+                                    <li>書き込み操作は後から怖くなる</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">テンプレート管理</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>管理者が下書きを確認して公開する</strong></li>
+                                    <li>ロールとアクションを先に決める</li>
+                                    <li>低リスクなテストから段階導入できる</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">ChatGPT app templatesは、社内連携を「個人の接続」から「組織の公開管理」へ寄せる仕組みです</p>
+                </div>
+
+                <h2 id="section3">3. app templatesで管理者が決めること</h2>
+                <p>
+                    app templatesで管理者が見るべき項目は、ツール名よりも権限の粒度です。
+                    たとえばGitHub Enterpriseテンプレートでは、GitHub App、client ID、client secret、private key、Webhook secret、
+                    Webhook URL、GitHub Enterprise hostnameなどを用意します。さらに、読み取りだけにするのか、
+                    Pull Request、Issue、Actions、Workflowsの書き込みまで許可するのかを決める必要があります。
+                </p>
+                <p>
+                    SnowflakeやDatabricksでも考え方は同じです。AIに「データを見せる」だけなら便利ですが、
+                    本番データ、個人情報、財務情報、顧客リストまで一気に触れる設計にすると危険です。
+                    最初は読み取り専用、特定スキーマのみ、サンプルデータのみ、承認者付きの実行のみ、というように小さく始めるのが現実的です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>管理項目</th>
+                                <th>最初の推奨</th>
+                                <th>確認する理由</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>ユーザー範囲</th>
+                                <td>管理者、開発責任者、データ責任者など少人数から</td>
+                                <td>誤接続や過剰権限を早期に見つけるため</td>
+                            </tr>
+                            <tr>
+                                <th>アクション範囲</th>
+                                <td>検索・閲覧を中心にし、書き込みは個別承認</td>
+                                <td>AIが業務システムを直接変更するリスクを抑えるため</td>
+                            </tr>
+                            <tr>
+                                <th>認証情報</th>
+                                <td>個人アカウントではなく管理された資格情報を使う</td>
+                                <td>退職、異動、漏洩時の影響範囲を管理するため</td>
+                            </tr>
+                            <tr>
+                                <th>テスト</th>
+                                <td>低リスクなプロンプトで接続、引用、実行ログを確認</td>
+                                <td>公開前に想定外のデータ参照や操作を見つけるため</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section4">4. 中小企業が導入前に確認する順番</h2>
+                <p>
+                    中小企業では、いきなりGitHub EnterpriseやSnowflake全体をChatGPTへつなぐより、
+                    まず「AIに見せてもよい業務データ」を決めるべきです。営業資料、FAQ、公開済み仕様書、社内マニュアルなど、
+                    誤参照しても被害が小さく、効果が見えやすい情報から始める方が定着しやすくなります。
+                </p>
+                <p>
+                    次に、AIが実行してよい操作と、人間の確認が必要な操作を分けます。
+                    OpenAIのMCPアプリ関連ヘルプでは、write/modify actionsを含むフルMCPサポートがBusiness、Enterprise、Edu向けにベータ展開中とされています。
+                    つまり、今後は読むだけでなく、作成・更新・実行までできる前提で準備する必要があります。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">接続したい業務と<br>対象データを絞る</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">読み取りと書き込みを<br>分けて設計する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">管理者が下書きアプリを<br>レビューする</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">少人数で低リスクな<br>テストを行う</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 05</span>
+                            <span class="step-text">ログと差し戻し理由を見て<br>公開範囲を広げる</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">最初に大きく接続するより、読み取り専用の小さな成功体験から広げる方が失敗しにくいです</p>
+                </div>
+
+                <h2 id="section5">5. AI導入で今やるべきこと</h2>
+                <p>
+                    MIRAINA視点では、ChatGPT app templatesは「便利な連携機能」ではなく、
+                    <strong>社内AI導入の前提がプロンプト設計から権限設計へ移っている</strong> ことを示す更新です。
+                    どのAIモデルを使うかより、どのデータへ接続し、どの操作を許可し、誰が確認し、ログをどう残すかが重要になります。
+                </p>
+                <p>
+                    まずは現在のAI利用を棚卸ししてください。社員が個人判断でGitHub、Notion、Google Drive、Slack、BIツールをつないでいるなら、
+                    接続先、利用目的、書き込み可否、管理者、承認者を表にします。そのうえで、ChatGPT app templatesのような管理者主導の仕組みを使う範囲と、
+                    まだ使わせない範囲を決めると、AI導入の不安はかなり減らせます。
+                </p>
+                <p>
+                    <a href="/services/ai_consulting.html">生成AI活用支援</a>では、ツールの選定だけでなく、業務棚卸し、権限設計、プロンプト標準化、
+                    AI研修まで含めて整えることが重要です。LLMOやAI検索の文脈でも、社内データの扱い方が曖昧なままだと、公開情報と非公開情報の境界が崩れます。
+                    連携を増やす前に、接続してよい情報の線引きを決めることが先です。
+                </p>
+
+                <div class="article-cta">
+                    <div class="cta-box">
+                        <h2 class="cta-title">ChatGPTの社内連携を安全に進めたい企業へ</h2>
+                        <p class="cta-text">MIRAINAは、業務棚卸し、権限設計、AI研修、運用ルール整備まで一体で支援します。</p>
+                        <a href="/contact.html" class="btn btn-black-fill">無料相談はこちら</a>
+                    </div>
+                </div>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    ChatGPT app templatesは、2026年5月28日のChatGPT Business更新で示された、
+                    社内アプリ連携を管理者主導で進めるための仕組みです。
+                    GitHub Enterprise、Snowflake、Databricksのような重要な業務基盤をChatGPTにつなぐとき、
+                    管理者はOAuth、Webhook、MCP、ロール、アクション、確認動作を先に設計できます。
+                </p>
+                <p>
+                    既存のworkspace agentsが「何を自動化するか」の話だとすれば、app templatesは
+                    <strong>自動化するAIにどこまで触らせるか</strong> の話です。
+                    中小企業はまず読み取り専用、少人数、低リスクデータから始め、ログと承認を見ながら段階的に広げるのが現実的です。
+                </p>
+
+                <div class="article-source">
+                    <h3>参考情報</h3>
+                    <ul>
+                        <li><a href="https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes" target="_blank"
+                                rel="noopener">OpenAI Help: ChatGPT Business - Release Notes（2026年5月28日）</a></li>
+                        <li><a href="https://help.openai.com/en/articles/20001247" target="_blank"
+                                rel="noopener">OpenAI Help: ChatGPT app templates</a></li>
+                        <li><a href="https://help.openai.com/en/articles/12584461-developer-mode-and-mcp-apps-in-chatgpt" target="_blank"
+                                rel="noopener">OpenAI Help: Developer mode and MCP apps in ChatGPT</a></li>
+                        <li><a href="https://help.openai.com/en/articles/20001248-set-up-the-github-enterprise-app-template-in-chatgpt" target="_blank"
+                                rel="noopener">OpenAI Help: Set up the GitHub Enterprise app template in ChatGPT</a></li>
+                    </ul>
+                </div>
+
+                <div class="article-editor">
+                    <div class="editor-label">この記事の監修者</div>
+                    <div class="editor-name">芝 優作</div>
+                    <p>
+                        MIRAINA代表。生成AI導入、LLMO、業務自動化の支援を行う。
+                        ツール導入だけで終わらず、社内データ、権限、承認、現場定着まで含めた運用設計を重視している。
+                    </p>
+                </div>
+
+                <div class="article-related">
+                    <h3>関連記事</h3>
+                    <div class="related-grid">
+                        <a href="/blogs/blog112.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card112.webp" alt="ChatGPT workspace agentsの記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年4月最新】ChatGPT workspace agentsで社内AI活用が変わる</div>
+                        </a>
+                        <a href="/blogs/blog150.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card150.webp" alt="OpenAIとDell提携の記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年5月最新】OpenAIとDell提携でCodexの社内導入はどう変わるか</div>
+                        </a>
+                        <a href="/blogs/blog122.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card122.webp" alt="OpenAI FedRAMP Moderate取得の記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年4月最新】OpenAIがFedRAMP Moderate取得、公共・大企業のAI導入はどう変わるか</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>
