@@ -1448,6 +1448,15 @@
       "thumbnail": "/images/blogs_images/blog-card161.webp",
       "alt": "Anthropic 650億ドル調達とClaude導入判断を解説するイメージ",
       "date": "2026-05-31"
+    },
+    {
+      "id": 162,
+      "title": "【2026年6月最新】AIエージェント権限管理、Claude事例で学ぶ安全設計",
+      "description": "AIエージェント 権限管理を解説。AnthropicのClaude封じ込め設計をもとに、sandbox、VM、egress制御、監査ログの実務ポイントを整理します。",
+      "link": "/blogs/blog162.html",
+      "thumbnail": "/images/blogs_images/blog-card162.webp",
+      "alt": "AIエージェント 権限管理とClaude事例を解説するイメージ",
+      "date": "2026-06-01"
     }
   ],
   "works": [
