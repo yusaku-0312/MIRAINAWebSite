@@ -1457,6 +1457,15 @@
       "thumbnail": "/images/blogs_images/blog-card162.webp",
       "alt": "AIエージェント 権限管理とClaude事例を解説するイメージ",
       "date": "2026-06-01"
+    },
+    {
+      "id": 163,
+      "title": "【2026年6月最新】Codexで現場の社内ミニアプリ制作はどう変わるか",
+      "description": "Codex 非エンジニア活用を解説。OpenAIの2026年6月2日発表をもとに、プラグイン、Sites、注釈、社内ミニアプリ運用を整理します。",
+      "link": "/blogs/blog163.html",
+      "thumbnail": "/images/blogs_images/blog-card163.webp",
+      "alt": "Codex 非エンジニア活用と社内ミニアプリ制作を解説するイメージ",
+      "date": "2026-06-03"
     }
   ],
   "works": [

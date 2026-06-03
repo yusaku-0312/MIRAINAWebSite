@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年6月最新】Codexで現場の社内ミニアプリ制作はどう変わるか | MIRAINAブログ</title>
+    <meta name="description"
+        content="Codex 非エンジニア活用を解説。OpenAIの2026年6月2日発表をもとに、プラグイン、Sites、注釈、社内ミニアプリ運用を整理します。">
+    <meta property="og:title" content="【2026年6月最新】Codexで現場の社内ミニアプリ制作はどう変わるか">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog163.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog163-1.webp">
+    <meta property="og:description"
+        content="Codexの非エンジニア活用を、OpenAIの新発表から中小企業向けに整理します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>Codexで現場の社内ミニアプリ制作はどう変わるか</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.06.03</span>
+                    <div class="article-tags" style="flex-wrap: wrap; justify-content: center;">
+                        <p class="article-tag">Codex</p>
+                        <p class="article-tag">非エンジニア活用</p>
+                        <p class="article-tag">業務自動化</p>
+                        <p class="article-tag">AI導入</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap: anywhere;">【2026年6月最新】Codexで現場の社内ミニアプリ制作はどう変わるか</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog163-1.webp" alt="Codex 非エンジニア活用と社内ミニアプリ制作を解説するイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    2026年6月2日、OpenAIは <strong>Codex for every role, tool, and workflow</strong> を公開し、
+                    Codexを開発者だけでなく、分析、マーケティング、営業、デザイン、投資、金融業務にも広げる新機能を発表しました。
+                    重要なのは、Codexが「コードを書くAI」から、レポート、ダッシュボード、提案資料、社内ミニアプリまで作る
+                    <strong>業務成果物の実行環境</strong>へ近づいている点です。
+                </p>
+                <p>
+                    この記事では、既存の <a href="/blogs/blog150.html">Codex社内導入の記事</a> や
+                    <a href="/blogs/blog056.html">Codex Pluginsの記事</a> と重複しないように、
+                    非エンジニアがCodexをどう使い始め、どこで権限管理やレビューを入れるべきかに絞って整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. まず押さえるべき事実</a></li>
+                    <li><a href="#section2">2. なぜCodexが非エンジニアに広がるのか</a></li>
+                    <li><a href="#section3">3. 新機能を業務に落とす3つの見方</a></li>
+                    <li><a href="#section4">4. 中小企業が導入前に決めること</a></li>
+                    <li><a href="#section5">5. AI導入で今やるべきこと</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. まず押さえるべき事実</h2>
+                <p>
+                    OpenAIの発表で見るべき数字は3つあります。Codexの週間利用者は500万人を超え、
+                    非エンジニアは全体の約20%を占め、開発者より3倍以上速いペースで伸びていると説明されています。
+                    さらに今回、6つのロール別プラグインが発表され、合計で62の人気アプリと110のスキルを含むとされています。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>OpenAI公式発表の内容</th>
+                                <th>中小企業への意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>利用者層</th>
+                                <td>Codexは週500万人超が利用、非エンジニアが約20%</td>
+                                <td>開発部門だけのAIではなく、営業・企画・管理部門の業務AIになる</td>
+                            </tr>
+                            <tr>
+                                <th>ロール別プラグイン</th>
+                                <td>分析、制作、営業、プロダクト設計、投資、金融向けに展開</td>
+                                <td>職種ごとの成果物テンプレートと連携先を先に決めやすくなる</td>
+                            </tr>
+                            <tr>
+                                <th>Sites</th>
+                                <td>対話から共有可能なWebサイトやアプリを作るプレビュー</td>
+                                <td>社内確認用の見積ツール、申請フォーム、ダッシュボードを小さく試せる</td>
+                            </tr>
+                            <tr>
+                                <th>Annotations</th>
+                                <td>生成結果へ直接コメントし、修正指示を出しやすくする</td>
+                                <td>非エンジニアでも画面を見ながらレビューし、改善点を伝えやすい</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    MIRAINA視点では、この発表は「誰でもアプリが作れる」という楽観論だけで見るべきではありません。
+                    むしろ、現場担当者がAIで作った成果物を、どのデータにつなぎ、誰が確認し、どこまで社内で共有するかを決める段階に入ったと見るべきです。
+                    既存の<a href="/blogs/blog160.html">ChatGPT app templatesの記事</a>で扱った権限設計と同じく、
+                    便利さと統制を同時に設計する必要があります。
+                </p>
+
+                <h2 id="section2">2. なぜCodexが非エンジニアに広がるのか</h2>
+                <p>
+                    非エンジニアが困っているのは、コードを書けないことだけではありません。
+                    競合調査の表を作る、営業会議用の資料をまとめる、売上データの変化理由を説明する、
+                    顧客メモからフォローアップを作る、簡単な入力フォームを作る、といった作業が日々の業務に散らばっています。
+                    これらは一つひとつは小さくても、外注や開発依頼に出すほどではなく、現場で止まりやすい仕事です。
+                </p>
+                <p>
+                    Codexがロール別プラグインを出した意味は、AIに「何でもやって」と頼むのではなく、
+                    職種ごとのアプリ、スキル、手順、出力形式をまとめて渡せることです。
+                    分析担当ならSnowflakeやTableau、マーケティング担当ならFigmaやCanva、営業担当ならSalesforceやHubSpotのように、
+                    使う道具が違います。Codexが職種の文脈を持つほど、依頼は「グラフを作って」から
+                    「この数字の変化を説明し、会議用に共有できる画面へまとめて」に近づきます。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">従来の現場改善</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>Excelやスライドで毎回手作業</li>
+                                    <li>小さなツール開発は後回し</li>
+                                    <li>レビューがメールや口頭で散らばる</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">Codex非エンジニア活用</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>成果物とミニアプリを同じ流れで作る</strong></li>
+                                    <li>職種別プラグインで連携先を絞る</li>
+                                    <li>注釈で画面を見ながら修正する</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">Codexの変化は、開発速度だけでなく「現場が小さな業務改善を止めずに進める」点にあります</p>
+                </div>
+
+                <h2 id="section3">3. 新機能を業務に落とす3つの見方</h2>
+                <p>
+                    1つ目は、プラグインを「便利な追加機能」ではなく、業務範囲の定義として見ることです。
+                    たとえば営業部門であれば、顧客情報を読む、商談メモを整理する、次回アクションを提案する、CRM更新案を作るところまでは任せられます。
+                    ただし、実際に顧客へ送信する、受注見込みを変更する、契約条件を書き換える操作は、人間承認を残すべきです。
+                </p>
+                <p>
+                    2つ目は、Sitesを社内ミニアプリの試作環境として使うことです。
+                    店舗別のキャンペーン結果を確認する画面、問い合わせ分類の確認画面、採用候補者の面談準備ページなど、
+                    使う人が数名で、改善回数が多く、既存SaaSでは作りにくいものから試すと効果が出やすくなります。
+                </p>
+                <p>
+                    3つ目は、Annotationsをレビュー文化として組み込むことです。
+                    非エンジニア活用で失敗しやすいのは、AIが作ったものを「なんとなく良い」で公開してしまうことです。
+                    画面、資料、表、文章に対して、事実誤り、ブランド表現、個人情報、権限、公開範囲をコメントで確認する流れを作ると、
+                    AIで作った成果物を業務に載せやすくなります。
+                </p>
+
+                <h2 id="section4">4. 中小企業が導入前に決めること</h2>
+                <p>
+                    Codex非エンジニア活用で最初に決めるべきことは、ツール名ではなく業務の境界です。
+                    どの部署が、どのデータを、どの成果物に変換し、誰に共有するのかを1枚の表にしてください。
+                    そのうえで、読み取り専用で始める業務、下書きまで任せる業務、更新や送信まで許可する業務を分けます。
+                </p>
+                <p>
+                    特に注意すべきなのは、CRM、会計、採用、契約、顧客問い合わせのように個人情報や意思決定に近いデータです。
+                    Codexが画面や資料を作れるほど便利になる一方で、間違ったデータをもとに資料を作る、社外秘を共有URLに出す、
+                    権限のないメンバーが顧客情報を見られる、というリスクも増えます。
+                    <a href="/services/ai_consulting.html">生成AI活用支援</a>では、こうしたデータ分類と承認フローを先に整理してから導入することを推奨しています。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">業務成果物を<br>1つ選ぶ</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">参照データと<br>連携先を決める</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">読み取りと更新を<br>分離する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">レビュー担当を<br>明確にする</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 05</span>
+                            <span class="step-text">小さく公開して<br>改善する</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">非エンジニア活用は、最初から全社展開せず「1成果物、1部署、1レビューライン」から始めるのが現実的です</p>
+                </div>
+
+                <h2 id="section5">5. AI導入で今やるべきこと</h2>
+                <p>
+                    まずは、毎週繰り返している手作業を3つ洗い出してください。
+                    例として、営業会議の数値整理、SNS投稿案の作成、問い合わせ内容の分類、社内FAQの更新、採用面談の準備などがあります。
+                    その中から、顧客への直接送信や金額変更を伴わない業務を1つ選び、Codexで下書き、表、画面、社内ミニアプリのどれに変換できるかを試します。
+                </p>
+                <p>
+                    次に、<a href="/services/ai_training.html">AI研修</a>で現場担当者に「依頼の仕方」だけでなく「確認の仕方」を教えます。
+                    事実確認、出典確認、個人情報確認、社外秘確認、公開範囲確認をセットにしないと、非エンジニア活用は属人的になります。
+                    最後に、必要に応じて<a href="/services/ai_develop.html">AI開発</a>で既存SaaSとの連携や権限管理を組み込み、
+                    試作品を本番運用へ移す判断をします。
+                </p>
+                <p>
+                    CodexのようなAIが進化すると、現場は「開発依頼を待つ側」から「業務改善を試作する側」へ変わります。
+                    ただし、公開、送信、更新、削除の権限まで現場に広げるかは別問題です。
+                    MIRAINAとしては、非エンジニアに作る力を渡しつつ、承認とログを残す設計を同時に入れることが、実務で最も重要だと考えています。
+                </p>
+
+                <div class="article-cta">
+                    <div class="cta-box">
+                        <h2 class="cta-title">Codexや生成AIを現場業務に入れたい企業へ</h2>
+                        <p class="cta-text">MIRAINAは、業務棚卸し、AI研修、権限設計、社内ミニアプリ開発、運用定着まで一体で支援します。</p>
+                        <a href="/contact.html" class="btn btn-black-fill">無料相談はこちら</a>
+                    </div>
+                </div>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    OpenAIの2026年6月2日の発表は、Codexが開発者向けツールから、非エンジニアの業務成果物を作るAIへ広がっていることを示しています。
+                    週500万人超の利用、非エンジニア約20%、ロール別プラグイン、Sites、Annotationsは、
+                    現場が資料、分析、画面、ミニアプリを同じ流れで作る時代に近づいたサインです。
+                </p>
+                <p>
+                    中小企業は、まず1つの業務成果物から始め、参照データ、連携先、レビュー担当、公開範囲を決めてください。
+                    Codex非エンジニア活用は、現場の改善速度を上げる一方で、権限と承認を曖昧にすると事故につながります。
+                    作る力と止める仕組みを同時に設計することが、AI導入を本番業務へ広げる近道です。
+                </p>
+
+                <div class="article-source">
+                    <h3>参考情報</h3>
+                    <ul>
+                        <li><a href="https://openai.com/index/codex-for-every-role-tool-workflow/" target="_blank"
+                                rel="noopener">OpenAI: Codex for every role, tool, and workflow（2026年6月2日）</a></li>
+                        <li><a href="https://openai.com/index/codex-for-knowledge-work/" target="_blank"
+                                rel="noopener">OpenAI: Codex is becoming a productivity tool for everyone（2026年6月2日）</a></li>
+                        <li><a href="https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes"
+                                target="_blank" rel="noopener">OpenAI Help Center: ChatGPT Business Release Notes</a></li>
+                    </ul>
+                </div>
+
+                <div class="article-editor">
+                    <div class="editor-label">この記事の監修者</div>
+                    <div class="editor-name">芝 優作</div>
+                    <p>
+                        MIRAINA代表。生成AI導入、LLMO、業務自動化の支援を行う。
+                        AIツールの導入だけで終わらず、業務棚卸し、権限設計、研修、社内定着まで含めた実装支援を重視している。
+                    </p>
+                </div>
+
+                <div class="article-related">
+                    <h3>関連記事</h3>
+                    <div class="related-grid">
+                        <a href="/blogs/blog150.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card150.webp" alt="OpenAIとDell提携でCodex社内導入を解説する記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年5月最新】OpenAIとDell提携でCodexの社内導入はどう変わるか</div>
+                        </a>
+                        <a href="/blogs/blog160.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card160.webp" alt="ChatGPT app templatesの記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年5月最新】ChatGPT app templatesで社内アプリ連携はどう変わるか</div>
+                        </a>
+                        <a href="/blogs/blog056.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card056.webp" alt="Codex Pluginsの記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年3月最新】Codex Pluginsとは？チーム開発のAIワークフローを標準化する方法</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>
