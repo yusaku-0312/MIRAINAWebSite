@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年6月最新】Microsoft Scoutで常時稼働エージェント導入はどう変わるか | MIRAINAブログ</title>
+    <meta name="description"
+        content="Microsoft Scoutを解説。2026年6月2日の公式発表をもとに、常時稼働エージェント、Autopilots、Entra ID、承認設計を整理します。">
+    <meta property="og:title" content="【2026年6月最新】Microsoft Scoutで常時稼働エージェント導入はどう変わるか">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog164.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog164-1.webp">
+    <meta property="og:description"
+        content="Microsoft Scoutの発表をもとに、常時稼働エージェントを中小企業がどう安全に試すべきかを整理します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>Microsoft Scoutで常時稼働エージェント導入はどう変わるか</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.06.05</span>
+                    <div class="article-tags" style="flex-wrap: wrap; justify-content: center;">
+                        <p class="article-tag">Microsoft Scout</p>
+                        <p class="article-tag">AIエージェント</p>
+                        <p class="article-tag">Microsoft 365</p>
+                        <p class="article-tag">AI導入</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap: anywhere;">【2026年6月最新】Microsoft Scoutで常時稼働エージェント導入はどう変わるか</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog164-1.webp" alt="Microsoft Scoutと常時稼働エージェント導入を解説するイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    2026年6月2日、Microsoftは <strong>Microsoft Scout</strong> を発表しました。
+                    ScoutはMicrosoft 365向けの最初のAutopilot agentとして、Teams、Outlook、OneDrive、SharePoint、
+                    カレンダーや連絡先の文脈を使い、会議調整、準備資料作成、期限の把握、リスク検知を継続的に支援する構想です。
+                </p>
+                <p>
+                    この記事では、既存の <a href="/blogs/blog034.html">Agent 365の記事</a> や
+                    <a href="/blogs/blog050.html">Work IQの記事</a> と重複しないように、
+                    <strong>常時稼働エージェントを中小企業が試すときの権限、承認、対象業務の切り分け</strong> に絞って整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. まず押さえるべき事実</a></li>
+                    <li><a href="#section2">2. なぜ常時稼働エージェントが注目されるのか</a></li>
+                    <li><a href="#section3">3. Microsoft Scoutを業務に入れる3つの見方</a></li>
+                    <li><a href="#section4">4. 中小企業が先に決める運用ルール</a></li>
+                    <li><a href="#section5">5. AI導入で今やるべきこと</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. まず押さえるべき事実</h2>
+                <p>
+                    Microsoftの発表で重要なのは、Scoutが単なるチャット機能ではなく、<strong>Autopilots</strong> という新しいカテゴリとして説明されている点です。
+                    Autopilotsは、ユーザーが毎回プロンプトを入力しなくても、背景で動き続け、自分のIDを持ち、組織が設定した権限とポリシーの中で行動します。
+                    Microsoft Scoutは、その最初の実装としてMicrosoft 365の仕事文脈に入ってくる製品です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>Microsoft公式発表の内容</th>
+                                <th>導入企業への意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>製品位置づけ</th>
+                                <td>Microsoft 365向けの最初のAutopilot agent</td>
+                                <td>単発回答ではなく、継続的な業務伴走として設計されている</td>
+                            </tr>
+                            <tr>
+                                <th>接続先</th>
+                                <td>Teams、Outlook、OneDrive、SharePoint、チャット、メール、カレンダー、連絡先</td>
+                                <td>仕事の文脈を広く読むため、権限範囲の設計が重要になる</td>
+                            </tr>
+                            <tr>
+                                <th>操作例</th>
+                                <td>会議調整、準備資料生成、期限把握、カレンダーの時間確保、停滞リスク検知</td>
+                                <td>秘書的な補助から、業務の先回り支援へ広がる</td>
+                            </tr>
+                            <tr>
+                                <th>提供状況</th>
+                                <td>一部顧客のprivate previewとFrontier組織向けのexperimental release</td>
+                                <td>現時点では全社本番導入ではなく、限定検証として見るべき段階</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    もう1つ見るべき数字は、Microsoft 365 Business with Copilotの記事で示された外部連携の広がりです。
+                    Microsoftは、Shopify、PayPal、Xero、Docusign、Asanaなどを含む <strong>1,000以上のconnector</strong> に触れています。
+                    つまりScoutのような常時稼働エージェントは、将来的にMicrosoft 365内だけで完結せず、CRM、会計、EC、プロジェクト管理までまたぐ可能性があります。
+                </p>
+
+                <h2 id="section2">2. なぜ常時稼働エージェントが注目されるのか</h2>
+                <p>
+                    これまでの生成AI活用は、担当者が質問し、AIが回答し、人間が次の作業へ移す流れが中心でした。
+                    しかし実務では、会議前の資料確認、日程調整、返信待ちの追跡、期限が近いタスクの確認のように、
+                    「毎回頼むほどではないが、放置すると詰まる仕事」が大量にあります。
+                    Scoutが狙っているのは、この調整・準備・追跡の領域です。
+                </p>
+                <p>
+                    ただし、常時稼働するAIは便利なぶん、従来のチャットAIよりリスクも増えます。
+                    メール、予定、ファイル、チャット、社外システムを横断して見られるなら、AIが間違えたときの影響範囲も広がります。
+                    MIRAINA視点では、Microsoft Scoutの発表は「AI秘書が来る」という話だけでなく、
+                    <strong>AIに任せる前に、仕事の境界と承認ラインを決める必要がある</strong> というサインです。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">単発チャット型のAI</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>人間が毎回依頼する</li>
+                                    <li>回答後の実行は人間が行う</li>
+                                    <li>影響範囲は比較的限定しやすい</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">常時稼働エージェント</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>背景で期限や停滞を見続ける</strong></li>
+                                    <li>会議調整や資料準備を先回りする</li>
+                                    <li>権限・ログ・人間承認が前提になる</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">Microsoft ScoutのようなAIは、回答品質だけでなく「どこまで自律的に動くか」の設計が導入判断になります</p>
+                </div>
+
+                <h2 id="section3">3. Microsoft Scoutを業務に入れる3つの見方</h2>
+                <p>
+                    1つ目は、Scoutを「個人の便利ツール」ではなく、IDを持つ業務主体として見ることです。
+                    Microsoftは、Scoutの各エージェントが共有の匿名サービスアカウントではなく、管理されたEntra identityの下で動くと説明しています。
+                    これは、後から「誰の権限で、どのファイルを読み、どの操作をしたか」を追えるようにするための考え方です。
+                </p>
+                <p>
+                    2つ目は、OpenClawとの関係です。ScoutはOpenClawのオープンソース技術を活用しつつ、Microsoft 365側のID、credential、access controlを重ねています。
+                    既存の <a href="/blogs/blog049.html">OpenClawの記事</a> で扱ったような自由度の高いローカルエージェントは強力ですが、
+                    企業で使うには監査、ポリシー、データ保護が必要です。Scoutは、その企業運用側に寄せた発表として読むと理解しやすくなります。
+                </p>
+                <p>
+                    3つ目は、Scoutが現時点では限定提供であることです。
+                    Microsoftの発表では、利用にはFrontier enrollment、Intune policy configuration、opt-in attestation、
+                    GitHub Copilot licenseが必要とされています。つまり、中小企業が今日すぐ全社員に配るものではなく、
+                    まずはMicrosoft 365の管理体制が整った組織で検証する段階です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>確認軸</th>
+                                <th>見るポイント</th>
+                                <th>最初の判断例</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>ID</th>
+                                <td>エージェントが誰の権限で動くか、操作履歴を追えるか</td>
+                                <td>共有アカウントではなく個別の管理IDを前提にする</td>
+                            </tr>
+                            <tr>
+                                <th>アクセス</th>
+                                <td>読めるメール、予定、ファイル、外部システムを限定できるか</td>
+                                <td>役員予定、給与、契約書、顧客リストは最初から分離する</td>
+                            </tr>
+                            <tr>
+                                <th>承認</th>
+                                <td>送信、予定変更、外部共有などを人間承認にできるか</td>
+                                <td>読み取りと下書きまで許可し、送信・更新は人が確定する</td>
+                            </tr>
+                            <tr>
+                                <th>検証</th>
+                                <td>検証対象者、対象部署、評価指標を決めているか</td>
+                                <td>営業1チームで会議準備と日程調整だけを試す</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section4">4. 中小企業が先に決める運用ルール</h2>
+                <p>
+                    中小企業がScout型のAIを検討するときは、最初に「AIに触らせない領域」を決めるべきです。
+                    顧客リスト、給与、採用評価、契約条件、未公開の資金繰り、取引先との重要交渉などは、
+                    便利だからといって自律エージェントに最初から読ませるべきではありません。
+                    まずは日程調整、議事録の下準備、会議前の資料集約、返信待ちの確認のような低リスク業務に限定します。
+                </p>
+                <p>
+                    次に、承認を「操作の種類」で分けます。予定候補を作る、会議資料の下書きを作る、未返信メールを一覧化するところまでは自動化しやすいです。
+                    一方で、社外メールを送る、会議を確定する、ファイルを外部共有する、CRMのステータスを更新する操作は、人間の確定を残します。
+                    この線引きは <a href="/services/ai_consulting.html">生成AI活用支援</a> の初期設計で最も重要な部分です。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">触らせない<br>情報を決める</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">低リスク業務を<br>1つ選ぶ</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">読み取りと送信を<br>分ける</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">ログ確認者を<br>決める</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 05</span>
+                            <span class="step-text">月次で効果と<br>事故を確認する</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">常時稼働エージェントは、便利な業務からではなく「止めるべき操作」から設計すると事故を減らせます</p>
+                </div>
+
+                <h2 id="section5">5. AI導入で今やるべきこと</h2>
+                <p>
+                    まず、Microsoft 365を使っている会社は、Outlook、Teams、OneDrive、SharePointの権限棚卸しを行ってください。
+                    共有リンクが全社公開になっていないか、退職者や外部パートナーのアクセスが残っていないか、機密ラベルを使っているかを確認します。
+                    常時稼働エージェントは、既存権限の上で動くため、権限が散らかっている会社ほど誤参照のリスクが高くなります。
+                </p>
+                <p>
+                    次に、AI研修では「プロンプトの書き方」だけでなく「AIが先回りしたときの確認方法」を扱います。
+                    予定候補が妥当か、会議準備資料の出典が正しいか、社外秘が混ざっていないか、顧客への送信前に誰が見るかを決める必要があります。
+                    <a href="/services/ai_training.html">AI研修</a> と <a href="/services/ai_develop.html">AI開発</a> を分けず、運用ルールと小さな自動化を同時に作るのが現実的です。
+                </p>
+                <p>
+                    Scoutが示している方向性は、AIが「聞かれたら答える道具」から「仕事の流れを見て、次に必要なことを準備する存在」へ移ることです。
+                    その変化は大きいですが、すべてを任せる必要はありません。最初は、会議準備、日程調整、返信待ちリスト、社内確認の下書きなど、
+                    成果が見えやすく、失敗しても人が止められる業務から始めてください。
+                </p>
+
+                <div class="article-cta">
+                    <div class="cta-box">
+                        <h2 class="cta-title">Microsoft 365や生成AIの業務導入を整理したい企業へ</h2>
+                        <p class="cta-text">MIRAINAは、業務棚卸し、権限設計、AI研修、エージェント運用、社内自動化の実装まで一体で支援します。</p>
+                        <a href="/contact.html" class="btn btn-black-fill">無料相談はこちら</a>
+                    </div>
+                </div>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    Microsoft Scoutは、2026年6月2日に発表されたMicrosoft 365向けの常時稼働エージェントです。
+                    Teams、Outlook、OneDrive、SharePointなどの仕事文脈に入り、会議調整、資料準備、期限把握、停滞リスク検知を支援する方向性を示しています。
+                    ただし、提供状況はprivate previewとFrontier組織向けのexperimental releaseであり、現時点では限定検証として見るのが妥当です。
+                </p>
+                <p>
+                    中小企業が今やるべきことは、Scoutを待つことではなく、AIが動く前提の権限棚卸しと承認設計です。
+                    常時稼働エージェントは、Microsoft 365の業務データを深く使えるほど便利になります。
+                    だからこそ、読める情報、実行できる操作、人間が止める境界を先に決めることが、AI導入を本番業務へ広げる近道です。
+                </p>
+
+                <div class="article-source">
+                    <h3>参考情報</h3>
+                    <ul>
+                        <li><a href="https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/introducing-microsoft-scout-your-always-on-personal-agent/"
+                                target="_blank" rel="noopener">Microsoft 365 Blog: Introducing Microsoft Scout: Your always-on personal agent（2026年6月2日）</a></li>
+                        <li><a href="https://blogs.microsoft.com/blog/2026/06/02/ai-alone-wont-change-your-business-the-system-running-it-will/"
+                                target="_blank" rel="noopener">Microsoft Official Blog: AI alone won't change your business. The system running it will.（2026年6月2日）</a></li>
+                        <li><a href="https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/"
+                                target="_blank" rel="noopener">Microsoft Official Blog: Microsoft Build 2026: Be yourself at work（2026年6月2日）</a></li>
+                        <li><a href="https://www.microsoft.com/en-us/microsoft-365/blog/2026/05/28/introducing-microsoft-365-business-with-copilot-the-new-standard-for-small-business/"
+                                target="_blank" rel="noopener">Microsoft 365 Blog: Introducing Microsoft 365 Business with Copilot（2026年5月28日）</a></li>
+                    </ul>
+                </div>
+
+                <div class="article-editor">
+                    <div class="editor-label">この記事の監修者</div>
+                    <div class="editor-name">芝 優作</div>
+                    <p>
+                        MIRAINA代表。生成AI導入、LLMO、業務自動化の支援を行う。
+                        AIツールの導入だけで終わらず、業務棚卸し、権限設計、研修、社内定着まで含めた実装支援を重視している。
+                    </p>
+                </div>
+
+                <div class="article-related">
+                    <h3>関連記事</h3>
+                    <div class="related-grid">
+                        <a href="/blogs/blog034.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card034.webp" alt="Agent 365によるAIエージェント管理の記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年3月最新】Agent 365とは？AIエージェント管理を一元化する新機能</div>
+                        </a>
+                        <a href="/blogs/blog050.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card050.webp" alt="Work IQと社内文脈理解の記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年3月最新】Work IQとは？Copilotが社内文脈を理解する仕組み</div>
+                        </a>
+                        <a href="/blogs/blog148.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card148.webp" alt="Gemini Sparkと24時間AI秘書の記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年5月最新】Gemini Spark登場、24時間AI秘書はどう変わるか</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

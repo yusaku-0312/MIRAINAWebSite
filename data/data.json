@@ -1457,6 +1457,15 @@
       "thumbnail": "/images/blogs_images/blog-card163.webp",
       "alt": "Codex 非エンジニア活用と社内ミニアプリ制作を解説するイメージ",
       "date": "2026-06-03"
+    },
+    {
+      "id": 164,
+      "title": "【2026年6月最新】Microsoft Scoutで常時稼働エージェント導入はどう変わるか",
+      "description": "Microsoft Scoutを解説。2026年6月2日の公式発表をもとに、常時稼働エージェント、Autopilots、Entra ID、承認設計を整理します。",
+      "link": "/blogs/blog164.html",
+      "thumbnail": "/images/blogs_images/blog-card164.webp",
+      "alt": "Microsoft Scoutと常時稼働エージェント導入を解説するイメージ",
+      "date": "2026-06-05"
     }
   ],
   "works": [
