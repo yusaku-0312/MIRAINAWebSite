@@ -99,6 +99,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年5月最新】Anthropicが650億ドル調達、Claude導入判断はどう変わるか](https://miraina-ai.com/blogs/blog161.html): AnthropicのSeries H資金調達をもとに、650億ドル調達、9650億ドル評価額、470億ドル超の年次ランレート収益、3大クラウドでのClaude提供が中小企業のAIベンダー選定に与える影響を整理した記事。
 - [最新ブログ: 【2026年6月最新】AIエージェント権限管理、Claude事例で学ぶ安全設計](https://miraina-ai.com/blogs/blog162.html): Anthropicが2026年5月25日に公開したClaude封じ込め設計をもとに、AIエージェントの権限管理、sandbox、VM、egress制御、監査ログを中小企業のAI導入向けに整理した記事。
 - [最新ブログ: 【2026年6月最新】Codexで現場の社内ミニアプリ制作はどう変わるか](https://miraina-ai.com/blogs/blog163.html): OpenAIが2026年6月2日に発表したCodexのロール別プラグイン、Sites、Annotationsをもとに、非エンジニアが業務成果物や社内ミニアプリを作る導入設計を整理した記事。
+- [最新ブログ: 【2026年6月最新】Microsoft Scoutで常時稼働エージェント導入はどう変わるか](https://miraina-ai.com/blogs/blog164.html): Microsoftが2026年6月2日に発表したMicrosoft Scoutをもとに、常時稼働エージェント、Autopilots、Entra ID、承認設計を中小企業のAI導入向けに整理した記事。
 - [最新ブログ: Lark Baseとは？kintone・Airtableとの違いと業務管理の始め方](https://miraina-ai.com/blogs/blog154.html): Lark Baseの複数ビュー、フォーム、ダッシュボード、オートメーションを整理し、kintoneやAirtableとの違いと向いている業務を解説した記事。
 - [最新ブログ: Larkとは？機能・料金・できることをわかりやすく解説](https://miraina-ai.com/blogs/blog153.html): Lark全体の機能、料金、できること、向いている企業、導入ステップを整理し、統合型業務基盤としての判断軸を解説した記事。
 - [最新ブログ: 【2026年5月最新】Google AI Ultra発表、AI内製の試作速度はどう変わるか](https://miraina-ai.com/blogs/blog152.html): Googleが2026年5月19日に発表したGoogle AI Ultraをもとに、月額100ドル新プラン、Gemini 3.5 Flash、Managed Agents対応がAI内製の試作速度をどう変えるか整理した記事。
