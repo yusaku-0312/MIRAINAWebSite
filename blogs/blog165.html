@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年6月最新】GitHub Copilot従量課金化でAI開発コスト管理はどう変わるか | MIRAINAブログ</title>
+    <meta name="description"
+        content="GitHub Copilot 従量課金化を解説。2026年6月1日の課金変更をもとに、AI Credits、予算上限、開発現場のコスト管理を整理します。">
+    <meta property="og:title" content="【2026年6月最新】GitHub Copilot従量課金化でAI開発コスト管理はどう変わるか">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog165.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog165-1.webp">
+    <meta property="og:description"
+        content="GitHub Copilotの従量課金化を、AI開発の予算管理と業務設計の観点から整理します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>GitHub Copilot従量課金化でAI開発コスト管理はどう変わるか</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.06.17</span>
+                    <div class="article-tags" style="flex-wrap: wrap; justify-content: center;">
+                        <p class="article-tag">GitHub Copilot</p>
+                        <p class="article-tag">AI開発</p>
+                        <p class="article-tag">コスト管理</p>
+                        <p class="article-tag">AI導入</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap: anywhere;">【2026年6月最新】GitHub Copilot従量課金化でAI開発コスト管理はどう変わるか</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog165-1.webp" alt="GitHub Copilot 従量課金化とAI開発コスト管理を解説するイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    2026年6月1日、GitHub Copilotの課金体系が従来のリクエスト中心の考え方から、
+                    トークン利用量に連動する <strong>GitHub AI Credits</strong> へ移行したと報じられています。
+                    重要なのは、AI開発支援が「月額で使い放題に近い便利ツール」から、
+                    <strong>使い方によって原価と請求が変わる業務インフラ</strong> になり始めたことです。
+                </p>
+                <p>
+                    この記事では、既存の <a href="/blogs/blog163.html">Codex非エンジニア活用の記事</a> や
+                    <a href="/blogs/blog150.html">Codex社内導入の記事</a> と重複しないように、
+                    GitHub Copilotの従量課金化を、開発チームの予算上限、モデル選択、レビュー運用に絞って整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. まず押さえるべき事実</a></li>
+                    <li><a href="#section2">2. なぜAI開発ツールが従量課金へ向かうのか</a></li>
+                    <li><a href="#section3">3. 開発現場で起きる3つの変化</a></li>
+                    <li><a href="#section4">4. 中小企業が先に決めるコスト管理ルール</a></li>
+                    <li><a href="#section5">5. AI導入で今やるべきこと</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. まず押さえるべき事実</h2>
+                <p>
+                    報道によると、GitHub Copilotは2026年6月1日から、Premium Request UnitをGitHub AI Creditsへ置き換える方向へ移行しました。
+                    AI Creditsは、入力トークン、出力トークン、キャッシュされたトークンなどの利用量に応じて消費されます。
+                    これにより、短い質問と数時間動くエージェント作業を同じ単位で扱う従来の仕組みから、実際の計算資源に近い課金へ寄せる形になります。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>報じられている変更点</th>
+                                <th>導入企業への意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>課金単位</th>
+                                <td>Premium Request UnitからGitHub AI Creditsへ移行</td>
+                                <td>回数管理ではなく、実際の利用量に近い予算管理が必要になる</td>
+                            </tr>
+                            <tr>
+                                <th>対象利用</th>
+                                <td>入力、出力、キャッシュ済みトークンなどでクレジットを消費</td>
+                                <td>長い会話、巨大なコードベース、長時間エージェントが高コストになりやすい</td>
+                            </tr>
+                            <tr>
+                                <th>含まれる機能</th>
+                                <td>コード補完やNext Edit suggestionsはサブスクリプション内に含まれる</td>
+                                <td>すべてが従量課金ではなく、使い方で費用差が出る</td>
+                            </tr>
+                            <tr>
+                                <th>管理機能</th>
+                                <td>企業、コストセンター、ユーザー単位の予算上限を設定できるとされる</td>
+                                <td>部門別のAI利用ルールと予算責任者が必要になる</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    価格面では、Copilot Businessは月額19ドル、Copilot Enterpriseは月額39ドルのプラン価格に相当するAI Creditsを含むと報じられています。
+                    さらに移行期間として、Businessには月30ドル分、Enterpriseには月70ドル分のボーナスクレジットが2026年6月から8月まで付くという説明もあります。
+                    ただし、これは「安くなる」というより、移行時に利用量を把握するための猶予と見るべきです。
+                </p>
+
+                <h2 id="section2">2. なぜAI開発ツールが従量課金へ向かうのか</h2>
+                <p>
+                    背景にあるのは、AI開発ツールの使われ方が変わったことです。
+                    以前のCopilotは、コード補完や短いチャットが中心でした。
+                    しかし現在は、Issueを読み、設計を考え、複数ファイルを編集し、テストを実行し、レビューまで支援するエージェント型の使い方が広がっています。
+                    同じ1回の依頼でも、裏側で使うトークン量と計算時間は大きく違います。
+                </p>
+                <p>
+                    つまり、AIコーディング支援は「席数を買えば終わり」のSaaSから、
+                    クラウドサーバーや広告運用に近い、使うほど費用が増える仕組みに寄っています。
+                    MIRAINA視点では、この変化は開発者だけの問題ではありません。
+                    経営者やDX責任者が、AI開発のROI、内製化範囲、外注費との比較を見直すタイミングです。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">定額ツール感覚の利用</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>全員にアカウントを配る</li>
+                                    <li>利用量をほぼ見ない</li>
+                                    <li>高性能モデルを毎回選ぶ</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">従量課金前提の利用</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>用途別にモデルと上限を決める</strong></li>
+                                    <li>部門ごとの利用量を月次で見る</li>
+                                    <li>レビューやテストを標準手順に入れる</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">AI開発ツールは、便利さだけでなく「どの作業にどれだけAI予算を使うか」を設計する段階に入っています</p>
+                </div>
+
+                <h2 id="section3">3. 開発現場で起きる3つの変化</h2>
+                <p>
+                    1つ目は、プロンプトの品質がコストに直結することです。
+                    曖昧な依頼で何度もやり直す、長い会話をそのまま続ける、不要なファイルまで読ませる、といった使い方は費用を押し上げます。
+                    これからは「AIに頼む力」が、品質だけでなく予算管理にも関係します。
+                </p>
+                <p>
+                    2つ目は、モデル選択の意味が変わることです。
+                    難しい設計判断や複雑な修正には高性能モデルを使う価値があります。
+                    一方で、変数名の整理、テストケースのたたき台、ドキュメント整形のような作業まで毎回最上位モデルに任せると、費用対効果が崩れます。
+                    開発チームは、作業の難易度ごとに使うモデルを分ける必要があります。
+                </p>
+                <p>
+                    3つ目は、AIが作ったコードのレビュー責任がより重要になることです。
+                    従量課金になると「費用を使ったから早くマージしたい」という心理が働きます。
+                    しかし、AIが生成したコードを確認せずに本番へ入れると、後から修正コストや障害対応コストが膨らみます。
+                    コスト管理は、AI利用量を削るだけでなく、レビュー、テスト、影響範囲確認まで含めて見るべきです。
+                </p>
+
+                <h2 id="section4">4. 中小企業が先に決めるコスト管理ルール</h2>
+                <p>
+                    中小企業がGitHub Copilotの従量課金化に備えるなら、最初に部門別の月額上限を決めてください。
+                    開発部門、マーケティング部門、管理部門でAI開発ツールの使い方は異なります。
+                    たとえば開発部門はリファクタリングやテスト生成に使い、非エンジニア部門は社内ミニアプリの試作やデータ整形に使う、といった切り分けが必要です。
+                </p>
+                <p>
+                    次に、AIに任せる作業を3段階に分けます。
+                    低リスク作業は下書きや補完、高リスク作業は人間レビュー必須、本番データや課金処理に関わる作業は原則として人間が最終操作する、という線引きです。
+                    <a href="/services/ai_develop.html">AI開発</a> や <a href="/services/ai_consulting.html">生成AI活用支援</a> でも、
+                    最初にこの境界を決めることで、費用とリスクの両方を管理しやすくなります。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">部署別の<br>月額上限を決める</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">作業を<br>難易度で分ける</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">高性能モデルの<br>用途を限定する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">レビューとテストを<br>必須化する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 05</span>
+                            <span class="step-text">月次で費用対効果を<br>見直す</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">AI開発コストは、ツール契約時ではなく、日々の依頼方法とレビュー設計で決まります</p>
+                </div>
+
+                <h2 id="section5">5. AI導入で今やるべきこと</h2>
+                <p>
+                    まず、現在のAI開発支援ツールの利用状況を棚卸ししてください。
+                    誰が、どのモデルを、どの作業に、どれくらい使っているかを見ます。
+                    まだ請求が大きく出ていなくても、エージェント型の使い方が増えると、利用量は急に伸びます。
+                    特に、長い会話を毎回読み直す運用や、大きなリポジトリを丸ごと渡す運用は見直し対象です。
+                </p>
+                <p>
+                    次に、AI研修の内容を「便利なプロンプト集」から一段進めます。
+                    依頼前に対象ファイルを絞る、期待する差分を明確にする、生成物を小さくレビューする、失敗時に会話をリセットする、という実務ルールを入れてください。
+                    これは利用料を下げるためだけでなく、AIが作った成果物を業務に定着させるためにも必要です。
+                </p>
+                <p>
+                    最後に、AI開発の評価指標を「何時間短縮したか」だけにしないことです。
+                    月額費用、レビュー工数、手戻り、障害リスク、外注削減額、内製化できた改善数を合わせて見ます。
+                    AI開発支援は強力ですが、費用が見えないまま広げると、現場では便利でも経営判断では説明しにくくなります。
+                </p>
+
+                <div class="article-cta">
+                    <div class="cta-box">
+                        <h2 class="cta-title">AI開発ツールの費用対効果を整理したい企業へ</h2>
+                        <p class="cta-text">MIRAINAは、AI開発の業務棚卸し、モデル選定、社内ルール、レビュー設計、運用定着まで一体で支援します。</p>
+                        <a href="/contact.html" class="btn btn-black-fill">無料相談はこちら</a>
+                    </div>
+                </div>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    GitHub Copilotの従量課金化は、AI開発支援ツールが業務インフラ化していることを示す出来事です。
+                    コード補完のような軽い使い方だけでなく、エージェントが長時間コードを読み書きする使い方が増えたことで、
+                    利用量、モデル選択、予算上限、レビュー体制が導入判断の中心になります。
+                </p>
+                <p>
+                    中小企業が今やるべきことは、AI開発ツールを止めることではありません。
+                    むしろ、便利だからこそ、誰がどの用途に使い、どこまで自動化し、どの金額で止めるかを決めることです。
+                    AI開発の効果を継続的に出すには、ツール契約より先に、コスト管理と品質管理を同じテーブルで設計する必要があります。
+                </p>
+
+                <div class="article-source">
+                    <h3>参考情報</h3>
+                    <ul>
+                        <li><a href="https://www.itpro.com/software/development/github-copilot-pricing-changes-usage-based-billing-explained"
+                                target="_blank" rel="noopener">ITPro: Everything you need to know about the GitHub Copilot pricing changes（2026年4月28日）</a></li>
+                        <li><a href="https://www.businessinsider.com/github-copilot-token-uage-pricing-change-reaction-2026-6"
+                                target="_blank" rel="noopener">Business Insider: GitHub Copilot users get a rude awakening as new AI pricing goes into effect（2026年6月3日）</a></li>
+                        <li><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/github-copilot-customers-suffer-from-sticker-shock-as-microsoft-switches-to-usage-based-pricing-customers-report-up-to-100-fold-price-hikes"
+                                target="_blank" rel="noopener">Tom's Hardware: GitHub Copilot customers report up to 100-fold price hikes（2026年6月3日）</a></li>
+                    </ul>
+                </div>
+
+                <div class="article-editor">
+                    <div class="editor-label">この記事の監修者</div>
+                    <div class="editor-name">芝 優作</div>
+                    <p>
+                        MIRAINA代表。生成AI導入、LLMO、業務自動化の支援を行う。
+                        AIツールの導入だけで終わらず、業務棚卸し、権限設計、研修、社内定着まで含めた実装支援を重視している。
+                    </p>
+                </div>
+
+                <div class="article-related">
+                    <h3>関連記事</h3>
+                    <div class="related-grid">
+                        <a href="/blogs/blog163.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card163.webp" alt="Codex非エンジニア活用の記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年6月最新】Codexで現場の社内ミニアプリ制作はどう変わるか</div>
+                        </a>
+                        <a href="/blogs/blog150.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card150.webp" alt="OpenAIとDell提携でCodex社内導入を解説する記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年5月最新】OpenAIとDell提携でCodexの社内導入はどう変わるか</div>
+                        </a>
+                        <a href="/blogs/blog036.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card036.webp" alt="Codex導入と楽天事例の記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">Codexとは？楽天事例でわかるAI開発導入法</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

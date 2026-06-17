@@ -190,6 +190,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [ブログ: Promptfooとは？OpenAI買収で進むAIエージェント評価とセキュリティ](https://miraina-ai.com/blogs/blog038.html): OpenAIが2026年3月9日にPromptfooを買収。AIエージェントの評価、レッドチーミング、セキュリティ対策が重要になる背景と、日本企業が本番導入前に押さえるべき実務ポイントを整理した記事。
 - [ブログ: Claude Partner Networkとは？Anthropicが1億ドル投資で企業AI導入を加速](https://miraina-ai.com/blogs/blog037.html): AnthropicがClaude Partner Networkを2026年3月12日に発表。1億ドル規模の投資とアクセンチュア・デロイト参加で企業AI導入を加速する新プログラムの特徴と日本企業への影響を解説した記事。
 - [ブログ: Codexとは？楽天事例でわかるAI開発導入法](https://miraina-ai.com/blogs/blog036.html): OpenAIが2026年3月11日に公開した楽天事例をもとに、Codex導入で開発速度・運用品質・役割分担がどう変わるかを整理した記事。
+- [最新ブログ: 【2026年6月最新】GitHub Copilot従量課金化でAI開発コスト管理はどう変わるか](https://miraina-ai.com/blogs/blog165.html): GitHub Copilot 従量課金化をもとに、AI Credits、予算上限、モデル選択、レビュー運用を中小企業のAI開発コスト管理向けに整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)
