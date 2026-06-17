@@ -1475,6 +1475,15 @@
       "thumbnail": "/images/blogs_images/blog-card164.webp",
       "alt": "Microsoft Scoutと常時稼働エージェント導入を解説するイメージ",
       "date": "2026-06-05"
+    },
+    {
+      "id": 165,
+      "title": "【2026年6月最新】GitHub Copilot従量課金化でAI開発コスト管理はどう変わるか",
+      "description": "GitHub Copilot 従量課金化を解説。2026年6月1日の課金変更をもとに、AI Credits、予算上限、開発現場のコスト管理を整理します。",
+      "link": "/blogs/blog165.html",
+      "thumbnail": "/images/blogs_images/blog-card165.webp",
+      "alt": "GitHub Copilot 従量課金化とAI開発コスト管理を解説するイメージ",
+      "date": "2026-06-17"
     }
   ],
   "works": [
