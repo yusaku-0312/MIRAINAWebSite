@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年5月最新】OpenAIがFrontier Governance Frameworkを公開、AIガバナンス設計はどう変わるか | MIRAINAブログ</title>
+    <meta name="description"
+        content="OpenAIが2026年5月28日に公開したFrontier Governance Frameworkをもとに、cyber offense、CBRN、監査、インシデント対応を踏まえたAIガバナンス設計を解説します。">
+    <meta property="og:title" content="【2026年5月最新】OpenAIがFrontier Governance Frameworkを公開、AIガバナンス設計はどう変わるか">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog159.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog159-1.webp">
+    <meta property="og:description"
+        content="OpenAIのFrontier Governance Frameworkをもとに、AIガバナンス設計と企業の統制ポイントを整理します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>OpenAIがFrontier Governance Frameworkを公開、AIガバナンス設計はどう変わるか</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.05.29</span>
+                    <div class="article-tags">
+                        <p class="article-tag">OpenAI</p>
+                        <p class="article-tag">AIガバナンス</p>
+                        <p class="article-tag">セキュリティ</p>
+                        <p class="article-tag">監査</p>
+                    </div>
+                </div>
+                <h1 class="article-title">【2026年5月最新】OpenAIがFrontier Governance Frameworkを公開、AIガバナンス設計はどう変わるか</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog159-1.webp" alt="OpenAIのFrontier Governance Frameworkを解説するイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    2026年5月28日、OpenAIは <strong>Frontier Governance Framework</strong> を公開しました。
+                    California Transparency in Frontier AI Act や EU AI Act の Code of Practice for General Purpose AI といった
+                    新しい法的要請に合わせて、OpenAI自身の安全・セキュリティ運用を外部に説明するための枠組みです。
+                </p>
+                <p>
+                    この記事では、単なる「AIの安全宣言」ではなく、<strong>cyber offense、CBRN、harmful manipulation、loss of control</strong>
+                    まで含めて何が管理対象になったのかを整理し、企業がAI導入で先に決めるべき統制項目を実務目線でまとめます。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. まず押さえるべき事実</a></li>
+                    <li><a href="#section2">2. なぜこの公開が重要なのか</a></li>
+                    <li><a href="#section3">3. フレームワークに明記された論点</a></li>
+                    <li><a href="#section4">4. 企業・現場への影響</a></li>
+                    <li><a href="#section5">5. 今やるべきこと</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. まず押さえるべき事実</h2>
+                <p>
+                    OpenAIの公式発表は、FrontierレベルのAIをどう安全に運用するかを、社内の注意書きではなく
+                    <strong>公開されたガバナンス文書</strong> として示した点が特徴です。対象は、最新モデルそのものの性能説明ではなく、
+                    その周辺にあるリスク評価、セキュリティ、報告、外部レビュー、更新サイクルです。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>OpenAI公式の記載</th>
+                                <th>実務で見る意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>公開日</th>
+                                <td>2026年5月28日</td>
+                                <td>法規制と安全運用の説明を外部向けに前進させた</td>
+                            </tr>
+                            <tr>
+                                <th>参照する法的枠組み</th>
+                                <td>California Transparency in Frontier AI Act / EU AI Act Code of Practice</td>
+                                <td>米国とEUの規制動向を意識した統制設計になっている</td>
+                            </tr>
+                            <tr>
+                                <th>管理対象</th>
+                                <td>cyber offense, CBRN risks, harmful manipulation, loss of control</td>
+                                <td>単なる誤答ではなく、高リスク領域まで視野に入れている</td>
+                            </tr>
+                            <tr>
+                                <th>運用要素</th>
+                                <td>model reporting, security risk management, incident response, external expert input</td>
+                                <td>導入後の監査・報告・改善を含む設計が前提になる</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    ここで重要なのは、OpenAIが「モデルが賢いかどうか」ではなく、
+                    <strong>モデルをどう管理して社会に出すか</strong> を先に言語化したことです。
+                    中小企業にとっても、これは大企業だけの話ではありません。外部サービスを使う側であっても、
+                    自社の利用規程、責任分担、ログの残し方を整えないと、同じ論点がそのまま社内に降りてきます。
+                </p>
+
+                <h2 id="section2">2. なぜこの公開が重要なのか</h2>
+                <p>
+                    これまでのAI議論は、「どのモデルが強いか」「どのツールが便利か」に寄りがちでした。
+                    しかし、企業が本当に困るのは、モデル性能そのものよりも、権限、説明責任、例外対応、インシデント時の動き方です。
+                    Frontier Governance Framework は、その論点を表に出した点で意味があります。
+                </p>
+                <p>
+                    MIRAINAの現場感で言えば、AI導入が詰まるのは、PoCの精度ではなく、運用に入った後の
+                    「誰が止めるのか」「どの出力なら使ってよいのか」「事故時に何を残すのか」が曖昧なときです。
+                    つまり今回の発表は、AI導入の主戦場がモデル比較から <strong>ガバナンス設計</strong> へ移ったことを示しています。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">モデル中心の導入</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>性能比較が中心になる</li>
+                                    <li>使い方は各部署に任されやすい</li>
+                                    <li>事故時の責任分界が曖昧になりやすい</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">ガバナンス中心の導入</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>権限と制約を先に定義する</strong></li>
+                                    <li>監査・報告・例外処理を設計に入れる</li>
+                                    <li>運用後の改善ループを残せる</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">AI導入の評価軸が「便利かどうか」から「管理できるかどうか」に移っている</p>
+                </div>
+
+                <p>
+                    特に、OpenAIがわざわざ外部法令との整合性を明記した点は見逃せません。
+                    企業は今後、AIを買うときに「機能」と「ガバナンス文書」をセットで見る必要があります。
+                    これはSaaS選定でも同じで、使えるかどうかだけでなく、誰が監督し、何を記録し、どう説明するかが問われます。
+                </p>
+
+                <h2 id="section3">3. フレームワークに明記された論点</h2>
+                <p>
+                    今回のフレームワークで実務上とくに重いのは、リスクの範囲が広いことです。
+                    cyber offense は不正アクセスや悪用リスク、CBRN は化学・生物・放射線・核のような高危険領域、
+                    harmful manipulation は情報操作や誤誘導、loss of control は制御喪失のリスクを示しています。
+                    ここに model reporting、security risk management、incident response が加わるため、導入後の管理が前提になります。
+                </p>
+                <p>
+                    つまり、今回の発表は「AIの安全は気をつけましょう」という一般論ではありません。
+                    どのリスクを、どのタイミングで、誰が、どの手順で見張るかを、公開文書のレベルまで落としている点が本質です。
+                    これは中小企業でもそのまま応用できます。大げさな監査部門がなくても、最低限のレビュー項目は作れます。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>論点</th>
+                                <th>企業での読み替え</th>
+                                <th>先に決めるべきこと</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>cyber offense</th>
+                                <td>AIに不正操作や脆弱性悪用をさせない</td>
+                                <td>禁止用途、承認フロー、ログ保管</td>
+                            </tr>
+                            <tr>
+                                <th>CBRN</th>
+                                <td>高リスク領域では利用範囲を厳格化する</td>
+                                <td>対象外業務の定義、専門家レビュー</td>
+                            </tr>
+                            <tr>
+                                <th>harmful manipulation</th>
+                                <td>誤誘導や不適切な説得を避ける</td>
+                                <td>対外文書の確認者、表現基準</td>
+                            </tr>
+                            <tr>
+                                <th>loss of control</th>
+                                <td>AIが想定外に振る舞う場面を想定する</td>
+                                <td>停止条件、手動切替、緊急連絡先</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    MIRAINA視点では、ここに <a href="/blogs/blog059.html">OpenAI Safety Bug Bountyの記事</a> で扱った
+                    セキュリティの考え方と、<a href="/blogs/blog117.html">Privacy Filterの記事</a> で扱った
+                    個人情報の前処理ルールがつながります。ガバナンスは一枚岩ではなく、入口のデータ整備、実行時の権限、
+                    事故時の報告を一つの線でつなぐ仕事です。
+                </p>
+
+                <h2 id="section4">4. 企業・現場への影響</h2>
+                <p>
+                    企業への影響は大きく3つあります。1つ目は、AIベンダー選定の評価項目が増えることです。
+                    これからは「精度」「料金」に加え、「監査可能か」「障害時の報告はどうなっているか」「外部レビューはあるか」を確認する必要があります。
+                    2つ目は、社内利用規程の見直しです。部署ごとにバラバラだった使い方を、最低限の共通ルールに揃える必要があります。
+                    3つ目は、稟議や承認の設計がAI利用の前提になることです。
+                </p>
+                <p>
+                    とくに中小企業では、AIを導入した瞬間に事故が起きるわけではありません。
+                    事故が起きるのは、担当者が変わったとき、運用が広がったとき、外部委託が混ざったときです。
+                    だからこそ、AIの導入条件を「使えますか」ではなく「運用継続できますか」で見た方が実態に合います。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">対象業務を絞り<br>高リスク用途を除外する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">権限・承認・ログ保管を<br>最初に決める</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">事故時の連絡先と<br>停止条件を明文化する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">月次で見直し、<br>ルールを更新する</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">中小企業でも回せるAIガバナンスは、細かい統制を一度に作るより、最小限を固定して回す方が現実的です</p>
+                </div>
+
+                <p>
+                    ここは<a href="/services/ai_consulting.html">生成AI活用支援</a>や<a href="/services/llmo_insight.html">LLMO Insight</a>とも相性が良い領域です。
+                    どのAIを使うかだけでなく、どの情報を出し、誰が確認し、どう残すかまで設計すると、導入後の摩擦が減ります。
+                    MIRAINAでは、ツール選定だけで終わらない運用設計を重視しています。
+                </p>
+
+                <h2 id="section5">5. 今やるべきこと</h2>
+                <p>
+                    すぐにできることは3つです。まず、社内でAIを使っている業務を棚卸しし、公開資料・顧客対応・採用・営業・開発のどこで使っているかを分けます。
+                    次に、高リスクに触れる業務を「人の確認必須」に切り替えます。最後に、事故や誤出力があった時の記録方法を決めます。
+                </p>
+                <p>
+                    この3つを先に決めるだけでも、将来的に法規制やベンダー側の更新があっても慌てにくくなります。
+                    AIの性能は短い周期で変わりますが、統制の考え方は比較的長く使えます。
+                    だからこそ、今のうちに「使うルール」ではなく「止め方と残し方」を定義しておく価値があります。
+                </p>
+
+                <div class="article-cta">
+                    <div class="cta-box">
+                        <h2 class="cta-title">AI導入をガバナンス込みで整えたい企業へ</h2>
+                        <p class="cta-text">MIRAINAは、業務選定、権限設計、ログ運用、現場定着まで一体で支援します。</p>
+                        <a href="/contact.html" class="btn btn-black-fill">無料相談はこちら</a>
+                    </div>
+                </div>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    OpenAIのFrontier Governance Framework は、AIの未来を語る資料というより、
+                    <strong>AIを社会に出すための責任分担表</strong> に近い内容です。
+                    重要なのは高性能なモデルを手に入れることではなく、そのモデルをどこまで許可し、何を記録し、何が起きたら止めるかを決めることです。
+                </p>
+                <p>
+                    中小企業にとっても、これは先送りしにくいテーマです。AI活用が広がるほど、個人の使い方ではなく組織の統制が成果を左右します。
+                    まずは1業務から、権限・承認・ログ・停止条件を明文化し、更新できる形で運用するところから始めるのが現実的です。
+                </p>
+
+                <div class="article-source">
+                    <h3>参考情報</h3>
+                    <ul>
+                        <li><a href="https://openai.com/index/openai-frontier-governance-framework/" target="_blank"
+                                rel="noopener">OpenAI公式: OpenAI’s Frontier Governance Framework（2026年5月28日）</a></li>
+                        <li><a href="https://openai.com/business/frontier/" target="_blank"
+                                rel="noopener">OpenAI公式: OpenAI Frontier</a></li>
+                        <li><a href="https://openai.com/index/election-safeguards-2026/" target="_blank"
+                                rel="noopener">OpenAI公式: Election information and safeguards in 2026</a></li>
+                    </ul>
+                </div>
+
+                <div class="article-editor">
+                    <div class="editor-label">この記事の監修者</div>
+                    <div class="editor-name">芝 優作</div>
+                    <p>
+                        MIRAINA代表。生成AI導入、LLMO、業務自動化の支援を行う。
+                        ツール導入だけで終わらず、社内フロー、承認設計、公開後の説明責任まで含めた運用設計を重視している。
+                    </p>
+                </div>
+
+                <div class="article-related">
+                    <h3>関連記事</h3>
+                    <div class="related-grid">
+                        <a href="/blogs/blog059.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card059.webp" alt="OpenAI Safety Bug Bountyの記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年4月最新】OpenAI Safety Bug Bountyとは？MCP時代に企業が実装すべき3つの防御策</div>
+                        </a>
+                        <a href="/blogs/blog117.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card117.webp" alt="OpenAI Privacy Filterの記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年4月最新】OpenAI Privacy Filterとは？個人情報をローカルで伏せる新モデル</div>
+                        </a>
+                        <a href="/blogs/blog122.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card122.webp" alt="OpenAI FedRAMP Moderate取得の記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年4月最新】OpenAIがFedRAMP Moderate取得、公共・大企業のAI導入はどう変わるか</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>
