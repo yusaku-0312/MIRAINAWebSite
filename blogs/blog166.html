@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年6月最新】iOS 27 ExtensionsでSiriのAIがClaude・ChatGPTに変えられると業務活用はどう変わるか | MIRAINAブログ</title>
+    <meta name="description"
+        content="Apple WWDC 2026発表のiOS 27 Extensionsを解説。2026年6月8日の公式発表をもとに、Siriへの外部AI設定、Claude活用、iPhoneビジネス活用への影響を整理します。">
+    <meta property="og:title" content="【2026年6月最新】iOS 27 ExtensionsでSiriのAIがClaude・ChatGPTに変えられると業務活用はどう変わるか">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog166.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog166-1.webp">
+    <meta property="og:description"
+        content="iOS 27 Extensionsの発表をもとに、SiriへのClaude設定とビジネス活用の変化を整理します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>iOS 27 ExtensionsでSiriのAIがClaude・ChatGPTに変えられると業務活用はどう変わるか</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.06.17</span>
+                    <div class="article-tags" style="flex-wrap: wrap; justify-content: center;">
+                        <p class="article-tag">iOS 27</p>
+                        <p class="article-tag">Apple Intelligence</p>
+                        <p class="article-tag">Claude</p>
+                        <p class="article-tag">AI活用</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap: anywhere;">【2026年6月最新】iOS 27 ExtensionsでSiriのAIがClaude・ChatGPTに変えられると業務活用はどう変わるか</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog166-1.webp" alt="iOS 27 ExtensionsでSiriにClaude・ChatGPTを設定できる時代のビジネス活用イメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    2026年6月8日、AppleはWWDC 2026においてiOS 27と新機能「Extensions」を発表しました。
+                    この変更の核心は、これまでApple独自のChatGPT連携に限られていたSiriのAI基盤を、
+                    <strong>ユーザーが自由にClaude・ChatGPT・Gemini・Grokから選択できる仕組みに開放した</strong>ことです。
+                </p>
+                <p>
+                    この記事では、iOS 27 Extensionsの仕組みと、iPhoneをビジネスツールとして使う中小企業・マーケターへの実際の影響を整理します。
+                    ClaudeをSiriの背後で動かすと、具体的に何が変わるのかを中心に解説します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. まず押さえるべき事実：iOS 27 Extensionsとは何か</a></li>
+                    <li><a href="#section2">2. なぜAppleはAI選択の自由化に動いたのか</a></li>
+                    <li><a href="#section3">3. iPhoneでClaudeを動かすとビジネスで変わる3つのこと</a></li>
+                    <li><a href="#section4">4. 中小企業が今検討すべき活用パターン</a></li>
+                    <li><a href="#section5">5. AI導入で今やるべきこと</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. まず押さえるべき事実：iOS 27 Extensionsとは何か</h2>
+                <p>
+                    WWDC 2026で発表されたiOS 27の目玉機能の一つが「Extensions」フレームワークです。
+                    これは、SiriやWriting Tools、Image Playgroundといったアップルの標準AI機能に、
+                    サードパーティのAIプロバイダーを接続できる仕組みです。
+                    設定は「設定 → Apple IntelligenceとSiri → Extensions」から行い、
+                    好みのAIアプリをApp Storeからインストールするだけで有効になります。
+                </p>
+                <p>
+                    新しいSiri（Siri 2.0）はGeminiをベースにした会話AIとして大幅に強化されています。
+                    Extensionsはそこに加えて、ClaudeやChatGPTを「優先AIプロバイダー」として設定できる仕組みです。
+                    たとえばリサーチ系のタスクはGemini、文章作成はClaude、コーディング支援はGitHub Copilot、と用途ごとに使い分ける運用も想定されています。
+                    iOS 27は2026年秋に無償アップデートとして提供予定で、iPhone 12以降が対応見込みです。
+                </p>
+
+                <figure class="article-figure">
+                    <img src="/images/blogs_images/blog166-2.webp" alt="AI Weekly：iOS 27 ExtensionsでClaude・ChatGPT・GeminiがSiriのデフォルトAIに設定可能になると報じた記事" width="800" height="450" loading="lazy">
+                    <figcaption>AI Weekly（2026年6月8日）：iOS 27 Extensionsに関する報道。Claude、ChatGPT、GeminiがApple Intelligence全機能のデフォルトAIとして選択可能になると確認されている。</figcaption>
+                </figure>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>これまで（iOS 26まで）</th>
+                                <th>iOS 27 Extensionsで変わること</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Siriの基盤AI</th>
+                                <td>ChatGPTとの連携のみ</td>
+                                <td>Gemini（標準）＋Claude・ChatGPT・Grokから選択可</td>
+                            </tr>
+                            <tr>
+                                <th>設定方法</th>
+                                <td>Appleが決めたモデルを使う</td>
+                                <td>設定 → Extensions から任意のAIアプリを選択</td>
+                            </tr>
+                            <tr>
+                                <th>対応機能</th>
+                                <td>Siri会話のみ</td>
+                                <td>Writing Tools・Image Playground等にも拡張</td>
+                            </tr>
+                            <tr>
+                                <th>対応端末</th>
+                                <td>iPhone 15 Pro以降（Apple Intelligence要件）</td>
+                                <td>iPhone 12以降（iOS 27対応範囲）</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section2">2. なぜAppleはAI選択の自由化に動いたのか</h2>
+                <p>
+                    Appleがこの変更に踏み切った背景には、AIアシスタントの競争激化があります。
+                    ChatGPTやClaudeがスタンドアロンアプリとしてiPhoneに普及し、
+                    「Siriを飛ばして直接ChatGPTを開く」というユーザー行動が定着しています。
+                    単一プロバイダーへのロックインを維持するよりも、選択肢を提供することでApple Intelligenceのプラットフォームとしての価値を高める判断をしたと見られています。
+                </p>
+                <p>
+                    また、欧州のデジタル市場法（DMA）など規制面でのプレッシャーも一因とされています。
+                    特定AIへの囲い込みが独占行為と見なされるリスクを回避しながら、
+                    Extensionsというオープンなフレームワークで競争環境を整えることで、
+                    プラットフォームビジネスとしての持続性を確保する狙いがあります。
+                    ユーザーにとっては「デバイスの外に出なくてもClaudeが使える」というメリットになります。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">これまでのiPhone AI体験</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>Siriを起動 → 能力に限界</li>
+                                    <li>別アプリでClaude/ChatGPTを開く</li>
+                                    <li>Apple標準機能とAIが分断</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">iOS 27 Extensionsの体験</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>Siri呼び出しでClaudeが応答</strong></li>
+                                    <li>Writing Toolsも選択AIで動く</li>
+                                    <li>用途別にモデルを使い分け可能</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">AI選択の自由化により、iPhoneの標準機能とClaudeが一体になって動く環境が整います</p>
+                </div>
+
+                <h2 id="section3">3. iPhoneでClaudeを動かすとビジネスで変わる3つのこと</h2>
+
+                <figure class="article-figure">
+                    <img src="/images/blogs_images/blog166-3.webp" alt="WWDC 2026のAI全発表まとめ記事：iOS 27・Siri 2.0（Gemini搭載）・Apple Intelligenceの解説" width="800" height="450" loading="lazy">
+                    <figcaption>AI革命（2026年6月8日速報）：WWDC 2026で発表されたiOS 27・Siri 2.0・Apple Intelligenceの全発表まとめ。GeminiをベースにExtensionsでClaude等を追加できる構成が確認されている。</figcaption>
+                </figure>
+
+                <p>
+                    ExtensionsでClaudeをSiriの背後に設定した場合、具体的なビジネス業務でどう変わるかを3点に絞って整理します。
+                </p>
+                <p>
+                    1つ目は、<strong>移動中や会議後の「口頭テキスト化」の品質が上がる</strong>ことです。
+                    これまでのSiriは音声入力→テキスト変換が主な用途でした。
+                    ClaudeをExtensionとして設定すれば、「今日の打ち合わせ内容を要点3つにまとめてメールの下書きにして」という指示をSiriに音声で投げかけるだけで、
+                    Claudeが整理した文章が返ってきます。
+                    スマートフォンひとつで移動中にドラフトを完成させる業務フローが現実的になります。
+                </p>
+                <p>
+                    2つ目は、<strong>Writing Toolsがより実務向きになる</strong>ことです。
+                    iOS 27のWriting Toolsは、メール・メモ・SNS投稿など文章を編集する場面で使えるAI機能です。
+                    ここにClaudeが組み込まれると、「この提案書の書き方をビジネス向けに整える」「SNS投稿の日本語をもう少し柔らかいトーンに直す」
+                    といった指示が、アプリを切り替えずにその場で処理できます。
+                    ClaudeはLong-context（長文理解）と指示への忠実な従い方に定評があり、特にBtoBの文章修正での精度が高い傾向があります。
+                </p>
+                <p>
+                    3つ目は、<strong>AI活用の学習コストが下がる</strong>ことです。
+                    「Claudeを使ってみたいが、新しいアプリに慣れるのが面倒」という現場の抵抗は珍しくありません。
+                    SiriのUIをそのまま使いながら裏でClaudeが動く形になれば、既存の操作感のまま高性能モデルを試せます。
+                    研修での「まずSiriに話しかけてみて」というアプローチが、実業務の質向上に直結するようになります。
+                </p>
+
+                <h2 id="section4">4. 中小企業が今検討すべき活用パターン</h2>
+                <p>
+                    iOS 27 Extensionsが本格リリースされる2026年秋に向けて、中小企業が今から考えておくべきことは大きく2つです。
+                </p>
+                <p>
+                    まず、<strong>社内で使うAIとデバイスの組み合わせを整理すること</strong>です。
+                    PCではClaude.ai、スマートフォンではSiri＋Claude Extension、会議中は音声入力、という形で
+                    使う場所とAIを統一しておくと、出力の一貫性が保てます。
+                    特にマーケティング担当者がSNS運用や顧客メール対応をスマートフォンで行っている場合、
+                    ExtensionsでClaudeを設定するだけで、投稿文の質とスピードが変わります。
+                </p>
+                <p>
+                    次に、<strong>どのAIを何の用途に使うかを社内ルールで決めること</strong>です。
+                    Extensionsは複数のAIを並列設定できる見込みですが、
+                    「クリエイティブ文章はClaude、情報検索はGemini」といった役割分担を事前に決めておかないと、
+                    社員ごとに使い方がバラバラになります。
+                    AIツールの社内ルール整備は、ツールが増えるほど早めに行う方が定着が早くなります。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">iOS 27<br>秋リリースを確認</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">Claude Appを<br>App Storeで入手</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">Extensions設定で<br>Claudeを選択</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">業務別の<br>使い分けルールを決める</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 05</span>
+                            <span class="step-text">社内への<br>展開と定着を支援</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">iOS 27リリースまでに使い方と社内ルールを準備しておくと、秋以降の定着がスムーズになります</p>
+                </div>
+
+                <h2 id="section5">5. AI導入で今やるべきこと</h2>
+                <p>
+                    iOS 27 Extensionsが使えるようになる前から、今できる準備があります。
+                    まず、社内でClaudeを業務利用している場合は、どの業務でどう使っているかを棚卸ししてください。
+                    PCでの活用と、スマートフォンで外出中に使う活用はシーンが違います。
+                    どちらに何を任せるかを整理しておくと、Extensionsが使えるようになった時点でスムーズに移行できます。
+                </p>
+                <p>
+                    次に、AI研修の内容をスマートフォンでの活用まで広げることを検討してください。
+                    PCでのプロンプト設計だけでなく、移動中の音声入力、会議後の要約、顧客対応の下書き作成といった
+                    スマートフォン特有の使い方を体験として含めると、現場定着率が上がります。
+                    <a href="/services/ai_training.html">AI研修</a>でも、端末別の活用シーン設計はよく相談を受けるテーマです。
+                </p>
+                <p>
+                    最後に、AppleとAIプロバイダーの契約・プライバシー条件を確認することです。
+                    ExtensionsでClaudeをSiri経由で使う場合、データがどこを経由するかはAppleとAnthropicのそれぞれのポリシーが関係します。
+                    顧客情報や社内機密を含む会話を音声入力で扱う場合は、必ず利用規約を確認してからルールに組み込んでください。
+                    <a href="/services/ai_consulting.html">生成AI活用支援</a>では、ツール導入前のリスク整理もセットで対応しています。
+                </p>
+
+                <div class="article-cta">
+                    <div class="cta-box">
+                        <h2 class="cta-title">iOS 27対応のAI活用ルールを整備したい企業へ</h2>
+                        <p class="cta-text">MIRAINAは、PCとスマートフォンを含めたAI活用設計、社内ルール整備、研修まで一体で支援します。</p>
+                        <a href="/contact.html" class="btn btn-black-fill">無料相談はこちら</a>
+                    </div>
+                </div>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    iOS 27 Extensionsは、iPhoneという日常のデバイスでClaude・ChatGPT・Geminiを自由に選んで使える環境を実現します。
+                    これはスマートフォンでのAI活用が、「専用アプリを開く手間」なしに標準ワークフローに組み込まれることを意味します。
+                </p>
+                <p>
+                    中小企業やマーケターにとって重要なのは、新機能が出てから考えるのではなく、
+                    秋のリリースまでに「誰が・何の業務で・どのAIを使うか」を決めておくことです。
+                    社内でのAI活用が整理されていない段階でExtensionsを導入しても、
+                    使い方がバラバラになるリスクがあります。
+                    ツールが増えるほど、活用設計と社内定着支援の重要性は高まります。
+                </p>
+
+                <div class="article-source">
+                    <h3>参考情報</h3>
+                    <ul>
+                        <li><a href="https://aiweekly.co/node/2611"
+                                target="_blank" rel="noopener">AI Weekly: Apple iOS 27 Extensions Opens Third-Party AI Marketplace at WWDC 2026（2026年6月8日）</a></li>
+                        <li><a href="https://ai-revolution.co.jp/media/wwdc26-ai-announcements/"
+                                target="_blank" rel="noopener">AI革命: WWDC26 AI全発表まとめ｜iOS 27・Siri 2.0・Apple Intelligence（2026年6月8日速報）</a></li>
+                        <li><a href="https://digital-gorilla.co.jp/ai-lab/apple-ios27-extensions-ai-choice-siri/"
+                                target="_blank" rel="noopener">デジタルゴリラ: Apple、iOS 27「Extensions」でSiriなどのデフォルトAIをClaude/ChatGPT/Geminiから選択可能に</a></li>
+                    </ul>
+                </div>
+
+                <div class="article-editor">
+                    <div class="editor-label">この記事の監修者</div>
+                    <div class="editor-name">芝 優作</div>
+                    <p>
+                        MIRAINA代表。生成AI導入、LLMO、業務自動化の支援を行う。
+                        AIツールの導入だけで終わらず、業務棚卸し、権限設計、研修、社内定着まで含めた実装支援を重視している。
+                    </p>
+                </div>
+
+                <div class="article-related">
+                    <h3>関連記事</h3>
+                    <div class="related-grid">
+                        <a href="/blogs/blog162.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card162.webp" alt="AIエージェント権限管理の記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年6月最新】AIエージェント権限管理、Claude事例で学ぶ安全設計</div>
+                        </a>
+                        <a href="/blogs/blog161.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card161.webp" alt="Anthropic 650億ドル調達の記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年5月最新】Anthropicが650億ドル調達、Claude導入判断はどう変わるか</div>
+                        </a>
+                        <a href="/blogs/blog165.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card165.webp" alt="GitHub Copilot従量課金化の記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年6月最新】GitHub Copilot従量課金化でAI開発コスト管理はどう変わるか</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

@@ -1475,6 +1475,15 @@
       "thumbnail": "/images/blogs_images/blog-card165.webp",
       "alt": "GitHub Copilot 従量課金化とAI開発コスト管理を解説するイメージ",
       "date": "2026-06-17"
+    },
+    {
+      "id": 166,
+      "title": "【2026年6月最新】iOS 27 ExtensionsでSiriのAIがClaude・ChatGPTに変えられると業務活用はどう変わるか",
+      "description": "Apple WWDC 2026発表のiOS 27 Extensionsを解説。2026年6月8日の公式発表をもとに、Siriへの外部AI設定、Claude活用、iPhoneビジネス活用への影響を整理します。",
+      "link": "/blogs/blog166.html",
+      "thumbnail": "/images/blogs_images/blog-card166.webp",
+      "alt": "iOS 27 ExtensionsでSiriにClaude・ChatGPTを設定できる時代のビジネス活用イメージ",
+      "date": "2026-06-17"
     }
   ],
   "works": [
