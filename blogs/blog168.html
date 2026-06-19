@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年6月最新】Fable 5停止でAIモデル選定はどう変わるか | MIRAINAブログ</title>
+    <meta name="description"
+        content="Fable 5停止を解説。2026年6月12日のAnthropic公式声明をもとに、AIモデル選定、供給リスク、契約確認の実務を整理します。">
+    <meta property="og:title" content="【2026年6月最新】Fable 5停止でAIモデル選定はどう変わるか">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog168.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog168-1.webp">
+    <meta property="og:description"
+        content="Fable 5停止をもとに、AIモデル選定で見るべき供給リスクと契約確認のポイントを整理します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+    <style>
+        @media (max-width: 767px) {
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+            }
+
+            html,
+            body {
+                overflow-x: hidden;
+            }
+
+            .article-container {
+                box-sizing: border-box;
+                max-width: 100%;
+                padding-left: 1.25rem;
+                padding-right: 1.25rem;
+            }
+
+            .article-title {
+                font-size: 1.45rem;
+                line-height: 1.5;
+                word-break: break-all;
+                overflow-wrap: anywhere;
+            }
+
+            .breadcrumbs li,
+            .article-meta > *,
+            .article-tag {
+                min-width: 0;
+                word-break: break-all;
+                overflow-wrap: anywhere;
+            }
+
+            .article-tags {
+                max-width: 100%;
+                justify-content: center;
+            }
+
+            .article-summary,
+            .article-toc,
+            .diagram-container {
+                box-sizing: border-box;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>Fable 5停止でAIモデル選定はどう変わるか</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.06.19</span>
+                    <div class="article-tags" style="flex-wrap: wrap; justify-content: center;">
+                        <p class="article-tag">Fable 5</p>
+                        <p class="article-tag">Anthropic</p>
+                        <p class="article-tag">AIモデル選定</p>
+                        <p class="article-tag">AIガバナンス</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap: anywhere;">【2026年6月最新】Fable 5停止でAIモデル選定はどう変わるか</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog168-1.webp" alt="Fable 5停止とAIモデル選定の供給リスクを解説するイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    2026年6月12日、Anthropicは米政府の輸出管理指令を受け、Fable 5とMythos 5へのアクセスを全顧客向けに停止すると発表しました。
+                    重要なのは、これは単なる一社のモデル停止ではなく、<strong>高性能AIモデルが政策判断や安全性評価によって突然使えなくなる</strong>可能性を示した点です。
+                </p>
+                <p>
+                    この記事では、既存の<a href="/blogs/blog162.html">AIエージェント権限管理の記事</a>や
+                    <a href="/blogs/blog159.html">AIガバナンス設計の記事</a>と重複しないように、Fable 5停止を「AIモデル選定と供給リスク」の観点に絞って整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. まず押さえるべき事実</a></li>
+                    <li><a href="#section2">2. なぜモデル停止が起きたのか</a></li>
+                    <li><a href="#section3">3. 企業のAI導入に起きる3つの影響</a></li>
+                    <li><a href="#section4">4. AIモデル選定で確認すべき項目</a></li>
+                    <li><a href="#section5">5. 中小企業が今やるべきこと</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. まず押さえるべき事実</h2>
+                <p>
+                    Anthropicの公式声明によると、米政府は国家安全保障上の権限を根拠に、Fable 5とMythos 5へのアクセスを外国籍ユーザーに停止するよう指令しました。
+                    Anthropicは、外国籍の従業員も含めて制限対象になるため、コンプライアンス上の対応として全顧客向けに両モデルを無効化せざるを得ないと説明しています。
+                    なお、同社は他のAnthropicモデルへのアクセスは影響を受けないとも明記しています。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>今回の発表内容</th>
+                                <th>企業利用への意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>対象モデル</th>
+                                <td>Fable 5、Mythos 5</td>
+                                <td>特定モデルだけを前提にした業務設計は停止リスクを持つ</td>
+                            </tr>
+                            <tr>
+                                <th>停止理由</th>
+                                <td>米政府の輸出管理指令と国家安全保障上の懸念</td>
+                                <td>AI利用は技術性能だけでなく政策・地域条件にも左右される</td>
+                            </tr>
+                            <tr>
+                                <th>Anthropicの説明</th>
+                                <td>狭い範囲のJailbreak疑いでは商用モデル回収基準として過剰と主張</td>
+                                <td>ベンダーと政府の判断がずれる場面を想定する必要がある</td>
+                            </tr>
+                            <tr>
+                                <th>顧客への影響</th>
+                                <td>Fable 5とMythos 5は全顧客でアクセス停止</td>
+                                <td>代替モデル、復旧手順、業務継続ルールが必要になる</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    さらに、Business Insiderは2026年6月18日、米政府とAnthropicの協議がAIセキュリティリスクを評価する標準化された枠組みづくりへ移っていると報じました。
+                    ここで論点になっているのは、どの程度の安全機構の回避を「重大」と見るか、現実の悪用可能性をどう測るか、政府がどの段階で介入するかです。
+                    つまり、AIモデル選定は「性能が高いか」だけでなく、「停止判断の基準がどれだけ透明か」を見るフェーズに入りました。
+                </p>
+
+                <h2 id="section2">2. なぜモデル停止が起きたのか</h2>
+                <p>
+                    Anthropicは声明の中で、Fable 5について、サイバーセキュリティ関連の悪用を抑えるための強い安全対策を導入していたと説明しています。
+                    また、ローンチ前には米政府、英国AISI、第三者組織、社内チームが合計数千時間のレッドチーム検証を行ったとも述べています。
+                    その一方で、同社は「完全なJailbreak耐性は現時点ではどのモデル提供者にとっても難しい」との立場も示しました。
+                </p>
+                <p>
+                    ここで重要なのは、AIの安全性が「合格か不合格か」で単純に決まらないことです。
+                    あるモデルが一部の攻撃的な入力に弱いとしても、その弱さが広範な悪用につながるのか、防御側の脆弱性診断にも使えるのか、他モデルでも同程度に可能なのかで意味は変わります。
+                    政府、AIベンダー、利用企業の間で評価軸がそろっていないと、今回のような急な停止や地域制限が起こり得ます。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">性能中心の選定</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>ベンチマークだけを見る</li>
+                                    <li>最上位モデルを固定利用する</li>
+                                    <li>停止時の代替手順がない</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">供給リスク込みの選定</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>利用地域と契約条件を確認する</strong></li>
+                                    <li>代替モデルを事前に決める</li>
+                                    <li>停止時の業務影響を棚卸しする</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">AIモデル選定は、性能比較から「止まった時に業務を続けられるか」の設計へ広がっています</p>
+                </div>
+
+                <h2 id="section3">3. 企業のAI導入に起きる3つの影響</h2>
+                <p>
+                    1つ目は、<strong>特定モデル依存のリスク</strong>です。
+                    社内FAQ、営業資料生成、コードレビュー、顧客対応などを一つの最上位モデルだけに依存させると、そのモデルが停止した瞬間に業務が止まります。
+                    モデル名ではなく、要約、分類、検索、生成、レビューといった業務単位で代替候補を整理しておく必要があります。
+                </p>
+                <p>
+                    2つ目は、<strong>地域・国籍・データ所在の確認</strong>です。
+                    今回のAnthropic声明では、外国籍ユーザーや外国籍従業員まで制限対象になり得る点が強調されています。
+                    グローバル拠点、海外委託先、外国籍メンバーを含むチームでは、単に「日本で契約できるか」だけでは足りません。
+                    利用者、処理データ、管理者権限、API接続先まで含めて確認する必要があります。
+                </p>
+                <p>
+                    3つ目は、<strong>安全性と使いやすさのトレードオフ</strong>です。
+                    安全対策が強いモデルほど、正当な業務でも拒否や制限が増える場合があります。
+                    逆に制限が緩いモデルは、社内利用時の監査や情報漏えい対策を厚くする必要があります。
+                    MIRAINA視点では、AI導入の成否は「一番賢いモデルを選ぶこと」ではなく、業務重要度ごとに安全性、精度、継続性を分けて設計することにあります。
+                </p>
+
+                <h2 id="section4">4. AIモデル選定で確認すべき項目</h2>
+                <p>
+                    Fable 5停止を踏まえると、AIモデル選定では次のような確認が必要です。
+                    まず、利用規約と提供地域です。APIや管理画面が使える国、データ保存の場所、海外メンバーのアクセス条件、規制業界での利用可否を確認します。
+                    次に、モデル停止時の通知と移行手順です。突然の停止が起きた場合に、どの代替モデルへ切り替えるか、プロンプトや評価基準を誰が確認するかを決めます。
+                </p>
+                <p>
+                    さらに、AIの出力を業務に組み込む前に、重要度別の運用ルールを作るべきです。
+                    たとえば社内メモ要約は柔軟にモデル変更できても、顧客回答、法務確認、セキュリティ診断、採用評価のような業務は、モデル変更時に再評価が必要です。
+                    この切り分けは、<a href="/services/ai_consulting.html">生成AI活用支援</a>や<a href="/services/ai_training.html">AI研修</a>で最初に整えるべき土台でもあります。
+                </p>
+
+                <h2 id="section5">5. 中小企業が今やるべきこと</h2>
+                <p>
+                    中小企業がすぐに取り組むべきことは、利用中のAIツール一覧を作ることです。
+                    ChatGPT、Claude、Gemini、Copilot、RAG、社内チャットボット、画像生成、議事録ツールなどを並べ、どの業務で、誰が、どのデータを入れているかを確認します。
+                    そのうえで、業務が止まると困る順に、代替ツールと手動復旧手順を決めます。
+                </p>
+                <p>
+                    次に、ベンダー選定のチェック項目を「機能比較」から「継続利用条件」へ広げます。
+                    価格、精度、使いやすさに加えて、提供地域、規約変更、データ保持、監査ログ、管理者権限、モデル終了時の告知、API互換性を確認します。
+                    AIは便利なアプリではなく、業務インフラになりつつあります。
+                    インフラとして扱うなら、止まる前提の設計が必要です。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    Fable 5停止は、AIモデルの性能競争だけを追っている企業にとって重要な警告です。
+                    高性能モデルほど政策、輸出管理、安全性評価、Jailbreak対策、利用地域の影響を受けやすくなります。
+                    今後のAIモデル選定では、どのモデルが一番賢いかだけでなく、止まった場合に業務をどう続けるかまで含めて判断する必要があります。
+                </p>
+                <p>
+                    まずは、利用中のAIツールを棚卸しし、重要業務ごとに代替モデル、承認者、復旧手順を決めましょう。
+                    そのうえで、社内ルールと研修を整えれば、突然のモデル停止が起きても業務全体が止まりにくくなります。
+                    AI導入の成熟度は、便利に使えているかではなく、変化が起きても運用を続けられるかで測る段階に入っています。
+                </p>
+
+                <div class="article-cta">
+                    <div class="cta-box">
+                        <h2 class="cta-title">AIモデル選定と社内運用を見直したい企業へ</h2>
+                        <p class="cta-text">MIRAINAは、AIツールの棚卸し、モデル選定、権限設計、代替手順、社内研修まで一体で支援します。</p>
+                        <a href="/contact.html" class="btn btn-black-fill">無料相談はこちら</a>
+                    </div>
+                </div>
+
+                <div class="article-source">
+                    <h3>参考情報</h3>
+                    <ul>
+                        <li><a href="https://www.anthropic.com/news/fable-mythos-access" target="_blank"
+                                rel="noopener">Anthropic: Statement on the US government directive to suspend access to Fable 5 and Mythos 5（2026年6月12日）</a></li>
+                        <li><a href="https://www.businessinsider.com/white-house-talks-anthropic-ai-security-rules-2026-6"
+                                target="_blank" rel="noopener">Business Insider: White House talks with Anthropic shift to setting AI security rules（2026年6月18日）</a></li>
+                        <li><a href="https://www.anthropic.com/news/responsible-scaling-policy-v3" target="_blank"
+                                rel="noopener">Anthropic: Responsible Scaling Policy Version 3.0（2026年2月24日）</a></li>
+                    </ul>
+                </div>
+
+                <div class="article-editor">
+                    <div class="editor-label">この記事の監修者</div>
+                    <div class="editor-name">芝 優作</div>
+                    <p>
+                        MIRAINA代表。生成AI導入、LLMO、業務自動化の支援を行う。
+                        AIツールの導入だけで終わらず、業務棚卸し、権限設計、研修、社内定着まで含めた実装支援を重視している。
+                    </p>
+                </div>
+
+                <div class="article-related">
+                    <h3>関連記事</h3>
+                    <div class="related-grid">
+                        <a href="/blogs/blog162.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card162.webp" alt="AIエージェント権限管理の記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年6月最新】AIエージェント権限管理、Claude事例で学ぶ安全設計</div>
+                        </a>
+                        <a href="/blogs/blog159.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card159.webp" alt="OpenAIガバナンス設計の記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年5月最新】OpenAIがFrontier Governance Frameworkを公開、AIガバナンス設計はどう変わるか</div>
+                        </a>
+                        <a href="/blogs/blog088.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card088.webp" alt="Anthropic Project Glasswingの記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">AnthropicのProject Glasswingで変わるAIセキュリティ導入の新常識</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

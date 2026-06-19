@@ -1502,6 +1502,15 @@
       "thumbnail": "/images/blogs_images/blog-card167.webp",
       "alt": "Google Home Speakerと音声AI導入を解説するイメージ",
       "date": "2026-06-18"
+    },
+    {
+      "id": 168,
+      "title": "【2026年6月最新】Fable 5停止でAIモデル選定はどう変わるか",
+      "description": "Fable 5停止を解説。2026年6月12日のAnthropic公式声明をもとに、AIモデル選定、供給リスク、契約確認の実務を整理します。",
+      "link": "/blogs/blog168.html",
+      "thumbnail": "/images/blogs_images/blog-card168.webp",
+      "alt": "Fable 5停止とAIモデル選定の供給リスクを解説するイメージ",
+      "date": "2026-06-19"
     }
   ],
   "works": [
