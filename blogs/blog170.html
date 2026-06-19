@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年6月最新】Microsoft独自AIモデルMAI発表で企業のAIベンダー選びはどう変わるか | MIRAINAブログ</title>
+    <meta name="description"
+        content="MicrosoftがBuild 2026で自社開発のAIモデル群MAIを発表。OpenAI依存を減らしコストを下げる狙いを、企業のAIベンダー選定とモデル選びの実務目線で整理します。">
+    <meta property="og:title" content="【2026年6月最新】Microsoft独自AIモデルMAI発表で企業のAIベンダー選びはどう変わるか">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog170.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog170-1.webp">
+    <meta property="og:description"
+        content="Microsoftの自社AIモデルMAI発表をもとに、OpenAI依存の低減とコスト削減が企業のAIベンダー選びをどう変えるかを整理します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+    <style>
+        @media (max-width: 767px) {
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+            }
+
+            html,
+            body {
+                overflow-x: hidden;
+            }
+
+            .article-container {
+                box-sizing: border-box;
+                max-width: 100%;
+                padding-left: 1.25rem;
+                padding-right: 1.25rem;
+            }
+
+            .article-title {
+                font-size: 1.45rem;
+                line-height: 1.5;
+                word-break: break-all;
+                overflow-wrap: anywhere;
+            }
+
+            .breadcrumbs li,
+            .article-meta > *,
+            .article-tag {
+                min-width: 0;
+                word-break: break-all;
+                overflow-wrap: anywhere;
+            }
+
+            .article-tags {
+                max-width: 100%;
+                justify-content: center;
+            }
+
+            .article-summary,
+            .article-toc,
+            .diagram-container {
+                box-sizing: border-box;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>Microsoft独自AIモデルMAI発表で企業のAIベンダー選びはどう変わるか</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.06.19</span>
+                    <div class="article-tags" style="flex-wrap: wrap; justify-content: center;">
+                        <p class="article-tag">Microsoft</p>
+                        <p class="article-tag">MAI</p>
+                        <p class="article-tag">AIモデル</p>
+                        <p class="article-tag">AI導入</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap: anywhere;">【2026年6月最新】Microsoft独自AIモデルMAI発表で企業のAIベンダー選びはどう変わるか</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog170-1.webp" alt="Microsoft独自AIモデルMAI発表と企業のAIベンダー選びを解説するイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    2026年6月、MicrosoftはBuild 2026で<strong>自社開発のAIモデル群「MAI（Microsoft AI）」</strong>を発表しました。
+                    重要なのは、これが単なる新モデルの追加ではなく、「特定のAI提供元に依存したままで良いのか」という企業の根本的な悩みに関わる動きだという点です。
+                </p>
+                <p>
+                    この記事では、MAIの発表で何が変わったのか、どんな企業に関係するのか、そして中小企業がAIベンダー選びとモデル選定をどう考えるべきかを実務目線で整理します。
+                    AIに詳しくない経営者が検索しそうな疑問と、すでにAIを使う担当者がAIに投げがちな質問の両方に答える形で見ていきます。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. まず押さえるべき事実</a></li>
+                    <li><a href="#section2">2. なぜMicrosoftは自社モデルMAIを出したのか</a></li>
+                    <li><a href="#section3">3. 企業のAIベンダー選びで変わる3つのこと</a></li>
+                    <li><a href="#section4">4. MAI登場を自社のAI戦略にどう落とすか</a></li>
+                    <li><a href="#section5">5. 中小企業が今やるべきこと</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. まず押さえるべき事実</h2>
+                <p>
+                    Microsoftは2026年6月、開発者向け年次イベントBuild 2026で、<strong>自社開発のAIモデル群「MAI（Microsoft AI）」を一挙に公開</strong>しました。
+                    複数の海外報道によると、今回発表されたのは推論、コーディング、画像、音声、文字起こしなどをカバーする<strong>7つの社内モデル</strong>で、
+                    その中心となるのが同社初の本格的な推論モデル「MAI-Thinking-1」です。
+                </p>
+                <p>
+                    特徴的なのは、MAI-Thinking-1が<strong>OpenAIのデータに依存せず独自に訓練された</strong>と説明されている点です。
+                    また、コーディング向けのモデルはGitHub CopilotやVisual Studio Codeに組み込まれ始めており、
+                    Microsoftはこれらを自社のAzureインフラ上で動かすことで、外部提供元に支払う費用を抑え、開発者に還元する狙いだとしています。
+                    つまり今回の発表は、「新しいAIが増えた」話であると同時に、<strong>AIの土台を誰に握られているかという構造の話</strong>でもあります。
+                </p>
+
+                <figure class="article-figure">
+                    <img src="/images/blogs_images/blog170-2.webp" alt="Microsoft AI（MAI）が自社モデル開発の方針を掲げる公式サイト" width="800" height="450" loading="lazy">
+                    <figcaption>Microsoft AI（MAI）公式サイト。「自社モデルでミッションを支える」という開発方針を掲げている（出典：microsoft.ai）</figcaption>
+                </figure>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>これまでの一般的な構図</th>
+                                <th>MAI発表後の変化</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Copilotの中身</th>
+                                <td>主にOpenAIのモデルが担っていた</td>
+                                <td>自社MAIモデルが一部を担い始める</td>
+                            </tr>
+                            <tr>
+                                <th>提供元の数</th>
+                                <td>特定ベンダーに集中しやすい</td>
+                                <td>Microsoft・OpenAI・Anthropicなど複線化</td>
+                            </tr>
+                            <tr>
+                                <th>コスト構造</th>
+                                <td>外部モデルの利用料が積み上がる</td>
+                                <td>自社インフラ運用で抑制を狙う</td>
+                            </tr>
+                            <tr>
+                                <th>選定の論点</th>
+                                <td>「どのモデルが賢いか」中心</td>
+                                <td>「どこに依存するか」も重要に</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section2">2. なぜMicrosoftは自社モデルMAIを出したのか</h2>
+                <p>
+                    背景には、MicrosoftとOpenAIの関係変化があります。
+                    両社は2026年4月に提携内容を見直し、MicrosoftがOpenAIの技術を独占的に使う形ではなくなりました。
+                    その流れの中でMicrosoftは、<strong>自社で基盤モデルを持つこと</strong>を「長期的な自立」のための戦略と位置づけています。
+                </p>
+                <p>
+                    狙いは大きく2つです。1つは<strong>コスト</strong>です。外部の提供元にモデル利用料を払い続けるより、
+                    自社モデルを自社のAzure上で動かすほうが、利用が増えるほど費用を抑えやすくなります。
+                    もう1つは<strong>主導権</strong>です。価格、プライバシー、コンプライアンスの方針を自社で決められるようになり、製品の作り込みも自由になります。
+                </p>
+                <p>
+                    Microsoftによると、推論モデルMAI-Thinking-1は同社の社内評価でClaude Sonnet 4.6より好まれ、コーディングではClaude Opus 4.6に匹敵する場面もあったとされています。
+                    こうした数値はあくまで提供元自身の主張であり、第三者の検証はこれからですが、
+                    重要なのは<strong>「Copilotの裏側で動くAIが、必ずしもOpenAIだけではなくなった」</strong>という構造の変化です。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">単一ベンダー前提のAI活用</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>1社のモデルに業務が密結合</li>
+                                    <li>価格改定や提供停止に弱い</li>
+                                    <li>乗り換えコストが見えない</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">複数ベンダー前提のAI活用</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>用途ごとにモデルを使い分け</strong></li>
+                                    <li>提供停止・値上げの影響を分散</li>
+                                    <li>切り替えやすい設計を先に持つ</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">AI選びの論点は、性能比較から「どこに依存し、どう分散するか」へ移っています</p>
+                </div>
+
+                <h2 id="section3">3. 企業のAIベンダー選びで変わる3つのこと</h2>
+                <p>
+                    1つ目は、<strong>「賢さ」だけでモデルを選ぶ時代が終わりつつある</strong>ことです。
+                    主要モデルの性能差は縮まっており、ベンチマークの順位は数か月で入れ替わります。
+                    だからこそ、性能の一点突破ではなく、コスト、提供の安定性、自社データの扱い、乗り換えやすさを含めた総合判断が重要になります。
+                </p>
+                <p>
+                    2つ目は、<strong>同じ製品でも中身のモデルが変わりうる</strong>ことです。
+                    Copilotのように、これまでOpenAI中心だった製品の一部がMAIに置き換わるなど、ユーザーが意識しないところで使われるモデルは更新されます。
+                    自社の業務がどのモデルに支えられているのかを、製品名ではなく「中で何が動いているか」で把握しておく必要があります。
+                </p>
+                <p>
+                    3つ目は、<strong>ベンダー分散がリスク管理になる</strong>ことです。
+                    1つの提供元に業務を密結合させていると、値上げ、仕様変更、提供停止が起きたときに一気に影響を受けます。
+                    用途ごとにモデルを使い分け、いつでも切り替えられる設計にしておくことが、AIを業務に組み込むうえでの安全弁になります。
+                    MIRAINA視点では、これは大企業だけの話ではなく、AIを日常業務に入れ始めた中小企業ほど効いてくる論点です。
+                </p>
+
+                <h2 id="section4">4. MAI登場を自社のAI戦略にどう落とすか</h2>
+                <p>
+                    実務で大切なのは、新モデルの名前を覚えることではなく、自社のAI活用が「どこに、どれだけ依存しているか」を棚卸しすることです。
+                    まず、社内で使っているAIツールを書き出し、それぞれが裏側でどの提供元のモデルを使っているかを整理します。
+                    Copilot、ChatGPT、Claude、社内ツールのAPIなど、提供元が偏っていないかを確認しましょう。
+                </p>
+                <p>
+                    次に、業務ごとに「止まったら困る度合い」を評価します。
+                    たとえば日常の文章作成は代替が効きやすい一方、特定モデルに最適化した業務フローや自動化は、提供停止や仕様変更の影響を受けやすくなります。
+                    既存の<a href="/blogs/blog168.html">Fable 5停止でAIモデル選定はどう変わるかの記事</a>でも触れた通り、
+                    「使えなくなる前提」で代替を用意しておくことが、AIを安心して業務に組み込む鍵です。
+                </p>
+                <p>
+                    そのうえで、プロンプトや業務フローをできるだけ特定モデルに依存しない形で設計しておくと、乗り換えの負担が下がります。
+                    こうした設計は、<a href="/services/ai_consulting.html">生成AI活用支援</a>や<a href="/services/ai_training.html">AI研修</a>の段階で先に決めておくと、後からの作り直しを減らせます。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">使用中のAIツールを<br>棚卸し</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">裏側の提供元を<br>確認する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">止まったら困る<br>業務を特定</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">代替モデルを<br>用意しておく</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 05</span>
+                            <span class="step-text">依存しない形に<br>設計を見直す</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">ベンダー選びは、比較して終わりではなく「分散と切り替え」を前提に設計することで意味を持ちます</p>
+                </div>
+
+                <h2 id="section5">5. 中小企業が今やるべきこと</h2>
+                <p>
+                    中小企業が最初にやるべきことは、どのモデルが一番賢いかを議論する前に、<strong>自社のAI活用が一社に偏っていないかを確認すること</strong>です。
+                    多くの場合、気づかないうちにCopilotやChatGPTなど特定の提供元にまとまっており、その前提が崩れたときの備えがないケースが目立ちます。
+                    まずは「何に使っているか」と「裏で何が動いているか」をセットで洗い出してください。
+                </p>
+                <p>
+                    そのうえで、全てを一度に切り替える必要はありません。
+                    日常業務はコストと使いやすさで選び、止まると困る重要業務だけ代替手段を用意する、という優先順位で十分です。
+                    MAIの登場は、「AIは一社に任せきりにしなくてよい」という選択肢が広がったサインです。
+                    自社のAI戦略を、特定ベンダー前提から「使い分けと切り替え」を前提にした設計へ、少しずつ移していきましょう。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    Microsoftの自社AIモデルMAIの発表は、AIを業務に使う企業にとって見逃せない構造変化です。
+                    Microsoftは、性能競争に加わるだけでなく、コストと主導権を握るために自社で基盤モデルを持つ道を選びました。
+                    これは、AIの土台を誰に依存するかという問いが、企業のAI戦略の中心に来たことを示しています。
+                </p>
+                <p>
+                    もし今、「Copilotを入れているが中身は気にしていなかった」「AIを一社に任せきりで不安」と感じているなら、
+                    まずはツールの棚卸し、提供元の確認、重要業務の特定、代替の準備という4点から整えてください。
+                    AIベンダー選びは、一番賢い一社を選ぶことではなく、変化に強い使い方を設計することです。
+                </p>
+
+                <div class="article-cta">
+                    <div class="cta-box">
+                        <h2 class="cta-title">AIモデル選定とベンダー分散の設計を見直したい企業へ</h2>
+                        <p class="cta-text">MIRAINAは、ツール選定だけでなく、提供元の分散、業務フローの依存度評価、切り替えやすい設計、定着研修まで一体で支援します。</p>
+                        <a href="/contact.html" class="btn btn-black-fill">無料相談はこちら</a>
+                    </div>
+                </div>
+
+                <div class="article-source">
+                    <h3>参考情報</h3>
+                    <ul>
+                        <li><a href="https://www.cnbc.com/2026/06/02/microsoft-unveils-new-ai-models-lessen-reliance-on-openai-lower-costs.html"
+                                target="_blank" rel="noopener">CNBC: Microsoft unveils new AI models to lessen reliance on OpenAI and lower costs for developers（2026年6月2日）</a></li>
+                        <li><a href="https://www.windowscentral.com/software-apps/microsoft-launches-seven-in-house-ai-models-to-cut-developer-costs-and-reduce-reliance-on-openai"
+                                target="_blank" rel="noopener">Windows Central: Microsoft launches seven in-house AI models to cut developer costs and reduce reliance on OpenAI（2026年6月）</a></li>
+                        <li><a href="https://www.geekwire.com/2026/microsoft-unveils-seven-homegrown-ai-models-in-bid-for-long-term-self-sufficiency/"
+                                target="_blank" rel="noopener">GeekWire: Microsoft unveils seven homegrown AI models in bid for long-term self-sufficiency（2026年6月）</a></li>
+                        <li><a href="https://microsoft.ai/news/two-new-in-house-models/" target="_blank"
+                                rel="noopener">Microsoft AI: Two in-house models in support of our mission</a></li>
+                        <li><a href="https://www.euronews.com/next/2026/06/03/microsoft-launches-its-own-ai-models-to-take-on-openai-and-anthropic"
+                                target="_blank" rel="noopener">Euronews: Microsoft launches its own AI models to take on OpenAI and Anthropic（2026年6月3日）</a></li>
+                    </ul>
+                </div>
+
+                <div class="article-editor">
+                    <div class="editor-label">この記事の監修者</div>
+                    <div class="editor-name">芝 優作</div>
+                    <p>
+                        MIRAINA代表。生成AI導入、LLMO、業務自動化の支援を行う。
+                        現場でAIが使われ続けるかどうかは、モデルの賢さよりも、提供元の分散、依存度の把握、切り替えやすい設計で決まると考え、実装まで伴走している。
+                    </p>
+                </div>
+
+                <div class="article-related">
+                    <h3>関連記事</h3>
+                    <div class="related-grid">
+                        <a href="/blogs/blog168.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card168.webp" alt="Fable 5停止でAIモデル選定はどう変わるかの記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年6月最新】Fable 5停止でAIモデル選定はどう変わるか</div>
+                        </a>
+                        <a href="/blogs/blog169.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card169.webp" alt="ChatGPT Enterpriseの利用分析強化の記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年6月最新】ChatGPT Enterpriseの利用分析強化でAI導入管理はどう変わるか</div>
+                        </a>
+                        <a href="/blogs/blog024.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card024.webp" alt="AI導入失敗の記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年最新】AI導入が失敗する本当の理由｜業務課題ベースで進める成功の鉄則</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>
