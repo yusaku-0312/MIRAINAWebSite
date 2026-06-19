@@ -195,6 +195,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年6月最新】iOS 27 ExtensionsでSiriのAIがClaude・ChatGPTに変えられると業務活用はどう変わるか](https://miraina-ai.com/blogs/blog166.html): Apple WWDC 2026で発表されたiOS 27 Extensionsをもとに、SiriのデフォルトAIにClaude・ChatGPTを設定する方法と中小企業・マーケターへのビジネス活用への影響を整理した記事。
 - [最新ブログ: 【2026年6月最新】Google Home Speaker発売で音声AI導入はどう変わるか](https://miraina-ai.com/blogs/blog167.html): Google Home SpeakerとGemini for Homeをもとに、音声AIが店舗・サロン・小規模オフィスの現場導入に与える影響と権限設計を整理した記事。
 - [最新ブログ: 【2026年6月最新】Fable 5停止でAIモデル選定はどう変わるか](https://miraina-ai.com/blogs/blog168.html): AnthropicのFable 5停止をもとに、AIモデル選定で確認すべき供給リスク、提供地域、契約条件、代替モデル設計を中小企業向けに整理した記事。
+- [最新ブログ: 【2026年6月最新】ChatGPT Enterpriseの利用分析強化でAI導入管理はどう変わるか](https://miraina-ai.com/blogs/blog169.html): OpenAIの2026年6月18日の公式発表をもとに、ChatGPT Enterpriseの利用分析強化、部門別の利用可視化、月次上限設定、AI導入管理の実務を整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年6月最新】ChatGPT Enterpriseの利用分析強化でAI導入管理はどう変わるか | MIRAINAブログ</title>
+    <meta name="description"
+        content="ChatGPT Enterpriseの利用分析強化を解説。2026年6月18日のOpenAI公式発表をもとに、部門別の利用可視化、月次上限設定、AI導入管理の実務を整理します。">
+    <meta property="og:title" content="【2026年6月最新】ChatGPT Enterpriseの利用分析強化でAI導入管理はどう変わるか">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog169.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog169-1.webp">
+    <meta property="og:description"
+        content="ChatGPT Enterpriseの利用分析強化をもとに、部門別の利用可視化と月次上限設定がAI導入管理をどう変えるかを整理します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+    <style>
+        @media (max-width: 767px) {
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+            }
+
+            html,
+            body {
+                overflow-x: hidden;
+            }
+
+            .article-container {
+                box-sizing: border-box;
+                max-width: 100%;
+                padding-left: 1.25rem;
+                padding-right: 1.25rem;
+            }
+
+            .article-title {
+                font-size: 1.45rem;
+                line-height: 1.5;
+                word-break: break-all;
+                overflow-wrap: anywhere;
+            }
+
+            .breadcrumbs li,
+            .article-meta > *,
+            .article-tag {
+                min-width: 0;
+                word-break: break-all;
+                overflow-wrap: anywhere;
+            }
+
+            .article-tags {
+                max-width: 100%;
+                justify-content: center;
+            }
+
+            .article-summary,
+            .article-toc,
+            .diagram-container {
+                box-sizing: border-box;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>ChatGPT Enterpriseの利用分析強化でAI導入管理はどう変わるか</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.06.19</span>
+                    <div class="article-tags" style="flex-wrap: wrap; justify-content: center;">
+                        <p class="article-tag">ChatGPT Enterprise</p>
+                        <p class="article-tag">OpenAI</p>
+                        <p class="article-tag">AI導入</p>
+                        <p class="article-tag">予算管理</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap: anywhere;">【2026年6月最新】ChatGPT Enterpriseの利用分析強化でAI導入管理はどう変わるか</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog169-1.webp" alt="ChatGPT Enterpriseの利用分析強化とAI導入管理を解説するイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    2026年6月18日、OpenAIはChatGPT Enterprise向けに、<strong>新しい利用分析と予算管理機能</strong>を追加しました。
+                    重要なのは、これが単なる管理画面の改善ではなく、「社内でAIを広げたいが、使いすぎと放置が怖い」という企業の悩みに正面から答える更新だという点です。
+                </p>
+                <p>
+                    この記事では、ChatGPT Enterpriseの利用分析強化で何が変わったのか、どの会社に向いているのか、そして中小企業がAI導入管理をどう設計すべきかを実務目線で整理します。
+                    AIに詳しくない管理者が検索しそうな疑問と、すでにAIを使う担当者がAIに投げがちな質問の両方に答える形で見ていきます。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. まず押さえるべき事実</a></li>
+                    <li><a href="#section2">2. なぜOpenAIは利用分析と予算管理を強化したのか</a></li>
+                    <li><a href="#section3">3. 企業のAI導入管理で変わる3つのこと</a></li>
+                    <li><a href="#section4">4. ChatGPT Enterpriseの利用分析をどう運用に落とすか</a></li>
+                    <li><a href="#section5">5. 中小企業が今やるべきこと</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. まず押さえるべき事実</h2>
+                <p>
+                    OpenAIは2026年6月18日、ChatGPT Enterprise管理者向けに新しい利用分析と更新版のspend controlsを公開しました。
+                    公式発表によると、管理者はGlobal Admin Console上で<strong>ChatGPTとCodexのクレジット使用量を一つの画面で確認</strong>できるようになり、
+                    ユーザー別、製品別、モデル別に、どこで費用が発生しているかを追いやすくなりました。
+                </p>
+                <p>
+                    さらに同日公開のヘルプドキュメントでは、Usage limits機能がWorkspace settingsに追加され、
+                    月次のクレジット上限をworkspace、group、userの3階層で設定できるようになったと案内されています。
+                    既存の週次制限はしばらく併存するものの、2026年7月15日以降は月次ベースへの自動移行が予定されています。
+                    つまり今回の更新は、「使えるAIを増やす話」ではなく、<strong>社内でAIを広げるための管理の型を整える話</strong>です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>これまで見えづらかった点</th>
+                                <th>2026年6月18日更新後</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>利用状況</th>
+                                <td>誰がどの機能で費用を使っているか追いにくい</td>
+                                <td>ユーザー別・製品別・モデル別に確認しやすい</td>
+                            </tr>
+                            <tr>
+                                <th>予算統制</th>
+                                <td>一律制限か個別調整に寄りやすい</td>
+                                <td>workspace・group・user単位の月次上限を設定</td>
+                            </tr>
+                            <tr>
+                                <th>増枠申請</th>
+                                <td>Slackや口頭で属人的に依頼しがち</td>
+                                <td>製品内から追加クレジット申請が可能</td>
+                            </tr>
+                            <tr>
+                                <th>管理対象</th>
+                                <td>ChatGPTとCodexの利用感が分かれやすい</td>
+                                <td>Global Admin Consoleで一元的に確認しやすい</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section2">2. なぜOpenAIは利用分析と予算管理を強化したのか</h2>
+                <p>
+                    OpenAIは公式記事の中で、企業のAI活用における課題は「モデル性能」よりも、
+                    <strong>どこで価値が出ているかと、どこで費用が膨らんでいるかを把握しながらスケールすること</strong>だと整理しています。
+                    実際、社内導入が進むほど、経営層や管理部門が気にするのは「便利そうか」ではなく、「誰が何に使い、どの部門にどれだけ予算を配るべきか」です。
+                </p>
+                <p>
+                    AI活用が苦手な人ほど、「ChatGPTを入れたら勝手に使われすぎないか」「社員が高額な機能ばかり触らないか」と検索します。
+                    一方でAIをすでに使う担当者は、「エンジニア部門だけ上限を高くしたい」「Codexの消費を他部署と分けて見たい」
+                    「申請制で深掘り調査だけ許可したい」とAIに相談し始めます。
+                    今回の更新は、まさにその両方の疑問に対して、OpenAIが公式に答えを出した形です。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">場当たり的なAI導入</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>便利そうな人から使い始める</li>
+                                    <li>請求が来てからコストを確認する</li>
+                                    <li>利用ルールが後追いになる</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">管理設計込みのAI導入</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>利用状況を先に可視化する</strong></li>
+                                    <li>部門ごとの上限を先に決める</li>
+                                    <li>増枠判断の基準を持つ</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">AI導入の論点は、ツール比較から「定着しながら管理できるか」へ移っています</p>
+                </div>
+
+                <h2 id="section3">3. 企業のAI導入管理で変わる3つのこと</h2>
+                <p>
+                    1つ目は、<strong>導入効果の見方が「利用率」だけでは足りなくなる</strong>ことです。
+                    利用者数が増えていても、低単価の簡易利用ばかりなのか、深い分析やCodexのような高付加価値機能に使われているのかで意味は変わります。
+                    今回の利用分析強化により、どのモデルや製品に予算が流れているのかを見ながら、成果と照らし合わせやすくなります。
+                </p>
+                <p>
+                    2つ目は、<strong>部門別の権限設計がしやすくなる</strong>ことです。
+                    OpenAIのUsage limitsはworkspace、group、userの順で細かく設定できます。
+                    たとえば営業やバックオフィスには標準上限を置き、開発チームや調査担当には高めの上限を設定し、
+                    さらに一部の高頻度ユーザーには個別overrideを付ける、という運用が現実的になります。
+                </p>
+                <p>
+                    3つ目は、<strong>AI導入の社内説明がしやすくなる</strong>ことです。
+                    「とにかく使ってみよう」では、現場も管理側も不安が残ります。
+                    しかし、利用状況を見える化し、増枠申請のルールを明示し、上限超過時の止まり方まで決めておけば、
+                    AIを使ったことがない部署にも導入を広げやすくなります。
+                    MIRAINA視点では、定着率はツールの性能より、こうした運用設計で決まる場面が多いです。
+                </p>
+
+                <h2 id="section4">4. ChatGPT Enterpriseの利用分析をどう運用に落とすか</h2>
+                <p>
+                    実務で重要なのは、分析画面を見ること自体ではなく、何を判断するために見るかを決めることです。
+                    まず管理者は、ユーザー別の利用量だけでなく、どの製品とモデルに偏っているかを確認します。
+                    たとえばCodex消費が急増しているなら、開発生産性の改善が伴っているかを追うべきですし、
+                    Deep ResearchやThinking系の利用が増えているなら、提案書、調査、レポート品質の改善と結びつけて見る必要があります。
+                </p>
+                <p>
+                    次に、増枠申請の承認基準を作ります。
+                    「忙しいから増やす」ではなく、「この業務で月何時間削減したい」「どの案件に使う」「どの成果物に反映する」といった基準を持たせると、
+                    AI予算が感覚ではなく投資として扱いやすくなります。
+                    既存の<a href="/blogs/blog165.html">GitHub Copilot従量課金化の記事</a>でも触れた通り、AIの費用管理は単価の安さより、使い道の明確さが重要です。
+                </p>
+                <p>
+                    また、2026年7月15日以降は週次制限から月次制限への移行が進むため、
+                    週ごとの小さな制限で抑える設計から、月次予算の中で部署ごとに裁量を持たせる設計へ頭を切り替える必要があります。
+                    これは<a href="/services/ai_consulting.html">生成AI活用支援</a>や<a href="/services/ai_training.html">AI研修</a>で先に決めておくと、現場の混乱を減らせます。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">利用部門と<br>主要機能を棚卸し</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">workspaceの<br>基本上限を決める</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">groupごとに<br>差をつける</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">増枠申請の<br>判断基準を作る</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 05</span>
+                            <span class="step-text">月次で成果と<br>消費を見直す</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">利用分析は、見て終わりではなく月次の運用サイクルに乗せることで意味を持ちます</p>
+                </div>
+
+                <h2 id="section5">5. 中小企業が今やるべきこと</h2>
+                <p>
+                    中小企業が最初にやるべきことは、Enterpriseを契約するかどうかを議論する前に、<strong>社内でAIを誰が何に使い始めているか</strong>を可視化することです。
+                    すでに無料版や個人課金で使っている社員がいるなら、その用途を集めるだけでも、どこに正式導入の需要があるかが見えてきます。
+                    「検索代わりの調査」「提案書の下書き」「会議要約」「コード補助」などの用途別に整理してください。
+                </p>
+                <p>
+                    そのうえで、全社一律導入ではなく、費用対効果が高い部門から始めるのが現実的です。
+                    営業、採用、マーケティング、開発では必要な上限も評価方法も違います。
+                    Enterpriseの新しい利用分析は、こうした差を雑に平均化せずに運用できるのが強みです。
+                    社内のAI導入を前に進めたいなら、「誰にいくら配るか」ではなく、「どの業務にどれだけ任せるか」を起点に設計しましょう。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    ChatGPT Enterpriseの利用分析強化は、AI導入を進める企業にとってかなり実務的なアップデートです。
+                    OpenAIは、AIの価値を広げるには性能向上だけでなく、利用可視化、予算統制、権限設計、申請フローが必要だと明確に示しました。
+                    これは、AIを一部の詳しい人だけの道具ではなく、組織全体で使う基盤へ変えていく動きです。
+                </p>
+                <p>
+                    もし今、「社内でChatGPTを広げたいが管理が不安」「AI予算をどこまで許可すべきかわからない」と感じているなら、
+                    まずは用途棚卸し、部門分け、月次上限、増枠基準の4点から整えてください。
+                    AI導入管理は、使わせないための制限ではなく、安心して広げるための設計です。
+                </p>
+
+                <div class="article-cta">
+                    <div class="cta-box">
+                        <h2 class="cta-title">AI導入の利用管理と定着設計を見直したい企業へ</h2>
+                        <p class="cta-text">MIRAINAは、AIツールの選定だけでなく、権限設計、利用ルール、定着研修、月次レビュー設計まで一体で支援します。</p>
+                        <a href="/contact.html" class="btn btn-black-fill">無料相談はこちら</a>
+                    </div>
+                </div>
+
+                <div class="article-source">
+                    <h3>参考情報</h3>
+                    <ul>
+                        <li><a href="https://openai.com/index/chatgpt-enterprise-spend-controls/" target="_blank"
+                                rel="noopener">OpenAI: New usage analytics and updated spend controls for enterprises（2026年6月18日）</a></li>
+                        <li><a href="https://help.openai.com/en/articles/20001001-setting-usage-limits-for-custom-roles-in-chatgpt-enterprise"
+                                target="_blank" rel="noopener">OpenAI Help Center: Setting usage limits in ChatGPT Enterprise and Edu（2026年6月18日更新）</a></li>
+                        <li><a href="https://help.openai.com/en/articles/11487671-flexible-pricing-for-the-enterprise-edu-and-business-plans"
+                                target="_blank" rel="noopener">OpenAI Help Center: Flexible pricing for the Enterprise, Edu, and Business plans</a></li>
+                        <li><a href="https://help.openai.com/en/articles/12289294-global-admin-console" target="_blank"
+                                rel="noopener">OpenAI Help Center: Global Admin Console</a></li>
+                        <li><a href="https://help.openai.com/en/articles/8265053-what-is-chatgpt-enterprise" target="_blank"
+                                rel="noopener">OpenAI Help Center: What is ChatGPT Enterprise?</a></li>
+                    </ul>
+                </div>
+
+                <div class="article-editor">
+                    <div class="editor-label">この記事の監修者</div>
+                    <div class="editor-name">芝 優作</div>
+                    <p>
+                        MIRAINA代表。生成AI導入、LLMO、業務自動化の支援を行う。
+                        現場でAIが使われ続けるかどうかは、ツール比較よりも利用ルール、権限設計、研修、定着支援で決まると考え、実装まで伴走している。
+                    </p>
+                </div>
+
+                <div class="article-related">
+                    <h3>関連記事</h3>
+                    <div class="related-grid">
+                        <a href="/blogs/blog054.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card054.webp" alt="ChatGPT Workspace Analyticsの記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">ChatGPT Workspace Analyticsとは？社内AI活用の定着度を見える化する方法</div>
+                        </a>
+                        <a href="/blogs/blog165.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card165.webp" alt="GitHub Copilot従量課金化の記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年6月最新】GitHub Copilot従量課金化でAI開発コスト管理はどう変わるか</div>
+                        </a>
+                        <a href="/blogs/blog024.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card024.webp" alt="AI導入失敗の記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年最新】AI導入が失敗する本当の理由｜業務課題ベースで進める成功の鉄則</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>
