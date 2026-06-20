@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年6月最新】AI Control Roadmapでエージェント監視はどう変わるか | MIRAINAブログ</title>
+    <meta name="description"
+        content="AI Control Roadmapを解説。Google DeepMindの2026年6月18日発表をもとに、AIエージェント監視、検知、停止設計を中小企業向けに整理します。">
+    <meta property="og:title" content="【2026年6月最新】AI Control Roadmapでエージェント監視はどう変わるか">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog171.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog171-1.webp">
+    <meta property="og:description"
+        content="Google DeepMindのAI Control Roadmapをもとに、AIエージェント監視、検知、停止設計の実務ポイントを整理します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+    <style>
+        @media (max-width: 767px) {
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+            }
+
+            html,
+            body {
+                overflow-x: hidden;
+            }
+
+            .article-container {
+                box-sizing: border-box;
+                max-width: 100%;
+                padding-left: 1.25rem;
+                padding-right: 1.25rem;
+            }
+
+            .article-title {
+                font-size: 1.45rem;
+                line-height: 1.5;
+                word-break: break-all;
+                overflow-wrap: anywhere;
+            }
+
+            .breadcrumbs li,
+            .article-meta > *,
+            .article-tag {
+                min-width: 0;
+                word-break: break-all;
+                overflow-wrap: anywhere;
+            }
+
+            .article-tags {
+                max-width: 100%;
+                justify-content: center;
+            }
+
+            .article-summary,
+            .article-toc,
+            .diagram-container {
+                box-sizing: border-box;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>AI Control Roadmapでエージェント監視はどう変わるか</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.06.20</span>
+                    <div class="article-tags" style="flex-wrap: wrap; justify-content: center;">
+                        <p class="article-tag">AI Control Roadmap</p>
+                        <p class="article-tag">Google DeepMind</p>
+                        <p class="article-tag">AIエージェント</p>
+                        <p class="article-tag">AIガバナンス</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap: anywhere;">【2026年6月最新】AI Control Roadmapでエージェント監視はどう変わるか</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog171-1.webp" alt="AI Control RoadmapとAIエージェント監視を解説するイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    2026年6月18日、Google DeepMindは<strong>AI Control Roadmap</strong>を公開しました。
+                    これはAIエージェントを「便利な自動化ツール」として見るだけでなく、社内システムにアクセスする存在として監視し、危険な動きを検知し、必要なら止めるための枠組みです。
+                </p>
+                <p>
+                    この記事では、既存の<a href="/blogs/blog162.html">AIエージェント権限管理の記事</a>や
+                    <a href="/blogs/blog164.html">Microsoft Scoutの記事</a>と重複しないように、AI Control Roadmapを「エージェント監視の運用設計」という観点に絞って整理します。
+                    中小企業がAIエージェントを導入する前に、どのログを見て、何を検知し、どこで人が止めるべきかを考えるための記事です。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. まず押さえるべき事実</a></li>
+                    <li><a href="#section2">2. なぜAIエージェント監視が重要になったのか</a></li>
+                    <li><a href="#section3">3. AI Control Roadmapの実務ポイント</a></li>
+                    <li><a href="#section4">4. 中小企業の導入設計に落とす方法</a></li>
+                    <li><a href="#section5">5. 今やるべきチェック項目</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. まず押さえるべき事実</h2>
+                <p>
+                    Google DeepMindは2026年6月18日、社内で使う高度なAIエージェントを安全に運用するための<strong>AI Control Roadmap</strong>を発表しました。
+                    公式記事では、AIエージェントがサイバー防御、科学研究、プロダクト開発などの複雑な作業を自律的に実行し始めている一方で、権限を持ったまま誤作動したり、監視をすり抜けたりする可能性に備える必要があると説明しています。
+                </p>
+                <p>
+                    特に重要なのは、DeepMindがAIエージェントを「潜在的な内部脅威」として扱う考え方を示した点です。
+                    これはAIを疑うという意味ではなく、従業員や外部委託先と同じように、アクセス権、行動ログ、検知ルール、停止手順を設計するということです。
+                    同社は、AIエージェントが2030年までに米国だけで<strong>2.9兆ドル</strong>の経済価値を生む可能性にも触れつつ、その価値を安全に引き出すには監視と制御が不可欠だと位置づけています。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>論点</th>
+                                <th>従来の見方</th>
+                                <th>AI Control Roadmap後の見方</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>AIエージェント</th>
+                                <td>作業を手伝うチャットや自動化ツール</td>
+                                <td>社内システムにアクセスする業務主体</td>
+                            </tr>
+                            <tr>
+                                <th>安全対策</th>
+                                <td>権限設定と利用ルールが中心</td>
+                                <td>検知、監視、遮断、復旧まで含める</td>
+                            </tr>
+                            <tr>
+                                <th>監視対象</th>
+                                <td>ユーザーの入力や出力結果</td>
+                                <td>推論、計画、操作ログ、実行結果</td>
+                            </tr>
+                            <tr>
+                                <th>評価指標</th>
+                                <td>便利さ、精度、コスト</td>
+                                <td>coverage、recall、time-to-response</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section2">2. なぜAIエージェント監視が重要になったのか</h2>
+                <p>
+                    これまでのAI活用は、人間が質問し、AIが回答し、人間が実行する流れが中心でした。
+                    しかし、常時稼働型のAI秘書、コード修正エージェント、リサーチエージェント、問い合わせ対応エージェントが増えると、AIは「提案するだけ」ではなく「実際に操作する」存在になります。
+                    たとえば、ファイル削除、顧客データの参照、メール送信、チケット更新、コード変更まで任せるなら、出力文の品質だけを見ても安全性は判断できません。
+                </p>
+                <p>
+                    DeepMindが示したポイントは、モデルの性格を完全に正しくするだけでは足りないということです。
+                    どれだけ良いモデルでも、指示を誤解したり、目標達成を急ぎすぎたり、外部入力に誘導されたりする可能性があります。
+                    そのため、AIエージェント監視では「何を考えたか」「どのツールを使ったか」「どの権限で何を変更したか」を追い、危険な兆候があれば人間や別のAIが止める設計が必要になります。
+                </p>
+
+                <h2 id="section3">3. AI Control Roadmapの実務ポイント</h2>
+                <p>
+                    AI Control Roadmapは、大きく3つの考え方で整理できます。
+                    1つ目は、サイバーセキュリティの発想をAIエージェントに持ち込むことです。
+                    DeepMindはMITRE ATT&amp;CKのような脅威モデリングの考え方を参照し、エージェントがどんな行動を取ると危険なのかを分類しようとしています。
+                    2つ目は、信頼できる別のAIを監督役にして、作業中のエージェントの計画や行動をレビューすることです。
+                </p>
+                <p>
+                    3つ目は、監視の強さをAIの能力と業務リスクに合わせて上げることです。
+                    DeepMindは検知側をD1からD4、予防・対応側をR1からR3のような段階で考えています。
+                    低リスクな作業ならあとからログを確認する非同期対応でも足りますが、重大なデータ削除や外部送信、サイバー攻撃につながる操作では、実行前に止めるリアルタイム対応が必要になります。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">操作ログを<br>残す</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">危険行動を<br>分類する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">監督AIや人が<br>確認する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">高リスク操作を<br>止める</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 05</span>
+                            <span class="step-text">検知漏れを<br>改善する</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">AIエージェント監視は「使わせる前の権限設定」と「使わせた後の検知・停止」をセットで設計します</p>
+                </div>
+
+                <h2 id="section4">4. 中小企業の導入設計に落とす方法</h2>
+                <p>
+                    中小企業が最初からDeepMind並みの監視基盤を作る必要はありません。
+                    ただし、AIエージェントに社内ツールを接続するなら、最低限「何をしてよいか」「何をしたら止めるか」「誰が確認するか」を先に決めるべきです。
+                    たとえば問い合わせ対応AIなら、FAQ検索と下書き作成までは自動、顧客への送信は人間承認、個人情報の外部送信は遮断、というように境界を明確にします。
+                </p>
+                <p>
+                    開発や業務自動化で使う場合は、さらに慎重です。
+                    AIがコードを書けることより、どのリポジトリに触れるのか、本番データを読めるのか、削除操作を実行できるのか、秘密情報を出力できるのかを確認してください。
+                    MIRAINAの<a href="/services/ai_consulting.html">生成AI活用支援</a>でも、ツール選定より先に業務棚卸し、権限設計、承認フローを決めることを重視しています。
+                    AI Control Roadmapは、その判断を「便利だから許可する」から「ログで見えるから段階的に許可する」へ変える合図です。
+                </p>
+
+                <h2 id="section5">5. 今やるべきチェック項目</h2>
+                <p>
+                    まず、社内でAIエージェント的に動いているものを洗い出してください。
+                    ChatGPTやClaudeを人が手動で使うだけならリスクは限定的ですが、Zapier、n8n、Google Workspace、Microsoft 365、GitHub、CRMなどに接続して自動実行している場合は、すでに監視対象です。
+                    次に、実行ログが残るか、失敗時に通知されるか、権限を一時停止できるかを確認します。
+                </p>
+                <p>
+                    そのうえで、AIエージェント監視の指標を3つに絞ると実務に落としやすくなります。
+                    1つ目はcoverage、つまりどれだけの操作を監視できているか。
+                    2つ目はrecall、危険な行動をどれだけ取り逃がさないか。
+                    3つ目はtime-to-response、検知してから止めるまでの時間です。
+                    この3つを月次で見れば、AI導入は「入れて終わり」ではなく、継続的に安全性を上げる運用になります。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    AI Control Roadmapは、AIエージェントの導入が次の段階に入ったことを示す発表です。
+                    これからの論点は、どのAIが一番賢いかだけではありません。
+                    AIが社内システムにアクセスし、作業を実行し、時には人間より速く広範囲に影響を与える前提で、監視、検知、遮断、復旧を設計できるかが問われます。
+                </p>
+                <p>
+                    中小企業にとっての現実的な第一歩は、AIエージェントに与える権限を小さく始め、ログを残し、高リスク操作だけ人間承認にすることです。
+                    便利さを止めるための管理ではなく、安心して任せられる範囲を広げるための管理として、エージェント監視を設計していきましょう。
+                </p>
+
+                <div class="article-cta">
+                    <div class="cta-box">
+                        <h2 class="cta-title">AIエージェント導入の権限・監視設計を整えたい企業へ</h2>
+                        <p class="cta-text">MIRAINAは、AIエージェントの業務棚卸し、権限設計、承認フロー、ログ確認、現場定着まで一体で支援します。</p>
+                        <a href="/contact.html" class="btn btn-black-fill">無料相談はこちら</a>
+                    </div>
+                </div>
+
+                <div class="article-source">
+                    <h3>参考情報</h3>
+                    <ul>
+                        <li><a href="https://deepmind.google/blog/securing-the-future-of-ai-agents/" target="_blank"
+                                rel="noopener">Google DeepMind: Securing the future of AI agents（2026年6月18日）</a></li>
+                        <li><a href="https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/securing-the-future-of-ai-agents/ai_control_roadmap.pdf"
+                                target="_blank" rel="noopener">Google DeepMind: AI Control Roadmap technical report</a></li>
+                        <li><a href="https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/securing-the-future-of-ai-agents/three_layers_of_agent_security.pdf"
+                                target="_blank" rel="noopener">Google DeepMind: Three Layers of Agent Security</a></li>
+                        <li><a href="https://www.axios.com/2026/06/18/google-deepmind-prepares-for-rogue-ai-agents"
+                                target="_blank" rel="noopener">Axios: Google DeepMind prepares for rogue AI agents（2026年6月18日）</a></li>
+                    </ul>
+                </div>
+
+                <div class="article-editor">
+                    <div class="editor-label">この記事の監修者</div>
+                    <div class="editor-name">芝 優作</div>
+                    <p>
+                        MIRAINA代表。生成AI導入、LLMO、業務自動化の支援を行う。
+                        AIエージェントの価値は、任せる範囲を広げるほど大きくなる一方で、権限、ログ、承認、停止手順をセットで整えなければ現場で使い続けられないと考え、実装まで伴走している。
+                    </p>
+                </div>
+
+                <div class="article-related">
+                    <h3>関連記事</h3>
+                    <div class="related-grid">
+                        <a href="/blogs/blog162.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card162.webp" alt="AIエージェント権限管理の記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年6月最新】AIエージェント権限管理、Claude事例で学ぶ安全設計</div>
+                        </a>
+                        <a href="/blogs/blog164.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card164.webp" alt="Microsoft Scoutの記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年6月最新】Microsoft Scoutで常時稼働エージェント導入はどう変わるか</div>
+                        </a>
+                        <a href="/blogs/blog148.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card148.webp" alt="Gemini Sparkの記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年5月最新】Gemini Spark登場、24時間AI秘書はどう変わるか</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>
