@@ -199,6 +199,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年6月最新】Microsoft独自AIモデルMAI発表で企業のAIベンダー選びはどう変わるか](https://miraina-ai.com/blogs/blog170.html): MicrosoftがBuild 2026で発表した自社AIモデル群MAIをもとに、OpenAI依存の低減とコスト削減の狙い、企業のAIベンダー選定・モデル選び・ベンダー分散の実務を整理した記事。
 - [最新ブログ: 【2026年6月最新】AI Control Roadmapでエージェント監視はどう変わるか](https://miraina-ai.com/blogs/blog171.html): Google DeepMindの2026年6月18日の公式発表をもとに、AI Control Roadmap、AIエージェント監視、検知、停止設計を中小企業向けに整理した記事。
 - [最新ブログ: 【2026年6月最新】OpenAI Partner Networkとは？AI導入支援会社の選び方はどう変わるか](https://miraina-ai.com/blogs/blog172.html): OpenAIの2026年6月14日の公式発表をもとに、1億5,000万ドル投資、3段階認定、専門分野制度を踏まえ、AI導入支援会社の選び方を整理した記事。
+- [最新ブログ: 【2026年最新】中小企業の生成AI導入率20.4%──成果を出す会社の共通点とは](https://miraina-ai.com/blogs/blog173.html): 2026年の中小企業向け調査をもとに、AI導入率20.4%、生成AI利用82.6%、業務効率化目的87.0%、活用事例不足83.3%などの数値を読み解き、成果を出す中小企業の進め方を整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)
