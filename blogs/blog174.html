@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年6月最新】Claude共有チャット悪用、AIツール導入で確認すべき安全ルール | MIRAINAブログ</title>
+    <meta name="description"
+        content="Claude共有チャット悪用型のマルウェア誘導を解説。正規ドメイン風URL、Google広告、ターミナル実行のリスクから、AIツール導入時の安全ルールを整理します。">
+    <meta property="og:title" content="【2026年6月最新】Claude共有チャット悪用、AIツール導入で確認すべき安全ルール">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog174.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog174-1.webp">
+    <meta property="og:description"
+        content="Claude共有チャット悪用型のマルウェア誘導を解説。正規ドメイン風URL、Google広告、ターミナル実行のリスクから、AIツール導入時の安全ルールを整理します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+    <style>
+        @media (max-width: 767px) {
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+            }
+
+            html,
+            body {
+                overflow-x: hidden;
+            }
+
+            .article-container {
+                box-sizing: border-box;
+                max-width: 100%;
+                padding-left: 1.25rem;
+                padding-right: 1.25rem;
+            }
+
+            .article-title {
+                font-size: 1.45rem;
+                line-height: 1.5;
+                word-break: normal;
+                overflow-wrap: anywhere;
+            }
+
+            .breadcrumbs li,
+            .article-meta>*,
+            .article-tag {
+                min-width: 0;
+                word-break: normal;
+                overflow-wrap: anywhere;
+            }
+
+            .article-tags {
+                max-width: 100%;
+                justify-content: center;
+            }
+
+            .article-summary,
+            .article-toc,
+            .diagram-container {
+                box-sizing: border-box;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>Claude共有チャット悪用、AIツール導入で確認すべき安全ルール</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.06.21</span>
+                    <div class="article-tags" style="flex-wrap: wrap; justify-content: center;">
+                        <p class="article-tag">Claude共有チャット悪用</p>
+                        <p class="article-tag">AIセキュリティ</p>
+                        <p class="article-tag">Claude Code</p>
+                        <p class="article-tag">AI研修</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap: anywhere;">【2026年6月最新】Claude共有チャット悪用、AIツール導入で確認すべき安全ルール</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog174-1.webp" alt="Claude共有チャット悪用とAIツール導入時の安全ルールを解説するイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    セキュリティ研究者が、Claudeの共有チャット風URLを悪用し、AI開発ツールを探すユーザーにマルウェア導入コマンドを実行させる手口を報告しました。
+                    報道では、Google広告経由で「Claude Code on Mac」などを検索した人に正規ドメインに見えるリンクを表示し、偽のApple Support風チャットからターミナル操作へ誘導する流れが説明されています。
+                </p>
+                <p>
+                    重要なのは、これは「Claudeだけの問題」ではない点です。AIツールの導入が増えるほど、社員は検索結果、共有チャット、インストール手順、ターミナルコマンドを日常的に扱います。本記事では、既存の<a href="/blogs/blog035.html">AI詐欺対策</a>や<a href="/blogs/blog162.html">AIエージェント権限管理</a>と重複しないように、AIツール導入時の社内ルールと教育に絞って整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. まず押さえるべき事実</a></li>
+                    <li><a href="#section2">2. なぜ正規ドメイン風URLが危険なのか</a></li>
+                    <li><a href="#section3">3. AIツール導入で起きる現場リスク</a></li>
+                    <li><a href="#section4">4. 中小企業が決めるべき安全ルール</a></li>
+                    <li><a href="#section5">5. 社員研修に入れるべきチェック項目</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. まず押さえるべき事実</h2>
+                <p>
+                    2026年6月18日の報道では、Trend Microの調査として、攻撃者がClaudeの「共有チャット」機能を悪用し、偽のサポート会話を作成していたと説明されています。
+                    手口は、AI開発ツールを探すユーザーに対して、Google広告から正規の<code>claude.ai</code>ドメイン上に見える共有チャットへ誘導し、そこで「Claude Codeのインストール手順」と見せかけたターミナルコマンドを貼り付けさせるものです。
+                </p>
+                <p>
+                    報道によると、主な標的はmacOS環境でAIツールを開発・利用する層で、トラフィックのうち台湾が<strong>30%</strong>、続いて日本、シンガポール、米国が多いとされています。
+                    つまり、日本企業にとっても「海外の特殊な攻撃」ではありません。AIツールを調べ、試し、社内に広げる担当者ほど、検索広告と共有リンクを通じた誘導に触れやすくなります。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>攻撃の要素</th>
+                                <th>見た目</th>
+                                <th>危険な理由</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>検索広告</th>
+                                <td>AIツールのインストール方法に見える</td>
+                                <td>急いでいる利用者ほど広告上位を信じやすい</td>
+                            </tr>
+                            <tr>
+                                <th>共有チャット</th>
+                                <td>正規サービス上の会話ログに見える</td>
+                                <td>ドメインが本物でも内容が安全とは限らない</td>
+                            </tr>
+                            <tr>
+                                <th>ターミナル操作</th>
+                                <td>開発ツールの導入コマンドに見える</td>
+                                <td>実行すると認証情報や社内データが抜かれる恐れがある</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section2">2. なぜ正規ドメイン風URLが危険なのか</h2>
+                <p>
+                    これまでのフィッシング教育では「怪しいドメインを見分ける」ことが中心でした。
+                    しかし今回のような手口では、共有チャットや公開URLが正規サービス上に存在するため、URLだけを見ても判断しにくくなります。
+                    これは、AI時代のセキュリティ教育で大きな転換点です。社員に「本物のドメインなら安全」と教えているだけでは、共有された内容そのものの真偽を見落とします。
+                </p>
+                <p>
+                    特にAIツールは、導入手順がコマンドラインで提示されることが多くあります。開発者なら<code>curl</code>、<code>npm</code>、<code>brew</code>のようなコマンドに慣れており、非エンジニアもAI導入の流れでターミナル操作に触れ始めています。
+                    その結果、攻撃者は「AIツールの導入」という自然な文脈に、悪意あるコマンドを混ぜ込みやすくなっています。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">従来の見分け方</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>URLの綴りを見る</li>
+                                    <li>不自然な日本語を見る</li>
+                                    <li>添付ファイルを開かない</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">AI時代の見分け方</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>共有内容の出所を見る</strong></li>
+                                    <li>公式ドキュメントと照合する</li>
+                                    <li>コマンド実行を承認制にする</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">正規ドメインかどうかに加えて、誰が作った手順か、何を実行するのかを確認する必要があります</p>
+                </div>
+
+                <h2 id="section3">3. AIツール導入で起きる現場リスク</h2>
+                <p>
+                    MIRAINA視点で見ると、このニュースの本質は「AIツールの人気に便乗したマルウェア」ではなく、AI導入の現場に手順確認の空白があることです。
+                    社員がChatGPT、Claude、Gemini、AIコーディング支援、拡張機能、MCPサーバーを自分で試すようになると、導入経路は一気に増えます。
+                    管理者が正式配布したアプリだけでなく、検索結果、SNS投稿、共有チャット、ブログ記事、動画説明欄から手順を拾う場面が増えるからです。
+                </p>
+                <p>
+                    さらに、AI開発ツールは社内のソースコード、APIキー、ブラウザセッション、クラウド認証情報に近い場所で動くことがあります。
+                    もしインフォスティーラーに感染すれば、単なる端末1台の被害では済まず、顧客情報、社内文書、GitHub、Google Workspace、Slackなどへ被害が広がる恐れがあります。
+                    だからこそ、<a href="/services/ai_training.html">AI研修</a>ではプロンプトの書き方だけでなく、導入経路と実行権限の見方まで扱うべきです。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>確認対象</th>
+                                <th>危ない運用</th>
+                                <th>安全な運用</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>ツール導入</th>
+                                <td>各自が検索結果から自由に導入する</td>
+                                <td>公式サイト、公式Docs、管理者配布に限定する</td>
+                            </tr>
+                            <tr>
+                                <th>コマンド実行</th>
+                                <td>共有チャットや動画のコマンドをそのまま貼る</td>
+                                <td>実行前に目的、取得元、変更範囲を確認する</td>
+                            </tr>
+                            <tr>
+                                <th>認証情報</th>
+                                <td>個人端末にAPIキーや社内ログインを保存する</td>
+                                <td>権限を最小化し、漏えい時に失効できる状態にする</td>
+                            </tr>
+                            <tr>
+                                <th>社内共有</th>
+                                <td>便利な手順をSlackにそのまま貼る</td>
+                                <td>検証済み手順として社内ナレッジ化する</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section4">4. 中小企業が決めるべき安全ルール</h2>
+                <p>
+                    中小企業が最初に決めるべきルールは、難しいセキュリティ製品の導入ではありません。
+                    まず「AIツールはどこから入れるか」「誰が検証するか」「どの操作から承認が必要か」を明文化することです。
+                    特にターミナル、PowerShell、ブラウザ拡張、MCP連携、Google WorkspaceやGitHubへの接続は、便利さとリスクが同時に大きくなります。
+                </p>
+                <p>
+                    実務では、全社員に専門的なコマンド解析を求める必要はありません。
+                    代わりに、共有チャットや検索広告から見つけた手順をその場で実行しない、公式ドキュメントと照合する、社内の確認担当に送る、という3つを標準化するだけでも被害確率は下がります。
+                    <a href="/blogs/blog024.html">AI導入が失敗する理由</a>でも整理した通り、AI活用は「ツールを入れる前の設計」で差がつきます。安全ルールも導入後ではなく、導入前に決めるべきです。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">公式経路を決める<br>Docsと管理者配布に限定</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">実行前に確認<br>コマンドと権限を点検</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">検証済みにする<br>社内手順として保存</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">権限を絞る<br>漏えい時に止められる設計</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">AIツールの導入は、便利な手順を探す作業ではなく、社内で安全に再現できる手順を作る作業です</p>
+                </div>
+
+                <h2 id="section5">5. 社員研修に入れるべきチェック項目</h2>
+                <p>
+                    AI研修では、プロンプト作成や業務効率化の事例に加えて、最低限のセキュリティ判断を入れる必要があります。
+                    たとえば「正規ドメイン上の共有チャットでも、投稿者が公式とは限らない」「検索広告の上位表示は安全性の証明ではない」「ターミナルに貼る前に、何をダウンロードし、どこへ送信し、どの権限で動くかを確認する」といった内容です。
+                </p>
+                <p>
+                    これは社員を疑うためではありません。AIツールは便利なほど、社員が自分で調べ、自分で試し、自分で導入したくなります。
+                    その自走力を止めるのではなく、危険な導入経路だけを避けるルールを渡すことが重要です。
+                    MIRAINAの<a href="/services/ai_consulting.html">生成AI活用支援</a>では、業務設計とあわせて、どのツールを、どの権限で、どの部門から使い始めるかを整理することを重視しています。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>研修項目</th>
+                                <th>社員に伝える一言</th>
+                                <th>社内ルール例</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>共有リンク</th>
+                                <td>本物のサービス上でも、内容は第三者が作れる</td>
+                                <td>共有チャットの手順は公式Docsと照合する</td>
+                            </tr>
+                            <tr>
+                                <th>検索広告</th>
+                                <td>広告上位は安全性の証明ではない</td>
+                                <td>導入ページはブックマーク済み公式URLから開く</td>
+                            </tr>
+                            <tr>
+                                <th>コマンド実行</th>
+                                <td>意味が説明できないコマンドは貼らない</td>
+                                <td>管理者承認なしでスクリプトを実行しない</td>
+                            </tr>
+                            <tr>
+                                <th>認証連携</th>
+                                <td>AIツールには必要最小限の権限だけ渡す</td>
+                                <td>OAuth連携とAPIキーを月次で棚卸しする</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    Claude共有チャット悪用型のマルウェア誘導は、AIツール導入が日常化した企業にとって重要な警告です。
+                    今回のポイントは、正規ドメインに見えるURL、検索広告、共有チャット、ターミナル操作という「一つひとつは普通に見える要素」が組み合わさることで、社員が危険な操作へ誘導される点にあります。
+                </p>
+                <p>
+                    中小企業が今やるべきことは、AIツールの利用を止めることではありません。
+                    公式経路を決める、共有手順を検証する、コマンド実行を承認制にする、権限を最小化する。この4つを先に決めれば、社員のAI活用を伸ばしながら、導入経路のリスクを下げられます。
+                    AI活用のスピードと安全性は、対立ではなく設計で両立させるものです。
+                </p>
+
+                <div class="article-cta">
+                    <div class="cta-box">
+                        <h2 class="cta-title">AI活用を安全に社内へ広げたい企業へ</h2>
+                        <p class="cta-text">MIRAINAは、生成AIの業務活用だけでなく、導入ルール、権限設計、社員研修まで含めて、現場で使い続けられるAI活用体制づくりを支援します。</p>
+                        <a href="/contact.html" class="btn btn-black-fill">無料相談はこちら</a>
+                    </div>
+                </div>
+
+                <div class="article-source">
+                    <h3>参考情報</h3>
+                    <ul>
+                        <li><a href="https://www.techradar.com/pro/security/this-marks-a-sophisticated-evolution-experts-warn-claude-feature-hijacked-by-hackers-to-launch-major-malware-campaign"
+                                target="_blank" rel="noopener">TechRadar：Experts warn Claude feature hijacked by hackers to launch major malware campaign</a></li>
+                        <li><a href="https://www.techradar.com/pro/security/infostealers-are-being-disguised-as-claude-code-openclaw-and-other-ai-developer-tools"
+                                target="_blank" rel="noopener">TechRadar：Infostealers are being disguised as Claude Code, OpenClaw and other AI developer tools</a></li>
+                        <li><a href="https://www.techradar.com/pro/security/microsoft-warns-clickfix-attacks-targeting-windows-terminal-to-trick-users-into-running-malware"
+                                target="_blank" rel="noopener">TechRadar：Microsoft warns ClickFix attacks targeting Windows Terminal</a></li>
+                        <li><a href="https://docs.anthropic.com/en/docs/claude-code/overview" target="_blank"
+                                rel="noopener">Anthropic Docs：Claude Code overview</a></li>
+                    </ul>
+                </div>
+
+                <div class="article-editor">
+                    <div class="editor-label">この記事の監修者</div>
+                    <div class="editor-name">芝 優作</div>
+                    <p>
+                        MIRAINA代表。中小企業向けに生成AI導入、業務自動化、AI研修の支援を行う。
+                        AI活用を現場へ広げる際は、便利なツールの紹介だけでなく、導入経路、権限、社内教育までをセットで設計することが重要だと考え、実務に落ちるAI活用支援を行っている。
+                    </p>
+                </div>
+
+                <div class="article-related">
+                    <h3>関連記事</h3>
+                    <div class="related-grid">
+                        <a href="/blogs/blog035.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card035.webp" alt="MetaのAI詐欺対策の記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年3月最新】MetaのAI詐欺対策とは？なりすまし広告を防ぐ新機能</div>
+                        </a>
+                        <a href="/blogs/blog162.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card162.webp" alt="AIエージェント権限管理の記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年6月最新】AIエージェント権限管理、Claude事例で学ぶ安全設計</div>
+                        </a>
+                        <a href="/blogs/blog171.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card171.webp" alt="AI Control Roadmapの記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年6月最新】AI Control Roadmapでエージェント監視はどう変わるか</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>
