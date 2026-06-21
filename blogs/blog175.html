@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年6月最新】構造化データでAI引用は増えるのか？LLMO対策の誤解と本質 | MIRAINAブログ</title>
+    <meta name="description"
+        content="構造化データを入れればAIに引用されるという誤解を2026年の最新調査で検証。スキーマ単体では引用が増えない理由と、AI Overview48%時代に本当に効くLLMO対策を中小企業向けに解説します。">
+    <meta property="og:title" content="【2026年6月最新】構造化データでAI引用は増えるのか？LLMO対策の誤解と本質">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog175.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog175-1.webp">
+    <meta property="og:description"
+        content="構造化データを入れればAIに引用されるという誤解を2026年の最新調査で検証。スキーマ単体では引用が増えない理由と、AI Overview48%時代に本当に効くLLMO対策を中小企業向けに解説します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+    <style>
+        @media (max-width: 767px) {
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+            }
+
+            html,
+            body {
+                overflow-x: hidden;
+            }
+
+            .article-container {
+                box-sizing: border-box;
+                max-width: 100%;
+                padding-left: 1.25rem;
+                padding-right: 1.25rem;
+            }
+
+            .article-title {
+                font-size: 1.45rem;
+                line-height: 1.5;
+                word-break: normal;
+                overflow-wrap: anywhere;
+            }
+
+            .breadcrumbs li,
+            .article-meta>*,
+            .article-tag {
+                min-width: 0;
+                word-break: normal;
+                overflow-wrap: anywhere;
+            }
+
+            .article-tags {
+                max-width: 100%;
+                justify-content: center;
+            }
+
+            .article-summary,
+            .article-toc,
+            .diagram-container {
+                box-sizing: border-box;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>構造化データでAI引用は増えるのか？LLMO対策の誤解と本質</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.06.21</span>
+                    <div class="article-tags" style="flex-wrap: wrap; justify-content: center;">
+                        <p class="article-tag">LLMO対策</p>
+                        <p class="article-tag">構造化データ</p>
+                        <p class="article-tag">AI検索最適化</p>
+                        <p class="article-tag">AI Overview</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap: anywhere;">【2026年6月最新】構造化データでAI引用は増えるのか？LLMO対策の誤解と本質</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog175-1.webp" alt="構造化データとLLMO対策でAI引用が増えるかを検証するイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    Google検索の<strong>約48%</strong>にAI Overviewが表示される（2026年時点）いま、「自社サイトをAIに引用させたい」という相談が急増しています。
+                    その対策としてよく挙がるのが<strong>構造化データ（スキーマ）</strong>の実装です。しかし2026年の最新調査では、<strong>スキーマを追加しただけではAI引用はほとんど増えなかった</strong>という結果も報告されています。
+                </p>
+                <p>
+                    本記事では、構造化データを巡る「入れれば引用される」という誤解を最新データで検証し、AI検索時代に本当に効く<a href="/services/llmo_insight.html">LLMO対策</a>の本質を、中小企業が実践できる順番で整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. なぜいまLLMO対策が必要なのか</a></li>
+                    <li><a href="#section2">2. 「構造化データを入れれば引用される」は本当か</a></li>
+                    <li><a href="#section3">3. データが示す「本当に効く」要素</a></li>
+                    <li><a href="#section4">4. 中小企業がやるべきLLMO対策の優先順位</a></li>
+                    <li><a href="#section5">5. 社内でLLMO改善を回す3ステップ</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. なぜいまLLMO対策が必要なのか</h2>
+                <p>
+                    検索の入り口は、青いリンクの一覧から「AIが要約した答え」へと急速に移っています。
+                    各種調査では、2026年時点でGoogleの検索結果の<strong>およそ48%にAI Overview（AIによる要約回答）が表示される</strong>とされ、ユーザーはリンクをクリックせずに答えを得る場面が増えています。
+                    さらに、ChatGPTやPerplexityといった生成AIに直接質問して情報を得る行動も一般化しました。
+                </p>
+                <p>
+                    この変化は、企業サイトにとって「検索で上位に出る」だけでは不十分になったことを意味します。
+                    これからは、<strong>AIの回答の中で自社が引用・言及される</strong>ことが新しい集客の起点になります。
+                    この「AIに引用される側になるための最適化」が<strong>LLMO（大規模言語モデル最適化）</strong>であり、GEOやAIOとも呼ばれる領域です。
+                    詳しくは<a href="/blogs/blog074.html">中小企業向けLLMO対策の実装ガイド</a>でも整理しています。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>従来のSEO</th>
+                                <th>LLMO（AI検索最適化）</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>ゴール</th>
+                                <td>検索結果で上位に表示される</td>
+                                <td>AIの回答内で引用・言及される</td>
+                            </tr>
+                            <tr>
+                                <th>評価する主体</th>
+                                <td>検索エンジンのランキング</td>
+                                <td>回答を生成する大規模言語モデル</td>
+                            </tr>
+                            <tr>
+                                <th>成果の見え方</th>
+                                <td>クリック数・順位</td>
+                                <td>AI回答での出現・引用シェア</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section2">2. 「構造化データを入れれば引用される」は本当か</h2>
+                <p>
+                    LLMO対策の話になると、ほぼ必ず登場するのが<strong>構造化データ（Schema.org / JSON-LD）</strong>です。
+                    FAQPageやArticle、Organizationといったマークアップで「これは何の情報か」をAIが読み取りやすくする手法で、実装ガイドも数多く出回っています。
+                    実際、AIVO社の2026年3月の調査では、検索意図に合ったQ&AをFAQPageで適切に整理したページは、AI回答への抽出率が<strong>約3.1倍</strong>に高まったと報告されています。
+                </p>
+                <p>
+                    一方で、これと正反対の結果も出ています。Ahrefsが<strong>1,885ページ</strong>を対象に、2025年8月〜2026年3月にかけてJSON-LDスキーマを追加し、各ページの実装前後30日を比較した調査では、<strong>スキーマを追加しただけでは、どのプラットフォームでも引用数は大きく増えなかった</strong>という結論でした。
+                    Google AI Modeでは<strong>+2.4%</strong>とほぼ横ばい、ChatGPTでも変化はわずか、AI Overviewにいたっては<strong>−4.6%</strong>とむしろ微減しています。
+                </p>
+                <p>
+                    この2つの結果は矛盾しているようで、実は同じことを示しています。
+                    効いているのは「スキーマというタグそのもの」ではなく、<strong>そのページに、AIが引用したくなる中身（明確な質問と回答、根拠あるデータ）が揃っているか</strong>です。
+                    構造化データは中身を正しく伝える「容れ物」であって、容れ物だけ用意しても中身が薄ければ引用は増えません。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">よくある誤解</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>スキーマを入れれば引用される</li>
+                                    <li>llms.txtを置けば対策完了</li>
+                                    <li>タグの数を増やすほど有利</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">実際に効くこと</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>結論を先に明示する</strong></li>
+                                    <li>出典と数値で裏づける</li>
+                                    <li>構造化データで正確に伝える</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">構造化データは「中身を正しく伝える容れ物」。中身づくりとセットで初めて効果が出ます</p>
+                </div>
+
+                <h2 id="section3">3. データが示す「本当に効く」要素</h2>
+                <p>
+                    では、AIに引用される中身とは具体的に何でしょうか。
+                    プリンストン大学のGEO研究では、<strong>「出典の明記」「統計データの追加」「専門家の引用文の追加」</strong>という3つの工夫を行ったコンテンツは、AI回答での可視性が<strong>30〜40%向上</strong>したと報告されています。
+                    これは、AIが「信頼できて、検証しやすい情報」を優先的に引用することを示しています。
+                </p>
+                <p>
+                    つまりLLMO対策の中心は、奇をてらったテクニックではありません。
+                    <strong>誰が、いつ、どんな根拠で言っているのかが明確な、質の高いコンテンツ</strong>を作ること。
+                    そのうえで構造化データやllms.txtで機械にも読み取りやすくする、という順番です。
+                    効果を継続的に把握する方法は<a href="/blogs/blog080.html">LLMO効果測定の3指標</a>で詳しく解説しています。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>施策</th>
+                                <th>調査・出典</th>
+                                <th>報告された効果</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>出典・統計・引用の追加</th>
+                                <td>プリンストン大学 GEO研究</td>
+                                <td>AI可視性が30〜40%向上</td>
+                            </tr>
+                            <tr>
+                                <th>意図に沿ったFAQ整理</th>
+                                <td>AIVO社 2026年3月調査</td>
+                                <td>AI抽出率が約3.1倍</td>
+                            </tr>
+                            <tr>
+                                <th>スキーマの追加のみ</th>
+                                <td>Ahrefs 1,885ページ調査</td>
+                                <td>引用数はほぼ変化なし</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section4">4. 中小企業がやるべきLLMO対策の優先順位</h2>
+                <p>
+                    ここからはMIRAINA視点の整理です。これらのデータが示すのは、<strong>中小企業ほどLLMO対策で逆転しやすい</strong>という事実です。
+                    大手がまだ本格着手していないニッチなテーマでは、根拠の明確な良質な記事を1本作るだけで、AIに引用される「第一人者」のポジションを取れる可能性があります。
+                    やるべきことは、高価なツールの導入ではなく、優先順位を間違えないことです。
+                </p>
+                <p>
+                    順番はシンプルです。まず<strong>自社が一番くわしいテーマで、結論・根拠・出典が揃った記事</strong>を用意する。
+                    次に、その内容を<strong>構造化データ（FAQPage / Article / Organization）</strong>で機械にも正確に伝える。
+                    最後に<strong>llms.txtやサイト全体の信頼性（E-E-A-T）</strong>で会社としての実在性・専門性を補強する。
+                    タグから入るのではなく、<a href="/blogs/blog062.html">中身→構造化→信頼性の順</a>で積み上げるのが王道です。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">中身を作る<br>結論・根拠・出典を揃える</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">構造化する<br>FAQ・Articleで正確に伝える</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">信頼を示す<br>llms.txtとE-E-A-Tを強化</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">測って改善<br>AI引用シェアを定点観測</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">構造化データは2番目の工程。中身づくりを飛ばすと、タグを増やしても引用は増えません</p>
+                </div>
+
+                <h2 id="section5">5. 社内でLLMO改善を回す3ステップ</h2>
+                <p>
+                    LLMO対策は一度やって終わりではなく、AIの回答を観察しながら改善し続ける運用です。
+                    中小企業が無理なく回すなら、次の3ステップで十分に始められます。
+                    最初から完璧を狙わず、自社の主力テーマ1つから着手するのがコツです。
+                </p>
+                <p>
+                    第1に、<strong>自社サービスに関する想定質問をChatGPTやGeminiに実際に入力</strong>し、いま自社が引用されているか、競合がどう紹介されているかを確認します。
+                    第2に、引用されていないテーマについて、結論先出し・数値・出典付きで記事を整え、FAQPageなどの構造化データを実装します。
+                    第3に、月1回など頻度を決めて<strong>AI回答での出現状況を記録し、改善した記事を増やしていきます</strong>。
+                    プロンプトの書き方や業務への組み込みに不安があれば、<a href="/services/ai_training.html">AI研修</a>で社内の運用力を底上げするのも有効です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>ステップ</th>
+                                <th>やること</th>
+                                <th>つまずきやすい点</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>現状把握</th>
+                                <td>想定質問をAIに入力し引用状況を確認</td>
+                                <td>感覚で判断し、実際のAI回答を見ない</td>
+                            </tr>
+                            <tr>
+                                <th>中身の改善</th>
+                                <td>結論・数値・出典を整え構造化する</td>
+                                <td>タグだけ足して中身を直さない</td>
+                            </tr>
+                            <tr>
+                                <th>継続測定</th>
+                                <td>月次でAI引用シェアを記録する</td>
+                                <td>一度実装して放置してしまう</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    AI Overviewが検索の約半分に表示される時代に、AIへ引用される<strong>LLMO対策</strong>はもはや一部の先進企業だけのものではありません。
+                    ただし、「構造化データを入れれば引用される」という理解は誤解です。
+                    Ahrefsの調査が示すように、スキーマ単体ではAI引用はほとんど増えず、効くのは<strong>結論・数値・出典が揃った中身</strong>と、それを正確に伝える構造化の組み合わせです。
+                </p>
+                <p>
+                    やるべき順番は、<strong>中身を作る → 構造化する → 信頼性を示す → 測って改善する</strong>。
+                    高価なツールよりも、この順番を守れるかどうかが成果を分けます。
+                    大手が本気を出す前のいまこそ、中小企業がAI検索の引用ポジションを取りにいく好機です。
+                    まずは自社の主力テーマ1つで、AIに引用される記事を1本作るところから始めましょう。
+                </p>
+
+                <div class="article-cta">
+                    <div class="cta-box">
+                        <h2 class="cta-title">AI検索で「引用される会社」になりたい企業へ</h2>
+                        <p class="cta-text">MIRAINAは、コンテンツの中身づくりから構造化データ・llms.txt実装、AI引用シェアの効果測定まで、成果につながるLLMO対策を一気通貫で支援します。</p>
+                        <a href="/contact.html" class="btn btn-black-fill">無料相談はこちら</a>
+                    </div>
+                </div>
+
+                <div class="article-source">
+                    <h3>参考情報</h3>
+                    <ul>
+                        <li><a href="https://ahrefs.com/blog/ja/schema-ai-citations/" target="_blank"
+                                rel="noopener">Ahrefs：スキーママークアップを追加しても AI 引用はほぼ増えない</a></li>
+                        <li><a href="https://uravation.com/media/aio-llmo-technical-implementation-30-2026/"
+                                target="_blank" rel="noopener">Uravation：【2026年最新】AIO/LLMO対策テクニカル30選</a></li>
+                        <li><a href="https://prtimes.jp/main/html/rd/p/000000020.000117468.html" target="_blank"
+                                rel="noopener">シュワット株式会社：LLMO（GEO）対策 チェックリスト【全57項目】</a></li>
+                    </ul>
+                </div>
+
+                <div class="article-editor">
+                    <div class="editor-label">この記事の監修者</div>
+                    <div class="editor-name">芝 優作</div>
+                    <p>
+                        MIRAINA代表。中小企業向けに生成AI導入、業務自動化、AI研修、LLMO対策の支援を行う。
+                        AI検索での集客は、テクニックよりも「根拠の明確な良質なコンテンツ」と「正しい実装順序」で決まると考え、中身づくりから効果測定まで踏み込んだ伴走を重視している。
+                    </p>
+                </div>
+
+                <div class="article-related">
+                    <h3>関連記事</h3>
+                    <div class="related-grid">
+                        <a href="/blogs/blog074.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card074.webp" alt="中小企業向けLLMO対策実装ガイドの記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年4月最新】LLMO対策とは？中小企業がAI検索で引用されるための実装ガイド</div>
+                        </a>
+                        <a href="/blogs/blog080.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card080.webp" alt="LLMO効果測定の3指標の記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年4月最新】LLMO効果測定とは？AI引用シェアを可視化する3指標と実践ツール比較</div>
+                        </a>
+                        <a href="/blogs/blog062.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card062.webp" alt="LLMO対策で企業が埋もれない戦略の記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年4月最新】LLMO対策で企業が埋もれない戦略｜AI Overviews対策・llms.txt・E-E-A-T強化ガイド</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>
