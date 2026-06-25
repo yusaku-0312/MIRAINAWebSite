@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年6月最新】Claude障害でAI業務継続はどう変わるか | MIRAINAブログ</title>
+    <meta name="description"
+        content="Claude障害が相次ぐ中、AI業務継続で企業が決めるべき代替モデル、手動復旧、停止判断、社内ルールを中小企業向けに解説します。">
+    <meta property="og:title" content="【2026年6月最新】Claude障害でAI業務継続はどう変わるか">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog177.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog177-1.webp">
+    <meta property="og:description"
+        content="Claude障害が相次ぐ中、AI業務継続で企業が決めるべき代替モデル、手動復旧、停止判断、社内ルールを中小企業向けに解説します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+    <style>
+        @media (max-width: 767px) {
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+            }
+
+            html,
+            body {
+                overflow-x: hidden;
+            }
+
+            .article-container {
+                box-sizing: border-box;
+                max-width: 100%;
+                padding-left: 1.25rem;
+                padding-right: 1.25rem;
+            }
+
+            .article-title {
+                font-size: 1.45rem;
+                line-height: 1.5;
+                word-break: normal;
+                overflow-wrap: anywhere;
+            }
+
+            .breadcrumbs li,
+            .article-meta>*,
+            .article-tag {
+                min-width: 0;
+                word-break: normal;
+                overflow-wrap: anywhere;
+            }
+
+            .article-tags {
+                max-width: 100%;
+                justify-content: center;
+            }
+
+            .article-summary,
+            .article-toc,
+            .diagram-container {
+                box-sizing: border-box;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>Claude障害でAI業務継続はどう変わるか</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.06.25</span>
+                    <div class="article-tags" style="flex-wrap: wrap; justify-content: center;">
+                        <p class="article-tag">Claude障害</p>
+                        <p class="article-tag">AI業務継続</p>
+                        <p class="article-tag">AI導入</p>
+                        <p class="article-tag">リスク管理</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap: anywhere;">【2026年6月最新】Claude障害でAI業務継続はどう変わるか</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog177-1.webp" alt="Claude障害とAI業務継続の設計ポイントを解説するイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    2026年6月、Claudeの公式ステータスページでは、Claude Chat、Claude Code、Claude APIなどに関する障害・性能低下の告知が相次ぎました。
+                    AIを日常業務に組み込む企業にとって、<strong>Claude障害は「ツールが少し使いにくい」ではなく、業務フローそのものが止まるリスク</strong>になりつつあります。
+                </p>
+                <p>
+                    本記事では、Claude障害をきっかけに、中小企業が今決めておくべき<strong>AI業務継続</strong>の考え方を整理します。
+                    代替モデル、手動復旧、停止判断、社内連絡ルールを先に決めておけば、AI活用の便利さを保ちながら、いざという時の混乱を抑えられます。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. まず押さえるべき事実</a></li>
+                    <li><a href="#section2">2. なぜClaude障害が業務リスクになるのか</a></li>
+                    <li><a href="#section3">3. 現場で起きる4つの影響</a></li>
+                    <li><a href="#section4">4. 中小企業が決めるべきAI業務継続ルール</a></li>
+                    <li><a href="#section5">5. 今日から見直す3ステップ</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. まず押さえるべき事実</h2>
+                <p>
+                    Claudeの公式ステータスページでは、2026年6月下旬にClaude Chat、Claude Code、Claude APIなどの障害や性能低下が複数回掲載されました。
+                    6月23日の障害では、外部報道でもClaude Chat、Claude Code、APIに影響が出たと報じられています。
+                    これは特定企業だけの問題ではなく、AIを業務基盤として使う会社全体に関係する変化です。
+                </p>
+                <p>
+                    さらに、ClaudeのようなAIサービスは、Web画面だけでなく、社内チャット、RAG、コード生成、議事録、問い合わせ対応、営業メール作成などに接続されます。
+                    そのため、障害が起きると「AIが返事をしない」だけでなく、<strong>見積作成が止まる、開発レビューが止まる、顧客対応の一次返信が遅れる</strong>といった業務影響につながります。
+                    直近記事の<a href="/blogs/blog176.html">AIエージェントによる業務自動化</a>でも触れた通り、AIが実行側に近づくほど、停止時の影響は大きくなります。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>確認すべき事実</th>
+                                <th>企業への意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>公式ステータスに障害が掲載される</th>
+                                <td>AIサービスにも通常のSaaSと同じ運用監視が必要</td>
+                            </tr>
+                            <tr>
+                                <th>Chat、Code、APIが同時に影響を受けることがある</th>
+                                <td>画面利用だけでなく、自動化や開発業務にも波及する</td>
+                            </tr>
+                            <tr>
+                                <th>APIエラーや過負荷はアプリ側にも表れる</th>
+                                <td>再試行、待機、代替経路を設計しておく必要がある</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section2">2. なぜClaude障害が業務リスクになるのか</h2>
+                <p>
+                    生成AIの導入初期は、障害が起きても「今日は別の作業をする」で済みました。
+                    しかし、AIが議事録、提案書、問い合わせ返信、コードレビュー、社内検索に入り込むと、停止時の影響は単なる不便では済みません。
+                    特にClaude CodeやAPIを使っている場合、AIが裏側で処理していることに気づかないまま、業務アプリや開発フローが遅くなることがあります。
+                </p>
+                <p>
+                    研究データでも、AI APIの不安定さは現実的な実行失敗につながります。
+                    arXivで公開されたClaude Codeの実行分析では、1,135件のターンのうち91件で<strong>529 overloaded error</strong>が観測され、100回の実行中39回で回答が途中で切れる問題が報告されています。
+                    これは「Claudeが悪い」という話ではなく、<strong>AIを業務システムとして扱うなら、失敗する前提の設計が必要</strong>ということです。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">止まりやすい運用</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>Claudeだけに依存する</li>
+                                    <li>失敗時の連絡先が曖昧</li>
+                                    <li>手動作業に戻す手順がない</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">止まりにくい運用</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>代替モデルを決めておく</strong></li>
+                                    <li>障害時の判断者を決める</li>
+                                    <li>手動復旧の手順を残す</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">AI業務継続では、便利なツール選定よりも停止時の戻し方が重要になります</p>
+                </div>
+
+                <h2 id="section3">3. 現場で起きる4つの影響</h2>
+                <p>
+                    Claude障害が起きた時、現場では主に4つの影響が出ます。
+                    1つ目は、社員が使うClaude Chatの停止です。調査、文章作成、資料要約、メール下書きが止まります。
+                    2つ目は、Claude Codeなど開発支援の停止です。レビュー、修正案、テスト作成が遅れ、開発チームの予定に影響します。
+                </p>
+                <p>
+                    3つ目は、API連携の遅延です。チャットボット、社内検索、問い合わせ分類、RAGアプリなど、顧客や社内メンバーが触る機能に影響します。
+                    4つ目は、現場判断の混乱です。障害なのか、社内ネットワークなのか、プロンプトやデータの問題なのか切り分けられず、担当者が個別に復旧を試して時間を失います。
+                    こうした混乱を防ぐには、<a href="/blogs/blog168.html">モデル停止や供給リスクの記事</a>で整理したように、代替経路を先に決めておくことが欠かせません。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>影響範囲</th>
+                                <th>起きやすい問題</th>
+                                <th>事前対策</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Claude Chat</th>
+                                <td>要約、調査、文章作成が止まる</td>
+                                <td>ChatGPT、Geminiなど代替利用ルールを用意</td>
+                            </tr>
+                            <tr>
+                                <th>Claude Code</th>
+                                <td>レビューや修正作業の待ち時間が増える</td>
+                                <td>人手レビューへ戻す基準を決める</td>
+                            </tr>
+                            <tr>
+                                <th>Claude API</th>
+                                <td>社内アプリや顧客対応機能が遅延する</td>
+                                <td>再試行、キュー、手動受付を設計する</td>
+                            </tr>
+                            <tr>
+                                <th>社内判断</th>
+                                <td>原因切り分けに時間を使う</td>
+                                <td>ステータス確認と共有テンプレートを作る</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section4">4. 中小企業が決めるべきAI業務継続ルール</h2>
+                <p>
+                    ここからはMIRAINA視点の整理です。
+                    中小企業のAI業務継続で大切なのは、大企業のような大規模BCPを作ることではありません。
+                    まずは、<strong>「どのAIが止まったら、誰が、何を見て、どの業務を手動に戻すか」</strong>を1枚にまとめることです。
+                    これだけでも障害時の初動は大きく変わります。
+                </p>
+                <p>
+                    具体的には、重要業務をA、B、Cに分けます。
+                    Aは顧客対応や受注など止められない業務、Bは1日以内に復旧すればよい業務、Cは復旧後にまとめて処理できる業務です。
+                    A業務には代替モデルや手動受付を必ず用意し、B業務には再試行や翌日処理、C業務には停止中の作業禁止ルールを置きます。
+                    <a href="/services/ai_consulting.html">生成AI活用支援</a>では、この分類を業務棚卸しとセットで設計するのが現実的です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>分類</th>
+                                <th>業務例</th>
+                                <th>障害時ルール</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>A: 止められない</th>
+                                <td>問い合わせ一次対応、予約受付、受注処理</td>
+                                <td>手動受付・代替AI・責任者判断へ切り替える</td>
+                            </tr>
+                            <tr>
+                                <th>B: 遅延可能</th>
+                                <td>議事録要約、社内資料作成、開発補助</td>
+                                <td>復旧待ちまたは翌営業日に回す</td>
+                            </tr>
+                            <tr>
+                                <th>C: 停止可能</th>
+                                <td>調査メモ、アイデア出し、文章の磨き込み</td>
+                                <td>障害中は無理に実行しない</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section5">5. 今日から見直す3ステップ</h2>
+                <p>
+                    Claude障害への備えは、難しい技術対策から始める必要はありません。
+                    最初にやるべきことは、社内でClaudeをどこに使っているかを棚卸しすることです。
+                    個人利用、チーム利用、API連携、Claude Code利用を分けて書き出すと、停止時に困る場所が見えます。
+                </p>
+                <p>
+                    第1に、<strong>利用箇所を一覧化する</strong>。誰が、どの業務で、どのClaude機能を使っているかを整理します。
+                    第2に、<strong>止められない業務だけ代替手段を決める</strong>。すべてを冗長化するのではなく、顧客対応や受注など影響が大きい業務に絞ります。
+                    第3に、<strong>障害時の社内メッセージをテンプレート化する</strong>。公式ステータスURL、影響範囲、暫定対応、復旧後の確認事項を1つの文面にしておきます。
+                    現場への定着は<a href="/services/ai_training.html">AI研修</a>で扱うと、属人化を防ぎやすくなります。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">利用箇所を棚卸し<br>Chat・Code・APIを分けて確認</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">重要業務を分類<br>A/B/Cで停止影響を分ける</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">代替手順を用意<br>手動・別AI・復旧待ちを決める</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">社内共有<br>判断者と連絡文面を固定する</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">AI障害対策は、全業務の冗長化ではなく、止められない業務から順に決めるのが現実的です</p>
+                </div>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    Claude障害は、生成AIが業務の中心に近づいたことを示すサインでもあります。
+                    AIを使う範囲が広がるほど、障害時の影響は大きくなりますが、逆に言えば、今のうちにAI業務継続のルールを作る会社ほど、安全に活用を広げられます。
+                    重要なのは、AIを使わないことではなく、<strong>AIが止まっても業務を止めない設計</strong>です。
+                </p>
+                <p>
+                    まずは、Claudeを使っている業務を一覧化し、止められない業務だけ代替手段を決めてください。
+                    そして、障害時に誰が判断し、何を社内へ伝え、いつ手動作業へ戻すかを固定します。
+                    その小さな準備が、AI活用を一時的な便利ツールから、安心して使える業務基盤へ変えていきます。
+                </p>
+
+                <div class="article-cta">
+                    <div class="cta-box">
+                        <h2 class="cta-title">AIが止まっても業務を止めない設計をしたい企業へ</h2>
+                        <p class="cta-text">MIRAINAは、AI利用状況の棚卸し、代替モデル設計、手動復旧ルール、現場研修までを一体で支援し、生成AIを安心して業務に組み込む体制づくりを伴走します。</p>
+                        <a href="/contact.html" class="btn btn-black-fill">無料相談はこちら</a>
+                    </div>
+                </div>
+
+                <div class="article-source">
+                    <h3>参考情報</h3>
+                    <ul>
+                        <li><a href="https://status.claude.com/" target="_blank" rel="noopener">Claude Status：公式ステータスページ</a></li>
+                        <li><a href="https://www.techradar.com/news/live/claude-down-june-23-2026" target="_blank"
+                                rel="noopener">TechRadar：Claude down? Live updates on June 23, 2026 outage</a></li>
+                        <li><a href="https://docs.anthropic.com/en/api/errors" target="_blank" rel="noopener">Anthropic Docs：Errors</a></li>
+                        <li><a href="https://arxiv.org/html/2506.14734v1" target="_blank" rel="noopener">arXiv：Claude Code: A Preliminary Analysis</a></li>
+                    </ul>
+                </div>
+
+                <div class="article-editor">
+                    <div class="editor-label">この記事の監修者</div>
+                    <div class="editor-name">芝 優作</div>
+                    <p>
+                        MIRAINA代表。中小企業向けに生成AI導入、業務自動化、AI研修、LLMO対策の支援を行う。
+                        AI活用の成否は、便利なツールを増やすことだけでなく、障害時・誤作動時・担当者不在時にも業務を止めない運用設計で決まると考え、現場で使えるルール作りを重視している。
+                    </p>
+                </div>
+
+                <div class="article-related">
+                    <h3>関連記事</h3>
+                    <div class="related-grid">
+                        <a href="/blogs/blog176.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card176.webp" alt="AIエージェントで業務自動化はどう変わるかの記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年6月最新】AIエージェントで業務自動化はどう変わる？中小企業が成果を出す始め方</div>
+                        </a>
+                        <a href="/blogs/blog168.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card168.webp" alt="Fable 5停止とAIモデル選定の記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年6月最新】Fable 5停止でAIモデル選定はどう変わるか</div>
+                        </a>
+                        <a href="/blogs/blog171.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card171.webp" alt="AI Control Roadmapでエージェント監視を解説する記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年6月最新】AI Control Roadmapでエージェント監視はどう変わるか</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

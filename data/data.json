@@ -1583,6 +1583,15 @@
       "thumbnail": "/images/blogs_images/blog-card176.webp",
       "alt": "AIエージェントによる業務自動化と中小企業の始め方を解説するイメージ",
       "date": "2026-06-23"
+    },
+    {
+      "id": 177,
+      "title": "【2026年6月最新】Claude障害でAI業務継続はどう変わるか",
+      "description": "Claude障害が相次ぐ中、AI業務継続で企業が決めるべき代替モデル、手動復旧、停止判断、社内ルールを中小企業向けに解説します。",
+      "link": "/blogs/blog177.html",
+      "thumbnail": "/images/blogs_images/blog-card177.webp",
+      "alt": "Claude障害とAI業務継続の設計ポイントを解説するイメージ",
+      "date": "2026-06-25"
     }
   ],
   "works": [
