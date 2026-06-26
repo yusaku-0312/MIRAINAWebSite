@@ -1610,6 +1610,15 @@
       "thumbnail": "/images/blogs_images/blog-card179.webp",
       "alt": "Claude DesignでAIデザイン制作を内製化する仕組みを解説するイメージ",
       "date": "2026-06-26"
+    },
+    {
+      "id": 180,
+      "title": "【2026年6月最新】Google WorkspaceのAI新機能で何が変わる？Drive・Sheets・Gmailの実務活用を整理",
+      "description": "Google Workspace AIの2026年6月更新をもとに、Drive整理、Sheetsの関数修正、Gmail下書き改善で中小企業の業務がどう変わるかを解説します。",
+      "link": "/blogs/blog180.html",
+      "thumbnail": "/images/blogs_images/blog-card180.webp",
+      "alt": "Google WorkspaceのAI新機能でDrive・Sheets・Gmailの実務活用を整理するイメージ",
+      "date": "2026-06-26"
     }
   ],
   "works": [
