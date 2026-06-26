@@ -1601,6 +1601,15 @@
       "thumbnail": "/images/blogs_images/blog-card178.webp",
       "alt": "Claude TagとSlackでのAIチーム運用を解説するイメージ",
       "date": "2026-06-26"
+    },
+    {
+      "id": 179,
+      "title": "【2026年6月最新】Claude Designとは？AIでデザイン制作を内製化する新機能を解説",
+      "description": "Claude Designの2026年6月強化をAnthropic公式発表から解説。デザインシステム連携、Claude Code双方向統合、Canva出力で、中小企業が制作を内製化する方法を整理します。",
+      "link": "/blogs/blog179.html",
+      "thumbnail": "/images/blogs_images/blog-card179.webp",
+      "alt": "Claude DesignでAIデザイン制作を内製化する仕組みを解説するイメージ",
+      "date": "2026-06-26"
     }
   ],
   "works": [

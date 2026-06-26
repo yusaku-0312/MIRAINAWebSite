@@ -205,6 +205,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年6月最新】AIエージェントで業務自動化はどう変わる？中小企業が成果を出す始め方](https://miraina-ai.com/blogs/blog176.html): GartnerのB2B購買90%・15兆ドル予測やOpenAIの企業向け売上40%超、エージェント型AIプロジェクトの40%超が2027年末までに中止という見通しをもとに、AIエージェントによる業務自動化で中小企業が頓挫せず成果を出す進め方を整理した記事。
 - [最新ブログ: 【2026年6月最新】Claude障害でAI業務継続はどう変わるか](https://miraina-ai.com/blogs/blog177.html): Claude障害をきっかけに、AI業務継続で企業が決めるべき代替モデル、手動復旧、停止判断、社内共有ルールを中小企業向けに整理した記事。
 - [最新ブログ: 【2026年6月最新】Claude Tagとは？SlackでAIチーム運用はどう変わるか](https://miraina-ai.com/blogs/blog178.html): Anthropicの2026年6月23日公式発表をもとに、Claude TagでSlack上のAI作業委任、チャンネル単位の文脈共有、権限管理、費用上限、導入手順を整理した記事。
+- [最新ブログ: 【2026年6月最新】Claude Designとは？AIでデザイン制作を内製化する新機能を解説](https://miraina-ai.com/blogs/blog179.html): Anthropicの2026年6月17日のClaude Design強化発表をもとに、デザインシステム連携、Claude Codeとの双方向統合、Canvaなど外部ツール出力を踏まえ、中小企業がブランド準拠でデザイン制作を内製化する方法と注意点を整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)
