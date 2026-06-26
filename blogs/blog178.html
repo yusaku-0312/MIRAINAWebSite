@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年6月最新】Claude Tagとは？SlackでAIチーム運用はどう変わるか | MIRAINAブログ</title>
+    <meta name="description"
+        content="Claude TagをAnthropic公式発表から解説。SlackでAIに作業委任する仕組み、権限管理、費用上限、導入手順を整理します。">
+    <meta property="og:title" content="【2026年6月最新】Claude Tagとは？SlackでAIチーム運用はどう変わるか">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog178.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog178-1.webp">
+    <meta property="og:description"
+        content="Claude TagをAnthropic公式発表から解説。SlackでAIに作業委任する仕組み、権限管理、費用上限、導入手順を整理します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+    <style>
+        @media (max-width: 767px) {
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+            }
+
+            html,
+            body {
+                overflow-x: hidden;
+            }
+
+            .article-container {
+                box-sizing: border-box;
+                max-width: 100%;
+                padding-left: 1.25rem;
+                padding-right: 1.25rem;
+            }
+
+            .article-title {
+                font-size: 1.45rem;
+                line-height: 1.5;
+                word-break: normal;
+                overflow-wrap: anywhere;
+            }
+
+            .breadcrumbs li,
+            .article-meta>*,
+            .article-tag {
+                min-width: 0;
+                word-break: normal;
+                overflow-wrap: anywhere;
+            }
+
+            .article-tags {
+                max-width: 100%;
+                justify-content: center;
+            }
+
+            .article-summary,
+            .article-toc,
+            .diagram-container {
+                box-sizing: border-box;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>Claude Tagとは？SlackでAIチーム運用はどう変わるか</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.06.26</span>
+                    <div class="article-tags" style="flex-wrap: wrap; justify-content: center;">
+                        <p class="article-tag">Claude Tag</p>
+                        <p class="article-tag">AIチーム運用</p>
+                        <p class="article-tag">Slack活用</p>
+                        <p class="article-tag">AI導入</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap: anywhere;">【2026年6月最新】Claude Tagとは？SlackでAIチーム運用はどう変わるか</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog178-1.webp" alt="Claude TagとSlackでのAIチーム運用を解説するイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    Anthropicは2026年6月23日、Slack上でClaudeに作業を依頼できる新機能<strong>Claude Tag</strong>を発表しました。
+                    これまでのAIチャットは個人が開いて使うものが中心でしたが、Claude Tagはチャンネル内で@Claudeを呼び出し、チーム全員が進捗や文脈を共有しながら作業を任せる設計です。
+                </p>
+                <p>
+                    本記事では、Claude Tagの仕組み、企業で使う時の権限管理、費用上限、最初に試すべき業務を整理します。
+                    既存のAIエージェント導入論ではなく、<strong>SlackにAI同僚を置くと社内運用がどう変わるか</strong>に絞って解説します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. Claude Tagとは何か</a></li>
+                    <li><a href="#section2">2. Claude Tagの主な特徴</a></li>
+                    <li><a href="#section3">3. 中小企業で使いやすい活用シーン</a></li>
+                    <li><a href="#section4">4. 導入前に決めるべき権限と費用ルール</a></li>
+                    <li><a href="#section5">5. 今日から始める3ステップ</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. Claude Tagとは何か</h2>
+                <p>
+                    Claude Tagは、Slackのチャンネル内で@Claudeをメンションし、調査、資料整理、コード調査、サポートチケット確認、メトリクス分析などを依頼できるAIエージェント機能です。
+                    Anthropic公式発表では、Slackから提供を始め、Claude EnterpriseおよびTeam顧客向けにベータ提供すると説明されています。
+                    既存のClaude in Slackアプリを置き換える位置づけで、利用開始時にはSlackワークスペース連携、ツール接続、月次利用上限、 private channelでのテストが推奨されています。
+                </p>
+                <p>
+                    重要なのは、Claude Tagが単なるチャットボットではない点です。
+                    ユーザーが依頼すると、Claudeはタスクを段階に分け、接続されたツールやデータを使って作業し、完了後にSlackスレッドへ結果を返します。
+                    Anthropicは社内利用例として、内部版Claude Tagがプロダクトチームのコード作成の65%に関わっていると説明しています。
+                    この数字は、AIが「個人の補助」から「チームの実行メンバー」へ近づいていることを示す材料です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>Claude Tagの要点</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>提供場所</th>
+                                <td>まずSlackから開始</td>
+                            </tr>
+                            <tr>
+                                <th>対象</th>
+                                <td>Claude Enterprise / Team顧客向けベータ</td>
+                            </tr>
+                            <tr>
+                                <th>使い方</th>
+                                <td>チャンネルで@Claudeをタグ付けして作業を依頼</td>
+                            </tr>
+                            <tr>
+                                <th>管理</th>
+                                <td>管理者がチャンネル、ツール、データ、月次費用上限、ログを管理</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section2">2. Claude Tagの主な特徴</h2>
+                <p>
+                    Claude Tagの特徴は、大きく4つあります。
+                    1つ目は<strong>マルチプレイヤー</strong>です。1つのSlackチャンネルにいるClaudeをチーム全員で使えるため、誰かの個人チャットに閉じず、依頼内容や結果を同じ場所で追えます。
+                    これは、<a href="/blogs/blog112.html">ChatGPT workspace agents</a>のような共有AIエージェントの流れと近い一方、Slack内の会話と業務文脈に強く寄せている点が違います。
+                </p>
+                <p>
+                    2つ目は、チャンネル文脈をもとに学習することです。
+                    管理者が許可した範囲で、Claudeはそのチャンネルや接続データから必要な背景を蓄積します。
+                    3つ目は、ambient behaviorを有効にした時に、未解決のスレッドや関連情報を能動的に知らせられることです。
+                    4つ目は、非同期作業です。ユーザーが依頼した後、Claudeが数時間から数日にわたり作業計画を進める使い方が想定されています。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">従来のAIチャット</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>個人の会話に閉じる</li>
+                                    <li>毎回背景説明が必要</li>
+                                    <li>完了確認が属人化しやすい</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">Claude Tag</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>Slackチャンネルで共有</strong></li>
+                                    <li>許可範囲の文脈を保持</li>
+                                    <li>スレッドで依頼と結果を追える</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">Claude Tagは、AI利用を個人作業からチームの見える業務フローへ寄せる機能です</p>
+                </div>
+
+                <h2 id="section3">3. 中小企業で使いやすい活用シーン</h2>
+                <p>
+                    中小企業で最初に試しやすいのは、判断をAIに丸投げしない業務です。
+                    たとえば営業チャンネルでは、商談メモ、過去のやり取り、商品資料をもとに、次回提案のたたき台やフォロー文案を作れます。
+                    カスタマーサポートでは、未対応チケットの整理、FAQ候補の作成、担当者へのエスカレーション文案が向いています。
+                    開発チームでは、バグ報告の再現手順整理や、関連コードの調査依頼から始めるのが現実的です。
+                </p>
+                <p>
+                    MIRAINA視点では、Claude Tagは「AIに何でも任せるツール」ではなく、<strong>チーム内で繰り返し発生する小さな調査・整理・下書きを委任する仕組み</strong>として見るべきです。
+                    特に人数が少ない会社では、Slackに情報が集まっているのに、担当者が過去ログを探す時間が長くなりがちです。
+                    Claude Tagの価値は、そこにいる全員が同じAIへ依頼し、同じスレッドで結果を確認できる点にあります。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>部門</th>
+                                <th>最初に任せやすい業務</th>
+                                <th>人が確認すべき点</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>営業</th>
+                                <td>商談メモ要約、提案文案、次回アクション整理</td>
+                                <td>価格、納期、約束事項</td>
+                            </tr>
+                            <tr>
+                                <th>サポート</th>
+                                <td>未対応チケット分類、FAQ草案、返信下書き</td>
+                                <td>顧客影響、補償、謝罪文面</td>
+                            </tr>
+                            <tr>
+                                <th>開発</th>
+                                <td>バグ調査、ログ整理、関連コードの候補提示</td>
+                                <td>本番反映、権限変更、セキュリティ影響</td>
+                            </tr>
+                            <tr>
+                                <th>管理部門</th>
+                                <td>社内問い合わせの分類、手順書の更新案</td>
+                                <td>個人情報、労務・法務判断</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section4">4. 導入前に決めるべき権限と費用ルール</h2>
+                <p>
+                    Claude Tagは便利ですが、Slackのチャンネル、外部ツール、コードベース、データに接続できるため、導入前の設計が重要です。
+                    Anthropicは、管理者がチャンネルごとにツールと情報へのアクセスを指定し、記憶も定義されたチャンネル範囲に閉じると説明しています。
+                    たとえば営業用のClaudeが、開発チャンネルの記憶や営業データを勝手に持ち出さないように、用途別のClaude identityを作る考え方です。
+                </p>
+                <p>
+                    もう1つの論点は費用です。
+                    管理者は組織全体と個別チャンネルのtoken spend上限を設定でき、@Claudeが何をしたか、誰が依頼したかのログも確認できるとされています。
+                    これは、<a href="/blogs/blog169.html">ChatGPT Enterpriseの利用分析強化</a>と同じく、AI導入が「使えるか」から「管理できるか」へ移っているサインです。
+                    導入時は、権限・費用・ログの3点をセットで決める必要があります。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>設計項目</th>
+                                <th>決めること</th>
+                                <th>放置した時のリスク</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>チャンネル範囲</th>
+                                <td>どのチャンネルでClaudeを使うか</td>
+                                <td>機密情報の混在、責任範囲の曖昧化</td>
+                            </tr>
+                            <tr>
+                                <th>接続ツール</th>
+                                <td>CRM、Docs、GitHubなど何を許可するか</td>
+                                <td>過剰権限、意図しないデータ参照</td>
+                            </tr>
+                            <tr>
+                                <th>費用上限</th>
+                                <td>組織・チャンネル別の月次上限</td>
+                                <td>使いすぎによる費用増加</td>
+                            </tr>
+                            <tr>
+                                <th>監査ログ</th>
+                                <td>誰が何を依頼したかを見る担当者</td>
+                                <td>問題発生時に追跡できない</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section5">5. 今日から始める3ステップ</h2>
+                <p>
+                    Claude Tagを試すなら、最初から全社Slackに入れるのではなく、1チャンネル、1業務、1か月の上限から始めるのが現実的です。
+                    まず、AIに任せたい作業を「下書き」「調査」「整理」に限定します。
+                    次に、Claudeが見てよいチャンネルとツールだけを許可します。
+                    最後に、AIの出力を誰が確認し、どの条件で採用するかを明文化します。
+                </p>
+                <p>
+                    特に大切なのは、成功指標を「何回使ったか」ではなく「担当者の待ち時間が減ったか」「スレッドの未解決が減ったか」「引き継ぎが楽になったか」で見ることです。
+                    AIを導入すると、利用回数だけを追いがちですが、チーム運用では、情報共有と判断の速さが改善しているかが重要です。
+                    <a href="/services/ai_training.html">AI研修</a>では、こうした使い方を部署別の実務シナリオに落とし込むと定着しやすくなります。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">試験チャンネルを決める<br>営業・CS・開発から1つ選ぶ</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">許可データを絞る<br>必要なツールだけ接続する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">費用上限を設定<br>月次とチャンネル別で管理</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">成果を確認<br>待ち時間と未解決スレッドを見る</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">Claude Tagは、小さく試して権限・費用・成果を見ながら広げるのが安全です</p>
+                </div>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    Claude Tagは、AIを個人チャットからSlack上のチーム運用へ移す重要な機能です。
+                    チャンネルで@Claudeを呼び出し、チーム全員が作業依頼と結果を追えるようになることで、AI活用は「個人の工夫」から「共有された業務フロー」に近づきます。
+                    一方で、接続データ、チャンネル範囲、費用、ログ管理を決めないまま広げると、情報管理とコストの問題が出やすくなります。
+                </p>
+                <p>
+                    まずは1つの部署で、下書き・調査・整理に限定して試してください。
+                    その上で、権限範囲、月次上限、確認担当者、採用基準を決めます。
+                    Claude Tagの本質は、AIに仕事を丸投げすることではなく、チームの中に「頼めるAI」を置き、進捗と判断を見える状態にすることです。
+                </p>
+
+                <div class="article-cta">
+                    <div class="cta-box">
+                        <h2 class="cta-title">SlackでAIチーム運用を始めたい企業へ</h2>
+                        <p class="cta-text">MIRAINAは、AI活用業務の棚卸し、Slack運用設計、権限管理、現場研修までを一体で支援し、チームで使える生成AI導入を伴走します。</p>
+                        <a href="/contact.html" class="btn btn-black-fill">無料相談はこちら</a>
+                    </div>
+                </div>
+
+                <div class="article-source">
+                    <h3>参考情報</h3>
+                    <ul>
+                        <li><a href="https://www.anthropic.com/news/introducing-claude-tag" target="_blank"
+                                rel="noopener">Anthropic：Introducing Claude Tag</a></li>
+                        <li><a href="https://www.itpro.com/software/meet-claude-tag-anthropics-new-ai-teammate-that-works-in-slack"
+                                target="_blank" rel="noopener">ITPro：Meet Claude Tag, Anthropic's new AI teammate that works in Slack</a></li>
+                    </ul>
+                </div>
+
+                <div class="article-editor">
+                    <div class="editor-label">この記事の監修者</div>
+                    <div class="editor-name">芝 優作</div>
+                    <p>
+                        MIRAINA代表。中小企業向けに生成AI導入、業務自動化、AI研修、LLMO対策の支援を行う。
+                        AI活用の成否は、便利な新機能を入れることだけでなく、権限、費用、確認責任、社内定着までを運用に落とし込めるかで決まると考えている。
+                    </p>
+                </div>
+
+                <div class="article-related">
+                    <h3>関連記事</h3>
+                    <div class="related-grid">
+                        <a href="/blogs/blog112.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card112.webp" alt="ChatGPT workspace agentsで社内AI活用が変わる記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年4月最新】ChatGPT workspace agentsで社内AI活用が変わる</div>
+                        </a>
+                        <a href="/blogs/blog169.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card169.webp" alt="ChatGPT Enterpriseの利用分析強化の記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年6月最新】ChatGPT Enterpriseの利用分析強化でAI導入管理はどう変わるか</div>
+                        </a>
+                        <a href="/blogs/blog176.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card176.webp" alt="AIエージェントで業務自動化はどう変わるかの記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年6月最新】AIエージェントで業務自動化はどう変わる？中小企業が成果を出す始め方</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

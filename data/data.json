@@ -1592,6 +1592,15 @@
       "thumbnail": "/images/blogs_images/blog-card177.webp",
       "alt": "Claude障害とAI業務継続の設計ポイントを解説するイメージ",
       "date": "2026-06-25"
+    },
+    {
+      "id": 178,
+      "title": "【2026年6月最新】Claude Tagとは？SlackでAIチーム運用はどう変わるか",
+      "description": "Claude TagをAnthropic公式発表から解説。SlackでAIに作業委任する仕組み、権限管理、費用上限、導入手順を整理します。",
+      "link": "/blogs/blog178.html",
+      "thumbnail": "/images/blogs_images/blog-card178.webp",
+      "alt": "Claude TagとSlackでのAIチーム運用を解説するイメージ",
+      "date": "2026-06-26"
     }
   ],
   "works": [
