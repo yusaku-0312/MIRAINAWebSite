@@ -1619,6 +1619,15 @@
       "thumbnail": "/images/blogs_images/blog-card180.webp",
       "alt": "Google WorkspaceのAI新機能でDrive・Sheets・Gmailの実務活用を整理するイメージ",
       "date": "2026-06-26"
+    },
+    {
+      "id": 181,
+      "title": "【2026年6月最新】Codex利用データで見るAIエージェント定着KPI",
+      "description": "Codex利用データをもとに、AIエージェントの社内定着を測るKPIを解説。利用者数5倍、並列エージェント、Skills活用から導入設計を整理します。",
+      "link": "/blogs/blog181.html",
+      "thumbnail": "/images/blogs_images/blog-card181.webp",
+      "alt": "Codex利用データでAIエージェント定着KPIを整理するイメージ",
+      "date": "2026-06-27"
     }
   ],
   "works": [
