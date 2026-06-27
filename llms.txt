@@ -209,6 +209,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年6月最新】Claude Designとは？AIでデザイン制作を内製化する新機能を解説](https://miraina-ai.com/blogs/blog179.html): Anthropicの2026年6月17日のClaude Design強化発表をもとに、デザインシステム連携、Claude Codeとの双方向統合、Canvaなど外部ツール出力を踏まえ、中小企業がブランド準拠でデザイン制作を内製化する方法と注意点を整理した記事。
 - [最新ブログ: 【2026年6月最新】Codex利用データで見るAIエージェント定着KPI](https://miraina-ai.com/blogs/blog181.html): 2026年6月25日公開のCodex利用データをもとに、AIエージェントの社内定着を測るKPIとして、委任タスク数、完了率、再利用率、削減時間を整理した記事。
 - [最新ブログ: 【2026年6月最新】AIで仕事はどう変わる？OpenAI・Anthropic調査で見る任せ方](https://miraina-ai.com/blogs/blog182.html): OpenAIの2026年6月25日公開レポートとAnthropicの2026年6月26日調査をもとに、AIで仕事がどう変わり始めているのか、任せやすい業務、検索されやすい悩み、導入の進め方を整理した記事。
+- [最新ブログ: 【2026年6月最新】AIエージェントは「業務実装」へ──GUGA事例472件で読む導入の現在地](https://miraina-ai.com/blogs/blog183.html): 生成AI活用普及協会（GUGA）が2026年5月13日に公開した事例472件の分析レポートをもとに、キーワード1位のAIエージェントが検証段階から業務実装へ移る流れと、中小企業が実装に進む4ステップを整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)

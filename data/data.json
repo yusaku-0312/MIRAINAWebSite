@@ -1637,6 +1637,15 @@
       "thumbnail": "/images/blogs_images/blog-card182.webp",
       "alt": "AIで仕事はどう変わるのかをOpenAIとAnthropicの最新調査から整理するイメージ",
       "date": "2026-06-27"
+    },
+    {
+      "id": 183,
+      "title": "【2026年6月最新】AIエージェントは「業務実装」へ──GUGA事例472件で読む導入の現在地",
+      "description": "生成AI活用普及協会（GUGA）が2026年5月13日に公開した事例分析レポートを解説。2025年10月〜2026年3月の事例472件でキーワード1位はAIエージェント。検証段階から業務実装へ進む流れと、中小企業の始め方を整理します。",
+      "link": "/blogs/blog183.html",
+      "thumbnail": "/images/blogs_images/blog-card183.webp",
+      "alt": "AIエージェントが検証段階から業務実装へ進む流れを整理するイメージ",
+      "date": "2026-06-27"
     }
   ],
   "works": [
