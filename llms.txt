@@ -208,6 +208,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年6月最新】Google WorkspaceのAI新機能で何が変わる？Drive・Sheets・Gmailの実務活用を整理](https://miraina-ai.com/blogs/blog180.html): Google Workspace Teamの2026年6月更新をもとに、Drive整理、Sheetsの関数修正、Gmail下書き改善で中小企業の業務がどう変わるかと、検索されやすい論点を整理した記事。
 - [最新ブログ: 【2026年6月最新】Claude Designとは？AIでデザイン制作を内製化する新機能を解説](https://miraina-ai.com/blogs/blog179.html): Anthropicの2026年6月17日のClaude Design強化発表をもとに、デザインシステム連携、Claude Codeとの双方向統合、Canvaなど外部ツール出力を踏まえ、中小企業がブランド準拠でデザイン制作を内製化する方法と注意点を整理した記事。
 - [最新ブログ: 【2026年6月最新】Codex利用データで見るAIエージェント定着KPI](https://miraina-ai.com/blogs/blog181.html): 2026年6月25日公開のCodex利用データをもとに、AIエージェントの社内定着を測るKPIとして、委任タスク数、完了率、再利用率、削減時間を整理した記事。
+- [最新ブログ: 【2026年6月最新】AIで仕事はどう変わる？OpenAI・Anthropic調査で見る任せ方](https://miraina-ai.com/blogs/blog182.html): OpenAIの2026年6月25日公開レポートとAnthropicの2026年6月26日調査をもとに、AIで仕事がどう変わり始めているのか、任せやすい業務、検索されやすい悩み、導入の進め方を整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)
