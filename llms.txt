@@ -212,6 +212,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年6月最新】AIエージェントは「業務実装」へ──GUGA事例472件で読む導入の現在地](https://miraina-ai.com/blogs/blog183.html): 生成AI活用普及協会（GUGA）が2026年5月13日に公開した事例472件の分析レポートをもとに、キーワード1位のAIエージェントが検証段階から業務実装へ移る流れと、中小企業が実装に進む4ステップを整理した記事。
 - [最新ブログ: 【2026年6月最新】OpenAI Daybreakで脆弱性修正はどう変わるか](https://miraina-ai.com/blogs/blog184.html): OpenAIの2026年6月22日発表をもとに、OpenAI Daybreak、Codex Security、Patch the Planetが脆弱性の検証・修正・証跡作成をどう変えるかを中小企業向けに整理した記事。
 - [最新ブログ: 【2026年6月最新】AIにパソコン操作を任せる時代へ｜GoogleとOpenAIの新機能をどう使うか](https://miraina-ai.com/blogs/blog185.html): Googleの2026年6月24日公開「Gemini 3.5 Flash の computer use」と、OpenAIの2026年6月25日発表「Codex Remote 一般提供」をもとに、AIにパソコン操作を任せる実務と導入ルールを中小企業向けに整理した記事。
+- [最新ブログ: 【2026年6月最新】LLMO対策で本当に効くのは？Google公式ガイドが示したAI検索最適化の正解](https://miraina-ai.com/blogs/blog186.html): Googleが2026年5月15日に公開したAI検索（生成AI機能）向け公式最適化ガイドをもとに、llms.txtや特別な構造化データは不要で基本のSEOが有効だという見解と、中小企業が本当にやるべき5つのLLMO施策を整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)
