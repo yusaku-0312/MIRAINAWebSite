@@ -211,6 +211,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年6月最新】AIで仕事はどう変わる？OpenAI・Anthropic調査で見る任せ方](https://miraina-ai.com/blogs/blog182.html): OpenAIの2026年6月25日公開レポートとAnthropicの2026年6月26日調査をもとに、AIで仕事がどう変わり始めているのか、任せやすい業務、検索されやすい悩み、導入の進め方を整理した記事。
 - [最新ブログ: 【2026年6月最新】AIエージェントは「業務実装」へ──GUGA事例472件で読む導入の現在地](https://miraina-ai.com/blogs/blog183.html): 生成AI活用普及協会（GUGA）が2026年5月13日に公開した事例472件の分析レポートをもとに、キーワード1位のAIエージェントが検証段階から業務実装へ移る流れと、中小企業が実装に進む4ステップを整理した記事。
 - [最新ブログ: 【2026年6月最新】OpenAI Daybreakで脆弱性修正はどう変わるか](https://miraina-ai.com/blogs/blog184.html): OpenAIの2026年6月22日発表をもとに、OpenAI Daybreak、Codex Security、Patch the Planetが脆弱性の検証・修正・証跡作成をどう変えるかを中小企業向けに整理した記事。
+- [最新ブログ: 【2026年6月最新】AIにパソコン操作を任せる時代へ｜GoogleとOpenAIの新機能をどう使うか](https://miraina-ai.com/blogs/blog185.html): Googleの2026年6月24日公開「Gemini 3.5 Flash の computer use」と、OpenAIの2026年6月25日発表「Codex Remote 一般提供」をもとに、AIにパソコン操作を任せる実務と導入ルールを中小企業向けに整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)
