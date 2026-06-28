@@ -1646,6 +1646,15 @@
       "thumbnail": "/images/blogs_images/blog-card183.webp",
       "alt": "AIエージェントが検証段階から業務実装へ進む流れを整理するイメージ",
       "date": "2026-06-27"
+    },
+    {
+      "id": 184,
+      "title": "【2026年6月最新】OpenAI Daybreakで脆弱性修正はどう変わるか",
+      "description": "OpenAI Daybreakをもとに、AIが脆弱性発見だけでなく検証・修正・証跡作成まで支援する流れを解説。中小企業が確認すべきAIセキュリティ運用を整理します。",
+      "link": "/blogs/blog184.html",
+      "thumbnail": "/images/blogs_images/blog-card184.webp",
+      "alt": "OpenAI Daybreakで脆弱性修正の運用が変わる流れを整理するイメージ",
+      "date": "2026-06-28"
     }
   ],
   "works": [
