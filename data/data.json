@@ -1673,6 +1673,24 @@
       "thumbnail": "/images/blogs_images/blog-card186.webp",
       "alt": "LLMO対策で本当に効くAI検索最適化の正解をGoogle公式ガイドから整理するイメージ",
       "date": "2026-06-28"
+    },
+    {
+      "id": 187,
+      "title": "【2026年6月最新】OpenAI初の推論チップJalapeñoでAIコストはどう変わるか",
+      "description": "OpenAI 推論チップJalapeñoの発表をもとに、AIの料金、待ち時間、供給安定性が中小企業のAI導入判断にどう影響するかを解説します。",
+      "link": "/blogs/blog187.html",
+      "thumbnail": "/images/blogs_images/blog-card187.webp",
+      "alt": "OpenAI 推論チップJalapeñoでAIコストと供給安定性が変わる流れを整理するイメージ",
+      "date": "2026-06-29"
+    },
+    {
+      "id": 188,
+      "title": "【2026年6月最新】HPがOpenAIを全社展開へ、社内AI活用が定着する3条件",
+      "description": "HPがOpenAI Frontierの戦略提携を全社展開へ広げた2026年6月28日の公式発表をもとに、社内AI活用が定着する3条件と中小企業の進め方を解説します。",
+      "link": "/blogs/blog188.html",
+      "thumbnail": "/images/blogs_images/blog-card188.webp",
+      "alt": "HPの事例から社内AI活用が定着する条件を整理するイメージ",
+      "date": "2026-06-29"
     }
   ],
   "works": [
