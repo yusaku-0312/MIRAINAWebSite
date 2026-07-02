@@ -1691,6 +1691,15 @@
       "thumbnail": "/images/blogs_images/blog-card188.webp",
       "alt": "HPの事例から社内AI活用が定着する条件を整理するイメージ",
       "date": "2026-06-29"
+    },
+    {
+      "id": 190,
+      "title": "【2026年7月最新】Claude Sonnet 5とは？AIに仕事を任せやすくなる理由",
+      "description": "Claude Sonnet 5の発表内容をもとに、何が進化したのか、料金やAPI変更点、AIに仕事を任せやすくなる理由を中小企業向けに解説します。",
+      "link": "/blogs/blog190.html",
+      "thumbnail": "/images/blogs_images/blog-card190.webp",
+      "alt": "Claude Sonnet 5でAIに仕事を任せやすくなる理由を整理するイメージ",
+      "date": "2026-07-01"
     }
   ],
   "works": [
