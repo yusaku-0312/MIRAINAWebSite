@@ -216,6 +216,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年6月最新】OpenAI初の推論チップJalapeñoでAIコストはどう変わるか](https://miraina-ai.com/blogs/blog187.html): OpenAIの2026年6月24日発表をもとに、OpenAI 推論チップJalapeñoがAIの料金、待ち時間、供給安定性に与える影響を中小企業向けに整理した記事。
 - [最新ブログ: 【2026年6月最新】HPがOpenAIを全社展開へ、社内AI活用が定着する3条件](https://miraina-ai.com/blogs/blog188.html): OpenAIの2026年6月28日公開HP事例をもとに、社内AI活用が定着する3条件と中小企業の進め方を整理した記事。
 - [最新ブログ: 【2026年7月最新】Claude Sonnet 5とは？AIに仕事を任せやすくなる理由](https://miraina-ai.com/blogs/blog190.html): Anthropicの2026年6月30日発表をもとに、Claude Sonnet 5の進化、料金、API変更点、AIに仕事を任せやすくなる理由を中小企業向けに整理した記事。
+- [最新ブログ: 【2026年7月最新】Claude Scienceとは？AIに調査を任せても根拠が残る理由](https://miraina-ai.com/blogs/blog191.html): Anthropicの2026年6月30日発表をもとに、Claude Scienceの仕組み、AI調査で根拠を残す考え方、60超の専門スキルと実務への示唆を中小企業向けに整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)

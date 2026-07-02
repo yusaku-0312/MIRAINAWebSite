@@ -1709,6 +1709,15 @@
       "thumbnail": "/images/blogs_images/blog-card190.webp",
       "alt": "Claude Sonnet 5でAIに仕事を任せやすくなる理由を整理するイメージ",
       "date": "2026-07-01"
+    },
+    {
+      "id": 191,
+      "title": "【2026年7月最新】Claude Scienceとは？AIに調査を任せても根拠が残る理由",
+      "description": "Claude Scienceとは何かを、Anthropicの2026年6月30日発表をもとに解説。AI調査で根拠を残す仕組み、60超の専門スキル、使えるプラン、企業が学ぶべきポイントを紹介します。",
+      "link": "/blogs/blog191.html",
+      "thumbnail": "/images/blogs_images/blog-card191.webp",
+      "alt": "Claude ScienceでAI調査の根拠を残す仕組みを整理するイメージ",
+      "date": "2026-07-02"
     }
   ],
   "works": [

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年7月最新】Claude Scienceとは？AIに調査を任せても根拠が残る理由 | MIRAINAブログ</title>
+    <meta name="description"
+        content="Claude Scienceとは何かを、Anthropicの2026年6月30日発表をもとに解説。AI調査で根拠を残す仕組み、60超の専門スキル、使えるプラン、企業が学ぶべきポイントを紹介します。">
+    <meta property="og:title" content="【2026年7月最新】Claude Scienceとは？AIに調査を任せても根拠が残る理由">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog191.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog191-1.webp">
+    <meta property="og:description"
+        content="Claude Scienceとは何かを、Anthropicの2026年6月30日発表をもとに解説。AI調査で根拠を残す仕組み、60超の専門スキル、使えるプラン、企業が学ぶべきポイントを紹介します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+    <style>
+        @media (max-width: 767px) {
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+            }
+
+            html,
+            body {
+                overflow-x: hidden;
+            }
+
+            .article-container {
+                box-sizing: border-box;
+                max-width: 100%;
+                padding-left: 1.25rem;
+                padding-right: 1.25rem;
+            }
+
+            .article-title {
+                font-size: 1.45rem;
+                line-height: 1.5;
+                word-break: normal;
+                overflow-wrap: anywhere;
+            }
+
+            .breadcrumbs li,
+            .article-meta>*,
+            .article-tag {
+                min-width: 0;
+                word-break: normal;
+                overflow-wrap: anywhere;
+            }
+
+            .article-tags {
+                max-width: 100%;
+                justify-content: center;
+            }
+
+            .article-summary,
+            .article-toc,
+            .diagram-container {
+                box-sizing: border-box;
+                width: 100%;
+            }
+
+            .article-table-wrapper {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .article-table {
+                min-width: 680px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>Claude Scienceとは？AIに調査を任せても根拠が残る理由</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.07.02</span>
+                    <div class="article-tags" style="flex-wrap: wrap; justify-content: center;">
+                        <p class="article-tag">Claude Science</p>
+                        <p class="article-tag">Anthropic</p>
+                        <p class="article-tag">AI調査</p>
+                        <p class="article-tag">根拠管理</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap: anywhere;">【2026年7月最新】Claude Scienceとは？AIに調査を任せても根拠が残る理由</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog191-1.webp" alt="Claude ScienceでAI調査の根拠を残す仕組みを整理するイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    「AIで調べものをすると速いけれど、出典が曖昧で社内提出に使いづらい」「比較表までは作れても、あとから根拠を追えない」。
+                    AI活用がまだ苦手な人は、こうした言葉で検索しがちです。一方で、すでにAIを使う担当者は
+                    「競合調査を出典付きで整理して、再利用できる形で残して」とAIに頼み始めています。
+                </p>
+                <p>
+                    そこで本記事では、Anthropicが2026年6月30日に発表した
+                    <strong>Claude Science</strong>をもとに、
+                    AIに調査を任せても根拠が残る仕組み、どこが従来のAIチャットと違うのか、
+                    そして中小企業がそこから何を学ぶべきかをわかりやすく解説します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. Claude Scienceとは？公開日と位置づけ</a></li>
+                    <li><a href="#section2">2. 何が新しいのか</a></li>
+                    <li><a href="#section3">3. なぜ「AI調査の根拠問題」を減らせるのか</a></li>
+                    <li><a href="#section4">4. 中小企業はどう読み替えるべきか</a></li>
+                    <li><a href="#section5">5. 今使える範囲と注意点</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. Claude Scienceとは？公開日と位置づけ</h2>
+                <p>
+                    Claude Scienceは、Anthropicが2026年6月30日に公開した
+                    <strong>科学者向けのAIワークベンチ</strong>です。単なるチャットUIではなく、
+                    文献調査、解析、図表作成、原稿化までを一つの作業環境で回すことを前提に設計されています。
+                </p>
+                <p>
+                    重要なのは、対象が科学研究であっても、課題設定は多くの企業と共通している点です。
+                    つまり「調査を速くする」だけではなく、<strong>どの情報を基に結論を出したかを後から追えること</strong>が
+                    AI活用の本丸だと、Anthropic自身が明確に打ち出したことに意味があります。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>確認日・出典</th>
+                                <th>事実</th>
+                                <th>中小企業が読むべき意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>2026年6月30日<br>Anthropic</th>
+                                <td>Claude Scienceを発表</td>
+                                <td>AIは「質問に答える道具」から「調査を進める作業環境」へ進み始めた</td>
+                            </tr>
+                            <tr>
+                                <th>同日<br>Anthropic</th>
+                                <td>Pro、Max、Team、Enterprise向けにベータ提供開始</td>
+                                <td>研究機関だけでなく、組織導入を前提にした運用が始まっている</td>
+                            </tr>
+                            <tr>
+                                <th>同日<br>Anthropic</th>
+                                <td>macOS、Linux、SSH先、HPC環境でも利用可能</td>
+                                <td>手元のPCだけでなく、既存の計算環境や社内環境に載せやすい</td>
+                            </tr>
+                            <tr>
+                                <th>同日<br>Anthropic</th>
+                                <td>最大50件のAI for Science支援枠と最大3万ドルのクレジットを案内</td>
+                                <td>単発デモではなく、実運用事例を増やすフェーズに入っている</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <figure class="article-figure">
+                    <img src="/images/blogs_images/blog191-2.webp" alt="Anthropic公式のClaude Science紹介ページ" loading="lazy"
+                        decoding="async">
+                    <figcaption>Anthropic公式のClaude Science紹介ページ。公開日は2026年6月30日。</figcaption>
+                </figure>
+
+                <h2 id="section2">2. 何が新しいのか</h2>
+                <p>
+                    Claude Scienceの新しさは、モデル性能そのものよりも
+                    <strong>調査と解析の工程管理</strong>にあります。公式発表では、
+                    60超の専門スキルとコネクタ、レビュー用エージェント、再現可能な成果物、柔軟な計算資源利用が一体で提供されます。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>機能</th>
+                                <th>公式情報の要点</th>
+                                <th>実務への意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>統合環境</th>
+                                <td>PubMed、Jupyter、R、クラスタ端末などをまたぐ作業を一つに集約</td>
+                                <td>ツールを行き来して情報が散る問題を減らせる</td>
+                            </tr>
+                            <tr>
+                                <th>auditable artifacts</th>
+                                <td>図表や原稿に、生成コード、説明、メッセージ履歴を残せる</td>
+                                <td>「なぜその結論か」を後から確認しやすい</td>
+                            </tr>
+                            <tr>
+                                <th>reviewer agent</th>
+                                <td>引用、計算、図表とコードの不整合を点検して修正を促す</td>
+                                <td>AI出力をそのまま鵜呑みにするリスクを下げやすい</td>
+                            </tr>
+                            <tr>
+                                <th>柔軟な計算資源</th>
+                                <td>ローカル、SSH先、HPC、Modal上のGPUまで扱える</td>
+                                <td>重い処理も「調べるAI」と「実行環境」を分断せず回しやすい</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    ここは、<a href="/blogs/blog190.html">Claude Sonnet 5とは？</a>で触れた
+                    「AIに複数工程を任せやすくなる流れ」の延長線上にあります。
+                    ただClaude Scienceは、単に長い依頼へ強くなったのではなく、
+                    <strong>証跡を残しながら進める</strong>方向へ一歩踏み込んだのが特徴です。
+                </p>
+
+                <h2 id="section3">3. なぜ「AI調査の根拠問題」を減らせるのか</h2>
+                <p>
+                    企業のAI調査が止まりやすい理由は、精度だけではありません。多くの現場では、
+                    「答えは速いが、誰が見ても追試できる形になっていない」ことが問題になります。
+                    そのままでは、会議資料、提案書、稟議、顧客向け情報に転用しづらいからです。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">従来のAI調査</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>要約は速い</li>
+                                    <li>出典や途中計算が薄い</li>
+                                    <li>再利用時に人が掘り直す</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">Claude Science型</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>生成経路を追いやすい</strong></li>
+                                    <li>レビュー役が不整合を点検</li>
+                                    <li>次回の再利用前提で残せる</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">速さだけでなく、「後から検証できるか」がAI調査の実用性を左右する。</p>
+                </div>
+
+                <p>
+                    公式発表に出ている事例も象徴的です。Allen Instituteの研究者は、
+                    約20個のカスタムスキルを組み合わせたレビュー作成テンプレートを作り、
+                    複数のサブエージェントで数千本の論文を読み進め、100ページ超のレビューを量産できる状態に近づけています。
+                    またUCSFの研究者は、従来比でおおむね10分の1の時間で解析を進められたと説明しています。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>公式事例</th>
+                                <th>何をしたか</th>
+                                <th>読むべきポイント</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Allen Institute</th>
+                                <td>数千本の論文から主張と定量結果を抽出し、長文レビューを組み立てた</td>
+                                <td>AI調査は「検索」より「根拠を蓄積する流れ」が価値になる</td>
+                            </tr>
+                            <tr>
+                                <th>UCSF Brain Tumor Center</th>
+                                <td>分子疫学解析を従来より大幅に短時間化し、独自検証も実施</td>
+                                <td>速さと再検証可能性の両立が実務導入の条件になる</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section4">4. 中小企業はどう読み替えるべきか</h2>
+                <p>
+                    Claude Science自体は科学者向けですが、学ぶべき構造は中小企業の業務にもそのまま応用できます。
+                    たとえば市場調査、競合比較、法規制チェック、提案書の裏取り、社内ナレッジ整理などは、
+                    どれも「答え」より「根拠付きで残ること」が大切です。
+                </p>
+                <p>
+                    <a href="/blogs/blog182.html">AIで仕事はどう変わる？</a>でも触れた通り、
+                    AIに任せる仕事は、単純な文章生成から、調査と判断補助へ広がっています。
+                    MIRAINAでは、<a href="/services/ai_consulting.html">生成AI活用支援</a>や
+                    <a href="/services/ai_training.html">AI研修</a>で、
+                    「どの業務にAIを入れるか」だけでなく「どう証跡を残すか」まで設計します。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">調査対象と<br>一次情報を決める</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">AIに比較表と<br>出典一覧を作らせる</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">第三者視点で<br>不整合を点検する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">人が承認して<br>再利用可能な形で保存</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">「AIに聞く」から「AI調査を再利用できる形で残す」へ発想を切り替えると成果が出やすい。</p>
+                </div>
+
+                <p>
+                    つまり、中小企業が今やるべきことはClaude Scienceそのものを無理に導入することではありません。
+                    先に、自社の調査業務で
+                    <strong>出典、途中判断、承認者、保存先</strong>を決めることです。
+                    そこが曖昧なままだと、高性能モデルへ替えても現場では定着しません。
+                </p>
+
+                <h2 id="section5">5. 今使える範囲と注意点</h2>
+                <p>
+                    2026年7月2日時点でClaude Scienceはベータ提供で、対象はPro、Max、Team、Enterpriseです。
+                    TeamとEnterpriseでは管理者による有効化が必要で、しかも用途は現時点で
+                    生物学・生物医学寄りの研究を中心に設計されています。
+                </p>
+                <p>
+                    そのため一般企業が今すぐ「万能な調査AI」として期待しすぎるのは危険です。
+                    ただし、Anthropicが示した方向性は重要です。これからのAI導入では、
+                    検索精度や料金だけでなく、<strong>監査可能性、再現性、権限管理</strong>が選定基準になります。
+                </p>
+
+                <figure class="article-figure">
+                    <img src="/images/blogs_images/blog191-3.webp" alt="Claude Scienceの支援枠と応募締切が記載された公式ページ"
+                        loading="lazy" decoding="async">
+                    <figcaption>最大50件の支援枠、最大3万ドルのクレジット、応募締切は2026年7月15日と案内されている。</figcaption>
+                </figure>
+
+                <p>
+                    公式ページでは、最大50件のAI for Scienceプロジェクトに最大3万ドルのクレジットを提供し、
+                    Modalも最大2,000ドル分の計算資源を付与すると案内されています。応募締切は2026年7月15日、
+                    通知は7月31日、実施期間は9月1日から12月1日です。数字がはっきりしている分、
+                    いまは「研究向け実運用を増やす初期フェーズ」と読むのが自然です。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    Claude Scienceは、AI調査の価値を「答えの速さ」から「根拠を残して進められること」へ押し広げた製品です。
+                    科学者向けではありますが、企業の調査業務、比較業務、提案業務にも通じる示唆があります。
+                </p>
+                <p>
+                    これからAIを本気で使う会社ほど、モデル名だけでなく、
+                    出典管理、レビュー工程、承認ルール、保存形式まで整える必要があります。
+                    Claude Scienceは、その未来の運用基準を先に見せた発表だと言えます。
+                </p>
+
+                <div class="article-cta">
+                    <div class="cta-box">
+                        <h2 class="cta-title">AI調査を現場で再利用できる形にしたい企業へ</h2>
+                        <p class="cta-text">MIRAINAは、生成AI活用支援、AI研修、AI開発を通じて、調査プロンプト設計から承認フロー整備まで支援します。</p>
+                        <a href="/contact.html" class="btn btn-black-fill">無料相談はこちら</a>
+                    </div>
+                </div>
+
+                <div class="article-source">
+                    <h3>参考情報</h3>
+                    <ul>
+                        <li><a href="https://www.anthropic.com/news/claude-science-ai-workbench" target="_blank" rel="noopener">Anthropic: Claude Science, an AI workbench for scientists, is now available</a></li>
+                        <li><a href="https://claude.com/science" target="_blank" rel="noopener">Claude Science</a></li>
+                        <li><a href="https://www.anthropic.com/news/claude-sonnet-5" target="_blank" rel="noopener">Anthropic: Introducing Claude Sonnet 5</a></li>
+                    </ul>
+                </div>
+
+                <div class="article-editor">
+                    <div class="editor-label">この記事の監修者</div>
+                    <div class="editor-name">芝 優作</div>
+                    <p>
+                        MIRAINA代表。中小企業向けに生成AI導入、業務自動化、AI研修、LLMO対策の支援を行う。
+                        AI活用はツール名ではなく、業務課題、参照データ、評価基準、承認設計の順番で決まると考え、
+                        現場に残るAI導入を支援している。
+                    </p>
+                </div>
+
+                <div class="article-related">
+                    <h3>関連記事</h3>
+                    <div class="related-grid">
+                        <a href="/blogs/blog190.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card190.webp" alt="Claude Sonnet 5の進化を整理する記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年7月最新】Claude Sonnet 5とは？AIに仕事を任せやすくなる理由</div>
+                        </a>
+                        <a href="/blogs/blog182.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card182.webp" alt="AIで仕事がどう変わるかを整理する記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年6月最新】AIで仕事はどう変わる？OpenAI・Anthropic調査で見る任せ方</div>
+                        </a>
+                        <a href="/blogs/blog181.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card181.webp" alt="AIエージェント定着KPIを整理する記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年6月最新】Codex利用データで見るAIエージェント定着KPI</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul>
+                    <li><a href="/">ホーム</a></li>
+                    <li><a href="/services.html">サービス</a></li>
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MIRAINA. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>
