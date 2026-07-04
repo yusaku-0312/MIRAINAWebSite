@@ -219,6 +219,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年7月最新】Claude Scienceとは？AIに調査を任せても根拠が残る理由](https://miraina-ai.com/blogs/blog191.html): Anthropicの2026年6月30日発表をもとに、Claude Scienceの仕組み、AI調査で根拠を残す考え方、60超の専門スキルと実務への示唆を中小企業向けに整理した記事。
 - [最新ブログ: 【2026年7月最新】OpenAIが政府5%持分案を協議、AI企業の公共利益設計はどう変わるか](https://miraina-ai.com/blogs/blog192.html): OpenAI 政府5%持分案の報道をもとに、AI企業の公共利益設計、規制、導入コストへの影響を中小企業向けに整理した記事。
 - [最新ブログ: 【2026年7月最新】Gemini Sparkとは？AIに仕事を任せるGoogle新機能を解説](https://miraina-ai.com/blogs/blog193.html): Googleの2026年6月30日発表をもとに、Gemini SparkのMac対応、連携アプリ、MCP対応、リアルタイム追跡が中小企業の業務にどう効くかを整理した記事。
+- [最新ブログ: 【2026年7月最新】AIコーディングエージェント導入、Microsoft調査で見えた定着条件](https://miraina-ai.com/blogs/blog194.html): 2026年7月1日公開のMicrosoftロールアウト研究をもとに、AIコーディングエージェント導入で見るべき社内普及、PR、費用管理、定着KPIを中小企業向けに整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)

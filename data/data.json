@@ -1736,6 +1736,15 @@
       "thumbnail": "/images/blogs_images/blog-card193.webp",
       "alt": "Gemini SparkでAIに仕事を任せる流れを整理するイメージ",
       "date": "2026-07-03"
+    },
+    {
+      "id": 194,
+      "title": "【2026年7月最新】AIコーディングエージェント導入、Microsoft調査で見えた定着条件",
+      "description": "AIコーディングエージェント導入をMicrosoftの2026年7月1日公開研究から解説。24%多いPR、社内普及、費用管理、定着設計を紹介します。",
+      "link": "/blogs/blog194.html",
+      "thumbnail": "/images/blogs_images/blog-card194.webp",
+      "alt": "AIコーディングエージェント導入と社内定着条件を整理するイメージ",
+      "date": "2026-07-04"
     }
   ],
   "works": [
