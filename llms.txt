@@ -221,6 +221,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年7月最新】Gemini Sparkとは？AIに仕事を任せるGoogle新機能を解説](https://miraina-ai.com/blogs/blog193.html): Googleの2026年6月30日発表をもとに、Gemini SparkのMac対応、連携アプリ、MCP対応、リアルタイム追跡が中小企業の業務にどう効くかを整理した記事。
 - [最新ブログ: 【2026年7月最新】AIコーディングエージェント導入、Microsoft調査で見えた定着条件](https://miraina-ai.com/blogs/blog194.html): 2026年7月1日公開のMicrosoftロールアウト研究をもとに、AIコーディングエージェント導入で見るべき社内普及、PR、費用管理、定着KPIを中小企業向けに整理した記事。
 - [最新ブログ: 【2026年7月最新】Nano Banana 2 Liteとは？販促画像づくりを速くするGoogle新モデル](https://miraina-ai.com/blogs/blog195.html): Googleの2026年6月30日発表をもとに、Nano Banana 2 Liteの4秒生成、1K画像0.034ドル、販促画像や商品画像の実務活用、プロンプト設計を中小企業向けに整理した記事。
+- [最新ブログ: 【2026年7月最新】AWS FDEとは？AI導入支援は現場常駐型へ](https://miraina-ai.com/blogs/blog196.html): AWS FDEを2026年7月の報道をもとに解説。AI導入支援が現場常駐型へ変わる理由、Semantic Layer、業務データと権限設計の進め方を中小企業向けに整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)
