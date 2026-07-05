@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年7月最新】Google MeetのAI議事録とは？会議メモ自動化で何が変わるか | MIRAINAブログ</title>
+    <meta name="description"
+        content="Google MeetのAI議事録機能を、Googleの2026年6月29日発表をもとに解説。自動要約、アクション整理、共有範囲、AI初心者の検索意図、導入時の注意点を紹介します。">
+    <meta property="og:title" content="【2026年7月最新】Google MeetのAI議事録とは？会議メモ自動化で何が変わるか">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog197.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog197-1.webp">
+    <meta property="og:description"
+        content="Google MeetのAI議事録機能を、Googleの2026年6月29日発表をもとに解説。自動要約、アクション整理、共有範囲、AI初心者の検索意図、導入時の注意点を紹介します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+    <style>
+        @media (max-width: 767px) {
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+            }
+
+            html,
+            body {
+                overflow-x: hidden;
+            }
+
+            .article-container {
+                box-sizing: border-box;
+                max-width: 100%;
+                padding-left: 1.25rem;
+                padding-right: 1.25rem;
+            }
+
+            .article-title {
+                font-size: 1.45rem;
+                line-height: 1.5;
+                word-break: normal;
+                overflow-wrap: anywhere;
+            }
+
+            .breadcrumbs li,
+            .article-meta>*,
+            .article-tag {
+                min-width: 0;
+                word-break: normal;
+                overflow-wrap: anywhere;
+            }
+
+            .article-tags {
+                max-width: 100%;
+                justify-content: center;
+            }
+
+            .article-summary,
+            .article-toc,
+            .diagram-container {
+                box-sizing: border-box;
+                width: 100%;
+            }
+
+            .article-table-wrapper {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .article-table {
+                min-width: 680px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>Google MeetのAI議事録とは？会議メモ自動化で何が変わるか</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.07.05</span>
+                    <div class="article-tags" style="flex-wrap: wrap; justify-content: center;">
+                        <p class="article-tag">Google Meet</p>
+                        <p class="article-tag">AI議事録</p>
+                        <p class="article-tag">Gemini</p>
+                        <p class="article-tag">会議効率化</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap: anywhere;">【2026年7月最新】Google MeetのAI議事録とは？会議メモ自動化で何が変わるか</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog197-1.webp" alt="Google MeetのAI議事録で会議メモ自動化を進めるイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    「AIで議事録を自動化したい」「会議のあとに要点とタスクだけほしい」。
+                    AI活用がまだ苦手な人は、まずこの悩みから検索しがちです。一方で、すでにAIを使っている人は
+                    「会議メモから決定事項だけ抜きたい」「担当者と期限を自動で整理したい」と、もっと具体的な指示をAIへ投げ始めています。
+                </p>
+                <p>
+                    そこで本記事では、Googleが2026年6月29日に公開した
+                    <strong>Google MeetのAI議事録機能</strong>をもとに、
+                    何が自動化されるのか、どんな検索意図に刺さるのか、そして中小企業の会議運用へどう組み込むべきかを整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. Google MeetのAI議事録とは？まず押さえるべき事実</a></li>
+                    <li><a href="#section2">2. AIが苦手な人はどう検索し、何を知りたいのか</a></li>
+                    <li><a href="#section3">3. すでにAIを使う人はどんなプロンプトを投げるか</a></li>
+                    <li><a href="#section4">4. 中小企業は会議業務にどう組み込むか</a></li>
+                    <li><a href="#section5">5. 導入前に注意したいこと</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. Google MeetのAI議事録とは？まず押さえるべき事実</h2>
+                <p>
+                    Google MeetのAI議事録は、会議中の会話をGeminiが記録し、
+                    要約、アクション項目、共有用のメモを自動生成する機能です。
+                    Google公式ブログでは、2026年6月29日からGoogle AI Pro、Google AI Ultra、
+                    そして対象のWorkspaceビジネス顧客が、Webとモバイルでこの機能を使えると案内しています。
+                </p>
+                <p>
+                    単なる文字起こしではなく、会議後すぐにGoogleドキュメントへ保存され、
+                    要約とアクション項目がメールでも届く点が実務向きです。
+                    さらにGoogle Workspace Blogでは、Take Notes For Meの利用者が
+                    <strong>直近1か月で1億1,000万人超</strong>、前年同月比で
+                    <strong>8.5倍成長</strong>したと紹介されており、
+                    会議メモ自動化が一部の実験ではなく日常業務へ広がっていることがわかります。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>確認日・出典</th>
+                                <th>事実</th>
+                                <th>実務での意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>2026年6月29日<br>Google公式ブログ</th>
+                                <td>Google AI Pro / Ultra と対象Workspace顧客が利用可能</td>
+                                <td>個人利用だけでなく、業務会議への導入前提で広がっている</td>
+                            </tr>
+                            <tr>
+                                <th>同日<br>Google公式ブログ</th>
+                                <td>会議内容を記録し、要約とアクション項目を生成</td>
+                                <td>議事録作成ではなく、会議後の次アクション整理まで自動化できる</td>
+                            </tr>
+                            <tr>
+                                <th>Google Meet Help</th>
+                                <td>メモは会議後にDriveへ保存され、Calendarイベントにも添付される</td>
+                                <td>共有漏れを減らし、後から参照しやすい運用にできる</td>
+                            </tr>
+                            <tr>
+                                <th>Google Workspace Blog</th>
+                                <td>直近1か月で1億1,000万人超が利用、前年同月比8.5倍成長</td>
+                                <td>会議AIは話題先行ではなく、既に定着フェーズに入っている</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    さらにGoogle Meet Helpによると、共有先、メモの長さ、会議言語などを調整でき、
+                    全参加者にはメモ取得中であることが通知されます。
+                    つまり、便利さだけでなく、共有範囲と透明性を前提にした設計です。
+                </p>
+
+                <h2 id="section2">2. AIが苦手な人はどう検索し、何を知りたいのか</h2>
+                <p>
+                    AI活用がまだ苦手な人は、最初から「Take Notes For Me」とは検索しません。
+                    先に出るのは「AI 議事録 自動作成」「会議 要約 AI」「Google Meet メモ 自動」
+                    「議事録をメール共有したい」といった、悩み起点の検索です。
+                    つまり読者が知りたいのは製品名よりも、<strong>会議後の面倒がどこまで減るのか</strong>です。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">AIが苦手な人の関心</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>議事録を誰が書くか</li>
+                                    <li>要点だけ欲しい</li>
+                                    <li>共有漏れをなくしたい</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">AIが返すべき情報</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>何が自動化されるか</strong></li>
+                                    <li>どこに保存されるか</li>
+                                    <li>誰に共有されるか</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">初心者向け記事は、機能名よりも「会議後の手間がどう減るか」を先に答える方が自然です。</p>
+                </div>
+
+                <p>
+                    ここで重要なのは、AIが引用しやすい記事の形も同じだということです。
+                    Google公式ブログとHelpは、利用条件、保存先、通知、設定項目を短く明確に答えています。
+                    そのため、ChatGPTやGeminiに「Google MeetのAI議事録って何ができる？」と聞いたときも、
+                    こうした整理された一次情報が参照されやすくなります。
+                    MIRAINAの<a href="/services/llmo_insight.html">LLMO Insight</a>でも、
+                    AIに引用されるには悩み起点の問いへ、仕様と制約を同時に答える構造が重要だと見ています。
+                </p>
+
+                <h2 id="section3">3. すでにAIを使う人はどんなプロンプトを投げるか</h2>
+                <p>
+                    すでにAIを使っている人は、議事録の有無より、その後の加工をAIへ頼みます。
+                    会議メモが自動で取れるなら、次に欲しいのは「決定事項だけ」「担当者別」「顧客送付用」「社内共有用」といった再構成です。
+                    つまり本番で効くのは、議事録生成そのものより、生成後のプロンプト設計です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>場面</th>
+                                <th>投げられやすいプロンプト</th>
+                                <th>期待される出力</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>営業定例</th>
+                                <td>この会議メモから決定事項、未決事項、担当者、期限を表で整理して</td>
+                                <td>次回アクションがすぐ追える一覧</td>
+                            </tr>
+                            <tr>
+                                <th>社内会議</th>
+                                <td>部門長向けの3行要約と、現場向けの詳細版に分けて</td>
+                                <td>受け手ごとに粒度を変えた共有文</td>
+                            </tr>
+                            <tr>
+                                <th>顧客打ち合わせ</th>
+                                <td>顧客に送る確認メール文面を丁寧な日本語で作って</td>
+                                <td>議事録からそのまま送れるフォロー文</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    この使い方を社員に定着させたいなら、<a href="/services/ai_training.html">AI研修</a>では
+                    「良いプロンプトを書く」よりも、「会議メモから何を抜き出せば次の仕事が進むか」を教える方が効果的です。
+                    AI活用は、質問の上手さより、出力の使い道が決まっているかで差が出ます。
+                </p>
+
+                <h2 id="section4">4. 中小企業は会議業務にどう組み込むか</h2>
+                <p>
+                    中小企業がこの機能を使うなら、最初から全会議へ広げる必要はありません。
+                    まずは毎週の営業会議、制作進行会議、採用面談後の振り返りなど、
+                    「毎回似た論点が出て、あとで整理が必要になる会議」を1つ選ぶのが現実的です。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">定例会議を<br>1つ選ぶ</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">共有先と保存先を<br>決める</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">要約後のプロンプトを<br>固定する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">SlackやNotionへ<br>運用接続する</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">会議AIは「文字起こし機能」ではなく、会議後の運用フローまで含めて設計すると効果が出やすくなります。</p>
+                </div>
+
+                <p>
+                    たとえば美容室やサロンなら、店長会議や採用面談後の整理で使えます。
+                    BtoB企業なら、商談後の宿題整理や、社内定例から提案書の骨子づくりにつなげやすいです。
+                    こうした運用は、<a href="/services/ai_consulting.html">生成AI活用支援</a>で
+                    会議の目的、共有ルール、次アクションの型まで決めておくと、現場に残りやすくなります。
+                </p>
+                <p>
+                    すでにGoogle Workspaceを使っている企業なら、別ツールを増やさず始めやすい点も利点です。
+                    会議メモがDrive、Gmail、Calendarに自然につながるため、
+                    新しいアプリを覚える負担より、今ある会議運用を少し整える発想の方が合っています。
+                </p>
+
+                <h2 id="section5">5. 導入前に注意したいこと</h2>
+                <p>
+                    まず、Google Meet Helpでは、議事録の品質が不十分になる要因として
+                    接続問題や会議時間の短さが挙げられており、<strong>15分以上の会議</strong>が推奨されています。
+                    つまり、雑談レベルの短い打ち合わせより、論点と宿題が残る会議で使う方が向いています。
+                </p>
+                <p>
+                    次に、便利だからといって何でも自動で残せばよいわけではありません。
+                    参加者には記録中であることが通知され、共有範囲も設定できますが、
+                    人事評価、契約交渉、機密案件などは「どこまで残すか」「誰に送るか」を事前に決める必要があります。
+                    必要であれば途中で停止できる前提で運用する方が安全です。
+                </p>
+                <p>
+                    MIRAINAの視点では、この機能の本質は「議事録作成をなくすこと」ではなく、
+                    <strong>会議の出口を標準化すること</strong>です。
+                    会議のたびに、要約、決定事項、担当者、期限の出し方が変わる組織では、AIを入れても効果が薄くなります。
+                    逆に出口の型が決まっていれば、AIはかなり素直に戦力になります。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    Google MeetのAI議事録は、会議内容の記録、要約、アクション項目の整理、共有までを一気に進める機能です。
+                    Googleの2026年6月29日の発表とHelp情報を見る限り、単なる新機能紹介ではなく、
+                    会議後の仕事を減らすための運用機能として設計されています。
+                </p>
+                <p>
+                    AIが苦手な人は「議事録を自動化したい」という悩みから入り、
+                    すでにAIを使う人は「そのメモをどう次の仕事に変えるか」というプロンプトへ進みます。
+                    この2段階を踏まえると、テーマとしても実務としても、Google MeetのAI議事録はかなり強い題材です。
+                </p>
+                <p>
+                    中小企業が始めるなら、まずは1つの定例会議で試し、
+                    共有先、保存先、次アクションの型を決めるところから進めるのが堅実です。
+                    AIは会議を代わりにしてくれるわけではありませんが、会議後の仕事を減らす力はかなり現実的になってきています。
+                </p>
+
+                <div class="article-cta">
+                    <div class="cta-box">
+                        <h2 class="cta-title">会議後の仕事をAIで減らしたい企業へ</h2>
+                        <p class="cta-text">MIRAINAは、生成AI活用支援、AI研修、AI開発を通じて、会議メモから次アクションまで回る運用設計を支援します。</p>
+                        <a href="/contact.html" class="btn btn-black-fill">無料相談はこちら</a>
+                    </div>
+                </div>
+
+                <div class="article-source">
+                    <h3>参考情報</h3>
+                    <ul>
+                        <li><a href="https://blog.google/products-and-platforms/products/workspace/take-notes-for-me/" target="_blank" rel="noopener">Google: Gemini can now take notes in Google Meet for Google AI Pro and Ultra subscribers</a></li>
+                        <li><a href="https://support.google.com/meet/answer/14754931?hl=en" target="_blank" rel="noopener">Google Meet Help: Take notes for me in Google Meet</a></li>
+                        <li><a href="https://workspace.google.com/blog/product-announcements/10-more-announcements-workspace-at-next-2026" target="_blank" rel="noopener">Google Workspace Blog: 10 more announcements for Workspace at Google Cloud Next 2026</a></li>
+                        <li><a href="https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/" target="_blank" rel="noopener">Google Blog: The latest AI news we announced in June 2026</a></li>
+                    </ul>
+                </div>
+
+                <div class="article-editor">
+                    <div class="editor-label">この記事の監修者</div>
+                    <div class="editor-name">芝 優作</div>
+                    <p>
+                        MIRAINA代表。中小企業向けに生成AI導入、業務自動化、AI研修、LLMO対策の支援を行う。
+                        AI活用はツール導入だけでなく、検索意図、現場運用、共有ルールまで含めて設計することが重要だと考え、定着するAI活用を支援している。
+                    </p>
+                </div>
+
+                <div class="article-related">
+                    <h3>関連記事</h3>
+                    <div class="related-grid">
+                        <a href="/blogs/blog180.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card180.webp" alt="Google WorkspaceのAI新機能を整理した記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年6月最新】Google WorkspaceのAI新機能で何が変わる？Drive・Sheets・Gmailの実務活用を整理</div>
+                        </a>
+                        <a href="/blogs/blog173.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card173.webp" alt="中小企業の生成AI導入率と共通点を整理した記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年最新】中小企業の生成AI導入率20.4%──成果を出す会社の共通点とは</div>
+                        </a>
+                        <a href="/blogs/blog024.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card024.webp" alt="AI導入が失敗する理由を整理した記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年最新】AI導入が失敗する本当の理由｜業務課題ベースで進める成功の鉄則</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul>
+                    <li><a href="/">ホーム</a></li>
+                    <li><a href="/services.html">サービス</a></li>
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MIRAINA. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

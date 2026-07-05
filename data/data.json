@@ -1763,6 +1763,15 @@
       "thumbnail": "/images/blogs_images/blog-card196.webp",
       "alt": "AWS FDEでAI導入支援が現場常駐型へ変わるイメージ",
       "date": "2026-07-05"
+    },
+    {
+      "id": 197,
+      "title": "【2026年7月最新】Google MeetのAI議事録とは？会議メモ自動化で何が変わるか",
+      "description": "Google MeetのAI議事録機能を、Googleの2026年6月29日発表をもとに解説。自動要約、アクション整理、共有範囲、AI初心者の検索意図、導入時の注意点を紹介します。",
+      "link": "/blogs/blog197.html",
+      "thumbnail": "/images/blogs_images/blog-card197.webp",
+      "alt": "Google MeetのAI議事録で会議メモ自動化を進めるイメージ",
+      "date": "2026-07-05"
     }
   ],
   "works": [
