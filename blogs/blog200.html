@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年7月最新】AI Safety IndexでAIベンダー選定はどう変わるか | MIRAINAブログ</title>
+    <meta name="description"
+        content="AI Safety Index Summer 2026を解説。主要AI企業の安全性評価をもとに、AIベンダー選定、社内ルール、導入前チェックの実務を整理します。">
+    <meta property="og:title" content="【2026年7月最新】AI Safety IndexでAIベンダー選定はどう変わるか">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog200.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog200-1.webp">
+    <meta property="og:description"
+        content="AI Safety Index Summer 2026を解説。主要AI企業の安全性評価をもとに、AIベンダー選定、社内ルール、導入前チェックの実務を整理します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/deauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                        <a href="/services/goal_remind_line.html" class="dropdown-item">目標リマインドLINE</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>AI Safety IndexでAIベンダー選定はどう変わるか</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.07.08</span>
+                    <div class="article-tags" style="flex-wrap: wrap; justify-content: center;">
+                        <p class="article-tag">AI Safety Index</p>
+                        <p class="article-tag">AIガバナンス</p>
+                        <p class="article-tag">AIベンダー選定</p>
+                        <p class="article-tag">生成AI導入</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap: anywhere;">【2026年7月最新】AI Safety IndexでAIベンダー選定はどう変わるか</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog200-1.webp" alt="AI Safety IndexをもとにAIベンダー選定を見直すイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    生成AIツールを選ぶとき、性能、料金、使いやすさだけで判断する企業はまだ多くあります。
+                    しかしAIが顧客対応、社内検索、営業資料作成、開発支援に入り込むほど、見るべき項目は「安全性をどう説明しているか」へ広がります。
+                </p>
+                <p>
+                    2026年7月7日、Future of Life Instituteは主要AI企業9社を対象にしたAI Safety Index Summer 2026を公開しました。
+                    最高評価はAnthropicのC+、OpenAIはC、Google DeepMindはCで、全体として安全性の取り組みはまだ十分とは言い切れない結果です。
+                    本記事では、このAI Safety Indexを中小企業のAIベンダー選定と導入ルールにどう読み替えるべきかを整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. まず押さえるべき事実</a></li>
+                    <li><a href="#section2">2. なぜ安全性評価がベンダー選定に関係するのか</a></li>
+                    <li><a href="#section3">3. 中小企業への影響</a></li>
+                    <li><a href="#section4">4. 導入前に確認すべき5項目</a></li>
+                    <li><a href="#section5">5. 今やるべきこと</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. まず押さえるべき事実</h2>
+                <p>
+                    AI Safety Index Summer 2026は、OpenAI、Anthropic、Google DeepMind、Meta、xAI、DeepSeek、Mistralなど、
+                    主要AI開発企業9社を対象に、安全性とガバナンスの取り組みを比較した評価です。
+                    評価は証拠にもとづく公開情報を中心に作られており、2026年6月3日までに確認できる情報が反映されています。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>企業</th>
+                                <th>総合評価</th>
+                                <th>中小企業が読むべき意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Anthropic</th>
+                                <td>C+（2.66）</td>
+                                <td>相対的には高いが、最高でもC+にとどまる</td>
+                            </tr>
+                            <tr>
+                                <th>OpenAI</th>
+                                <td>C（2.28）</td>
+                                <td>業務利用の広さと安全性説明を分けて確認する必要がある</td>
+                            </tr>
+                            <tr>
+                                <th>Google DeepMind</th>
+                                <td>C（2.01）</td>
+                                <td>Workspace連携など利便性に加え、管理機能の確認が必要</td>
+                            </tr>
+                            <tr>
+                                <th>xAI、DeepSeek、Mistral</th>
+                                <td>F</td>
+                                <td>安さや性能だけでなく、公開された安全方針の厚みを見る</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    重要なのは、「C評価だから使ってはいけない」と短絡しないことです。
+                    この評価は、個別ツールの使いやすさや日本語性能を直接順位づけるものではありません。
+                    むしろ、企業がAIを業務に入れる前に、モデル提供企業の安全方針、リスク評価、事故対応、透明性を確認する材料として使うべきです。
+                </p>
+
+                <h2 id="section2">2. なぜ安全性評価がベンダー選定に関係するのか</h2>
+                <p>
+                    生成AIは、単なる文章作成ツールから、社内データを読んで判断を支援する業務インフラへ移っています。
+                    そのため、AIベンダー選定では「回答が速い」「料金が安い」だけでなく、
+                    機密情報をどう扱うか、危険な出力をどう抑えるか、問題が起きたときにどこまで説明できるかが重要になります。
+                </p>
+                <p>
+                    Future of Life Instituteは、各社の安全性をリスク評価、現行の危害、存続リスク、ガバナンスなど複数軸で見ています。
+                    特に存続リスクの領域では、最高評価の企業でもC-を超えていないとされています。
+                    これは、AI企業の取り組みが進んでいても、外部から見て十分に検証できる水準にはまだ距離があるというサインです。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">従来の選び方</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>料金と性能を比較する</li>
+                                    <li>使いやすいUIを選ぶ</li>
+                                    <li>有名サービスを採用する</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">これからの選び方</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>安全方針を確認する</strong></li>
+                                    <li>管理機能とログを確認する</li>
+                                    <li>事故時の運用を決める</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">AI Safety Indexは、AI導入を「便利なツール探し」から「説明できるベンダー選定」へ変える材料です。</p>
+                </div>
+
+                <h2 id="section3">3. 中小企業への影響</h2>
+                <p>
+                    中小企業にとって、このニュースの本質は「どのAI企業が一番安全か」を断定することではありません。
+                    自社がAIを使う範囲に応じて、必要な安全確認を変えることです。
+                    たとえば社内のメモ作成だけならリスクは限定的ですが、顧客情報、契約書、採用候補者情報、売上データを扱うなら話は変わります。
+                </p>
+                <p>
+                    AI Safety Indexで評価されるような透明性やガバナンスは、現場では利用規約、データ学習の扱い、管理者機能、監査ログ、
+                    出力チェック、権限設計として現れます。
+                    AIを社内に広げる前に、これらを確認していないと、便利さが先行して情報管理が後追いになります。
+                </p>
+                <p>
+                    以前の<a href="/blogs/blog174.html">Claude共有チャット悪用に関する記事</a>でも触れたように、
+                    AIツールの安全性はモデル企業だけで完結しません。
+                    ユーザー企業側の教育、共有ルール、リンク確認、実行権限の制限がそろって、初めて現場で機能します。
+                </p>
+
+                <h2 id="section4">4. 導入前に確認すべき5項目</h2>
+                <p>
+                    AI Safety Indexをそのまま社内稟議に貼るだけでは不十分です。
+                    自社で使う業務に合わせて、具体的なチェックリストへ落とし込む必要があります。
+                    MIRAINAでは、少なくとも次の5項目を導入前に確認することを推奨します。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>確認項目</th>
+                                <th>見るポイント</th>
+                                <th>実務アクション</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>データ利用</th>
+                                <td>入力データが学習に使われるか、法人設定で除外できるか</td>
+                                <td>顧客情報や契約情報を扱う部署は法人プランを優先する</td>
+                            </tr>
+                            <tr>
+                                <th>管理機能</th>
+                                <td>ユーザー管理、権限、ログ、共有範囲を制御できるか</td>
+                                <td>個人アカウント利用を放置せず、管理者を決める</td>
+                            </tr>
+                            <tr>
+                                <th>出力リスク</th>
+                                <td>誤情報、著作権、差別表現、危険な手順への対策があるか</td>
+                                <td>外部公開前の人間レビューを必須にする</td>
+                            </tr>
+                            <tr>
+                                <th>障害対応</th>
+                                <td>停止時の情報公開、代替手段、SLAの有無</td>
+                                <td>重要業務は複数ツールまたは手動復旧手順を用意する</td>
+                            </tr>
+                            <tr>
+                                <th>社内教育</th>
+                                <td>社員が入力禁止情報と確認手順を理解しているか</td>
+                                <td>プロンプト例とNG例をセットで研修する</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section5">5. 今やるべきこと</h2>
+                <p>
+                    まず、現在社内で使われているAIツールを棚卸しします。
+                    ChatGPT、Claude、Gemini、Copilot、画像生成AI、議事録AI、社内検索AIなどを一覧化し、
+                    誰が、どのデータを、どの業務で使っているかを確認します。
+                    この棚卸しがないまま安全性を議論すると、現場で起きている実態とルールがずれます。
+                </p>
+                <p>
+                    次に、ツールごとに「個人利用」「社内利用」「顧客情報を扱う利用」「外部公開物を作る利用」に分類します。
+                    顧客情報や公開物に関わる領域ほど、AI Safety Indexのような外部評価、ベンダーの安全文書、法人管理機能を確認する優先度が上がります。
+                    AI導入の進め方は<a href="/blogs/blog024.html">AI導入が失敗する本当の理由</a>でも整理していますが、ツール名ではなく業務課題と運用設計から始めることが重要です。
+                </p>
+                <p>
+                    MIRAINAの視点では、AI安全性は「禁止リストを作ること」ではありません。
+                    現場が使いやすいテンプレート、入力してよい情報の線引き、レビュー担当、ログ確認、代替手順をセットで作ることです。
+                    <a href="/services/ai_training.html">AI研修</a>や<a href="/services/ai_consulting.html">生成AI活用支援</a>では、こうしたルールを業務フローに合わせて設計します。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    AI Safety Index Summer 2026は、主要AI企業の安全性への取り組みが進んでいる一方で、
+                    外部から見て十分に高い評価へ到達している企業はまだ少ないことを示しました。
+                    AnthropicがC+、OpenAIとGoogle DeepMindがCという結果は、企業が生成AIを使うときに安全性確認をベンダー任せにできないことを教えてくれます。
+                </p>
+                <p>
+                    中小企業に必要なのは、評価表の順位だけを追うことではありません。
+                    自社のAI利用範囲を棚卸しし、データ利用、管理機能、出力レビュー、障害対応、社内教育を具体的に決めることです。
+                    AI Safety Indexは、AIベンダー選定を「便利そうだから導入する」から「説明できる形で選ぶ」へ進めるためのチェック材料になります。
+                </p>
+
+                <div class="article-cta">
+                    <div class="cta-box">
+                        <h2 class="cta-title">AI導入ルールを現場で使える形にしたい企業へ</h2>
+                        <p class="cta-text">MIRAINAは、生成AI活用支援とAI研修を通じて、業務棚卸し、AIベンダー選定、社内ルール、教育設計まで一体で支援します。</p>
+                        <a href="/contact.html" class="btn btn-black-fill">無料相談はこちら</a>
+                    </div>
+                </div>
+
+                <div class="article-source">
+                    <h3>参考情報</h3>
+                    <ul>
+                        <li><a href="https://futureoflife.org/ai-safety-index-winter-2025/" target="_blank" rel="noopener">Future of Life Institute: AI Safety Index</a></li>
+                        <li><a href="https://www.axios.com/2026/07/07/report-ai-safety-pledges" target="_blank" rel="noopener">Axios: AI labs' voluntary safety system is eroding, report finds</a></li>
+                        <li><a href="https://www.internationalaisafety.report/" target="_blank" rel="noopener">International AI Safety Report</a></li>
+                    </ul>
+                </div>
+
+                <div class="article-editor">
+                    <div class="editor-label">この記事の監修者</div>
+                    <div class="editor-name">芝 優作</div>
+                    <p>
+                        MIRAINA代表。中小企業向けに生成AI導入、業務自動化、AI研修、LLMO対策の支援を行う。
+                        AI活用はツール名ではなく、業務課題、参照データ、評価基準、承認設計の順番で決まると考え、
+                        現場に残るAI導入を支援している。
+                    </p>
+                </div>
+
+                <div class="article-related">
+                    <h3>関連記事</h3>
+                    <div class="related-grid">
+                        <a href="/blogs/blog174.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card174.webp" alt="Claude共有チャット悪用とAI安全ルールを解説した記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年6月最新】Claude共有チャット悪用、AIツール導入で確認すべき安全ルール</div>
+                        </a>
+                        <a href="/blogs/blog177.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card177.webp" alt="Claude障害とAI業務継続を解説した記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年6月最新】Claude障害でAI業務継続はどう変わるか</div>
+                        </a>
+                        <a href="/blogs/blog024.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card024.webp" alt="AI導入が失敗する理由を解説した記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年最新】AI導入が失敗する本当の理由</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul>
+                    <li><a href="/">ホーム</a></li>
+                    <li><a href="/services.html">サービス</a></li>
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MIRAINA. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

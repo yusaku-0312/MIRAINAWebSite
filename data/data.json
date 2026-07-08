@@ -1772,6 +1772,33 @@
       "thumbnail": "/images/blogs_images/blog-card197.webp",
       "alt": "Google MeetのAI議事録で会議メモ自動化を進めるイメージ",
       "date": "2026-07-05"
+    },
+    {
+      "id": 198,
+      "title": "【2026年7月最新】MCPでデータ分析はどう変わる？EC IntelligenceのChatGPT/Claude対応を解説",
+      "description": "シナブルのEC IntelligenceがMCP対応を追加した2026年7月1日発表を解説。ChatGPTやClaudeから自然言語のままECデータ分析を行う仕組み、セキュリティ設計、中小企業のマーケティング業務への活かし方を紹介します。",
+      "link": "/blogs/blog198.html",
+      "thumbnail": "/images/blogs_images/blog-card198.webp",
+      "alt": "MCP対応でChatGPTからECデータ分析を行うイメージ",
+      "date": "2026-07-06"
+    },
+    {
+      "id": 199,
+      "title": "【2026年7月最新】AIデータセンター契約でClaude導入コストはどう変わるか",
+      "description": "AIデータセンター契約をWSJなどの報道から整理。AnthropicとTeraWulfの20年契約が、Claude導入コスト、供給安定性、BCPに与える影響を解説します。",
+      "link": "/blogs/blog199.html",
+      "thumbnail": "/images/blogs_images/blog-card199.webp",
+      "alt": "AIデータセンター契約とClaude導入コストの関係を示すイメージ",
+      "date": "2026-07-07"
+    },
+    {
+      "id": 200,
+      "title": "【2026年7月最新】AI Safety IndexでAIベンダー選定はどう変わるか",
+      "description": "AI Safety Index Summer 2026を解説。主要AI企業の安全性評価をもとに、AIベンダー選定、社内ルール、導入前チェックの実務を整理します。",
+      "link": "/blogs/blog200.html",
+      "thumbnail": "/images/blogs_images/blog-card200.webp",
+      "alt": "AI Safety IndexをもとにAIベンダー選定を見直すイメージ",
+      "date": "2026-07-08"
     }
   ],
   "works": [

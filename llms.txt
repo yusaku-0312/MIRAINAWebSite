@@ -223,6 +223,9 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年7月最新】Nano Banana 2 Liteとは？販促画像づくりを速くするGoogle新モデル](https://miraina-ai.com/blogs/blog195.html): Googleの2026年6月30日発表をもとに、Nano Banana 2 Liteの4秒生成、1K画像0.034ドル、販促画像や商品画像の実務活用、プロンプト設計を中小企業向けに整理した記事。
 - [最新ブログ: 【2026年7月最新】AWS FDEとは？AI導入支援は現場常駐型へ](https://miraina-ai.com/blogs/blog196.html): AWS FDEを2026年7月の報道をもとに解説。AI導入支援が現場常駐型へ変わる理由、Semantic Layer、業務データと権限設計の進め方を中小企業向けに整理した記事。
 - [最新ブログ: 【2026年7月最新】Google MeetのAI議事録とは？会議メモ自動化で何が変わるか](https://miraina-ai.com/blogs/blog197.html): Googleの2026年6月29日発表をもとに、Google MeetのAI議事録で自動要約、アクション整理、共有ルール、検索意図とプロンプト設計を中小企業向けに整理した記事。
+- [最新ブログ: 【2026年7月最新】MCPでデータ分析はどう変わる？EC IntelligenceのChatGPT/Claude対応を解説](https://miraina-ai.com/blogs/blog198.html): シナブルの2026年7月1日発表をもとに、EC IntelligenceのMCP対応でChatGPT・Claudeから自然言語のままECデータ分析ができる仕組み、セキュリティ設計、マーケティング業務への活かし方を中小企業向けに整理した記事。
+- [最新ブログ: 【2026年7月最新】AIデータセンター契約でClaude導入コストはどう変わるか](https://miraina-ai.com/blogs/blog199.html): TeraWulfとAnthropicのAIデータセンター契約報道をもとに、Claude導入コスト、供給安定性、BCP、AIベンダー選定の見方を中小企業向けに整理した記事。
+- [最新ブログ: 【2026年7月最新】AI Safety IndexでAIベンダー選定はどう変わるか](https://miraina-ai.com/blogs/blog200.html): AI Safety Index Summer 2026をもとに、主要AI企業の安全性評価、AIベンダー選定、社内ルール、導入前チェックを中小企業向けに整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)
