@@ -1799,6 +1799,15 @@
       "thumbnail": "/images/blogs_images/blog-card200.webp",
       "alt": "AI Safety IndexをもとにAIベンダー選定を見直すイメージ",
       "date": "2026-07-08"
+    },
+    {
+      "id": 201,
+      "title": "【2026年7月最新】GPT-Liveで接客AIは割り込み会話へ",
+      "description": "GPT-Liveの発表を解説。全二重の音声AI、リアルタイム翻訳、電話・接客業務への影響、導入前の運用ルールを整理します。",
+      "link": "/blogs/blog201.html",
+      "thumbnail": "/images/blogs_images/blog-card201.webp",
+      "alt": "GPT-Liveで接客AIが自然な会話に近づくイメージ",
+      "date": "2026-07-09"
     }
   ],
   "works": [
