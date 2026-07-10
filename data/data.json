@@ -1817,6 +1817,15 @@
       "thumbnail": "/images/blogs_images/blog-card202.webp",
       "alt": "Claude reflectでAI利用を見直すイメージ",
       "date": "2026-07-10"
+    },
+    {
+      "id": 203,
+      "title": "【2026年7月最新】GPT-5.6とは？仕事で使うAIが変わる3つの理由",
+      "description": "GPT-5.6とは何かを公式発表から解説。ChatGPT Work、Microsoft 365 Copilot、業務自動化の変化と中小企業が導入前に見るポイントを整理します。",
+      "link": "/blogs/blog203.html",
+      "thumbnail": "/images/blogs_images/blog-card203.webp",
+      "alt": "GPT-5.6でChatGPT WorkとMicrosoft 365 Copilotが進化するイメージ",
+      "date": "2026-07-10"
     }
   ],
   "works": [
