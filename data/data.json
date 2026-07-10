@@ -1808,6 +1808,15 @@
       "thumbnail": "/images/blogs_images/blog-card201.webp",
       "alt": "GPT-Liveで接客AIが自然な会話に近づくイメージ",
       "date": "2026-07-09"
+    },
+    {
+      "id": 202,
+      "title": "【2026年7月最新】Claude reflectでAI利用の見直しはどう変わるか",
+      "description": "Claude reflectの公式発表を解説。AI利用状況の可視化、休憩リマインド、プライバシー配慮、社内AI活用ルールを整理します。",
+      "link": "/blogs/blog202.html",
+      "thumbnail": "/images/blogs_images/blog-card202.webp",
+      "alt": "Claude reflectでAI利用を見直すイメージ",
+      "date": "2026-07-10"
     }
   ],
   "works": [

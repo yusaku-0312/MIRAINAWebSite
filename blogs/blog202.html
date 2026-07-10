@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年7月最新】Claude reflectでAI利用の見直しはどう変わるか | MIRAINAブログ</title>
+    <meta name="description"
+        content="Claude reflectの公式発表を解説。AI利用状況の可視化、休憩リマインド、プライバシー配慮、社内AI活用ルールを整理します。">
+    <meta property="og:title" content="【2026年7月最新】Claude reflectでAI利用の見直しはどう変わるか">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog202.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog202-1.webp">
+    <meta property="og:description"
+        content="Claude reflectの公式発表を解説。AI利用状況の可視化、休憩リマインド、プライバシー配慮、社内AI活用ルールを整理します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>Claude reflectでAI利用の見直しはどう変わるか</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.07.10</span>
+                    <div class="article-tags" style="flex-wrap: wrap; justify-content: center;">
+                        <p class="article-tag">Claude reflect</p>
+                        <p class="article-tag">AI活用管理</p>
+                        <p class="article-tag">AI研修</p>
+                        <p class="article-tag">ガバナンス</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap: anywhere;">【2026年7月最新】Claude reflectでAI利用の見直しはどう変わるか</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog202-1.webp" alt="Claude reflectでAI利用を見直すイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    生成AIの導入が進むほど、企業には新しい悩みが生まれます。
+                    「社員がAIを使っているか」だけでなく、「どの業務で使い、どこまで任せ、いつ人間が判断しているか」を見なければ、成果もリスクも判断できないためです。
+                </p>
+                <p>
+                    Anthropicは2026年7月9日、Claudeの使い方を振り返る新機能としてClaude reflectをベータ公開しました。
+                    本記事では公式発表をもとに、Claude reflectがAI利用状況の可視化、休憩リマインド、プライバシー配慮、社内AI活用ルールに何をもたらすのかを中小企業向けに整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. まず押さえるべき事実</a></li>
+                    <li><a href="#section2">2. Claude reflectの主な機能</a></li>
+                    <li><a href="#section3">3. 企業のAI活用管理に効く理由</a></li>
+                    <li><a href="#section4">4. 導入前に確認すべき注意点</a></li>
+                    <li><a href="#section5">5. 中小企業が今やるべきこと</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. まず押さえるべき事実</h2>
+                <p>
+                    Claude reflectは、Claudeの利用履歴をもとに、自分がどんなテーマや作業でAIを使っているかを振り返るためのダッシュボードです。
+                    Anthropicの公式発表では、1ヶ月、3ヶ月、6ヶ月、12ヶ月の単位でClaudeのチャット活動を振り返れると説明されています。
+                    現時点では、Free、Pro、Maxユーザー向けのベータ機能で、Claudeのメモリを有効にしている場合に利用できます。
+                </p>
+                <p>
+                    重要なのは、Claude reflectが単なる利用回数レポートではない点です。
+                    利用が多い時間帯、扱ったテーマ、Claudeへ任せた作業の種類を見せるだけでなく、「AIに任せず自分で続けたいことは何か」といった問いも提示します。
+                    つまり、AIを増やすための機能ではなく、AIとの距離感を調整する機能として設計されています。
+                </p>
+
+                <h2 id="section2">2. Claude reflectの主な機能</h2>
+                <p>
+                    Claude reflectで注目すべき機能は、利用傾向の可視化、休憩や静かな時間の設定、AI Fluencyへの接続です。
+                    Anthropicは、今後はClaudeの利用時間を確認する表示も追加するとしています。
+                    個人向けに見える機能ですが、AI研修や社内定着支援の観点では、社員がAIをどのように使い始めているかを考える材料になります。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>機能</th>
+                                <th>見えること</th>
+                                <th>社内活用での使い道</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>利用傾向</th>
+                                <td>テーマ、作業種類、利用パターン</td>
+                                <td>AI研修後に現場で使われている業務を把握する</td>
+                            </tr>
+                            <tr>
+                                <th>振り返り期間</th>
+                                <td>1ヶ月、3ヶ月、6ヶ月、12ヶ月の活動</td>
+                                <td>月次レビューや定着KPIの補助情報にする</td>
+                            </tr>
+                            <tr>
+                                <th>quiet hours</th>
+                                <td>AIを使わない時間帯のリマインド</td>
+                                <td>集中時間や承認作業をAIから切り離す</td>
+                            </tr>
+                            <tr>
+                                <th>休憩リマインド</th>
+                                <td>一定時間後の休憩通知</td>
+                                <td>長時間のAI依存や確認漏れを防ぐ</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section3">3. 企業のAI活用管理に効く理由</h2>
+                <p>
+                    多くの企業は、AI導入を「アカウントを配る」「研修を実施する」「禁止事項を決める」の3点で終えがちです。
+                    しかし成果を出すには、その後に社員が何をAIに任せ、どの作業では自分で判断し、どこで詰まっているかを観察する必要があります。
+                    Claude reflectは個人向け機能ですが、この発想は企業のAI活用管理にもそのまま使えます。
+                </p>
+                <p>
+                    たとえば、営業担当が提案書の下書きだけにAIを使っているのか、顧客課題の整理や競合比較まで使っているのかでは、研修すべき内容が変わります。
+                    管理部門が規程確認に使っている場合は、出典確認や承認フローの設計が重要になります。
+                    <a href="/blogs/blog054.html">ChatGPT Workspace Analyticsの記事</a>で扱った利用分析は管理者視点の可視化でしたが、Claude reflectは個人の振り返りを起点に、AIとの付き合い方を調整する文脈が強い点が違います。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li>
+                            <span class="process-number">1</span>
+                            <div>
+                                <strong>使った業務を見える化</strong>
+                                <p>文章作成、調査、要約、相談などの使い方を棚卸しする。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="process-number">2</span>
+                            <div>
+                                <strong>任せすぎを確認</strong>
+                                <p>判断、承認、顧客対応など人間が持つべき役割を分ける。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="process-number">3</span>
+                            <div>
+                                <strong>研修とルールへ戻す</strong>
+                                <p>現場の使い方をもとに、プロンプト、確認手順、権限を更新する。</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">AI活用管理は「利用量」だけでなく「任せ方」と「戻し方」まで見る必要があります。</p>
+                </div>
+
+                <h2 id="section4">4. 導入前に確認すべき注意点</h2>
+                <p>
+                    Claude reflectは便利ですが、利用履歴を扱う以上、プライバシーと社内説明は欠かせません。
+                    Anthropicは、incognitoチャットや接続ツール内の元ファイルは反映に使わず、健康連携ツールに関係する会話も除外すると説明しています。
+                    一方で、機密性の高いテーマが高いレベルの要約として現れる可能性には注意が必要です。
+                </p>
+                <p>
+                    企業で同種の振り返りを導入する場合は、管理者が個人の会話内容を細かく監視する仕組みにしないことが重要です。
+                    目的は監視ではなく、AIを安全に使うための改善です。
+                    <a href="/blogs/blog162.html">AIエージェント権限管理の記事</a>でも整理した通り、AI活用はログを集めるだけでは不十分で、閲覧権限、保存期間、利用目的、例外時の相談窓口まで決める必要があります。
+                </p>
+
+                <h2 id="section5">5. 中小企業が今やるべきこと</h2>
+                <p>
+                    まず、社員にAI利用を自己申告させる簡単な振り返りシートを作ることから始めます。
+                    項目は「使った業務」「AIに任せた範囲」「自分で確認したこと」「困ったこと」「次に任せたいこと」の5つで十分です。
+                    Claude reflectのような機能が普及すると、こうした振り返りはツール側でも支援されますが、社内ルールの言語化は企業側の仕事です。
+                </p>
+                <p>
+                    次に、AI研修の評価指標を見直します。
+                    受講人数や利用回数だけでなく、AIで作った成果物のレビュー率、出典確認の実施率、承認者への引き継ぎ率を見ます。
+                    MIRAINAの視点では、Claude reflectの本質は「AIをどれだけ使ったか」ではなく、「AIに任せるべき仕事と人間が引き受けるべき仕事を分け直すこと」にあります。
+                    <a href="/services/ai_training.html">AI研修</a>や<a href="/services/ai_consulting.html">生成AI活用支援</a>では、現場の使い方を前提にルール、プロンプト、評価基準まで設計します。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    Claude reflectは、Claudeの使い方を振り返り、AIとの距離感を整えるための新しい機能です。
+                    1ヶ月、3ヶ月、6ヶ月、12ヶ月の利用傾向、quiet hours、休憩リマインド、AI Fluencyへの接続は、個人の使い方だけでなく、企業のAI活用管理にも示唆があります。
+                </p>
+                <p>
+                    中小企業が取り入れるべきなのは、機能そのものを急いで使うことではありません。
+                    社員がAIをどの業務で使い、どこで人間が確認し、どの判断をAIに任せないのかを定期的に振り返る仕組みです。
+                    その仕組みがあれば、AI利用は属人的な試行錯誤から、現場に残る業務改善へ変わっていきます。
+                </p>
+
+                <div class="article-cta">
+                    <div class="cta-box">
+                        <h2 class="cta-title">AI活用の定着状況を見える化したい企業へ</h2>
+                        <p class="cta-text">MIRAINAは、生成AI活用支援とAI研修を通じて、現場の使い方、権限設計、評価指標、運用ルールまで一体で支援します。</p>
+                        <a href="/contact.html" class="btn btn-black-fill">無料相談はこちら</a>
+                    </div>
+                </div>
+
+                <div class="article-source">
+                    <h3>参考情報</h3>
+                    <ul>
+                        <li><a href="https://www.anthropic.com/news/reflect-with-claude" target="_blank" rel="noopener">Anthropic: Introducing a way to reflect on how you use Claude</a></li>
+                        <li><a href="https://www.theverge.com/ai-artificial-intelligence/963105/anthropic-claude-wrapped-reflection-ai-usage" target="_blank" rel="noopener">The Verge: Say hello to Claude Wrapped</a></li>
+                        <li><a href="https://www.axios.com/2026/07/09/anthropic-reflection-ai-screen-time" target="_blank" rel="noopener">Axios: Anthropic's Reflection: AI gets its screen-time moment</a></li>
+                    </ul>
+                </div>
+
+                <div class="article-editor">
+                    <div class="editor-label">この記事の監修者</div>
+                    <div class="editor-name">芝 優作</div>
+                    <p>
+                        MIRAINA代表。中小企業向けに生成AI導入、業務自動化、AI研修、LLMO対策の支援を行う。
+                        AI活用はツール名ではなく、業務課題、参照データ、評価基準、承認設計の順番で決まると考え、
+                        現場に残るAI導入を支援している。
+                    </p>
+                </div>
+
+                <div class="article-related">
+                    <h3>関連記事</h3>
+                    <div class="related-grid">
+                        <a href="/blogs/blog054.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card054.webp" alt="ChatGPT Workspace Analyticsを解説した記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年3月最新】ChatGPT Workspace Analyticsとは？社内AI活用の定着度を見える化する方法</div>
+                        </a>
+                        <a href="/blogs/blog162.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card162.webp" alt="AIエージェント権限管理を解説した記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年6月最新】AIエージェント権限管理、Claude事例で学ぶ安全設計</div>
+                        </a>
+                        <a href="/blogs/blog060.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card060.webp" alt="AIエージェント導入失敗パターンを解説した記事" loading="lazy"
+                                decoding="async">
+                            <div class="related-card-title">【2026年4月最新】AIエージェント導入で失敗する企業の5つのパターン</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul>
+                    <li><a href="/">ホーム</a></li>
+                    <li><a href="/services.html">サービス</a></li>
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MIRAINA. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

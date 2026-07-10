@@ -227,6 +227,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年7月最新】AIデータセンター契約でClaude導入コストはどう変わるか](https://miraina-ai.com/blogs/blog199.html): TeraWulfとAnthropicのAIデータセンター契約報道をもとに、Claude導入コスト、供給安定性、BCP、AIベンダー選定の見方を中小企業向けに整理した記事。
 - [最新ブログ: 【2026年7月最新】AI Safety IndexでAIベンダー選定はどう変わるか](https://miraina-ai.com/blogs/blog200.html): AI Safety Index Summer 2026をもとに、主要AI企業の安全性評価、AIベンダー選定、社内ルール、導入前チェックを中小企業向けに整理した記事。
 - [最新ブログ: 【2026年7月最新】GPT-Liveで接客AIは割り込み会話へ](https://miraina-ai.com/blogs/blog201.html): GPT-Liveの発表をもとに、全二重の音声AI、リアルタイム翻訳、電話対応AI・接客AIの運用設計を中小企業向けに整理した記事。
+- [最新ブログ: 【2026年7月最新】Claude reflectでAI利用の見直しはどう変わるか](https://miraina-ai.com/blogs/blog202.html): Anthropicの2026年7月9日公式発表をもとに、Claude reflectによるAI利用状況の可視化、休憩リマインド、プライバシー配慮、社内AI活用ルールを中小企業向けに整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)
