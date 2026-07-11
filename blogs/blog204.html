@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年7月最新】Teams Meeting AIのオフ設定で会議AI運用はどう変わるか | MIRAINAブログ</title>
+    <meta name="description"
+        content="Teams Meeting AIのオフ設定を解説。Copilot、Facilitator、Intelligent Recapを会議ごとに制御する考え方と社内ルールを整理します。">
+    <meta property="og:title" content="【2026年7月最新】Teams Meeting AIのオフ設定で会議AI運用はどう変わるか">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog204.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog204-1.webp">
+    <meta property="og:description"
+        content="Teams Meeting AIのオフ設定を解説。Copilot、Facilitator、Intelligent Recapを会議ごとに制御する考え方と社内ルールを整理します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>Teams Meeting AIのオフ設定で会議AI運用はどう変わるか</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.07.11</span>
+                    <div class="article-tags" style="flex-wrap: wrap; justify-content: center;">
+                        <p class="article-tag">Teams Meeting AI</p>
+                        <p class="article-tag">Microsoft Copilot</p>
+                        <p class="article-tag">会議AI</p>
+                        <p class="article-tag">AIガバナンス</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap: anywhere;">【2026年7月最新】Teams Meeting AIのオフ設定で会議AI運用はどう変わるか</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog204-1.webp" alt="Teams Meeting AIのオフ設定で会議AI運用を見直すイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    Microsoft Teamsの会議AIは、議事録、要約、補足説明を自動化できる一方で、「すべての会議でAIを動かしてよいのか」という現場の不安も生みます。
+                    2026年7月、TeamsではCopilot、Facilitator、Intelligent RecapなどのMeeting AIを会議中にオン・オフしやすくする動きが報じられました。
+                </p>
+                <p>
+                    本記事では、既出のGoogle MeetのAI議事録記事とは切り口を変え、Teams Meeting AIのオフ設定が中小企業の会議ルール、情報管理、AI研修に与える影響を整理します。
+                </p>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. まず押さえるべき事実</a></li>
+                    <li><a href="#section2">2. なぜ会議AIにオフ設定が必要なのか</a></li>
+                    <li><a href="#section3">3. 現場の会議運用で変わること</a></li>
+                    <li><a href="#section4">4. 導入前に決めるべき社内ルール</a></li>
+                    <li><a href="#section5">5. 中小企業が今やるべきこと</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. まず押さえるべき事実</h2>
+                <p>
+                    今回のポイントは、Microsoft TeamsのMeeting AIを「便利な自動要約機能」としてだけ見るのではなく、
+                    会議ごとに使うか止めるかを選ぶ運用対象として扱う流れが強まったことです。
+                    報道によると、Microsoftはライセンスを持つ会議主催者や発表者が、会議中にCopilot、Facilitator、Intelligent Recapをオン・オフできるトグルを追加する予定です。
+                </p>
+                <p>
+                    Windows Centralは、Targeted Releaseが2026年7月上旬から中旬、一般提供が2026年7月中旬から月末にかけて進む予定だと報じています。
+                    TechRadarも、管理者ポリシーでMeeting AIが許可されている場合に限り、会議中の切り替えが表示されると説明しています。
+                    つまり、ユーザー個人の好みだけでなく、管理者設定と会議主催者の判断が重なる設計です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>報じられている内容</th>
+                                <th>実務での読み方</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>対象機能</th>
+                                <td>Copilot、Facilitator、Intelligent Recap</td>
+                                <td>会議の要約、補足、振り返りをAIが支援する領域</td>
+                            </tr>
+                            <tr>
+                                <th>操作できる人</th>
+                                <td>ライセンスを持つ主催者・発表者</td>
+                                <td>参加者全員ではなく、会議責任者が判断する</td>
+                            </tr>
+                            <tr>
+                                <th>提供時期</th>
+                                <td>2026年7月上旬から段階的に展開予定</td>
+                                <td>社内ルールを今のうちに見直す必要がある</td>
+                            </tr>
+                            <tr>
+                                <th>管理者設定</th>
+                                <td>ポリシーで無効ならトグル自体が表示されない</td>
+                                <td>現場任せではなく、IT管理とセットで設計する</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section2">2. なぜ会議AIにオフ設定が必要なのか</h2>
+                <p>
+                    会議AIは便利です。議事録を書き忘れた、途中参加者に経緯を説明したい、決定事項を後から確認したいという場面では、
+                    自動要約やハイライト生成が大きな助けになります。
+                    ただし、すべての会議を同じ扱いにすると、営業機密、人事評価、採用面談、顧客との未公開情報など、AIに処理させるべきでない話題まで記録・要約の対象になりかねません。
+                </p>
+                <p>
+                    研究面でも、会議要約AIには限界があります。
+                    Microsoft Researchなどの会議要約システム研究では、LLMによる要約は有用である一方、参加者ごとの重要度や文脈を完全には理解できず、誤った帰属がチームの認識に影響する可能性が指摘されています。
+                    そのため、会議AIの導入は「使えるか」ではなく「どの会議では使わないか」まで決める段階に入っています。
+                </p>
+                <p>
+                    MIRAINAの視点では、オフ設定は後ろ向きな制限ではありません。
+                    むしろ、安心してAIを使うための安全装置です。
+                    <a href="/blogs/blog197.html">Google MeetのAI議事録に関する記事</a>では会議メモ自動化の効率を扱いましたが、Teams Meeting AIでは、効率と同時に「止める権限」を設計することが重要になります。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">AI任せの会議運用</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>全会議でAI要約を使う</li>
+                                    <li>記録範囲を会議ごとに変えない</li>
+                                    <li>主催者の判断基準がない</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">管理された会議AI運用</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>会議種別でオン・オフを決める</strong></li>
+                                    <li>参加者へAI利用を明示する</li>
+                                    <li>要約の確認責任者を置く</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">会議AIの価値は、自動化の範囲と停止条件をセットで決めるほど安定します。</p>
+                </div>
+
+                <h2 id="section3">3. 現場の会議運用で変わること</h2>
+                <p>
+                    Teams Meeting AIのオフ設定が広がると、会議前の準備が変わります。
+                    これまでは「Teams会議を作る」だけで済んでいたものが、今後は「この会議でAI要約を使うか」「外部参加者にどう伝えるか」「録画や文字起こしと同じ扱いにするか」を確認する必要が出てきます。
+                    特に顧客商談や採用面談では、AI利用の告知と同意の取り方を決めておくべきです。
+                </p>
+                <p>
+                    Microsoft 365 Copilotの利用はすでに広がっています。
+                    2026年5月公開のMicrosoft関連研究では、Copilot Chatが週次で数百万人、100万社超の企業で使われ、約550万セッションを分析対象にしたと説明されています。
+                    利用が広がるほど、会議AIも一部の先進企業だけの話ではなく、一般的な業務インフラの管理対象になります。
+                </p>
+                <p>
+                    そのため現場では、会議テンプレートに「AI利用可否」を入れるだけでも効果があります。
+                    たとえば定例会議、営業進捗、社内研修はAIオン。
+                    人事評価、契約交渉、未公開の経営会議、顧客の機密情報を扱う会議はAIオフ。
+                    こうした分類があるだけで、主催者は毎回迷わず判断できます。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>会議種別</th>
+                                <th>AI利用の目安</th>
+                                <th>理由</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>社内定例</th>
+                                <td>オンにしやすい</td>
+                                <td>決定事項、宿題、進捗確認を残しやすい</td>
+                            </tr>
+                            <tr>
+                                <th>AI研修・社内勉強会</th>
+                                <td>オンにしやすい</td>
+                                <td>復習資料やFAQ作成に活用できる</td>
+                            </tr>
+                            <tr>
+                                <th>顧客商談</th>
+                                <td>事前告知が前提</td>
+                                <td>相手先の情報管理方針に合わせる必要がある</td>
+                            </tr>
+                            <tr>
+                                <th>人事・労務・経営会議</th>
+                                <td>原則オフから検討</td>
+                                <td>個人情報や未公開情報を扱う可能性が高い</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section4">4. 導入前に決めるべき社内ルール</h2>
+                <p>
+                    Teams Meeting AIを導入する企業は、まず「誰がオン・オフを判断するか」を決めるべきです。
+                    管理者が全社ポリシーで許可範囲を作り、各会議の主催者が会議中のオン・オフを判断し、議事録の確認責任者がAI要約を確認する。
+                    この3層に分けると、IT部門だけにも現場だけにも負荷が偏りません。
+                </p>
+                <p>
+                    次に、AI要約を正式記録として扱うかどうかを決めます。
+                    AIの要約は便利ですが、発言のニュアンスや責任範囲を誤ることがあります。
+                    重要な会議では、AIが作った要約をそのまま送るのではなく、人間が決定事項、担当者、期限、未決事項を確認してから共有する運用が現実的です。
+                    <a href="/blogs/blog169.html">ChatGPT Enterpriseの利用分析強化の記事</a>でも触れた通り、AI活用は利用量より確認プロセスが成果を分けます。
+                </p>
+                <p>
+                    さらに、外部参加者がいる会議では、招待文や冒頭アナウンスにAI利用の有無を入れるとよいでしょう。
+                    「本会議では議事録作成のためAI要約を利用します」「機密情報を扱うため本会議ではAI要約を使いません」のように明記すれば、参加者の不安を減らせます。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li>
+                            <span class="process-number">1</span>
+                            <div>
+                                <strong>全社ポリシー</strong>
+                                <p>Teams Meeting AIを使える会議種別と禁止領域を決める。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="process-number">2</span>
+                            <div>
+                                <strong>主催者判断</strong>
+                                <p>会議ごとにオン・オフと参加者への告知を行う。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="process-number">3</span>
+                            <div>
+                                <strong>要約確認</strong>
+                                <p>共有前に決定事項、担当者、期限、誤記を確認する。</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">AI会議運用は、管理者・主催者・確認者の役割を分けると定着しやすくなります。</p>
+                </div>
+
+                <h2 id="section5">5. 中小企業が今やるべきこと</h2>
+                <p>
+                    中小企業が今すぐできることは、難しいシステム設計ではありません。
+                    まず直近1か月の会議を棚卸しし、AI要約を使ってよい会議、条件付きで使う会議、使わない会議の3つに分けます。
+                    そのうえで、Teamsの会議テンプレートや社内Notion、Google Docsなどに、AI利用可否の欄を追加します。
+                </p>
+                <p>
+                    次に、会議主催者向けの短いAI研修を行います。
+                    内容は、CopilotやIntelligent Recapの使い方だけでなく、オフにすべき会議の判断、外部参加者への説明、AI要約の確認方法まで含めるべきです。
+                    MIRAINAの<a href="/services/ai_training.html">AI研修</a>や<a href="/services/ai_consulting.html">生成AI活用支援</a>でも、ツール操作より先に「任せる範囲」と「人間が見る範囲」を整理します。
+                </p>
+                <p>
+                    最後に、月1回でよいのでAI会議運用を振り返ります。
+                    要約の誤りが多かった会議、参加者から不安が出た会議、逆に議事録作成が大きく短縮できた会議を記録すれば、自社に合うルールへ改善できます。
+                    Teams Meeting AIのオフ設定は、単なる機能追加ではなく、AIを業務インフラとして安全に使うための運用見直しの合図です。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    Teams Meeting AIのオフ設定は、AI会議機能の後退ではありません。
+                    会議AIが普及し始めたからこそ、会議ごとに使う・使わないを選べる設計が必要になっています。
+                    Copilot、Facilitator、Intelligent Recapは便利ですが、機密性の高い会議や外部参加者がいる会議では、主催者が責任を持って判断する必要があります。
+                </p>
+                <p>
+                    既存の会議をすべてAI化するのではなく、AIに任せる会議、条件付きで使う会議、使わない会議を分ける。
+                    そのうえで、要約を人間が確認し、参加者にAI利用を明示する。
+                    この運用が整えば、会議AIは不安の種ではなく、情報共有と意思決定を支える実務ツールになります。
+                </p>
+
+                <div class="article-cta">
+                    <div class="cta-box">
+                        <h2 class="cta-title">会議AIを安全に業務へ定着させたい企業へ</h2>
+                        <p class="cta-text">MIRAINAは、生成AI活用支援とAI研修を通じて、会議AIの利用ルール、プロンプト設計、確認フロー、社内定着まで一体で支援します。</p>
+                        <a href="/contact.html" class="btn btn-black-fill">無料相談はこちら</a>
+                    </div>
+                </div>
+
+                <div class="article-source">
+                    <h3>参考情報</h3>
+                    <ul>
+                        <li><a href="https://www.windowscentral.com/software-apps/microsoft-teams-just-made-it-easier-to-shut-down-copilot-and-other-ai-tools" target="_blank" rel="noopener">Windows Central: Microsoft Teams just made it easier to shut down Copilot and other AI tools</a></li>
+                        <li><a href="https://www.techradar.com/pro/microsoft-makes-major-ai-u-turn-following-user-revolt-will-let-teams-users-turn-off-copilot-facilitator-and-recap" target="_blank" rel="noopener">TechRadar: Microsoft makes major AI U-turn following user revolt</a></li>
+                        <li><a href="https://arxiv.org/abs/2605.23958" target="_blank" rel="noopener">arXiv: AI in the Enterprise: How People Use M365 Copilot Chat</a></li>
+                        <li><a href="https://arxiv.org/abs/2307.15793" target="_blank" rel="noopener">arXiv: Summaries, Highlights, and Action items</a></li>
+                    </ul>
+                </div>
+
+                <div class="article-editor">
+                    <div class="editor-label">この記事の監修者</div>
+                    <div class="editor-name">芝 優作</div>
+                    <p>
+                        MIRAINA代表。中小企業向けに生成AI導入、業務自動化、AI研修、LLMO対策の支援を行う。
+                        AI活用はツールを入れるだけでなく、任せる業務、参照データ、確認工程、停止条件まで設計して初めて定着すると考え、
+                        現場に残るAI導入を支援している。
+                    </p>
+                </div>
+
+                <div class="article-related">
+                    <h3>関連記事</h3>
+                    <div class="related-grid">
+                        <a href="/blogs/blog197.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card197.webp" alt="Google MeetのAI議事録を解説した記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年7月最新】Google MeetのAI議事録とは？会議メモ自動化で何が変わるか</div>
+                        </a>
+                        <a href="/blogs/blog169.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card169.webp" alt="ChatGPT Enterpriseの利用分析強化を解説した記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年6月最新】ChatGPT Enterpriseの利用分析強化でAI導入管理はどう変わるか</div>
+                        </a>
+                        <a href="/blogs/blog180.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card180.webp" alt="Google WorkspaceのAI新機能を解説した記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年6月最新】Google WorkspaceのAI新機能で何が変わる？Drive・Sheets・Gmailの実務活用を整理</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul>
+                    <li><a href="/">ホーム</a></li>
+                    <li><a href="/services.html">サービス</a></li>
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MIRAINA. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>
