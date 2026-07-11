@@ -1835,6 +1835,15 @@
       "thumbnail": "/images/blogs_images/blog-card204.webp",
       "alt": "Teams Meeting AIのオフ設定で会議AI運用を見直すイメージ",
       "date": "2026-07-11"
+    },
+    {
+      "id": 205,
+      "title": "【2026年7月最新】ChatGPT Workとは？AIが苦手でも仕事を任せやすくなる理由",
+      "description": "ChatGPT Workとは何かをOpenAI公式情報から解説。アプリやファイルを横断するAIエージェントの機能、想定検索語、導入時の注意点を紹介します。",
+      "link": "/blogs/blog205.html",
+      "thumbnail": "/images/blogs_images/blog-card205.webp",
+      "alt": "ChatGPT Workで資料作成や調査を一気通貫で進めるイメージ",
+      "date": "2026-07-11"
     }
   ],
   "works": [
