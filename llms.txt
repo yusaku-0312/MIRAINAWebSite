@@ -231,6 +231,8 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年7月最新】GPT-5.6とは？仕事で使うAIが変わる3つの理由](https://miraina-ai.com/blogs/blog203.html): OpenAIの2026年7月9日の公式発表をもとに、GPT-5.6、ChatGPT Work、Microsoft 365 Copilotで何が変わるのかと、中小企業が導入前に決めるべき運用ルールを整理した記事。
 - [最新ブログ: 【2026年7月最新】Teams Meeting AIのオフ設定で会議AI運用はどう変わるか](https://miraina-ai.com/blogs/blog204.html): Teams Meeting AIのオフ設定をもとに、Copilot、Facilitator、Intelligent Recapを会議ごとに制御する考え方と中小企業の社内ルールを整理した記事。
 - [最新ブログ: 【2026年7月最新】ChatGPT Workとは？AIが苦手でも仕事を任せやすくなる理由](https://miraina-ai.com/blogs/blog205.html): OpenAIの2026年7月9日公式発表とリリースノートをもとに、ChatGPT Workの機能、想定検索語、AIに任せやすい業務、導入時の注意点を中小企業向けに整理した記事。
+- [最新ブログ: 【2026年7月最新】Claude J-spaceとは？AIの内心監査で何が変わるか](https://miraina-ai.com/blogs/blog206.html): Anthropicの2026年7月6日公式研究をもとに、Claude J-spaceの仕組み、AIの内部思考、監査、業務委任時の確認ルールを中小企業向けに整理した記事。
+- [最新ブログ: 【2026年7月最新】ChatGPTのタスク機能とは？定期作業をAIに任せる始め方](https://miraina-ai.com/blogs/blog207.html): OpenAIの2026年7月9日リリースノートとScheduled TasksのHelp Center更新をもとに、毎朝の確認作業、定点監視、通知設計、導入時の注意点を中小企業向けに整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)

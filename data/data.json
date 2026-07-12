@@ -1844,6 +1844,24 @@
       "thumbnail": "/images/blogs_images/blog-card205.webp",
       "alt": "ChatGPT Workで資料作成や調査を一気通貫で進めるイメージ",
       "date": "2026-07-11"
+    },
+    {
+      "id": 206,
+      "title": "【2026年7月最新】Claude J-spaceとは？AIの内心監査で何が変わるか",
+      "description": "Claude J-spaceとは何かをAnthropic公式研究から解説。AIの内部思考、監査、業務委任時の確認ルールを中小企業向けに整理します。",
+      "link": "/blogs/blog206.html",
+      "thumbnail": "/images/blogs_images/blog-card206.webp",
+      "alt": "Claude J-spaceでAIの内部思考と監査を理解するイメージ",
+      "date": "2026-07-12"
+    },
+    {
+      "id": 207,
+      "title": "【2026年7月最新】ChatGPTのタスク機能とは？定期作業をAIに任せる始め方",
+      "description": "ChatGPTのタスク機能をOpenAI公式情報から解説。Scheduled TasksとChatGPT Workの違い、毎朝の確認作業や定点監視への使い方、導入時の注意点を紹介します。",
+      "link": "/blogs/blog207.html",
+      "thumbnail": "/images/blogs_images/blog-card207.webp",
+      "alt": "ChatGPTのタスク機能で定期作業をAIに任せるイメージ",
+      "date": "2026-07-12"
     }
   ],
   "works": [
