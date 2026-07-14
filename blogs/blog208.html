@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年7月最新】ChatGPT agentとは？AIにWeb操作を任せる前に知るべきこと | MIRAINAブログ</title>
+    <meta name="description"
+        content="ChatGPT agentとは何かをOpenAI公式情報から解説。Web操作、フォーム入力、スプレッドシート編集、アプリ連携、導入前の安全ルールを紹介します。">
+    <meta property="og:title" content="【2026年7月最新】ChatGPT agentとは？AIにWeb操作を任せる前に知るべきこと">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog208.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog208-1.webp">
+    <meta property="og:description"
+        content="ChatGPT agentとは何かをOpenAI公式情報から解説。Web操作、フォーム入力、スプレッドシート編集、アプリ連携、導入前の安全ルールを紹介します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>ChatGPT agentとは？AIにWeb操作を任せる前に知るべきこと</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.07.14</span>
+                    <div class="article-tags" style="flex-wrap: wrap; justify-content: center;">
+                        <p class="article-tag">ChatGPT agent</p>
+                        <p class="article-tag">AIエージェント</p>
+                        <p class="article-tag">Web操作</p>
+                        <p class="article-tag">業務自動化</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap: anywhere;">【2026年7月最新】ChatGPT agentとは？AIにWeb操作を任せる前に知るべきこと</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog208-1.webp" alt="ChatGPT agentでWeb操作やフォーム入力を任せるイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    「ChatGPTに調べものは頼めても、Web操作まで任せて大丈夫なのか」。
+                    これはAIが苦手な人ほど検索しやすい悩みです。
+                </p>
+                <p>
+                    一方で、すでにAIを使っている人は「フォーム入力も任せられるのか」「スプレッドシート更新までできるのか」
+                    「GmailやDriveを見ながら動けるのか」という形で、AIに直接聞き始めています。
+                    OpenAIの公式情報をもとに、この記事では次の3点を整理します。
+                </p>
+                <ul>
+                    <li>ChatGPT agentができることと、ChatGPT WorkやCodexとの違い</li>
+                    <li>AIが苦手な人の検索意図と、AIユーザーのプロンプト意図</li>
+                    <li>中小企業が導入前に決めるべき安全ルール</li>
+                </ul>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. ChatGPT agentとは？まず押さえるべき事実</a></li>
+                    <li><a href="#section2">2. ChatGPT agentで何ができるか</a></li>
+                    <li><a href="#section3">3. AIが苦手な人はどう検索し、AIユーザーはどう聞くか</a></li>
+                    <li><a href="#section4">4. 中小企業で任せやすいWeb操作と資料更新</a></li>
+                    <li><a href="#section5">5. 使い始める前に決めるべき安全ルール</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. ChatGPT agentとは？まず押さえるべき事実</h2>
+                <p>
+                    ChatGPT agentは、OpenAIが案内している<strong>オンライン作業を進めるためのエージェント機能</strong>です。
+                    OpenAI Help Centerの説明では、Webサイトを操作し、アップロードしたファイルを扱い、
+                    メールやドキュメント保管先のような外部データソースへつなぎ、
+                    フォーム入力やスプレッドシート編集まで行えると整理されています。
+                    単なる質問応答ではなく、「調べる」「操作する」「更新する」まで一続きで扱うのが特徴です。
+                </p>
+                <p>
+                    しかも、使う道具も明確です。
+                    公式には visual browser、code interpreter、apps、terminal が挙げられており、
+                    実行時間は通常 5〜30 分とされています。
+                    つまり、1回で完結する短い要約より、複数ステップの仕事を前に進める用途へ寄せた機能だと読めます。
+                    AIが苦手な人向けに言い換えると、「答えを返すAI」ではなく「ブラウザや表計算を触りながら作業するAI」に近い立ち位置です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>OpenAI公式情報の要点</th>
+                                <th>実務で読むべき意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>できること</th>
+                                <td>Web操作、ファイル利用、フォーム入力、表計算編集</td>
+                                <td>調査だけでなく、作業の一部まで任せやすい</td>
+                            </tr>
+                            <tr>
+                                <th>使う道具</th>
+                                <td>visual browser、code interpreter、apps、terminal</td>
+                                <td>業務内容に応じて複数の手段を切り替えて進める</td>
+                            </tr>
+                            <tr>
+                                <th>実行時間</th>
+                                <td>通常 5〜30 分</td>
+                                <td>単発質問より、少し長い作業束に向いている</td>
+                            </tr>
+                            <tr>
+                                <th>利用環境</th>
+                                <td>Web、iOS/Android、macOS/Windows に対応</td>
+                                <td>社内展開時に端末差を気にしすぎず始めやすい</td>
+                            </tr>
+                            <tr>
+                                <th>利用条件</th>
+                                <td>Paid plan 向け。Plus は月40件、Pro は月400件</td>
+                                <td>試験導入では件数上限と対象業務の切り分けが必要</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section2">2. ChatGPT agentで何ができるか</h2>
+                <p>
+                    2026年7月時点のOpenAI公式情報をつなげて読むと、ChatGPT agent は ChatGPT Work や Codex と競合するより、
+                    役割を分けて並ぶ機能として整理した方がわかりやすいです。
+                    「ChatGPT Work and Codex」の説明では、Work は調査や完成物づくり、Codex はソフトウェア開発向けとされています。
+                    その中で agent は、Web操作や外部データアクセスを伴う実行面に強い存在だと捉えられます。
+                </p>
+                <p>
+                    さらに重要なのは、外部連携の考え方です。
+                    OpenAIは2026年7月9日に、Apps in ChatGPT の案内で app directory を plugin directory へ移したと説明しました。
+                    つまり今後は、単体の接続先を増やす感覚より、<strong>業務ごとにプラグイン単位で機能を束ねる</strong> 方向へ寄っています。
+                    AIに慣れた人が「GmailとDriveとカレンダーを見ながらまとめて」と頼みたくなる流れとも一致しています。
+                </p>
+                <p>
+                    ただし、連携が広がるほど重要になるのが権限です。
+                    同じ Apps in ChatGPT の説明では、既定では Important actions が使われ、
+                    読み取りは自動でも、外部へ意味のある変更を加える操作では確認を求める設計だとされています。
+                    これは中小企業が導入する時にもかなり重要で、「見てまとめる」は任せやすい一方、
+                    「勝手に送る」「設定を変える」は確認必須にするべきだという指針になります。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">目的と成果物を伝える</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">AIがWebやアプリを横断して進める</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">重要操作だけ人が承認する</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">ChatGPT agentの価値は、回答量ではなく「調査から操作までをつなげること」にあります。</p>
+                </div>
+
+                <h2 id="section3">3. AIが苦手な人はどう検索し、AIユーザーはどう聞くか</h2>
+                <p>
+                    今回このテーマを選んだのは、検索する人とAIに聞く人の両方で意図がはっきりしているからです。
+                    AIが苦手な人は、「ChatGPT agent とは」「AIにWeb操作を任せられる？」「フォーム入力 自動化 AI」
+                    「ChatGPT ブラウザ操作」のように、機能名と不安を一緒に検索しやすい傾向があります。
+                    その人が読みたいのは、難しいアーキテクチャ図よりも「何ができるのか」「どこまで危ないのか」「最初に何を任せればいいか」です。
+                </p>
+                <p>
+                    一方で、すでにAIを使う人は検索窓よりもAIへ直接頼みます。
+                    たとえば「この展示会の出展企業を地域別に整理して表にして」「競合3社の料金ページを見て差分だけまとめて」
+                    「問い合わせフォームの下書き文を作って、必要欄も埋めるところまで進めて」といった依頼です。
+                    その時AIが引用しやすいのは、製品名、対応端末、月次上限、権限ルール、重要操作時の確認条件がまとまった一次情報です。
+                </p>
+                <p>
+                    つまり、AI検索経由でも対話AI経由でも読まれやすい記事にするには、抽象的に「便利です」と書くより、
+                    検索語に近い見出しと、一次情報に裏付けられた判断材料を置く方が強いです。
+                    MIRAINAの <a href="/services/llmo_insight.html">LLMO Insight</a> でも重視しているのは、まさにこの「AIが引用しやすい構造」です。
+                </p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-dot red"></span>
+                        <span class="code-block-dot yellow"></span>
+                        <span class="code-block-dot green"></span>
+                        <span class="code-block-label">prompt examples</span>
+                    </div>
+                    <pre><code>競合3社の料金ページを見て、
+違いだけを表でまとめてください。
+重要な変更があれば根拠URL付きで示してください。
+
+このイベントサイトの出展企業一覧を集めて、
+業種と地域で整理したスプレッドシート案を作ってください。
+
+問い合わせフォームに入れる文章を下書きして、
+確認が必要な項目で止まってください。</code></pre>
+                </div>
+
+                <h2 id="section4">4. 中小企業で任せやすいWeb操作と資料更新</h2>
+                <p>
+                    ChatGPT agent を最初から何でもできる万能実行役として使うのは危険です。
+                    まず相性が良いのは、情報収集と下準備が中心で、最後の判断を人が持てる仕事です。
+                    たとえば営業なら競合比較、マーケティングならLPや広告訴求の差分整理、バックオフィスなら公開情報の確認と一覧化が向いています。
+                    AIにパソコン操作を任せる流れ全体は <a href="/blogs/blog185.html">AIにパソコン操作を任せる記事</a> でも整理しましたが、
+                    agent はその中でもWeb中心の業務に入りやすい位置にあります。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>部門</th>
+                                <th>任せやすい仕事</th>
+                                <th>人が確認すべき点</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>営業</th>
+                                <td>競合比較、展示会出展企業の整理、商談前の公開情報確認</td>
+                                <td>重要度判断、最終提案の表現、送信先</td>
+                            </tr>
+                            <tr>
+                                <th>マーケティング</th>
+                                <td>料金ページ差分、記事引用候補、キャンペーン比較</td>
+                                <td>出典、数字、誇張表現の有無</td>
+                            </tr>
+                            <tr>
+                                <th>管理部門</th>
+                                <td>公開情報の一覧化、申請前の入力下書き、更新漏れ確認</td>
+                                <td>個人情報、金額、最終送信や確定処理</td>
+                            </tr>
+                            <tr>
+                                <th>現場共通</th>
+                                <td>フォーム下書き、FAQ確認、定型表の更新案作成</td>
+                                <td>本当にその操作まで任せてよいか</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    もし表計算の更新まで広げたい場合は、<a href="/blogs/blog143.html">ChatGPTでGoogleスプレッドシートを直接編集する記事</a> のように、
+                    更新対象と承認者を明確にしたうえで進める方が安全です。
+                    また、<a href="/blogs/blog176.html">AIエージェント導入の始め方</a> で触れた通り、
+                    低リスク業務から始めて、成果と事故率を見ながら広げる方が、結局いちばん定着します。
+                </p>
+
+                <h2 id="section5">5. 使い始める前に決めるべき安全ルール</h2>
+                <p>
+                    ChatGPT agent を使う前に最初に決めるべきなのは、<strong>何を読ませるか</strong> と <strong>どこで止めるか</strong> です。
+                    OpenAIの説明では、agent は高影響な操作で確認を求め、prompt injection 監視や watch mode などの safeguard を備えています。
+                    ただし、それで無条件に安全になるわけではありません。
+                    Help Center でも、不要な apps を切る、敏感なログインを避ける、曖昧な依頼をしない、怪しい挙動なら止める、
+                    といった基本動作が明記されています。
+                </p>
+                <p>
+                    特に重要なのがログイン周りです。
+                    ログインが必要な作業では、ユーザーがブラウザを引き取る takeover モードへ切り替えられ、
+                    その間はパスワード入力の画面が撮影されない設計だと説明されています。
+                    一方で、cookie は通常ブラウザのように保持されるため、
+                    作業後にログアウトやcookie整理まで含めて運用ルールにしておくべきです。
+                </p>
+                <p>
+                    さらに、2026年7月9日に plugin directory へ移行したことで、つなげられる先は今後さらに増えやすくなります。
+                    だからこそ、導入時は「つなげられるから全部つなぐ」ではなく、
+                    必要なプラグインだけを有効にし、最初は要約・確認・下書きまでに限定するのが現実的です。
+                    顧客への最終送信、契約確定、金額入力、設定変更のような責任が重い処理は、人の承認を必須にしてください。
+                    こうした考え方は、現場向けの <a href="/services/ai_training.html">AI研修</a> でも最優先で教えるべき内容です。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    ChatGPT agent は、2026年7月時点のOpenAI公式情報を見る限り、Web操作、フォーム入力、スプレッドシート編集、
+                    外部アプリ連携まで扱える、かなり実務寄りのAI機能です。
+                    特に「調べて終わり」ではなく、「見て、整理して、必要なら一部操作する」という仕事との相性が良く、
+                    AIが苦手な人にも用途を説明しやすい段階へ入っています。
+                </p>
+                <p>
+                    ただし、便利さと無人運転は別です。
+                    最初は低リスクのWeb調査や下書きから始め、つなぐアプリを絞り、重要操作では必ず人が止める。
+                    その前提を守れば、ChatGPT agent は中小企業の「小さな面倒な仕事」をかなり減らせる候補になります。
+                </p>
+
+                <div class="article-cta">
+                    <div class="cta-box">
+                        <h2 class="cta-title">AIにWeb操作をどこまで任せるべきか悩んでいる企業へ</h2>
+                        <p class="cta-text">MIRAINAは、生成AI活用支援とAI研修を通じて、任せやすい業務の切り出し、権限設計、承認ルールづくりまで一体で支援します。</p>
+                        <a href="/contact.html" class="btn btn-black-fill">無料相談はこちら</a>
+                    </div>
+                </div>
+
+                <div class="article-source">
+                    <h3>参考情報</h3>
+                    <ul>
+                        <li><a href="https://help.openai.com/en/articles/11752874-chatgpt-agent" target="_blank" rel="noopener">OpenAI Help Center: ChatGPT agent</a></li>
+                        <li><a href="https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex" target="_blank" rel="noopener">OpenAI Help Center: ChatGPT Work and Codex</a></li>
+                        <li><a href="https://help.openai.com/en/articles/11487775-connectors-in-chatgpt" target="_blank" rel="noopener">OpenAI Help Center: Apps in ChatGPT</a></li>
+                        <li><a href="https://help.openai.com/en/articles/10291617-tasks-in-chatgpt" target="_blank" rel="noopener">OpenAI Help Center: Scheduled Tasks in ChatGPT</a></li>
+                    </ul>
+                </div>
+
+                <div class="article-editor">
+                    <div class="editor-label">この記事の監修者</div>
+                    <div class="editor-name">芝 優作</div>
+                    <p>
+                        MIRAINA代表。中小企業向けに生成AI導入、業務自動化、AI研修、LLMO対策の支援を行う。
+                        AIエージェントは「つなぐアプリ」と「止めるポイント」を設計して初めて現場で安全に使えると考え、
+                        運用ルールまで含めた導入支援を行っている。
+                    </p>
+                </div>
+
+                <div class="article-related">
+                    <h3>関連記事</h3>
+                    <div class="related-grid">
+                        <a href="/blogs/blog205.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card205.webp" alt="ChatGPT Workの全体像を解説した記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年7月最新】ChatGPT Workとは？AIが苦手でも仕事を任せやすくなる理由</div>
+                        </a>
+                        <a href="/blogs/blog185.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card185.webp" alt="AIにパソコン操作を任せる記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年6月最新】AIにパソコン操作を任せる時代へ｜GoogleとOpenAIの新機能をどう使うか</div>
+                        </a>
+                        <a href="/blogs/blog143.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card143.webp" alt="ChatGPTでGoogleスプレッドシートを直接編集する記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">ChatGPTでGoogleスプレッドシートを直接編集する方法｜APIなしでタスク管理表を作る手順</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul>
+                    <li><a href="/">ホーム</a></li>
+                    <li><a href="/services.html">サービス</a></li>
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai/" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>
