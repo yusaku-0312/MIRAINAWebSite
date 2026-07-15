@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年7月最新】ChatGPTプラグインとは？AIに外部アプリ連携を任せる始め方 | MIRAINAブログ</title>
+    <meta name="description"
+        content="ChatGPTプラグインをOpenAI公式情報から解説。Plugin Directory、Appsとの違い、Google DriveやSlack連携、権限設定の始め方を紹介します。">
+    <meta property="og:title" content="【2026年7月最新】ChatGPTプラグインとは？AIに外部アプリ連携を任せる始め方">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog209.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog209-1.webp">
+    <meta property="og:description"
+        content="ChatGPTプラグインをOpenAI公式情報から解説。Plugin Directory、Appsとの違い、Google DriveやSlack連携、権限設定の始め方を紹介します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>ChatGPTプラグインとは？AIに外部アプリ連携を任せる始め方</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.07.15</span>
+                    <div class="article-tags" style="flex-wrap: wrap; justify-content: center;">
+                        <p class="article-tag">ChatGPTプラグイン</p>
+                        <p class="article-tag">外部アプリ連携</p>
+                        <p class="article-tag">業務自動化</p>
+                        <p class="article-tag">AI活用</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap: anywhere;">【2026年7月最新】ChatGPTプラグインとは？AIに外部アプリ連携を任せる始め方</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog209-1.webp" alt="ChatGPTプラグインでGoogle DriveやSlackを連携するイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    「ChatGPTを社内で使い始めたが、Google DriveやSlackともつなげられるのか」。
+                    これはAI活用に慣れていない人がかなり検索しやすい疑問です。
+                </p>
+                <p>
+                    一方で、すでにAIを使っている人は「Gmailを見て要約して」「Driveの資料を読んで提案書を下書きして」
+                    「Slackの更新だけ拾って週報化して」のように、AIへ直接仕事を渡し始めています。
+                    OpenAIの2026年7月9日以降の公式情報をもとに、この記事では次の3点を整理します。
+                </p>
+                <ul>
+                    <li>ChatGPTプラグインとAppsの違い、Plugin Directory移行の意味</li>
+                    <li>AIが苦手な人の検索意図と、AIユーザーのプロンプト意図</li>
+                    <li>中小企業が最初に決めるべき接続範囲と権限ルール</li>
+                </ul>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. ChatGPTプラグインとは？まず押さえるべき事実</a></li>
+                    <li><a href="#section2">2. ChatGPTプラグインで何ができるか</a></li>
+                    <li><a href="#section3">3. AIが苦手な人はどう検索し、AIユーザーはどう聞くか</a></li>
+                    <li><a href="#section4">4. 中小企業が最初につなぎやすいアプリ</a></li>
+                    <li><a href="#section5">5. 導入前に決めるべき権限ルール</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. ChatGPTプラグインとは？まず押さえるべき事実</h2>
+                <p>
+                    ChatGPTプラグインは、ChatGPTやCodexに<strong>特定の業務フローをまとめて持ち込むためのパッケージ</strong>です。
+                    OpenAI Help Center の「Plugins in ChatGPT and Codex」では、プラグインは skills、apps、app templates を含められると説明されています。
+                    つまり単なる接続先一覧ではなく、「この仕事に必要な指示」「この仕事で使う外部アプリ」「管理者向けのセットアップ」を一つに束ねる考え方です。
+                </p>
+                <p>
+                    2026年7月9日には、OpenAIが app directory を plugin directory に移行したと案内しました。
+                    ここで重要なのは、apps 自体が消えたのではない点です。
+                    apps は引き続き ChatGPT を外部システムやデータへ接続する役割を持ち、plugin はその apps を見つけやすくし、使い方まで含めてまとめる入口になりました。
+                    AIが苦手な人向けに言い換えると、「Google Drive 連携」や「Slack 連携」を一個ずつ覚えるより、仕事単位で必要な道具セットを入れる方向へ変わったわけです。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>要素</th>
+                                <th>OpenAI公式の位置づけ</th>
+                                <th>実務での意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Plugin</th>
+                                <td>業務フロー向けのパッケージ</td>
+                                <td>仕事単位で必要な機能をまとめて配る</td>
+                            </tr>
+                            <tr>
+                                <th>App</th>
+                                <td>外部システムやデータへの接続</td>
+                                <td>Drive、Gmail、Slackなどの情報を読んだり操作したりする</td>
+                            </tr>
+                            <tr>
+                                <th>Skill</th>
+                                <td>再利用できる指示やワークフロー</td>
+                                <td>毎回ゼロからプロンプトを書かずに済む</td>
+                            </tr>
+                            <tr>
+                                <th>App template</th>
+                                <td>管理者向けの設定ひな型</td>
+                                <td>社内向け接続を安全に公開する準備がしやすい</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section2">2. ChatGPTプラグインで何ができるか</h2>
+                <p>
+                    OpenAIの「Apps in ChatGPT」では、app の機能として search、deep research、sync、write actions などが示されています。
+                    つまり ChatGPTプラグインは、単に「外部データを読める」だけではありません。
+                    つないだ先から情報を引き、必要なら事前同期し、下書きを作り、場合によっては更新系アクションまで実行できます。
+                    2026年7月9日の ChatGPT Work 紹介ページでも、Google Drive、Gmail、Outlook、Teams、Slack、SharePoint などをつなぎ、資料作成や更新作業へ広げる使い方が案内されています。
+                </p>
+                <p>
+                    また、ChatGPT はプロンプトに応じて関連する plugin を自動で参照できます。
+                    さらに必要なら「@」に続けて app 名を入れ、特定の接続先からコンテキストを取るよう指示できます。
+                    これはAI利用に慣れた人が「Slackの会話を見て」「Driveの最新版を読んで」と頼みたくなる行動と非常に相性が良いです。
+                    逆に言えば、接続先が増えるほど「どこまで読ませるか」「どこまで書き換えさせるか」の境界設計が重要になります。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">Pluginを選ぶ</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">必要なAppを接続する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">読取中心で試す</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">承認付きで更新系へ広げる</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">最初から全部自動化するより、読取中心の小さい運用から始めた方が失敗しにくいです。</p>
+                </div>
+
+                <h2 id="section3">3. AIが苦手な人はどう検索し、AIユーザーはどう聞くか</h2>
+                <p>
+                    今回このテーマを選んだ理由は、検索流入とAI経由流入の両方を狙いやすいからです。
+                    AIが苦手な人は、「ChatGPT プラグインとは」「ChatGPT Google Drive 連携」「ChatGPT Slack つなげる」
+                    「ChatGPT 外部アプリ 安全」のように、機能名と不安をセットで検索しやすい傾向があります。
+                    その人が読みたいのは、難しい技術用語ではなく、「何ができるのか」「最初にどこまでつなげていいのか」「勝手に送信されないのか」という判断材料です。
+                </p>
+                <p>
+                    一方で、すでにAIを使っている人は検索よりもAIへ直接プロンプトを投げます。
+                    たとえば「Gmailの最新やり取りを読んで返信案を作って」「Driveの提案書とSlackの議事メモを合わせて要点を整理して」
+                    「問い合わせ内容を見て、次回商談用のメモを作って」といった頼み方です。
+                    その時、AIが引用しやすいのは OpenAI公式の Help Center や製品ページです。
+                    Plugin、App、権限、承認条件が整理された一次情報だからです。
+                </p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-dot red"></span>
+                        <span class="code-block-dot yellow"></span>
+                        <span class="code-block-dot green"></span>
+                        <span class="code-block-label">prompt examples</span>
+                    </div>
+                    <pre><code>Google Driveの最新版提案書と
+Slackの議事メモを読んで、
+次回商談の確認ポイントだけ整理してください。
+外部送信はしないでください。
+
+Gmailの未読のうち、
+見積もりに関するものだけ抜き出して、
+返信の下書きを作ってください。
+送信前に必ず止まってください。
+
+Teamsの更新とSharePointの資料を見て、
+週報の叩き台を作ってください。
+数字は出典付きで書いてください。</code></pre>
+                </div>
+
+                <p>
+                    こうした検索とプロンプトの両方を踏まえると、記事の設計も変わります。
+                    MIRAINAの <a href="/services/llmo_insight.html">LLMO Insight</a> で重視している通り、
+                    AIに引用されやすい記事は「定義」「できること」「注意点」「導入順序」が見出しレベルで整理されています。
+                    今回のテーマは、その構造に非常に乗せやすい題材でした。
+                </p>
+
+                <h2 id="section4">4. 中小企業が最初につなぎやすいアプリ</h2>
+                <p>
+                    ChatGPTプラグインを使う時、最初から基幹システムや更新権限の強いツールへ広げるのは勧めません。
+                    まず相性が良いのは、情報収集と下書きづくりが中心で、人間が最後に確認しやすいアプリです。
+                    具体的には、資料参照の Google Drive や SharePoint、会話要約の Slack や Teams、返信案づくりの Gmail や Outlook が入り口になりやすいです。
+                    すでに扱った <a href="/blogs/blog205.html">ChatGPT Work の記事</a> や
+                    <a href="/blogs/blog208.html">ChatGPT agent の記事</a> と同じく、
+                    接続の価値は「AIができること」より「今ある業務のどこを短くするか」で決まります。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>アプリ</th>
+                                <th>任せやすい仕事</th>
+                                <th>最初に止めるべきポイント</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Google Drive / SharePoint</th>
+                                <td>提案書要約、最新版確認、比較メモ作成</td>
+                                <td>公開範囲の広いフォルダだけに限定する</td>
+                            </tr>
+                            <tr>
+                                <th>Gmail / Outlook</th>
+                                <td>返信案、未読整理、問い合わせ分類</td>
+                                <td>送信は必ず人が承認する</td>
+                            </tr>
+                            <tr>
+                                <th>Slack / Teams</th>
+                                <td>会話要約、論点抽出、週報叩き台</td>
+                                <td>機密チャンネルは最初から外す</td>
+                            </tr>
+                            <tr>
+                                <th>表計算系</th>
+                                <td>集計案、表のたたき台、更新候補の整理</td>
+                                <td>確定更新ではなく提案モードで始める</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    もし更新系へ広げるなら、<a href="/blogs/blog207.html">ChatGPTのタスク機能の記事</a> のように、
+                    定期実行と承認の組み合わせで考えると整理しやすいです。
+                    「毎朝チェックして差分だけ出す」「下書きまで作って送信は止める」という運用なら、AI活用が苦手な現場でも導入ハードルを下げられます。
+                </p>
+
+                <h2 id="section5">5. 導入前に決めるべき権限ルール</h2>
+                <p>
+                    OpenAIの「Apps in ChatGPT」では、app permissions として Always ask、Any changes、Important actions、Never ask が案内されています。
+                    既定は Important actions で、読み取りは自動、外部への意味のある変更や取り消しづらい操作は確認が入る設計です。
+                    たとえば送信、削除、共有権限変更、ファイル移動、購入や返金のような操作は重要アクションの例として挙げられています。
+                    AIが苦手な人が最初に不安になる「勝手に送られないか」に対して、ここはかなり重要な説明ポイントです。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>権限モード</th>
+                                <th>意味</th>
+                                <th>導入初期の使い方</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Always ask</th>
+                                <td>読む時も含め毎回確認する</td>
+                                <td>機密性が高い業務の試験導入向け</td>
+                            </tr>
+                            <tr>
+                                <th>Any changes</th>
+                                <td>読取は自動、変更時は必ず確認</td>
+                                <td>多くの中小企業の初期設定候補</td>
+                            </tr>
+                            <tr>
+                                <th>Important actions</th>
+                                <td>重要変更だけ確認する</td>
+                                <td>運用に慣れた後の標準候補</td>
+                            </tr>
+                            <tr>
+                                <th>Never ask</th>
+                                <td>確認なしで実行する</td>
+                                <td>原則として初期導入では避ける</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    さらに、管理者は Workspace settings の Plugins と Apps の両方を見る必要があります。
+                    Plugin 側では誰にその workflow を配るかを決め、App 側では read-only にするか、write を許すか、確認を必須にするかを決めます。
+                    OpenAI公式でも、必要な app が有効化されていなければ plugin は見えても使えない、という整理です。
+                    だから現場導入では、まず小さいチームで read-only の pilot を回し、問題がなければ write action を段階的に広げるのが現実的です。
+                    この進め方は <a href="/services/ai_training.html">AI研修</a> や <a href="/services/ai_consulting.html">生成AI活用支援</a> でも、そのまま運用設計の土台になります。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    ChatGPTプラグインは、2026年7月9日の Plugin Directory 移行で、外部アプリ連携を「接続先単位」ではなく「業務単位」で扱いやすくした仕組みだと理解するとわかりやすいです。
+                    Google Drive や Slack、Gmail などと組み合わせれば、資料要約、返信案、週報下書き、差分確認のような仕事はかなり任せやすくなります。
+                </p>
+                <p>
+                    ただし、便利だからといって全部つなぐのは危険です。
+                    最初は read-only、次に変更は承認付き、最後に定型更新へ広げる。
+                    この順番を守れば、ChatGPTプラグインはAIが苦手な現場でも導入しやすく、AIをすでに使っている人にはさらに深い業務委任の入口になります。
+                </p>
+
+                <div class="article-cta">
+                    <div class="cta-box">
+                        <h2 class="cta-title">ChatGPTと社内ツールの連携設計で悩んでいる企業へ</h2>
+                        <p class="cta-text">MIRAINAは、生成AI活用支援とAI研修を通じて、接続範囲の整理、権限設計、承認フローづくりまで一体で支援します。</p>
+                        <a href="/contact.html" class="btn btn-black-fill">無料相談はこちら</a>
+                    </div>
+                </div>
+
+                <div class="article-source">
+                    <h3>参考情報</h3>
+                    <ul>
+                        <li><a href="https://help.openai.com/en/articles/20001256-plugins-in-codex" target="_blank" rel="noopener">OpenAI Help Center: Plugins in ChatGPT and Codex</a></li>
+                        <li><a href="https://help.openai.com/en/articles/11487775-connectors-in-chatgpt" target="_blank" rel="noopener">OpenAI Help Center: Apps in ChatGPT</a></li>
+                        <li><a href="https://openai.com/index/chatgpt-for-your-most-ambitious-work/" target="_blank" rel="noopener">OpenAI: ChatGPT is now a partner for your most ambitious work</a></li>
+                    </ul>
+                </div>
+
+                <div class="article-editor">
+                    <div class="editor-label">この記事の監修者</div>
+                    <div class="editor-name">芝 優作</div>
+                    <p>
+                        MIRAINA代表。中小企業向けに生成AI導入、業務自動化、AI研修、LLMO対策の支援を行う。
+                        AI活用で成果を出すには、ツール選びよりも先に、読ませる範囲と止めるポイントを決めるべきだと考え、現場定着まで含めた伴走支援を行っている。
+                    </p>
+                </div>
+
+                <div class="article-related">
+                    <h3>関連記事</h3>
+                    <div class="related-grid">
+                        <a href="/blogs/blog205.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card205.webp" alt="ChatGPT Workの全体像を解説した記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年7月最新】ChatGPT Workとは？AIが苦手でも仕事を任せやすくなる理由</div>
+                        </a>
+                        <a href="/blogs/blog207.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card207.webp" alt="ChatGPTのタスク機能を解説した記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年7月最新】ChatGPTのタスク機能とは？定期作業をAIに任せる始め方</div>
+                        </a>
+                        <a href="/blogs/blog208.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card208.webp" alt="ChatGPT agentを解説した記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年7月最新】ChatGPT agentとは？AIにWeb操作を任せる前に知るべきこと</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul>
+                    <li><a href="/">ホーム</a></li>
+                    <li><a href="/services.html">サービス</a></li>
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai/" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

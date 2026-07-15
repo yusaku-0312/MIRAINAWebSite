@@ -1871,6 +1871,15 @@
       "thumbnail": "/images/blogs_images/blog-card208.webp",
       "alt": "ChatGPT agentでWeb操作やフォーム入力を任せるイメージ",
       "date": "2026-07-14"
+    },
+    {
+      "id": 209,
+      "title": "【2026年7月最新】ChatGPTプラグインとは？AIに外部アプリ連携を任せる始め方",
+      "description": "ChatGPTプラグインをOpenAI公式情報から解説。Plugin Directory、Appsとの違い、Google DriveやSlack連携、権限設定の始め方を紹介します。",
+      "link": "/blogs/blog209.html",
+      "thumbnail": "/images/blogs_images/blog-card209.webp",
+      "alt": "ChatGPTプラグインでGoogle DriveやSlackを連携するイメージ",
+      "date": "2026-07-15"
     }
   ],
   "works": [

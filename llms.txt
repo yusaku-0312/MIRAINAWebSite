@@ -234,6 +234,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年7月最新】Claude J-spaceとは？AIの内心監査で何が変わるか](https://miraina-ai.com/blogs/blog206.html): Anthropicの2026年7月6日公式研究をもとに、Claude J-spaceの仕組み、AIの内部思考、監査、業務委任時の確認ルールを中小企業向けに整理した記事。
 - [最新ブログ: 【2026年7月最新】ChatGPTのタスク機能とは？定期作業をAIに任せる始め方](https://miraina-ai.com/blogs/blog207.html): OpenAIの2026年7月9日リリースノートとScheduled TasksのHelp Center更新をもとに、毎朝の確認作業、定点監視、通知設計、導入時の注意点を中小企業向けに整理した記事。
 - [最新ブログ: 【2026年7月最新】ChatGPT agentとは？AIにWeb操作を任せる前に知るべきこと](https://miraina-ai.com/blogs/blog208.html): OpenAIのChatGPT agent、ChatGPT Work and Codex、Apps in ChatGPTの公式情報をもとに、Web操作、フォーム入力、アプリ連携、導入前の安全ルールを中小企業向けに整理した記事。
+- [最新ブログ: 【2026年7月最新】ChatGPTプラグインとは？AIに外部アプリ連携を任せる始め方](https://miraina-ai.com/blogs/blog209.html): OpenAIの2026年7月9日のPlugin Directory移行と公式Help Center情報をもとに、ChatGPTプラグイン、Appsとの違い、Google DriveやSlack連携、権限設定の始め方を中小企業向けに整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)
