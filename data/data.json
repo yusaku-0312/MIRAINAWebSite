@@ -1880,6 +1880,15 @@
       "thumbnail": "/images/blogs_images/blog-card209.webp",
       "alt": "ChatGPTプラグインでGoogle DriveやSlackを連携するイメージ",
       "date": "2026-07-15"
+    },
+    {
+      "id": 210,
+      "title": "【2026年7月最新】ChatGPTの社内データ連携は安全？EKM対応で何が変わるか",
+      "description": "ChatGPTの社内データ連携は安全かをOpenAI公式情報から解説。7月15日のEKM対応、apps with syncの仕組み、Google Drive連携時の権限設計を紹介します。",
+      "link": "/blogs/blog210.html",
+      "thumbnail": "/images/blogs_images/blog-card210.webp",
+      "alt": "ChatGPTで社内データを安全に連携するイメージ",
+      "date": "2026-07-16"
     }
   ],
   "works": [
