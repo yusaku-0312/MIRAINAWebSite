@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年7月最新】ChatGPTのカスタム指示は何を書く？5,000文字対応の使い方 | MIRAINAブログ</title>
+    <meta name="description"
+        content="ChatGPT カスタム指示をOpenAI公式情報から解説。2026年7月15日の5,000文字対応を踏まえ、何を書くべきか、プロジェクト指示との違い、社内利用の注意点を紹介します。">
+    <meta property="og:title" content="【2026年7月最新】ChatGPTのカスタム指示は何を書く？5,000文字対応の使い方">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog212.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog212-1.webp">
+    <meta property="og:description"
+        content="ChatGPT カスタム指示をOpenAI公式情報から解説。2026年7月15日の5,000文字対応を踏まえ、何を書くべきか、プロジェクト指示との違い、社内利用の注意点を紹介します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>ChatGPTのカスタム指示は何を書く？5,000文字対応の使い方</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.07.18</span>
+                    <div class="article-tags" style="flex-wrap: wrap; justify-content: center;">
+                        <p class="article-tag">ChatGPTカスタム指示</p>
+                        <p class="article-tag">プロンプト設計</p>
+                        <p class="article-tag">AI活用</p>
+                        <p class="article-tag">業務効率化</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap: anywhere;">【2026年7月最新】ChatGPTのカスタム指示は何を書く？5,000文字対応の使い方</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog212-1.webp" alt="ChatGPTのカスタム指示を業務向けに設計するイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    「毎回同じ前提を説明するのが面倒」「敬語や禁止表現を毎回直している」。
+                    これはAI活用がまだ苦手な人ほど検索しやすい悩みです。
+                </p>
+                <p>
+                    一方で、すでにAIを使っている担当者は「この会社のトーンで返して」「営業メールは断定しすぎず、必ず次アクションを入れて」と、
+                    AIに毎回同じ条件を渡しています。OpenAIは2026年7月15日、ChatGPT のカスタム指示を
+                    Plus 以上で 1,500 文字から 5,000 文字へ拡張しました。この記事では次の3点を整理します。
+                </p>
+                <ul>
+                    <li>ChatGPT のカスタム指示で何が変わったのか</li>
+                    <li>AIが苦手な人の検索と、AI利用者の実務プロンプトの違い</li>
+                    <li>5,000文字で何を書くべきかと、プロジェクト指示との使い分け</li>
+                </ul>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. ChatGPTのカスタム指示で何が変わったか</a></li>
+                    <li><a href="#section2">2. AIが苦手な人は何を検索し、AI利用者はどう頼むか</a></li>
+                    <li><a href="#section3">3. 5,000文字で何を書くべきか</a></li>
+                    <li><a href="#section4">4. プロジェクト指示とどう使い分けるか</a></li>
+                    <li><a href="#section5">5. 失敗しない運用ルール</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. ChatGPTのカスタム指示で何が変わったか</h2>
+                <p>
+                    OpenAIの「ChatGPT Release Notes」は、<strong>2026年7月15日</strong> に
+                    ChatGPT のカスタム指示の文字数上限を拡張したと案内しました。
+                    Plus、Pro、Enterprise、Business、Education では <strong>5,000 文字</strong>、
+                    Free と Go では <strong>1,500 文字</strong> まで保存できます。
+                    公式FAQでは、カスタム指示は Web、Desktop、iOS、Android で使え、
+                    入れた内容は全チャットの回答方針に反映されると説明されています。
+                </p>
+                <p>
+                    ここで重要なのは、カスタム指示が「便利なメモ欄」ではなく、
+                    <strong>毎回の会話に共通する前提を固定する仕組み</strong>だという点です。
+                    会社名、役割、文体、禁止表現、よく使う出力形式のように、
+                    毎回ほぼ同じ条件を繰り返しているなら、都度プロンプトに書くよりカスタム指示へ移した方が安定しやすくなります。
+                </p>
+                <p>
+                    ただし「5,000文字書けるようになったから、ルールを全部詰め込めばよい」という話ではありません。
+                    OpenAIのガイドでも、プロンプトは明確で具体的に書き、出力を見て反復調整することが勧められています。
+                    文字数上限の拡大は、長文化を推奨したというより、
+                    <strong>曖昧だった社内ルールを少し整理して入れやすくなった</strong>と見る方が実務的です。
+                </p>
+
+                <h2 id="section2">2. AIが苦手な人は何を検索し、AI利用者はどう頼むか</h2>
+                <p>
+                    このテーマが強いのは、検索されやすい悩みと、すでにAIを使う人の依頼文がきれいにつながるからです。
+                    AI活用に不慣れな人は「機能名」よりも「困りごと」で検索します。
+                    一方で、日常的に使う人は、検索する前にAIへそのまま業務依頼を投げます。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>AIが苦手な人の検索</th>
+                                <th>AI利用者が投げるプロンプト</th>
+                                <th>記事で答えるべき論点</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>ChatGPT 指示 毎回 書くの 面倒</th>
+                                <td>この会社のトーンと語尾で返答して</td>
+                                <td>共通条件はカスタム指示へ移せる</td>
+                            </tr>
+                            <tr>
+                                <th>ChatGPT カスタム指示 何を書く</th>
+                                <td>営業メールでは誇大表現を禁止して</td>
+                                <td>何を固定し、何を毎回書くべきか</td>
+                            </tr>
+                            <tr>
+                                <th>社内ルールをChatGPTに覚えさせたい</th>
+                                <td>提案書は結論先出し、最後に次アクション</td>
+                                <td>文体・禁止事項・構成の設計方法</td>
+                            </tr>
+                            <tr>
+                                <th>ChatGPT プロジェクト 指示 違い</th>
+                                <td>この案件だけ価格条件を変えて</td>
+                                <td>グローバル指示と案件別指示の分担</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    つまり、検索ユーザーは「何ができるのか」を知りたくて来ますが、
+                    AI利用者はすでに「何を任せたいか」が決まっています。
+                    だからこそ記事側は、機能紹介で終わるのではなく、
+                    <strong>実際にどんな指示を固定すれば業務が安定するか</strong>まで踏み込む必要があります。
+                    これは<a href="/blogs/blog205.html">ChatGPT Workの記事</a>で整理した
+                    「AIに仕事を任せる前に、任せ方の型を決める」という考え方ともつながります。
+                </p>
+
+                <h2 id="section3">3. 5,000文字で何を書くべきか</h2>
+                <p>
+                    カスタム指示へ入れる内容は、毎回変わらないものから優先します。
+                    おすすめは、会社や個人の情報を長々と書くことではなく、
+                    <strong>AIの出力を安定させる4ブロック</strong>に分けることです。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>ブロック</th>
+                                <th>書く内容</th>
+                                <th>向いている例</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>役割と前提</th>
+                                <td>自分の職種、会社規模、想定読者、主要サービス</td>
+                                <td>中小企業向け営業、経営者向け説明、マーケター向け提案</td>
+                            </tr>
+                            <tr>
+                                <th>文体と形式</th>
+                                <td>敬語、結論先出し、箇条書き、表の有無、文字量</td>
+                                <td>簡潔に、見出し付き、最後に要点3つ</td>
+                            </tr>
+                            <tr>
+                                <th>禁止事項</th>
+                                <td>断定禁止、誇大表現禁止、未確認情報の禁止、個人情報の扱い</td>
+                                <td>価格確約しない、法務判断しない、機密を推測しない</td>
+                            </tr>
+                            <tr>
+                                <th>出力フロー</th>
+                                <td>不足情報がある時の聞き返し方、確認順、最後の締め方</td>
+                                <td>先に前提確認、次に提案、最後に次アクション</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-dot red"></span>
+                        <span class="code-block-dot yellow"></span>
+                        <span class="code-block-dot green"></span>
+                        <span class="code-block-label">Custom Instructions Example</span>
+                    </div>
+                    <pre><code>あなたは中小企業向けの営業支援アシスタントです。
+回答は日本語の敬体で、結論を先に書いてください。
+提案文では誇大表現を避け、「必ず成果が出る」とは言わないでください。
+不足情報がある場合は、先に確認質問を最大3つまで返してください。
+営業メール案は
+1. 件名
+2. 本文
+3. 次アクション
+の順で出力してください。</code></pre>
+                </div>
+
+                <p>
+                    OpenAIの prompt engineering ガイドでも、明確で具体的に書くこと、トーンを明示すること、
+                    出力を見ながら反復改善することが推奨されています。
+                    つまりカスタム指示は一度書いて終わりではなく、
+                    <strong>修正が多かった出力パターンを少しずつ定義へ戻していく場所</strong>として使うのが実務向きです。
+                </p>
+
+                <h2 id="section4">4. プロジェクト指示とどう使い分けるか</h2>
+                <p>
+                    OpenAIの「Projects in ChatGPT」は、プロジェクトを長期作業向けのワークスペースと説明しています。
+                    ファイル、チャット、指示を一か所にまとめられ、<strong>project instructions は global custom instructions を上書きする</strong>
+                    と明記されています。
+                    ここを理解していないと、全社ルールも案件ルールも全部カスタム指示へ詰め込み、かえって出力が不安定になります。
+                </p>
+
+                <div class="diagram-container">
+                    <div class="diagram-comparison">
+                        <div class="comparison-item is-good">
+                            <div class="comparison-header">カスタム指示向き</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li>毎回共通の文体</li>
+                                    <li>禁止表現や基本方針</li>
+                                    <li>普段の役割や対象読者</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-arrow">VS</div>
+                        <div class="comparison-item is-excellent">
+                            <div class="comparison-header">プロジェクト指示向き</div>
+                            <div class="comparison-content">
+                                <ul>
+                                    <li><strong>案件ごとの条件</strong></li>
+                                    <li>今回だけ使う資料や価格</li>
+                                    <li>チーム共有の作業ルール</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="diagram-caption">全社共通の土台はカスタム指示、案件単位の上書きはプロジェクト指示、と分けると整理しやすくなります。</p>
+                </div>
+
+                <p>
+                    たとえば「常に中小企業向けにやさしく説明する」はカスタム指示向きです。
+                    しかし「この提案先では補助金の話を先に入れる」「この案件は価格表Aだけ使う」は、
+                    そのプロジェクトだけの条件です。後者までグローバルに固定すると、別案件の出力まで汚染しやすくなります。
+                </p>
+                <p>
+                    さらに、案件資料や議事録は文章で全部カスタム指示へ貼るより、
+                    プロジェクトへ集約した方が管理しやすくなります。
+                    社内データや権限の話まで入る場合は、
+                    <a href="/blogs/blog210.html">社内データ連携と安全性の記事</a>もあわせて確認しておくと判断しやすいです。
+                </p>
+
+                <h2 id="section5">5. 失敗しない運用ルール</h2>
+                <p>
+                    カスタム指示は便利ですが、運用を誤ると逆に修正コストが増えます。
+                    特に注意したいのは次の3点です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>失敗パターン</th>
+                                <th>起きやすい問題</th>
+                                <th>対処</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>何でも詰め込む</th>
+                                <td>重要な指示が埋もれ、出力が冗長になる</td>
+                                <td>共通条件だけ残し、案件条件はプロジェクトへ分ける</td>
+                            </tr>
+                            <tr>
+                                <th>機密情報を書く</th>
+                                <td>共有範囲や外部連携時のリスクが上がる</td>
+                                <td>顧客名、個人情報、認証情報は入れない</td>
+                            </tr>
+                            <tr>
+                                <th>一度書いて放置する</th>
+                                <td>実務に合わない古いルールが残る</td>
+                                <td>修正が多い出力を月1回見直して更新する</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    OpenAIのFAQでは、カスタム指示の変更は将来の会話に反映され、
+                    過去の会話履歴そのものを書き換えるわけではないと説明されています。
+                    つまり「最近ズレる」と感じたら、古い会話を見返すだけでなく、
+                    今の業務に合っていない指示が残っていないかを点検する必要があります。
+                </p>
+                <p>
+                    また、外部アプリやプラグインを使う場合、関連情報が接続先の開発者へ渡る可能性がある旨もFAQに記載されています。
+                    そのため、社内での初期運用は
+                    <strong>1. 共通文体の固定、2. 禁止事項の明文化、3. 機密を書かない</strong> の3つから始めるのが安全です。
+                    本格導入するなら、<a href="/services/ai_training.html">AI研修</a>や
+                    <a href="/services/ai_consulting.html">生成AI活用支援</a>のように、ルール設計と定着支援をセットで考える方が失敗しにくくなります。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    ChatGPT のカスタム指示は、毎回同じ条件を書く手間を減らし、回答品質を安定させるための土台です。
+                    2026年7月15日の更新で Plus 以上は 5,000 文字まで使えるようになり、
+                    文体、禁止事項、役割、出力形式を少し丁寧に固定しやすくなりました。
+                </p>
+                <p>
+                    ただし、全部を詰め込む場所ではありません。
+                    全チャット共通の条件はカスタム指示へ、案件別の条件や資料はプロジェクトへ分ける。
+                    そして、修正が多い出力を見ながら毎月更新する。この運用にすると、
+                    AIが苦手な人でも「毎回同じ説明をしなくてよくなった」という実感を得やすくなります。
+                </p>
+
+                <div class="article-cta">
+                    <div class="cta-box">
+                        <h2 class="cta-title">ChatGPTを業務で安定して使える形に整えたい企業へ</h2>
+                        <p class="cta-text">MIRAINAでは、カスタム指示やプロジェクト設計、AI研修、運用ルール作成まで、現場に定着するAI活用を支援します。</p>
+                        <a href="/contact.html" class="btn btn-black-fill">無料相談はこちら</a>
+                    </div>
+                </div>
+
+                <div class="article-source">
+                    <h3>参考情報</h3>
+                    <ul>
+                        <li><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">OpenAI Help Center: ChatGPT Release Notes</a></li>
+                        <li><a href="https://help.openai.com/en/articles/8096356-chatgpt-custom-instructions" target="_blank" rel="noopener">OpenAI Help Center: ChatGPT Custom Instructions</a></li>
+                        <li><a href="https://help.openai.com/en/articles/10169521-projects-in-chatgpt" target="_blank" rel="noopener">OpenAI Help Center: Projects in ChatGPT</a></li>
+                        <li><a href="https://help.openai.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt" target="_blank" rel="noopener">OpenAI Help Center: Prompt engineering best practices for ChatGPT</a></li>
+                    </ul>
+                </div>
+
+                <div class="article-editor">
+                    <div class="editor-header">この記事を監修した人</div>
+                    <div class="editor-profile">
+                        <div class="editor-image">
+                            <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                        </div>
+                        <div class="editor-info">
+                            <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                            <p class="editor-desc">
+                                中小企業向けに生成AI導入、業務自動化、AI研修、LLMO対策を支援。
+                                単発のプロンプト改善ではなく、現場で再現できる指示設計と運用ルールの整備を重視して伴走している。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article-related">
+                    <h3>関連記事</h3>
+                    <div class="related-grid">
+                        <a href="/blogs/blog205.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card205.webp" alt="ChatGPT Workを解説した記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年7月最新】ChatGPT Workとは？AIが苦手でも仕事を任せやすくなる理由</div>
+                        </a>
+                        <a href="/blogs/blog209.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card209.webp" alt="ChatGPTプラグインを解説した記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年7月最新】ChatGPTプラグインとは？AIに外部アプリ連携を任せる始め方</div>
+                        </a>
+                        <a href="/blogs/blog210.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card210.webp" alt="ChatGPTの社内データ連携を解説した記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年7月最新】ChatGPTの社内データ連携は安全？EKM対応で何が変わるか</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul>
+                    <li><a href="/">ホーム</a></li>
+                    <li><a href="/services.html">サービス</a></li>
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai/" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

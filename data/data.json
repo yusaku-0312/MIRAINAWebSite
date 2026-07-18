@@ -1889,6 +1889,24 @@
       "thumbnail": "/images/blogs_images/blog-card210.webp",
       "alt": "ChatGPTで社内データを安全に連携するイメージ",
       "date": "2026-07-16"
+    },
+    {
+      "id": 211,
+      "title": "【2026年7月最新】AI導入ROIはどう測る？成功タスク単価で判断する4指標",
+      "description": "AI導入ROIの測り方をOpenAIの最新公式情報から解説。トークン単価では見えない成功タスク単価、品質、人手レビュー、拡大判断の4指標を紹介します。",
+      "link": "/blogs/blog211.html",
+      "thumbnail": "/images/blogs_images/blog-card211.webp",
+      "alt": "AI導入ROIを成功タスク単価と4指標で測るイメージ",
+      "date": "2026-07-18"
+    },
+    {
+      "id": 212,
+      "title": "【2026年7月最新】ChatGPTのカスタム指示は何を書く？5,000文字対応の使い方",
+      "description": "ChatGPT カスタム指示をOpenAI公式情報から解説。2026年7月15日の5,000文字対応を踏まえ、何を書くべきか、プロジェクト指示との違い、社内利用の注意点を紹介します。",
+      "link": "/blogs/blog212.html",
+      "thumbnail": "/images/blogs_images/blog-card212.webp",
+      "alt": "ChatGPTのカスタム指示を業務向けに設計するイメージ",
+      "date": "2026-07-18"
     }
   ],
   "works": [

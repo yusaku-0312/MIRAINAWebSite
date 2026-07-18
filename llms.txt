@@ -236,6 +236,8 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年7月最新】ChatGPT agentとは？AIにWeb操作を任せる前に知るべきこと](https://miraina-ai.com/blogs/blog208.html): OpenAIのChatGPT agent、ChatGPT Work and Codex、Apps in ChatGPTの公式情報をもとに、Web操作、フォーム入力、アプリ連携、導入前の安全ルールを中小企業向けに整理した記事。
 - [最新ブログ: 【2026年7月最新】ChatGPTプラグインとは？AIに外部アプリ連携を任せる始め方](https://miraina-ai.com/blogs/blog209.html): OpenAIの2026年7月9日のPlugin Directory移行と公式Help Center情報をもとに、ChatGPTプラグイン、Appsとの違い、Google DriveやSlack連携、権限設定の始め方を中小企業向けに整理した記事。
 - [最新ブログ: 【2026年7月最新】ChatGPTの社内データ連携は安全？EKM対応で何が変わるか](https://miraina-ai.com/blogs/blog210.html): OpenAIの2026年7月15日更新をもとに、EKM対応、apps with sync、Google Drive連携時の権限設計と安全な始め方を中小企業向けに整理した記事。
+- [最新ブログ: 【2026年7月最新】AI導入ROIはどう測る？成功タスク単価で判断する4指標](https://miraina-ai.com/blogs/blog211.html): OpenAIの2026年7月14日・17日の公式発表をもとに、AI導入ROIを利用回数やトークン単価ではなく、成功タスク単価・信頼性・拡大時の価値で測る実務を中小企業向けに整理した記事。
+- [最新ブログ: 【2026年7月最新】ChatGPTのカスタム指示は何を書く？5,000文字対応の使い方](https://miraina-ai.com/blogs/blog212.html): OpenAIの2026年7月15日の更新と公式FAQをもとに、ChatGPT カスタム指示で何を書くべきか、5,000文字対応、プロジェクト指示との使い分けを中小企業向けに整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)
