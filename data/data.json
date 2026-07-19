@@ -1907,6 +1907,15 @@
       "thumbnail": "/images/blogs_images/blog-card212.webp",
       "alt": "ChatGPTのカスタム指示を業務向けに設計するイメージ",
       "date": "2026-07-18"
+    },
+    {
+      "id": 213,
+      "title": "【2026年7月最新】Claude for TeachersでAI研修設計はどう変わるか",
+      "description": "Claude for TeachersをAnthropic公式発表から解説。教師向けAI、教育データ保護、AI研修設計、社内スキル化への応用を紹介します。",
+      "link": "/blogs/blog213.html",
+      "thumbnail": "/images/blogs_images/blog-card213.webp",
+      "alt": "Claude for Teachersを参考にAI研修を設計するイメージ",
+      "date": "2026-07-19"
     }
   ],
   "works": [
