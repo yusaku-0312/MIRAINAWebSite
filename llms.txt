@@ -239,6 +239,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年7月最新】AI導入ROIはどう測る？成功タスク単価で判断する4指標](https://miraina-ai.com/blogs/blog211.html): OpenAIの2026年7月14日・17日の公式発表をもとに、AI導入ROIを利用回数やトークン単価ではなく、成功タスク単価・信頼性・拡大時の価値で測る実務を中小企業向けに整理した記事。
 - [最新ブログ: 【2026年7月最新】ChatGPTのカスタム指示は何を書く？5,000文字対応の使い方](https://miraina-ai.com/blogs/blog212.html): OpenAIの2026年7月15日の更新と公式FAQをもとに、ChatGPT カスタム指示で何を書くべきか、5,000文字対応、プロジェクト指示との使い分けを中小企業向けに整理した記事。
 - [最新ブログ: 【2026年7月最新】Claude for TeachersでAI研修設計はどう変わるか](https://miraina-ai.com/blogs/blog213.html): Anthropicの2026年7月14日発表をもとに、Claude for Teachers、教師向けAI、教育データ保護、AI研修設計、社内スキル化への応用を中小企業向けに整理した記事。
+- [最新ブログ: 【2026年7月最新】ChatGPT横断検索で社内ナレッジ再利用はどう変わるか](https://miraina-ai.com/blogs/blog214.html): OpenAIの2026年7月14日の公式リリースノートをもとに、ChatGPT 横断検索、過去チャット、Projects、画像、文書の再検索を社内ナレッジ再利用に活かす方法を中小企業向けに整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)

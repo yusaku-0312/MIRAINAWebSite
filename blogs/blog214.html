@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年7月最新】ChatGPT横断検索で社内ナレッジ再利用はどう変わるか | MIRAINAブログ</title>
+    <meta name="description"
+        content="ChatGPT 横断検索をOpenAI公式発表から解説。過去チャット、Projects、画像、文書を探す新機能と社内ナレッジ再利用の始め方を紹介します。">
+    <meta property="og:title" content="【2026年7月最新】ChatGPT横断検索で社内ナレッジ再利用はどう変わるか">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog214.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog214-1.webp">
+    <meta property="og:description"
+        content="ChatGPT 横断検索をOpenAI公式発表から解説。過去チャット、Projects、画像、文書を探す新機能と社内ナレッジ再利用の始め方を紹介します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>ChatGPT横断検索で社内ナレッジ再利用はどう変わるか</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.07.20</span>
+                    <div class="article-tags" style="flex-wrap: wrap; justify-content: center;">
+                        <p class="article-tag">ChatGPT横断検索</p>
+                        <p class="article-tag">社内ナレッジ</p>
+                        <p class="article-tag">Projects</p>
+                        <p class="article-tag">業務効率化</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap: anywhere;">【2026年7月最新】ChatGPT横断検索で社内ナレッジ再利用はどう変わるか</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog214-1.webp" alt="ChatGPT横断検索で社内ナレッジを再利用するイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    「前にChatGPTへ相談した内容を探せない」「提案書の下書きや画像生成の履歴が人ごとに散らばっている」。
+                    AI活用が進む会社ほど、次に起きるのは新規作成ではなく再利用の問題です。
+                </p>
+                <p>
+                    OpenAIは2026年7月14日のChatGPTリリースノートで、過去のチャット、Projects、画像、文書を横断して検索できる新しい検索体験を案内しました。
+                    この記事では次の3点を整理します。
+                </p>
+                <ul>
+                    <li>ChatGPT横断検索で何が探しやすくなるのか</li>
+                    <li>社内ナレッジ再利用とAI活用定着にどう効くのか</li>
+                    <li>中小企業が先に決めるべき命名、保存、権限、削除のルール</li>
+                </ul>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. ChatGPT横断検索で発表された主な事実</a></li>
+                    <li><a href="#section2">2. なぜ社内ナレッジ再利用が課題になるのか</a></li>
+                    <li><a href="#section3">3. Projectsと過去チャットをどう使い分けるか</a></li>
+                    <li><a href="#section4">4. 中小企業が決めるべき4つの運用ルール</a></li>
+                    <li><a href="#section5">5. 30日で始める実践手順</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. ChatGPT横断検索で発表された主な事実</h2>
+                <p>
+                    OpenAIは2026年7月14日の公式リリースノートで、ChatGPTの検索体験を強化したと説明しています。
+                    新しい検索では、単一のチャット履歴だけでなく、過去のチャット、Projects、生成した画像、アップロード・作成した文書をまとめて探せるようになります。
+                    仕事の途中で作った提案文、顧客対応のたたき台、画像案、調査メモを、会話のタイトルを覚えていなくても見つけやすくする更新です。
+                </p>
+                <p>
+                    提供対象は、OpenAIの案内ではPlus、Pro、Team、Business、Enterprise、Eduです。
+                    まずWebで提供され、その後iOS、Android、Desktopへ展開するとされています。
+                    つまり、今回のChatGPT横断検索は「AIが賢く答える」機能というより、<strong>AIで作った仕事の履歴を業務資産として取り戻す</strong>ための機能と捉える方が実務的です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>探せる対象</th>
+                                <th>現場で起きていた問題</th>
+                                <th>期待できる変化</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>過去チャット</th>
+                                <td>相談した内容を再利用できない</td>
+                                <td>似た依頼や回答の型を見つけやすい</td>
+                            </tr>
+                            <tr>
+                                <th>Projects</th>
+                                <td>案件別の前提や資料が散らばる</td>
+                                <td>案件単位で下書きや判断理由を戻れる</td>
+                            </tr>
+                            <tr>
+                                <th>画像・文書</th>
+                                <td>生成物だけ残り、作成意図が消える</td>
+                                <td>完成物と会話の背景を一緒に確認できる</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section2">2. なぜ社内ナレッジ再利用が課題になるのか</h2>
+                <p>
+                    生成AIの導入初期は「使ってみる」「下書きを作る」「要約する」が中心です。
+                    しかし利用者が増えると、会社の中には大量のプロンプト、回答、修正版、画像案、議事録、調査メモが蓄積します。
+                    ここで検索できない状態が続くと、似た依頼を毎回ゼロから作り直し、うまくいった指示文や判断基準が個人の履歴に閉じてしまいます。
+                </p>
+                <p>
+                    既存の<a href="/blogs/blog212.html">ChatGPTカスタム指示の記事</a>では、毎回変わらない前提を固定する重要性を整理しました。
+                    今回の切り口は、その前段階と後段階です。
+                    まず過去の良い会話を見つけ、再利用できる型にし、必要ならProjectsや社内ルールへ移す。
+                    これにより、AI活用は個人技からチームの運用資産へ変わります。
+                </p>
+                <p>
+                    特に中小企業では、専任のナレッジマネージャーを置けないことが多く、情報整理が後回しになりがちです。
+                    ChatGPT横断検索は完璧な社内検索基盤ではありませんが、「誰かが前にAIで作った良い下書きに戻る」入口としては効果があります。
+                    <a href="/blogs/blog210.html">社内データ連携とEKM対応の記事</a>で扱った権限設計と組み合わせると、便利さと安全性を同時に考えやすくなります。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">過去会話を探す</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">良い型を選ぶ</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">Projectsへ集約する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">社内ルールに戻す</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">横断検索は、AIで作った履歴を「探す」だけでなく、チームで再利用できる型へ変える起点になります。</p>
+                </div>
+
+                <h2 id="section3">3. Projectsと過去チャットをどう使い分けるか</h2>
+                <p>
+                    OpenAIのProjectsヘルプでは、Projectsは長期的な作業をまとめるワークスペースとして説明されています。
+                    通常のチャットは単発相談に向きますが、Projectsは関連する会話、ファイル、指示をまとめて保持しやすい構造です。
+                    横断検索が入ることで、「どのチャットで話したか」だけでなく「どの案件・どの作業の中で出た情報か」を探しやすくなります。
+                </p>
+                <p>
+                    実務では、すべてをProjectsへ入れる必要はありません。
+                    一度きりの文章相談や調べ物は通常チャットで十分です。
+                    一方で、顧客提案、採用、社内マニュアル改訂、LP改善、FAQ整備のように、何度も前提を参照する業務はProjects化すると再利用しやすくなります。
+                    <a href="/blogs/blog205.html">ChatGPT Workの記事</a>で整理したように、AIに仕事を任せるほど、作業の置き場所を決めることが重要になります。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>使い方</th>
+                                <th>通常チャットが向く例</th>
+                                <th>Projectsが向く例</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>相談の継続性</th>
+                                <td>今日だけの文章添削</td>
+                                <td>毎月更新する営業資料</td>
+                            </tr>
+                            <tr>
+                                <th>参照する資料</th>
+                                <td>短いメモや単発URL</td>
+                                <td>複数ファイル、顧客別資料、社内ルール</td>
+                            </tr>
+                            <tr>
+                                <th>再利用価値</th>
+                                <td>一回で終わる回答</td>
+                                <td>テンプレート化したいプロンプトや判断基準</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section4">4. 中小企業が決めるべき4つの運用ルール</h2>
+                <p>
+                    ChatGPT横断検索をそのまま使い始めると、便利な反面、不要な情報や古い判断も見つかりやすくなります。
+                    そのため、導入時には次の4つを先に決めるのが現実的です。
+                </p>
+                <p>
+                    1つ目は命名ルールです。
+                    Project名やチャットタイトルに「顧客名」「業務名」「年月」「目的」を入れるだけで、後から探す負担は下がります。
+                    2つ目は保存ルールです。最終版だけでなく、なぜその判断をしたか、どの条件でAIに依頼したかも短く残します。
+                    3つ目は権限ルールです。個人情報、契約条件、未公開情報を扱う会話は、共有範囲と接続アプリを分けます。
+                    4つ目は削除ルールです。古い価格、終了したキャンペーン、退職者情報のように、再利用すると危険な情報は定期的に見直します。
+                </p>
+                <p>
+                    MIRAINA視点では、横断検索は「社内検索をChatGPTだけで完結させる機能」ではなく、AI活用の履歴を点検する入口です。
+                    まずは良い会話を見つける。次にテンプレート化する。最後に、必要ならRAGや社内FAQへ移す。
+                    この順番で進めると、大きな開発を始める前に、どの知識が本当に再利用されるかを見極められます。
+                </p>
+
+                <h2 id="section5">5. 30日で始める実践手順</h2>
+                <p>
+                    最初の30日は、全社展開よりも小さな業務で試す方が失敗しにくいです。
+                    おすすめは、営業提案、問い合わせ返信、採用広報、会議メモのどれか1つに絞り、過去30件のAI会話から再利用できるものを探すことです。
+                    探した会話は、良いプロンプト、良い出力、注意が必要な出力に分けます。
+                </p>
+                <p>
+                    次に、良い会話をProjectsへまとめ、共通の指示、参照資料、出力形式を整えます。
+                    そのうえで、週1回だけ「検索で見つかった会話が本当に役に立ったか」を確認します。
+                    役に立った件数、作り直しを避けられた件数、危ない情報を見つけた件数を記録すれば、横断検索の価値を説明しやすくなります。
+                </p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-dot red"></span>
+                        <span class="code-block-dot yellow"></span>
+                        <span class="code-block-dot green"></span>
+                        <span class="code-block-label">30-day pilot metrics</span>
+                    </div>
+                    <pre><code>見る指標
+- 再利用できた過去会話の件数
+- テンプレート化できたプロンプト数
+- 作り直しを避けられた資料数
+- 削除・更新が必要だった古い情報の件数</code></pre>
+                </div>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    ChatGPT横断検索は、過去チャット、Projects、画像、文書をまとめて探せるようにする更新です。
+                    重要なのは、検索機能そのものよりも、AIで作った履歴を会社の学習資産として扱えるようになる点です。
+                    ただし、何でも残せばよいわけではありません。
+                    命名、保存、権限、削除のルールを先に決め、再利用してよい情報と見直すべき情報を分ける必要があります。
+                </p>
+                <p>
+                    中小企業が始めるなら、まず1業務に絞って過去30件の会話を棚卸しし、良い会話をProjectsへ集約するところからで十分です。
+                    AI活用は新しいツールを増やすだけでは定着しません。
+                    すでに作った良い仕事を探し、再利用し、チームの型に変えることが、次の生産性向上につながります。
+                </p>
+
+                <div class="article-cta">
+                    <div class="cta-box">
+                        <h2 class="cta-title">AI活用の履歴を社内資産に変えたい企業へ</h2>
+                        <p class="cta-text">MIRAINAでは、ChatGPT・Claude・Geminiの業務設計、Projects整理、社内ルール、ナレッジ再利用の仕組み化まで一体で支援します。</p>
+                        <a href="/contact.html" class="cta-button">相談してみる</a>
+                    </div>
+                </div>
+
+                <div class="article-references">
+                    <h3>参考情報</h3>
+                    <ul>
+                        <li><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">OpenAI Help Center: ChatGPT Release Notes</a></li>
+                        <li><a href="https://help.openai.com/en/articles/10169521-projects-in-chatgpt" target="_blank" rel="noopener">OpenAI Help Center: Projects in ChatGPT</a></li>
+                    </ul>
+                </div>
+
+                <div class="article-editor">
+                    <div class="editor-header">この記事を監修した人</div>
+                    <div class="editor-profile">
+                        <div class="editor-image">
+                            <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                        </div>
+                        <div class="editor-info">
+                            <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                            <p class="editor-desc">
+                                MIRAINA代表。中小企業向けに生成AI活用支援、AI研修、AI開発、LLMO対策を提供。
+                                現場の業務棚卸しからAI活用の定着、社内ルール設計まで一貫して支援している。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="related-articles">
+                    <h3>関連記事</h3>
+                    <div class="related-grid">
+                        <a href="/blogs/blog212.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card212.webp" alt="ChatGPTカスタム指示の使い方を解説した記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年7月最新】ChatGPTのカスタム指示は何を書く？5,000文字対応の使い方</div>
+                        </a>
+                        <a href="/blogs/blog210.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card210.webp" alt="ChatGPTの社内データ連携と安全性を解説した記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年7月最新】ChatGPTの社内データ連携は安全？EKM対応で何が変わるか</div>
+                        </a>
+                        <a href="/blogs/blog138.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card138.webp" alt="Gemini API File Searchを解説した記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年5月最新】Gemini API File Searchとは？検証できるマルチモーダルRAGの作り方</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul>
+                    <li><a href="/">ホーム</a></li>
+                    <li><a href="/services.html">サービス</a></li>
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai/" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

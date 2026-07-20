@@ -1916,6 +1916,15 @@
       "thumbnail": "/images/blogs_images/blog-card213.webp",
       "alt": "Claude for Teachersを参考にAI研修を設計するイメージ",
       "date": "2026-07-19"
+    },
+    {
+      "id": 214,
+      "title": "【2026年7月最新】ChatGPT横断検索で社内ナレッジ再利用はどう変わるか",
+      "description": "ChatGPT 横断検索をOpenAI公式発表から解説。過去チャット、Projects、画像、文書を探す新機能と社内ナレッジ再利用の始め方を紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card214.webp",
+      "alt": "ChatGPT横断検索で社内ナレッジを再利用するイメージ",
+      "link": "/blogs/blog214.html",
+      "date": "2026-07-20"
     }
   ],
   "works": [
