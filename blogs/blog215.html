@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年7月最新】Gemini Notebookとは？資料を根拠付きで分析する使い方 | MIRAINAブログ</title>
+    <meta name="description"
+        content="Gemini NotebookをGoogle公式情報から解説。名称変更、根拠付き回答、資料分析、Gemini連携、使い分けまで中小企業向けに紹介します。">
+    <meta property="og:title" content="【2026年7月最新】Gemini Notebookとは？資料を根拠付きで分析する使い方">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog215.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog215-1.webp">
+    <meta property="og:description"
+        content="Gemini NotebookをGoogle公式情報から解説。名称変更、根拠付き回答、資料分析、Gemini連携、使い分けまで中小企業向けに紹介します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>Gemini Notebookとは？資料を根拠付きで分析する使い方</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.07.20</span>
+                    <div class="article-tags" style="flex-wrap: wrap; justify-content: center;">
+                        <p class="article-tag">Gemini Notebook</p>
+                        <p class="article-tag">資料分析</p>
+                        <p class="article-tag">Google Workspace</p>
+                        <p class="article-tag">AI活用</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap: anywhere;">【2026年7月最新】Gemini Notebookとは？資料を根拠付きで分析する使い方</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog215-1.webp" alt="Gemini Notebookで資料を根拠付きで分析するイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    「PDFや議事録をAIに読ませたいが、どこを根拠に答えたのか分からない」「社内資料を使って比較表や要点整理を作りたい」。
+                    これはAI活用がまだ苦手な人ほど、そのまま検索しやすい悩みです。
+                </p>
+                <p>
+                    一方で、すでにAIを使っている担当者は「この3つの資料だけを根拠に要約して」「見積書と議事録を比較して表にして」と、
+                    かなり具体的な依頼を投げています。Googleは2026年7月16日、NotebookLMを
+                    <strong>Gemini Notebook</strong> へ改称し、資料を根拠にした分析機能をさらに強化しました。この記事では次の3点を整理します。
+                </p>
+                <ul>
+                    <li>Gemini Notebookで何が変わったのか</li>
+                    <li>AIが苦手な人の検索と、AI利用者の実務プロンプトのつながり</li>
+                    <li>中小企業が根拠付きの資料分析を始める具体的な使い分け</li>
+                </ul>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. Gemini Notebookで何が変わったか</a></li>
+                    <li><a href="#section2">2. AIが苦手な人は何を検索し、AI利用者はどう頼むか</a></li>
+                    <li><a href="#section3">3. Gemini Notebookが根拠付き分析に向く理由</a></li>
+                    <li><a href="#section4">4. Geminiアプリとの違いと使い分け</a></li>
+                    <li><a href="#section5">5. 中小企業が始める実践手順</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. Gemini Notebookで何が変わったか</h2>
+                <p>
+                    Googleは <strong>2026年7月16日</strong> に、NotebookLMを <strong>Gemini Notebook</strong> へ名称変更すると発表しました。
+                    公式ブログでは、単なる名前の差し替えではなく、Googleのより大きなAIエコシステムの中で動く調査・分析ツールへ進化させる位置づけが示されています。
+                    同日公開のGoogle Workspace Updatesでも、既存リンクは自動リダイレクトされ、管理者側で特別な対応は不要だと案内されています。
+                </p>
+                <p>
+                    さらに重要なのは、各ノートブックに <strong>secure cloud computer</strong> が順次付与され、資料を根拠にしたコード実行が可能になった点です。
+                    これにより、複数資料を読み込んだうえでの比較、集計、図表化、スプレッドシートやレポート生成まで、単なる要約より一段深い分析がしやすくなります。
+                    Googleの公式ブログでは、Gemini Notebookが2023年の開始以来、<strong>3,000万人超の利用者</strong> と
+                    <strong>60万超の組織</strong> に使われているとも説明されています。
+                </p>
+
+                <figure class="article-figure">
+                    <img src="/images/blogs_images/blog215-2.webp" alt="Google公式ブログのGemini Notebook発表画面"
+                        loading="lazy" decoding="async">
+                    <figcaption>図1：Google公式ブログに掲載されたGemini Notebook発表画面。2026年7月16日公開。</figcaption>
+                </figure>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>更新点</th>
+                                <th>公式情報</th>
+                                <th>実務での意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>名称変更</th>
+                                <td>NotebookLMからGemini Notebookへ改称</td>
+                                <td>GeminiアプリやSearchとの連携前提が強まる</td>
+                            </tr>
+                            <tr>
+                                <th>secure cloud computer</th>
+                                <td>資料を根拠にコードを実行可能</td>
+                                <td>比較、集計、表作成、図表化がしやすい</td>
+                            </tr>
+                            <tr>
+                                <th>対応プラン</th>
+                                <td>Google AI Ultra、特定Workspace顧客で先行</td>
+                                <td>企業導入時は契約プラン確認が先に必要</td>
+                            </tr>
+                            <tr>
+                                <th>Gemini連携</th>
+                                <td>ノートブックがGeminiアプリにも同期</td>
+                                <td>調査資産を別画面へ持ち回しやすい</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section2">2. AIが苦手な人は何を検索し、AI利用者はどう頼むか</h2>
+                <p>
+                    このテーマが強いのは、検索されやすい困りごとと、実際のAIプロンプトがきれいにつながるからです。
+                    AI活用に不慣れな人は「Gemini Notebook」という正式名称より先に、
+                    <strong>「資料をもとにAIで要約したい」「PDFを根拠付きで分析したい」「AIで会議録を比較したい」</strong>
+                    と検索する傾向があります。
+                </p>
+                <p>
+                    一方で、すでにAIを使う人は検索の代わりに、AIへ直接仕事を依頼します。
+                    たとえば「この3本の提案書を比較して違いを表にして」「この議事録から決定事項だけ抜いて」「この決算資料を根拠にグラフを作って」といった依頼です。
+                    GoogleのHelp Centerでも、Gemini NotebookはPDF、Webサイト、YouTube動画、音声ファイル、Google Docs、Google Slidesなどを取り込み、
+                    そのソースに基づく回答とインライン引用を返すと説明されています。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>AIが苦手な人の検索</th>
+                                <th>AI利用者が投げるプロンプト</th>
+                                <th>記事で答えるべき論点</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>PDF AI 要約 根拠</th>
+                                <td>このPDFだけを根拠に要点を5つ出して</td>
+                                <td>根拠付き回答と引用の仕組み</td>
+                            </tr>
+                            <tr>
+                                <th>会議録 AI 比較 表</th>
+                                <td>2回分の議事録の差分を表にして</td>
+                                <td>複数資料の比較・集計に向く理由</td>
+                            </tr>
+                            <tr>
+                                <th>AIで社内資料を整理したい</th>
+                                <td>この資料群からFAQの下書きを作って</td>
+                                <td>調査資産をナレッジへ変える流れ</td>
+                            </tr>
+                            <tr>
+                                <th>GeminiとNotebookLMの違い</th>
+                                <td>資料だけを根拠に答えて、Webは見ないで</td>
+                                <td>Geminiアプリとの使い分け</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    つまり、検索ユーザーは「できること」を知りたくて来ますが、AI利用者はすでに「任せたい作業」が決まっています。
+                    そのため強い記事は、単なる機能紹介ではなく、
+                    <strong>どんな資料分析ならGemini Notebookに向き、どう頼むと安定するか</strong> まで書いてある記事です。
+                    これは既存の<a href="/blogs/blog096.html">NotebookLMがGeminiに統合した記事</a>で触れた
+                    「調査を継続資産にする」考え方の延長線上にあります。
+                </p>
+
+                <h2 id="section3">3. Gemini Notebookが根拠付き分析に向く理由</h2>
+                <p>
+                    Gemini Notebookの強みは、一般的なチャットAIよりも
+                    <strong>「回答の根拠をどこに置くか」を先に決めやすい</strong> 点にあります。
+                    Help Centerでは、Gemini Notebookの回答はノートブック内のソースに基づき、明確なインライン引用を返すと案内されています。
+                    社内の議事録、見積書、マニュアル、提案書のように、参照元を固定したい作業と相性が良い設計です。
+                </p>
+                <p>
+                    さらにGoogleは、アップグレード後のNotebookLMが、従来システムとの比較評価で
+                    <strong>平均65%超の勝率</strong>、大規模文書分析で <strong>69.9%</strong>、高度なWebリサーチとソース探索で
+                    <strong>78.2%</strong> の勝率を示したと公表しています。
+                    もちろん自社の業務でそのまま同じ数値が出るとは限りませんが、Google自身が「深い資料分析」に寄せていることは読み取れます。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">資料を集める</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">質問を具体化する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">引用を確認する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">表や資料へ変換する</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">Gemini Notebookは、調べる・比較する・根拠を確認する・成果物に変えるまでを一連で回しやすい構造です。</p>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-dot red"></span>
+                        <span class="code-block-dot yellow"></span>
+                        <span class="code-block-dot green"></span>
+                        <span class="code-block-label">prompt examples</span>
+                    </div>
+                    <pre><code>例1:
+この3本の営業提案書だけを根拠に、
+共通する訴求、弱い表現、価格説明の差を表にしてください。
+
+例2:
+添付した議事録2本を比較して、
+決定事項、保留事項、次回アクションを分けて整理してください。
+
+例3:
+この決算資料と社内レポートを根拠に、
+売上増減の要因を3つに整理し、引用箇所も示してください。</code></pre>
+                </div>
+
+                <p>
+                    また、Gemini Notebookは <strong>80以上の言語</strong> に対応し、
+                    Google Workspace利用者のアップロード、質問、モデル回答は人間のレビュアーに見られず、AIモデル学習にも使われないとHelp Centerに明記されています。
+                    根拠付き分析を社内で試す際には、このような提供条件とプラン条件を事前に確認しておくと、導入時の不安を下げやすくなります。
+                </p>
+
+                <h2 id="section4">4. Geminiアプリとの違いと使い分け</h2>
+                <p>
+                    2026年7月の更新で分かりにくくなりやすいのが、Gemini NotebookとGeminiアプリの関係です。
+                    Googleの「Notebooks in Gemini Apps」ヘルプでは、作成したノートブックはGeminiにも自動表示され、名称変更やソース追加、カスタム指示は両方で同期すると説明されています。
+                    つまり、保管場所としてはつながります。
+                </p>
+                <p>
+                    ただし、回答の作られ方は同じではありません。
+                    Help Centerでは、<strong>Gemini Notebookはノートブックのソースだけに基づいて回答</strong>し、
+                    <strong>Geminiアプリ側はノートブックのソースに加えてWeb検索や他のツールも使う場合がある</strong> と整理されています。
+                    そのため「社内資料だけで答えてほしい」「根拠を固定したい」場面ではGemini Notebook、
+                    「資料も見つつ外部情報も踏まえて広く考えたい」場面ではGeminiアプリ、という分け方が現実的です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>観点</th>
+                                <th>Gemini Notebook</th>
+                                <th>Geminiアプリ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>根拠</th>
+                                <td>ノートブック内のソースに限定</td>
+                                <td>ソースに加えてWeb検索や他ツールも使う場合がある</td>
+                            </tr>
+                            <tr>
+                                <th>向く作業</th>
+                                <td>比較、要約、引用確認、資料分析</td>
+                                <td>壁打ち、外部調査、広い論点整理</td>
+                            </tr>
+                            <tr>
+                                <th>成果物</th>
+                                <td>Studioで音声、動画、図解、スライド等</td>
+                                <td>Studio成果物は非対応</td>
+                            </tr>
+                            <tr>
+                                <th>使いどころ</th>
+                                <td>社内資料の読み解きと整形</td>
+                                <td>調査の広げ直しや次の問いづくり</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    これは<a href="/blogs/blog138.html">Gemini API File Searchの記事</a>で整理した、
+                    「検索対象を明確にした方が検証しやすい」という考え方にも近いです。
+                    社内ナレッジや提案資料の読み解きでは、賢さよりも「どの資料から言ったか」が重要になる場面が多いからです。
+                </p>
+
+                <h2 id="section5">5. 中小企業が始める実践手順</h2>
+                <p>
+                    いきなり全社導入するより、最初は1業務に絞る方が失敗しにくいです。
+                    たとえば営業提案、会議メモ整理、採用面接の比較、店舗マニュアル更新など、毎月繰り返す資料業務を1つ決めます。
+                    その業務で使う資料を5〜10本集め、Gemini Notebookへ入れ、まずは「何を比較したいか」「何を根拠に答えてほしいか」を1行で明確にします。
+                </p>
+                <p>
+                    次に、回答の引用を確認しながら、使える型だけをテンプレート化します。
+                    うまくいった質問はチームで共有し、出力先を議事録テンプレート、提案書のたたき台、FAQ、研修資料へ広げると、単発の時短で終わりにくくなります。
+                    もし社内検索や横断再利用まで進めたいなら、<a href="/blogs/blog214.html">ChatGPT横断検索の記事</a>のように、
+                    「良い履歴をどう残すか」という視点と組み合わせると運用が安定します。
+                </p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-dot red"></span>
+                        <span class="code-block-dot yellow"></span>
+                        <span class="code-block-dot green"></span>
+                        <span class="code-block-label">first pilot</span>
+                    </div>
+                    <pre><code>最初の30日で見る指標
+- 1回で使えた要約・比較表の件数
+- 引用確認にかかった時間
+- 人が手直しした箇所の傾向
+- 再利用できたプロンプト数
+- 次にStudio成果物へ広げたい業務の有無</code></pre>
+                </div>
+
+                <p>
+                    MIRAINA視点では、Gemini Notebookは「何でも任せるAI」ではなく、
+                    <strong>根拠が必要な資料仕事を安定化するための作業台</strong> と捉えるのが実務的です。
+                    特に、提案書、報告書、会議録、マニュアルのように、読み手が「その話はどこから来たのか」を確認したい業務で価値が出やすいです。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    Gemini Notebookは、2026年7月16日にNotebookLMから改称された、資料を根拠に調査・分析しやすいAIツールです。
+                    重要なのは名前よりも、secure cloud computer によるコード実行、Geminiアプリとの同期、そしてソースに基づく回答を明確に打ち出したことです。
+                </p>
+                <p>
+                    AI活用が苦手な人にとっては「PDFや議事録を根拠付きで整理したい」という悩みへの入口になり、
+                    すでにAIを使っている担当者にとっては、比較表、集計、FAQ下書きのような資料仕事を安定させる土台になります。
+                    中小企業が始めるなら、まず1業務に絞り、資料を限定し、質問を具体化し、引用を確認する。この順番で試すのが最も現実的です。
+                </p>
+
+                <div class="article-cta">
+                    <div class="cta-box">
+                        <h2 class="cta-title">社内資料を根拠付きでAI活用したい企業へ</h2>
+                        <p class="cta-text">MIRAINAでは、Gemini・ChatGPT・Claudeを使った資料分析設計、AI研修、社内ルール作成、ナレッジ活用まで一体で支援します。</p>
+                        <a href="/contact.html" class="cta-button">相談してみる</a>
+                    </div>
+                </div>
+
+                <div class="article-references">
+                    <h3>参考情報</h3>
+                    <ul>
+                        <li><a href="https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/" target="_blank" rel="noopener">Google Blog: NotebookLM is now Gemini Notebook</a></li>
+                        <li><a href="https://blog.google/innovation-and-ai/products/notebooklm/better-research-notebooklm/" target="_blank" rel="noopener">Google Blog: Do your best research with NotebookLM</a></li>
+                        <li><a href="https://workspaceupdates.googleblog.com/2026/07/notebooklm-now-gemini-notebook.html?m=1" target="_blank" rel="noopener">Google Workspace Updates: NotebookLM is now Gemini Notebook</a></li>
+                        <li><a href="https://support.google.com/gemininotebook/answer/16164461?hl=en" target="_blank" rel="noopener">Google Help: Learn about Gemini Notebook</a></li>
+                        <li><a href="https://support.google.com/gemininotebook/answer/17003757?hl=en" target="_blank" rel="noopener">Google Help: Notebooks in Gemini Apps</a></li>
+                        <li><a href="https://support.google.com/gemininotebook/answer/17004255?hl=en" target="_blank" rel="noopener">Google Help: Privacy and Terms of Use in Gemini Notebook</a></li>
+                    </ul>
+                </div>
+
+                <div class="article-editor">
+                    <div class="editor-header">この記事を監修した人</div>
+                    <div class="editor-profile">
+                        <div class="editor-image">
+                            <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                        </div>
+                        <div class="editor-info">
+                            <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                            <p class="editor-desc">
+                                MIRAINA代表。中小企業向けに生成AI活用支援、AI研修、AI開発、LLMO対策を提供。
+                                現場の業務棚卸しからAI活用の定着、社内ルール設計まで一貫して支援している。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="related-articles">
+                    <h3>関連記事</h3>
+                    <div class="related-grid">
+                        <a href="/blogs/blog096.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card096.webp" alt="NotebookLMがGeminiに統合した記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年4月最新】NotebookLMがGeminiに統合、AIリサーチ業務はどう変わるか</div>
+                        </a>
+                        <a href="/blogs/blog138.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card138.webp" alt="Gemini API File Searchを解説した記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年5月最新】Gemini API File Searchとは？検証できるマルチモーダルRAGの作り方</div>
+                        </a>
+                        <a href="/blogs/blog214.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card214.webp" alt="ChatGPT横断検索でナレッジ再利用を解説した記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年7月最新】ChatGPT横断検索で社内ナレッジ再利用はどう変わるか</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul>
+                    <li><a href="/">ホーム</a></li>
+                    <li><a href="/services.html">サービス</a></li>
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai/" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

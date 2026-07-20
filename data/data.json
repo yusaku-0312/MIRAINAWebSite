@@ -1925,6 +1925,15 @@
       "alt": "ChatGPT横断検索で社内ナレッジを再利用するイメージ",
       "link": "/blogs/blog214.html",
       "date": "2026-07-20"
+    },
+    {
+      "id": 215,
+      "title": "【2026年7月最新】Gemini Notebookとは？資料を根拠付きで分析する使い方",
+      "description": "Gemini NotebookをGoogle公式情報から解説。名称変更、根拠付き回答、資料分析、Gemini連携、使い分けまで中小企業向けに紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card215.webp",
+      "alt": "Gemini Notebookで資料を根拠付きで分析するイメージ",
+      "link": "/blogs/blog215.html",
+      "date": "2026-07-20"
     }
   ],
   "works": [
