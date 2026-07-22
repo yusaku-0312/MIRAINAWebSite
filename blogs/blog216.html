@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年7月最新】Microsoft×AMDでAzure AI推論基盤はどう変わるか | MIRAINAブログ</title>
+    <meta name="description"
+        content="Azure AI推論基盤をMicrosoftとAMDの公式発表から解説。Helios、HDv2、HXv2、ND MI455X v7が企業のAI運用に与える影響を紹介します。">
+    <meta property="og:title" content="【2026年7月最新】Microsoft×AMDでAzure AI推論基盤はどう変わるか">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog216.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog216-1.webp">
+    <meta property="og:description"
+        content="Azure AI推論基盤をMicrosoftとAMDの公式発表から解説。Helios、HDv2、HXv2、ND MI455X v7が企業のAI運用に与える影響を紹介します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>Microsoft×AMDでAzure AI推論基盤はどう変わるか</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.07.22</span>
+                    <div class="article-tags" style="flex-wrap: wrap; justify-content: center;">
+                        <p class="article-tag">Azure AI推論基盤</p>
+                        <p class="article-tag">Microsoft</p>
+                        <p class="article-tag">AMD Helios</p>
+                        <p class="article-tag">AIインフラ</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap: anywhere;">【2026年7月最新】Microsoft×AMDでAzure AI推論基盤はどう変わるか</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog216-1.webp" alt="Azure AI推論基盤とAMD Heliosの連携を示すイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    生成AIの話題は、モデル名やチャット画面の新機能に寄りがちです。しかし実務でAIを使い続ける企業にとっては、
+                    <strong>どのクラウドで、どの推論基盤を、どれだけ安定して使えるか</strong> も重要な判断材料になります。
+                </p>
+                <p>
+                    Microsoftは2026年7月20日、AMDとの協業を拡大し、AzureにAMD Helios、次世代EPYCプロセッサ、AI推論向けVMを取り込むと発表しました。
+                    この記事では、Azure AI推論基盤の更新を中小企業のAI導入・AI開発・ベンダー選定の観点で整理します。
+                </p>
+                <ul>
+                    <li>MicrosoftとAMDの発表で何が変わるのか</li>
+                    <li>推論、データ処理、半導体設計で役割が分かれる理由</li>
+                    <li>中小企業がAIベンダー選定で見直すべきチェック項目</li>
+                </ul>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. Microsoft×AMDで発表された主な事実</a></li>
+                    <li><a href="#section2">2. なぜAzure AI推論基盤が重要なのか</a></li>
+                    <li><a href="#section3">3. 3つのAzure基盤をどう見分けるか</a></li>
+                    <li><a href="#section4">4. 中小企業のAI導入に出る影響</a></li>
+                    <li><a href="#section5">5. 今見直すべきベンダー選定チェック</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. Microsoft×AMDで発表された主な事実</h2>
+                <p>
+                    Microsoftは公式ブログで、AIワークロードが単一のインフラ構成では支えにくいほど拡大していると説明しています。
+                    そこでAzureに、AMDのHelios AI platformと第6世代AMD EPYCデータセンタープロセッサを導入し、
+                    <strong>HDv2 VM、HXv2 VM、ND MI455X v7 VM</strong> の3つの新しいAzure offeringを提供する方針を示しました。
+                </p>
+                <p>
+                    AMD側の公式発表では、MicrosoftがAMD Helios Rackscale SolutionをAzureへ大規模に展開し、
+                    Microsoft自身、AI顧客、Azure AI Servicesのフロンティアモデル推論に使うと説明されています。
+                    また、AMDはHeliosをMicrosoftを含む顧客へ <strong>2026年後半</strong> から出荷開始する予定です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>発表項目</th>
+                                <th>主な用途</th>
+                                <th>企業側の見方</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>ND MI455X v7</th>
+                                <td>大規模AI推論、検索、エージェント処理</td>
+                                <td>本番AIサービスの処理能力と選択肢が増える</td>
+                            </tr>
+                            <tr>
+                                <th>HDv2 VM</th>
+                                <td>AIデータ処理、検索、強化学習、エージェント調整</td>
+                                <td>AI前処理や社内データ整備の重要性が上がる</td>
+                            </tr>
+                            <tr>
+                                <th>HXv2 VM</th>
+                                <td>半導体設計、技術計算、科学シミュレーション</td>
+                                <td>AIチップ開発や高度なHPC用途を支える</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section2">2. なぜAzure AI推論基盤が重要なのか</h2>
+                <p>
+                    AI導入の初期段階では「どのモデルが賢いか」「月額料金はいくらか」に目が向きます。
+                    しかし、社内FAQ、顧客対応AI、見積作成、議事録整理、AIエージェントのように毎日使う業務へ広がると、
+                    重要になるのは <strong>推論の安定性、待ち時間、供給余力、コスト変動</strong> です。
+                </p>
+                <p>
+                    Microsoftの発表では、ND MI455X v7は現代的なAIサービスを支える推論、検索、エージェント型ワークロード向けに設計されているとされています。
+                    これは、AIが単発の回答を返すだけでなく、社内データを検索し、複数ツールを使い、長い処理を進める方向へ移っていることを示します。
+                    既存の<a href="/blogs/blog203.html">GPT-5.6の記事</a>や<a href="/blogs/blog205.html">ChatGPT Workの記事</a>で見た「仕事を任せるAI」は、裏側の推論基盤なしには成立しません。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Layer 01</span>
+                            <span class="step-text">社内データ整備</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Layer 02</span>
+                            <span class="step-text">検索・RAG</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Layer 03</span>
+                            <span class="step-text">AI推論</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Layer 04</span>
+                            <span class="step-text">業務アプリ連携</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">本番AIは、モデル単体ではなく、データ処理・検索・推論・業務連携をまとめて設計する必要があります。</p>
+                </div>
+
+                <h2 id="section3">3. 3つのAzure基盤をどう見分けるか</h2>
+                <p>
+                    今回の発表で実務担当者が押さえるべき点は、用途ごとに基盤が分かれていることです。
+                    HDv2は、約500の第6世代AMD EPYC物理コア、4TB RAM、32TBローカルNVMeストレージ、400Gb Azure Boostネットワークを備え、
+                    データ準備、検索、強化学習、エージェント調整のようなCPU中心のAIデータシステムを支えると説明されています。
+                </p>
+                <p>
+                    HXv2は、176の第6世代AMD EPYC CPUコア、5GHz超のクロック、1VMあたり約2TBまたは4TBのRAM、800Gb InfiniBandを備える予定です。
+                    これは一般企業がすぐ使う機能というより、AI半導体設計や科学技術計算の速度を上げる基盤です。
+                    一方、ND MI455X v7はAMD Helios rackscale solutionを使い、推論、検索、エージェント型処理を本番規模で支える位置づけです。
+                </p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-dot red"></span>
+                        <span class="code-block-dot yellow"></span>
+                        <span class="code-block-dot green"></span>
+                        <span class="code-block-label">selection memo</span>
+                    </div>
+                    <pre><code>AI基盤を見るときの整理
+- 顧客対応AI: 推論速度、同時接続、監査ログを見る
+- 社内RAG: データ処理、検索、権限連携を見る
+- AIエージェント: 長時間処理、ツール連携、停止設計を見る
+- 独自AI開発: GPUだけでなくCPU、ネットワーク、ストレージを見る</code></pre>
+                </div>
+
+                <h2 id="section4">4. 中小企業のAI導入に出る影響</h2>
+                <p>
+                    中小企業が明日からAMD Heliosを直接契約するケースは多くありません。
+                    それでも今回の発表は、AIサービス選定に影響します。クラウド側の推論基盤が増えるほど、
+                    SaaSやAI開発会社は「どのモデルをどの基盤で動かすか」を選びやすくなり、将来的な価格、速度、供給安定性に差が出るからです。
+                </p>
+                <p>
+                    たとえば、AIチャットボットや社内ナレッジ検索を導入する場合、表面上は同じChatGPT系・Copilot系の体験でも、
+                    裏側ではAzure、AWS、Google Cloud、自社GPU基盤など複数の選択肢があります。
+                    以前の<a href="/blogs/blog187.html">OpenAI推論チップの記事</a>や<a href="/blogs/blog199.html">AIデータセンター契約の記事</a>と同じく、
+                    生成AIのコストと安定性は、モデル企業だけでなくインフラ企業の動きにも左右されます。
+                </p>
+                <p>
+                    MIRAINA視点では、このニュースは「AMDがすごい」という単体の話ではなく、
+                    <strong>AI導入時にモデル名だけで判断しない時代へ入った</strong> というサインです。
+                    業務に定着させるほど、データの置き場所、推論の混雑、停止時の代替、監査ログ、権限設計まで含めた提案が必要になります。
+                </p>
+
+                <h2 id="section5">5. 今見直すべきベンダー選定チェック</h2>
+                <p>
+                    企業がAIツールや開発会社を選ぶときは、機能比較表だけでは不十分です。
+                    特に、顧客情報や社内データを扱うAI、毎日使うAIエージェント、売上に直結する問い合わせ対応AIでは、
+                    「裏側の基盤が変わったときにどう運用するか」を確認しておくべきです。
+                </p>
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>確認項目</th>
+                                <th>質問例</th>
+                                <th>理由</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>基盤の選択肢</th>
+                                <td>Azure以外の代替やモデル切替は可能か</td>
+                                <td>障害や価格変更に備えるため</td>
+                            </tr>
+                            <tr>
+                                <th>推論コスト</th>
+                                <td>利用量が増えたときの課金単位は何か</td>
+                                <td>PoC後に費用が膨らみやすいため</td>
+                            </tr>
+                            <tr>
+                                <th>データ処理</th>
+                                <td>RAG前処理や検索インデックスは誰が管理するか</td>
+                                <td>回答精度はモデルだけで決まらないため</td>
+                            </tr>
+                            <tr>
+                                <th>停止時対応</th>
+                                <td>AIが遅い・止まった場合の手動運用はあるか</td>
+                                <td>業務継続の責任範囲を明確にするため</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>
+                    まずは、現在使っているAIツールを3種類に分けてください。
+                    「なくても困らない試行ツール」「止まると現場が困る補助ツール」「止まると顧客対応や売上に響く本番ツール」です。
+                    本番ツールに近いほど、推論基盤、データ処理、監視、代替手順まで確認する価値があります。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    MicrosoftとAMDの2026年7月20日の発表は、AzureにAMD Helios、HDv2、HXv2、ND MI455X v7を取り込み、
+                    AI推論、AIデータ処理、半導体設計・HPCを用途別に強化する内容です。
+                    中小企業にとっては、すぐにハードウェアを選ぶ話ではなく、AIサービスの裏側でクラウド基盤の選択肢が広がっているという意味を持ちます。
+                </p>
+                <p>
+                    これからのAI導入では、モデル名や月額料金だけでなく、推論基盤、データ処理、停止時対応、ベンダー分散まで見て判断する必要があります。
+                    まずは自社のAI利用を本番度で分類し、止まったときに困る業務から基盤と運用ルールを見直すことが現実的な一歩です。
+                </p>
+
+                <div class="article-cta">
+                    <div class="cta-box">
+                        <h2 class="cta-title">AI導入の基盤選定まで整理したい企業へ</h2>
+                        <p class="cta-text">MIRAINAでは、生成AI活用支援、AI開発、社内RAG、AIエージェント導入の基盤選定と運用設計を一体で支援します。</p>
+                        <a href="/contact.html" class="cta-button">相談してみる</a>
+                    </div>
+                </div>
+
+                <div class="article-references">
+                    <h3>参考情報</h3>
+                    <ul>
+                        <li><a href="https://blogs.microsoft.com/blog/2026/07/20/microsoft-expands-azure-ai-and-hpc-infrastructure-with-amd/" target="_blank" rel="noopener">Microsoft: Microsoft expands Azure AI and HPC infrastructure with AMD</a></li>
+                        <li><a href="https://www.amd.com/en/newsroom/press-releases/2026-7-20-microsoft-to-deploy-next-gen-amd-instinct-and-amd-.html" target="_blank" rel="noopener">AMD: Microsoft to Deploy Next-Gen AMD Instinct and AMD EPYC Processors</a></li>
+                        <li><a href="https://www.amd.com/en/blogs/2025/Microsoft-Azure-Expanding-AI-Infra-Choice-with-AMD-Helios.html" target="_blank" rel="noopener">AMD Blog: Microsoft Azure Expanding AI Infra Choice with AMD Helios</a></li>
+                    </ul>
+                </div>
+
+                <div class="article-editor">
+                    <div class="editor-header">この記事を監修した人</div>
+                    <div class="editor-profile">
+                        <div class="editor-image">
+                            <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                        </div>
+                        <div class="editor-info">
+                            <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                            <p class="editor-desc">
+                                MIRAINA代表。中小企業向けに生成AI活用支援、AI研修、AI開発、LLMO対策を提供。
+                                現場の業務棚卸しからAI活用の定着、社内ルール設計まで一貫して支援している。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="related-articles">
+                    <h3>関連記事</h3>
+                    <div class="related-grid">
+                        <a href="/blogs/blog187.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card187.webp" alt="OpenAI推論チップとAIコストを解説した記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年6月最新】OpenAI初の推論チップJalapeñoでAIコストはどう変わるか</div>
+                        </a>
+                        <a href="/blogs/blog199.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card199.webp" alt="AIデータセンター契約とClaude導入コストを解説した記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年7月最新】AIデータセンター契約でClaude導入コストはどう変わるか</div>
+                        </a>
+                        <a href="/blogs/blog203.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card203.webp" alt="GPT-5.6の業務活用を解説した記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年7月最新】GPT-5.6とは？仕事で使うAIが変わる3つの理由</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul>
+                    <li><a href="/">ホーム</a></li>
+                    <li><a href="/services.html">サービス</a></li>
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai/" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

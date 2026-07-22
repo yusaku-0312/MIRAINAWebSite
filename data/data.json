@@ -1934,6 +1934,15 @@
       "alt": "Gemini Notebookで資料を根拠付きで分析するイメージ",
       "link": "/blogs/blog215.html",
       "date": "2026-07-20"
+    },
+    {
+      "id": 216,
+      "title": "【2026年7月最新】Microsoft×AMDでAzure AI推論基盤はどう変わるか",
+      "description": "Azure AI推論基盤をMicrosoftとAMDの公式発表から解説。Helios、HDv2、HXv2、ND MI455X v7が企業のAI運用に与える影響を紹介します。",
+      "link": "/blogs/blog216.html",
+      "thumbnail": "/images/blogs_images/blog-card216.webp",
+      "alt": "Azure AI推論基盤とAMD Heliosの連携を示すイメージ",
+      "date": "2026-07-22"
     }
   ],
   "works": [
