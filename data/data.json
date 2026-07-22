@@ -1943,6 +1943,15 @@
       "thumbnail": "/images/blogs_images/blog-card216.webp",
       "alt": "Azure AI推論基盤とAMD Heliosの連携を示すイメージ",
       "date": "2026-07-22"
+    },
+    {
+      "id": 217,
+      "title": "【2026年7月最新】OpenAIが中小企業向けChatGPTを開始、何を任せるべきか",
+      "description": "中小企業向けChatGPTをOpenAI公式発表から解説。AIが苦手な会社が最初に任せる業務、使えるプロンプト、導入時の注意点を紹介します。",
+      "link": "/blogs/blog217.html",
+      "thumbnail": "/images/blogs_images/blog-card217.webp",
+      "alt": "OpenAIの中小企業向けChatGPT活用をイメージしたビジュアル",
+      "date": "2026-07-22"
     }
   ],
   "works": [

@@ -242,6 +242,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年7月最新】ChatGPT横断検索で社内ナレッジ再利用はどう変わるか](https://miraina-ai.com/blogs/blog214.html): OpenAIの2026年7月14日の公式リリースノートをもとに、ChatGPT 横断検索、過去チャット、Projects、画像、文書の再検索を社内ナレッジ再利用に活かす方法を中小企業向けに整理した記事。
 - [最新ブログ: 【2026年7月最新】Gemini Notebookとは？資料を根拠付きで分析する使い方](https://miraina-ai.com/blogs/blog215.html): Googleの2026年7月16日の公式発表をもとに、Gemini Notebookへの改称、secure cloud computer、資料を根拠付きで分析する使い方とGeminiアプリとの使い分けを中小企業向けに整理した記事。
 - [最新ブログ: 【2026年7月最新】Microsoft×AMDでAzure AI推論基盤はどう変わるか](https://miraina-ai.com/blogs/blog216.html): MicrosoftとAMDの2026年7月20日の公式発表をもとに、Azure AI推論基盤、AMD Helios、HDv2、HXv2、ND MI455X v7が企業のAI運用とベンダー選定に与える影響を整理した記事。
+- [最新ブログ: 【2026年7月最新】OpenAIが中小企業向けChatGPTを開始、何を任せるべきか](https://miraina-ai.com/blogs/blog217.html): OpenAIの2026年7月21日の公式発表をもとに、中小企業向けChatGPTプログラム、ChatGPT Work、AIが苦手な会社が最初に任せる業務と導入ルールを整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)
