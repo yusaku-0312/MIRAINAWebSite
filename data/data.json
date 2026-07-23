@@ -1952,6 +1952,15 @@
       "thumbnail": "/images/blogs_images/blog-card217.webp",
       "alt": "OpenAIの中小企業向けChatGPT活用をイメージしたビジュアル",
       "date": "2026-07-22"
+    },
+    {
+      "id": 218,
+      "title": "【2026年7月最新】OpenAI Presenceで電話・チャット対応はどう変わるか",
+      "description": "OpenAI Presenceを公式発表から解説。電話対応AI・チャット対応AIで何が変わるか、AIが苦手な会社の始め方とプロンプト例を紹介します。",
+      "link": "/blogs/blog218.html",
+      "thumbnail": "/images/blogs_images/blog-card218.webp",
+      "alt": "OpenAI Presenceで電話とチャットの顧客対応を行うイメージ",
+      "date": "2026-07-23"
     }
   ],
   "works": [
