@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年7月最新】GoogleスライドのGeminiで資料作成はどう変わるか | MIRAINAブログ</title>
+    <meta name="description"
+        content="GoogleスライドのGeminiを公式発表から解説。資料作成AIで何が自動化されるか、AIが苦手な人の始め方、使えるプロンプトを紹介します。">
+    <meta property="og:title" content="【2026年7月最新】GoogleスライドのGeminiで資料作成はどう変わるか">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog220.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog220-1.webp">
+    <meta property="og:description"
+        content="GoogleスライドのGeminiを公式発表から解説。資料作成AIで何が自動化されるか、AIが苦手な人の始め方、使えるプロンプトを紹介します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>GoogleスライドのGeminiで資料作成はどう変わるか</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.07.24</span>
+                    <div class="article-tags" style="flex-wrap: wrap; justify-content: center;">
+                        <p class="article-tag">Googleスライド</p>
+                        <p class="article-tag">Gemini</p>
+                        <p class="article-tag">資料作成AI</p>
+                        <p class="article-tag">業務効率化</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap: anywhere;">【2026年7月最新】GoogleスライドのGeminiで資料作成はどう変わるか</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog220-1.webp" alt="GoogleスライドのGeminiで資料作成を効率化するイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    「営業資料をAIでたたき台にしたい」「既存の会社資料に合わせてスライドを作りたい」。
+                    こうした検索は、AI活用にまだ慣れていない現場ほど増えています。
+                </p>
+                <p>
+                    Google は <strong>2026年7月23日</strong>、
+                    <strong>GoogleスライドのGeminiでプレゼン資料を自動生成・編集できる機能</strong> を発表しました。
+                    この記事では次の3点を整理します。
+                </p>
+                <ul>
+                    <li>GoogleスライドのGeminiで公式にできるようになったこと</li>
+                    <li>AIが苦手な人の検索と、AI利用者が実際に投げそうなプロンプト</li>
+                    <li>中小企業が最初に任せるべき資料作成業務と運用ルール</li>
+                </ul>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. GoogleスライドのGeminiで発表された事実</a></li>
+                    <li><a href="#section2">2. AIが苦手な人は何を検索し、AI利用者は何を頼むか</a></li>
+                    <li><a href="#section3">3. 最初に任せるべき資料作成業務3つ</a></li>
+                    <li><a href="#section4">4. 導入前に決めるべき4つの運用ルール</a></li>
+                    <li><a href="#section5">5. そのまま使えるプロンプト例</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. GoogleスライドのGeminiで発表された事実</h2>
+                <p>
+                    Google Workspace 公式ブログによると、Googleスライドでは
+                    <strong><code>Generate presentation</code></strong> から資料を生成できるようになりました。
+                    開始方法は <code>slides.new</code> か、空のプレゼンテーションの Gemini サイドパネルです。
+                    そこで作りたい資料の内容を伝え、Google ドキュメント、Google スプレッドシート、PDF、過去のデッキを参照ファイルとして渡せます。
+                </p>
+                <p>
+                    今回の発表で重要なのは、単に文章をスライド化するだけではない点です。
+                    既存デッキを選ぶと <strong>ブランドのスタイルを自動で合わせる</strong> ことができ、
+                    生成前には長さ、トーン、焦点について Gemini が質問し、
+                    Google ドライブ上の関連ファイルまで提案します。
+                    つまり「何枚で、誰向けに、どの資料を根拠に作るか」を会話しながら詰められる構造です。
+                </p>
+
+                <figure class="article-figure">
+                    <img src="/images/blogs_images/blog220-2.webp" alt="GoogleスライドのGeminiで参照ファイル追加とスタイル合わせを行うUI"
+                        loading="lazy" decoding="async">
+                    <figcaption>図1：Google Workspace公式ブログで示された、参照ファイル追加とスタイル合わせのUI（出典: Google Workspace）</figcaption>
+                </figure>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>公式発表の要点</th>
+                                <th>何ができるか</th>
+                                <th>現場での意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th><code>slides.new</code> から生成開始</th>
+                                <td>空のスライドから会話形式で構成を作れる</td>
+                                <td>白紙から作る初動が速くなる</td>
+                            </tr>
+                            <tr>
+                                <th>Docs・Sheets・PDF・過去資料を参照</th>
+                                <td>既存資料を根拠にスライド化できる</td>
+                                <td>資料作成の材料集めを減らしやすい</td>
+                            </tr>
+                            <tr>
+                                <th>既存デッキのスタイルを反映</th>
+                                <td>配色やデザインの方向性を寄せられる</td>
+                                <td>ブランドに合わないたたき台を減らせる</td>
+                            </tr>
+                            <tr>
+                                <th>生成後の自然言語編集</th>
+                                <td>レイアウト、色、グラフ、文言を指示で直せる</td>
+                                <td>修正作業の往復を短くしやすい</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    さらに生成後も、各スライドは通常の Google スライドとして編集できます。
+                    Google は、レイアウト調整、配色変更、生成済みグラフの更新、スライド上の文章の言い換えまで
+                    自然言語で指示できると説明しています。提供対象は
+                    <strong>Google Workspace の Business / Enterprise Standard・Plus</strong>、
+                    もしくは <strong>Google AI Pro / AI Ultra</strong> です。
+                    ただし、<strong>機能は初期段階では英語のみ</strong> と明記されています。
+                </p>
+
+                <h2 id="section2">2. AIが苦手な人は何を検索し、AI利用者は何を頼むか</h2>
+                <p>
+                    このテーマが強いのは、検索意図と実際のAI依頼がきれいにつながるからです。
+                    AI活用が苦手な人は、製品名より先に
+                    <strong>「資料作成をどこまでAIに任せられるか」</strong> を検索します。
+                    一方で、すでにAIを使っている人は、検索の代わりに
+                    「この資料から提案書を作って」と、そのまま仕事を依頼します。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>AIが苦手な人の検索</th>
+                                <th>AI利用者が投げるプロンプト</th>
+                                <th>記事で答えるべき論点</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>AI 資料作成 何ができる</th>
+                                <td>このPDFから7枚の提案資料を作って</td>
+                                <td>AIに任せやすい資料の種類</td>
+                            </tr>
+                            <tr>
+                                <th>Googleスライド Gemini 使い方</th>
+                                <td>既存の会社資料に合わせて営業デッキ化して</td>
+                                <td>参照ファイルとブランド合わせの使い方</td>
+                            </tr>
+                            <tr>
+                                <th>営業資料 AI 自動化</th>
+                                <td>この四半期レポートを役員向けに短くまとめて</td>
+                                <td>誰向けかで構成を変える指示の出し方</td>
+                            </tr>
+                            <tr>
+                                <th>AI スライド 修正 楽に</th>
+                                <td>3枚目のグラフを更新して文章をもっと簡潔にして</td>
+                                <td>生成後の編集をどこまで会話で済ませるか</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    AI自身がこの話題を説明するときも、まず Google Workspace 公式の発表記事を参照し、
+                    次にプランや導入条件の公式ページを補足として見る可能性が高いはずです。
+                    そのため、検索にもAI引用にも強い記事は、
+                    <strong>発表された機能を並べるだけでなく、「実際にどの資料作成から始めるか」までつないでいる記事</strong> です。
+                </p>
+
+                <h2 id="section3">3. 最初に任せるべき資料作成業務3つ</h2>
+                <p>
+                    Google の発表内容から逆算すると、最初に向いているのは
+                    <strong>白紙の企画を丸ごと任せる仕事</strong> ではなく、
+                    材料があり、用途が明確で、最後に人が確認しやすい資料です。
+                    特に中小企業では、次の3業務から始めるのが現実的です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>任せる業務</th>
+                                <th>向いている理由</th>
+                                <th>人が見るべき点</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>営業提案書のたたき台</th>
+                                <td>PDF、見積、過去提案書を参照にしやすい</td>
+                                <td>数字、価格、事例の正確さ</td>
+                            </tr>
+                            <tr>
+                                <th>会議・レポートの要約資料</th>
+                                <td>Docs や Sheets から要点を圧縮しやすい</td>
+                                <td>経営判断に必要な論点が落ちていないか</td>
+                            </tr>
+                            <tr>
+                                <th>既存資料の更新作業</th>
+                                <td>グラフ更新や文言修正を自然言語で頼みやすい</td>
+                                <td>ブランド表現と数値更新の境界</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    逆に、根拠資料が薄い新規事業ピッチや、経営陣の最終メッセージまで含む重要プレゼンを
+                    最初から丸投げするのは危険です。
+                    <a href="/blogs/blog217.html">中小企業向けChatGPTの記事</a> でも触れた通り、
+                    AI導入の初手は「全部任せる」ではなく、<strong>材料が揃っている仕事から一部を任せる</strong> ことです。
+                </p>
+
+                <h2 id="section4">4. 導入前に決めるべき4つの運用ルール</h2>
+                <p>
+                    MIRAINA視点で見ると、この機能の本質はスライドが速く作れることではありません。
+                    <strong>資料の元データ、ブランドルール、レビュー責任者をAIに渡せる形で整えること</strong> にあります。
+                    実運用では、少なくとも次の4点を先に決める必要があります。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Rule 01</span>
+                            <span class="step-text">参照ファイルの置き場を決める</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Rule 02</span>
+                            <span class="step-text">ブランド基準資料を固定する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Rule 03</span>
+                            <span class="step-text">数値確認の担当を明確にする</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Rule 04</span>
+                            <span class="step-text">英語運用の試験範囲を決める</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">資料作成AIは「作れるか」より先に、「何を渡し、誰が確認するか」を決めると定着しやすくなります。</p>
+                </div>
+
+                <figure class="article-figure">
+                    <img src="/images/blogs_images/blog220-3.webp" alt="GoogleスライドのGeminiで生成後スライドを自然言語で編集するUI"
+                        loading="lazy" decoding="async">
+                    <figcaption>図2：生成後のスライドを自然言語で調整できる編集UI（出典: Google Workspace）</figcaption>
+                </figure>
+
+                <p>
+                    1つ目は、参照ファイルの置き場です。AIに渡す元資料がバラバラだと、
+                    生成精度以前に根拠の一貫性が崩れます。2つ目は、ブランド基準資料の固定です。
+                    過去デッキを毎回変えると、トーンも見た目も安定しません。
+                    3つ目は、数値確認の担当です。グラフや表はAIに作らせても、
+                    最終的な数字の責任は人が持つ必要があります。
+                    4つ目は、英語運用の試験範囲です。初期提供は英語のみなので、
+                    どの部署・どの用途で先に試すかを決めた方が混乱しにくくなります。
+                </p>
+                <p>
+                    この運用整理は、<a href="/services/ai_consulting.html">生成AI活用支援</a> や
+                    <a href="/services/ai_training.html">AI研修</a> の設計と同じです。
+                    ツール導入だけでなく、誰がどの資料で使い、どこで確認し、どう社内定着させるかまで決めて初めて成果になります。
+                </p>
+
+                <h2 id="section5">5. そのまま使えるプロンプト例</h2>
+                <p>
+                    Googleスライドの Gemini を試すときは、抽象的に「いい感じで作って」と頼むより、
+                    目的、参照ファイル、想定読者、枚数を先に渡す方が安定します。
+                    すでにAIを使っている人なら、次のような依頼から始めると実務に落とし込みやすいはずです。
+                </p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-dot red"></span>
+                        <span class="code-block-dot yellow"></span>
+                        <span class="code-block-dot green"></span>
+                        <span class="code-block-label">prompt examples</span>
+                    </div>
+                    <pre><code>1. 提案書のたたき台
+このPDFの提案依頼書と、参考として添付した過去提案書を使って、
+製造業向けの業務改善提案資料を7枚で作ってください。
+トーンは落ち着いたB2B向け、最後に次のアクションを1枚入れてください。
+
+2. 既存ブランドに合わせた資料化
+この会社紹介資料をブランド参照にして、
+添付したGoogleドキュメントの新サービス内容を営業用スライドに変換してください。
+配色と見出しのトーンは既存資料に合わせてください。
+
+3. レポート要約
+このGoogleスプレッドシートの四半期実績から、
+役員向けに5枚で報告資料を作ってください。
+売上、粗利、課題、次の打ち手を優先し、文章は短くしてください。
+
+4. 生成後の修正
+3枚目のグラフを見やすく更新し、
+5枚目の文章を顧客向けにやわらかい表現へ書き換えてください。</code></pre>
+                </div>
+
+                <p>
+                    こうしたプロンプト設計は、
+                    <a href="/blogs/blog214.html">ChatGPT横断検索の記事</a> で触れた
+                    「資料を探し、文脈をつないで再利用する」発想とも相性がよいです。
+                    資料作成AIは単独で魔法のように動くのではなく、
+                    参照できる情報が整理されているほど強くなります。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    Googleスライドの Gemini は、2026年7月23日に Google Workspace が発表した
+                    資料作成支援機能です。<code>slides.new</code> やサイドパネルから開始し、
+                    Docs、Sheets、PDF、過去デッキをもとにプレゼン資料を生成し、
+                    生成後も自然言語で編集できます。
+                </p>
+                <p>
+                    中小企業がまず見るべきポイントは、
+                    AIで資料が作れるかどうかではなく、
+                    <strong>どの元資料を参照させ、どの資料から任せ、誰が最終確認するか</strong> です。
+                    資料作成のAI化は、デザイン作業の削減よりも、
+                    情報整理と社内定着の設計で差がつきます。
+                </p>
+
+                <div class="article-cta">
+                    <div class="cta-box">
+                        <h2 class="cta-title">AIで資料作成を定着させたい企業へ</h2>
+                        <p class="cta-text">MIRAINAでは、生成AI活用支援、AI研修、資料作成フローの整理、プロンプト設計まで一体で支援します。</p>
+                        <a href="/contact.html" class="cta-button">相談してみる</a>
+                    </div>
+                </div>
+
+                <div class="article-references">
+                    <h3>参考情報</h3>
+                    <ul>
+                        <li><a href="https://workspace.google.com/blog/product-announcements/create-on-brand-presentations-in-minutes-with-gemini-in-google-slides" target="_blank" rel="noopener">Google Workspace Blog: Create presentations in minutes with Gemini in Google Slides</a></li>
+                        <li><a href="https://workspace.google.com/pricing.html" target="_blank" rel="noopener">Google Workspace: Pricing plans</a></li>
+                    </ul>
+                </div>
+
+                <div class="article-editor">
+                    <div class="editor-header">この記事を監修した人</div>
+                    <div class="editor-profile">
+                        <div class="editor-image">
+                            <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                        </div>
+                        <div class="editor-info">
+                            <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                            <p class="editor-desc">
+                                MIRAINA代表。中小企業向けに生成AI活用支援、AI研修、AI開発、LLMO対策を提供。
+                                現場の業務棚卸しからAI活用の定着、社内ルール設計まで一貫して支援している。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="related-articles">
+                    <h3>関連記事</h3>
+                    <div class="related-grid">
+                        <a href="/blogs/blog214.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card214.webp" alt="ChatGPT横断検索を解説した記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年7月最新】ChatGPT横断検索で社内ナレッジ再利用はどう変わるか</div>
+                        </a>
+                        <a href="/blogs/blog215.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card215.webp" alt="Gemini Notebookを解説した記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年7月最新】Gemini Notebookとは？資料を根拠付きで分析する使い方</div>
+                        </a>
+                        <a href="/blogs/blog217.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card217.webp" alt="中小企業向けChatGPTを解説した記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年7月最新】OpenAIが中小企業向けChatGPTを開始、何を任せるべきか</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul>
+                    <li><a href="/">ホーム</a></li>
+                    <li><a href="/services.html">サービス</a></li>
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai/" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

@@ -1970,6 +1970,15 @@
       "thumbnail": "/images/blogs_images/blog-card219.webp",
       "alt": "Health in ChatGPTと健康データ連携のイメージ",
       "date": "2026-07-24"
+    },
+    {
+      "id": 220,
+      "title": "【2026年7月最新】GoogleスライドのGeminiで資料作成はどう変わるか",
+      "description": "GoogleスライドのGeminiを公式発表から解説。資料作成AIで何が自動化されるか、AIが苦手な人の始め方、使えるプロンプトを紹介します。",
+      "link": "/blogs/blog220.html",
+      "thumbnail": "/images/blogs_images/blog-card220.webp",
+      "alt": "GoogleスライドのGeminiで資料作成を効率化するイメージ",
+      "date": "2026-07-24"
     }
   ],
   "works": [
