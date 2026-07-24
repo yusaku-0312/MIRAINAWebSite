@@ -1961,6 +1961,15 @@
       "thumbnail": "/images/blogs_images/blog-card218.webp",
       "alt": "OpenAI Presenceで電話とチャットの顧客対応を行うイメージ",
       "date": "2026-07-23"
+    },
+    {
+      "id": 219,
+      "title": "【2026年7月最新】Health in ChatGPTで個人データ連携はどう変わるか",
+      "description": "Health in ChatGPTを公式発表から解説。健康データ連携、プライバシー、医療・美容サービス事業者が確認すべき運用ルールを紹介します。",
+      "link": "/blogs/blog219.html",
+      "thumbnail": "/images/blogs_images/blog-card219.webp",
+      "alt": "Health in ChatGPTと健康データ連携のイメージ",
+      "date": "2026-07-24"
     }
   ],
   "works": [

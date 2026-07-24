@@ -244,6 +244,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年7月最新】Microsoft×AMDでAzure AI推論基盤はどう変わるか](https://miraina-ai.com/blogs/blog216.html): MicrosoftとAMDの2026年7月20日の公式発表をもとに、Azure AI推論基盤、AMD Helios、HDv2、HXv2、ND MI455X v7が企業のAI運用とベンダー選定に与える影響を整理した記事。
 - [最新ブログ: 【2026年7月最新】OpenAIが中小企業向けChatGPTを開始、何を任せるべきか](https://miraina-ai.com/blogs/blog217.html): OpenAIの2026年7月21日の公式発表をもとに、中小企業向けChatGPTプログラム、ChatGPT Work、AIが苦手な会社が最初に任せる業務と導入ルールを整理した記事。
 - [最新ブログ: 【2026年7月最新】OpenAI Presenceで電話・チャット対応はどう変わるか](https://miraina-ai.com/blogs/blog218.html): OpenAIの2026年7月22日の公式発表をもとに、OpenAI Presence、電話対応AI・チャット対応AIの始め方、承認設計、AIが苦手な会社の導入手順を整理した記事。
+- [最新ブログ: 【2026年7月最新】Health in ChatGPTで個人データ連携はどう変わるか](https://miraina-ai.com/blogs/blog219.html): OpenAIの2026年7月23日の公式発表をもとに、Health in ChatGPT、健康データ連携、プライバシー、医療・美容サービス事業者が確認すべき運用ルールを整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)

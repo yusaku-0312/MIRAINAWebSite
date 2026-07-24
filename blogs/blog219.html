@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年7月最新】Health in ChatGPTで個人データ連携はどう変わるか | MIRAINAブログ</title>
+    <meta name="description"
+        content="Health in ChatGPTを公式発表から解説。健康データ連携、プライバシー、医療・美容サービス事業者が確認すべき運用ルールを紹介します。">
+    <meta property="og:title" content="【2026年7月最新】Health in ChatGPTで個人データ連携はどう変わるか">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog219.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog219-1.webp">
+    <meta property="og:description"
+        content="Health in ChatGPTを公式発表から解説。健康データ連携、プライバシー、医療・美容サービス事業者が確認すべき運用ルールを紹介します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>Health in ChatGPTで個人データ連携はどう変わるか</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.07.24</span>
+                    <div class="article-tags" style="flex-wrap: wrap; justify-content: center;">
+                        <p class="article-tag">Health in ChatGPT</p>
+                        <p class="article-tag">健康データ連携</p>
+                        <p class="article-tag">プライバシー</p>
+                        <p class="article-tag">AI導入</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap: anywhere;">【2026年7月最新】Health in ChatGPTで個人データ連携はどう変わるか</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog219-1.webp" alt="Health in ChatGPTと健康データ連携のイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    OpenAIは2026年7月23日、米国ユーザー向けに <strong>Health in ChatGPT</strong> を発表しました。
+                    Apple Healthや対応する医療記録を接続し、検査結果、服薬、睡眠、活動量などを文脈にした会話ができる機能です。
+                </p>
+                <p>
+                    この記事では、医療判断そのものではなく、健康データのような機微情報をAIに接続する時代に、
+                    医療・美容・ウェルネス領域のサービス事業者が確認すべきポイントを整理します。
+                </p>
+                <ul>
+                    <li>Health in ChatGPTで発表された事実</li>
+                    <li>個人データ連携がサービス設計に与える影響</li>
+                    <li>事業者が先に決めるべきプライバシーと運用ルール</li>
+                </ul>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. Health in ChatGPTで発表された事実</a></li>
+                    <li><a href="#section2">2. なぜ個人データ連携が重要なのか</a></li>
+                    <li><a href="#section3">3. 医療・美容・ウェルネス事業者への影響</a></li>
+                    <li><a href="#section4">4. 導入前に確認すべき3つのルール</a></li>
+                    <li><a href="#section5">5. そのまま使える確認プロンプト</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. Health in ChatGPTで発表された事実</h2>
+                <p>
+                    OpenAI公式発表によると、Health in ChatGPTは米国の18歳以上のログイン済みユーザー向けに、
+                    WebとiOSで順次提供されます。対象プランはFree、Go、Plus、Proです。
+                    ユーザーはApple Health、米国病院システムの対応医療記録、One Medical、Function Healthなどを接続し、
+                    必要なときにChatGPTがその情報を参照できるようになります。
+                </p>
+                <p>
+                    重要なのは、これは診断や治療を代替する機能ではない点です。OpenAIは、
+                    ChatGPTは医療専門家の判断を置き換えるものではなく、重要な情報は医療提供者と確認するよう案内しています。
+                    つまりHealth in ChatGPTは「AI医師」ではなく、
+                    散らばった健康情報を理解しやすくし、受診前の整理や生活習慣の振り返りを支援する位置づけです。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>発表内容</th>
+                                <th>要点</th>
+                                <th>事業者が見るべき点</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>米国ユーザー向け提供</th>
+                                <td>18歳以上、Web/iOS、FreeからProまで対象</td>
+                                <td>日本導入前でも利用体験の標準が変わる</td>
+                            </tr>
+                            <tr>
+                                <th>健康データ連携</th>
+                                <td>Apple Healthや対応医療記録を接続</td>
+                                <td>問診・記録・同意の設計が重要になる</td>
+                            </tr>
+                            <tr>
+                                <th>会話横断で利用</th>
+                                <td>許可した場合、Health外の会話でも文脈に使える</td>
+                                <td>情報共有範囲をユーザーに明示する必要がある</td>
+                            </tr>
+                            <tr>
+                                <th>追加の保護</th>
+                                <td>接続情報は基盤モデル学習や広告ターゲティングに使わない</td>
+                                <td>自社でも学習利用・二次利用の線引きが問われる</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    数字としても注目すべき発表です。OpenAIは、毎週3億人以上が健康関連の質問をChatGPTに投げていると説明しました。
+                    また、初期ユーザーでは健康関連会話の70%以上が専用のHealth領域ではなく通常会話の中で発生していたため、
+                    接続した健康情報を必要に応じて通常会話でも使える設計にしたとしています。
+                    ここから分かるのは、ユーザーにとって健康相談は「専用アプリの中だけ」で起きるものではなく、
+                    食事、運動、予約、仕事、家族との予定の中で自然に発生するということです。
+                </p>
+
+                <h2 id="section2">2. なぜ個人データ連携が重要なのか</h2>
+                <p>
+                    生成AIの価値は、汎用的な知識だけでは頭打ちになります。ユーザーの検査結果、通院履歴、睡眠、運動量、生活目標のような
+                    個別文脈が入るほど、回答は「一般論」から「自分ごと」に近づきます。
+                    Health in ChatGPTは、その流れが健康領域にも広がった象徴です。
+                </p>
+                <p>
+                    ただし、個人データ連携は便利さとリスクが同時に増えます。
+                    誤った情報が残っている、古い服薬情報をそのまま参照する、家族情報や来店履歴を不要に共有する、といった問題が起きる可能性があります。
+                    OpenAIも、接続情報が不完全または古い場合があるため、ユーザーが確認・更新する必要があると説明しています。
+                </p>
+                <p>
+                    これは <a href="/blogs/blog210.html">ChatGPTの社内データ連携の記事</a> と同じ構造です。
+                    社内資料でも健康情報でも、AIにつなぐ前に「どの情報を信頼するか」「古い情報をどう扱うか」「誰が削除できるか」を決めないと、
+                    便利な検索窓がリスクの入口になります。
+                </p>
+
+                <h2 id="section3">3. 医療・美容・ウェルネス事業者への影響</h2>
+                <p>
+                    日本では現時点でHealth in ChatGPTの医療記録連携は米国向けですが、
+                    事業者が受ける影響は早く出ます。お客様はすでにAIで食事、睡眠、運動、肌悩み、体調メモを整理し、
+                    その内容を持って来店・相談するようになるからです。
+                </p>
+                <p>
+                    医療機関、整体、ジム、エステ、美容サロン、健康食品、パーソナルトレーニングなどでは、
+                    「AIがまとめた情報をどう受け取るか」が接客品質に関わります。
+                    たとえば美容サロンでも、来店前の生活習慣メモや肌状態の記録をお客様がAIで要約して持参する場面は増えるはずです。
+                    そのときに店舗側が医療判断のように扱ってしまうと危険ですし、逆にすべて拒否すると顧客体験は下がります。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>想定される場面</th>
+                                <th>使えること</th>
+                                <th>避けるべきこと</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>来店前ヒアリング</th>
+                                <td>希望、生活習慣、過去の施術メモを整理する</td>
+                                <td>症状の診断や治療判断として扱う</td>
+                            </tr>
+                            <tr>
+                                <th>施術・指導メモ</th>
+                                <td>説明内容や次回確認事項を分かりやすく残す</td>
+                                <td>専門家確認なしに医学的効果を断定する</td>
+                            </tr>
+                            <tr>
+                                <th>フォロー連絡</th>
+                                <td>予約、注意事項、日常ケアの一般案内を整える</td>
+                                <td>機微情報を本人確認なしで共有する</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    MIRAINA視点では、Health in ChatGPTの本質は「健康AIが便利になる」だけではありません。
+                    <strong>お客様が自分のデータをAIで整理して持ち込む前提で、接客・記録・同意を作り直す必要がある</strong> ことです。
+                    美容サロン向けには <a href="/beauty-dx/">美容室・サロン特化AI活用支援</a> でも、
+                    問い合わせ返信や口コミだけでなく、来店前後の情報整理を業務設計として扱っています。
+                </p>
+
+                <h2 id="section4">4. 導入前に確認すべき3つのルール</h2>
+                <p>
+                    事業者が今すぐ決めるべきことは、高度なAI開発ではありません。
+                    健康・美容・生活に関わる情報をAIと扱うときの基本ルールです。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Rule 01</span>
+                            <span class="step-text">取得する情報を絞る</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Rule 02</span>
+                            <span class="step-text">AIに渡す情報を分ける</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Rule 03</span>
+                            <span class="step-text">専門家判断との境界を明記する</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">健康データ連携では、便利さより先に「取得しない・渡さない・断定しない」範囲を決めます。</p>
+                </div>
+
+                <p>
+                    1つ目は、取得する情報を絞ることです。来店前アンケートや問い合わせフォームに、
+                    必要以上の病歴、服薬、家族情報を入れない。必要な場合も、利用目的と保存期間を明記する。
+                    2つ目は、AIに渡す情報を分けることです。顧客名、連絡先、医療に近い情報、決済情報を同じプロンプトに混ぜない。
+                    3つ目は、専門家判断との境界を明記することです。AIは整理や説明補助には使えても、診断や治療方針の決定には使わない。
+                </p>
+                <p>
+                    この考え方は、<a href="/blogs/blog211.html">AI導入ROIの記事</a> ともつながります。
+                    AIの成果を「どれだけ多く使ったか」で測るのではなく、
+                    安全に完了したタスク、削減できた確認工数、誤案内を防げた件数で見るべきです。
+                </p>
+
+                <h2 id="section5">5. そのまま使える確認プロンプト</h2>
+                <p>
+                    Health in ChatGPTをきっかけに、自社の個人データ連携ルールを見直すなら、まずは次のようなプロンプトで棚卸しできます。
+                    社内規程、フォーム項目、接客スクリプト、プライバシーポリシーを添えて使うと実務に落とし込みやすくなります。
+                </p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-dot red"></span>
+                        <span class="code-block-dot yellow"></span>
+                        <span class="code-block-dot green"></span>
+                        <span class="code-block-label">prompt examples</span>
+                    </div>
+                    <pre><code>1. 取得情報の棚卸し
+この来店前アンケートの項目を見て、サービス提供に必要な情報、任意でよい情報、取得しない方がよい機微情報に分類してください。
+それぞれ利用目的と保存期間の案も出してください。
+
+2. AI利用範囲の整理
+この接客メモをAIに要約させる場合、マスキングすべき情報、AIに渡してよい情報、人が確認すべき情報を表にしてください。
+
+3. 注意書きの作成
+美容・ウェルネス領域の一般的な情報整理としてAIを使う前提で、
+診断や治療を目的としないこと、重要な判断は専門家に相談することを含む短い案内文を作ってください。</code></pre>
+                </div>
+
+                <p>
+                    AI利用者が増えるほど、ユーザーは「自分のデータを前提に答えてほしい」と考えるようになります。
+                    その要望に応えるには、単にChatGPTを使えるようにするだけでは足りません。
+                    情報の入口、同意、保存、削除、専門家判断への引き継ぎまでをセットで設計する必要があります。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    Health in ChatGPTは、2026年7月23日に米国ユーザー向けに発表された、
+                    健康データ連携を前提にしたChatGPTの新機能です。
+                    Apple Healthや対応医療記録を接続し、ユーザーの許可に基づいて健康情報を会話に活かせる一方、
+                    医療専門家の判断を置き換えるものではありません。
+                </p>
+                <p>
+                    中小企業、とくに医療・美容・ウェルネス領域の事業者は、
+                    日本提供を待つだけでなく、今のうちに「AIに渡す個人情報の範囲」「機微情報の扱い」「専門家判断との境界」を整えておくべきです。
+                    個人データ連携が進むほど、AI活用の差はツール選定ではなく運用設計でつきます。
+                </p>
+
+                <div class="article-cta">
+                    <div class="cta-box">
+                        <h2 class="cta-title">個人データを扱うAI導入ルールを整理したい企業へ</h2>
+                        <p class="cta-text">MIRAINAでは、生成AI活用支援、AI研修、業務棚卸し、個人情報を含むAI運用ルール設計まで一体で支援します。</p>
+                        <a href="/contact.html" class="cta-button">相談してみる</a>
+                    </div>
+                </div>
+
+                <div class="article-references">
+                    <h3>参考情報</h3>
+                    <ul>
+                        <li><a href="https://openai.com/index/health-in-chatgpt/" target="_blank" rel="noopener">OpenAI: Launching Health in ChatGPT</a></li>
+                        <li><a href="https://help.openai.com/ja-jp/articles/20001036-what-is-chatgpt-health" target="_blank" rel="noopener">OpenAI Help Center: ChatGPT の Health サービス</a></li>
+                    </ul>
+                </div>
+
+                <div class="article-editor">
+                    <div class="editor-header">この記事を監修した人</div>
+                    <div class="editor-profile">
+                        <div class="editor-image">
+                            <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                        </div>
+                        <div class="editor-info">
+                            <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                            <p class="editor-desc">
+                                MIRAINA代表。中小企業向けに生成AI活用支援、AI研修、AI開発、LLMO対策を提供。
+                                現場の業務棚卸しからAI活用の定着、社内ルール設計まで一貫して支援している。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="related-articles">
+                    <h3>関連記事</h3>
+                    <div class="related-grid">
+                        <a href="/blogs/blog210.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card210.webp" alt="ChatGPTの社内データ連携を解説した記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年7月最新】ChatGPTの社内データ連携は安全？EKM対応で何が変わるか</div>
+                        </a>
+                        <a href="/blogs/blog211.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card211.webp" alt="AI導入ROIを解説した記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年7月最新】AI導入ROIはどう測る？成功タスク単価で判断する4指標</div>
+                        </a>
+                        <a href="/blogs/blog217.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card217.webp" alt="中小企業向けChatGPTを解説した記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年7月最新】OpenAIが中小企業向けChatGPTを開始、何を任せるべきか</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul>
+                    <li><a href="/">ホーム</a></li>
+                    <li><a href="/services.html">サービス</a></li>
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai/" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>
