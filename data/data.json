@@ -1979,6 +1979,24 @@
       "thumbnail": "/images/blogs_images/blog-card220.webp",
       "alt": "GoogleスライドのGeminiで資料作成を効率化するイメージ",
       "date": "2026-07-24"
+    },
+    {
+      "id": 221,
+      "title": "【2026年7月最新】ChatGPT Voice対応、音声AI作業はどう変わるか",
+      "description": "ChatGPT Voice対応を公式リリースから解説。WorkとCodexで音声AI作業を依頼する始め方と運用ルールを紹介します。",
+      "link": "/blogs/blog221.html",
+      "thumbnail": "/images/blogs_images/blog-card221.webp",
+      "alt": "ChatGPT VoiceでWorkとCodexに音声で作業依頼するイメージ",
+      "date": "2026-07-25"
+    },
+    {
+      "id": 222,
+      "title": "【2026年7月最新】Google VidsのGemini Omni Flashで動画編集はどう変わるか",
+      "description": "Google VidsのGemini Omni Flashを公式発表から解説。AI動画編集で何が変わるか、始め方、使えるプロンプト、運用ルールを紹介します。",
+      "link": "/blogs/blog222.html",
+      "thumbnail": "/images/blogs_images/blog-card222.webp",
+      "alt": "Google VidsのGemini Omni FlashでAI動画編集を進めるイメージ",
+      "date": "2026-07-25"
     }
   ],
   "works": [
