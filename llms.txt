@@ -248,6 +248,8 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年7月最新】GoogleスライドのGeminiで資料作成はどう変わるか](https://miraina-ai.com/blogs/blog220.html): Google Workspaceの2026年7月23日の公式発表をもとに、GoogleスライドのGemini、資料作成AI、AIが苦手な人の始め方、運用ルールを整理した記事。
 - [最新ブログ: 【2026年7月最新】ChatGPT Voice対応、音声AI作業はどう変わるか](https://miraina-ai.com/blogs/blog221.html): OpenAIの2026年7月23日の公式リリースノートをもとに、ChatGPT VoiceのWork/Codex対応、音声でAI作業を依頼する始め方、権限と承認の運用ルールを整理した記事。
 - [最新ブログ: 【2026年7月最新】Google VidsのGemini Omni Flashで動画編集はどう変わるか](https://miraina-ai.com/blogs/blog222.html): Google Workspaceの2026年7月23日の公式発表とGoogleヘルプをもとに、Google VidsのGemini Omni Flash、AI動画編集、パーソナルアバター、運用ルールを整理した記事。
+- [最新ブログ: 【2026年7月最新】Claude Opus 5で長時間AIエージェントはどう変わるか](https://miraina-ai.com/blogs/blog223.html): AWSとGoogle Cloudの2026年7月24日の公式情報をもとに、Claude Opus 5、長時間AIエージェント、Bedrock・Google Cloud対応、企業導入時の運用ルールを整理した記事。
+- [最新ブログ: 【2026年7月最新】Anthropic Economic Index connectorで職種別AI活用の調べ方はどう変わるか](https://miraina-ai.com/blogs/blog224.html): Anthropicの2026年7月22日の公式発表と6月26日のCadencesレポートをもとに、職種別AI活用の調べ方、初心者の検索意図、自社導入前の確認点を整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)

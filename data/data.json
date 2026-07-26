@@ -1997,6 +1997,24 @@
       "thumbnail": "/images/blogs_images/blog-card222.webp",
       "alt": "Google VidsのGemini Omni FlashでAI動画編集を進めるイメージ",
       "date": "2026-07-25"
+    },
+    {
+      "id": 223,
+      "title": "【2026年7月最新】Claude Opus 5で長時間AIエージェントはどう変わるか",
+      "description": "Claude Opus 5を公式情報から解説。長時間AIエージェント、Bedrock・Google Cloud対応、企業導入の判断軸を紹介します。",
+      "link": "/blogs/blog223.html",
+      "thumbnail": "/images/blogs_images/blog-card223.webp",
+      "alt": "Claude Opus 5で長時間AIエージェントを運用するイメージ",
+      "date": "2026-07-26"
+    },
+    {
+      "id": 224,
+      "title": "【2026年7月最新】Anthropic Economic Index connectorで職種別AI活用の調べ方はどう変わるか",
+      "description": "Anthropic Economic Index connectorを公式情報から解説。職種別AI活用の調べ方、初心者の検索意図、導入前の確認点を整理します。",
+      "link": "/blogs/blog224.html",
+      "thumbnail": "/images/blogs_images/blog-card224.webp",
+      "alt": "Anthropic Economic Index connectorで職種別AI活用事例を調べるイメージ",
+      "date": "2026-07-26"
     }
   ],
   "works": [

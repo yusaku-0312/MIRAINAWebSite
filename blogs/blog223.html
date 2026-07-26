@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年7月最新】Claude Opus 5で長時間AIエージェントはどう変わるか | MIRAINAブログ</title>
+    <meta name="description"
+        content="Claude Opus 5を公式情報から解説。長時間AIエージェント、Bedrock・Google Cloud対応、企業導入の判断軸を紹介します。">
+    <meta property="og:title" content="【2026年7月最新】Claude Opus 5で長時間AIエージェントはどう変わるか">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog223.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog223-1.webp">
+    <meta property="og:description"
+        content="Claude Opus 5を公式情報から解説。長時間AIエージェント、Bedrock・Google Cloud対応、企業導入の判断軸を紹介します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>Claude Opus 5で長時間AIエージェントはどう変わるか</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.07.26</span>
+                    <div class="article-tags" style="flex-wrap: wrap; justify-content: center;">
+                        <p class="article-tag">Claude Opus 5</p>
+                        <p class="article-tag">AIエージェント</p>
+                        <p class="article-tag">Amazon Bedrock</p>
+                        <p class="article-tag">企業AI基盤</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap: anywhere;">【2026年7月最新】Claude Opus 5で長時間AIエージェントはどう変わるか</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog223-1.webp" alt="Claude Opus 5で長時間AIエージェントを運用するイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    「AIに長い調査や社内資料の整理を任せたい」「クラウド基盤でClaudeを安全に使いたい」。
+                    こうした相談は、AI活用が実験段階から本番運用へ進むほど増えています。
+                </p>
+                <p>
+                    Anthropic の <strong>Claude Opus 5</strong> は、2026年7月24日に公開された新しいOpus系モデルです。
+                    AWSとGoogle Cloudの公式情報では、長時間エージェント、コーディング、知識労働、企業向けデータ統制が強調されています。
+                    この記事では次の3点を整理します。
+                </p>
+                <ul>
+                    <li>Claude Opus 5で公式に発表された事実</li>
+                    <li>中小企業が「高性能モデル」を選ぶ前に見るべき判断軸</li>
+                    <li>長時間AIエージェントを業務に入れるときの運用ルール</li>
+                </ul>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. Claude Opus 5で発表された事実</a></li>
+                    <li><a href="#section2">2. なぜ長時間AIエージェントが重要なのか</a></li>
+                    <li><a href="#section3">3. 中小企業が最初に任せるべき業務3つ</a></li>
+                    <li><a href="#section4">4. 導入前に決めるべき4つの運用ルール</a></li>
+                    <li><a href="#section5">5. そのまま使えるプロンプト例</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. Claude Opus 5で発表された事実</h2>
+                <p>
+                    AWS は2026年7月24日、<strong>Claude Opus 5 が Amazon Bedrock と Claude Platform on AWS で利用可能になった</strong>
+                    と発表しました。AWS公式ブログでは、Claude Opus 5をAnthropicの第5世代で最も高度なOpusモデルと位置づけ、
+                    エージェント型コーディング、知識労働、視覚理解、長時間タスクでの改善を説明しています。
+                </p>
+                <p>
+                    Google Cloudの公式ドキュメントでも、Claude Opus 5は Gemini Enterprise Agent Platform 上で
+                    <strong>一般提供（GA）</strong> として掲載されています。モデルIDは <code>claude-opus-5</code>、
+                    入力はテキスト・画像・PDF、出力はテキストに対応し、最大入力は <strong>1,000,000トークン</strong>、
+                    最大出力は <strong>128,000トークン</strong> とされています。
+                    さらに、リリース日は <strong>2026年7月24日</strong>、Google Cloud側の最終更新日も同日です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>確認した公式情報</th>
+                                <th>内容</th>
+                                <th>現場での意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>AWSでの提供</th>
+                                <td>Amazon Bedrock と Claude Platform on AWS で利用可能</td>
+                                <td>既存AWS統制の中でClaudeを扱いやすい</td>
+                            </tr>
+                            <tr>
+                                <th>Google Cloudでの提供</th>
+                                <td>Gemini Enterprise Agent PlatformでGA、モデルIDは <code>claude-opus-5</code></td>
+                                <td>Google Cloud利用企業も選択肢に入れやすい</td>
+                            </tr>
+                            <tr>
+                                <th>長文・長時間タスク</th>
+                                <td>長時間エージェント、長文書分析、知識労働での改善を明記</td>
+                                <td>調査や資料整理を途中で止めにくくなる</td>
+                            </tr>
+                            <tr>
+                                <th>データ統制</th>
+                                <td>AWSではBedrock上でZDR、Google Cloudではリージョンやクォータが明示</td>
+                                <td>個人利用AIではなく企業基盤として検討しやすい</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    ここで重要なのは、Claude Opus 5を「最新モデルだから使う」と捉えないことです。
+                    公式情報が一貫して示しているのは、単発チャットよりも、
+                    <strong>長い文脈を読み、複数ステップの仕事を進め、企業のクラウド統制下で運用する</strong> 方向です。
+                </p>
+
+                <h2 id="section2">2. なぜ長時間AIエージェントが重要なのか</h2>
+                <p>
+                    AI活用の初期段階では、「文章を作る」「要約する」「アイデアを出す」といった短い作業が中心です。
+                    しかし、実際の業務で大きな時間を使うのは、複数ファイルを読み、条件を整理し、比較表を作り、最後に報告資料へまとめるような長い仕事です。
+                    Claude Opus 5が長時間エージェントや知識労働を前面に出しているのは、この実務領域を狙っているからです。
+                </p>
+                <p>
+                    既存記事では、<a href="/blogs/blog190.html">Claude Sonnet 5</a>を「仕事を任せやすくなるモデル」、
+                    <a href="/blogs/blog205.html">ChatGPT Work</a>を「成果物作成に向くエージェント」として整理しました。
+                    今回のClaude Opus 5は、その中でも重い仕事に寄せた選択肢です。
+                    コストや速度だけでなく、失敗時の回復、長文書の読み取り、クラウド上のデータ統制まで含めて判断する必要があります。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>AIが苦手な人の検索</th>
+                                <th>AI利用者が投げる依頼</th>
+                                <th>記事で答えるべき論点</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Claude Opus 5 何が変わった</th>
+                                <td>既存モデルとの使い分けを表にして</td>
+                                <td>最新モデルの導入判断</td>
+                            </tr>
+                            <tr>
+                                <th>AIエージェント 長時間 使い方</th>
+                                <td>3社の資料を読んで提案方針をまとめて</td>
+                                <td>任せる業務の粒度</td>
+                            </tr>
+                            <tr>
+                                <th>Bedrock Claude 安全</th>
+                                <td>AWS内で使う場合の権限とログ確認点を出して</td>
+                                <td>クラウド統制とデータ管理</td>
+                            </tr>
+                            <tr>
+                                <th>Claude 企業導入 コスト</th>
+                                <td>高性能モデルを使う業務と使わない業務を分けて</td>
+                                <td>費用対効果の設計</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="section3">3. 中小企業が最初に任せるべき業務3つ</h2>
+                <p>
+                    Claude Opus 5のような高性能モデルは、毎日の軽い質問に使うより、
+                    <strong>人が数時間以上かけていた重い業務</strong> に使う方が効果を測りやすくなります。
+                    中小企業で最初に試すなら、次の3つが現実的です。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>任せる業務</th>
+                                <th>向いている理由</th>
+                                <th>人が見るべき点</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>競合・市場調査レポート</th>
+                                <td>複数ページを読み比べる長い作業と相性がよい</td>
+                                <td>引用元、日付、競合名、数字の正確さ</td>
+                            </tr>
+                            <tr>
+                                <th>社内資料・議事録の統合整理</th>
+                                <td>長文書とPDFをまとめて扱いやすい</td>
+                                <td>社内固有名詞と決定事項の誤読</td>
+                            </tr>
+                            <tr>
+                                <th>業務フロー改善案の作成</th>
+                                <td>現状、課題、改善案、実装手順を一続きで考えられる</td>
+                                <td>現場制約、権限、実行責任者の現実性</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    MIRAINA視点では、最初から「AIに全部任せる」より、
+                    1つの成果物を決めて、下調べ、構成案、比較表、ドラフトまでをAIに任せ、
+                    最終判断だけ人が行う形が定着しやすいです。
+                    これは <a href="/services/ai_consulting.html">生成AI活用支援</a> や
+                    <a href="/services/ai_training.html">AI研修</a> でも重視している進め方です。
+                </p>
+
+                <h2 id="section4">4. 導入前に決めるべき4つの運用ルール</h2>
+                <p>
+                    長時間AIエージェントは便利ですが、失敗したときの影響も大きくなります。
+                    途中で何を読んだのか、どの権限で操作したのか、どの時点で人が止めるのかが曖昧だと、本番導入には向きません。
+                    導入前に少なくとも次の4点を決めておくべきです。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Rule 01</span>
+                            <span class="step-text">Opus 5を使う業務と使わない業務を分ける</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Rule 02</span>
+                            <span class="step-text">参照ファイルとクラウド権限を最小化する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Rule 03</span>
+                            <span class="step-text">成果物の根拠とログを残す</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Rule 04</span>
+                            <span class="step-text">公開・送信・契約判断は人が承認する</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">高性能モデルほど、業務範囲、権限、証跡、承認を先に決めることが重要です。</p>
+                </div>
+
+                <p>
+                    特にクラウド経由で使う場合は、性能だけでなく、どのリージョンで処理されるか、
+                    ゼロデータ保持の条件は何か、ログや監査をどう残すかを確認する必要があります。
+                    個人のチャット画面で便利に使うAIと、顧客情報や社内資料を扱う企業AI基盤は、設計思想が違います。
+                </p>
+
+                <h2 id="section5">5. そのまま使えるプロンプト例</h2>
+                <p>
+                    Claude Opus 5を試すときは、抽象的に「調べて」ではなく、目的、入力資料、出力形式、確認観点を指定します。
+                    長時間AIエージェントほど、最初の指示が成果物の品質を左右します。
+                </p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-dot red"></span>
+                        <span class="code-block-dot yellow"></span>
+                        <span class="code-block-dot green"></span>
+                        <span class="code-block-label">prompt examples</span>
+                    </div>
+                    <pre><code>1. 競合調査
+添付した競合3社のサービスページと料金表を読み、
+中小企業向けに比較表、強み、弱み、提案時の差別化ポイントをまとめてください。
+数字と固有名詞は出典URL付きで残してください。
+
+2. 社内資料整理
+この議事録とPDFを読み、決定事項、未決事項、担当者、期限を表にしてください。
+不明点は推測せず「確認が必要」として分けてください。
+
+3. 業務改善案
+この問い合わせ対応フローを読み、AIで自動化できる部分と人が承認すべき部分を分けてください。
+導入順序、リスク、最初の1週間で試すタスクまで提案してください。</code></pre>
+                </div>
+
+                <p>
+                    こうした依頼は、<a href="/blogs/blog211.html">AI導入ROIの記事</a> で整理した
+                    「成功タスク単価」の考え方とも相性がよいです。
+                    高性能モデルを常時使うのではなく、成功すれば人の数時間を置き換えられるタスクに絞ることで、費用対効果を測りやすくなります。
+                </p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>
+                    Claude Opus 5は、2026年7月24日に公開されたAnthropicの新しいOpus系モデルです。
+                    AWSではAmazon BedrockとClaude Platform on AWS、Google CloudではGemini Enterprise Agent Platformでの提供が確認できます。
+                    公式情報から見る限り、注目点は単なるモデル性能ではなく、長時間エージェント、長文書処理、クラウド統制下での企業利用です。
+                </p>
+                <p>
+                    中小企業が今見るべきポイントは、
+                    <strong>Claude Opus 5をどの業務にだけ使い、どの情報を読ませ、どこで人が承認するか</strong> です。
+                    最新モデルの導入は、ツール選びではなく業務設計です。
+                    高性能AIほど、任せる範囲を小さく定義し、根拠と承認を残す会社から成果が出ます。
+                </p>
+
+                <div class="article-cta">
+                    <div class="cta-box">
+                        <h2 class="cta-title">AIエージェントを業務に組み込みたい企業へ</h2>
+                        <p class="cta-text">MIRAINAでは、生成AI活用支援、AI研修、社内AIエージェント設計、運用ルール作成まで一体で支援します。</p>
+                        <a href="/contact.html" class="cta-button">相談してみる</a>
+                    </div>
+                </div>
+
+                <div class="article-references">
+                    <h3>参考情報</h3>
+                    <ul>
+                        <li><a href="https://aws.amazon.com/blogs/machine-learning/introducing-claude-opus-5-on-aws-anthropics-most-capable-opus-model/" target="_blank" rel="noopener">AWS Blog: Introducing Claude Opus 5 on AWS</a></li>
+                        <li><a href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/opus-5" target="_blank" rel="noopener">Google Cloud Documentation: Claude Opus 5 on Google Cloud</a></li>
+                        <li><a href="https://platform.claude.com/docs/en/about-claude/model-deprecations" target="_blank" rel="noopener">Claude Platform Docs: Model deprecations</a></li>
+                    </ul>
+                </div>
+
+                <div class="article-editor">
+                    <div class="editor-header">この記事を監修した人</div>
+                    <div class="editor-profile">
+                        <div class="editor-image">
+                            <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                        </div>
+                        <div class="editor-info">
+                            <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                            <p class="editor-desc">
+                                MIRAINA代表。中小企業向けに生成AI活用支援、AI研修、AI開発、LLMO対策を提供。
+                                現場の業務棚卸しからAI活用の定着、社内ルール設計まで一貫して支援している。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="related-articles">
+                    <h3>関連記事</h3>
+                    <div class="related-grid">
+                        <a href="/blogs/blog190.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card190.webp" alt="Claude Sonnet 5を解説した記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年7月最新】Claude Sonnet 5とは？AIに仕事を任せやすくなる理由</div>
+                        </a>
+                        <a href="/blogs/blog205.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card205.webp" alt="ChatGPT Workを解説した記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年7月最新】ChatGPT Workとは？AIが苦手でも仕事を任せやすくなる理由</div>
+                        </a>
+                        <a href="/blogs/blog211.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card211.webp" alt="AI導入ROIを解説した記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年7月最新】AI導入ROIはどう測る？成功タスク単価で判断する4指標</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+
+            <div class="footer-center"></div>
+
+            <div class="footer-menu">
+                <ul>
+                    <li><a href="/">ホーム</a></li>
+                    <li><a href="/services.html">サービス</a></li>
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai/" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>
