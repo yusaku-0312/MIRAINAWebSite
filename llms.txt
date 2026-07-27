@@ -250,6 +250,8 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年7月最新】Google VidsのGemini Omni Flashで動画編集はどう変わるか](https://miraina-ai.com/blogs/blog222.html): Google Workspaceの2026年7月23日の公式発表とGoogleヘルプをもとに、Google VidsのGemini Omni Flash、AI動画編集、パーソナルアバター、運用ルールを整理した記事。
 - [最新ブログ: 【2026年7月最新】Claude Opus 5で長時間AIエージェントはどう変わるか](https://miraina-ai.com/blogs/blog223.html): AWSとGoogle Cloudの2026年7月24日の公式情報をもとに、Claude Opus 5、長時間AIエージェント、Bedrock・Google Cloud対応、企業導入時の運用ルールを整理した記事。
 - [最新ブログ: 【2026年7月最新】Anthropic Economic Index connectorで職種別AI活用の調べ方はどう変わるか](https://miraina-ai.com/blogs/blog224.html): Anthropicの2026年7月22日の公式発表と6月26日のCadencesレポートをもとに、職種別AI活用の調べ方、初心者の検索意図、自社導入前の確認点を整理した記事。
+- [最新ブログ: 【2026年7月最新】AI×ニューロダイバーシティ｜働きやすい職場をつくる5つの支援](https://miraina-ai.com/blogs/blog225.html): Google WorkspaceとUnderstood.orgの2026年公式情報をもとに、着手・集中・記憶・伝達をAIで支える5つの方法と、全社員が選べる安全な運用ルールを整理した記事。
+- [最新ブログ: 【2026年7月最新】OpenAI hard spend limitsとは？AI料金の使いすぎを止める設定方法](https://miraina-ai.com/blogs/blog226.html): OpenAIの2026年7月22日の公式情報をもとに、hard spend limits、spend alertsとの違い、429で止まる条件、AI料金の上限設定手順を整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)

@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年7月最新】OpenAI hard spend limitsとは？AI料金の使いすぎを止める設定方法 | MIRAINAブログ</title>
+    <meta name="description"
+        content="OpenAI hard spend limitsを公式情報から解説。2026年7月22日の追加内容、spend alertsとの違い、429で止まる条件、AI料金の上限設定手順を紹介します。">
+    <meta property="og:title" content="【2026年7月最新】OpenAI hard spend limitsとは？AI料金の使いすぎを止める設定方法">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog226.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog226-1.webp">
+    <meta property="og:description"
+        content="OpenAI hard spend limitsを公式情報から解説。2026年7月22日の追加内容、spend alertsとの違い、429で止まる条件、AI料金の上限設定手順を紹介します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>OpenAI hard spend limitsとは？AI料金の使いすぎを止める設定方法</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.07.27</span>
+                    <div class="article-tags" style="flex-wrap: wrap; justify-content: center;">
+                        <p class="article-tag">OpenAI API</p>
+                        <p class="article-tag">hard spend limits</p>
+                        <p class="article-tag">AIコスト管理</p>
+                        <p class="article-tag">AI導入</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap: anywhere;">【2026年7月最新】OpenAI hard spend limitsとは？AI料金の使いすぎを止める設定方法</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog226-1.webp"
+                        alt="OpenAI hard spend limitsでAI料金の使いすぎを止めるイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    「OpenAI APIを試したいが、使いすぎて請求が膨らみそうで怖い」。
+                    AIが苦手な人ほど、性能比較より先にここで止まりやすいです。
+                </p>
+                <p>
+                    OpenAIは <strong>2026年7月22日</strong>、API Platform に
+                    <strong>hard spend limits</strong> を追加しました。
+                    この記事では次の3点を整理します。
+                </p>
+                <ul>
+                    <li>OpenAI hard spend limitsで何が変わったのか</li>
+                    <li>spend alertsとの違いと、どちらを使うべきか</li>
+                    <li>中小企業がAI料金の暴走を防ぐ設定手順と運用ルール</li>
+                </ul>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. OpenAI hard spend limitsで何が変わったか</a></li>
+                    <li><a href="#section2">2. spend alertsとの違いは何か</a></li>
+                    <li><a href="#section3">3. AIが苦手な人はどう検索し、AI利用者は何を頼むか</a></li>
+                    <li><a href="#section4">4. OpenAI hard spend limitsの設定手順</a></li>
+                    <li><a href="#section5">5. 導入前に決めるべき4つの運用ルール</a></li>
+                    <li><a href="#section6">6. そのまま使えるプロンプト例</a></li>
+                    <li><a href="#section7">7. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. OpenAI hard spend limitsで何が変わったか</h2>
+                <p>
+                    OpenAI の API Changelog では、<strong>2026年7月22日</strong>に
+                    組織とプロジェクト向けの <strong>hard spend limits</strong> が追加されたと案内されています。
+                    同日の Spend limits ガイドでは、月次の利用金額に対して
+                    <strong>通知だけ行う spend alerts</strong> と、
+                    <strong>上限到達後にAPIトラフィックを止める hard spend limits</strong> を分けて説明しています。
+                </p>
+                <p>
+                    重要なのは、hard spend limits は「見える化」ではなく、
+                    <strong>実際に止める仕組み</strong> だという点です。
+                    公式ガイドでは、追跡された支出が適用対象の hard limit に達すると、
+                    対象リクエストは <code>429</code> と <code>insufficient_quota</code> で失敗すると明記されています。
+                    つまり、AI料金の使いすぎが心配な会社にとって、
+                    「請求を見て驚く」から「上限で止める」へ考え方を変えやすくなりました。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>確認した公式情報</th>
+                                <th>内容</th>
+                                <th>現場での意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>追加日</th>
+                                <td>2026年7月22日に hard spend limits を追加</td>
+                                <td>この週から上限で止める設定が使える</td>
+                            </tr>
+                            <tr>
+                                <th>適用単位</th>
+                                <td>組織単位とプロジェクト単位で設定可能</td>
+                                <td>全社上限と案件上限を分けやすい</td>
+                            </tr>
+                            <tr>
+                                <th>到達時の挙動</th>
+                                <td><code>429</code> / <code>insufficient_quota</code> を返す</td>
+                                <td>アプリ側で停止・通知・切替処理が必要</td>
+                            </tr>
+                            <tr>
+                                <th>注意点</th>
+                                <td>反映は即時ではなく、記録額が少し超える場合がある</td>
+                                <td>上限ぎりぎりではなく、前段の警告も要る</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <figure class="article-figure">
+                    <img src="/images/blogs_images/blog226-2.webp"
+                        alt="OpenAI Spend limits ガイドの spend alerts と hard spend limits の比較表"
+                        loading="lazy" decoding="async">
+                    <figcaption>図1：OpenAIのSpend limitsガイドでは、通知だけの spend alert と、429で止まる hard spend limit が明確に分けられている</figcaption>
+                </figure>
+
+                <p>
+                    さらに OpenAI は、組織ごとに与える <strong>usage tier ベースの承認済み月次利用上限</strong> が
+                    別に存在すると説明しています。
+                    これは OpenAI が定める利用枠であり、自分たちで設定する spend limits とは別物です。
+                    ここを混同すると、「上限を上げたのに使えない」「429が出たが hard limit のせいではない」といった誤解が起きやすくなります。
+                </p>
+
+                <h2 id="section2">2. spend alertsとの違いは何か</h2>
+                <p>
+                    AIが苦手な人が最も誤解しやすいのは、
+                    <strong>通知と停止が同じではない</strong> ことです。
+                    Spend alerts はメールなどで知らせる仕組みですが、APIトラフィックは継続します。
+                    一方の hard spend limit は、適用額に達した時点で対象リクエストを止めます。
+                </p>
+                <p>
+                    そのため、「まず様子を見たい」会社は alerts から、
+                    「月5万円を超えたら絶対に止めたい」会社は hard limit まで含めて設計するのが自然です。
+                    OpenAI公式も、hard limit を入れた後も spend alerts は有効なままだと説明しており、
+                    <strong>事前警告 + 強制停止</strong> の二段構えを想定しています。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>spend alert</th>
+                                <th>hard spend limit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>上限到達時</th>
+                                <td>通知のみ。APIは止まらない</td>
+                                <td><code>429</code> を返し、対象トラフィックが止まる</td>
+                            </tr>
+                            <tr>
+                                <th>向いている場面</th>
+                                <td>試験導入、利用傾向の把握</td>
+                                <td>月次予算を超えたくない本番運用</td>
+                            </tr>
+                            <tr>
+                                <th>失敗しやすい点</th>
+                                <td>通知を見逃すと請求は増え続ける</td>
+                                <td>停止時の代替導線がないと業務が止まる</td>
+                            </tr>
+                            <tr>
+                                <th>MIRAINAの推奨</th>
+                                <td>70%・85%・95% など複数段階で通知</td>
+                                <td>本番プロジェクトだけに明確な上限を張る</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    既存の <a href="/blogs/blog169.html">ChatGPT Enterpriseの利用分析強化の記事</a> でも触れた通り、
+                    AI活用では「どれだけ使ったかの可視化」と「どこで止めるかの統制」を分けて考える必要があります。
+                    今回の hard spend limits は、その後者を OpenAI の標準機能として持てるようになった点に意味があります。
+                </p>
+
+                <h2 id="section3">3. AIが苦手な人はどう検索し、AI利用者は何を頼むか</h2>
+                <p>
+                    このテーマが強いのは、人の検索意図とAIへの依頼内容がかなり近いからです。
+                    AIが苦手な人は、製品名より先に「AI 使いすぎ 防ぐ」「OpenAI API 上限設定」
+                    「429 insufficient_quota 何」と検索しやすいです。
+                    すでにAIを使っている人は、そのまま
+                    「hard spend limitsとspend alertsの違いを表にして」
+                    「月5万円で止まる運用ルールを作って」とAIへ頼みます。
+                </p>
+                <p>
+                    そしてAI自身がこの話題を答える時は、
+                    OpenAI の <strong>Spend limits ガイド</strong>、
+                    <strong>Admin APIs ガイド</strong>、
+                    <strong>Production best practices</strong>、
+                    <strong>Rate limits ガイド</strong> を組み合わせて説明する流れになりやすいです。
+                    つまり、AIに引用されやすい記事にするには、
+                    <strong>機能名、挙動、設定手順、429時の意味、usage tierとの違い</strong> を一つの記事でつないでおく必要があります。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>AIが苦手な人の検索</th>
+                                <th>AI利用者が投げる依頼</th>
+                                <th>記事で答えるべき論点</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>OpenAI API 使いすぎ 防ぐ</th>
+                                <td>月額上限で止める方法を教えて</td>
+                                <td>通知と停止の違い</td>
+                            </tr>
+                            <tr>
+                                <th>429 insufficient_quota 意味</th>
+                                <td>上限到達時の挙動と復旧手順を整理して</td>
+                                <td>停止時の運用設計</td>
+                            </tr>
+                            <tr>
+                                <th>OpenAI API 上限設定</th>
+                                <td>組織とプロジェクトのどちらで設定すべきか比較して</td>
+                                <td>適用単位の切り分け</td>
+                            </tr>
+                            <tr>
+                                <th>AI料金 管理 方法</th>
+                                <td>開発用と本番用で予算を分ける設計にして</td>
+                                <td>プロジェクト分離と警告設計</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    これは MIRAINA の推測ですが、AIが苦手な人ほど
+                    「料金を止められるか」が導入の安心材料になります。
+                    逆に、AIをよく使う人ほど
+                    「止まった時にどの処理が落ちるか」「誰へ通知するか」まで設計しないと本番では使いにくいです。
+                    そのため、検索向けにもAI引用向けにも、
+                    <strong>設定画面の話だけで終わらず、運用ルールまで書く</strong> ことが重要です。
+                </p>
+
+                <h2 id="section4">4. OpenAI hard spend limitsの設定手順</h2>
+                <p>
+                    OpenAI の Spend limits ガイドでは、組織ページまたはプロジェクトの Limits から、
+                    月次 spend limit を入力し、必要なら <strong>Enforce a hard limit</strong> をオンにして保存する流れが案内されています。
+                    画面操作は難しくありません。
+                    ただし、本番運用で重要なのは「いくらにするか」より
+                    <strong>どの単位で分けるか</strong> です。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">組織全体の月次上限を決める</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">本番・検証・部門ごとにプロジェクトを分ける</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">70% / 85% / 95% などの spend alerts を入れる</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">必要なプロジェクトだけ hard limit を有効化する</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">「とりあえず全社に1つの上限」ではなく、用途ごとに分けて設計した方が止めやすく、説明もしやすくなります。</p>
+                </div>
+
+                <p>
+                    さらに Admin APIs ガイドでは、<code>threshold_amount</code> をセント単位で指定し、
+                    たとえば <strong>10000 = 100ドル</strong> として組織の月次 hard limit を
+                    API経由で設定する例も公開されています。
+                    これは、社内の運用スクリプトや管理ツールから
+                    上限や通知先を自動設定したい会社に向いています。
+                </p>
+
+                <figure class="article-figure">
+                    <img src="/images/blogs_images/blog226-3.webp"
+                        alt="OpenAI Admin APIs ガイドの組織 hard spend limit 設定例"
+                        loading="lazy" decoding="async">
+                    <figcaption>図2：OpenAIのAdmin APIsガイドでは、組織 hard spend limit を API から設定する例も公開されている</figcaption>
+                </figure>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>設定単位</th>
+                                <th>向いている用途</th>
+                                <th>考え方</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>組織 hard limit</th>
+                                <td>全社予算の天井を決めたい</td>
+                                <td>最悪でも超えたくない総額を置く</td>
+                            </tr>
+                            <tr>
+                                <th>プロジェクト hard limit</th>
+                                <td>部門・案件・本番環境を個別管理したい</td>
+                                <td>責任単位ごとに分けて止める</td>
+                            </tr>
+                            <tr>
+                                <th>プロジェクト alerts</th>
+                                <td>担当者へ早めに知らせたい</td>
+                                <td>強制停止より前に判断時間を作る</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    <a href="/blogs/blog165.html">GitHub Copilot従量課金化の記事</a> でも書いた通り、
+                    AIコスト管理は「高性能モデルを使うな」という話ではありません。
+                    <strong>重い仕事だけ高性能モデルへ寄せ、予算の境界を明確にする</strong> ことが本質です。
+                    今回の機能は、その境界を OpenAI 側で持てるようになったと考えると理解しやすいです。
+                </p>
+
+                <h2 id="section5">5. 導入前に決めるべき4つの運用ルール</h2>
+                <p>
+                    OpenAI の Production best practices では、
+                    本番と検証を分けたプロジェクト運用や、カスタムの rate limit / spend limit の活用が勧められています。
+                    つまり、hard spend limits は単体で入れるより、
+                    <strong>環境分離と 429 ハンドリング</strong> と一緒に考えた方が事故が減ります。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>決めること</th>
+                                <th>理由</th>
+                                <th>おすすめの考え方</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>本番と検証の分離</th>
+                                <td>試験利用で本番予算を食いやすい</td>
+                                <td>最低でも staging と production を分ける</td>
+                            </tr>
+                            <tr>
+                                <th>警告閾値</th>
+                                <td>hard limit だけでは止まる直前まで気づけない</td>
+                                <td>70%・85%・95% の複数通知にする</td>
+                            </tr>
+                            <tr>
+                                <th>429時の代替手段</th>
+                                <td>止まった瞬間に業務が詰まる</td>
+                                <td>キュー待ち、承認、下位モデル切替を決める</td>
+                            </tr>
+                            <tr>
+                                <th>責任の単位</th>
+                                <td>ユーザー単位ではなく組織・プロジェクト単位で効く</td>
+                                <td>部署や案件単位の project 設計にする</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    もう1つ大切なのは、<strong>rate limit と spend limit は別物</strong> だという点です。
+                    Rate limits ガイドでは、OpenAI の承認済み usage tier 上限と、
+                    自分たちで設定する spend limits は分かれていると説明されています。
+                    そのため、429が出た時は毎回「hard limit か、usage tier か、RPM/TPM か」を切り分けないと、
+                    誤った復旧をしやすくなります。
+                </p>
+                <p>
+                    MIRAINAとしては、AI導入で最初から大きな全社上限を置くより、
+                    <a href="/services/ai_consulting.html">生成AI活用支援</a> や
+                    <a href="/services/ai_training.html">AI研修</a> と組み合わせて、
+                    まずは1部門・1業務・1か月で上限を決める進め方を推奨します。
+                    その方が、使いすぎも止めやすく、ROIも評価しやすいからです。
+                </p>
+
+                <h2 id="section6">6. そのまま使えるプロンプト例</h2>
+                <p>
+                    OpenAI hard spend limits は、単に設定画面を眺めるより、
+                    自社条件をAIへ渡して設計案を作ると理解が早くなります。
+                    その際は、予算、対象プロジェクト、止めたくない業務、通知先を具体化して投げるのがコツです。
+                </p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-dot red"></span>
+                        <span class="code-block-dot yellow"></span>
+                        <span class="code-block-dot green"></span>
+                        <span class="code-block-label">prompt examples</span>
+                    </div>
+                    <pre><code>1. 非エンジニア向けに整理する
+OpenAI hard spend limitsとspend alertsの違いを、
+非エンジニア向けに3行ずつで表にしてください。
+
+2. 月次上限を設計する
+OpenAI APIを営業支援と社内検索で使います。
+月5万円を超えたら止めたいです。
+組織上限とプロジェクト上限の分け方を提案してください。
+
+3. 429時の運用を決める
+hard spend limit到達で429 insufficient_quotaが返った時の
+一次対応フローを、担当者・確認事項・復旧条件つきで作ってください。
+
+4. 検証と本番を分ける
+staging と production を別プロジェクトに分ける前提で、
+spend alerts の閾値と hard limit の推奨値を提案してください。
+
+5. 社内説明用に要約する
+OpenAIの公式 docs を前提に、
+hard spend limits導入時の注意点を役員向けに5項目で要約してください。</code></pre>
+                </div>
+
+                <p>
+                    AIへ頼む時は、「止めたい金額」だけでなく
+                    「止まると困る業務」「誰に通知するか」「復旧を誰が承認するか」まで含めると、
+                    現場に落としやすい案になります。
+                    逆に、そこを曖昧にしたまま hard limit だけを入れると、
+                    コストは守れても業務停止の責任が曖昧なまま残ります。
+                </p>
+
+                <h2 id="section7">7. まとめ</h2>
+                <p>
+                    OpenAI が2026年7月22日に追加した hard spend limits は、
+                    API料金を「あとで確認する」から
+                    <strong>「上限で止める」へ進める機能</strong> です。
+                    Spend alerts との違い、429 の意味、usage tier との切り分けまで理解すると、
+                    AI導入の不安をかなり減らせます。
+                </p>
+                <p>
+                    ただし、上限を置くだけで運用は完成しません。
+                    本番と検証を分けること、通知を先に出すこと、停止時の代替手段を決めること、責任単位でプロジェクトを分けること。
+                    この4点まで決めてはじめて、
+                    hard spend limits は「AIを止める機能」ではなく、
+                    <strong>安心してAIを広げるための管理機能</strong> になります。
+                </p>
+
+                <div class="article-cta">
+                    <div class="cta-box">
+                        <h2 class="cta-title">AI料金の管理ルールまで含めて導入したい企業へ</h2>
+                        <p class="cta-text">MIRAINAでは、生成AI導入、プロジェクト設計、運用ルール、社内定着まで一体で支援します。</p>
+                        <a href="/contact.html" class="cta-button">相談してみる</a>
+                    </div>
+                </div>
+
+                <div class="article-references">
+                    <h3>参考情報</h3>
+                    <ul>
+                        <li><a href="https://developers.openai.com/api/docs/changelog" target="_blank" rel="noopener">OpenAI API Changelog</a></li>
+                        <li><a href="https://developers.openai.com/api/docs/guides/spend-limits" target="_blank" rel="noopener">OpenAI Developers: Spend limits</a></li>
+                        <li><a href="https://developers.openai.com/api/docs/guides/admin-apis" target="_blank" rel="noopener">OpenAI Developers: Admin APIs</a></li>
+                        <li><a href="https://developers.openai.com/api/docs/guides/production-best-practices" target="_blank" rel="noopener">OpenAI Developers: Production best practices</a></li>
+                        <li><a href="https://developers.openai.com/api/docs/guides/rate-limits" target="_blank" rel="noopener">OpenAI Developers: Rate limits</a></li>
+                    </ul>
+                </div>
+
+                <div class="article-editor">
+                    <div class="editor-header">この記事を監修した人</div>
+                    <div class="editor-profile">
+                        <div class="editor-image">
+                            <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                        </div>
+                        <div class="editor-info">
+                            <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                            <p class="editor-desc">
+                                MIRAINA代表。中小企業向けに生成AI活用支援、AI研修、AI開発、LLMO対策を提供。
+                                現場の業務棚卸しからAI活用の定着、社内ルール設計まで一貫して支援している。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="related-articles">
+                    <h3>関連記事</h3>
+                    <div class="related-grid">
+                        <a href="/blogs/blog169.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card169.webp" alt="ChatGPT Enterpriseの利用分析強化を解説した記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年6月最新】ChatGPT Enterpriseの利用分析強化でAI導入管理はどう変わるか</div>
+                        </a>
+                        <a href="/blogs/blog165.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card165.webp" alt="GitHub Copilot従量課金化を解説した記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年6月最新】GitHub Copilot従量課金化でAI開発コスト管理はどう変わるか</div>
+                        </a>
+                        <a href="/blogs/blog211.html" class="related-card">
+                            <img src="/images/blogs_images/blog-card211.webp" alt="AI導入ROIの測り方を解説した記事"
+                                loading="lazy" decoding="async">
+                            <div class="related-card-title">【2026年7月最新】AI導入ROIはどう測る？成功タスク単価で判断する4指標</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <a href="/" class="footer-logo">MIRAINA</a>
+                    <p class="footer-text">AIの力で、ビジネスに革新を。</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Site Map</h4>
+                        <ul>
+                            <li><a href="/">ホーム</a></li>
+                            <li><a href="/services.html">サービス</a></li>
+                            <li><a href="/works.html">事例紹介</a></li>
+                            <li><a href="/blogs.html">ブログ</a></li>
+                            <li><a href="/about.html">会社概要</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="/services/ai_consulting.html">生成AI活用支援</a></li>
+                            <li><a href="/services/ai_training.html">AI研修</a></li>
+                            <li><a href="/services/ai_develop.html">AI開発</a></li>
+                            <li><a href="/services/llmo_insight.html">LLMO Insight</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MIRAINA. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>
