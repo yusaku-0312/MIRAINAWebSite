@@ -252,6 +252,8 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年7月最新】Anthropic Economic Index connectorで職種別AI活用の調べ方はどう変わるか](https://miraina-ai.com/blogs/blog224.html): Anthropicの2026年7月22日の公式発表と6月26日のCadencesレポートをもとに、職種別AI活用の調べ方、初心者の検索意図、自社導入前の確認点を整理した記事。
 - [最新ブログ: 【2026年7月最新】AI×ニューロダイバーシティ｜働きやすい職場をつくる5つの支援](https://miraina-ai.com/blogs/blog225.html): Google WorkspaceとUnderstood.orgの2026年公式情報をもとに、着手・集中・記憶・伝達をAIで支える5つの方法と、全社員が選べる安全な運用ルールを整理した記事。
 - [最新ブログ: 【2026年7月最新】OpenAI hard spend limitsとは？AI料金の使いすぎを止める設定方法](https://miraina-ai.com/blogs/blog226.html): OpenAIの2026年7月22日の公式情報をもとに、hard spend limits、spend alertsとの違い、429で止まる条件、AI料金の上限設定手順を整理した記事。
+- [最新ブログ: 【2026年7月最新】Beyond Zeroとは？AIエージェントの全操作を認可する新構想](https://miraina-ai.com/blogs/blog227.html): Googleの2026年7月27日の公式発表と基礎論文をもとに、Beyond Zeroの5原則、操作単位の継続的認可、Microsoft Project Perceptionとの違い、中小企業が整えるべき権限・承認ルールを整理した記事。
+- [最新ブログ: 【2026年7月最新】Google Meetの議事録と録画はどこ？Drive自動整理で迷わない会議運用](https://miraina-ai.com/blogs/blog228.html): Googleの2026年7月21日・22日の公式発表とGoogle Meet Helpをもとに、議事録・文字起こし・録画の保存先、共有範囲、会議AIの運用ルールを中小企業向けに整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)

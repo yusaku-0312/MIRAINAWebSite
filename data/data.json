@@ -2033,6 +2033,24 @@
       "thumbnail": "/images/blogs_images/blog-card226.webp",
       "alt": "OpenAI hard spend limitsでAI料金の使いすぎを止めるイメージ",
       "date": "2026-07-27"
+    },
+    {
+      "id": 227,
+      "title": "【2026年7月最新】Beyond Zeroとは？AIエージェントの全操作を認可する新構想",
+      "description": "Beyond ZeroをGoogle公式情報から解説。AIエージェントの操作を資源単位で都度認可する5原則、Project Perceptionとの違い、中小企業の4対策を紹介します。",
+      "link": "/blogs/blog227.html",
+      "thumbnail": "/images/blogs_images/blog-card227.webp",
+      "alt": "Beyond ZeroでAIエージェントの操作を資源単位で認可するイメージ",
+      "date": "2026-07-28"
+    },
+    {
+      "id": 228,
+      "title": "【2026年7月最新】Google Meetの議事録と録画はどこ？Drive自動整理で迷わない会議運用",
+      "description": "Google Meetの議事録の保存先をGoogle公式情報から解説。2026年7月のDrive自動整理で録画・文字起こしはどこに入るのか、共有範囲と運用の注意点を紹介します。",
+      "link": "/blogs/blog228.html",
+      "thumbnail": "/images/blogs_images/blog-card228.webp",
+      "alt": "Google Meetの議事録と録画の保存先がGoogle Driveで整理されるイメージ",
+      "date": "2026-07-28"
     }
   ],
   "works": [
