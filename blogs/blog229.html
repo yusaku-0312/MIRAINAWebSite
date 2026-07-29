@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){window.dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年7月最新】Google DocsのGemini画像生成とは？資料の図解とコメント整理をAIで進める方法 | MIRAINAブログ</title>
+    <meta name="description"
+        content="Google DocsのGemini画像生成を公式情報から解説。2026年7月28日の新機能、図解作成、コメント整理、利用条件、社内展開の進め方を紹介します。">
+    <meta property="og:title" content="【2026年7月最新】Google DocsのGemini画像生成とは？資料の図解とコメント整理をAIで進める方法">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog229.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog229-1.webp">
+    <meta property="og:description"
+        content="Google DocsのGemini画像生成を公式情報から解説。2026年7月28日の新機能、図解作成、コメント整理、利用条件、社内展開の進め方を紹介します。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>Google DocsのGemini画像生成とは？資料の図解とコメント整理をAIで進める方法</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.07.29</span>
+                    <div class="article-tags" style="flex-wrap: wrap; justify-content: center;">
+                        <p class="article-tag">Google Docs</p>
+                        <p class="article-tag">Gemini</p>
+                        <p class="article-tag">資料作成AI</p>
+                        <p class="article-tag">業務効率化</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap: anywhere;">【2026年7月最新】Google DocsのGemini画像生成とは？資料の図解とコメント整理をAIで進める方法</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog229-1.webp"
+                        alt="Google DocsのGemini画像生成で資料の図解とコメント整理を進めるイメージ"
+                        width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    AIが苦手な人ほど、資料作成で止まりやすいのは
+                    「図をどう入れるか」と「レビューコメントをどう返すか」の2点です。
+                    本文は書けても、見せ方と修正対応に時間がかかるためです。
+                </p>
+                <p>
+                    Google Workspace Updates は <strong>2026年7月28日</strong>、
+                    Google Docs で <strong>Geminiによる画像生成・編集</strong> と
+                    <strong>コメント整理ワークフロー</strong> を同日に公開しました。
+                    この記事では次の3点を整理します。
+                </p>
+                <ul>
+                    <li>Google DocsのGemini画像生成で何ができるのか</li>
+                    <li>コメント整理まで同じ画面で進められると何が変わるのか</li>
+                    <li>AIが苦手な人の検索語と、AI利用者の実務プロンプトをどう設計するか</li>
+                </ul>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. Google DocsのGemini画像生成とは？できること</a></li>
+                    <li><a href="#section2">2. コメント整理機能で何が変わるか</a></li>
+                    <li><a href="#section3">3. AIが苦手な人はどう検索し、AI利用者は何を頼むか</a></li>
+                    <li><a href="#section4">4. そのまま使えるプロンプト例</a></li>
+                    <li><a href="#section5">5. 利用条件と注意点</a></li>
+                    <li><a href="#section6">6. 中小企業の資料作成フローへどう組み込むか</a></li>
+                    <li><a href="#section7">7. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. Google DocsのGemini画像生成とは？できること</h2>
+                <p>
+                    Googleは<strong>2026年7月28日</strong>、
+                    Google Docs 内で Gemini を使って
+                    <strong>画像、図解、インフォグラフィックを生成・編集できる機能</strong>を公開しました。
+                    重要なのは、外部の画像生成ツールへ移動せず、
+                    <strong>今書いているドキュメントの文脈を使ったまま</strong>図版を作れる点です。
+                </p>
+                <p>
+                    公式発表では、提案書の冒頭に概要図を入れる、
+                    既存ビジュアルの縦横比を変える、
+                    ドキュメント全体の雰囲気に合わせてスタイルを調整する、
+                    主要セクションごとに複数の図版を追加するといった使い方が挙げられています。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>公式に示された機能</th>
+                                <th>できること</th>
+                                <th>現場での意味</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>文脈を使った画像生成</th>
+                                <td>ドキュメント内容を踏まえて図解やインフォグラフィックを作る</td>
+                                <td>提案書の内容とズレにくい図版をその場で作れる</td>
+                            </tr>
+                            <tr>
+                                <th>既存ビジュアルの編集</th>
+                                <td>自然文で比率や見た目を調整する</td>
+                                <td>作り直しではなく軽い修正で済ませやすい</td>
+                            </tr>
+                            <tr>
+                                <th>複数図版の一括生成</th>
+                                <td>各セクション向けの図版追加やまとめてスタイル変更ができる</td>
+                                <td>資料全体の整合を取りながら時短しやすい</td>
+                            </tr>
+                            <tr>
+                                <th>Docs内完結</th>
+                                <td>bottom bar と side panel から操作する</td>
+                                <td>別アプリ往復が減り、非デザイナーでも使いやすい</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <figure class="article-figure">
+                    <img src="/images/blogs_images/blog229-2.webp"
+                        alt="Google Workspace UpdatesでGoogle DocsのGemini画像生成機能が紹介されている画面"
+                        loading="lazy" decoding="async">
+                    <figcaption>図1：Google Workspace Updates は2026年7月28日、Google DocsでGeminiを使った画像生成・編集を公開した（出典：Google Workspace Updates）</figcaption>
+                </figure>
+
+                <h2 id="section2">2. コメント整理機能で何が変わるか</h2>
+                <p>
+                    同じく<strong>2026年7月28日</strong>に公開されたのが、
+                    Google Docs の <strong>Gemini-powered comment workflows</strong> です。
+                    こちらは画像生成そのものではありませんが、
+                    資料作成フローを一気通貫にする意味で非常に相性が良い更新です。
+                </p>
+                <p>
+                    公式発表では、Gemini がコメントスレッドを要約し、
+                    未解決論点を抽出し、新しいコメントを追加し、
+                    既存コメントへの返信案を作り、さらにレビュー内容を踏まえた文面修正案まで出せるとされています。
+                    つまり、図を入れて終わりではなく、
+                    <strong>レビュー対応まで Docs の中で進めやすくなる</strong>わけです。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>機能</th>
+                                <th>公式の説明</th>
+                                <th>実務で便利な場面</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>コメント要約</th>
+                                <td>コメントの要点や未解決事項を整理する</td>
+                                <td>修正依頼が多い提案書や議事メモの見直し</td>
+                            </tr>
+                            <tr>
+                                <th>新規コメント追加</th>
+                                <td>Geminiが代わりに確認依頼コメントを入れる</td>
+                                <td>数値確認や担当者アサインを漏らしにくい</td>
+                            </tr>
+                            <tr>
+                                <th>返信案作成</th>
+                                <td>既存スレッドに対する文脈つき返信を下書きする</td>
+                                <td>社内レビューや共同提案のやり取りを速める</td>
+                            </tr>
+                            <tr>
+                                <th>文面修正提案</th>
+                                <td>レビュー内容を踏まえた編集案を出す</td>
+                                <td>直し方が曖昧なコメントを具体作業へ落とせる</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <figure class="article-figure">
+                    <img src="/images/blogs_images/blog229-3.webp"
+                        alt="Google Workspace UpdatesでGoogle DocsのGeminiコメント整理機能が紹介されている画面"
+                        loading="lazy" decoding="async">
+                    <figcaption>図2：Google Workspace Updates は同日、Google Docsのコメント要約・返信案・修正提案機能も公開した（出典：Google Workspace Updates）</figcaption>
+                </figure>
+
+                <h2 id="section3">3. AIが苦手な人はどう検索し、AI利用者は何を頼むか</h2>
+                <p>
+                    今回のテーマが強いのは、機能名そのものより
+                    <strong>仕事の困りごとに直結した検索語</strong>が想定しやすいからです。
+                    AIが苦手な人は「Gemini image generation in Docs」とは検索せず、
+                    作業ベースで調べるはずです。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>困りごと</th>
+                                <th>検索語やAIへの聞き方</th>
+                                <th>AIが引用しやすい一次情報</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>図をすぐ入れたい</th>
+                                <td>Google Docs AI 画像 / 提案書の図をAIで作る方法</td>
+                                <td>2026年7月28日のGoogle Workspace Updates、Google Docs Help</td>
+                            </tr>
+                            <tr>
+                                <th>レビュー返信が面倒</th>
+                                <td>Google Docs コメント まとめる / コメント返信をAIで作れる？</td>
+                                <td>2026年7月28日のコメント workflows 発表</td>
+                            </tr>
+                            <tr>
+                                <th>ツールを増やしたくない</th>
+                                <td>Google Docsだけで資料作成 AI / Docsで図解と修正まで終える方法</td>
+                                <td>同日の2本のGoogle Workspace Updates記事</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    つまりこの記事の狙いは、検索流入だけではありません。
+                    AIに聞いた時にも引用されやすいよう、
+                    疑問文ベースの検索意図と、
+                    そのまま使えるプロンプト設計を同じ記事内に置くことにあります。
+                    これは <a href="/services/llmo_insight.html">LLMO Insight</a> の観点でも重要です。
+                </p>
+
+                <h2 id="section4">4. そのまま使えるプロンプト例</h2>
+                <p>
+                    Google DocsのGemini画像生成は、単に「画像を作って」と頼むより、
+                    誰向け資料か、何を伝えたいか、どの見せ方が欲しいかまで含めると精度が上がります。
+                    コメント整理も、未解決事項、返信トーン、修正優先度を渡すと実務に乗りやすくなります。
+                </p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-dot red"></span>
+                        <span class="code-block-dot yellow"></span>
+                        <span class="code-block-dot green"></span>
+                        <span class="code-block-label">prompt examples</span>
+                    </div>
+                    <pre><code>1. 提案書の要点から図解を作る
+この提案書の内容をもとに、
+経営者向けに一目で伝わる横長の図解を作ってください。
+文字は少なめ、流れがわかる構成にしてください。
+
+2. 未解決コメントを要約する
+このドキュメントのコメントを読み、
+未解決の論点だけを3項目で整理してください。
+誰の確認が必要かも書いてください。
+
+3. 返信案と本文修正案を同時に作る
+コメント内容を踏まえて、
+返信案を丁寧な日本語で作ってください。
+そのうえで本文の修正版も提案してください。
+</code></pre>
+                </div>
+
+                <h2 id="section5">5. 利用条件と注意点</h2>
+                <p>
+                    便利そうに見えても、すぐ全員が同じように使えるとは限りません。
+                    今回の発表で確認しておくべき条件は次の通りです。
+                </p>
+
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>公式情報</th>
+                                <th>実務で見るべき点</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>対応環境</th>
+                                <td>画像生成・編集機能は <strong>web only</strong></td>
+                                <td>スマホや一部アプリ前提で社内展開しない</td>
+                            </tr>
+                            <tr>
+                                <th>管理者側条件</th>
+                                <td>Gemini for Workspace in Drive が有効なら既定で利用可能</td>
+                                <td>管理者設定の確認が先</td>
+                            </tr>
+                            <tr>
+                                <th>利用者側条件</th>
+                                <td>Workspace smart features を有効にする必要がある</td>
+                                <td>使えない人が出た時の確認ポイントになる</td>
+                            </tr>
+                            <tr>
+                                <th>コメント機能の権限</th>
+                                <td>コメント workflows は <strong>edit access</strong> が必要</td>
+                                <td>閲覧権限だけの人は同じ操作をできない</td>
+                            </tr>
+                            <tr>
+                                <th>ロールアウト</th>
+                                <td>2026年7月28日開始、最大15日で段階展開</td>
+                                <td>同じ会社でも表示時差があり得る</td>
+                            </tr>
+                            <tr>
+                                <th>対象プラン</th>
+                                <td>Business Standard / Plus、Enterprise Standard / Plus、Education Plus ほか</td>
+                                <td>個人と法人で前提プランを分けて案内する</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    さらに、Googleは Gemini in Docs のデータ保護に関するヘルプも案内しています。
+                    社内資料や顧客向け提案書で使う前に、
+                    どのプランでどの管理設定が必要かを確認してから始めるのが安全です。
+                </p>
+
+                <h2 id="section6">6. 中小企業の資料作成フローへどう組み込むか</h2>
+                <p>
+                    中小企業でこの機能を活かすなら、
+                    「画像生成を試す」ではなく
+                    <strong>資料作成フローのどこを短縮するか</strong>で考えるのが現実的です。
+                    MIRAINAなら、次の4段階での導入を勧めます。
+                </p>
+
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">Docsで本文の初稿を作る</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">本文内容からGeminiで図解やインフォグラフィックを追加する</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">レビューコメントをGeminiで要約し、返信案と修正文を出す</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">人が承認して完成版へまとめる</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">本文作成、図解、レビュー反映を1本の流れとして設計すると、AIが苦手な人でも使いどころが明確になります。</p>
+                </div>
+
+                <p>
+                    自社の資料テンプレートやレビュー基準まで整理したい場合は、
+                    <a href="/services/ai_consulting.html">生成AI活用支援</a>で
+                    業務フロー、権限、プロンプト、定着ルールをまとめて設計する方法が向いています。
+                    AI導入の成果は、機能数よりも
+                    <strong>現場が迷わず同じ流れで使えるか</strong>で決まります。
+                </p>
+
+                <h2 id="section7">7. まとめ</h2>
+                <p>
+                    Google Docs の Gemini画像生成は、
+                    2026年7月28日の更新で
+                    <strong>文章の文脈を使って図解や画像を作り、既存ビジュアルも自然文で直せる機能</strong>として公開されました。
+                    同日にコメント整理ワークフローも加わったことで、
+                    資料作成は「本文生成だけ」から
+                    「図解追加とレビュー反映まで」を一つの場所で進めやすくなっています。
+                </p>
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">AIで資料作成フローを整えたい企業へ</h2>
+                    <p class="cta-text">MIRAINAでは、図解生成、レビュー運用、AI研修、資料テンプレート整備まで一体で支援します。</p>
+                    <a href="/contact.html" class="cta-button">相談してみる</a>
+                </div>
+            </div>
+
+            <div class="article-references">
+                <h3>参考情報</h3>
+                <ul>
+                    <li><a href="https://workspaceupdates.googleblog.com/2026/07/generate-and-edit-visuals-with-gemini-in-Google-Docs.html" target="_blank" rel="noopener">Google Workspace Updates: Generate and edit visuals with Gemini in Google Docs</a></li>
+                    <li><a href="https://workspaceupdates.googleblog.com/2026/07/streamline-collaboration-in-google-docs-with-Gemini-powered-comment-workflows.html" target="_blank" rel="noopener">Google Workspace Updates: Streamline collaboration in Google Docs with Gemini-powered comment workflows</a></li>
+                    <li><a href="https://support.google.com/docs/answer/15559738?hl=en" target="_blank" rel="noopener">Google Docs Editors Help: Learn how to generate an image with Gemini in Google Docs</a></li>
+                    <li><a href="https://support.google.com/docs/answer/14615114?hl=en" target="_blank" rel="noopener">Google Docs Editors Help: Learn how Gemini in Gmail, Calendar, Chat, Docs, Drive, Sheets, Slides, Meet &amp; Vids protects your data</a></li>
+                </ul>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            MIRAINA代表。中小企業向けに生成AI活用支援、AI研修、AI開発、LLMO対策を提供。
+                            現場の業務棚卸しからAI活用の定着、社内ルール設計まで一貫して支援している。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="related-articles">
+                <h3>関連記事</h3>
+                <div class="related-grid">
+                    <a href="/blogs/blog220.html" class="related-card">
+                        <img src="/images/blogs_images/blog-card220.webp" alt="GoogleスライドのGeminiを解説した記事"
+                            loading="lazy" decoding="async">
+                        <div class="related-card-title">【2026年7月最新】GoogleスライドのGeminiで資料作成はどう変わるか</div>
+                    </a>
+                    <a href="/blogs/blog222.html" class="related-card">
+                        <img src="/images/blogs_images/blog-card222.webp" alt="Google VidsのGemini Omni Flashを解説した記事"
+                            loading="lazy" decoding="async">
+                        <div class="related-card-title">【2026年7月最新】Google VidsのGemini Omni Flashで動画編集はどう変わるか</div>
+                    </a>
+                    <a href="/blogs/blog228.html" class="related-card">
+                        <img src="/images/blogs_images/blog-card228.webp" alt="Google Meetの議事録保存先を解説した記事"
+                            loading="lazy" decoding="async">
+                        <div class="related-card-title">【2026年7月最新】Google Meetの議事録と録画はどこ？Drive自動整理で迷わない会議運用</div>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <a href="/" class="footer-logo">MIRAINA</a>
+                    <p class="footer-text">AIの力で、ビジネスに革新を。</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Site Map</h4>
+                        <ul>
+                            <li><a href="/">ホーム</a></li>
+                            <li><a href="/services.html">サービス</a></li>
+                            <li><a href="/works.html">事例紹介</a></li>
+                            <li><a href="/blogs.html">ブログ</a></li>
+                            <li><a href="/about.html">会社概要</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="/services/ai_consulting.html">生成AI活用支援</a></li>
+                            <li><a href="/services/ai_training.html">AI研修</a></li>
+                            <li><a href="/services/ai_develop.html">AI開発</a></li>
+                            <li><a href="/services/llmo_insight.html">LLMO Insight</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MIRAINA. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+</body>
+
+</html>
