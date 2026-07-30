@@ -2060,6 +2060,24 @@
       "thumbnail": "/images/blogs_images/blog-card229.webp",
       "alt": "Google DocsのGemini画像生成で資料の図解とコメント整理を進める方法",
       "date": "2026-07-29"
+    },
+    {
+      "id": 230,
+      "title": "【2026年7月最新】GoogleのAI電話代行とは？店舗が今から整えるべき情報",
+      "description": "GoogleのAI電話代行を公式情報から解説。米国のGoogle Search／AI Modeで顧客に代わり店舗へ在庫や価格を確認する仕組みと、国内事業者が整えるべき情報を紹介します。",
+      "link": "/blogs/blog230.html",
+      "thumbnail": "/images/blogs_images/blog-card230.webp",
+      "alt": "GoogleのAI電話代行と店舗情報整備を解説するイメージ",
+      "date": "2026-07-30"
+    },
+    {
+      "id": 231,
+      "title": "【2026年7月最新】Google Meetの議事録にスライドは入る？Geminiの画面キャプチャ設定を整理",
+      "description": "Google Meetの議事録にスライドが入る新機能をGoogle公式情報から解説。Geminiの画面キャプチャ条件、録画との関係、管理者設定を紹介します。",
+      "link": "/blogs/blog231.html",
+      "thumbnail": "/images/blogs_images/blog-card231.webp",
+      "alt": "Google Meetの議事録にスライドが入る新機能と設定を解説するイメージ",
+      "date": "2026-07-30"
     }
   ],
   "works": [
