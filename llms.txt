@@ -257,6 +257,8 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年7月最新】Google DocsのGemini画像生成とは？資料の図解とコメント整理をAIで進める方法](https://miraina-ai.com/blogs/blog229.html): Googleの2026年7月28日の公式発表をもとに、Google DocsのGemini画像生成、コメント整理、利用条件、AIが苦手な人の検索意図と実務プロンプトを整理した記事。
 - [最新ブログ: 【2026年7月最新】GoogleのAI電話代行とは？店舗が今から整えるべき情報](https://miraina-ai.com/blogs/blog230.html): Googleの2026年7月24日更新の公式情報をもとに、米国のGoogle Search／AI Modeで顧客に代わって店舗へ在庫や価格を確認するAI電話代行と、日本の小売・美容事業者が整えるべき店舗情報を整理した記事。
 - [最新ブログ: 【2026年7月最新】Google Meetの議事録にスライドは入る？Geminiの画面キャプチャ設定を整理](https://miraina-ai.com/blogs/blog231.html): Googleの2026年7月27日の公式発表をもとに、Google Meetの議事録へスライドを含めるvisual screenshots、録画との関係、管理者設定、AIが苦手な人の検索意図とプロンプトを整理した記事。
+- [最新ブログ: 【2026年7月最新】EU AI ActのAI表示ルール、海外向け発信で中小企業が決める3つのこと](https://miraina-ai.com/blogs/blog232.html): EU AI ActのAI生成コンテンツ表示ルールを公式情報から解説。2026年8月の透明性義務、対象となる発信、海外向け広告・SNSで中小企業が決める運用を整理した記事。
+- [最新ブログ: 【2026年8月最新】Google FormsのGeminiクイズ作成とは？研修テストを速く作る方法](https://miraina-ai.com/blogs/blog233.html): Googleの2026年7月30日の公式発表をもとに、Google FormsのGeminiクイズ作成、PDFやDocsからの問題生成、利用条件、社内研修への使い方を整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)

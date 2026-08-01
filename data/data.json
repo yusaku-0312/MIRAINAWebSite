@@ -2078,6 +2078,24 @@
       "thumbnail": "/images/blogs_images/blog-card231.webp",
       "alt": "Google Meetの議事録にスライドが入る新機能と設定を解説するイメージ",
       "date": "2026-07-30"
+    },
+    {
+      "id": 232,
+      "title": "【2026年7月最新】EU AI ActのAI表示ルール、海外向け発信で中小企業が決める3つのこと",
+      "description": "EU AI ActのAI生成コンテンツ表示ルールを公式情報から解説。2026年8月の透明性義務、対象となる発信、海外向け広告・SNSで中小企業が決める運用を紹介します。",
+      "link": "/blogs/blog232.html",
+      "thumbnail": "/images/blogs_images/blog-card232.webp",
+      "alt": "EU AI ActのAI表示ルールと海外向け発信の確認をするイメージ",
+      "date": "2026-07-31"
+    },
+    {
+      "id": 233,
+      "title": "【2026年8月最新】Google FormsのGeminiクイズ作成とは？研修テストを速く作る方法",
+      "description": "Google FormsのGeminiクイズ作成を公式情報から解説。PDFやDocsからの問題生成、利用条件、社内研修への使い方を紹介します。",
+      "link": "/blogs/blog233.html",
+      "thumbnail": "/images/blogs_images/blog-card233.webp",
+      "alt": "Google FormsのGeminiクイズ作成で研修テストを速く作るイメージ",
+      "date": "2026-08-01"
     }
   ],
   "works": [
