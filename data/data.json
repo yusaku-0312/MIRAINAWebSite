@@ -2096,6 +2096,24 @@
       "thumbnail": "/images/blogs_images/blog-card233.webp",
       "alt": "Google FormsのGeminiクイズ作成で研修テストを速く作るイメージ",
       "date": "2026-08-01"
+    },
+    {
+      "id": 234,
+      "title": "【2026年8月最新】AI活用で職種の境界はどう変わる？OpenAI調査で中小企業が決めること",
+      "description": "AI活用で職種の境界がどう変わるかをOpenAIの80万件超の調査から解説。中小企業で広がる職種横断タスクと、任せる範囲・レビュー責任の決め方を紹介します。",
+      "link": "/blogs/blog234.html",
+      "thumbnail": "/images/blogs_images/blog-card234.webp",
+      "alt": "AI活用で職種横断の業務を安全に進める中小企業のイメージ",
+      "date": "2026-08-02"
+    },
+    {
+      "id": 235,
+      "title": "【2026年8月最新】Google DocsのGeminiコメント整理とは？レビュー対応を速くする方法",
+      "description": "Google DocsのGeminiコメント整理を公式情報から解説。コメント要約、返信案、修正提案でレビュー対応を速くする使い方と注意点を紹介します。",
+      "link": "/blogs/blog235.html",
+      "thumbnail": "/images/blogs_images/blog-card235.webp",
+      "alt": "Google DocsのGeminiコメント整理でレビュー対応を速くするイメージ",
+      "date": "2026-08-02"
     }
   ],
   "works": [

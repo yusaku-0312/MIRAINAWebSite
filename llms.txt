@@ -259,6 +259,8 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年7月最新】Google Meetの議事録にスライドは入る？Geminiの画面キャプチャ設定を整理](https://miraina-ai.com/blogs/blog231.html): Googleの2026年7月27日の公式発表をもとに、Google Meetの議事録へスライドを含めるvisual screenshots、録画との関係、管理者設定、AIが苦手な人の検索意図とプロンプトを整理した記事。
 - [最新ブログ: 【2026年7月最新】EU AI ActのAI表示ルール、海外向け発信で中小企業が決める3つのこと](https://miraina-ai.com/blogs/blog232.html): EU AI ActのAI生成コンテンツ表示ルールを公式情報から解説。2026年8月の透明性義務、対象となる発信、海外向け広告・SNSで中小企業が決める運用を整理した記事。
 - [最新ブログ: 【2026年8月最新】Google FormsのGeminiクイズ作成とは？研修テストを速く作る方法](https://miraina-ai.com/blogs/blog233.html): Googleの2026年7月30日の公式発表をもとに、Google FormsのGeminiクイズ作成、PDFやDocsからの問題生成、利用条件、社内研修への使い方を整理した記事。
+- [最新ブログ: 【2026年8月最新】AI活用で職種の境界はどう変わる？OpenAI調査で中小企業が決めること](https://miraina-ai.com/blogs/blog234.html): OpenAIの2026年7月27日公表・80万件超の調査をもとに、AI活用で広がる職種横断タスク、調査の限界、中小企業が決める任せる範囲とレビュー責任を整理した記事。
+- [最新ブログ: 【2026年8月最新】Google DocsのGeminiコメント整理とは？レビュー対応を速くする方法](https://miraina-ai.com/blogs/blog235.html): Googleの2026年7月28日の公式発表とGoogle Helpをもとに、Google DocsのGeminiコメント整理、要約・返信案・修正提案、レビュー対応を速くする使い方と注意点を整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)
