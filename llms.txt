@@ -261,6 +261,8 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年8月最新】Google FormsのGeminiクイズ作成とは？研修テストを速く作る方法](https://miraina-ai.com/blogs/blog233.html): Googleの2026年7月30日の公式発表をもとに、Google FormsのGeminiクイズ作成、PDFやDocsからの問題生成、利用条件、社内研修への使い方を整理した記事。
 - [最新ブログ: 【2026年8月最新】AI活用で職種の境界はどう変わる？OpenAI調査で中小企業が決めること](https://miraina-ai.com/blogs/blog234.html): OpenAIの2026年7月27日公表・80万件超の調査をもとに、AI活用で広がる職種横断タスク、調査の限界、中小企業が決める任せる範囲とレビュー責任を整理した記事。
 - [最新ブログ: 【2026年8月最新】Google DocsのGeminiコメント整理とは？レビュー対応を速くする方法](https://miraina-ai.com/blogs/blog235.html): Googleの2026年7月28日の公式発表とGoogle Helpをもとに、Google DocsのGeminiコメント整理、要約・返信案・修正提案、レビュー対応を速くする使い方と注意点を整理した記事。
+- [最新ブログ: 【2026年8月最新】DiffusionGemmaとは？4倍高速な生成AIを試す判断基準](https://miraina-ai.com/blogs/blog236.html): Google公式情報をもとに、DiffusionGemmaのテキスト拡散方式、最大4倍の生成速度、必要GPU、中小企業がPoC前に確認すべき判断基準を整理した記事。
+- [最新ブログ: 【2026年8月最新】ChatGPT無料版のThinkボタンとは？仕事で失敗しない使い分け](https://miraina-ai.com/blogs/blog237.html): OpenAIの2026年8月6日の公式発表をもとに、ChatGPT無料版のThinkボタン、GPT-5.6 Luna、無料版で任せやすい仕事と使い分けを整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)

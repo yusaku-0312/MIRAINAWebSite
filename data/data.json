@@ -2114,6 +2114,24 @@
       "thumbnail": "/images/blogs_images/blog-card235.webp",
       "alt": "Google DocsのGeminiコメント整理でレビュー対応を速くするイメージ",
       "date": "2026-08-02"
+    },
+    {
+      "id": 236,
+      "title": "【2026年8月最新】DiffusionGemmaとは？4倍高速な生成AIを試す判断基準",
+      "description": "DiffusionGemmaをGoogle公式情報から解説。最大4倍の生成速度、必要GPU、既存Gemmaとの違い、中小企業がPoC前に確認すべき点を紹介します。",
+      "link": "/blogs/blog236.html",
+      "thumbnail": "/images/blogs_images/blog-card236.webp",
+      "alt": "DiffusionGemmaの速度と中小企業の導入判断を解説するイメージ",
+      "date": "2026-08-04"
+    },
+    {
+      "id": 237,
+      "title": "【2026年8月最新】ChatGPT無料版のThinkボタンとは？仕事で失敗しない使い分け",
+      "description": "ChatGPT無料版のThinkボタンをOpenAI公式情報から解説。GPT-5.6 Lunaとの関係、無料版で任せやすい仕事、使い分けと注意点を紹介します。",
+      "link": "/blogs/blog237.html",
+      "thumbnail": "/images/blogs_images/blog-card237.webp",
+      "alt": "ChatGPT無料版のThinkボタンと仕事での使い分けを解説するイメージ",
+      "date": "2026-08-09"
     }
   ],
   "works": [
