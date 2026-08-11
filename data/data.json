@@ -2132,6 +2132,33 @@
       "thumbnail": "/images/blogs_images/blog-card237.webp",
       "alt": "ChatGPT無料版のThinkボタンと仕事での使い分けを解説するイメージ",
       "date": "2026-08-09"
+    },
+    {
+      "id": 238,
+      "title": "【2026年8月最新】子どものChatGPT利用ルール｜保護者が決める5項目",
+      "description": "子どものChatGPT利用ルールをOpenAI×APAの公式発表から解説。ペアレンタルコントロール、家庭・学校で決めたい5項目、安全な相談先を紹介します。",
+      "link": "/blogs/blog238.html",
+      "thumbnail": "/images/blogs_images/blog-card238.webp",
+      "alt": "子どものChatGPT利用ルールを保護者向けに解説するイメージ",
+      "date": "2026-08-10"
+    },
+    {
+      "id": 239,
+      "title": "【2026年8月最新】経理AI導入の5原則｜OpenAIの財務部門に学ぶ",
+      "description": "経理AI導入をOpenAIの財務部門の実践から解説。5原則、ゼロデイ決算、承認ルール、ROI指標、中小企業が始める手順を紹介します。",
+      "link": "/blogs/blog239.html",
+      "thumbnail": "/images/blogs_images/blog-card239.webp",
+      "alt": "経理AI導入の5原則と財務ワークフロー設計を解説するイメージ",
+      "date": "2026-08-11"
+    },
+    {
+      "id": 240,
+      "title": "【2026年8月最新】Google Analytics Ask Advisorとは？広告レポートを速く読む方法",
+      "description": "Google Analytics Ask AdvisorをGoogle公式情報から解説。Google Ads/Analyticsの新AI機能、レポート要約、ベンチマーク、使う前の注意点を紹介します。",
+      "link": "/blogs/blog240.html",
+      "thumbnail": "/images/blogs_images/blog-card240.webp",
+      "alt": "Google Analytics Ask Advisorで広告レポートを速く読むイメージ",
+      "date": "2026-08-11"
     }
   ],
   "works": [

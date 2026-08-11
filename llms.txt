@@ -263,6 +263,9 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年8月最新】Google DocsのGeminiコメント整理とは？レビュー対応を速くする方法](https://miraina-ai.com/blogs/blog235.html): Googleの2026年7月28日の公式発表とGoogle Helpをもとに、Google DocsのGeminiコメント整理、要約・返信案・修正提案、レビュー対応を速くする使い方と注意点を整理した記事。
 - [最新ブログ: 【2026年8月最新】DiffusionGemmaとは？4倍高速な生成AIを試す判断基準](https://miraina-ai.com/blogs/blog236.html): Google公式情報をもとに、DiffusionGemmaのテキスト拡散方式、最大4倍の生成速度、必要GPU、中小企業がPoC前に確認すべき判断基準を整理した記事。
 - [最新ブログ: 【2026年8月最新】ChatGPT無料版のThinkボタンとは？仕事で失敗しない使い分け](https://miraina-ai.com/blogs/blog237.html): OpenAIの2026年8月6日の公式発表をもとに、ChatGPT無料版のThinkボタン、GPT-5.6 Luna、無料版で任せやすい仕事と使い分けを整理した記事。
+- [最新ブログ: 【2026年8月最新】子どものChatGPT利用ルール｜保護者が決める5項目](https://miraina-ai.com/blogs/blog238.html): OpenAIと米国心理学会（APA）の2026年8月6日の発表をもとに、子どものChatGPT利用ルール、ペアレンタルコントロール、家庭・学校で決めたい5項目を整理した記事。
+- [最新ブログ: 【2026年8月最新】経理AI導入の5原則｜OpenAIの財務部門に学ぶ](https://miraina-ai.com/blogs/blog239.html): OpenAIの2026年8月10日の公式発表をもとに、経理AI導入の5原則、財務ワークフロー、承認ルール、ROI指標を中小企業向けに整理した記事。
+- [最新ブログ: 【2026年8月最新】Google Analytics Ask Advisorとは？広告レポートを速く読む方法](https://miraina-ai.com/blogs/blog240.html): Googleの2026年8月10日の公式発表とGoogle Analytics Helpをもとに、Google Analytics Ask Advisor、AI Overviews、広告レポートを速く読む使い方と注意点を整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)
