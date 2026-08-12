@@ -2159,6 +2159,24 @@
       "thumbnail": "/images/blogs_images/blog-card240.webp",
       "alt": "Google Analytics Ask Advisorで広告レポートを速く読むイメージ",
       "date": "2026-08-11"
+    },
+    {
+      "id": 241,
+      "title": "【2026年8月最新】AIの生物安全対策とは？Claude Fable 5のフォールバック85%減を解説",
+      "description": "AIの生物安全対策をClaude Fable 5の公式発表から解説。フォールバック85%減の意味と、医療・教育・企業での安全な使い分けを紹介します。",
+      "link": "/blogs/blog241.html",
+      "thumbnail": "/images/blogs_images/blog-card241.webp",
+      "alt": "AIの生物安全対策とClaude Fable 5の安全な使い分けを解説するイメージ",
+      "date": "2026-08-12"
+    },
+    {
+      "id": 242,
+      "title": "【2026年8月最新】ChatGPT広告が日本で開始、集客設計で今変わる3つのこと",
+      "description": "ChatGPT広告の日本開始をOpenAI公式情報から解説。表示対象、回答との分離、Ads Managerの利用可否、企業が今変える集客設計を紹介します。",
+      "link": "/blogs/blog242.html",
+      "thumbnail": "/images/blogs_images/blog-card242.webp",
+      "alt": "ChatGPT広告が日本で開始し集客設計が変わるイメージ",
+      "date": "2026-08-12"
     }
   ],
   "works": [

@@ -266,6 +266,8 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年8月最新】子どものChatGPT利用ルール｜保護者が決める5項目](https://miraina-ai.com/blogs/blog238.html): OpenAIと米国心理学会（APA）の2026年8月6日の発表をもとに、子どものChatGPT利用ルール、ペアレンタルコントロール、家庭・学校で決めたい5項目を整理した記事。
 - [最新ブログ: 【2026年8月最新】経理AI導入の5原則｜OpenAIの財務部門に学ぶ](https://miraina-ai.com/blogs/blog239.html): OpenAIの2026年8月10日の公式発表をもとに、経理AI導入の5原則、財務ワークフロー、承認ルール、ROI指標を中小企業向けに整理した記事。
 - [最新ブログ: 【2026年8月最新】Google Analytics Ask Advisorとは？広告レポートを速く読む方法](https://miraina-ai.com/blogs/blog240.html): Googleの2026年8月10日の公式発表とGoogle Analytics Helpをもとに、Google Analytics Ask Advisor、AI Overviews、広告レポートを速く読む使い方と注意点を整理した記事。
+- [最新ブログ: 【2026年8月最新】AIの生物安全対策とは？Claude Fable 5のフォールバック85%減を解説](https://miraina-ai.com/blogs/blog241.html): Anthropicの2026年8月7日の公式発表をもとに、AIの生物安全対策、Fable 5のフォールバック85%減、企業が決める利用ルールを整理した記事。
+- [最新ブログ: 【2026年8月最新】ChatGPT広告が日本で開始、集客設計で今変わる3つのこと](https://miraina-ai.com/blogs/blog242.html): OpenAIの2026年8月11日の公式更新とHelp Centerをもとに、ChatGPT広告の日本開始、表示対象、回答との分離、Ads Managerの利用可否、集客設計の変化を整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)
