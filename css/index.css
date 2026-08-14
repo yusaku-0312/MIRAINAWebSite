@@ -9,7 +9,7 @@
     align-items: center;
     position: relative;
     overflow: hidden;
-    background-image: url('/images/hero_bg_wide.png');
+    background-image: url('/images/hero_bg_wide.webp');
     background-size: cover;
     background-position: center;
 }

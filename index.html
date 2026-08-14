@@ -24,9 +24,16 @@
     <!-- Design System: Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
+    <link rel="preload" as="style"
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
-        rel="stylesheet">
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap">
+    </noscript>
+
+    <!-- LCP background -->
+    <link rel="preload" as="image" href="/images/hero_bg_wide.webp" type="image/webp" fetchpriority="high">
 
     <!-- Favicon -->
     <link rel="icon" href="/images/favicon.ico">
@@ -91,7 +98,8 @@
         <div class="container header-inner">
             <a href="/" class="header-logo">
                 <!-- Assuming logo exists or using text fallback for now if image broken -->
-                <img src="/images/company-logo.webp" alt="MIRAINAのロゴ" width="120" height="40">
+                <img src="/images/company-logo.webp" alt="MIRAINAのロゴ" width="164" height="40"
+                    fetchpriority="high">
             </a>
 
             <div class="hamburger" id="js-hamburger">
@@ -594,7 +602,7 @@
     </div>
 
     <!-- JavaScript -->
-    <script src="js/common.js"></script>
+    <script src="js/common.js" defer></script>
 
 </body>
 
