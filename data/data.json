@@ -2195,6 +2195,96 @@
       "thumbnail": "/images/blogs_images/blog-card244.webp",
       "alt": "ChatGPTのGoogle Drive個人同期停止と管理者対応を整理するイメージ",
       "date": "2026-08-14"
+    },
+    {
+      "id": 245,
+      "title": "【2026年8月最新】Gemini Sparkとは？経営層が導入前に決める5項目",
+      "description": "Gemini Sparkとは何かをGoogle公式情報から解説。AIエージェントの機能、活用例、提供条件、経営層が決める権限・承認・KPIを紹介します。",
+      "link": "/blogs/blog245.html",
+      "thumbnail": "/images/blogs_images/blog-card245.webp",
+      "alt": "Gemini Sparkの機能と経営層の導入判断を解説するイメージ",
+      "date": "2026-08-14"
+    },
+    {
+      "id": 246,
+      "title": "【2026年8月最新】Gemini Spark Skillsの作り方｜属人業務を標準化",
+      "description": "Gemini Spark Skillsの作り方をGoogle公式情報から解説。指示・判断基準・テンプレートを再利用し、属人業務を標準化する手順を紹介します。",
+      "link": "/blogs/blog246.html",
+      "thumbnail": "/images/blogs_images/blog-card246.webp",
+      "alt": "Gemini Spark Skillsの作り方と属人業務の標準化を解説するイメージ",
+      "date": "2026-08-14"
+    },
+    {
+      "id": 247,
+      "title": "【2026年8月最新】Gemini Spark Tasksの使い方｜仕事を任せる指示例",
+      "description": "Gemini Spark Tasksの使い方を解説。作成・進捗確認・削除の手順と、調査・メール整理・会議準備に使える具体的な指示例を紹介します。",
+      "link": "/blogs/blog247.html",
+      "thumbnail": "/images/blogs_images/blog-card247.webp",
+      "alt": "Gemini Spark Tasksの使い方と仕事を任せる指示例",
+      "date": "2026-08-14"
+    },
+    {
+      "id": 248,
+      "title": "【2026年8月最新】Gemini Sparkスケジュールの使い方｜定期・メール・監視を自動化",
+      "description": "Gemini Sparkスケジュールの使い方を解説。時刻指定、Gmail受信、トピック監視の違いと設定手順、安全な指示例を紹介します。",
+      "link": "/blogs/blog248.html",
+      "thumbnail": "/images/blogs_images/blog-card248.webp",
+      "alt": "Gemini Sparkスケジュールで定期・メール・監視を自動化するイメージ",
+      "date": "2026-08-14"
+    },
+    {
+      "id": 249,
+      "title": "【2026年8月最新】Gemini Sparkのアプリ連携｜Gmail・Drive・Calendar活用",
+      "description": "Gemini Sparkのアプリ連携を解説。Gmail・Drive・Calendar・Docs・Sheetsなどの接続手順、できる操作、安全な指示例を紹介します。",
+      "link": "/blogs/blog249.html",
+      "thumbnail": "/images/blogs_images/blog-card249.webp",
+      "alt": "Gemini SparkとGmail・Drive・Calendarのアプリ連携を解説するイメージ",
+      "date": "2026-08-14"
+    },
+    {
+      "id": 250,
+      "title": "【2026年8月最新】Gemini Sparkカスタムアプリとは？MCPの接続手順と安全対策",
+      "description": "Gemini Sparkカスタムアプリとは何かを解説。MCPサーバーURLの接続手順、標準アプリとの違い、データ共有リスクと安全対策を紹介します。",
+      "link": "/blogs/blog250.html",
+      "thumbnail": "/images/blogs_images/blog-card250.webp",
+      "alt": "Gemini SparkカスタムアプリとMCPの接続手順を解説するイメージ",
+      "date": "2026-08-14"
+    },
+    {
+      "id": 251,
+      "title": "【2026年8月最新】Gemini Sparkの始め方｜利用条件・初期設定・最初のタスク",
+      "description": "Gemini Sparkの始め方を解説。日本での利用条件、対応プラン、Keep Activityとアプリ接続、最初のTaskを安全に試す手順を紹介します。",
+      "link": "/blogs/blog251.html",
+      "thumbnail": "/images/blogs_images/blog-card251.webp",
+      "alt": "Gemini Sparkの利用条件と初期設定を解説するイメージ",
+      "date": "2026-08-14"
+    },
+    {
+      "id": 252,
+      "title": "【2026年8月最新】Gemini SparkのTasks・Schedules・Skillsの違い｜業務自動化の設計法",
+      "description": "Gemini SparkのTasks・Schedules・Skillsの違いを解説。何を・いつ・どの手順で動かすかを分け、安全な業務自動化を設計する方法を紹介します。",
+      "link": "/blogs/blog252.html",
+      "thumbnail": "/images/blogs_images/blog-card252.webp",
+      "alt": "Gemini SparkのTasks・Schedules・Skillsの違いを解説するイメージ",
+      "date": "2026-08-14"
+    },
+    {
+      "id": 253,
+      "title": "【2026年8月最新】Gemini Sparkで競合・市場ニュースを自動監視する方法",
+      "description": "Gemini Sparkで競合・市場ニュースを自動監視する方法を解説。トピックモニターの設定、指示テンプレート、情報源と通知条件の決め方を紹介します。",
+      "link": "/blogs/blog253.html",
+      "thumbnail": "/images/blogs_images/blog-card253.webp",
+      "alt": "Gemini Sparkで競合と市場ニュースを自動監視する方法を解説するイメージ",
+      "date": "2026-08-14"
+    },
+    {
+      "id": 254,
+      "title": "【2026年8月最新】Gemini Sparkで営業対応を自動化｜Gmail・Sheets・Drive連携",
+      "description": "Gemini Sparkで営業対応を自動化する方法を解説。Gmailの問い合わせからSheetsへの顧客記録、Driveフォルダ作成、返信案までを紹介します。",
+      "link": "/blogs/blog254.html",
+      "thumbnail": "/images/blogs_images/blog-card254.webp",
+      "alt": "Gemini SparkでGmail・Sheets・Driveを連携し営業対応を自動化するイメージ",
+      "date": "2026-08-14"
     }
   ],
   "works": [

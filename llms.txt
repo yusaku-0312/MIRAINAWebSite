@@ -270,6 +270,16 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年8月最新】ChatGPT広告が日本で開始、集客設計で今変わる3つのこと](https://miraina-ai.com/blogs/blog242.html): OpenAIの2026年8月11日の公式更新とHelp Centerをもとに、ChatGPT広告の日本開始、表示対象、回答との分離、Ads Managerの利用可否、集客設計の変化を整理した記事。
 - [最新ブログ: 【2026年8月最新】ChatGPTのレストラン予約が開始、店舗が整える5項目](https://miraina-ai.com/blogs/blog243.html): OpenAIの2026年8月10日の公式更新とHelp Centerをもとに、ChatGPTのレストラン予約、日本での対応範囲、予約の流れ、飲食店が整える5項目を整理した記事。
 - [最新ブログ: 【2026年8月最新】ChatGPTのGoogle Drive個人同期が停止、管理者が14日までに確認すべき3点](https://miraina-ai.com/blogs/blog244.html): OpenAIの2026年8月10日と2026年8月14日の公式情報をもとに、ChatGPTのGoogle Drive個人同期停止、管理者同期への切替、未定コネクタ対応を整理した記事。
+- [最新ブログ: 【2026年8月最新】Gemini Sparkとは？経営層が導入前に決める5項目](https://miraina-ai.com/blogs/blog245.html): Googleの公式発表とGemini Apps Helpをもとに、Gemini Sparkの機能、提供条件、経営層が決める対象業務・データ境界・承認点・KPI・責任者を整理した記事。
+- [最新ブログ: 【2026年8月最新】Gemini Spark Skillsの作り方｜属人業務を標準化](https://miraina-ai.com/blogs/blog246.html): Gemini Spark Skillsの作成手順、指示テンプレート、テスト方法をGoogle公式情報から解説し、属人業務を標準化する方法を整理した記事。
+- [最新ブログ: 【2026年8月最新】Gemini Spark Tasksの使い方｜仕事を任せる指示例](https://miraina-ai.com/blogs/blog247.html): Gemini Spark Tasksの作成・管理・削除と、会議準備、営業フォロー、調査に使える具体的な指示例を整理した記事。
+- [最新ブログ: 【2026年8月最新】Gemini Sparkスケジュールの使い方｜定期・メール・監視を自動化](https://miraina-ai.com/blogs/blog248.html): 時刻指定、Gmail受信、トピック監視の3種類と、安全なスケジュールの作り方・運用ルールを整理した記事。
+- [最新ブログ: 【2026年8月最新】Gemini Sparkのアプリ連携｜Gmail・Drive・Calendar活用](https://miraina-ai.com/blogs/blog249.html): Gmail、Calendar、Drive、Docs、SheetsなどのConnected Appsでできる操作、接続手順、部門別の指示例を整理した記事。
+- [最新ブログ: 【2026年8月最新】Gemini Sparkカスタムアプリとは？MCPの接続手順と安全対策](https://miraina-ai.com/blogs/blog250.html): 添付画面にあるMCPサーバーURLの登録機能、標準アプリとの違い、接続・切断手順、第三者サーバーへデータを渡す際の安全対策を整理した記事。
+- [最新ブログ: 【2026年8月最新】Gemini Sparkの始め方｜利用条件・初期設定・最初のタスク](https://miraina-ai.com/blogs/blog251.html): 日本での利用条件、対応プラン、Keep Activity、Connected Apps、最初に試す低リスクTaskを順番に整理した記事。
+- [最新ブログ: 【2026年8月最新】Gemini SparkのTasks・Schedules・Skillsの違い｜業務自動化の設計法](https://miraina-ai.com/blogs/blog252.html): Taskは何を、Scheduleはいつ、Skillはどう進めるかという役割分担と、安全な業務自動化を組み立てる設計法を整理した記事。
+- [最新ブログ: 【2026年8月最新】Gemini Sparkで競合・市場ニュースを自動監視する方法](https://miraina-ai.com/blogs/blog253.html): トピックモニターの設定、監視対象・情報源・通知条件・出力形式の決め方、競合と市場動向を追う指示テンプレートを整理した記事。
+- [最新ブログ: 【2026年8月最新】Gemini Sparkで営業対応を自動化｜Gmail・Sheets・Drive連携](https://miraina-ai.com/blogs/blog254.html): Gmailの問い合わせ抽出、Sheetsへの顧客記録、Driveフォルダ作成、返信案までをつなぐ営業対応フローと安全策を整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)
