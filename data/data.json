@@ -2285,6 +2285,15 @@
       "thumbnail": "/images/blogs_images/blog-card254.webp",
       "alt": "Gemini SparkでGmail・Sheets・Driveを連携し営業対応を自動化するイメージ",
       "date": "2026-08-14"
+    },
+    {
+      "id": 255,
+      "title": "【実例】Gemini SparkでGoogle Driveのアクセス権監査を効率化",
+      "description": "Gemini SparkでGoogle Driveのアクセス権監査を効率化した実例を紹介。共有相手・権限を一覧化する指示文と確認ポイントを解説します。",
+      "link": "/blogs/blog255.html",
+      "thumbnail": "/images/blogs_images/blog-card255.webp",
+      "alt": "Gemini SparkでGoogle Driveのアクセス権監査を効率化する実例",
+      "date": "2026-08-15"
     }
   ],
   "works": [

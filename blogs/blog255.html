@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-W9BLFVJ8E4');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【実例】Gemini SparkでGoogle Driveのアクセス権監査を効率化 | MIRAINAブログ</title>
+    <meta name="description" content="Gemini SparkでGoogle Driveのアクセス権監査を効率化した実例を紹介。共有相手・権限を一覧化する指示文と確認ポイントを解説します。">
+    <meta name="keywords" content="Gemini Spark アクセス権監査,Google Drive 権限一覧,共有設定">
+    <link rel="canonical" href="https://miraina-ai.com/blogs/blog255.html">
+    <meta property="og:title" content="【実例】Gemini SparkでGoogle Driveのアクセス権監査を効率化">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog255.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog255-1.webp">
+    <meta property="og:description" content="Gemini SparkでGoogle Driveのアクセス権監査を効率化した実例を紹介。共有相手・権限を一覧化する指示文と確認ポイントを解説します。">
+    <meta property="og:site_name" content="MIRAINA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="【実例】Gemini SparkでGoogle Driveのアクセス権監査を効率化">
+    <meta name="twitter:description" content="Driveの共有相手と権限を一覧化する実践手順。">
+    <meta name="twitter:image" content="https://miraina-ai.com/images/blogs_images/blog255-1.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Shippori+Mincho:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"【実例】Gemini SparkでGoogle Driveのアクセス権監査を効率化","description":"Gemini SparkでGoogle Driveのアクセス権監査を効率化した実例を紹介。共有相手・権限を一覧化する指示文と確認ポイントを解説します。","image":"https://miraina-ai.com/images/blogs_images/blog255-1.webp","datePublished":"2026-08-15","dateModified":"2026-08-15","author":{"@type":"Person","name":"芝 優作"},"publisher":{"@type":"Organization","name":"MIRAINA","url":"https://miraina-ai.com/"},"mainEntityOfPage":"https://miraina-ai.com/blogs/blog255.html"}</script>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo"><img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40"></a>
+            <div class="hamburger" id="js-hamburger"><span></span><span></span><span></span></div>
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+            </nav>
+        </div>
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>Gemini SparkでGoogle Driveのアクセス権監査</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.08.15</span>
+                    <div class="article-tags" style="flex-wrap:wrap;justify-content:center;">
+                        <p class="article-tag">Gemini Spark</p>
+                        <p class="article-tag">Google Drive</p>
+                        <p class="article-tag">アクセス権監査</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap:anywhere;">【実例】Gemini SparkでGoogle Driveのアクセス権監査を効率化</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog255-1.webp" alt="Gemini SparkでGoogle Driveのアクセス権監査を効率化する実例" width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>Google Driveの共有設定を見直したくても、ファイルを一つずつ開いて「誰が閲覧・編集できるか」を確認するのは大変です。今回、<strong>Gemini Sparkでアクセス権監査</strong>を試し、Drive内の各ファイルについて、共有相手と権限を一覧として整理できました。</p>
+                <p>この記事では、実際にできたことを基に、監査表の設計、そのまま使える指示文、外部共有や公開リンクを見つける確認方法を解説します。成功結果だけでなく、取得範囲や権限継承、個人情報を扱う際の注意点も整理します。</p>
+                <ul>
+                    <li>Gemini SparkでDrive権限を棚卸しした実例</li>
+                    <li>「1ファイル×1権限」で整理する監査表</li>
+                    <li>読み取り専用で実行する指示テンプレート</li>
+                    <li>外部共有・公開リンク・強い権限の見つけ方</li>
+                </ul>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. Gemini Sparkで実際にできたアクセス権監査</a></li>
+                    <li><a href="#section2">2. 監査表に入れる項目</a></li>
+                    <li><a href="#section3">3. そのまま使える指示テンプレート</a></li>
+                    <li><a href="#section4">4. 監査結果から優先確認する共有設定</a></li>
+                    <li><a href="#section5">5. 漏れと情報流出を防ぐ注意点</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. Gemini Sparkで実際にできたアクセス権監査</h2>
+                <p>今回の検証では、Gemini Sparkへ「Google Drive内の各ファイルについて、誰にどの権限が付いているかを取得して整理する」と依頼し、アクセス権の一覧を作成できました。人が共有ダイアログを順番に開く作業を、ファイル探索、権限情報の取得、表形式への整形という一つの流れにまとめた実例です。</p>
+                <p>Googleの公式ヘルプでは、SparkはDriveのファイル検索、内容の読み取り、メタデータ確認、最近使った文書の確認に加え、Sheetsの作成・編集ができると案内されています。今回のような棚卸しは、<a href="/blogs/blog249.html">Google Workspaceのアプリ連携</a>と、複数工程を進めるTaskを組み合わせる使い方です。</p>
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step"><span class="step-num">Step 01</span><span class="step-text">対象Driveと範囲を指定</span></li>
+                        <li class="process-step"><span class="step-num">Step 02</span><span class="step-text">ファイル一覧を取得</span></li>
+                        <li class="process-step"><span class="step-num">Step 03</span><span class="step-text">共有相手・権限を展開</span></li>
+                        <li class="process-step"><span class="step-num">Step 04</span><span class="step-text">監査用Sheetへ整理</span></li>
+                        <li class="process-step"><span class="step-num">Step 05</span><span class="step-text">要注意設定を抽出</span></li>
+                    </ul>
+                    <p class="diagram-caption">ファイル一覧と権限一覧を分けず、「1ファイル×1権限」の行へ展開すると確認しやすくなります。</p>
+                </div>
+
+                <h2 id="section2">2. 監査表に入れる項目</h2>
+                <p>監査表は、一つのファイルに複数の共有相手がいる場合、相手ごとに行を分けます。ファイル名だけの一覧では「誰が編集できるのか」を絞り込めません。最低限、ファイル名、URL、保存場所、オーナー、権限対象、対象種別、権限レベル、直接付与か継承か、確認結果を用意します。</p>
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead><tr><th>列</th><th>記録内容</th><th>監査で分かること</th></tr></thead>
+                        <tbody>
+                            <tr><th>ファイル</th><td>名前、URL、種類、保存場所</td><td>対象と親フォルダを特定</td></tr>
+                            <tr><th>権限対象</th><td>ユーザー、グループ、ドメイン、全員</td><td>誰に公開されているか</td></tr>
+                            <tr><th>権限</th><td>オーナー、編集、コメント、閲覧</td><td>操作できる範囲</td></tr>
+                            <tr><th>付与経路</th><td>直接付与、親・共有Driveから継承</td><td>どこを直すべきか</td></tr>
+                            <tr><th>判定</th><td>社内、社外、公開、要確認</td><td>対応の優先順位</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>Drive APIでは権限対象をuser・group・domain・anyone、役割をowner・organizer・fileOrganizer・writer・commenter・readerなどで表します。また共有Driveでは、上位から継承した権限かどうかも確認できます。この情報を日本語の表示名へ置き換えると、非エンジニアでも判断しやすい台帳になります。</p>
+
+                <h2 id="section3">3. そのまま使える指示テンプレート</h2>
+                <p>権限変更を伴わないよう、目的と禁止操作を最初に明示します。さらに「すべて確認して」だけで終わらせず、対象、列、完了条件、エラー時の扱いまで指定することが重要です。</p>
+                <div class="code-block"><pre><code>Google Driveのアクセス権を読み取り専用で監査してください。
+
+対象：現在のアカウントでアクセスできるマイドライブと指定した共有ドライブ
+除外：ゴミ箱内のファイル
+
+1. ファイルとフォルダを列挙する
+2. 各項目の共有相手と権限を取得する
+3. 1ファイル×1権限を1行としてGoogleスプレッドシートへ整理する
+4. 列は、ファイル名、URL、種類、保存場所、オーナー、共有相手、
+   対象種別、権限、直接付与・継承、外部共有判定、確認メモとする
+5. 「全員」「組織ドメイン」「社外ユーザー」「編集以上」を別シートへ抽出する
+6. 最後に、取得ファイル数、権限行数、取得失敗数、未処理範囲を報告する
+
+禁止：共有設定の変更、通知、ファイルの移動・改名・削除、既存データの上書き
+取得できない項目は推測せず「取得不可」と記録してください。</code></pre></div>
+                <p>最初はテスト用フォルダで試し、期待した列と判定が出るか確認します。その後、対象をマイドライブ、共有Driveの順に広げます。作業手順を再利用するなら<a href="/blogs/blog252.html">TaskとSkillを分けて設計</a>し、列定義や判定基準をSkillへ保存すると、次回も同じ形式で監査できます。</p>
+
+                <h2 id="section4">4. 監査結果から優先確認する共有設定</h2>
+                <p>一覧を作るだけでは改善につながりません。最初に確認したいのは、リンクを知っている全員または一般公開、社外ドメイン、編集権限、不要になったユーザー・グループです。特に契約書、顧客情報、人事、請求に関するフォルダは、閲覧権限でも対象者が適切かを確認します。</p>
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead><tr><th>優先度</th><th>検出条件</th><th>人が確認する内容</th></tr></thead>
+                        <tbody>
+                            <tr><th>高</th><td>anyone・一般公開</td><td>公開が業務上必要か</td></tr>
+                            <tr><th>高</th><td>社外ユーザーの編集権限</td><td>契約・案件が継続中か</td></tr>
+                            <tr><th>中</th><td>個人への直接付与</td><td>グループ管理へ置き換えられるか</td></tr>
+                            <tr><th>中</th><td>親フォルダからの継承</td><td>上位フォルダの共有範囲が適切か</td></tr>
+                            <tr><th>確認</th><td>取得不可・所有者不明</td><td>権限不足か処理漏れか</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>MIRAINAの視点では、AIに権限を一括変更させるのではなく、AIは検出と整理、人は業務上の必要性の判断を担当する形が安全です。まず要注意候補を抽出し、ファイルの責任者へ確認してから変更します。監査表には「対応要否」「確認者」「確認日」「対応期限」を追加すると、棚卸しが実務の改善タスクへ変わります。</p>
+
+                <h2 id="section5">5. 漏れと情報流出を防ぐ注意点</h2>
+                <p>第一に、Sparkが確認できる範囲は接続アカウントのアクセス範囲に依存します。Googleは、Geminiが利用者と同じWorkspaceデータのアクセス条件に従い、管理者設定やファイル所有者の制限によってはDriveファイルを利用できない場合があると説明しています。個人の結果を、会社全体の完全な監査結果とみなさないでください。</p>
+                <p>第二に、全件性を件数で照合します。Drive APIのファイル一覧と共有Driveの権限一覧はページ分割される場合があるため、取得件数、次ページの処理、失敗件数、未処理範囲を完了報告に含めます。ファイル数が多い場合は共有Drive単位、部署フォルダ単位に分割します。</p>
+                <p>第三に、監査表自体を厳重に扱います。共有相手の氏名、メールアドレス、フォルダ名は機密情報になり得ます。出力先を限定し、外部共有しない、記事やチャットへ実データを貼らない、不要になった監査表を保管ルールに従って削除する、といった運用が必要です。Sparkは開発途上の機能であり、重要な処理では進行状況と結果を人が確認します。</p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>今回の実例では、Gemini SparkでGoogle Drive内のファイルと共有相手・権限を整理し、アクセス権監査を効率化できました。再現のポイントは、1ファイル×1権限で表を作ること、読み取り専用を明示すること、外部共有・公開・編集権限を別途抽出すること、最後に件数と未処理範囲を照合することです。</p>
+                <p>AIは「探す・展開する・分類する」を支援できますが、アクセスが本当に必要かという判断は業務責任者が行います。まず小さなテストフォルダで試し、正確性と安全性を確認してから対象範囲を広げてください。</p>
+                <p>MIRAINAの<a href="/services/ai_training.html#single">Gemini Spark活用研修</a>は、1回90〜120分・5万円です。自社のDrive構成を想定し、アクセス権監査を含むTask、Skills、確認ルールを安全に設計します。</p>
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">Gemini Sparkを安全な業務監査へ活用したい方へ</h2>
+                    <p class="cta-text">対象範囲、出力項目、禁止操作、確認ルールまで、自社向けのTaskとして設計します。</p>
+                    <a href="/services/ai_training.html#single" class="cta-button">Gemini Spark活用研修を見る</a>
+                </div>
+            </div>
+
+            <div class="article-references">
+                <h3>参考情報</h3>
+                <ul>
+                    <li><a href="https://support.google.com/gemini/answer/17094507?hl=en" target="_blank" rel="noopener">Google Gemini Apps Help: Use Gemini Spark to manage tasks &amp; workflows</a></li>
+                    <li><a href="https://support.google.com/a/users/answer/17010577?hl=en" target="_blank" rel="noopener">Google Workspace Learning Center: What controls Gemini’s access to Workspace data</a></li>
+                    <li><a href="https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions/list" target="_blank" rel="noopener">Google Drive API: permissions.list</a></li>
+                    <li><a href="https://developers.google.com/workspace/drive/api/reference/rest/v3/permissions" target="_blank" rel="noopener">Google Drive API: Permission resource</a></li>
+                </ul>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image"><img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async"></div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">九州を拠点に中小企業のAI活用支援に従事。業務フローに合わせたAI導入、AI研修、LLMO対策まで、現場で続く仕組みづくりを支援しています。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog249.html" class="related-card">
+                        <div class="related-img"><img src="/images/blogs_images/blog-card249.webp" alt="Gemini Sparkのアプリ連携｜Gmail・Drive・Calendar活用" loading="lazy" decoding="async"></div>
+                        <div class="related-content"><div class="related-date">2026.08.14</div><div class="related-text">Gemini Sparkのアプリ連携｜Gmail・Drive・Calendar活用</div></div>
+                    </a>
+                    <a href="/blogs/blog252.html" class="related-card">
+                        <div class="related-img"><img src="/images/blogs_images/blog-card252.webp" alt="Gemini SparkのTasks・Schedules・Skillsの違い｜業務自動化の設計法" loading="lazy" decoding="async"></div>
+                        <div class="related-content"><div class="related-date">2026.08.14</div><div class="related-text">Gemini SparkのTasks・Schedules・Skillsの違い｜業務自動化の設計法</div></div>
+                    </a>
+                    <a href="/blogs/blog254.html" class="related-card">
+                        <div class="related-img"><img src="/images/blogs_images/blog-card254.webp" alt="Gemini Sparkで営業対応を自動化｜Gmail・Sheets・Drive連携" loading="lazy" decoding="async"></div>
+                        <div class="related-content"><div class="related-date">2026.08.14</div><div class="related-text">Gemini Sparkで営業対応を自動化｜Gmail・Sheets・Drive連携</div></div>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand"><a href="/index.html"><p class="footer-brand-text">MIRAINA</p></a></div>
+            <div class="footer-center"></div>
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns"><a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a><a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a></div>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>&copy; MIRAINA All Rights Reserved.</p></div>
+    </footer>
+    <script src="/js/common.js"></script>
+    <script>document.addEventListener('DOMContentLoaded',()=>{const h=document.getElementById('js-hamburger'),m=document.getElementById('js-mobile-menu');if(h&&m)h.addEventListener('click',()=>m.classList.toggle('is-active'));});</script>
+</body>
+</html>

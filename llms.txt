@@ -280,6 +280,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年8月最新】Gemini SparkのTasks・Schedules・Skillsの違い｜業務自動化の設計法](https://miraina-ai.com/blogs/blog252.html): Taskは何を、Scheduleはいつ、Skillはどう進めるかという役割分担と、安全な業務自動化を組み立てる設計法を整理した記事。
 - [最新ブログ: 【2026年8月最新】Gemini Sparkで競合・市場ニュースを自動監視する方法](https://miraina-ai.com/blogs/blog253.html): トピックモニターの設定、監視対象・情報源・通知条件・出力形式の決め方、競合と市場動向を追う指示テンプレートを整理した記事。
 - [最新ブログ: 【2026年8月最新】Gemini Sparkで営業対応を自動化｜Gmail・Sheets・Drive連携](https://miraina-ai.com/blogs/blog254.html): Gmailの問い合わせ抽出、Sheetsへの顧客記録、Driveフォルダ作成、返信案までをつなぐ営業対応フローと安全策を整理した記事。
+- [最新ブログ: 【実例】Gemini SparkでGoogle Driveのアクセス権監査を効率化](https://miraina-ai.com/blogs/blog255.html): Drive内の共有相手と権限を読み取り専用で一覧化し、外部共有・公開リンク・強い権限を見つける指示と確認方法を整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)
