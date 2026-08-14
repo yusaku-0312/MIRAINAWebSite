@@ -2186,6 +2186,15 @@
       "thumbnail": "/images/blogs_images/blog-card243.webp",
       "alt": "ChatGPTのレストラン予約と飲食店の情報整備を解説するイメージ",
       "date": "2026-08-13"
+    },
+    {
+      "id": 244,
+      "title": "【2026年8月最新】ChatGPTのGoogle Drive個人同期が停止、管理者が14日までに確認すべき3点",
+      "description": "ChatGPTのGoogle Drive個人同期停止をOpenAI公式情報から解説。8月14日に止まる範囲、管理者同期への切替、未定コネクタ対応を紹介します。",
+      "link": "/blogs/blog244.html",
+      "thumbnail": "/images/blogs_images/blog-card244.webp",
+      "alt": "ChatGPTのGoogle Drive個人同期停止と管理者対応を整理するイメージ",
+      "date": "2026-08-14"
     }
   ],
   "works": [

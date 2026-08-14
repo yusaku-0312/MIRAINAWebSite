@@ -269,6 +269,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年8月最新】AIの生物安全対策とは？Claude Fable 5のフォールバック85%減を解説](https://miraina-ai.com/blogs/blog241.html): Anthropicの2026年8月7日の公式発表をもとに、AIの生物安全対策、Fable 5のフォールバック85%減、企業が決める利用ルールを整理した記事。
 - [最新ブログ: 【2026年8月最新】ChatGPT広告が日本で開始、集客設計で今変わる3つのこと](https://miraina-ai.com/blogs/blog242.html): OpenAIの2026年8月11日の公式更新とHelp Centerをもとに、ChatGPT広告の日本開始、表示対象、回答との分離、Ads Managerの利用可否、集客設計の変化を整理した記事。
 - [最新ブログ: 【2026年8月最新】ChatGPTのレストラン予約が開始、店舗が整える5項目](https://miraina-ai.com/blogs/blog243.html): OpenAIの2026年8月10日の公式更新とHelp Centerをもとに、ChatGPTのレストラン予約、日本での対応範囲、予約の流れ、飲食店が整える5項目を整理した記事。
+- [最新ブログ: 【2026年8月最新】ChatGPTのGoogle Drive個人同期が停止、管理者が14日までに確認すべき3点](https://miraina-ai.com/blogs/blog244.html): OpenAIの2026年8月10日と2026年8月14日の公式情報をもとに、ChatGPTのGoogle Drive個人同期停止、管理者同期への切替、未定コネクタ対応を整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)

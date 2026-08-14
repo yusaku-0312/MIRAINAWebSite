@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-W9BLFVJ8E4');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年8月最新】ChatGPTのGoogle Drive個人同期が停止、管理者が14日までに確認すべき3点 | MIRAINAブログ</title>
+    <meta name="description" content="ChatGPTのGoogle Drive個人同期停止をOpenAI公式情報から解説。8月14日に止まる範囲、管理者同期への切替、未定コネクタ対応を紹介します。">
+    <meta property="og:title" content="【2026年8月最新】ChatGPTのGoogle Drive個人同期が停止、管理者が14日までに確認すべき3点">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog244.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog244-1.webp">
+    <meta property="og:description" content="ChatGPTのGoogle Drive個人同期停止をOpenAI公式情報から解説。8月14日に止まる範囲、管理者同期への切替、未定コネクタ対応を紹介します。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo"><img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40"></a>
+            <div class="hamburger" id="js-hamburger"><span></span><span></span><span></span></div>
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown"><a href="/services.html" class="nav-link">サービス</a><div class="dropdown-menu"><a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a><a href="/services/ai_training.html" class="dropdown-item">AI研修</a><a href="/services/ai_develop.html" class="dropdown-item">AI開発</a><a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a><a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a></div></div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+            </nav>
+        </div>
+        <div class="mobile-menu" id="js-mobile-menu"><nav class="mobile-nav"><div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div><div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div><div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div><div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div><div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div></nav></div>
+    </header>
+    <main>
+        <div class="container breadcrumbs"><ul><li><a href="/index.html">ホーム</a></li><li><a href="/blogs.html">ブログ</a></li><li>ChatGPTのGoogle Drive個人同期が停止、管理者が14日までに確認すべき3点</li></ul></div>
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.08.14</span>
+                    <div class="article-tags" style="flex-wrap:wrap;justify-content:center;">
+                        <p class="article-tag">ChatGPT</p>
+                        <p class="article-tag">Google Drive同期</p>
+                        <p class="article-tag">社内データ連携</p>
+                        <p class="article-tag">AI運用</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap:anywhere;">【2026年8月最新】ChatGPTのGoogle Drive個人同期が停止、管理者が14日までに確認すべき3点</h1>
+                <div class="article-thumbnail"><img src="/images/blogs_images/blog244-1.webp" alt="ChatGPTのGoogle Drive個人同期停止と管理者対応を整理するイメージ" width="800" height="450" fetchpriority="high"></div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>「ChatGPTとGoogle Driveをつないでいたのに、急に読めなくなるのか」「Enterpriseで使っていた同期は何が止まるのか」。AIが苦手な担当者ほど、機能名よりも<strong>“つながらない”“止まる”</strong>で検索しやすい論点です。</p>
+                <p>OpenAIは<strong>2026年8月10日</strong>、ChatGPT Enterprise / Edu の connected apps について、新しい individual-user sync を止め、<strong>2026年8月14日</strong> に既存の個人認証 sync を無効化し、関連データ削除を始めると案内しました。一方で、管理者同期や Google Drive プラグインそのものは残ります。この記事では、止まる範囲と、Google Drive / SharePoint / GitHub ごとの対応を整理します。</p>
+                <ul>
+                    <li>2026年8月10日と8月14日に何が変わったか</li>
+                    <li>AIが苦手な人の検索語とAIユーザーのプロンプト</li>
+                    <li>Google Drive個人同期から管理者運用へ切り替える見方</li>
+                    <li>管理者が14日までに確認すべき3点</li>
+                </ul>
+            </section>
+
+            <div class="article-toc"><div class="toc-title">目次</div><ul><li><a href="#section1">1. 2026年8月14日に何が止まるのか</a></li><li><a href="#section2">2. AIが苦手な人はどう検索し、AIユーザーはどう聞くか</a></li><li><a href="#section3">3. Google DriveとSharePointは何を切り替えるべきか</a></li><li><a href="#section4">4. 置き換え未定のコネクタをどう扱うか</a></li><li><a href="#section5">5. 管理者が14日までに確認する3点</a></li><li><a href="#section6">6. まとめ</a></li></ul></div>
+
+            <div class="article-body">
+                <h2 id="section1">1. 2026年8月14日に何が止まるのか</h2>
+                <p>OpenAIの「ChatGPT Enterprise &amp; Edu - Release Notes」は、<strong>2026年8月10日</strong> から新しい individually authorized sync connection を作れなくし、<strong>2026年8月14日</strong> に既存の individual-user sync connection を無効化し、関連する synced data の削除を始めると案内しています。ここで重要なのは、<strong>administrator-managed sync は unaffected</strong> と明記されている点です。つまり、すべての社内データ連携が終わるわけではなく、<strong>個人ごとに OAuth 接続していた同期経路</strong>が止まる、という整理です。</p>
+                <div class="article-table-wrapper"><table class="article-table"><thead><tr><th>対象</th><th>OpenAIの案内</th><th>管理者の次アクション</th></tr></thead><tbody><tr><th>Google Drive</th><td>Google Drive plugin を有効化。同期が必要なら domain-wide delegation を使う admin-managed sync を構成</td><td>個人接続のまま放置せず、管理者側の認証経路へ切り替える</td></tr><tr><th>SharePoint</th><td>SharePoint plugin を有効化。同期が必要なら admin sync を構成</td><td>個人認証で成立していた検索導線を棚卸しする</td></tr><tr><th>GitHub</th><td>non-synced GitHub plugin を有効化</td><td>同期前提の使い方をやめ、必要な読み取りだけ残す</td></tr><tr><th>GitLab Issues / Azure Boards / Basecamp</th><td>replacement plugin は availability を後日案内</td><td>代替の公開時期を前提にせず、一時運用を決める</td></tr><tr><th>Help Scout / Zoho Desk / Teamwork / Aha! / Zoho CRM / Pipedrive</th><td>affected users と workflows を特定し、synced access end を通知</td><td>業務停止しそうな人を先に洗い出し、暫定フローを作る</td></tr></tbody></table></div>
+                <p>ここで混同しやすいのが「Google Drive連携が全部なくなる」という誤解です。OpenAIの通常版 ChatGPT Release Notes では、<strong>2026年8月13日</strong> に Google Drive plugin をつないでいれば Library から Drive のファイルやフォルダを直接見られるようになったと案内しています。消えるのは一部の個人同期経路であり、<strong>Google Drive を ChatGPT で使う道そのものではありません</strong>。</p>
+
+                <h2 id="section2">2. AIが苦手な人はどう検索し、AIユーザーはどう聞くか</h2>
+                <p>今回のテーマが強いのは、AIが苦手な人とAIをもう使っている人で、入口が違うのに同じ一次情報へたどり着くからです。前者は「ChatGPT Google Drive つながらない」「SharePoint 同期 止まる」「企業版 ChatGPT 連携 使えない」と検索しやすく、後者は「今の接続経路で何が止まるか」「管理者は何に切り替えるか」をAIへ直接投げます。検索語とプロンプトの両方で拾われやすいのは、機能紹介よりも<strong>停止条件と運用変更</strong>を明示した記事です。</p>
+                <p>MIRAINAの視点では、ここは<a href="/blogs/blog210.html">ChatGPTの社内データ連携は安全？の記事</a>と役割が異なります。7月の記事が「安全に始める前提」なら、8月14日時点で現場が知りたいのは「今朝まで動いていたものが、今日からどの条件で止まるのか」です。さらに、<a href="/blogs/blog209.html">ChatGPTプラグインの記事</a>で整理した通り、いまの ChatGPT は plugin / app / sync の層が分かれているため、<strong>どの層が変わるのか</strong>を切り分けないと社内説明が破綻します。</p>
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-dot red"></span>
+                        <span class="code-block-dot yellow"></span>
+                        <span class="code-block-dot green"></span>
+                        <span class="code-block-label">prompt examples</span>
+                    </div>
+                    <pre><code>ChatGPT Enterpriseで使っていたGoogle Drive同期が
+2026年8月14日に何で止まるのか教えてください。
+個人同期と管理者同期の違いも整理してください。
+
+SharePointとGitHubは何を残して、
+何を切り替えるべきですか。
+未定のコネクタは暫定運用まで提案してください。
+
+社内向けに「何が止まり、何が残るか」を
+100文字と300文字で説明文にしてください。</code></pre>
+                </div>
+                <p>AIにこの種の質問をすると、引用されやすいのは製品紹介ページより、リリースノート、設定ガイド、管理者向け権限制御の文書です。これは LLMO の観点でも重要で、<a href="/services/llmo_insight.html">LLMO Insight</a> が扱う「AIに拾われる一次情報」の典型例でもあります。</p>
+
+                <h2 id="section3">3. Google DriveとSharePointは何を切り替えるべきか</h2>
+                <p>OpenAIの「Apps in ChatGPT」では、sync を有効にする方法として <strong>Deploy to your team</strong> と <strong>Self-service setup</strong> が案内されています。また Google Drive app with sync の設定ガイドでは、Pro / Business / Enterprise 向けに self-service と admin-managed の2経路が説明され、admin-managed では Google service account と read-only 権限を持つ admin account を使って、ユーザー個別の認証なしで同期すると書かれています。</p>
+                <p><strong>ここからは一次情報を突き合わせたMIRAINAの読み解きです。</strong> Enterprise / Edu の release note が止めると告知しているのは、既存の individually authorized sync connection です。一方で Google Drive の最新設定ガイドや 8 月 13 日の Library 更新を見ると、plugin や workspace-auth 系の経路は残っています。したがって、最も安全な解釈は、<strong>Enterprise / Edu では個人認証の legacy sync を前提にせず、管理者管理か非同期 plugin に寄せる</strong>ことです。社内説明では「Google Drive が消える」ではなく、「Google Drive の個人同期から、管理者管理の接続へ軸足を移す」と表現した方が正確です。</p>
+                <div class="diagram-container"><ul class="diagram-process"><li class="process-step"><span class="step-num">Step 01</span><span class="step-text">今つながっているアプリを Google Drive / SharePoint / GitHub / 未定群に分類する</span></li><li class="process-step"><span class="step-num">Step 02</span><span class="step-text">個人認証 sync を使っていた人と業務を洗い出す</span></li><li class="process-step"><span class="step-num">Step 03</span><span class="step-text">残すアプリは Deploy to your team や admin-managed sync に寄せる</span></li><li class="process-step"><span class="step-num">Step 04</span><span class="step-text">非同期 plugin で十分な業務は read only で再設計する</span></li></ul><p class="diagram-caption">「接続を全部戻す」のではなく、同期が必要な業務だけ管理者経路へ寄せる方が運用は安定します。</p></div>
+                <p>特に Google Drive と SharePoint は、「AIに社内文書を見せたい」のか、「毎回その場で検索できれば十分」なのかで設計が変わります。前者なら admin-managed sync、後者なら plugin の read アクセスだけでも足ります。この線引きを曖昧にすると、後から権限・監査・利用料の3点で揉めやすくなります。</p>
+
+                <h2 id="section4">4. 置き換え未定のコネクタをどう扱うか</h2>
+                <p>GitLab Issues、Azure Boards、Basecamp は replacement plugin の availability を後日知らせるとされ、Help Scout、Zoho Desk、Teamwork、Aha!、Zoho CRM、Pipedrive は、影響ユーザーとワークフローを特定して synced access 終了を通知するよう案内されています。ここでやってはいけないのは、「そのうち代替が出るだろう」と考えて説明を遅らせることです。</p>
+                <div class="article-table-wrapper"><table class="article-table"><thead><tr><th>状態</th><th>今やること</th><th>避けたい判断</th></tr></thead><tbody><tr><th>代替 plugin 待ち</th><td>依存業務を一覧化し、手作業で代替できる範囲を先に決める</td><td>公開日未定なのに自動復旧を前提にする</td></tr><tr><th>synced access 終了通知が必要</th><td>対象部署に「何が読めなくなるか」を具体的に伝える</td><td>単に「仕様変更です」で済ませる</td></tr><tr><th>非同期 plugin へ切替可能</th><td>検索・参照だけ残し、書き込みや自動取得を切り離す</td><td>旧同期と同じ期待値のまま使わせる</td></tr></tbody></table></div>
+                <p>もし顧客対応や営業パイプラインがこの群に乗っているなら、AI活用の停止よりも<strong>人のオペレーション停止</strong>が先に起こります。FAQの下書きや問い合わせ分類は、いったん CSV エクスポートや共有ドキュメント経由へ退避させる判断も現実的です。AIを止めないことより、現場の説明責任を保つことを優先してください。</p>
+
+                <h2 id="section5">5. 管理者が14日までに確認する3点</h2>
+                <p>OpenAIの管理者向け文書では、app access、RBAC、app permissions を Workspace settings から制御できます。したがって、8月14日までに最低限確認すべきなのは、接続先そのものよりも<strong>誰が・どの経路で・どの業務に使っていたか</strong>です。</p>
+                <div class="article-table-wrapper"><table class="article-table"><thead><tr><th>確認項目</th><th>見る場所</th><th>判断の基準</th></tr></thead><tbody><tr><th>1. 影響ユーザー</th><td>Workspace settings &gt; Apps と現場ヒアリング</td><td>個人認証 sync 前提の人を名前で把握できるか</td></tr><tr><th>2. 認証経路</th><td>Self-service か Deploy to your team か、admin-managed か</td><td>個人 OAuth のまま残っていないか</td></tr><tr><th>3. 権限と承認</th><td>User access / Permissions &amp; roles / App permissions</td><td>残すアプリを必要なロールだけへ絞れているか</td></tr></tbody></table></div>
+                <p>MIRAINAの視点では、この3点を確認しないまま「とりあえず再接続してください」と案内するのが最悪です。再接続で一時的に動いても、誰が何を見られるか、どの回答が社内データに依存しているか、どの app action に承認がいるかが不明なままだからです。社内ルールまで含めて整えたいなら、<a href="/services/ai_training.html">AI研修</a>で利用者向けのルール化、<a href="/services/ai_consulting.html">生成AI活用支援</a>で管理者設計まで切り分ける方が安定します。</p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>OpenAIは<strong>2026年8月10日</strong> に Enterprise / Edu の connected apps で新しい individual-user sync を止め、<strong>2026年8月14日</strong> に既存の個人同期を無効化し、関連データ削除を始めると案内しました。Google Drive や SharePoint の利用自体がなくなるわけではなく、<strong>個人認証の同期経路から、管理者管理または非同期 plugin へ寄せる</strong>のが今回の本質です。</p>
+                <p>管理者が今やるべきことは 3 つです。<strong>影響ユーザーを把握する、認証経路を切り替える、残すアプリの権限を絞る</strong>。ここを曖昧にすると、AI機能の問題ではなく、社内データ運用の問題として現場で炎上します。ChatGPT と社内データをつなぐ時代は続きますが、接続の仕方は「個人の便利さ」から「管理者の設計」へ移り始めています。</p>
+            </div>
+
+            <div class="article-cta"><div class="cta-box"><h2 class="cta-title">ChatGPTの社内データ連携を運用ルールごと整理したい方へ</h2><p class="cta-text">MIRAINAでは、アプリ連携の棚卸し、権限設計、社内向けの説明ルールづくりまで一体で支援します。</p><a href="/contact.html" class="cta-button">相談してみる</a></div></div>
+
+            <div class="article-references"><h3>参考情報</h3><ul><li><a href="https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes" target="_blank" rel="noopener">OpenAI Help Center: ChatGPT Enterprise &amp; Edu - Release Notes</a></li><li><a href="https://help.openai.com/en/articles/11487775-connectors-in-chatgpt" target="_blank" rel="noopener">OpenAI Help Center: Apps in ChatGPT</a></li><li><a href="https://help.openai.com/en/articles/10847137-chatgpt-apps-with-sync" target="_blank" rel="noopener">OpenAI Help Center: ChatGPT apps with sync</a></li><li><a href="https://help.openai.com/en/articles/10948259-google-drive-app-with-sync-self-service-setup" target="_blank" rel="noopener">OpenAI Help Center: Google Drive app with sync - Self-Service Setup</a></li><li><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">OpenAI Help Center: ChatGPT — Release Notes</a></li><li><a href="https://help.openai.com/en/articles/11509118-admin-controls-security-and-compliance-for-plugins-and-apps" target="_blank" rel="noopener">OpenAI Help Center: Admin controls, security, and compliance for plugins and apps</a></li></ul></div>
+
+            <div class="article-editor"><div class="editor-header">この記事を監修した人</div><div class="editor-profile"><div class="editor-image"><img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async"></div><div class="editor-info"><div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div><p class="editor-desc">九州を拠点に中小企業のAI活用支援に従事。業務フローに合わせたAI導入、AI研修、LLMO対策まで、現場で続く仕組みづくりを支援しています。</p></div></div></div>
+
+            <div class="article-related"><h2 class="related-title">関連記事</h2><div class="related-grid"><a href="/blogs/blog210.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card210.webp" alt="ChatGPTの社内データ連携とEKM対応を解説した記事" loading="lazy" decoding="async"></div><div class="related-content"><div class="related-date">2026.07.16</div><div class="related-text">ChatGPTの社内データ連携は安全？EKM対応で何が変わるか</div></div></a><a href="/blogs/blog209.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card209.webp" alt="ChatGPTプラグインと外部アプリ連携を解説した記事" loading="lazy" decoding="async"></div><div class="related-content"><div class="related-date">2026.07.10</div><div class="related-text">ChatGPTプラグインとは？AIに外部アプリ連携を任せる始め方</div></div></a><a href="/blogs/blog052.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card052.webp" alt="ChatGPT File LibraryとGoogle Drive統合を解説した記事" loading="lazy" decoding="async"></div><div class="related-content"><div class="related-date">2026.03.25</div><div class="related-text">ChatGPT File Libraryとは？Google Drive統合で社内資料の再利用が変わる</div></div></a></div></div>
+        </article>
+    </main>
+    <footer class="footer"><div class="container footer-inner"><div class="footer-brand"><a href="/index.html"><p class="footer-brand-text">MIRAINA</p></a></div><div class="footer-center"></div><div class="footer-menu"><ul class="footer-menu-list"><li><a href="/about.html">私たちについて</a></li><li><a href="/works.html">事例紹介</a></li><li><a href="/blogs.html">ブログ</a></li><li><a href="/contact.html">お問い合わせ</a></li><li><a href="/privacy_policy.html">プライバシーポリシー</a></li></ul><div class="footer-sns"><a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a><a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a></div></div></div><div class="footer-bottom"><p>&copy; MIRAINA All Rights Reserved.</p></div></footer>
+    <script src="/js/common.js"></script><script>document.addEventListener('DOMContentLoaded',()=>{const h=document.getElementById('js-hamburger'),m=document.getElementById('js-mobile-menu');if(h&&m)h.addEventListener('click',()=>m.classList.toggle('is-active'));});</script>
+</body>
+</html>
