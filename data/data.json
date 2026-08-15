@@ -2294,6 +2294,24 @@
       "thumbnail": "/images/blogs_images/blog-card255.webp",
       "alt": "Gemini SparkでGoogle Driveのアクセス権監査を効率化する実例",
       "date": "2026-08-15"
+    },
+    {
+      "id": 256,
+      "title": "【2026年8月最新】企業AI活用の格差が8.3倍に｜上位企業の4つの運用",
+      "description": "企業AI活用の格差をOpenAIの最新調査から解説。上位企業と一般企業の違い、Skills・連携機能の活用率、中小企業が実践する4つの運用を紹介します。",
+      "link": "/blogs/blog256.html",
+      "thumbnail": "/images/blogs_images/blog-card256.webp",
+      "alt": "企業AI活用の格差と上位企業の4つの運用を解説するイメージ",
+      "date": "2026-08-15"
+    },
+    {
+      "id": 257,
+      "title": "【2026年8月最新】Claudeの文章に透かし導入、AIで書いた文章は見分けられるのか",
+      "description": "Claude 透かしを公式情報から解説。2026年8月14日に発表されたテキストウォーターマークの仕組み、AI文章検出との違い、教育・採用・広報で決めるべき運用を紹介します。",
+      "link": "/blogs/blog257.html",
+      "thumbnail": "/images/blogs_images/blog-card257.webp",
+      "alt": "Claudeの文章透かしとAI文章検出の違いを解説するイメージ",
+      "date": "2026-08-15"
     }
   ],
   "works": [
