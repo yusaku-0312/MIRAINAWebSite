@@ -2312,6 +2312,15 @@
       "thumbnail": "/images/blogs_images/blog-card257.webp",
       "alt": "Claudeの文章透かしとAI文章検出の違いを解説するイメージ",
       "date": "2026-08-15"
+    },
+    {
+      "id": 258,
+      "title": "【2026年8月最新】Gemini Sparkで受信トレイを整理｜要約・ラベル・配信解除の運用方法",
+      "description": "Gemini Sparkで受信トレイを整理する運用を解説。要約、ラベル、配信解除、Gmailモニターの使い分けと注意点をGoogle公式情報から紹介します。",
+      "link": "/blogs/blog258.html",
+      "thumbnail": "/images/blogs_images/blog-card258.webp",
+      "alt": "Gemini Sparkで受信トレイを要約・ラベル・配信解除で整理するイメージ",
+      "date": "2026-08-15"
     }
   ],
   "works": [
