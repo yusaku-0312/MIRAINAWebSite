@@ -2321,6 +2321,24 @@
       "thumbnail": "/images/blogs_images/blog-card258.webp",
       "alt": "Gemini Sparkで受信トレイを要約・ラベル・配信解除で整理するイメージ",
       "date": "2026-08-15"
+    },
+    {
+      "id": 259,
+      "title": "【2026年8月最新】Gemini外部アプリ連携とは？Wix・Granola対応と安全な始め方",
+      "description": "Gemini 外部アプリ連携の新機能をGoogle公式情報から解説。Wix・Granolaなど13サービス、提供状況、安全な始め方を紹介します。",
+      "link": "/blogs/blog259.html",
+      "thumbnail": "/images/blogs_images/blog-card259.webp",
+      "alt": "Gemini 外部アプリ連携とWix・Granola対応を解説するイメージ",
+      "date": "2026-08-16"
+    },
+    {
+      "id": 260,
+      "title": "【2026年8月最新】Geminiで何ができる？仕事で試す3つの使い方と注意点",
+      "description": "Gemini 何ができるのかを、Googleの2026年8月11日・12日の公式発表をもとに解説。音声、画面共有、外部アプリ連携を仕事で試す3つの使い方と注意点を紹介します。",
+      "link": "/blogs/blog260.html",
+      "thumbnail": "/images/blogs_images/blog-card260.webp",
+      "alt": "Geminiで何ができるかを仕事向けに解説するイメージ",
+      "date": "2026-08-16"
     }
   ],
   "works": [

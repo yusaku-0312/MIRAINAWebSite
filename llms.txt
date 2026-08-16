@@ -284,6 +284,8 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年8月最新】企業AI活用の格差が8.3倍に｜上位企業の4つの運用](https://miraina-ai.com/blogs/blog256.html): OpenAIの企業利用調査をもとに、上位企業と一般企業の利用差、Skills・連携機能の活用率、中小企業が実践する4つの運用を整理した記事。
 - [最新ブログ: 【2026年8月最新】Claudeの文章に透かし導入、AIで書いた文章は見分けられるのか](https://miraina-ai.com/blogs/blog257.html): Anthropicの2026年8月14日の公式説明をもとに、Claude 透かしの仕組み、AI文章検出との違い、教育・採用・広報で見直すべき運用を整理した記事。
 - [最新ブログ: 【2026年8月最新】Gemini Sparkで受信トレイを整理｜要約・ラベル・配信解除の運用方法](https://miraina-ai.com/blogs/blog258.html): Google公式ヘルプをもとに、Gemini Sparkで受信トレイを整理する際の要約、ラベル、配信解除、Gmailモニターの安全な運用方法を整理した記事。
+- [最新ブログ: 【2026年8月最新】Gemini外部アプリ連携とは？Wix・Granola対応と安全な始め方](https://miraina-ai.com/blogs/blog259.html): Googleの2026年8月12日の公式発表をもとに、Wix・Granola・Otter.aiなど13サービス、Connected Appsの使い方、公開承認とデータ共有の安全対策を整理した記事。
+- [最新ブログ: 【2026年8月最新】Geminiで何ができる？仕事で試す3つの使い方と注意点](https://miraina-ai.com/blogs/blog260.html): Googleの2026年8月11日・12日の公式発表をもとに、Geminiで何ができるかを、音声・画面共有・外部アプリ連携の3分類で整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)
