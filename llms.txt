@@ -286,6 +286,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年8月最新】Gemini Sparkで受信トレイを整理｜要約・ラベル・配信解除の運用方法](https://miraina-ai.com/blogs/blog258.html): Google公式ヘルプをもとに、Gemini Sparkで受信トレイを整理する際の要約、ラベル、配信解除、Gmailモニターの安全な運用方法を整理した記事。
 - [最新ブログ: 【2026年8月最新】Gemini外部アプリ連携とは？Wix・Granola対応と安全な始め方](https://miraina-ai.com/blogs/blog259.html): Googleの2026年8月12日の公式発表をもとに、Wix・Granola・Otter.aiなど13サービス、Connected Appsの使い方、公開承認とデータ共有の安全対策を整理した記事。
 - [最新ブログ: 【2026年8月最新】Geminiで何ができる？仕事で試す3つの使い方と注意点](https://miraina-ai.com/blogs/blog260.html): Googleの2026年8月11日・12日の公式発表をもとに、Geminiで何ができるかを、音声・画面共有・外部アプリ連携の3分類で整理した記事。
+- [最新ブログ: 【2026年8月最新】Gemini Sparkで請求書処理を効率化｜Gmail・Drive・Sheetsで証憑整理](https://miraina-ai.com/blogs/blog261.html): Google公式ヘルプをもとに、Gemini Sparkで請求メール整理、DriveのPDF照合、Sheets台帳化をどう分担するかと、安全な請求書処理フローを整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)

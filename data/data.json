@@ -2339,6 +2339,15 @@
       "thumbnail": "/images/blogs_images/blog-card260.webp",
       "alt": "Geminiで何ができるかを仕事向けに解説するイメージ",
       "date": "2026-08-16"
+    },
+    {
+      "id": 261,
+      "title": "【2026年8月最新】Gemini Sparkで請求書処理を効率化｜Gmail・Drive・Sheetsで証憑整理",
+      "description": "Gemini Sparkで請求書処理を効率化する実務をGoogle公式情報ベースで解説。Gmailの請求メール整理、DriveのPDF証憑確認、Sheets台帳化までの安全な進め方を紹介します。",
+      "link": "/blogs/blog261.html",
+      "thumbnail": "/images/blogs_images/blog-card261.webp",
+      "alt": "Gemini Sparkで請求書処理と証憑整理を効率化するイメージ",
+      "date": "2026-08-20"
     }
   ],
   "works": [
