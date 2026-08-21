@@ -2348,6 +2348,15 @@
       "thumbnail": "/images/blogs_images/blog-card261.webp",
       "alt": "Gemini Sparkで請求書処理と証憑整理を効率化するイメージ",
       "date": "2026-08-20"
+    },
+    {
+      "id": 263,
+      "title": "【2026年8月最新】Gemini Sparkでプロジェクト進捗を可視化｜Drive資料から定例報告",
+      "description": "Gemini Sparkでプロジェクト進捗を可視化する実務をGoogle公式情報ベースで解説。Drive資料を横断し、定例報告の要点抽出、表整理、確認フローを進める方法を紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card263.webp",
+      "alt": "Gemini SparkでGoogle Drive資料からプロジェクト進捗を可視化するイメージ",
+      "link": "/blogs/blog263.html",
+      "date": "2026-08-21"
     }
   ],
   "works": [
