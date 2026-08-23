@@ -2393,6 +2393,15 @@
       "thumbnail": "/images/blogs_images/blog-card266.webp",
       "alt": "ChatGPTプラグインの選び方とメール・予定・ファイル連携を解説するイメージ",
       "date": "2026-08-23"
+    },
+    {
+      "id": 267,
+      "title": "【2026年8月最新】Gemini Sparkのリモートブラウザとは？安全な引き継ぎと操作範囲",
+      "description": "Gemini Spark リモートブラウザをGoogle公式情報から解説。local browserとの違い、Take over taskで人へ戻る場面、削除設定、操作範囲を紹介します。",
+      "link": "/blogs/blog267.html",
+      "thumbnail": "/images/blogs_images/blog-card267.webp",
+      "alt": "Gemini Sparkのリモートブラウザと安全な引き継ぎを解説するイメージ",
+      "date": "2026-08-23"
     }
   ],
   "works": [
