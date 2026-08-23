@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年8月最新】CodexがGitLab連携に対応｜MRレビュー導入の5手順 | MIRAINAブログ</title>
+    <meta name="description" content="Codex GitLab連携のベータ提供をOpenAI公式情報から解説。MRレビュー、Webhook、AGENTS.md、権限設計を安全に導入する5手順を紹介します。">
+    <meta name="keywords" content="Codex GitLab連携,GitLab MRレビュー,Codex code review,AGENTS.md,AIコードレビュー">
+    <link rel="canonical" href="https://miraina-ai.com/blogs/blog265.html">
+    <meta property="og:title" content="【2026年8月最新】CodexがGitLab連携に対応｜MRレビュー導入の5手順">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog265.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog265-1.webp">
+    <meta property="og:description" content="CodexのGitLab対応で変わるMRレビューと、安全に導入するための5手順を解説します。">
+    <meta property="og:site_name" content="MIRAINA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CodexがGitLab連携に対応｜MRレビュー導入の5手順">
+    <meta name="twitter:description" content="接続、Webhook、レビュー規則、権限、検証の順に導入方法を整理。">
+    <meta name="twitter:image" content="https://miraina-ai.com/images/blogs_images/blog265-1.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Shippori+Mincho:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"【2026年8月最新】CodexがGitLab連携に対応｜MRレビュー導入の5手順","description":"Codex GitLab連携のベータ提供をOpenAI公式情報から解説。MRレビュー、Webhook、AGENTS.md、権限設計を安全に導入する5手順を紹介します。","image":"https://miraina-ai.com/images/blogs_images/blog265-1.webp","datePublished":"2026-08-23","dateModified":"2026-08-23","author":{"@type":"Person","name":"芝 優作"},"publisher":{"@type":"Organization","name":"MIRAINA","url":"https://miraina-ai.com/"},"mainEntityOfPage":"https://miraina-ai.com/blogs/blog265.html"}</script>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo"><img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40"></a>
+            <div class="hamburger" id="js-hamburger"><span></span><span></span><span></span></div>
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+            </nav>
+        </div>
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>CodexがGitLab連携に対応</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.08.23</span>
+                    <div class="article-tags" style="flex-wrap:wrap;justify-content:center;">
+                        <p class="article-tag">Codex</p>
+                        <p class="article-tag">GitLab</p>
+                        <p class="article-tag">AIコードレビュー</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap:anywhere;">【2026年8月最新】CodexがGitLab連携に対応｜MRレビュー導入の5手順</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog265-1.webp" alt="Codex GitLab連携によるマージリクエストレビューを解説するイメージ" width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>GitLabで開発しているチームでも、マージリクエスト（MR）を開いてから人がレビューを始めるまでに時間が空いたり、社内固有の確認項目が担当者によって揺れたりします。OpenAIは2026年8月19日、<strong>Codex GitLab連携</strong>のベータ提供を発表しました。GitLabのIssueやMRからCodexへ作業を依頼し、単発または自動のコードレビューを実行できます。</p>
+                <p>ただし、AIレビューを有効にするだけでは安全な開発フローになりません。この記事ではOpenAI公式情報をもとに、接続、Webhook、レビュー規則、権限、検証の5手順に分け、少人数の開発チームでも導入判断しやすい形に整理します。</p>
+                <ul>
+                    <li>CodexのGitLab対応でできることがわかる</li>
+                    <li>手動レビューと自動レビューの違いを理解できる</li>
+                    <li><code>AGENTS.md</code>へ書くべきレビュー規則を整理できる</li>
+                    <li>権限を広げすぎない導入手順を確認できる</li>
+                </ul>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. Codexが8月19日に発表したGitLab対応</a></li>
+                    <li><a href="#section2">2. GitLab連携でできる3つのこと</a></li>
+                    <li><a href="#section3">3. MRレビューを導入する5手順</a></li>
+                    <li><a href="#section4">4. AGENTS.mdでレビュー基準を固定する</a></li>
+                    <li><a href="#section5">5. 権限・Webhook・レビュー品質の注意点</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. Codexが8月19日に発表したGitLab対応</h2>
+                <p>OpenAIのリリースノートによると、GitLab対応は2026年8月19日にベータとして公開され、すべてのChatGPTプランで利用できます。GitLabプロジェクトをCodex cloudへ接続し、IssueやMRのコメントから<code>@codex</code>を使ってタスクを開始したり、MRのコードレビューを依頼したりできるようになりました。</p>
+                <p>GitHub向けに提供されてきたAIコードレビューを、GitLab中心のチームでも開発フローへ組み込める点が今回の変化です。一方、連携処理はCodex cloud上で実行されます。デスクトップアプリの「Create pull request」のようなGitHub向け操作は、このGitLabベータには含まれません。機能名だけで同等と判断せず、レビュー、修正、ブランチ更新のどこまで使うかを分けて考える必要があります。</p>
+
+                <h2 id="section2">2. GitLab連携でできる3つのこと</h2>
+                <p>GitLab連携の役割は大きく3つです。第一に、MRコメントへ<code>@codex review</code>と書き、必要なときだけレビューを依頼できます。第二に、MR作成時、毎回のpush時、または実験的なSmart Triggerで自動レビューを動かせます。第三に、プロジェクト環境を構成すれば、IssueやMRを文脈にコード変更、コマンド実行、commit、MRブランチへのpushまで依頼できます。</p>
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead><tr><th>使い方</th><th>起動方法</th><th>向いている場面</th></tr></thead>
+                        <tbody>
+                            <tr><th>手動レビュー</th><td>MRで<code>@codex review</code></td><td>重要変更だけ追加確認したい</td></tr>
+                            <tr><th>自動レビュー</th><td>MR作成・push・Smart Trigger</td><td>見落とし防止を標準化したい</td></tr>
+                            <tr><th>修正タスク</th><td>Issue/MRからCodexを起動</td><td>指摘から修正までつなげたい</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>公式ドキュメントでは、手動レビューは既定でP0・P1・P2の指摘を含み、自動レビューは重大度の高いP0・P1に絞ると説明されています。レビュー件数を増やすより、重大な不具合を早い段階で見つける補助として設計されています。Codexの基本的な特徴は<a href="/blogs/blog036.html">Codexの導入解説</a>、利用状況の測り方は<a href="/blogs/blog181.html">AIエージェント定着KPIの記事</a>も参考になります。</p>
+
+                <h2 id="section3">3. MRレビューを導入する5手順</h2>
+                <p>導入は、いきなり全MRを自動レビューするのではなく、対象プロジェクトとレビュー範囲を限定して進めます。次の5段階にすると、接続トラブルと不要な指摘を切り分けやすくなります。</p>
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step"><span class="step-num">Step 01</span><span class="step-text">GitLabアカウントを接続</span></li>
+                        <li class="process-step"><span class="step-num">Step 02</span><span class="step-text">プロジェクト環境を作成</span></li>
+                        <li class="process-step"><span class="step-num">Step 03</span><span class="step-text">Webhookを有効化</span></li>
+                        <li class="process-step"><span class="step-num">Step 04</span><span class="step-text">レビュー規則を記載</span></li>
+                        <li class="process-step"><span class="step-num">Step 05</span><span class="step-text">手動MRで精度を検証</span></li>
+                    </ul>
+                    <p class="diagram-caption">接続と権限を確認してから、代表的なMRでレビュー品質を評価します。</p>
+                </div>
+                <p>GitLab.comではアカウント接続後、Codex CloudのSettingsから対象プロジェクトの環境を作成します。GitLabイベントからCodexを起動するには「Enable Codex activity from GitLab」を有効にし、プロジェクトWebhookを設定します。Webhook作成にはMaintainer、Owner、管理者、またはWebhookを管理できるカスタムロールが必要です。</p>
+                <p>最初の検証では、過去に不具合が見つかった小規模MRを1〜3件使います。人のレビュー結果とCodexの指摘を比べ、重大な見落とし、誤検知、同じ指摘の重複を記録してください。いきなり「Review all MRs」にせず、「Review my MRs」または手動コメントから始めると、開発者の確認負荷を測りやすくなります。</p>
+
+                <h2 id="section4">4. AGENTS.mdでレビュー基準を固定する</h2>
+                <p>Codexはリポジトリ内の<code>AGENTS.md</code>を探し、変更ファイルに適用されるコードレビュー規則を読みます。たとえば「顧客データをログへ出さない」「請求確定後の金額を再計算しない」「公開APIの互換性を壊さない」など、一般的な静的解析では判定しにくい業務固有の制約を短く記載します。</p>
+                <div class="code-block"><pre><code>## Code Review Rules
+
+### 顧客データ
+- 個人情報をアプリケーションログへ出力しない。
+  安全な方法: 識別子をマスキングし、調査用IDだけを残す。
+
+### 互換性
+- 公開APIの既存レスポンス項目を削除しない。
+  変更が必要な場合はバージョンを分ける。</code></pre></div>
+                <p>OpenAIは、まず2〜3個の簡潔な規則から始め、フォーマットやlintのような機械判定はCIへ残すことを推奨しています。ルートの<code>AGENTS.md</code>には全体規則を、特定サービスの配下にはその業務だけの規則を置きます。これにより、AIレビューへ社内知識を渡しつつ、関係ない変更へのノイズを抑えられます。チーム内で手順を再利用する考え方は<a href="/blogs/blog056.html">Codex Pluginsの記事</a>とも共通します。</p>
+
+                <h2 id="section5">5. 権限・Webhook・レビュー品質の注意点</h2>
+                <p>Self-ManagedまたはDedicated GitLabでは、ワークスペース管理者による接続テンプレートとサービスアカウント設定が必要です。Codexにコード変更やpushを任せる場合はプロジェクト環境も必要になります。公式資料では、署名付きのプロジェクト・グループWebhookにGitLab 19.0以降が必要とされています。自社環境のバージョンが古い場合は、接続作業より先に互換性を確認してください。</p>
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead><tr><th>確認項目</th><th>安全な初期設定</th><th>確認する証拠</th></tr></thead>
+                        <tbody>
+                            <tr><th>対象範囲</th><td>選択したプロジェクトだけ許可</td><td>Connectorの対象一覧</td></tr>
+                            <tr><th>サービスアカウント</th><td>必要最小限のDeveloper権限</td><td>所属グループ・期限・監査ログ</td></tr>
+                            <tr><th>Webhook</th><td>代表プロジェクト1件で開始</td><td>イベント履歴と署名設定</td></tr>
+                            <tr><th>レビュー品質</th><td>人の承認を必須にする</td><td>見落とし・誤検知・採用率</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>また、GitLab側が大きすぎるdiffや折りたたまれたdiffをCodexへ渡さない場合、レビューを完了できないことがあります。AIレビューが付いたことを「全変更を確認済み」の印にせず、対象diffと実行結果を毎回確認してください。MIRAINAの視点では、導入効果はレビュー数ではなく、<strong>重大な指摘の採用率、レビュー待ち時間、リリース後の不具合件数</strong>で測るべきです。Codexのレビューは、テスト、CI、ブランチ保護、人の承認を置き換えるものではありません。</p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>CodexのGitLab連携により、GitLabのIssueやMRからタスクを開始し、手動・自動のコードレビューを同じ開発フローへ組み込めるようになりました。特に<code>AGENTS.md</code>で業務固有のレビュー規則を渡せる点は、担当者ごとに揺れやすい確認基準をそろえる助けになります。</p>
+                <p>一方で、現在はベータです。最初は対象プロジェクトを限定し、Webhookとサービスアカウントの権限を確認した上で、代表的なMRを手動レビューしてください。人のレビューと比較して有効な指摘が安定してから、自動レビューの対象を広げるのが安全です。</p>
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">AIコードレビューを安全に業務へ組み込みたい方へ</h2>
+                    <p class="cta-text">権限、レビュー規則、CI、人の承認まで、自社の開発フローに合わせたAI導入を支援します。</p>
+                    <a href="/services/ai_consulting.html" class="cta-button">生成AI活用支援を見る</a>
+                </div>
+            </div>
+
+            <div class="article-references">
+                <h3>参考情報</h3>
+                <ul>
+                    <li><a href="https://openai.com/products/release-notes/" target="_blank" rel="noopener">OpenAI: Release notes — GitLab support in Codex cloud（2026年8月19日）</a></li>
+                    <li><a href="https://learn.chatgpt.com/docs/third-party/gitlab" target="_blank" rel="noopener">OpenAI: Review GitLab merge requests with Codex</a></li>
+                </ul>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image"><img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async"></div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">九州を拠点に中小企業のAI活用支援に従事。業務フローに合わせたAI導入、AI研修、LLMO対策まで、現場で続く仕組みづくりを支援しています。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog036.html" class="related-card">
+                        <div class="related-img"><img src="/images/blogs_images/blog-card036.webp" alt="Codexの特徴と導入方法を解説する記事" loading="lazy" decoding="async"></div>
+                        <div class="related-content"><div class="related-date">2026.03.15</div><div class="related-text">Codexとは？楽天事例でわかるAI開発導入法</div></div>
+                    </a>
+                    <a href="/blogs/blog056.html" class="related-card">
+                        <div class="related-img"><img src="/images/blogs_images/blog-card056.webp" alt="Codex Pluginsによるチーム開発を解説する記事" loading="lazy" decoding="async"></div>
+                        <div class="related-content"><div class="related-date">2026.03.29</div><div class="related-text">Codex Pluginsとは？チーム開発のAIワークフローを標準化</div></div>
+                    </a>
+                    <a href="/blogs/blog181.html" class="related-card">
+                        <div class="related-img"><img src="/images/blogs_images/blog-card181.webp" alt="Codex利用データからAIエージェント定着KPIを解説する記事" loading="lazy" decoding="async"></div>
+                        <div class="related-content"><div class="related-date">2026.06.27</div><div class="related-text">Codex利用データで見るAIエージェント定着KPI</div></div>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand"><a href="/index.html"><p class="footer-brand-text">MIRAINA</p></a></div>
+            <div class="footer-center"></div>
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>&copy; MIRAINA All Rights Reserved.</p></div>
+    </footer>
+    <script src="/js/common.js"></script>
+</body>
+</html>

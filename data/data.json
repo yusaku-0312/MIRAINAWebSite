@@ -2350,13 +2350,49 @@
       "date": "2026-08-20"
     },
     {
+      "id": 262,
+      "title": "【2026年8月最新】ChatGPTとCodexでShopify商品登録を効率化｜公開前レビューの5工程",
+      "description": "ChatGPT Shopify活用をOpenAI・Shopify公式情報から解説。商品データ整理、SEO項目、商品ページ作成、公開前レビューの5工程を紹介します。",
+      "link": "/blogs/blog262.html",
+      "thumbnail": "/images/blogs_images/blog-card262.webp",
+      "alt": "ChatGPTとCodexでShopify商品登録を効率化する5工程",
+      "date": "2026-08-21"
+    },
+    {
       "id": 263,
       "title": "【2026年8月最新】Gemini Sparkでプロジェクト進捗を可視化｜Drive資料から定例報告",
       "description": "Gemini Sparkでプロジェクト進捗を可視化する実務をGoogle公式情報ベースで解説。Drive資料を横断し、定例報告の要点抽出、表整理、確認フローを進める方法を紹介します。",
+      "link": "/blogs/blog263.html",
       "thumbnail": "/images/blogs_images/blog-card263.webp",
       "alt": "Gemini SparkでGoogle Drive資料からプロジェクト進捗を可視化するイメージ",
-      "link": "/blogs/blog263.html",
       "date": "2026-08-21"
+    },
+    {
+      "id": 264,
+      "title": "【2026年8月最新】OpenAIがZero Data Retentionを強化｜機密データ活用で確認する5項目",
+      "description": "OpenAI Zero Data Retentionの強化内容を公式情報から解説。APIの保持期間、対象機能、Private Safety Processing、企業が導入前に確認すべき5項目を紹介します。",
+      "link": "/blogs/blog264.html",
+      "thumbnail": "/images/blogs_images/blog-card264.webp",
+      "alt": "OpenAI Zero Data Retentionと機密データの安全なAI活用を解説するイメージ",
+      "date": "2026-08-22"
+    },
+    {
+      "id": 265,
+      "title": "【2026年8月最新】CodexがGitLab連携に対応｜MRレビュー導入の5手順",
+      "description": "Codex GitLab連携のベータ提供をOpenAI公式情報から解説。MRレビュー、Webhook、AGENTS.md、権限設計を安全に導入する5手順を紹介します。",
+      "link": "/blogs/blog265.html",
+      "thumbnail": "/images/blogs_images/blog-card265.webp",
+      "alt": "Codex GitLab連携によるマージリクエストレビューを解説するイメージ",
+      "date": "2026-08-23"
+    },
+    {
+      "id": 266,
+      "title": "【2026年8月最新】ChatGPTのプラグイン選び方｜メール・予定・ファイルから始める",
+      "description": "ChatGPT プラグイン 選び方をOpenAI公式更新から解説。おすすめ表示が変わった今、メール・予定・ファイルから始める理由と権限ルールを紹介します。",
+      "link": "/blogs/blog266.html",
+      "thumbnail": "/images/blogs_images/blog-card266.webp",
+      "alt": "ChatGPTプラグインの選び方とメール・予定・ファイル連携を解説するイメージ",
+      "date": "2026-08-23"
     }
   ],
   "works": [

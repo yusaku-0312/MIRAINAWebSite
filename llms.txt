@@ -287,7 +287,11 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年8月最新】Gemini外部アプリ連携とは？Wix・Granola対応と安全な始め方](https://miraina-ai.com/blogs/blog259.html): Googleの2026年8月12日の公式発表をもとに、Wix・Granola・Otter.aiなど13サービス、Connected Appsの使い方、公開承認とデータ共有の安全対策を整理した記事。
 - [最新ブログ: 【2026年8月最新】Geminiで何ができる？仕事で試す3つの使い方と注意点](https://miraina-ai.com/blogs/blog260.html): Googleの2026年8月11日・12日の公式発表をもとに、Geminiで何ができるかを、音声・画面共有・外部アプリ連携の3分類で整理した記事。
 - [最新ブログ: 【2026年8月最新】Gemini Sparkで請求書処理を効率化｜Gmail・Drive・Sheetsで証憑整理](https://miraina-ai.com/blogs/blog261.html): Google公式ヘルプをもとに、Gemini Sparkで請求メール整理、DriveのPDF照合、Sheets台帳化をどう分担するかと、安全な請求書処理フローを整理した記事。
+- [最新ブログ: 【2026年8月最新】ChatGPTとCodexでShopify商品登録を効率化｜公開前レビューの5工程](https://miraina-ai.com/blogs/blog262.html): OpenAIとShopifyの公式情報をもとに、ChatGPT Shopify活用で商品データ整理、SEO項目、商品ページ作成、公開前レビューを進める5工程を整理した記事。
 - [最新ブログ: 【2026年8月最新】Gemini Sparkでプロジェクト進捗を可視化｜Drive資料から定例報告](https://miraina-ai.com/blogs/blog263.html): Google公式情報をもとに、Gemini SparkでDrive資料から進捗、リスク、次アクションを整理し、定例報告の叩き台を作る流れをまとめた記事。
+- [最新ブログ: 【2026年8月最新】OpenAIがZero Data Retentionを強化｜機密データ活用で確認する5項目](https://miraina-ai.com/blogs/blog264.html): OpenAI公式情報をもとに、Zero Data Retention、標準のAPI保持期間、Private Safety Processing、機密データ導入前の確認項目を整理した記事。
+- [最新ブログ: 【2026年8月最新】CodexがGitLab連携に対応｜MRレビュー導入の5手順](https://miraina-ai.com/blogs/blog265.html): OpenAI公式情報をもとに、Codex GitLab連携の機能、MRレビュー、Webhook、AGENTS.md、権限設計を安全に導入する5手順を整理した記事。
+- [最新ブログ: 【2026年8月最新】ChatGPTのプラグイン選び方｜メール・予定・ファイルから始める](https://miraina-ai.com/blogs/blog266.html): OpenAIの2026年8月21日更新とGoogle公式ヘルプをもとに、ChatGPTプラグインの選び方を、メール・予定・ファイルの3分類と権限ルールで整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){window.dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年8月最新】OpenAIがZero Data Retentionを強化｜機密データ活用で確認する5項目 | MIRAINAブログ</title>
+    <meta name="description" content="OpenAI Zero Data Retentionの強化内容を公式情報から解説。APIの保持期間、対象機能、Private Safety Processing、企業が導入前に確認すべき5項目を紹介します。">
+    <meta name="keywords" content="OpenAI Zero Data Retention,API データ保持,Private Safety Processing,機密データ,AIセキュリティ">
+    <link rel="canonical" href="https://miraina-ai.com/blogs/blog264.html">
+    <meta property="og:title" content="【2026年8月最新】OpenAIがZero Data Retentionを強化｜機密データ活用で確認する5項目">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog264.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog264-1.webp">
+    <meta property="og:description" content="OpenAIのZDR強化とPrivate Safety Processingを、企業の導入確認項目に落として解説します。">
+    <meta property="og:site_name" content="MIRAINA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OpenAIがZero Data Retentionを強化｜機密データ活用で確認する5項目">
+    <meta name="twitter:description" content="APIのデータ保持、対象機能、安全監視を導入前に整理。">
+    <meta name="twitter:image" content="https://miraina-ai.com/images/blogs_images/blog264-1.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Shippori+Mincho:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"【2026年8月最新】OpenAIがZero Data Retentionを強化｜機密データ活用で確認する5項目","description":"OpenAI Zero Data Retentionの強化内容を公式情報から解説。APIの保持期間、対象機能、Private Safety Processing、企業が導入前に確認すべき5項目を紹介します。","image":"https://miraina-ai.com/images/blogs_images/blog264-1.webp","datePublished":"2026-08-22","dateModified":"2026-08-22","author":{"@type":"Person","name":"芝 優作"},"publisher":{"@type":"Organization","name":"MIRAINA","url":"https://miraina-ai.com/"},"mainEntityOfPage":"https://miraina-ai.com/blogs/blog264.html"}</script>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo"><img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40"></a>
+            <div class="hamburger" id="js-hamburger"><span></span><span></span><span></span></div>
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+            </nav>
+        </div>
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>OpenAIがZero Data Retentionを強化</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.08.22</span>
+                    <div class="article-tags" style="flex-wrap:wrap;justify-content:center;">
+                        <p class="article-tag">OpenAI API</p>
+                        <p class="article-tag">データ管理</p>
+                        <p class="article-tag">AIセキュリティ</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap:anywhere;">【2026年8月最新】OpenAIがZero Data Retentionを強化｜機密データ活用で確認する5項目</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog264-1.webp" alt="OpenAI Zero Data Retentionと機密データの安全なAI活用を解説するイメージ" width="800" height="450" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>顧客情報、財務資料、契約書などをAIで扱いたくても、「入力したデータは何日残るのか」「安全監視のために人が内容を見るのか」が曖昧だと、業務導入は進められません。OpenAIは2026年8月19日、適格なAPI顧客向けの<strong>OpenAI Zero Data Retention（ZDR）</strong>を維持しながら、複数のやり取りにまたがるリスクを検知する<strong>Private Safety Processing</strong>を発表しました。</p>
+                <p>ただし、ZDRは「OpenAIの全機能で何も保存されない」という意味ではありません。この記事ではOpenAI公式発表とAPI資料をもとに、学習利用との違い、標準の保持期間、対象外機能、機密データを扱う前に確認する5項目を整理します。</p>
+                <ul>
+                    <li>ZDRと「モデル学習に使わない」の違いがわかる</li>
+                    <li>Private Safety Processingの仕組みと提供段階を把握できる</li>
+                    <li>API機能ごとに残るデータを確認できる</li>
+                    <li>機密データ導入の判断表を作れる</li>
+                </ul>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. OpenAIが8月19日に発表した内容</a></li>
+                    <li><a href="#section2">2. ZDRと学習利用・標準保持の違い</a></li>
+                    <li><a href="#section3">3. Private Safety Processingの流れ</a></li>
+                    <li><a href="#section4">4. API機能ごとに残るデータを確認する</a></li>
+                    <li><a href="#section5">5. 企業が導入前に確認する5項目</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. OpenAIが8月19日に発表した内容</h2>
+                <p>OpenAIは2026年8月19日、フロンティアモデルを利用する適格なAPI顧客に対し、ZDRを継続して提供する方針を示しました。ZDRでは、リクエスト処理後にプロンプトとモデルの応答を保持せず、OpenAIの担当者が顧客コンテンツをレビューできないことが基本です。また、企業のデータは明示的にオプトインしない限り、モデル学習に使われません。</p>
+                <p>今回の新しい論点は、AIエージェントが長時間・複数ステップで動くほど、1回の入力だけでは危険な意図や権限逸脱を判断しにくくなることです。そこでOpenAIは、内容を担当者に見せずに関連する複数のやり取りのパターンを検知するPrivate Safety Processingをプレビューしました。現在は早期顧客とテスト中で、OpenAIは<strong>2026年9月から展開を始め、技術ホワイトペーパーを共有する予定</strong>としています。現時点で全面提供済みと誤解しないことが重要です。</p>
+
+                <h2 id="section2">2. ZDRと学習利用・標準保持の違い</h2>
+                <p>AIサービスのデータ管理では、「モデル学習に使わない」と「処理後に保持しない」を分けて考える必要があります。OpenAI APIは、明示的に共有へオプトインしない限り、入力と出力をモデルの学習・改善に使わないのが標準です。一方、通常のAPI利用では、不正利用の監視ログに顧客コンテンツが含まれる場合があり、OpenAIの公式資料では<strong>原則として最大30日</strong>保持されると説明されています。</p>
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr><th>設定・考え方</th><th>主な意味</th><th>導入時の確認</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><th>学習への不使用</th><td>APIの入力・出力をモデル改善へ使わない</td><td>オプトイン設定と契約条件を確認</td></tr>
+                            <tr><th>標準の監視ログ</th><td>ポリシー違反対策のため最大30日保持される場合がある</td><td>扱う情報の機密区分と整合するか確認</td></tr>
+                            <tr><th>Modified Abuse Monitoring</th><td>承認された顧客のコンテンツを監視ログから原則除外</td><td>安全管理の責任分担を確認</td></tr>
+                            <tr><th>Zero Data Retention</th><td>承認された対象APIで処理後の顧客コンテンツを保持しない</td><td>対象エンドポイントと例外を確認</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>ZDRとModified Abuse Monitoringは適格顧客向けで、OpenAIによる事前承認と追加要件の受諾が必要です。「Businessプランなら自動的にZDR」「APIを使えば必ず保存ゼロ」と決めつけず、組織・プロジェクト単位の設定を確認してください。ChatGPT側のデータ管理とは別に、APIの設計として判断する必要があります。</p>
+
+                <h2 id="section3">3. Private Safety Processingの流れ</h2>
+                <p>Private Safety Processingは、プライバシーのためにデータを見ないことと、長いエージェント作業の安全性を監視することを両立させる構想です。ZDR環境では顧客コンテンツを顧客管理のインフラに置きます。OpenAIが提供する保存領域を使う選択肢では、顧客が管理する鍵で暗号化し、OpenAIの担当者はその鍵を持ちません。</p>
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step"><span class="step-num">Step 01</span><span class="step-text">顧客側で会話データを管理</span></li>
+                        <li class="process-step"><span class="step-num">Step 02</span><span class="step-text">自動システムが関連操作の傾向を検知</span></li>
+                        <li class="process-step"><span class="step-num">Step 03</span><span class="step-text">限定的な安全シグナルだけを返す</span></li>
+                        <li class="process-step"><span class="step-num">Step 04</span><span class="step-text">顧客が自社ログで調査</span></li>
+                        <li class="process-step"><span class="step-num">Step 05</span><span class="step-text">必要時だけ顧客が情報共有を判断</span></li>
+                    </ul>
+                    <p class="diagram-caption">OpenAI担当者が元のプロンプトや応答を読むのではなく、限定された安全シグナルで判断する設計です。</p>
+                </div>
+                <p>リスクが検知されると、OpenAIへは活動の種類を示す限定的なシグナルが渡り、アクセス制限などの判断に使われます。顧客は自社システムにある情報でアラートを調査し、異議申立てや正当な利用の説明が必要な場合に、関連情報を共有するかを選びます。MIRAINAの視点では、ここで重要なのは「AI事業者が全部監視してくれる」ことではなく、<strong>自社側に調査できるログと責任者を残す</strong>ことです。</p>
+
+                <h2 id="section4">4. API機能ごとに残るデータを確認する</h2>
+                <p>ZDRを有効にすると、Responses APIとChat Completions APIの<code>store</code>は、リクエストでtrueを指定してもfalseとして扱われます。しかし、APIには処理のための状態保存が必要な機能もあり、全エンドポイントがZDR対象ではありません。例えば、Conversations、Assistants、Threads、Vector Stores、Filesなどは、公式表でZDR対象外または別の保持条件が示されています。</p>
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr><th>機能例</th><th>ZDR利用時の注意</th><th>代替・確認方法</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><th>Responsesのbackground mode</th><td>ポーリングのため約10分保存し、ZDRと非互換</td><td>同期処理やMAMを検討</td></tr>
+                            <tr><th>Code Interpreter</th><td>ZDR有効時は利用できない</td><td>MAMの可否と処理データを確認</td></tr>
+                            <tr><th>remote MCP server</th><td>第三者サービス側の保持方針が適用される</td><td>MCP提供者の規約・ログ・保存地域を確認</td></tr>
+                            <tr><th>Files / Vector Stores</th><td>アプリケーション状態の保存が必要</td><td>削除手順・有効期限・対象外データを確認</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>つまり、ZDRの契約確認だけでは不十分です。実際に使うエンドポイント、ツール、外部接続まで一覧化し、入力から削除までのデータフローを確認してください。暗号鍵を企業側で管理する仕組みは<a href="/blogs/blog210.html">ChatGPTのEnterprise Key Management記事</a>、入力前に個人情報を伏せる考え方は<a href="/blogs/blog117.html">OpenAI Privacy Filterの記事</a>も参考になります。</p>
+
+                <h2 id="section5">5. 企業が導入前に確認する5項目</h2>
+                <p>機密データを扱うAI導入は、サービス名ではなくデータフロー単位で判断します。まずは対象業務を一つに絞り、次の5項目を情報システム、業務責任者、法務・セキュリティ担当で確認してください。</p>
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr><th>確認項目</th><th>具体的な問い</th><th>残す証拠</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><th>1. データ区分</th><td>個人情報・契約情報・営業秘密を含むか</td><td>入力可否ルールとマスキング基準</td></tr>
+                            <tr><th>2. 保持条件</th><td>監視ログとアプリ状態はどこに何日残るか</td><td>公式表、契約、組織設定の記録</td></tr>
+                            <tr><th>3. 利用機能</th><td>ZDR対象外のAPI・ツール・MCPを使うか</td><td>エンドポイントと接続先の一覧</td></tr>
+                            <tr><th>4. 調査体制</th><td>安全アラートを誰が何のログで確認するか</td><td>責任者、連絡先、対応手順</td></tr>
+                            <tr><th>5. 削除・停止</th><td>誤入力や退職時にどう削除・無効化するか</td><td>削除試験とアクセス棚卸し結果</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>最初の実証では、本番の顧客情報を入れず、匿名化した10件程度のデータで処理結果とログを確認します。KPIも「AIが何件処理したか」だけでなく、入力前のマスキング時間、レビュー時間、誤った情報共有の件数を含めます。経理など高機密業務へ広げる場合は、<a href="/blogs/blog239.html">経理AI導入の5原則</a>の承認設計と組み合わせると判断しやすくなります。</p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>OpenAIのZero Data Retention強化は、機密データを扱う企業がフロンティアモデルを使う際に、データ保持と安全監視を両立するための重要な動きです。Private Safety Processingは、関連する複数の操作を自動で検知しながら、OpenAI担当者へ元のコンテンツを見せない設計を目指しています。</p>
+                <p>一方で、ZDRは適格顧客向けであり、全機能が対象ではありません。まずは「学習に使われない」と「保持されない」を分け、使うAPI・ツール・外部接続ごとの保存条件を確認してください。2026年9月に予定される展開と技術資料も確認し、契約、設定、実装、社内運用の4層で判断することが安全な導入につながります。</p>
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">機密データを扱うAI導入を安全に進めたい方へ</h2>
+                    <p class="cta-text">データ区分、保持条件、接続先、承認フローまで、自社業務に合わせたAI活用設計を支援します。</p>
+                    <a href="/services/ai_consulting.html" class="cta-button">生成AI活用支援を見る</a>
+                </div>
+            </div>
+
+            <div class="article-references">
+                <h3>参考情報</h3>
+                <ul>
+                    <li><a href="https://openai.com/index/our-commitment-to-zero-data-retention/" target="_blank" rel="noopener">OpenAI: Offering Zero Data Retention for frontier models（2026年8月19日）</a></li>
+                    <li><a href="https://platform.openai.com/docs/models/default-usage-policies-by-endpoint" target="_blank" rel="noopener">OpenAI API: Data controls in the OpenAI platform</a></li>
+                    <li><a href="https://openai.com/business-data/" target="_blank" rel="noopener">OpenAI: Business data privacy, security, and compliance</a></li>
+                    <li><a href="https://openai.com/enterprise-privacy/" target="_blank" rel="noopener">OpenAI: Enterprise privacy</a></li>
+                </ul>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image"><img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async"></div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">九州を拠点に中小企業のAI活用支援に従事。業務フローに合わせたAI導入、AI研修、LLMO対策まで、現場で続く仕組みづくりを支援しています。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog117.html" class="related-card">
+                        <div class="related-img"><img src="/images/blogs_images/blog-card117.webp" alt="OpenAI Privacy Filterによる個人情報保護を解説する記事" loading="lazy" decoding="async"></div>
+                        <div class="related-content"><div class="related-date">2026.04.26</div><div class="related-text">OpenAI Privacy Filterとは？個人情報をローカルで伏せる新モデル</div></div>
+                    </a>
+                    <a href="/blogs/blog210.html" class="related-card">
+                        <div class="related-img"><img src="/images/blogs_images/blog-card210.webp" alt="ChatGPTのEnterprise Key Managementを解説する記事" loading="lazy" decoding="async"></div>
+                        <div class="related-content"><div class="related-date">2026.07.16</div><div class="related-text">ChatGPTの社内データ連携は安全？EKM対応で何が変わるか</div></div>
+                    </a>
+                    <a href="/blogs/blog239.html" class="related-card">
+                        <div class="related-img"><img src="/images/blogs_images/blog-card239.webp" alt="経理AI導入の安全な運用原則を解説する記事" loading="lazy" decoding="async"></div>
+                        <div class="related-content"><div class="related-date">2026.08.11</div><div class="related-text">経理AI導入の5原則｜OpenAIの財務部門に学ぶ</div></div>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand"><a href="/index.html"><p class="footer-brand-text">MIRAINA</p></a></div>
+            <div class="footer-center"></div>
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>&copy; MIRAINA All Rights Reserved.</p></div>
+    </footer>
+    <script src="/js/common.js"></script>
+</body>
+</html>
