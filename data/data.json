@@ -2402,6 +2402,33 @@
       "thumbnail": "/images/blogs_images/blog-card267.webp",
       "alt": "Gemini Sparkのリモートブラウザと安全な引き継ぎを解説するイメージ",
       "date": "2026-08-23"
+    },
+    {
+      "id": 268,
+      "title": "【2026年8月最新】Google ChatのAsk Geminiとは？AIに任せる仕事5選",
+      "description": "Google ChatのAsk GeminiをGoogle公式情報で解説。2026年8月26日開始の新機能で何ができるか、使えるプロンプト、導入条件と注意点を紹介します。",
+      "link": "/blogs/blog268.html",
+      "thumbnail": "/images/blogs_images/blog-card268.webp",
+      "alt": "Google ChatのAsk Geminiで情報検索と要約を進めるイメージ",
+      "date": "2026-08-24"
+    },
+    {
+      "id": 269,
+      "title": "【2026年8月最新】AWSがAI検索フィルターを追加｜誤引用を防ぐ設計",
+      "description": "AI検索フィルターの新機能をAWS公式情報から解説。AgentCore Web Searchのドメイン・公開日制御、東京リージョン、誤引用を防ぐ運用を紹介します。",
+      "link": "/blogs/blog269.html",
+      "thumbnail": "/images/blogs_images/blog-card269.webp",
+      "alt": "AWSのAI検索フィルターと誤引用を防ぐ設計を解説するイメージ",
+      "date": "2026-08-24"
+    },
+    {
+      "id": 270,
+      "title": "【2026年8月最新】Gemini SparkをMacで使う方法｜iPhoneからPC作業を遠隔依頼",
+      "description": "Gemini SparkをMacで使う方法をGoogle公式情報で解説。Mac版アプリの条件、iPhoneからPC作業を遠隔依頼する手順、安全な運用ルールを紹介します。",
+      "link": "/blogs/blog270.html",
+      "thumbnail": "/images/blogs_images/blog-card270.webp",
+      "alt": "Gemini SparkをMacで使いiPhoneからPC作業を遠隔依頼するイメージ",
+      "date": "2026-08-24"
     }
   ],
   "works": [

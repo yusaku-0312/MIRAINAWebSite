@@ -293,6 +293,9 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年8月最新】CodexがGitLab連携に対応｜MRレビュー導入の5手順](https://miraina-ai.com/blogs/blog265.html): OpenAI公式情報をもとに、Codex GitLab連携の機能、MRレビュー、Webhook、AGENTS.md、権限設計を安全に導入する5手順を整理した記事。
 - [最新ブログ: 【2026年8月最新】ChatGPTのプラグイン選び方｜メール・予定・ファイルから始める](https://miraina-ai.com/blogs/blog266.html): OpenAIの2026年8月21日更新とGoogle公式ヘルプをもとに、ChatGPTプラグインの選び方を、メール・予定・ファイルの3分類と権限ルールで整理した記事。
 - [最新ブログ: 【2026年8月最新】Gemini Sparkのリモートブラウザとは？安全な引き継ぎと操作範囲](https://miraina-ai.com/blogs/blog267.html): Google公式ヘルプをもとに、Gemini Sparkのremote browserとlocal browserの違い、Take over taskで人へ戻る場面、削除設定、実務で決める操作範囲を整理した記事。
+- [最新ブログ: 【2026年8月最新】Google ChatのAsk Geminiとは？AIに任せる仕事5選](https://miraina-ai.com/blogs/blog268.html): Google公式情報をもとに、Google ChatのAsk Geminiで何ができるか、使えるプロンプト、導入条件と注意点を整理した記事。
+- [最新ブログ: 【2026年8月最新】AWSがAI検索フィルターを追加｜誤引用を防ぐ設計](https://miraina-ai.com/blogs/blog269.html): AWS公式情報をもとに、AgentCore Web Searchのドメイン・公開日フィルター、東京リージョン対応、古い情報や未承認サイトの誤引用を防ぐ運用を整理した記事。
+- [最新ブログ: 【2026年8月最新】Gemini SparkをMacで使う方法｜iPhoneからPC作業を遠隔依頼](https://miraina-ai.com/blogs/blog270.html): Google公式ヘルプをもとに、Mac版Geminiアプリの条件、iPhoneからMacへ遠隔依頼する接続手順、Connected foldersと安全な運用ルールを整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)

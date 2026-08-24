@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){window.dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-W9BLFVJ8E4');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年8月最新】AWSがAI検索フィルターを追加｜誤引用を防ぐ設計 | MIRAINAブログ</title>
+    <meta name="description" content="AI検索フィルターの新機能をAWS公式情報から解説。AgentCore Web Searchのドメイン・公開日制御、東京リージョン、誤引用を防ぐ運用を紹介します。">
+    <meta name="keywords" content="AI検索フィルター,Amazon Bedrock AgentCore Web Search,ドメインフィルター,公開日フィルター,AIエージェント">
+    <link rel="canonical" href="https://miraina-ai.com/blogs/blog269.html">
+    <meta property="og:title" content="【2026年8月最新】AWSがAI検索フィルターを追加｜誤引用を防ぐ設計">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog269.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog269-1.webp">
+    <meta property="og:description" content="AgentCore Web Searchで情報源と公開期間を検索前に制御し、古い情報や未承認サイトの誤引用を防ぐ設計を解説します。">
+    <meta property="og:site_name" content="MIRAINA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AWSがAI検索フィルターを追加｜誤引用を防ぐ設計">
+    <meta name="twitter:description" content="許可ドメインと公開日をサーバー側で制御する新機能を実務向けに整理。">
+    <meta name="twitter:image" content="https://miraina-ai.com/images/blogs_images/blog269-1.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Shippori+Mincho:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"【2026年8月最新】AWSがAI検索フィルターを追加｜誤引用を防ぐ設計","description":"AI検索フィルターの新機能をAWS公式情報から解説。AgentCore Web Searchのドメイン・公開日制御、東京リージョン、誤引用を防ぐ運用を紹介します。","image":"https://miraina-ai.com/images/blogs_images/blog269-1.webp","datePublished":"2026-08-24","dateModified":"2026-08-24","author":{"@type":"Person","name":"芝 優作"},"publisher":{"@type":"Organization","name":"MIRAINA","url":"https://miraina-ai.com/"},"mainEntityOfPage":"https://miraina-ai.com/blogs/blog269.html"}</script>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo"><img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40"></a>
+            <div class="hamburger" id="js-hamburger"><span></span><span></span><span></span></div>
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown"><a href="/services.html" class="nav-link">サービス</a><div class="dropdown-menu"><a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a><a href="/services/ai_training.html" class="dropdown-item">AI研修</a><a href="/services/ai_develop.html" class="dropdown-item">AI開発</a><a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a><a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a></div></div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div><div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div><div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div><div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+            </nav>
+        </div>
+        <div class="mobile-menu" id="js-mobile-menu"><nav class="mobile-nav"><div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div><div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div><div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div><div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div><div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div></nav></div>
+    </header>
+    <main>
+        <div class="container breadcrumbs"><ul><li><a href="/index.html">ホーム</a></li><li><a href="/blogs.html">ブログ</a></li><li>AWSのAI検索フィルター</li></ul></div>
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta"><span class="article-date">2026.08.24</span><div class="article-tags" style="flex-wrap:wrap;justify-content:center;"><p class="article-tag">AI検索</p><p class="article-tag">AWS</p><p class="article-tag">AIエージェント</p></div></div>
+                <h1 class="article-title" style="overflow-wrap:anywhere;">【2026年8月最新】AWSがAI検索フィルターを追加｜誤引用を防ぐ設計</h1>
+                <div class="article-thumbnail"><img src="/images/blogs_images/blog269-1.webp" alt="AWSのAI検索フィルターと誤引用を防ぐ設計を解説するイメージ" width="800" height="450" fetchpriority="high"></div>
+            </header>
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>AIエージェントにWeb調査を任せると、もっともらしい古い料金や、出典として承認していないブログが回答へ混ざることがあります。プロンプトで「公式情報だけ」と書いても、指示が必ず守られるとは限りません。</p>
+                <p>AWSは2026年8月19日、Amazon Bedrock AgentCore Web Searchへ<strong>AI検索フィルター</strong>を追加しました。検索ごとに許可・除外ドメインと公開日の範囲を指定し、サーバー側で結果を絞れます。この記事では新機能の事実、プロンプト指定との違い、中小企業が誤引用を防ぐための導入順序を整理します。</p>
+                <ul><li>ドメイン・公開日フィルターの仕組みがわかる</li><li>管理者設定と検索ごとの指定の違いを理解できる</li><li>古い料金や未承認サイトの誤引用を減らす設計を確認できる</li><li>フィルターを強くしたときの見逃しリスクも把握できる</li></ul>
+            </section>
+            <div class="article-toc"><div class="toc-title">目次</div><ul><li><a href="#section1">1. AWSがAI検索フィルターを追加</a></li><li><a href="#section2">2. 何をどこまで制御できるか</a></li><li><a href="#section3">3. プロンプト指定と違う理由</a></li><li><a href="#section4">4. 誤引用を防ぐ3つの活用例</a></li><li><a href="#section5">5. 導入前に決める運用ルール</a></li><li><a href="#section6">6. まとめ</a></li></ul></div>
+            <div class="article-body">
+                <h2 id="section1">1. AWSがAI検索フィルターを追加</h2>
+                <p>AWSが2026年8月19日に発表したのは、Amazon Bedrock AgentCore Web Searchのコネクタバージョン1.2.0です。新たに、検索結果をドメインで絞る<code>domainFilter</code>と、公開期間で絞る<code>publishedDateFilter</code>が追加されました。米国東部に加え、欧州のアイルランドとアジアパシフィックの東京でもWeb Searchを利用できるようになっています。</p>
+                <p>今回のポイントは、回答を生成した後に不要な出典を取り除くのではなく、<strong>モデルへ検索結果を渡す前に条件へ合わない情報を除外する</strong>ことです。価格、在庫、規制、製品仕様のように更新が多い情報では、「何を検索するか」と同じくらい「どの情報源の、いつの情報までを使うか」が重要になります。</p>
+
+                <h2 id="section2">2. 何をどこまで制御できるか</h2>
+                <p>ドメインフィルターにはinclude（許可）とexclude（除外）があり、それぞれ最大100ドメインを指定できます。公開日フィルターはISO 8601形式の開始・終了日時を指定し、境界の日付も検索対象に含みます。どちらも検索リクエストごとに変えられるため、同じAIエージェントでも、法務調査は官公庁、商品調査はメーカー公式サイトというように範囲を切り替えられます。</p>
+                <div class="article-table-wrapper"><table class="article-table"><thead><tr><th>設定</th><th>制御する内容</th><th>実務例</th></tr></thead><tbody><tr><th>許可ドメイン</th><td>検索してよい情報源</td><td>官公庁・メーカー・公式IRだけ</td></tr><tr><th>除外ドメイン</th><td>返してはいけない情報源</td><td>掲示板・転載サイト・競合メディア</td></tr><tr><th>公開日</th><td>検索対象とする期間</td><td>過去7日、今四半期、制度改定日以降</td></tr><tr><th>最大件数</th><td>取得する結果数</td><td>重要な一次情報を10件まで</td></tr></tbody></table></div>
+                <p>AWSは、日付を確認できない検索結果は公開日フィルター利用時に除外し、条件を満たすと確認できた結果だけを返すと説明しています。そのため精度を優先する一方、検索結果が少なくなることがあります。「結果が少ない=重要な情報が存在しない」とは判断せず、検索条件を広げた再確認を運用へ残す必要があります。</p>
+
+                <h2 id="section3">3. プロンプト指定と違う理由</h2>
+                <p>「公式サイトだけを参照してください」という文章は、人にもAIにもわかりやすい指示です。しかし、これはAIが指示へ従うことを前提にしています。AWSの開発者向け資料も、システムプロンプトによる指定はハードな強制ではないと注意しています。</p>
+                <p>AgentCore Web Searchでは、管理者がコネクタ全体へ設定するドメインポリシーと、検索時に指定するフィルターを重ねられます。許可リスト同士は共通部分だけが残り、除外リストはどちらか一方で禁止されていれば除外されます。つまり、現場の検索リクエストは管理者の許可範囲を狭められても、勝手に広げられません。</p>
+                <div class="diagram-container"><ul class="diagram-process"><li class="process-step"><span class="step-num">Policy</span><span class="step-text">管理者が全体の許可・除外範囲を固定</span></li><li class="process-step"><span class="step-num">Request</span><span class="step-text">業務ごとにドメイン・期間を追加指定</span></li><li class="process-step"><span class="step-num">Search</span><span class="step-text">サーバー側で条件を統合して検索</span></li><li class="process-step"><span class="step-num">Verify</span><span class="step-text">条件を確認できない結果を除外</span></li><li class="process-step"><span class="step-num">Answer</span><span class="step-text">確認済みの検索結果だけをAIへ渡す</span></li></ul><p class="diagram-caption">プロンプトだけに依存せず、検索経路そのものへ制約を置く設計です。</p></div>
+
+                <h2 id="section4">4. 誤引用を防ぐ3つの活用例</h2>
+                <h3>制度・補助金の変更確認</h3><p>補助金や法令の調査では、官公庁と実施機関のドメインを許可し、改定日以降に公開された情報へ期間を絞ります。解説記事を完全に排除する必要はありませんが、申請条件の確定には一次情報を使うという役割分担を明確にできます。</p>
+                <h3>商品・料金の比較</h3><p>商品やSaaSの比較では、公式料金ページとヘルプセンターを優先し、過去30日などの期間を付けます。価格ページに公開日がない場合は結果から落ちる可能性があるため、日付フィルターを外した公式ドメイン限定検索も別に行い、二つの結果を照合します。</p>
+                <h3>競合・市場ニュースの監視</h3><p>既存の<a href="/blogs/blog253.html">Gemini Sparkで競合・市場ニュースを監視する記事</a>では、対象と通知条件の設計を扱いました。今回のAI検索フィルターは、その前段で参照可能なドメインと期間を技術的に制限する仕組みです。監視の自動化と出典制御は別レイヤーとして組み合わせると、収集量だけが増える状態を避けやすくなります。</p>
+
+                <h2 id="section5">5. 導入前に決める運用ルール</h2>
+                <p>AI検索フィルターは、設定すれば自動的に正しい結論が出る機能ではありません。許可した公式ページ自体が古い、発表日を取得できない、必要な二次情報を除外しすぎる、といった見逃しは残ります。最初は次の順番で、検索結果が減る影響まで確認してください。</p>
+                <div class="article-table-wrapper"><table class="article-table"><thead><tr><th>確認項目</th><th>最初のルール</th><th>評価方法</th></tr></thead><tbody><tr><th>情報源</th><td>一次情報3〜10ドメインから開始</td><td>必要情報の見逃し件数</td></tr><tr><th>公開期間</th><td>日次7日、月次30日など業務別に設定</td><td>古い情報の混入率</td></tr><tr><th>例外検索</th><td>結果0件・少数時は条件を広げる</td><td>再検索で見つかった重要情報</td></tr><tr><th>人の確認</th><td>金額・契約・法令は原文を開く</td><td>引用URLと本文の一致</td></tr></tbody></table></div>
+                <p>MIRAINAの視点では、AI検索の品質は「回答が自然か」ではなく、<strong>使ってよい情報源、必要な鮮度、例外時の再検索、人が原文を見る条件</strong>の4点で管理すべきです。AgentCoreの別機能である自律決済については<a href="/blogs/blog134.html">AgentCore Paymentsの記事</a>、社内データを根拠に回答させる設計は<a href="/blogs/blog065.html">RAGの導入ガイド</a>で解説しています。</p>
+                <p>またAWSは、Web Searchの検索クエリがAWSインフラ内で処理され、第三者検索エンジンへ送られない「zero data egress」の構成だと説明しています。ただし、これだけで自社の法務・セキュリティ要件を満たすとは限りません。IAM権限、ログ、保存期間、入力してよいデータを自社の基準で確認してください。</p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>AWSが追加したAI検索フィルターにより、Amazon Bedrock AgentCore Web Searchでは、検索ごとに許可・除外ドメインと公開日を指定できるようになりました。管理者ポリシーを現場が広げられない構造で、プロンプトだけに頼らず検索範囲を制御できます。</p>
+                <p>まずは制度、料金、競合発表など、古い情報が意思決定へ直結する1業務を選び、許可ドメインと期間を小さく設定してください。結果が少ないときの再検索と原文確認まで決めて初めて、誤引用を減らしながら使えるAI検索になります。MIRAINAの<a href="/services/ai_consulting.html">生成AI活用支援</a>では、情報源ポリシー、権限、評価指標を含むAIエージェント運用を自社業務に合わせて設計します。</p>
+            </div>
+            <div class="article-cta"><div class="cta-box"><h2 class="cta-title">根拠を確認できるAI検索を業務へ入れたい方へ</h2><p class="cta-text">参照先、鮮度、権限、人の確認点まで、誤引用を防ぐAIエージェント運用を設計します。</p><a href="/services/ai_consulting.html" class="cta-button">生成AI活用支援を見る</a></div></div>
+            <div class="article-references"><h3>参考情報</h3><ul><li><a href="https://aws.amazon.com/blogs/machine-learning/domain-and-publish-date-filters-for-web-search-on-agentcore/" target="_blank" rel="noopener">AWS: Domain and publish date filters for Web Search on AgentCore（2026年8月19日）</a></li><li><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/gateway-target-connector-web-search-tool.html" target="_blank" rel="noopener">Amazon Bedrock AgentCore Developer Guide: Web Search Tool</a></li><li><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agentcore-regions.html" target="_blank" rel="noopener">Amazon Bedrock AgentCore Developer Guide: Supported AWS Regions</a></li></ul></div>
+            <div class="article-editor"><div class="editor-header">この記事を監修した人</div><div class="editor-profile"><div class="editor-image"><img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async"></div><div class="editor-info"><div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div><p class="editor-desc">九州を拠点に中小企業のAI活用支援に従事。業務フローに合わせたAI導入、AI研修、LLMO対策まで、現場で続く仕組みづくりを支援しています。</p></div></div></div>
+            <div class="article-related"><h2 class="related-title">関連記事</h2><div class="related-grid"><a href="/blogs/blog253.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card253.webp" alt="Gemini Sparkで競合・市場ニュースを監視する記事" loading="lazy" decoding="async"></div><div class="related-content"><div class="related-date">2026.08.14</div><div class="related-text">Gemini Sparkで競合・市場ニュースを自動監視する方法</div></div></a><a href="/blogs/blog134.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card134.webp" alt="Amazon Bedrock AgentCore Paymentsを解説する記事" loading="lazy" decoding="async"></div><div class="related-content"><div class="related-date">2026.05.10</div><div class="related-text">Amazon Bedrock AgentCore Payments登場、AIエージェント決済は何を変えるか</div></div></a><a href="/blogs/blog065.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card065.webp" alt="RAGによる自社データ活用とハルシネーション対策を解説する記事" loading="lazy" decoding="async"></div><div class="related-content"><div class="related-date">2026.04.03</div><div class="related-text">RAGとは？企業の自社データ活用とハルシネーション対策</div></div></a></div></div>
+        </article>
+    </main>
+    <footer class="footer"><div class="container footer-inner"><div class="footer-brand"><a href="/index.html"><p class="footer-brand-text">MIRAINA</p></a></div><div class="footer-center"></div><div class="footer-menu"><ul class="footer-menu-list"><li><a href="/about.html">私たちについて</a></li><li><a href="/works.html">事例紹介</a></li><li><a href="/blogs.html">ブログ</a></li><li><a href="/contact.html">お問い合わせ</a></li><li><a href="/privacy_policy.html">プライバシーポリシー</a></li></ul><div class="footer-sns"><a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a><a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a></div></div></div><div class="footer-bottom"><p>&copy; MIRAINA All Rights Reserved.</p></div></footer>
+    <script src="/js/common.js"></script><script>document.addEventListener('DOMContentLoaded',()=>{const h=document.getElementById('js-hamburger'),m=document.getElementById('js-mobile-menu');if(h&&m)h.addEventListener('click',()=>m.classList.toggle('is-active'));});</script>
+</body>
+</html>
