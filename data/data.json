@@ -2429,6 +2429,15 @@
       "thumbnail": "/images/blogs_images/blog-card270.webp",
       "alt": "Gemini SparkをMacで使いiPhoneからPC作業を遠隔依頼するイメージ",
       "date": "2026-08-24"
+    },
+    {
+      "id": 271,
+      "title": "【2026年8月最新】ChatGPTのWebhook自動化とは？GmailとSlack確認を任せる方法",
+      "description": "ChatGPTのWebhook自動化をOpenAI公式情報で解説。Scheduled tasksでGmailやSlack更新に反応する使い方、利用条件、承認ルール、実務プロンプトを紹介します。",
+      "link": "/blogs/blog271.html",
+      "thumbnail": "/images/blogs_images/blog-card271.webp",
+      "alt": "ChatGPTのWebhook自動化でGmailとSlack確認を進めるイメージ",
+      "date": "2026-08-27"
     }
   ],
   "works": [
