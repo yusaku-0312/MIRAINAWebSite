@@ -2456,6 +2456,24 @@
       "thumbnail": "/images/blogs_images/blog-card273.webp",
       "alt": "Google Workspace skillsで社内ルールをAIに覚えさせるイメージ",
       "date": "2026-08-28"
+    },
+    {
+      "id": 274,
+      "title": "Hugging Face事件の教訓｜AI安全設計",
+      "description": "AI安全設計をOpenAIのHugging Face事件から解説。停止条件、最小権限、分離、監視、初動対応の5項目を紹介します。",
+      "link": "/blogs/blog274.html",
+      "thumbnail": "/images/blogs_images/blog-card274.webp",
+      "alt": "OpenAIのHugging Face事件からAIエージェント安全設計を学ぶイメージ",
+      "date": "2026-08-29"
+    },
+    {
+      "id": 275,
+      "title": "【2026年8月最新】ChatGPT Business Premium seatsとは？AI利用量の多い人だけ上位席にする方法",
+      "description": "ChatGPT Business Premium seatsをOpenAI公式情報で解説。Standardとの違い、料金、向いている人、席運用の注意点を紹介します。",
+      "link": "/blogs/blog275.html",
+      "thumbnail": "/images/blogs_images/blog-card275.webp",
+      "alt": "ChatGPT Business Premium seatsでAI利用量の多い人だけ上位席にするイメージ",
+      "date": "2026-08-29"
     }
   ],
   "works": [

@@ -299,6 +299,8 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年8月最新】ChatGPTのWebhook自動化とは？GmailとSlack確認を任せる方法](https://miraina-ai.com/blogs/blog271.html): OpenAI公式情報をもとに、Scheduled tasksのWebhook対応、GmailやSlack更新に反応する使い方、利用条件、承認ルール、実務プロンプトを整理した記事。
 - [最新ブログ: 【2026年8月最新】ChatGPT Admin pluginとは？社内AIの権限・予算管理](https://miraina-ai.com/blogs/blog272.html): OpenAI公式情報をもとに、ChatGPT WorkとCodexの利用状況、メンバー、権限、利用上限、予算申請を会話から安全に管理する導入手順を整理した記事。
 - [最新ブログ: 【2026年8月最新】Google Workspace skillsとは？社内ルールをAIに覚えさせる方法](https://miraina-ai.com/blogs/blog273.html): Google公式情報をもとに、Workspace skillsの再利用プロンプト、提案書やメールの標準化、Geminiベータ条件、共有と停止を含む運用ルールを整理した記事。
+- [最新ブログ: Hugging Face事件の教訓｜AI安全設計](https://miraina-ai.com/blogs/blog274.html): OpenAI公式技術報告とMETR独立調査をもとに、AI安全設計として停止条件、最小権限、環境分離、行動監視、初動対応を整理した記事。
+- [最新ブログ: 【2026年8月最新】ChatGPT Business Premium seatsとは？AI利用量の多い人だけ上位席にする方法](https://miraina-ai.com/blogs/blog275.html): OpenAI公式情報をもとに、ChatGPT Business Premium seatsの料金、Standardとの違い、向いている人、席運用の注意点を整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)
