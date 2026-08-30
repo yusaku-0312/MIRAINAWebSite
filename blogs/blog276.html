@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-W9BLFVJ8E4');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>Excel業務表をLark Sheetsへ移行する方法｜実務手順と注意点 | MIRAINAブログ</title>
+    <meta name="description" content="Excel業務表をLark Sheetsへ移行する方法を実例で解説。値・書式・入力規則・権限を整理し、共同編集できる表へ変える手順を紹介します。">
+    <meta name="keywords" content="Excel Lark Sheets 移行,Lark Sheets 使い方,Excel 業務表,共同編集,業務効率化">
+    <link rel="canonical" href="https://miraina-ai.com/blogs/blog276.html">
+    <meta property="og:title" content="Excel業務表をLark Sheetsへ移行する方法｜実務手順と注意点">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog276.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog276-1.webp">
+    <meta property="og:description" content="Excel業務表をLark Sheetsへ移行する実務手順と、崩れやすい書式・入力規則・権限の確認方法を解説します。">
+    <meta property="og:site_name" content="MIRAINA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Excel業務表をLark Sheetsへ移行する方法">
+    <meta name="twitter:description" content="共同編集できる業務表へ移す手順と注意点を、完全ダミーの画面例で解説。">
+    <meta name="twitter:image" content="https://miraina-ai.com/images/blogs_images/blog276-1.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Shippori+Mincho:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excel業務表をLark Sheetsへ移行する方法｜実務手順と注意点","description":"Excel業務表をLark Sheetsへ移行する方法を実例で解説。値・書式・入力規則・権限を整理し、共同編集できる表へ変える手順を紹介します。","image":"https://miraina-ai.com/images/blogs_images/blog276-1.webp","datePublished":"2026-08-29","dateModified":"2026-08-29","author":{"@type":"Person","name":"芝 優作"},"publisher":{"@type":"Organization","name":"MIRAINA","url":"https://miraina-ai.com/"},"mainEntityOfPage":"https://miraina-ai.com/blogs/blog276.html"}</script>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo"><img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40"></a>
+            <div class="hamburger" id="js-hamburger"><span></span><span></span><span></span></div>
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown"><a href="/services.html" class="nav-link">サービス</a><div class="dropdown-menu"><a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a><a href="/services/ai_training.html" class="dropdown-item">AI研修</a><a href="/services/ai_develop.html" class="dropdown-item">AI開発</a><a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a><a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a></div></div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div><div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div><div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div><div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+            </nav>
+        </div>
+        <div class="mobile-menu" id="js-mobile-menu"><nav class="mobile-nav"><div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div><div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div><div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div><div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div><div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div></nav></div>
+    </header>
+    <main>
+        <div class="container breadcrumbs"><ul><li><a href="/index.html">ホーム</a></li><li><a href="/blogs.html">ブログ</a></li><li>ExcelからLark Sheetsへの移行</li></ul></div>
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta"><span class="article-date">2026.08.29</span><div class="article-tags" style="flex-wrap:wrap;justify-content:center;"><p class="article-tag">Lark</p><p class="article-tag">業務改善</p><p class="article-tag">表計算</p></div></div>
+                <h1 class="article-title">Excel業務表をLark Sheetsへ移行する方法｜実務手順と注意点</h1>
+                <div class="article-thumbnail"><img src="/images/blogs_images/blog276-1.webp" alt="Excel業務表をLark Sheetsへ移行する方法のイメージ" width="1200" height="675" fetchpriority="high"></div>
+            </header>
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>Excelで管理している業務表をLark Sheetsへ移すとき、ファイルをアップロードするだけでは運用まで整いません。値が読めることに加え、<strong>書式、入力規則、担当者、共有権限、更新ルール</strong>まで確認して初めて、共同編集できる業務表になります。</p>
+                <p>この記事では、架空データで作成した業務進捗表を例に、移行前の棚卸しからテスト、公開後の運用までを解説します。画像はすべて記事用にローカルで作成した再現画面で、実在する会社・人物・Lark環境の情報は使用していません。</p>
+                <ul><li>ExcelからLark Sheetsへ移す前の判断基準</li><li>値・書式・プルダウンを再現する手順</li><li>移行時に崩れやすい項目と確認方法</li><li>APIやAIを使った更新自動化の考え方</li></ul>
+            </section>
+            <div class="article-toc"><div class="toc-title">目次</div><ul><li><a href="#section1">1. Excel業務表をLark Sheetsへ移す目的</a></li><li><a href="#section2">2. 移行前に棚卸しする5項目</a></li><li><a href="#section3">3. Lark Sheetsへ移行する実務手順</a></li><li><a href="#section4">4. 実例：共同編集できる業務表へ再設計</a></li><li><a href="#section5">5. 失敗しやすい点と安全対策</a></li><li><a href="#section6">6. まとめ</a></li></ul></div>
+            <div class="article-body">
+                <h2 id="section1">1. Excel業務表をLark Sheetsへ移す目的</h2>
+                <p><strong>Excel業務表をLark Sheetsへ移行する目的</strong>は、表の見た目をコピーすることではありません。複数人が同じ表を開き、最新情報を確認し、必要な範囲だけ編集できる状態へ変えることです。Lark公式は、DocsやSheetsを含む情報がリアルタイムに同期され、権限を管理しながら共同作業できる点を案内しています。</p>
+                <p>ただし、すべてのExcelを移せばよいわけではありません。複雑なVBA、外部アドイン、厳密な帳票印刷、巨大な計算モデルが中心なら、Excelを残す判断も必要です。一方、案件一覧、問い合わせ台帳、シフト希望、進捗表のように、複数人が行単位で更新する表は移行効果が出やすい領域です。</p>
+                <div class="article-table-wrapper"><table class="article-table"><thead><tr><th>移行しやすい表</th><th>慎重に判断する表</th></tr></thead><tbody><tr><td>案件・タスク・問い合わせの一覧</td><td>VBAや外部アドインに依存する表</td></tr><tr><td>複数担当者が同時に更新する台帳</td><td>印刷レイアウトが成果物になる帳票</td></tr><tr><td>プルダウンで状態を管理する表</td><td>大量データと複雑な計算を扱うモデル</td></tr></tbody></table></div>
+
+                <h2 id="section2">2. 移行前に棚卸しする5項目</h2>
+                <p>最初に確認するのは、①データ、②計算、③入力ルール、④表示、⑤権限です。セル数やシート数だけで見積もると、移行後に「選択肢がない」「数式結果が違う」「誰でも編集できる」といった問題が起きます。元ファイルを直接触らず、コピーした検証用ファイルで棚卸しを始めます。</p>
+                <div class="article-table-wrapper"><table class="article-table"><thead><tr><th>確認項目</th><th>具体的に見るもの</th><th>移行後のテスト</th></tr></thead><tbody><tr><th>データ</th><td>文字、数値、日付、空欄、重複</td><td>行数・主要列・合計値を照合</td></tr><tr><th>計算</th><td>数式、参照先、エラー処理</td><td>代表ケースで期待値を比較</td></tr><tr><th>入力ルール</th><td>プルダウン、必須項目、禁止値</td><td>正常値と異常値の両方を入力</td></tr><tr><th>表示</th><td>幅、高さ、固定行、色、結合</td><td>PCとスマートフォンで確認</td></tr><tr><th>権限</th><td>閲覧者、編集者、管理者</td><td>別権限の利用者で操作確認</td></tr></tbody></table></div>
+                <p>MIRAINAの視点では、移行対象を「セル」ではなく<strong>業務上の判断</strong>で分解するのが重要です。例えば黄色いセルの意味が「担当者の入力待ち」なら、色だけでなくステータス列と担当列として定義します。見た目に埋め込まれた暗黙のルールを、誰でも読める列と選択肢へ変えることが再設計の核心です。</p>
+
+                <h2 id="section3">3. Lark Sheetsへ移行する実務手順</h2>
+                <p>実務では、原本保全、検証用シート作成、値の移行、構造の再現、入力規則、権限、照合の順で進めます。直接アップロードで十分な単純表もありますが、複数ファイルを定期更新する場合や、列構造を統一したい場合はAPIによる再構築が向いています。</p>
+                <div class="diagram-container"><ul class="diagram-process"><li class="process-step"><span class="step-num">Step 01</span><span class="step-text">Excel原本を保全し対象範囲を確定</span></li><li class="process-step"><span class="step-num">Step 02</span><span class="step-text">検証用Lark Sheetへ値を移す</span></li><li class="process-step"><span class="step-num">Step 03</span><span class="step-text">列幅・固定行・書式を整える</span></li><li class="process-step"><span class="step-num">Step 04</span><span class="step-text">プルダウンと入力ルールを設定</span></li><li class="process-step"><span class="step-num">Step 05</span><span class="step-text">権限と照合テストを行う</span></li></ul><p class="diagram-caption">原本を残したまま検証し、照合後に利用者を切り替えます。</p></div>
+                <h3>直接移行とAPI再構築の使い分け</h3>
+                <p>1回だけ移す単純な一覧なら、アップロード後に人が書式と入力規則を整える方法が早くなります。毎月同じ形式を作る、複数拠点の表を統合する、他システムから行を追加する場合は、LarkのAPIで作成・書き込み・スタイル設定を分けて実行すると再現性が上がります。自動化する場合も、最初はダミーデータで動作確認し、本番の認証情報とテスト環境を混ぜないことが前提です。</p>
+
+                <h2 id="section4">4. 実例：共同編集できる業務表へ再設計</h2>
+                <p>下図は、記事用に作成した完全ダミーの業務進捗表です。管理ID、タスク名、担当、期限、ステータス、優先度へ情報を分けています。ステータスは「未着手・確認中・完了・保留」の選択式にし、自由入力による表記揺れを防ぐ想定です。</p>
+                <figure class="article-figure"><img src="/images/blogs_images/blog276-2.webp" alt="完全ダミーデータで再現したLark Sheets風の業務進捗表サンプル" width="800" height="450" loading="lazy" decoding="async"><figcaption>図1：記事用にローカル作成した再現画面。実在する会社・人物・Lark環境の情報は含みません。</figcaption></figure>
+                <p>Excelでは担当者ごとにファイルを複製しがちですが、移行後は1つの表で担当と状態を更新する運用へ寄せます。1行目を固定し、期限は日付型、優先度とステータスは選択式にします。管理IDは後から別システムや通知処理とつなぐため、重複しない値にします。</p>
+                <p>照合では、全セルを目視するより、総行数、空欄数、ステータス別件数、期限の最小・最大、代表5件を比較します。例えば元のExcelが200行なら、移行後も200行であること、管理IDの重複が0件であること、完了件数が一致することを先に確認します。数値を基準にすると、見た目が整っていても一部データが欠けた事故を見つけやすくなります。</p>
+
+                <h2 id="section5">5. 失敗しやすい点と安全対策</h2>
+                <p>第一の失敗は、実データを画面共有や記事画像に使うことです。検証・研修・広報では、会社名、氏名、URL、テナント名、案件名を完全なダミーへ置き換えます。画面全体を撮る場合は、別タブ、最近使ったファイル、通知、プロフィール画像まで確認します。</p>
+                <p>第二は、権限確認を最後に回すことです。Lark公式はファイル所有者が閲覧・編集・管理の権限を設定できると説明しています。移行前に「誰が見るか」「誰が変更するか」「誰が共有範囲を変えられるか」を決め、公開リンクや社外共有を必要最小限にします。</p>
+                <p>第三は、Excelの見た目をそのまま再現しようとすることです。結合セルや色分けが多い表は、スマートフォンで扱いにくくなります。列名、選択肢、担当、期限を明示し、色は補助情報として使います。第四は、切替日を決めずExcelとLarkの両方を更新し続けることです。検証期間と本番切替日を決め、本番移行後の正本を1つにします。</p>
+                <p>Lark全体の機能を整理したい方は<a href="/blogs/blog153.html">Larkとは？機能・料金・できること</a>、表よりデータベース型の管理が向く場合は<a href="/blogs/blog154.html">Lark Baseとは？</a>も参考になります。承認を含む業務なら<a href="/blogs/blog155.html">Lark 承認のワークフロー設計</a>と組み合わせて検討します。</p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>ExcelからLark Sheetsへの移行は、ファイル変換ではなく運用設計です。原本を保全し、値・計算・入力規則・表示・権限を棚卸ししたうえで、ダミーデータによる検証、数値照合、利用者テストを行います。共同編集に向く業務表から小さく始めると、移行リスクを抑えられます。</p>
+                <p>複数の業務表をまとめて移す場合は、対象選定、列設計、権限、API自動化、移行後の運用台帳までを一続きで設計してください。MIRAINAでは、現行業務の棚卸しからLarkを含む業務基盤の設計・自動化まで支援しています。</p>
+            </div>
+            <div class="article-cta"><div class="cta-box"><h2 class="cta-title">Excel業務表を安全に共同編集へ移行する</h2><p class="cta-text">業務棚卸し、移行設計、権限整理、自動化まで、現場で続く形へ整えます。</p><a href="/services/ai_consulting.html" class="cta-button">生成AI活用支援を見る</a></div></div>
+            <div class="article-references"><h3>参考情報</h3><ul><li><a href="https://www.larksuite.com/en_us/paid/teamwork" target="_blank" rel="noopener">Lark公式：Docs・Sheetsのリアルタイム同期と共同作業</a></li><li><a href="https://www.larksuite.com/hc/en-US/category/7084069506783379461-managing-permissions" target="_blank" rel="noopener">Lark Help Center：Managing permissions</a></li><li><a href="https://www.larksuite.com/en_us/blog/document-version-control-software" target="_blank" rel="noopener">Lark公式：文書・シートの権限と版管理</a></li></ul></div>
+            <div class="article-editor"><div class="editor-header">この記事を監修した人</div><div class="editor-profile"><div class="editor-image"><img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async"></div><div class="editor-info"><div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div><p class="editor-desc">九州を拠点に中小企業のAI活用支援に従事。業務フローに合わせたツール導入、AI研修、業務自動化まで、現場で続く仕組みづくりを支援しています。</p></div></div></div>
+            <div class="article-related"><h2 class="related-title">関連記事</h2><div class="related-grid"><a href="/blogs/blog153.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card153.webp" alt="Larkとは何かを解説する記事" loading="lazy" decoding="async"></div><div class="related-content"><div class="related-text">Larkとは？機能・料金・できることをわかりやすく解説</div></div></a><a href="/blogs/blog154.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card154.webp" alt="Lark Baseの業務管理を解説する記事" loading="lazy" decoding="async"></div><div class="related-content"><div class="related-text">Lark Baseとは？業務管理の始め方</div></div></a><a href="/blogs/blog155.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card155.webp" alt="Lark 承認のワークフローを解説する記事" loading="lazy" decoding="async"></div><div class="related-content"><div class="related-text">Lark 承認とは？ワークフロー設計</div></div></a></div></div>
+        </article>
+    </main>
+    <footer class="footer"><div class="container footer-inner"><div class="footer-brand"><a href="/index.html"><p class="footer-brand-text">MIRAINA</p></a></div><div class="footer-center"></div><div class="footer-menu"><ul class="footer-menu-list"><li><a href="/about.html">私たちについて</a></li><li><a href="/works.html">事例紹介</a></li><li><a href="/blogs.html">ブログ</a></li><li><a href="/contact.html">お問い合わせ</a></li><li><a href="/privacy_policy.html">プライバシーポリシー</a></li></ul><div class="footer-sns"><a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a><a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a></div></div></div><div class="footer-bottom"><p>&copy; MIRAINA All Rights Reserved.</p></div></footer>
+    <script src="/js/common.js"></script>
+</body>
+</html>

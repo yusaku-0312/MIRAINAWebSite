@@ -301,6 +301,9 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年8月最新】Google Workspace skillsとは？社内ルールをAIに覚えさせる方法](https://miraina-ai.com/blogs/blog273.html): Google公式情報をもとに、Workspace skillsの再利用プロンプト、提案書やメールの標準化、Geminiベータ条件、共有と停止を含む運用ルールを整理した記事。
 - [最新ブログ: Hugging Face事件の教訓｜AI安全設計](https://miraina-ai.com/blogs/blog274.html): OpenAI公式技術報告とMETR独立調査をもとに、AI安全設計として停止条件、最小権限、環境分離、行動監視、初動対応を整理した記事。
 - [最新ブログ: 【2026年8月最新】ChatGPT Business Premium seatsとは？AI利用量の多い人だけ上位席にする方法](https://miraina-ai.com/blogs/blog275.html): OpenAI公式情報をもとに、ChatGPT Business Premium seatsの料金、Standardとの違い、向いている人、席運用の注意点を整理した記事。
+- [最新ブログ: Excel業務表をLark Sheetsへ移行する方法｜実務手順と注意点](https://miraina-ai.com/blogs/blog276.html): Excel業務表をLark Sheetsへ移行する際の棚卸し、値・書式・入力規則・権限の再現、照合、安全な画面作成を整理した記事。
+- [最新ブログ: AI研修の効果測定を見直す｜ChatGPTで成果物は向上、独創性は別指標](https://miraina-ai.com/blogs/blog277.html): OpenAIの1,000人超の無作為化実験をもとに、AI研修の効果測定で成果物の品質、思考過程、業務への転移を分けて評価する方法を整理した記事。
+- [最新ブログ: 【2026年8月最新】Google DriveのAI分類とは？Geminiで機密ラベルを自動化する方法](https://miraina-ai.com/blogs/blog278.html): Google公式情報をもとに、Google DriveのAI分類で機密文書ラベルをGeminiで自動化する方法、利用条件、運用ルール、実務指示例を整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)

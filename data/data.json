@@ -2474,6 +2474,33 @@
       "thumbnail": "/images/blogs_images/blog-card275.webp",
       "alt": "ChatGPT Business Premium seatsでAI利用量の多い人だけ上位席にするイメージ",
       "date": "2026-08-29"
+    },
+    {
+      "id": 276,
+      "title": "Excel業務表をLark Sheetsへ移行する方法｜実務手順と注意点",
+      "description": "Excel業務表をLark Sheetsへ移行する方法を実例で解説。値・書式・入力規則・権限を整理し、共同編集できる表へ変える手順を紹介します。",
+      "link": "/blogs/blog276.html",
+      "thumbnail": "/images/blogs_images/blog-card276.webp",
+      "alt": "Excel業務表をLark Sheetsへ移行する方法のイメージ",
+      "date": "2026-08-29"
+    },
+    {
+      "id": 277,
+      "title": "AI研修の効果測定を見直す｜ChatGPTで成果物は向上、独創性は別指標",
+      "description": "AI研修の効果測定をOpenAIの1,000人超実験から解説。成果物の品質、独創性、因果推論を分けて測る評価設計を紹介します。",
+      "link": "/blogs/blog277.html",
+      "thumbnail": "/images/blogs_images/blog-card277.webp",
+      "alt": "AI研修の効果測定で成果物の品質と独創性を分けて評価するイメージ",
+      "date": "2026-08-30"
+    },
+    {
+      "id": 278,
+      "title": "【2026年8月最新】Google DriveのAI分類とは？Geminiで機密ラベルを自動化する方法",
+      "description": "Google DriveのAI分類をGoogle公式情報で解説。Geminiによる機密文書ラベル自動化、利用条件、運用ルール、実務指示例を紹介します。",
+      "link": "/blogs/blog278.html",
+      "thumbnail": "/images/blogs_images/blog-card278.webp",
+      "alt": "Google DriveのAI分類で機密文書ラベルをGeminiで自動化するイメージ",
+      "date": "2026-08-30"
     }
   ],
   "works": [

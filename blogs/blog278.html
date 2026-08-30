@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年8月最新】Google DriveのAI分類とは？Geminiで機密ラベルを自動化する方法 | MIRAINAブログ</title>
+    <meta name="description" content="Google DriveのAI分類をGoogle公式情報で解説。Geminiによる機密文書ラベル自動化、利用条件、運用ルール、実務指示例を紹介します。">
+    <meta name="keywords" content="Google Drive AI分類,Google Drive ラベル 自動化,Gemini 分類,機密文書 管理,DLP">
+    <link rel="canonical" href="https://miraina-ai.com/blogs/blog278.html">
+    <meta property="og:title" content="【2026年8月最新】Google DriveのAI分類とは？Geminiで機密ラベルを自動化する方法">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog278.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog278-1.webp">
+    <meta property="og:description" content="Google DriveのAI分類で、Geminiが機密文書ラベルをどう自動化するのか、利用条件と運用ルールを整理します。">
+    <meta property="og:site_name" content="MIRAINA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Google DriveのAI分類とは？Geminiで機密ラベルを自動化する方法">
+    <meta name="twitter:description" content="手動学習不要のGemini分類、対応プラン、管理者が決めるべき運用を解説。">
+    <meta name="twitter:image" content="https://miraina-ai.com/images/blogs_images/blog278-1.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Shippori+Mincho:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"【2026年8月最新】Google DriveのAI分類とは？Geminiで機密ラベルを自動化する方法","description":"Google DriveのAI分類をGoogle公式情報で解説。Geminiによる機密文書ラベル自動化、利用条件、運用ルール、実務指示例を紹介します。","image":"https://miraina-ai.com/images/blogs_images/blog278-1.webp","datePublished":"2026-08-30","dateModified":"2026-08-30","author":{"@type":"Person","name":"芝 優作"},"publisher":{"@type":"Organization","name":"MIRAINA","url":"https://miraina-ai.com/"},"mainEntityOfPage":"https://miraina-ai.com/blogs/blog278.html"}</script>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo"><img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40"></a>
+            <div class="hamburger" id="js-hamburger"><span></span><span></span><span></span></div>
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+            </nav>
+        </div>
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>Google DriveのAI分類</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.08.30</span>
+                    <div class="article-tags" style="flex-wrap:wrap;justify-content:center;">
+                        <p class="article-tag">Google Drive</p>
+                        <p class="article-tag">Gemini</p>
+                        <p class="article-tag">情報管理</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap:anywhere;">【2026年8月最新】Google DriveのAI分類とは？Geminiで機密ラベルを自動化する方法</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog278-1.webp" alt="Google DriveのAI分類で機密文書ラベルをGeminiで自動化するイメージ" width="1200" height="675" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>AIが苦手な人は「Google DriveのAI分類」とは検索せず、「機密文書を自動で分けたい」「社内ファイルをAIで整理したい」「DLPルール用のラベル付けを減らしたい」といった悩みから調べます。一方、すでにAIを使っている人は「Driveで契約書だけ機密ラベルを自動付与したい」「Geminiで人事ファイルを分類する指示例を作って」と、かなり具体的な依頼をAIに投げます。</p>
+                <p>Googleは<strong>2026年8月28日</strong>、<strong>Google DriveのGemini-based data classification</strong>を open beta として公開しました。この記事では、AIが苦手な人の検索意図と、AI利用者が実際に投げそうな依頼文の両方を前提に、Google DriveのAI分類で何ができるのか、従来の学習型分類と何が違うのか、利用条件、運用ルール、すぐ使える指示例まで整理します。</p>
+                <ul>
+                    <li>Google DriveのAI分類の役割がわかる</li>
+                    <li>フォルダ整理機能との違いを区別できる</li>
+                    <li>Gemini方式の利用条件と制約を把握できる</li>
+                    <li>管理者が決めるべき運用ルールを確認できる</li>
+                </ul>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. Google DriveのAI分類とは？</a></li>
+                    <li><a href="#section2">2. AIが苦手な人は何を検索し、AI利用者は何を頼むか</a></li>
+                    <li><a href="#section3">3. Gemini分類でできることと利用条件</a></li>
+                    <li><a href="#section4">4. 導入前に決める運用ルール</a></li>
+                    <li><a href="#section5">5. そのまま使える指示例</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. Google DriveのAI分類とは？</h2>
+                <p><strong>Google DriveのAI分類</strong>は、GeminiがDrive内のファイル内容を見て、管理者が決めた分類ラベルを自動で付ける仕組みです。Google Workspace Updates の<strong>2026年8月28日</strong>の告知では、この機能を <strong>open beta</strong> として案内し、データ損失防止（DLP）、保持ルール、監査調査で使うラベル付けを大規模に自動化できると説明しています。特に「agentic era における security posture を高める」と明記しており、AIエージェントが機密データへ勝手に触れないようにする基礎レイヤーとして位置づけられています。</p>
+                <p>重要なのは、これは「フォルダをきれいに並べ替える機能」ではないことです。Google Drive Help には別機能として <strong>Let Gemini organize your files</strong> があり、こちらは loose files を既存フォルダや新規フォルダへ移す提案を行います。今回の新機能はファイルの配置変更ではなく、<strong>ラベルというメタデータ</strong>を自動付与して、後段のDLPや保持、監査へつなぐ機能です。検索ではこの2つが混同されやすいので、最初に切り分ける必要があります。</p>
+                <figure class="article-figure">
+                    <img src="/images/blogs_images/blog278-2.webp" alt="Google Workspace UpdatesでGoogle DriveのGemini-based data classificationがopen betaとして案内されている画面" loading="lazy" decoding="async">
+                    <figcaption>図1：Google Workspace Updates で 2026年8月28日に公開された Google Drive の Gemini-based data classification 告知。</figcaption>
+                </figure>
+                <p>従来のAI分類では、管理者が学習用のラベルを作り、例示ファイルへ手作業でラベルを付けてモデルを育てる必要がありました。新しい Gemini 方式では、管理者が plain-language の指示文を定義し、Gemini がそれを解釈して分類します。学習データづくりを前提にしないため、<strong>「まず100枚ずつ教師データを作る」工程を飛ばせる</strong>のが今回の変化です。アクセス権の見直しと合わせるなら、<a href="/blogs/blog255.html">Google Driveのアクセス権監査の記事</a>も先に読んでおくと運用設計がつながります。</p>
+
+                <h2 id="section2">2. AIが苦手な人は何を検索し、AI利用者は何を頼むか</h2>
+                <p>AIが苦手な人は、製品名より先に悩みを検索します。たとえば「契約書だけ機密扱いにしたい」「社内ファイルを自動で仕分けたい」「社員ごとの判断に任せず統一したい」といった探し方です。一方、普段からAIを使う人は「Google DriveのAI分類で見積書と請求書に別ラベルを付ける設計を作って」「DLPに使うラベル体系を3段階で整理して」と、実装に近い依頼をそのままAIに投げます。</p>
+                <p>このときAIが引用しやすいのは、Google Workspace Updates と Google Workspace Help のような一次情報です。つまり、読者の検索語は曖昧でも、AIが返す根拠はかなり公式寄りになります。記事側も同じ構造で、<strong>何ができるか、何と違うか、誰が設定し、どこまで自動化されるか</strong>を明記した方が、検索にもAI引用にも強くなります。これは<a href="/blogs/blog273.html">Google Workspace skillsの記事</a>と同じで、悩み検索と実務プロンプトを橋渡しする書き方が有効です。</p>
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr><th>想定される検索語</th><th>本当の悩み</th><th>AIに投げそうな依頼</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><th>Google Drive 機密文書 自動分類</th><td>担当者ごとの判断がばらつく</td><td>「契約書・請求書・人事資料の分類ルールを作って」</td></tr>
+                            <tr><th>社内ファイル AI 整理</th><td>整理と保護を一緒に進めたい</td><td>「フォルダ整理とラベル分類の違いを表で出して」</td></tr>
+                            <tr><th>DLP ラベル 自動付与</th><td>監査と保持ルールの前段を効率化したい</td><td>「DLP前提のラベル設計を3段階で提案して」</td></tr>
+                            <tr><th>Google Drive ラベル Gemini</th><td>設定手順と利用条件を知りたい</td><td>「対応プランと管理者手順を簡潔にまとめて」</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>MIRAINAの視点では、このテーマで大事なのは「AIで何でも分類できるか」ではなく、<strong>誰が最終責任を持ってラベルを確定するか</strong>です。分類ラベルは見た目の整理ではなく、後続の閲覧制御、監査、保持ルールに影響します。AIに任せる範囲と、人が確認する範囲を先に分けないと、便利機能がそのまま運用リスクになります。</p>
+
+                <h2 id="section3">3. Gemini分類でできることと利用条件</h2>
+                <p>Google Workspace Help によると、Drive の AI classification には <strong>Custom models</strong> と <strong>Use Gemini (Beta)</strong> の2方式があります。Custom models は組織固有の学習データを使ってモデルを育てる方式で、ラベルの各選択肢ごとに<strong>最低100ファイル</strong>の学習例が必要です。初回の学習実行にも<strong>4〜6時間</strong>かかると案内されています。一方、Gemini 方式は、<strong>管理者が定義した自然言語の指示文</strong>で分類させるため、事前のデータ収集や学習工程が不要です。</p>
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr><th>項目</th><th>Custom models</th><th>Use Gemini (Beta)</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><th>分類方法</th><td>学習データで専用モデルを訓練</td><td>管理者の指示文をGeminiが解釈</td></tr>
+                            <tr><th>事前準備</th><td>学習ラベルと教師データが必要</td><td>学習データ不要</td></tr>
+                            <tr><th>必要ファイル数</th><td>各ラベル選択肢ごとに最低100ファイル</td><td>不要</td></tr>
+                            <tr><th>初回反映の重さ</th><td>学習実行が必要</td><td>指示文設定後に自動適用</td></tr>
+                            <tr><th>向くケース</th><td>十分な教師データがある大規模運用</td><td>まず早く分類ルールを形にしたい運用</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>運用面でも重要な仕様があります。Google Workspace Updates では、管理者がラベル、Gemini への指示、対象ユーザー範囲を決める一方、<strong>適切な権限を持つファイルの編集者や所有者は、自動適用されたラベルを受理または修正できる</strong>と説明しています。さらに、その受理や修正も含めて<strong>監査ログに残る</strong>ため、完全放置ではなく、見直し可能な自動化として使う設計です。</p>
+                <p>利用条件も押さえておくべきです。公開告知では <strong>Enterprise Plus</strong>、<strong>Google AI Pro for Education</strong>、<strong>Frontline Plus</strong> が案内されており、ヘルプページではこれに加えて <strong>Gemini Enterprise-Legacy</strong> と <strong>AI Security add-ons</strong> も記載されています。また、作成できる AI classification の設定は<strong>Custom models と Gemini instructions を合計5個まで</strong>で、その中で <strong>Gemini instruction は最大1つ</strong>です。対象ファイルは shared drives 内、または分類ラベル対応ライセンスを持つユーザー所有ファイルに限られ、<strong>エンドユーザー向けの個別設定はありません</strong>。</p>
+
+                <h2 id="section4">4. 導入前に決める運用ルール</h2>
+                <p>この機能は、オンにしただけでは効果が出ません。むしろ、ラベル体系と確認フローが曖昧なまま使うと、誤分類がそのままDLPや保持ルールへ波及します。MIRAINAでは、導入前に少なくとも「どのラベルを使うか」「誰のファイルを対象にするか」「自動付与後に誰が確認するか」「誤分類時にどう修正するか」を先に決めることを勧めます。</p>
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step"><span class="step-num">Step 01</span><span class="step-text">Public / Internal / Confidential などラベル階層を決める</span></li>
+                        <li class="process-step"><span class="step-num">Step 02</span><span class="step-text">契約書、人事、請求書など対象文書と対象ユーザーを絞る</span></li>
+                        <li class="process-step"><span class="step-num">Step 03</span><span class="step-text">Geminiに渡す分類指示文と禁止条件を定義する</span></li>
+                        <li class="process-step"><span class="step-num">Step 04</span><span class="step-text">所有者・編集者の受理修正フローと例外処理を決める</span></li>
+                        <li class="process-step"><span class="step-num">Step 05</span><span class="step-text">監査ログを見て誤分類傾向を月次で見直す</span></li>
+                    </ul>
+                    <p class="diagram-caption">分類ルール、対象範囲、確認者、監査を一続きで設計すると、便利機能が業務ルールとして定着しやすくなります。</p>
+                </div>
+                <p>また、ファイルの保護はラベルだけで完結しません。アクセス権、共有設定、DLP、保持ポリシーまでつながって初めて意味が出ます。たとえば、機密ラベルを付けても共有権限が広すぎれば守りは弱いままです。逆に、権限だけ閉じてラベルがなければ監査や保持の自動化が進みません。Google Drive の同期や共有ポリシーを見直す観点では、<a href="/blogs/blog244.html">Google Drive個人同期の停止記事</a>も参考になります。</p>
+
+                <h2 id="section5">5. そのまま使える指示例</h2>
+                <p>AI利用者が最終的に欲しいのは、抽象論ではなく「実際にどう書くか」です。Gemini 方式では、管理者が plain-language instructions を定義できます。以下は、実務でそのまま叩き台にしやすい例です。</p>
+                <div class="code-block"><pre><code>1. 契約書向け instruction
+「NDA、業務委託契約、基本契約、見積条件の記載がある文書には
+Confidential-Contract ラベルを付与してください。
+ひな形だけでなく、取引先名・金額・期間が含まれる場合を優先し、
+判定が曖昧な場合は自動付与せず人の確認へ回してください。」
+
+2. 人事資料向け instruction
+「履歴書、評価シート、給与、個人連絡先、マイナンバー関連の記載がある
+ファイルには Confidential-HR ラベル候補を付与してください。
+社外共有されているファイルは優先的に検出対象としてください。」
+
+3. 請求・経理向け instruction
+「請求書、発注書、振込先、口座情報、税額、支払条件を含むファイルには
+Internal-Finance または Confidential-Finance を候補として判定してください。
+社外提出用テンプレートだけの文書は Internal を優先してください。」</code></pre></div>
+                <p>すでにAIを使っている担当者なら、別のAIへ次のように依頼すると設計相談もしやすくなります。</p>
+                <div class="code-block"><pre><code>Google DriveのAI分類を前提に、次の条件でラベル設計を提案してください。
+
+- 対象部署: 営業、経理、人事
+- 目的: DLPと監査の前段で機密文書を自動判定したい
+- 条件: shared drive中心、誤分類は人が受理/修正する
+- 出してほしい内容: ラベル階層、Gemini instruction案、確認フロー、監査項目</code></pre></div>
+                <p>このように、検索語をそのままAIへ貼るのではなく、<strong>対象部署、目的、対象ファイル、例外条件、確認方法</strong>まで分解して渡すと、実務で使える返答に近づきます。MIRAINAでは、こうした設計を Drive 単体で終わらせず、<a href="/blogs/blog249.html">Gemini連携全体の設計</a>や社内ルールの再利用まで含めて支援することが多いです。</p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>Google Drive の Gemini-based data classification は、2026年8月28日に open beta として公開された、機密文書ラベルの自動化機能です。従来の学習型分類と違い、事前の教師データ収集や学習実行を前提にせず、管理者が定義した自然言語の指示文で始められる点が大きな変化です。</p>
+                <p>ただし、本当に価値が出るのは、ラベル体系、対象範囲、受理修正フロー、監査ルールまで決めたときです。Google DriveのAI分類を「便利な整理機能」として終わらせず、DLPや社内AI運用の土台として設計したい場合は、MIRAINAの<a href="/services/ai_consulting.html">生成AI活用支援</a>で設計から伴走できます。</p>
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">社内文書の分類ルールをAI前提で設計する</h2>
+                    <p class="cta-text">Google Drive、共有権限、DLP、AI運用ルールまでつなげて、現場で回る情報管理を設計します。</p>
+                    <a href="/services/ai_consulting.html" class="cta-button">生成AI活用支援を見る</a>
+                </div>
+            </div>
+
+            <div class="article-references">
+                <h3>参考情報</h3>
+                <ul>
+                    <li><a href="https://workspaceupdates.googleblog.com/2026/08/gemini-based-data-classification-in-Google-Drive-is-now-available-in-open-beta.html" target="_blank" rel="noopener">Google Workspace Updates: Gemini-based data classification in Google Drive is now available in open beta（2026年8月28日）</a></li>
+                    <li><a href="https://knowledge.workspace.google.com/admin/security/label-google-drive-files-automatically-using-ai-classification" target="_blank" rel="noopener">Google Workspace Help: Label Google Drive files automatically using AI classification</a></li>
+                    <li><a href="https://support.google.com/drive/answer/16671865?hl=en" target="_blank" rel="noopener">Google Drive Help: Let Gemini organize your files</a></li>
+                </ul>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image"><img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async"></div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">九州を拠点に中小企業のAI活用支援に従事。業務フローに合わせたAI導入、AI研修、LLMO対策まで、現場で続く仕組みづくりを支援しています。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog255.html" class="related-card">
+                        <div class="related-img"><img src="/images/blogs_images/blog-card255.webp" alt="Gemini SparkでGoogle Driveのアクセス権監査を効率化する記事" loading="lazy" decoding="async"></div>
+                        <div class="related-content"><div class="related-date">2026.08.15</div><div class="related-text">【実例】Gemini SparkでGoogle Driveのアクセス権監査を効率化</div></div>
+                    </a>
+                    <a href="/blogs/blog273.html" class="related-card">
+                        <div class="related-img"><img src="/images/blogs_images/blog-card273.webp" alt="Google Workspace skillsを解説する記事" loading="lazy" decoding="async"></div>
+                        <div class="related-content"><div class="related-date">2026.08.28</div><div class="related-text">【2026年8月最新】Google Workspace skillsとは？社内ルールをAIに覚えさせる方法</div></div>
+                    </a>
+                    <a href="/blogs/blog249.html" class="related-card">
+                        <div class="related-img"><img src="/images/blogs_images/blog-card249.webp" alt="Gemini Sparkのアプリ連携を解説する記事" loading="lazy" decoding="async"></div>
+                        <div class="related-content"><div class="related-date">2026.08.14</div><div class="related-text">【2026年8月最新】Gemini Sparkのアプリ連携｜Gmail・Drive・Calendar活用</div></div>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand"><a href="/index.html"><p class="footer-brand-text">MIRAINA</p></a></div>
+            <div class="footer-center"></div>
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns"><a href="https://www.instagram.com/miraina_ai" target="_blank" rel="noopener">Instagram</a><a href="https://www.threads.net/@miraina_ai" target="_blank" rel="noopener">Threads</a></div>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>&copy; MIRAINA All Rights Reserved.</p></div>
+    </footer>
+    <script src="/js/common.js"></script>
+</body>
+</html>
