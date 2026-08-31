@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【2026年8月最新】Geminiのインタラクティブ機能とは？研修・経営分析で使う方法 | MIRAINAブログ</title>
+    <meta name="description" content="Geminiのインタラクティブ機能をGoogle公式情報で解説。操作できる表やシミュレーションをAI研修・経営分析に使う方法を紹介します。">
+    <meta name="keywords" content="Gemini インタラクティブ機能,インタラクティブ可視化,Gemini シミュレーション,AI研修,経営分析">
+    <link rel="canonical" href="https://miraina-ai.com/blogs/blog279.html">
+    <meta property="og:title" content="【2026年8月最新】Geminiのインタラクティブ機能とは？研修・経営分析で使う方法">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog279.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog279-1.webp">
+    <meta property="og:description" content="Geminiが質問から操作可能な表・グリッド・シミュレーションを生成する新機能と、仕事での使い方を整理します。">
+    <meta property="og:site_name" content="MIRAINA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Geminiのインタラクティブ機能とは？研修・経営分析で使う方法">
+    <meta name="twitter:description" content="操作できる可視化を、研修やキャッシュバーン分析に使う実務プロンプト付きで解説。">
+    <meta name="twitter:image" content="https://miraina-ai.com/images/blogs_images/blog279-1.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Shippori+Mincho:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"【2026年8月最新】Geminiのインタラクティブ機能とは？研修・経営分析で使う方法","description":"Geminiのインタラクティブ機能をGoogle公式情報で解説。操作できる表やシミュレーションをAI研修・経営分析に使う方法を紹介します。","image":"https://miraina-ai.com/images/blogs_images/blog279-1.webp","datePublished":"2026-08-31","dateModified":"2026-08-31","author":{"@type":"Person","name":"芝 優作"},"publisher":{"@type":"Organization","name":"MIRAINA","url":"https://miraina-ai.com/"},"mainEntityOfPage":"https://miraina-ai.com/blogs/blog279.html"}</script>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo"><img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40"></a>
+            <div class="hamburger" id="js-hamburger"><span></span><span></span><span></span></div>
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+            </nav>
+        </div>
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/index.html">ホーム</a></li>
+                <li><a href="/blogs.html">ブログ</a></li>
+                <li>Geminiのインタラクティブ機能</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.08.31</span>
+                    <div class="article-tags" style="flex-wrap:wrap;justify-content:center;">
+                        <p class="article-tag">Gemini</p>
+                        <p class="article-tag">AI研修</p>
+                        <p class="article-tag">経営分析</p>
+                    </div>
+                </div>
+                <h1 class="article-title" style="overflow-wrap:anywhere;">【2026年8月最新】Geminiのインタラクティブ機能とは？研修・経営分析で使う方法</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog279-1.webp" alt="Geminiのインタラクティブ機能をAI研修と経営分析に使うイメージ" width="1200" height="675" fetchpriority="high">
+                </div>
+            </header>
+
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>生成AIに質問しても、長い文章や静止した図だけでは理解しにくいことがあります。Googleは<strong>2026年8月24日</strong>、Geminiアプリ内で、質問から操作可能な表・グリッド・3Dモデル・シミュレーションを生成できる機能を発表しました。画面を動かし、条件を変えながら理解できる点が従来の回答との違いです。</p>
+                <p>この記事では、<strong>Geminiのインタラクティブ機能</strong>の概要、利用条件、AI研修や経営分析での使い方、実務プロンプト、導入時の注意点を整理します。</p>
+                <ul>
+                    <li>インタラクティブ可視化と従来回答の違いがわかる</li>
+                    <li>Google Workspaceでの提供条件と管理方法を確認できる</li>
+                    <li>研修・キャッシュバーン分析に使うプロンプトを試せる</li>
+                    <li>誤った理解や判断を防ぐ確認ルールを設計できる</li>
+                </ul>
+            </section>
+
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. Geminiのインタラクティブ機能とは？</a></li>
+                    <li><a href="#section2">2. 従来の回答と何が違うのか</a></li>
+                    <li><a href="#section3">3. 研修・経営分析での活用例</a></li>
+                    <li><a href="#section4">4. そのまま試せるプロンプト</a></li>
+                    <li><a href="#section5">5. 導入時に決める運用ルール</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <div class="article-body">
+                <h2 id="section1">1. Geminiのインタラクティブ機能とは？</h2>
+                <p><strong>Geminiのインタラクティブ機能</strong>は、質問や概念を操作できる可視化へ変換する機能です。公式発表では、DNAの3D構造、振り子の動き、キャッシュバーンの表が例示されています。質問に合わせた表、グリッド、モデル、シミュレーションをGeminiアプリの会話内に作る点が特徴です。</p>
+                <p>提供開始日は<strong>2026年8月24日</strong>。対象はGoogle Workspace顧客、Workspace Individual契約者、最低年齢要件を満たすユーザーで、利用上限があります。組織でGeminiが有効ならデフォルトでONになり、管理者は管理コンソールの生成AI設定からGeminiアプリを制御します。この機能だけの利用者設定はありません。</p>
+                <p>公式案内では <strong>“show me”</strong> や <strong>“help me visualize”</strong> と依頼します。日本語なら「条件を変えられる表で可視化して」のように、対象と操作したい変数を明記します。</p>
+
+                <h2 id="section2">2. 従来の回答と何が違うのか</h2>
+                <p>従来の生成AI回答は文章や静的な図が中心です。要約には適しますが、数値の関係を体験的に理解しにくいことがあります。インタラクティブ可視化では、値や角度を動かし、変化を見ながら理解できます。</p>
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr><th>比較項目</th><th>従来の文章・静的図</th><th>インタラクティブ可視化</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><th>理解の方法</th><td>説明を読んで理解する</td><td>操作と変化を通じて理解する</td></tr>
+                            <tr><th>条件変更</th><td>条件ごとに再質問が必要</td><td>値を変えながら比較できる</td></tr>
+                            <tr><th>向く用途</th><td>要約、手順、定義の確認</td><td>構造、因果、数値感覚の学習</td></tr>
+                            <tr><th>注意点</th><td>文章の誤りを確認する</td><td>計算式・初期値・動作も確認する</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>操作できても正しいとは限りません。Googleも、Geminiは誤る可能性があり、回答を再確認するよう案内しています。売上予測や資金繰りでは、元データ、計算式、単位、前提条件を人が確認します。</p>
+                <p>MIRAINAの視点では、価値は<strong>参加者が同じ前提を動かして議論できること</strong>にあります。説明を読むだけでなく、仮説を確かめる研修や会議へ変えられます。</p>
+
+                <h2 id="section3">3. 研修・経営分析での活用例</h2>
+                <p>最初は自動判断ではなく、理解を助ける用途が安全です。AI研修ならプロンプト要素と出力品質を比較し、経営会議なら固定費、売上、粗利率、手元資金を変えるキャッシュバーン表を作れます。</p>
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step"><span class="step-num">Step 01</span><span class="step-text">理解したい概念・判断したい問いを1つに絞る</span></li>
+                        <li class="process-step"><span class="step-num">Step 02</span><span class="step-text">入力値、固定条件、変えたい変数を明記する</span></li>
+                        <li class="process-step"><span class="step-num">Step 03</span><span class="step-text">操作できる表やシミュレーションとして生成する</span></li>
+                        <li class="process-step"><span class="step-num">Step 04</span><span class="step-text">元データと計算式を人が照合する</span></li>
+                        <li class="process-step"><span class="step-num">Step 05</span><span class="step-text">複数人で条件を動かし、判断理由を記録する</span></li>
+                    </ul>
+                    <p class="diagram-caption">インタラクティブ可視化は、生成よりも前提確認と対話に時間を使うと実務に定着します。</p>
+                </div>
+                <p>研修成果は、<a href="/blogs/blog277.html">AI研修の効果測定の記事</a>で紹介した「成果物の品質・思考過程・業務への転移」と組み合わせて測ります。経営分析は匿名化したサンプル値で試し、組織のデータ管理方針を確認してから実データ利用を検討します。</p>
+
+                <h2 id="section4">4. そのまま試せるプロンプト</h2>
+                <p>依頼文には「誰が」「何を理解するために」「どの値を操作し」「何を表示するか」を入れます。曖昧に「わかりやすくして」と頼むより、変数と確認項目を指定した方が検証しやすくなります。</p>
+                <h3>AI研修向け</h3>
+                <p>「生成AI初心者向けに、目的、背景、制約、出力形式の有無を切り替え、回答品質を比較できる教材を作ってください。評価基準と注意点も表示してください。」</p>
+                <h3>キャッシュバーン分析向け</h3>
+                <p>「手元資金1,500万円、固定費300万円、粗利率60％を初期値に、月商と固定費を動かせる12か月の表を作ってください。資金が尽きる月、損益分岐点、月末残高、計算式と単位を表示してください。」</p>
+                <p>生成後は、入力範囲や出典欄を追加します。プロンプトは、<a href="/blogs/blog273.html">Google Workspace skillsの記事</a>のように標準化すると担当者差を減らせます。</p>
+
+                <h2 id="section5">5. 導入時に決める運用ルール</h2>
+                <p>組織導入では、管理者と利用者の役割を明確にします。対象者、入力可能なデータ、再確認が必要な用途、共有範囲、誤りの報告先を決めてください。</p>
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr><th>確認項目</th><th>決める内容</th><th>避けたい状態</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><th>利用目的</th><td>研修、説明、仮説比較などに限定</td><td>AIの結果だけで重要判断を確定</td></tr>
+                            <tr><th>入力データ</th><td>匿名化、集計値、利用許可済み情報</td><td>個人情報や未公開情報を無確認で入力</td></tr>
+                            <tr><th>検証責任</th><td>元データ、式、単位、前提の確認者</td><td>動く画面を正解だと思い込む</td></tr>
+                            <tr><th>共有方法</th><td>対象者、保存先、更新日を明記</td><td>古い可視化が最新版として再利用される</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>検証は、誤っても顧客や会計に影響しない社内研修や架空データで行います。全社展開は、<a href="/blogs/blog060.html">AI導入時のガバナンス記事</a>も参考にしてください。</p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>Geminiのインタラクティブ機能は、表・グリッド・3Dモデル・シミュレーションを操作しながら理解する機能です。組織では既存のGemini管理設定に従います。</p>
+                <p>まずAI研修や架空データの分析から始め、元データ、式、単位、前提を確認してください。MIRAINAでは、研修設計、プロンプト標準化、社内ルールづくりまで支援しています。</p>
+
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://workspaceupdates.googleblog.com/2026/08/generate-interactive-simulations-and-models-in-the-Gemini-app.html" target="_blank" rel="noopener">Google Workspace Updates：Generate interactive simulations and models in the Gemini app（2026年8月24日）</a></li>
+                        <li><a href="https://support.google.com/gemini/answer/13275745?hl=ja" target="_blank" rel="noopener">Gemini Apps Help：Geminiアプリを使用する</a></li>
+                        <li><a href="https://support.google.com/gemini/answer/15719111?hl=ja" target="_blank" rel="noopener">Gemini Apps Help：GeminiアプリでDeep Researchを使用する</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">AI研修を「触って理解する」設計へ</h2>
+                    <p class="cta-text">MIRAINAでは、貴社の業務と参加者に合わせた<br>生成AI研修・活用ルールをご提案します。</p>
+                    <a href="/services/ai_training.html" class="cta-button">AI研修サービスを見る</a>
+                </div>
+            </div>
+
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image"><img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async"></div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。九州大学大学院でLLMに関する研究にも従事。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog277.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card277.webp" alt="AI研修の効果測定を見直す記事" loading="lazy" decoding="async"></div><div class="related-content"><div class="related-date">2026.08.30</div><div class="related-text">AI研修の効果測定を見直す｜ChatGPTで成果物は向上、独創性は別指標</div></div></a>
+                    <a href="/blogs/blog273.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card273.webp" alt="Google Workspace skillsで社内ルールをAIに覚えさせる記事" loading="lazy" decoding="async"></div><div class="related-content"><div class="related-date">2026.08.28</div><div class="related-text">Google Workspace skillsとは？社内ルールをAIに覚えさせる方法</div></div></a>
+                    <a href="/blogs/blog060.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card060.webp" alt="AIエージェント導入のガバナンスを解説する記事" loading="lazy" decoding="async"></div><div class="related-content"><div class="related-date">2026.04.01</div><div class="related-text">AIエージェント導入で失敗する企業の5つのパターン</div></div></a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand"><a href="/index.html"><p class="footer-brand-text">MIRAINA</p></a></div>
+            <div class="footer-center"></div>
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>&copy; MIRAINA All Rights Reserved.</p></div>
+    </footer>
+    <script src="/js/common.js"></script>
+</body>
+</html>

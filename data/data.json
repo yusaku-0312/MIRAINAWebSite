@@ -2501,6 +2501,24 @@
       "thumbnail": "/images/blogs_images/blog-card278.webp",
       "alt": "Google DriveのAI分類で機密文書ラベルをGeminiで自動化するイメージ",
       "date": "2026-08-30"
+    },
+    {
+      "id": 279,
+      "title": "【2026年8月最新】Geminiのインタラクティブ機能とは？研修・経営分析で使う方法",
+      "description": "Geminiのインタラクティブ機能をGoogle公式情報で解説。操作できる表やシミュレーションをAI研修・経営分析に使う方法を紹介します。",
+      "link": "/blogs/blog279.html",
+      "thumbnail": "/images/blogs_images/blog-card279.webp",
+      "alt": "Geminiのインタラクティブ機能をAI研修と経営分析に使うイメージ",
+      "date": "2026-08-31"
+    },
+    {
+      "id": 280,
+      "title": "【2026年8月最新】Model Hardware Standardとは？AI機械操作の新標準",
+      "description": "Model Hardware StandardをAnthropic公式情報で解説。AIが顕微鏡やロボットアームを安全に扱う仕組み、製造業・研究現場への影響、導入前の確認点を紹介します。",
+      "link": "/blogs/blog280.html",
+      "thumbnail": "/images/blogs_images/blog-card280.webp",
+      "alt": "Model Hardware StandardでAIが複数の機械を安全に扱うイメージ",
+      "date": "2026-08-31"
     }
   ],
   "works": [
