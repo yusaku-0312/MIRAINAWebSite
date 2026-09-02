@@ -2528,6 +2528,24 @@
       "thumbnail": "/images/blogs_images/blog-card281.webp",
       "alt": "自治体AI導入で共通基盤と研修を整えるイメージ",
       "date": "2026-09-01"
+    },
+    {
+      "id": 282,
+      "title": "【2026年9月最新】Claude Fable 5.1とは？長時間AIエージェントの選び方",
+      "description": "Claude Fable 5.1をAnthropic公式情報で解説。長時間AIエージェントの用途、API価格、キャッシュ割引、導入判断を紹介します。",
+      "link": "/blogs/blog282.html",
+      "thumbnail": "/images/blogs_images/blog-card282.webp",
+      "alt": "Claude Fable 5.1で長時間AIエージェントを選ぶイメージ",
+      "date": "2026-09-02"
+    },
+    {
+      "id": 283,
+      "title": "【2026年9月最新】AIネイティブ企業は何が違う？OpenAIが示した業務設計6ステップ",
+      "description": "AIネイティブ企業をOpenAI公式情報で解説。8.3倍の活用差が生まれる理由、AIが苦手な人の検索語、AI利用者の実務プロンプト、導入6ステップを紹介します。",
+      "link": "/blogs/blog283.html",
+      "thumbnail": "/images/blogs_images/blog-card283.webp",
+      "alt": "AIネイティブ企業が業務を運用能力へ変えるイメージ",
+      "date": "2026-09-02"
     }
   ],
   "works": [

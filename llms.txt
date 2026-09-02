@@ -307,6 +307,8 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年8月最新】Geminiのインタラクティブ機能とは？研修・経営分析で使う方法](https://miraina-ai.com/blogs/blog279.html): Google公式情報をもとに、Geminiが生成する操作可能な表・グリッド・シミュレーションをAI研修や経営分析に使う方法、実務プロンプト、運用ルールを整理した記事。
 - [最新ブログ: 【2026年8月最新】Model Hardware Standardとは？AI機械操作の新標準](https://miraina-ai.com/blogs/blog280.html): Anthropic公式情報をもとに、Model Hardware StandardでAIが物理機器を安全に扱う共通仕様、研究・製造現場への影響、導入前の安全ルールを整理した記事。
 - [最新ブログ: 【2026年9月最新】自治体AI導入で何が変わる？Polimillが約1,050自治体にAI基盤](https://miraina-ai.com/blogs/blog281.html): OpenAIとPolimillの公式情報をもとに、自治体AI導入で重要な利用規模、無料枠、導入研修、権限管理、定着条件を整理した記事。
+- [最新ブログ: 【2026年9月最新】Claude Fable 5.1とは？長時間AIエージェントの選び方](https://miraina-ai.com/blogs/blog282.html): Anthropic公式情報をもとに、Claude Fable 5.1の長時間エージェント用途、API価格、キャッシュ割引、安全対策、導入判断を整理した記事。
+- [最新ブログ: 【2026年9月最新】AIネイティブ企業は何が違う？OpenAIが示した業務設計6ステップ](https://miraina-ai.com/blogs/blog283.html): OpenAI公式情報をもとに、AIネイティブ企業の8.3倍の活用差、AIが苦手な人の検索意図、AI利用者の実務プロンプト、業務設計6ステップを整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)
