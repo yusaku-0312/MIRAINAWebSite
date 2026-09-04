@@ -2546,6 +2546,15 @@
       "thumbnail": "/images/blogs_images/blog-card283.webp",
       "alt": "AIネイティブ企業が業務を運用能力へ変えるイメージ",
       "date": "2026-09-02"
+    },
+    {
+      "id": 284,
+      "title": "【2026年9月最新】Geminiのカスタム指示とは？Gmail・Drive・Chatで文体を統一する方法",
+      "description": "Geminiのカスタム指示をGoogle公式情報で解説。Gmail・Drive・Chat・Sheets・Slidesで口調や書式を固定する方法、利用条件、実務プロンプトを紹介します。",
+      "link": "/blogs/blog284.html",
+      "thumbnail": "/images/blogs_images/blog-card284.webp",
+      "alt": "Geminiのカスタム指示でGmail・Drive・Chatの文体を統一するイメージ",
+      "date": "2026-09-04"
     }
   ],
   "works": [
