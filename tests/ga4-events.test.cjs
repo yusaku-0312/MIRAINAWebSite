@@ -79,6 +79,23 @@ test('classifies contact, LINE, and generic CTA links without double classificat
     );
 });
 
+test('handles explicit, external, empty, and malformed link edge cases safely', () => {
+    const { classifyLink } = require(analyticsPath);
+    const baseUrl = 'https://miraina-ai.com/';
+
+    assert.deepEqual(
+        classifyLink({ href: 'https://www.line.me/R/example', className: '' }, baseUrl),
+        { eventName: 'line_click', destination: 'line' }
+    );
+    assert.deepEqual(
+        classifyLink({ href: 'https://example.com/offer', className: '', dataset: { ga4Event: 'cta_click' } }, baseUrl),
+        { eventName: 'cta_click', destination: 'external_site' }
+    );
+    assert.equal(classifyLink({ href: '', className: '' }, baseUrl), null);
+    assert.equal(classifyLink({ href: 'http://[', className: '' }, baseUrl), null);
+    assert.equal(classifyLink({ href: '/about.html', className: null }, baseUrl), null);
+});
+
 test('emits one privacy-safe event per click and installs only once', () => {
     const { installGa4EventTracking } = require(analyticsPath);
     const handlers = [];
@@ -120,4 +137,42 @@ test('emits one privacy-safe event per click and installs only once', () => {
         }
     ]]);
     assert.equal(JSON.stringify(calls).includes('secret@example.com'), false);
+});
+
+test('ignores clicks that have no trackable anchor or no available gtag function', () => {
+    const { installGa4EventTracking } = require(analyticsPath);
+    const handlers = [];
+    const document = {
+        addEventListener(_type, handler) {
+            handlers.push(handler);
+        }
+    };
+    const window = { location: new URL('https://miraina-ai.com/') };
+
+    installGa4EventTracking(document, window);
+    handlers[0]({ target: {} });
+    handlers[0]({
+        target: {
+            closest() {
+                return {
+                    className: 'nav-link',
+                    getAttribute() {
+                        return '/about.html';
+                    }
+                };
+            }
+        }
+    });
+    handlers[0]({
+        target: {
+            closest() {
+                return {
+                    className: 'btn',
+                    getAttribute() {
+                        return '/contact.html';
+                    }
+                };
+            }
+        }
+    });
 });

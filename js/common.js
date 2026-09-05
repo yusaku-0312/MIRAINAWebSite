@@ -1,3 +1,17 @@
+// Load conversion event tracking once for every page that uses the shared UI script.
+(function loadGa4EventTracking() {
+    if (window.__mirainaGa4EventsLoading || window.__mirainaGa4EventsInstalled) return;
+    window.__mirainaGa4EventsLoading = true;
+
+    const script = document.createElement('script');
+    script.src = '/js/ga4-events.js';
+    script.defer = true;
+    script.addEventListener('error', () => {
+        window.__mirainaGa4EventsLoading = false;
+    });
+    document.head.appendChild(script);
+}());
+
 document.addEventListener('DOMContentLoaded', () => {
     // Hamburger Menu
     const hamburger = document.getElementById('js-hamburger');
