@@ -311,6 +311,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年9月最新】AIネイティブ企業は何が違う？OpenAIが示した業務設計6ステップ](https://miraina-ai.com/blogs/blog283.html): OpenAI公式情報をもとに、AIネイティブ企業の8.3倍の活用差、AIが苦手な人の検索意図、AI利用者の実務プロンプト、業務設計6ステップを整理した記事。
 - [最新ブログ: 【2026年9月最新】Geminiのカスタム指示とは？Gmail・Drive・Chatで文体を統一する方法](https://miraina-ai.com/blogs/blog284.html): Google公式情報をもとに、Geminiのカスタム指示で文体や書式を揃える方法、検索意図、実務プロンプト、利用条件、ヘルプ追随の差分を整理した記事。
 - [最新ブログ: 【2026年9月最新】Gmail Liveとは？声でメール検索・文書作成する方法](https://miraina-ai.com/blogs/blog286.html): Google公式情報をもとに、Gmail Live、Docs Live、Keep Liveの違い、音声指示例、利用条件、安全な始め方を整理した記事。
+- [最新ブログ: Gemini Notebookの監査ログ追加｜社内資料の利用履歴を確認](https://miraina-ai.com/blogs/blog288.html): Gemini Notebookの監査ログ追加をGoogle公式情報で解説。社内資料の共有・利用履歴の確認手順、管理者権限、導入条件とAIへの依頼文を紹介します。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)

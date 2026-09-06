@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="index, follow" name="robots"/>
+<title>Gemini Notebookの監査ログ追加｜社内資料の利用履歴を確認 | MIRAINAブログ</title>
+<meta content="Gemini Notebookの監査ログ追加をGoogle公式情報で解説。社内資料の共有・利用履歴の確認手順、管理者権限、導入条件とAIへの依頼文を紹介します。" name="description"/>
+<!-- OGP Tags -->
+<meta content="Gemini Notebookの監査ログ追加｜社内資料の利用履歴を確認" property="og:title"/>
+<meta content="article" property="og:type"/>
+<meta content="https://miraina-ai.com/blogs/blog288.html" property="og:url"/>
+<meta content="https://miraina-ai.com/images/blogs_images/blog288-1.webp" property="og:image"/>
+<meta content="Gemini Notebookの監査ログ追加をGoogle公式情報で解説。社内資料の共有・利用履歴の確認手順、管理者権限、導入条件とAIへの依頼文を紹介します。" property="og:description"/>
+<link href="https://miraina-ai.com/blogs/blog288.html" rel="canonical"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Shippori+Mincho:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Favicon -->
+<link href="/images/favicon.ico" rel="icon"/>
+<!-- CSS -->
+<link href="/css/reset.css" rel="stylesheet"/>
+<link href="/css/common.css" rel="stylesheet"/>
+<link href="/css/blog_article.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+<div class="container header-inner">
+<a class="header-logo" href="/">
+<!-- Assuming logo exists or using text fallback for now if image broken -->
+<img alt="MIRAINA" height="40" src="/images/company-logo.webp" width="120"/>
+</a>
+<div class="hamburger" id="js-hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<nav class="header-nav">
+<div class="nav-item has-dropdown">
+<a class="nav-link" href="/services.html">サービス</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="/services/ai_consulting.html">生成AI活用支援</a>
+<a class="dropdown-item" href="/services/ai_training.html">AI研修</a>
+<a class="dropdown-item" href="/services/ai_develop.html">AI開発</a>
+<a class="dropdown-item" href="/services/llmo_insight.html">LLMO Insight</a>
+<a class="dropdown-item" href="/beauty-dx/">美容サロン特化AI活用支援</a>
+
+</div>
+</div>
+<!-- Other required items from spec usually go here, but focusing on user content mapping -->
+<div class="nav-item"><a class="nav-link" href="/about.html">MIRAINAについて</a></div>
+<div class="nav-item"><a class="nav-link" href="/works.html">事例紹介</a></div>
+<div class="nav-item"><a class="nav-link" href="/blogs.html">ブログ</a></div>
+<div class="nav-item"><a class="nav-link btn-contact" href="/contact.html">お問い合わせ</a></div>
+<div class="nav-item">
+<a aria-label="AI info" class="nav-link" href="/llms.txt">
+<svg class="icon-thin" height="20" viewbox="0 0 24 24" width="20">
+<path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"></path>
+</svg>
+</a>
+</div>
+</nav>
+</div>
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="js-mobile-menu">
+<nav class="mobile-nav">
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/services.html">サービス</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/about.html">MIRAINAについて</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/works.html">事例紹介</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/blogs.html">ブログ</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/contact.html">お問い合わせ</a></div>
+</nav>
+</div>
+</header>
+<main>
+<!-- Breadcrumbs -->
+<div class="container breadcrumbs"><ul><li><a href="/">ホーム</a></li><li><a href="/blogs.html">ブログ</a></li><li>Gemini Notebookの監査ログ</li></ul></div>
+<article class="article-container">
+<!-- Article Header -->
+<header class="article-header">
+<div class="article-meta">
+<span class="article-date">2026.09.06</span>
+<div class="article-tags"><span class="article-tag">Gemini</span><span class="article-tag">AI活用</span><span class="article-tag">情報管理</span></div>
+</div>
+<h1 class="article-title">Gemini Notebookの監査ログ追加｜社内資料の利用履歴を確認</h1>
+<div class="article-thumbnail">
+<img alt="Gemini Notebookの監査ログで社内資料の利用履歴を確認" fetchpriority="high" height="675" src="/images/blogs_images/blog288-1.webp" width="1200"/>
+<!-- Note: Replace with actual image path -->
+</div>
+</header>
+<!-- Summary -->
+<section class="article-summary"><h2 class="sr-only">記事の概要</h2><p>「社内資料をAIに入れていい？」「誰が共有したか確認したい」。こうした疑問に、Gemini Notebookの監査ログを例に答えます。管理者が確認できる情報、利用条件、AIへの依頼文を整理し、社内で小さく試すための確認事項を作ることが本記事のゴールです。</p><p>情報確認日：2026年9月6日。公式仕様とMIRAINAの運用提案を分けて解説します。</p></section>
+<!-- Table of Contents -->
+<div class="article-toc"><div class="toc-title">目次</div><ul><li><a href="#section1">1. Gemini Notebookに監査ログが追加</a></li><li><a href="#section2">2. 利用履歴で確認すること</a></li><li><a href="#section3">3. 管理者が利用履歴を調べる手順</a></li><li><a href="#section4">4. AIへの依頼文と社内確認の例</a></li><li><a href="#section5">5. 監査ログと情報保護の違い</a></li><li><a href="#section6">6. まずは管理者と小さく試す</a></li></ul></div>
+<div class="article-body"><h2 id="section1">1. Gemini Notebookに監査ログが追加</h2>
+<p><strong>Gemini Notebookの監査ログ</strong>は、組織内の操作の記録を管理者が調べるための機能です。Googleは2026年9月3日、Workspace管理コンソールで利用状況やデータへのアクセスを確認できる監査ログを発表しました。提供は段階的で、表示まで最大15日と案内されています。<a href="https://workspaceupdates.googleblog.com/2026/08/introducing-comprehensive-audit-logs-for-Gemini-Notebook-in-the-Workspace-Admin-console.html?hl=en" rel="noopener" target="_blank">出典：Google公式発表</a>。</p>
+<figure class="article-figure"><img alt="Google公式発表の2026年9月3日の日付とGemini Notebook監査ログの画面例" decoding="async" height="450" loading="lazy" src="/images/blogs_images/blog288-2.webp" width="800"/><figcaption>Google Workspace Updatesの公式発表。掲載画面は説明用の例であり、自社環境の利用記録ではありません。</figcaption></figure>
+<p>「会社の資料をAIに入れてよいか」という判断には、入力の許可、共有範囲、操作後の確認が必要です。今回の更新は主に最後の確認を助けます。ログを見られるからといって、社内のあらゆる資料を入力してよいことにはなりません。資料の管理責任者が利用を認めた範囲で始めましょう。</p>
+<h2 id="section2">2. 利用履歴で確認すること</h2>
+<p>公式ヘルプには、操作したユーザー、日時、イベント、共有状態、参照元に関する属性などが示されています。ただし、<strong>すべてのイベントにすべての属性が記録されるわけではありません</strong>。実際の列と記録内容を見て、どの問いに答えられるかを判断します。<a href="https://knowledge.workspace.google.com/admin/reports/gemini-notebook-log-events" rel="noopener" target="_blank">出典：Gemini Notebook log events</a>。</p>
+<div class="article-table-wrapper"><table class="article-table"><thead><tr><th>確認したいこと</th><th>確認の手がかり</th><th>判断時の注意</th></tr></thead><tbody><tr><th>誰が操作したか</th><td>Actorと日時</td><td>記録されたアカウントを確認する</td></tr><tr><th>共有範囲が変わったか</th><td>イベントと変更前後のVisibility</td><td>承認された共有先と照合する</td></tr><tr><th>どの資料の操作か</th><td>Source名やIDなど</td><td>属性がない行を推測で補わない</td></tr></tbody></table></div>
+<p>たとえば、営業資料を使うノートブックで共有変更が見つかった場合、まず対象資料と社内承認の記録を照合します。許可済みの共同作業なら問題扱いする必要はありません。身に覚えがない場合は所有者に確認し、変更理由が分かるまで共有範囲の拡大を止める、といった運用を事前に決めておきます。これはMIRAINAが提案する運用例です。</p>
+<h2 id="section3">3. 管理者が利用履歴を調べる手順</h2>
+<p>会社アカウントを持っているだけでは監査画面を使えるとは限りません。検索の可否はエディション、管理者権限、データソースに依存します。通常の監査と調査ツールと、高度なセキュリティ調査ツールでは条件が異なるため、機能名だけで契約を判断せず、公式ヘルプと自社画面を照合してください。</p>
+<ol><li>管理コンソールの「Reporting → Audit and investigation → Gemini Notebook log events」を開きます。Audit &amp; Investigationの管理者権限が必要です。</li><li>調べたい期間を設定し、イベントなどの条件を加えて検索します。</li><li>結果を社内の利用申請や共有ルールと照合し、分からない行は所有者への確認事項にします。</li></ol>
+<p>画面経路と権限は<a href="https://knowledge.workspace.google.com/admin/reports/gemini-notebook-log-events" rel="noopener" target="_blank">Google公式ヘルプ</a>に基づき、照合方法は運用上の提案です。担当者が画面を開けない場合は、個人アカウントに資料を移して試すのではなく、管理者に対象機能の提供状況と権限を確認してもらいましょう。</p>
+<p>最初の試行は架空の社内マニュアルを使い、担当者が通常の操作を行った後に管理者が対応する記録を探す流れにすると、業務データを持ち出さずに確認できます。操作時刻、対象名、想定した結果、実際のログを一組で残すと、後から別の担当者へ手順を引き継げます。</p>
+<h2 id="section4">4. AIへの依頼文と社内確認の例</h2>
+<p>AIに「安全ですか」とだけ聞くと、使うアカウントや社内規程を無視した一般論になりがちです。自社の条件と確認したい項目を伝え、公式情報と未確認事項を分けてもらうと、管理者へ渡せる質問票になります。以下は記事独自の依頼文であり、入力するだけで監査ログを取得する機能ではありません。</p>
+<div class="code-block"><pre><code>会社のGoogle WorkspaceでGemini Notebookを使いたいです。<br/>公開済みの商品資料から試す想定です。<br/>最新のGoogle公式情報を調べ、監査ログの利用条件と<br/>共有履歴を確認する手順を整理してください。<br/>各事実に出典URLと確認日を付け、未確認事項は分けてください。<br/>最後に、管理者へ確認する質問を作ってください。</code></pre></div>
+<p>AIがウェブを参照できない環境なら、確認済みの公式ページ本文を渡して要点を整理させます。返ってきたURLは人が開き、対象製品と日付が合っているか確認してください。引用が付いていても、別のAI製品の仕様や古い説明が混ざる可能性は残ります。</p>
+<p>管理者向けには「利用予定の資料、参加者、目的、予定期間」を添えて相談します。新人研修なら、公開可能な製品説明を対象にし、研修担当者と受講者だけで試し、終了後に共有状態と利用記録を確認する設計が考えられます。これは導入例であり、実在企業の成果や効果測定の報告ではありません。</p>
+<div class="code-block"><pre><code>社内AI利用の確認票を作ってください。<br/>列は「資料名・入力可否・共有先・承認者・確認日」です。<br/>入力可否と承認者は推測せず空欄にしてください。<br/>私が確認した内容だけを記入できる形にしてください。</code></pre></div>
+<h2 id="section5">5. 監査ログと情報保護の違い</h2>
+<p><strong>操作を記録する仕組みと、入力や共有を防ぐ仕組みは役割が異なります。</strong>ログの有無だけでは、AI学習への利用条件、保存先、契約上の入力可否は判断できません。これらは自社の契約・利用規程と製品の該当説明で別途確認する必要があります。</p>
+<p>今回の公式発表では、ログの保存に関する地域の取り扱いと、ノートブック・ソース・会話履歴などのユーザーデータの扱いも区別されています。ユーザーデータはグローバルに保存され、現時点ではデータの地域指定に対応しないと説明されています。またBigQueryへのログ出力は有効化するまで無効です。<a href="https://workspaceupdates.googleblog.com/2026/08/introducing-comprehensive-audit-logs-for-Gemini-Notebook-in-the-Workspace-Admin-console.html?hl=en" rel="noopener" target="_blank">出典：Google公式発表の追加説明</a>。</p>
+<p>運用では「承認済み資料を選ぶ → 限定した共有先で利用する → 操作記録を確認する → 不明な変更は所有者に戻す」という流れを作ります。確認結果が次回の入力・共有ルールへ戻ることで、毎回同じ判断をやり直す負担を減らせます。資料分類には<a href="/blogs/blog278.html">Google DriveのAI分類</a>、共有の棚卸しには<a href="/blogs/blog255.html">Driveのアクセス権監査</a>も参考になります。</p>
+<p><strong>MIRAINAの見解：</strong>AIに不慣れな人へ最初に渡したいのは、長い禁止事項の一覧より「この資料なら、この相手と、この目的で使える」という具体例です。管理者が確認する記録と現場の利用例をセットにし、不明点の相談先まで決めることで、判断に迷う時間を減らせます。</p>
+<h2 id="section6">6. まずは管理者と小さく試す</h2>
+<p>社内資料をAIで使い始めるなら、資料の利用許可と共有範囲を先に決め、その後の操作を確認できる体制を用意しましょう。Gemini Notebookの監査ログは、その確認を助ける選択肢です。記録だけで安全を断定せず、実際の利用条件と合わせて判断します。</p>
+<p>最初の一歩は、公開可能な資料と参加者を決め、管理者に確認画面を開けるか相談することです。現場向けの依頼文や社内ルールの整備から始めたい企業には、MIRAINAの<a href="/services/ai_training.html">AI研修</a>で業務に合わせた進め方をご案内しています。</p>
+<div class="article-references"><div class="ref-title">参考リンク</div><ul><li><a href="https://workspaceupdates.googleblog.com/2026/08/introducing-comprehensive-audit-logs-for-Gemini-Notebook-in-the-Workspace-Admin-console.html?hl=en" rel="noopener" target="_blank">Google Workspace Updates：監査ログの発表（2026年9月3日）</a></li><li><a href="https://knowledge.workspace.google.com/admin/reports/gemini-notebook-log-events" rel="noopener" target="_blank">Google Workspace Help：Gemini Notebook log events</a></li></ul></div></div>
+<!-- CTA Button -->
+<div class="article-cta">
+<div class="cta-box">
+<h2 class="cta-title">AI導入でお悩みですか？</h2>
+<p class="cta-text">MIRAINAでは、貴社の課題に合わせた<br/>最適なAI活用プランをご提案します。</p>
+<a class="btn btn-black-fill" href="/contact.html">無料相談する</a>
+</div>
+</div>
+<!-- Editorial Information -->
+<div class="article-editor">
+<div class="editor-header">この記事を監修した人</div>
+<div class="editor-profile">
+<div class="editor-image">
+<img alt="本記事の監修者 芝優作（MIRAINA）" decoding="async" loading="lazy" src="/images/shiba_yusaku.webp"/>
+</div>
+<div class="editor-info">
+<div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+<p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+</div>
+</div>
+</div>
+<!-- Related Articles -->
+<div class="article-related"><h2 class="related-title">関連記事</h2><div class="related-grid"><a class="related-card" href="/blogs/blog278.html"><div class="related-img"><img alt="【2026年8月最新】Google DriveのAI分類とは？Geminiで機密ラベルを自動化する方法" decoding="async" loading="lazy" src="/images/blogs_images/blog-card278.webp"/></div><div class="related-content"><div class="related-date">2026.08.30</div><div class="related-text">【2026年8月最新】Google DriveのAI分類とは？Geminiで機密ラベルを自動化する方法</div></div></a><a class="related-card" href="/blogs/blog255.html"><div class="related-img"><img alt="【実例】Gemini SparkでGoogle Driveのアクセス権監査を効率化" decoding="async" loading="lazy" src="/images/blogs_images/blog-card255.webp"/></div><div class="related-content"><div class="related-date">2026.08.15</div><div class="related-text">【実例】Gemini SparkでGoogle Driveのアクセス権監査を効率化</div></div></a><a class="related-card" href="/blogs/blog284.html"><div class="related-img"><img alt="【2026年9月最新】Geminiのカスタム指示とは？Gmail・Drive・Chatで文体を統一する方法" decoding="async" loading="lazy" src="/images/blogs_images/blog-card284.webp"/></div><div class="related-content"><div class="related-date">2026.09.04</div><div class="related-text">【2026年9月最新】Geminiのカスタム指示とは？Gmail・Drive・Chatで文体を統一する方法</div></div></a></div></div> </article>
+</main>
+<!-- Footer -->
+<footer class="footer">
+<div class="container footer-inner">
+<div class="footer-brand">
+<a href="/index.html">
+<p class="footer-brand-text">MIRAINA</p>
+</a>
+</div>
+<div class="footer-center">
+<!-- Empty as requested -->
+</div>
+<div class="footer-menu">
+<ul class="footer-menu-list">
+<li><a href="/about.html">私たちについて</a></li>
+<li><a href="/works.html">事例紹介</a></li>
+<li><a href="/blogs.html">ブログ</a></li>
+<li><a href="/contact.html">お問い合わせ</a></li>
+<li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+</ul>
+<div class="footer-sns">
+<a href="https://www.instagram.com/plus.taime" rel="noopener" target="_blank">Instagram</a>
+<a href="https://www.threads.com/@plus.taime" rel="noopener" target="_blank">Threads</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<a aria-label="AI info" class="footer-robot-icon" href="/llms.txt">
+<svg class="icon-thin" height="24" viewbox="0 0 24 24" width="24">
+<path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"></path>
+</svg>
+</a>
+<p>© MIRAINA All Rights Reserved.</p>
+</div>
+</footer>
+<script src="/js/common.js"></script>
+</body>
+</html>
