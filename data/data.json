@@ -2573,6 +2573,15 @@
       "thumbnail": "/images/blogs_images/blog-card288.webp",
       "alt": "Gemini Notebookの監査ログで社内資料の利用履歴を確認",
       "date": "2026-09-06"
+    },
+    {
+      "id": 289,
+      "title": "Google VidsでPDFを動画に｜マニュアル共有の始め方",
+      "description": "Google VidsでPDF・Wordを動画にする方法を公式情報で解説。利用プラン、日本語対応の確認点、台本の作り方とAIへの依頼例を紹介します。",
+      "link": "/blogs/blog289.html",
+      "thumbnail": "/images/blogs_images/blog-card289.webp",
+      "alt": "Google VidsでPDFを動画にする方法",
+      "date": "2026-09-07"
     }
   ],
   "works": [
