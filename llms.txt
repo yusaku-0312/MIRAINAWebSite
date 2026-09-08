@@ -313,6 +313,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年9月最新】Gmail Liveとは？声でメール検索・文書作成する方法](https://miraina-ai.com/blogs/blog286.html): Google公式情報をもとに、Gmail Live、Docs Live、Keep Liveの違い、音声指示例、利用条件、安全な始め方を整理した記事。
 - [最新ブログ: Gemini Notebookの監査ログ追加｜社内資料の利用履歴を確認](https://miraina-ai.com/blogs/blog288.html): Gemini Notebookの監査ログ追加をGoogle公式情報で解説。社内資料の共有・利用履歴の確認手順、管理者権限、導入条件とAIへの依頼文を紹介します。
 - [最新ブログ: Google VidsでPDFを動画に｜マニュアル共有の始め方](https://miraina-ai.com/blogs/blog289.html): Google VidsでPDF・Wordを動画にする方法を公式情報で解説。利用プラン、日本語対応の確認点、台本の作り方とAIへの依頼例を紹介します。
+- [最新ブログ: Workspace Studioに4機能追加｜ファイル整理と返信を自動化](https://miraina-ai.com/blogs/blog292.html): Workspace Studioにファイルのコピー・移動と返信機能が追加。提供時期、利用プラン、最初に試す業務、AIへの依頼例とテスト時の注意点を解説します。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)

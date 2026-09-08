@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="index, follow" name="robots"/>
+<title>Workspace Studioに4機能追加｜ファイル整理と返信を自動化 | MIRAINAブログ</title>
+<meta content="Workspace Studioにファイルのコピー・移動と返信機能が追加。提供時期、利用プラン、最初に試す業務、AIへの依頼例とテスト時の注意点を解説します。" name="description"/>
+<!-- OGP Tags -->
+<meta content="Workspace Studioに4機能追加｜ファイル整理と返信を自動化" property="og:title"/>
+<meta content="article" property="og:type"/>
+<meta content="https://miraina-ai.com/blogs/blog292.html" property="og:url"/>
+<meta content="https://miraina-ai.com/images/blogs_images/blog292-1.webp" property="og:image"/>
+<meta content="Workspace Studioにファイルのコピー・移動と返信機能が追加。提供時期、利用プラン、最初に試す業務、AIへの依頼例とテスト時の注意点を解説します。" property="og:description"/>
+<link href="https://miraina-ai.com/blogs/blog292.html" rel="canonical"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Shippori+Mincho:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Favicon -->
+<link href="/images/favicon.ico" rel="icon"/>
+<!-- CSS -->
+<link href="/css/reset.css" rel="stylesheet"/>
+<link href="/css/common.css" rel="stylesheet"/>
+<link href="/css/blog_article.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+<div class="container header-inner">
+<a class="header-logo" href="/">
+<!-- Assuming logo exists or using text fallback for now if image broken -->
+<img alt="MIRAINA" height="40" src="/images/company-logo.webp" width="120"/>
+</a>
+<div class="hamburger" id="js-hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<nav class="header-nav">
+<div class="nav-item has-dropdown">
+<a class="nav-link" href="/services.html">サービス</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="/services/ai_consulting.html">生成AI活用支援</a>
+<a class="dropdown-item" href="/services/ai_training.html">AI研修</a>
+<a class="dropdown-item" href="/services/ai_develop.html">AI開発</a>
+<a class="dropdown-item" href="/services/llmo_insight.html">LLMO Insight</a>
+<a class="dropdown-item" href="/beauty-dx/">美容サロン特化AI活用支援</a>
+
+</div>
+</div>
+<!-- Other required items from spec usually go here, but focusing on user content mapping -->
+<div class="nav-item"><a class="nav-link" href="/about.html">MIRAINAについて</a></div>
+<div class="nav-item"><a class="nav-link" href="/works.html">事例紹介</a></div>
+<div class="nav-item"><a class="nav-link" href="/blogs.html">ブログ</a></div>
+<div class="nav-item"><a class="nav-link btn-contact" href="/contact.html">お問い合わせ</a></div>
+<div class="nav-item">
+<a aria-label="AI info" class="nav-link" href="/llms.txt">
+<svg class="icon-thin" height="20" viewbox="0 0 24 24" width="20">
+<path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"></path>
+</svg>
+</a>
+</div>
+</nav>
+</div>
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="js-mobile-menu">
+<nav class="mobile-nav">
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/services.html">サービス</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/about.html">MIRAINAについて</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/works.html">事例紹介</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/blogs.html">ブログ</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/contact.html">お問い合わせ</a></div>
+</nav>
+</div>
+</header>
+<main>
+<!-- Breadcrumbs -->
+<div class="container breadcrumbs"><ul><li><a href="/">ホーム</a></li><li><a href="/blogs.html">ブログ</a></li><li>Workspace Studioの新ステップ</li></ul></div>
+<article class="article-container">
+<!-- Article Header -->
+<header class="article-header">
+<div class="article-meta">
+<span class="article-date">2026.09.08</span>
+<div class="article-tags"><span class="article-tag">Gemini</span><span class="article-tag">AI活用</span><span class="article-tag">業務効率化</span></div>
+</div>
+<h1 class="article-title">Workspace Studioに4機能追加｜ファイル整理と返信を自動化</h1>
+<div class="article-thumbnail">
+<img alt="Workspace Studioのファイル整理と返信自動化" fetchpriority="high" height="675" src="/images/blogs_images/blog292-1.webp" width="1200"/>
+<!-- Note: Replace with actual image path -->
+</div>
+</header>
+<!-- Summary -->
+<section class="article-summary"><h2 class="sr-only">記事の概要</h2><p>毎回同じファイルをコピーし、完了連絡を書いていませんか。Workspace Studioの新機能をもとに、ファイル整理と返信を自動化する準備を解説します。利用条件を確認し、最初の小さなフローを設計できることが本記事のゴールです。</p><p>情報確認日：2026年9月8日。公式仕様とMIRAINAの運用提案を分けて紹介します。</p></section>
+<!-- Table of Contents -->
+<div class="article-toc"><div class="toc-title">目次</div><ul><li><a href="#section1">1. Workspace Studioに4つの操作が追加</a></li><li><a href="#section2">2. 提供時期と利用条件</a></li><li><a href="#section3">3. 最初はファイルコピーで試す</a></li><li><a href="#section4">4. AIに業務設計を相談するプロンプト</a></li><li><a href="#section5">5. テスト実行でも実際に動く</a></li><li><a href="#section6">6. まとめ</a></li></ul></div>
+<div class="article-body"><h2 id="section1">1. Workspace Studioに4つの操作が追加</h2>
+<p>Googleは2026年9月2日、Workspace Studioのフローに、Driveのコピー・移動、Chatへの返信、Gmailへの返信という<strong>4つの自動化ステップ</strong>を追加すると発表しました。フローとは、開始条件と処理をつないで繰り返し実行する仕組みです。毎回AIの回答をコピーして別のアプリを操作している人にとって、作業のつなぎ目を見直すきっかけになります。出典：<a href="https://workspaceupdates.googleblog.com/2026/09/automate-drive-gmail-and-google-chat-actions-with-new-steps-in-Workspace-Studio.html?hl=en">Google公式発表</a>。</p>
+<p>たとえば「ひな形を複製して案件の準備をする」「整理先へファイルを移す」「既存の会話に返事をつなぐ」といった操作が対象です。ただし、操作を実行するステップと、文章を考えるAIの処理は分けて設計します。返信機能を追加しただけで、自社の判断基準を理解した文章が必ず送られるわけではありません。</p>
+<figure class="article-figure"><img alt="Workspace Studioの新ステップを紹介するGoogle公式発表" decoding="async" height="450" loading="lazy" src="/images/blogs_images/blog292-2.webp" width="800"/><figcaption>Google Workspace Updatesの公式発表。公開日は2026年9月2日。</figcaption></figure>
+<h2 id="section2">2. 提供時期と利用条件</h2>
+<p><strong>Drive・Chatの機能は9月8日、Gmail返信は9月14日から、それぞれ1〜3日で順次提供予定</strong>です。9月8日にGmail返信まで全員使えるという意味ではありません。管理者向け設定と利用者向け機能にも日程差があります。画面に出ない場合は、契約と管理者設定に加えて展開時期を確認してください。</p>
+<div class="article-table-wrapper"><table class="article-table"><thead><tr><th>対象</th><th>管理者設定の提供開始</th><th>機能の提供開始</th></tr></thead><tbody><tr><td>Drive・Chat</td><td>9月1日（1〜4日で展開）</td><td>9月8日（1〜3日で展開）</td></tr><tr><td>Gmail</td><td>9月8日（1〜4日で展開）</td><td>9月14日（1〜3日で展開）</td></tr></tbody></table></div>
+<p>公式の対象一覧にはBusiness Starter・Standard・Plus、Enterprise Standard・Plus、Education Fundamentals・Standard・Plusと、Google AI Pro for Education、Teaching and Learning、AI Expanded Accessが掲載されています。個人の無料Gmailも対象だとは記載されていません。自社の契約名と照合してください。日程と対象プランの出典：<a href="https://workspaceupdates.googleblog.com/2026/09/automate-drive-gmail-and-google-chat-actions-with-new-steps-in-Workspace-Studio.html?hl=en">Google公式発表</a>（2026年9月8日確認）。</p>
+<h2 id="section3">3. 最初はファイルコピーで試す</h2>
+<p>ここからはMIRAINAの運用提案です。最初の題材には、顧客への送信を含まない「社内の定型ファイルをコピーする作業」が向いています。原本、コピー先、開始条件が決めやすく、結果を目で確かめられるためです。営業用チェックシートを毎週準備する場面なら、原本の更新担当も決めておくと、古いひな形の増殖を防げます。</p>
+<p>作業の流れは「決めた開始条件 → 対象の原本を指定 → テスト用の保存先へコピー → 作成物を人が確認」と整理します。開始条件が曖昧なまま、コピー・移動・返信を一度につなげると、失敗箇所を見つけにくくなります。最初のコピーが成功してから、必要に応じて後続の処理を加える設計が現実的です。</p>
+<ol><li>業務を一文で書き、原本と保存先を決める。</li><li>Studioを開き、利用できる開始条件とコピーのステップを確認する。</li><li>実際の顧客情報を含まないファイルとテスト用フォルダを指定する。</li><li>テスト実行し、内容・件数・保存先が想定どおりか確かめる。</li><li>重複して実行された場合の扱いと、停止を担当する人を決めてから有効化する。</li></ol>
+<p>公式ヘルプでは、Geminiに依頼してフローを作る際、「いつ開始するか」「使うアプリ」「実行する処理」を具体的に書き、生成された各ステップを確認するよう案内しています。前段の情報を後段へ渡す場合は変数の設定も必要です。自動生成された並びを見て終わりにせず、対象ファイルや宛先を開いて確認しましょう。出典：<a href="https://support.google.com/workspace-studio/answer/16448469">Geminiでフローを作成する公式手順</a>。</p>
+<h2 id="section4">4. AIに業務設計を相談するプロンプト</h2>
+<p>「仕事を自動化して」だけでは、AIも開始条件や完了条件を推測することになります。まず一般的なAIチャットで業務を整理し、その後Studioで具体的な設定へ落とすと考えやすくなります。次の依頼例はMIRAINAが作成した設計相談用の文章であり、そのまま設定の成功を保証する専用コマンドではありません。</p>
+<blockquote><p>毎週、営業用チェックシートの原本をコピーして準備しています。Google Workspace Studioで自動化する案を作ってください。開始条件、利用アプリ、対象ファイル、保存先、人が確認する項目に分けてください。原本の変更と社外送信は含めず、利用できる機能と管理者への確認事項を分けてください。不明な条件は推測せず質問してください。</p></blockquote>
+<p>すでにAIを使っている担当者なら、提供条件の調査まで依頼できます。たとえば次のように、回答の根拠と確認時点を指定します。AIが挙げたURLは自分でも開き、本文に対象プランや日付があるか確認してください。</p>
+<blockquote><p>Workspace Studioでファイル整理とGmail返信を自動化したいです。公式情報を調べ、利用プラン、機能ごとの提供開始日、管理者設定、テスト時の注意点を表にしてください。各項目に出典URLと確認日を付け、未確認の仕様は未確認と書いてください。最後に、初心者が最初に試す業務を一つ提案してください。</p></blockquote>
+<p>返信業務では、さらに「誰に」「どの会話へ」「どんな場合だけ」返すのかを定めます。定型の受付連絡と、金額・納期・契約条件の回答を分けると、人が判断すべき箇所が見えます。たとえば社内問い合わせの受付を題材にし、判断が必要な質問は担当者へ渡す運用から検討するのがよいでしょう。</p>
+<h2 id="section5">5. テスト実行でも実際に動く</h2>
+<p><strong>Studioのテスト実行は、動作を眺めるだけのシミュレーションではありません。</strong>公式ヘルプは、実際にメッセージを送信し、文書などを変更すると説明しています。宛先を自分に限定し、文書はコピーを使う方法も案内しています。返信を含むフローでは、テスト用の会話や宛先に置き換えてから実行してください。出典：<a href="https://support.google.com/workspace-studio/answer/16663517">テスト実行の公式ヘルプ</a>。</p>
+<p>管理者の準備も必要です。Googleはステップの利用制限や、組織外への共有につながる操作に利用者の承認を求める設定を案内しています。自社で承認が必要な条件を確認し、担当者が不在でも処理を止められるようにします。詳しくは<a href="https://knowledge.workspace.google.com/admin/studio/get-started-workspace-studio-set-up-guide-for-admins">管理者向けセットアップガイド</a>を確認してください。</p>
+<p>MIRAINAの視点では、自動化の評価は処理件数だけでは不十分です。「準備時間」「確認にかかった時間」「重複や誤送信の有無」「失敗から戻せたか」を記録すると、現場で続けられるか判断できます。まず一つの仕事で改善が確認できてから範囲を広げましょう。業務の切り分けは<a href="/services/ai_consulting.html">生成AI活用支援</a>、チームへの定着は<a href="/services/ai_training.html">AI研修</a>でも相談できます。</p>
+<h2 id="section6">6. まとめ</h2>
+<p>Workspace Studioの新ステップは、ファイル整理や返信の繰り返しを仕組みに変える選択肢です。最初は利用条件を確認し、テスト用ファイルのコピーを一つ完成させましょう。開始条件と完了条件を決め、実行結果を人が確認できれば、次に加える処理も判断しやすくなります。AIへの依頼文には、してほしい操作だけでなく、対象と確認項目まで書くことが出発点です。</p>
+<div class="article-references"><div class="ref-title">参考リンク</div><ul><li><a href="https://workspaceupdates.googleblog.com/2026/09/automate-drive-gmail-and-google-chat-actions-with-new-steps-in-Workspace-Studio.html?hl=en" rel="noopener" target="_blank">Google Workspace Updates：新ステップの発表（2026年9月2日）</a></li><li><a href="https://support.google.com/workspace-studio/answer/16448469" rel="noopener" target="_blank">Google Workspace Help：Geminiでフローを作成する</a></li></ul></div></div>
+<!-- CTA Button -->
+<div class="article-cta">
+<div class="cta-box">
+<h2 class="cta-title">AI導入でお悩みですか？</h2>
+<p class="cta-text">MIRAINAでは、貴社の課題に合わせた<br/>最適なAI活用プランをご提案します。</p>
+<a class="btn btn-black-fill" href="/contact.html">無料相談する</a>
+</div>
+</div>
+<!-- Editorial Information -->
+<div class="article-editor">
+<div class="editor-header">この記事を監修した人</div>
+<div class="editor-profile">
+<div class="editor-image">
+<img alt="本記事の監修者 芝優作（MIRAINA）" decoding="async" loading="lazy" src="/images/shiba_yusaku.webp"/>
+</div>
+<div class="editor-info">
+<div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+<p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+</div>
+</div>
+</div>
+<!-- Related Articles -->
+<div class="article-related"><h2 class="related-title">関連記事</h2><div class="related-grid"><a class="related-card" href="/blogs/blog277.html"><div class="related-img"><img alt="AI研修の効果測定を見直す｜ChatGPTで成果物は向上、独創性は別指標" decoding="async" loading="lazy" src="/images/blogs_images/blog-card277.webp"/></div><div class="related-content"><div class="related-date">2026.08.30</div><div class="related-text">AI研修の効果測定を見直す｜ChatGPTで成果物は向上、独創性は別指標</div></div></a><a class="related-card" href="/blogs/blog284.html"><div class="related-img"><img alt="【2026年9月最新】Geminiのカスタム指示とは？Gmail・Drive・Chatで文体を統一する方法" decoding="async" loading="lazy" src="/images/blogs_images/blog-card284.webp"/></div><div class="related-content"><div class="related-date">2026.09.04</div><div class="related-text">【2026年9月最新】Geminiのカスタム指示とは？Gmail・Drive・Chatで文体を統一する方法</div></div></a><a class="related-card" href="/blogs/blog286.html"><div class="related-img"><img alt="【2026年9月最新】Gmail Liveとは？声でメール検索・文書作成する方法" decoding="async" loading="lazy" src="/images/blogs_images/blog-card286.webp"/></div><div class="related-content"><div class="related-date">2026.09.05</div><div class="related-text">【2026年9月最新】Gmail Liveとは？声でメール検索・文書作成する方法</div></div></a></div></div> </article>
+</main>
+<!-- Footer -->
+<footer class="footer">
+<div class="container footer-inner">
+<div class="footer-brand">
+<a href="/index.html">
+<p class="footer-brand-text">MIRAINA</p>
+</a>
+</div>
+<div class="footer-center">
+<!-- Empty as requested -->
+</div>
+<div class="footer-menu">
+<ul class="footer-menu-list">
+<li><a href="/about.html">私たちについて</a></li>
+<li><a href="/works.html">事例紹介</a></li>
+<li><a href="/blogs.html">ブログ</a></li>
+<li><a href="/contact.html">お問い合わせ</a></li>
+<li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+</ul>
+<div class="footer-sns">
+<a href="https://www.instagram.com/plus.taime" rel="noopener" target="_blank">Instagram</a>
+<a href="https://www.threads.com/@plus.taime" rel="noopener" target="_blank">Threads</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<a aria-label="AI info" class="footer-robot-icon" href="/llms.txt">
+<svg class="icon-thin" height="24" viewbox="0 0 24 24" width="24">
+<path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"></path>
+</svg>
+</a>
+<p>© MIRAINA All Rights Reserved.</p>
+</div>
+</footer>
+<script src="/js/common.js"></script>
+</body>
+</html>
