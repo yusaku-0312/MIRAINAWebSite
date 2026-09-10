@@ -315,6 +315,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: Google VidsでPDFを動画に｜マニュアル共有の始め方](https://miraina-ai.com/blogs/blog289.html): Google VidsでPDF・Wordを動画にする方法を公式情報で解説。利用プラン、日本語対応の確認点、台本の作り方とAIへの依頼例を紹介します。
 - [最新ブログ: Workspace Studioに4機能追加｜ファイル整理と返信を自動化](https://miraina-ai.com/blogs/blog292.html): Workspace Studioにファイルのコピー・移動と返信機能が追加。提供時期、利用プラン、最初に試す業務、AIへの依頼例とテスト時の注意点を解説します。
 - [最新ブログ: Google Picsで画像を一部だけ修正｜日本語の指示例と始め方](https://miraina-ai.com/blogs/blog293.html): Google Picsで画像の背景や文字を一部だけ修正する方法を紹介。日本語の指示例、対象プラン、PCでの手順、公開前の確認点を解説します。
+- [最新ブログ: Sheets canvasで案件表を見やすく｜使い方と指示例](https://miraina-ai.com/blogs/blog294.html): Sheets canvasで案件表をカンバンにする方法を紹介。英語対応、対象プラン、元データへの反映、AIへの指示例と共有前の確認点を解説します。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)

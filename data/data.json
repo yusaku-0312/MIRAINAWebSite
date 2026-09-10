@@ -2600,6 +2600,15 @@
       "thumbnail": "/images/blogs_images/blog-card293.webp",
       "alt": "Google Picsで画像を一部だけ修正",
       "date": "2026-09-09"
+    },
+    {
+      "id": 294,
+      "title": "Sheets canvasで案件表を見やすく｜使い方と指示例",
+      "description": "Sheets canvasで案件表をカンバンにする方法を紹介。英語対応、対象プラン、元データへの反映、AIへの指示例と共有前の確認点を解説します。",
+      "link": "/blogs/blog294.html",
+      "thumbnail": "/images/blogs_images/blog-card294.webp",
+      "alt": "Sheets canvasで案件表を見やすく",
+      "date": "2026-09-10"
     }
   ],
   "works": [

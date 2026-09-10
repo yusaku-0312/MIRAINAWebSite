@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="index, follow" name="robots"/>
+<title>Sheets canvasで案件表を見やすく｜使い方と指示例 | MIRAINAブログ</title>
+<meta content="Sheets canvasで案件表をカンバンにする方法を紹介。英語対応、対象プラン、元データへの反映、AIへの指示例と共有前の確認点を解説します。" name="description"/>
+<!-- OGP Tags -->
+<meta content="Sheets canvasで案件表を見やすく｜使い方と指示例" property="og:title"/>
+<meta content="article" property="og:type"/>
+<meta content="https://miraina-ai.com/blogs/blog294.html" property="og:url"/>
+<meta content="https://miraina-ai.com/images/blogs_images/blog294-1.webp" property="og:image"/>
+<meta content="Sheets canvasで案件表をカンバンにする方法を紹介。英語対応、対象プラン、元データへの反映、AIへの指示例と共有前の確認点を解説します。" property="og:description"/>
+<link href="https://miraina-ai.com/blogs/blog294.html" rel="canonical"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Shippori+Mincho:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Favicon -->
+<link href="/images/favicon.ico" rel="icon"/>
+<!-- CSS -->
+<link href="/css/reset.css" rel="stylesheet"/>
+<link href="/css/common.css" rel="stylesheet"/>
+<link href="/css/blog_article.css" rel="stylesheet"/>
+<style>.article-body .code-block pre{white-space:pre-wrap;overflow-wrap:anywhere}.article-body .code-block code{color:#f5f5f5;background:transparent}</style></head>
+<body>
+<!-- Header -->
+<header class="header">
+<div class="container header-inner">
+<a class="header-logo" href="/">
+<!-- Assuming logo exists or using text fallback for now if image broken -->
+<img alt="MIRAINA" height="40" src="/images/company-logo.webp" width="120"/>
+</a>
+<div class="hamburger" id="js-hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<nav class="header-nav">
+<div class="nav-item has-dropdown">
+<a class="nav-link" href="/services.html">サービス</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="/services/ai_consulting.html">生成AI活用支援</a>
+<a class="dropdown-item" href="/services/ai_training.html">AI研修</a>
+<a class="dropdown-item" href="/services/ai_develop.html">AI開発</a>
+<a class="dropdown-item" href="/services/llmo_insight.html">LLMO Insight</a>
+<a class="dropdown-item" href="/beauty-dx/">美容サロン特化AI活用支援</a>
+
+</div>
+</div>
+<!-- Other required items from spec usually go here, but focusing on user content mapping -->
+<div class="nav-item"><a class="nav-link" href="/about.html">MIRAINAについて</a></div>
+<div class="nav-item"><a class="nav-link" href="/works.html">事例紹介</a></div>
+<div class="nav-item"><a class="nav-link" href="/blogs.html">ブログ</a></div>
+<div class="nav-item"><a class="nav-link btn-contact" href="/contact.html">お問い合わせ</a></div>
+<div class="nav-item">
+<a aria-label="AI info" class="nav-link" href="/llms.txt">
+<svg class="icon-thin" height="20" viewbox="0 0 24 24" width="20">
+<path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"></path>
+</svg>
+</a>
+</div>
+</nav>
+</div>
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="js-mobile-menu">
+<nav class="mobile-nav">
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/services.html">サービス</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/about.html">MIRAINAについて</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/works.html">事例紹介</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/blogs.html">ブログ</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/contact.html">お問い合わせ</a></div>
+</nav>
+</div>
+</header>
+<main>
+<!-- Breadcrumbs -->
+<div class="container breadcrumbs"><ul><li><a href="/">ホーム</a></li><li><a href="/blogs.html">ブログ</a></li><li>Sheets canvasの使い方</li></ul></div>
+<article class="article-container">
+<!-- Article Header -->
+<header class="article-header">
+<div class="article-meta">
+<span class="article-date">2026.09.10</span>
+<div class="article-tags"><span class="article-tag">Gemini</span><span class="article-tag">AI活用</span><span class="article-tag">業務効率化</span></div>
+</div>
+<h1 class="article-title">Sheets canvasで案件表を見やすく｜使い方と指示例</h1>
+<div class="article-thumbnail">
+<img alt="Sheets canvasで案件表を見やすく" fetchpriority="high" height="675" src="/images/blogs_images/blog294-1.webp" width="1200"/>
+<!-- Note: Replace with actual image path -->
+</div>
+</header>
+<!-- Summary -->
+<section class="article-summary"><h2 class="sr-only">記事の概要</h2><p>案件表が見づらく、対応状況を探すのに時間がかかる方へ。Sheets canvasの利用条件と指示例を紹介します。小さな表で画面を作り、元データへの影響を確認して共有できることが本記事のゴールです。</p><p>情報確認日：2026年9月10日。公式仕様とMIRAINAの運用提案を分けて紹介します。</p></section>
+<!-- Table of Contents -->
+<div class="article-toc"><div class="toc-title">目次</div><ul><li><a href="#section1">1. Sheets canvasで表を見やすくする</a></li><li><a href="#section2">2. 利用条件と日本語対応</a></li><li><a href="#section3">3. 最初に試す案件表の作り方</a></li><li><a href="#section4">4. 作成手順とAIへの指示例</a></li><li><a href="#section5">5. 共有前に元データを確認する</a></li><li><a href="#section6">6. まとめ</a></li></ul></div>
+<div class="article-body"><h2 id="section1">1. Sheets canvasで表を見やすくする</h2>
+<p><strong>Sheets canvasは、Googleスプレッドシートのデータを、カードやダッシュボードなどの操作できる画面に変える機能です。</strong>数式やプログラムを書く代わりに、Geminiへ表示したい内容を伝えます。列が多くて案件の進み具合を追いにくいとき、元の表を生かしながら見方を変える選択肢になります。</p>
+<p>Googleは<a href="https://blog.google/products-and-platforms/products/google-one/fall-2026-ai-plan-updates/" rel="noopener" target="_blank">2026年9月9日のGoogle AIプラン案内</a>で本機能を改めて紹介しました。ただし、新規発表日は9月9日ではありません。<a href="https://blog.google/products-and-platforms/products/workspace/sheets-canvas-for-google-sheets-spreadsheets/" rel="noopener" target="_blank">初回発表は8月13日</a>です。本記事ではニュースの紹介に加え、小さな案件表で試すための考え方を整理します。製品の実機検証レポートではなく、公式仕様に基づく手順とMIRAINAの運用提案です。</p>
+<p>通常のグラフとの違いは、表示を見るだけでなく、データを操作できる点にあります。見やすさを求めて導入しても、編集権限を持つ人が画面を操作すれば元データが変わることがあります。「会議で眺める画面が必要なのか」「担当者が更新する画面が必要なのか」を先に分けましょう。</p>
+<h2 id="section2">2. 利用条件と日本語対応</h2>
+<p><a href="https://support.google.com/docs/answer/17035851?hl=en" rel="noopener" target="_blank">公式ヘルプ</a>では、対応言語は英語です。日本で利用できることと、日本語での操作が正式に対応していることは別です。日本語だけで安定して使える機能を探している場合は、導入判断の前にこの条件を確認してください。下の指示例も、公式の英語対応に合わせた英語文を用意しています。</p>
+<div class="article-table-wrapper"><table class="article-table"><thead><tr><th>確認項目</th><th>公式情報で確認できる条件</th></tr></thead><tbody><tr><th>個人向け</th><td>Google AI Pro・Ultra。9月9日の案内で対象として記載</td></tr><tr><th>組織向け</th><td>8月13日の発表ではBusiness／EnterpriseのStandard・Plus、Google AI Pro for Educationアドオンへ展開</td></tr><tr><th>端末・保存先</th><td>パソコンで操作。Driveに保存したファイルが必要</td></tr><tr><th>データ範囲</th><td>1つのシートタブのデータのみを使用</td></tr></tbody></table></div>
+<figure class="article-figure"><img alt="Sheets canvasの公式ヘルプ。英語対応と対象プランに関する説明" height="450" loading="lazy" src="/images/blogs_images/blog294-2.webp" width="800"/><figcaption>Google Docs Editors Help「Create a Sheets canvas」。2026年9月10日確認。</figcaption></figure>
+<p>機能が見つからない場合は、契約だけでなくファイルの状態も確認します。モバイルのSheetsアプリ、オフライン文書、第三者のストレージにあるファイル、コピーなどが制限された表では利用できない場合があります。データが大きすぎる場合も対象です。公式ヘルプは一律の上限行数を示していないため、「何行まで必ず動く」とは断定できません。</p>
+<h2 id="section3">3. 最初に試す案件表の作り方</h2>
+<p>最初は、本番の顧客台帳をそのまま使うより、架空の案件で試す方が操作を理解しやすくなります。MIRAINAの提案は、「案件名・担当者・状態・期限」の4列を持つ小さな表です。状態は「未着手・進行中・完了」のように統一します。これは製品の必須形式ではなく、生成結果の誤りを見つけやすくする練習用の設計です。</p>
+<p>例えば、店舗の販促準備なら、チラシ確認、掲載文作成、写真選定を1行ずつ並べます。カンバンは、状態ごとにカードを分ける見せ方です。誰の作業が止まっているかを確認したい場合に向きます。一方、月ごとの数値を比較したいなら、まず集計の基準を決めたうえでダッシュボードを検討します。</p>
+<p>表の整備では、同じ担当者の名前の表記、空欄の意味、日付の入力方法をそろえます。「完了」と「対応済み」が混在すると、別の状態として表示される可能性を確認する必要があります。AIへの指示を長くする前に、元データの言葉をそろえることが、結果を確かめる近道です。</p>
+<h2 id="section4">4. 作成手順とAIへの指示例</h2>
+<p>公式ヘルプでは、パソコンで表を開き、メニューの「Insert」から「Create a canvas」を選ぶ手順などを案内しています。プロンプト欄に作りたい画面を入力し、生成後も追加の指示で調整できます。Excelファイルを使う場合は、先に標準のGoogleスプレッドシート形式へ保存する方法が推奨されています。</p>
+<p>次はMIRAINAが作成した練習用の依頼例です。列名を英語にした架空の表で試し、実際の列名に合わせて書き換えてください。日本語での意図は「案件を状態ごとに分け、担当者と期限が分かる画面にする」です。生成結果を保証する公式プロンプトではありません。</p>
+<div class="code-block"><pre><code>Build a kanban board using this sheet tab.
+Group cards by Status.
+Show Task, Owner, and Due date on each card.
+Do not invent missing values.
+Keep the original records unchanged during creation.</code></pre></div>
+<p>この指示の最後の一文は意図を伝えるものです。データの更新を技術的に禁止する権限設定にはなりません。作成後は「View data」で元の表を確認し、行数や期限に意図しない変化がないか比較します。見た目の修正と、記録の書き換えを同時に依頼しない方が、変化を追いやすくなります。</p>
+<p>使い始める前にChatGPTやGeminiへ相談するなら、「Sheets canvasで案件表をカンバンにしたい。対応言語、利用プラン、元データが更新される条件を公式URL付きで整理し、練習用の表と英語の依頼文を提案して」と尋ねると、判断材料を集めやすくなります。AIの回答とリンク先の記述は照合してください。</p>
+<h2 id="section5">5. 共有前に元データを確認する</h2>
+<p>公式ヘルプは、canvasを読み書きできる画面として説明しています。編集権限があればデータの追加・編集・削除ができ、閲覧・コメント権限ではcanvasを変更できません。共有時のアクセス権も元のスプレッドシートと同じです。画面のURLを渡す前に、相手の権限を確認しましょう。</p>
+<p>練習では、架空の案件を1件だけ移動し、元の状態欄がどう変わるか見ます。次に空欄のある案件、期限が過ぎた案件、完了した案件を確認します。元の表と件数が合うか、カードが欠けていないかを照合し、最後に閲覧者の立場で共有範囲を確認します。これはMIRAINAの検証提案で、公式の品質保証手順ではありません。</p>
+<p><strong>MIRAINAの見解：</strong>AIが苦手な人ほど、「かっこいい画面を作る」より「毎朝、未完了の案件を探せる」をゴールにすると評価しやすくなります。画面づくりと更新の自動化は段階を分け、必要になった時点で<a href="/blogs/blog292.html">Workspace Studioによる業務自動化</a>へ広げるのが現実的です。</p>
+<h2 id="section6">6. まとめ</h2>
+<p>Sheets canvasは、既存の表を操作しやすい画面へ変える選択肢です。英語対応、対象プラン、1つのタブという範囲を確認し、架空の案件表から試しましょう。見た目を整えた後は、元データとの一致と共有権限を確認してから現場に渡します。</p>
+<p>業務に合う表の整理や、現場で使える依頼文づくりから相談したい方は、MIRAINAの<a href="/services/ai_consulting.html">生成AI活用支援</a>をご覧ください。操作に慣れていない担当者と一緒に進める場合は、<a href="/services/ai_training.html">AI研修</a>で対象業務を決めて練習する方法もあります。</p>
+<div class="article-references"><div class="ref-title">参考リンク</div><ul><li><a href="https://blog.google/products-and-platforms/products/google-one/fall-2026-ai-plan-updates/" rel="noopener" target="_blank">Google：Google AIプランの最新案内（2026年9月9日）</a></li><li><a href="https://support.google.com/docs/answer/17035851?hl=en" rel="noopener" target="_blank">Google Help：Sheets canvasを作成する</a></li></ul></div></div>
+<!-- CTA Button -->
+<div class="article-cta">
+<div class="cta-box">
+<h2 class="cta-title">AI導入でお悩みですか？</h2>
+<p class="cta-text">MIRAINAでは、貴社の課題に合わせた<br/>最適なAI活用プランをご提案します。</p>
+<a class="btn btn-black-fill" href="/contact.html">無料相談する</a>
+</div>
+</div>
+<!-- Editorial Information -->
+<div class="article-editor">
+<div class="editor-header">この記事を監修した人</div>
+<div class="editor-profile">
+<div class="editor-image">
+<img alt="本記事の監修者 芝優作（MIRAINA）" decoding="async" loading="lazy" src="/images/shiba_yusaku.webp"/>
+</div>
+<div class="editor-info">
+<div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+<p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+</div>
+</div>
+</div>
+<!-- Related Articles -->
+<div class="article-related"><h2 class="related-title">関連記事</h2><div class="related-grid"><a class="related-card" href="/blogs/blog284.html"><div class="related-img"><img alt="【2026年9月最新】Geminiのカスタム指示とは？Gmail・Drive・Chatで文体を統一する方法" decoding="async" loading="lazy" src="/images/blogs_images/blog-card284.webp"/></div><div class="related-content"><div class="related-date">2026.09.04</div><div class="related-text">【2026年9月最新】Geminiのカスタム指示とは？Gmail・Drive・Chatで文体を統一する方法</div></div></a><a class="related-card" href="/blogs/blog289.html"><div class="related-img"><img alt="Google VidsでPDFを動画に｜マニュアル共有の始め方" decoding="async" loading="lazy" src="/images/blogs_images/blog-card289.webp"/></div><div class="related-content"><div class="related-date">2026.09.07</div><div class="related-text">Google VidsでPDFを動画に｜マニュアル共有の始め方</div></div></a><a class="related-card" href="/blogs/blog292.html"><div class="related-img"><img alt="Workspace Studioに4機能追加｜ファイル整理と返信を自動化" decoding="async" loading="lazy" src="/images/blogs_images/blog-card292.webp"/></div><div class="related-content"><div class="related-date">2026.09.08</div><div class="related-text">Workspace Studioに4機能追加｜ファイル整理と返信を自動化</div></div></a></div></div> </article>
+</main>
+<!-- Footer -->
+<footer class="footer">
+<div class="container footer-inner">
+<div class="footer-brand">
+<a href="/index.html">
+<p class="footer-brand-text">MIRAINA</p>
+</a>
+</div>
+<div class="footer-center">
+<!-- Empty as requested -->
+</div>
+<div class="footer-menu">
+<ul class="footer-menu-list">
+<li><a href="/about.html">私たちについて</a></li>
+<li><a href="/works.html">事例紹介</a></li>
+<li><a href="/blogs.html">ブログ</a></li>
+<li><a href="/contact.html">お問い合わせ</a></li>
+<li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+</ul>
+<div class="footer-sns">
+<a href="https://www.instagram.com/plus.taime" rel="noopener" target="_blank">Instagram</a>
+<a href="https://www.threads.com/@plus.taime" rel="noopener" target="_blank">Threads</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<a aria-label="AI info" class="footer-robot-icon" href="/llms.txt">
+<svg class="icon-thin" height="24" viewbox="0 0 24 24" width="24">
+<path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"></path>
+</svg>
+</a>
+<p>© MIRAINA All Rights Reserved.</p>
+</div>
+</footer>
+<script src="/js/common.js"></script>
+</body>
+</html>
