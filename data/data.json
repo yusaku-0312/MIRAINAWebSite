@@ -2618,6 +2618,15 @@
       "thumbnail": "/images/blogs_images/blog-card296.webp",
       "alt": "Geminiで書類を要約",
       "date": "2026-09-11"
+    },
+    {
+      "id": 297,
+      "title": "OpenAI Agents API公開｜AIエージェント開発で決める4項目",
+      "description": "OpenAI Agents APIの公開内容を公式情報から解説。実行環境、ツール、ネットワーク、費用を整理し、中小企業がAIエージェント開発前に決める4項目を紹介します。",
+      "link": "/blogs/blog297.html",
+      "thumbnail": "/images/blogs_images/blog-card297.webp",
+      "alt": "OpenAI Agents APIでクラウドAIエージェントを開発するイメージ",
+      "date": "2026-09-12"
     }
   ],
   "works": [

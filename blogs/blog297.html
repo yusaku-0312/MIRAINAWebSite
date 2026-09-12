@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>OpenAI Agents API公開｜AIエージェント開発で決める4項目 | MIRAINAブログ</title>
+    <meta name="description" content="OpenAI Agents APIの公開内容を公式情報から解説。実行環境、ツール、ネットワーク、費用を整理し、中小企業がAIエージェント開発前に決める4項目を紹介します。">
+    <!-- OGP Tags -->
+    <meta property="og:title" content="OpenAI Agents API公開｜AIエージェント開発で決める4項目">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog297.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog297-1.webp">
+    <meta property="og:description" content="OpenAI Agents APIの公開内容を公式情報から解説。実行環境、ツール、ネットワーク、費用を整理し、中小企業がAIエージェント開発前に決める4項目を紹介します。">
+    <link rel="canonical" href="https://miraina-ai.com/blogs/blog297.html">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Shippori+Mincho:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.ico">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+            <div class="hamburger" id="js-hamburger"><span></span><span></span><span></span></div>
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"></path></svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container breadcrumbs"><ul><li><a href="/">ホーム</a></li><li><a href="/blogs.html">ブログ</a></li><li>OpenAI Agents API公開</li></ul></div>
+        <article class="article-container">
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.09.12</span>
+                    <div class="article-tags"><span class="article-tag">OpenAI</span><span class="article-tag">AIエージェント</span><span class="article-tag">AI開発</span></div>
+                </div>
+                <h1 class="article-title">OpenAI Agents API公開｜AIエージェント開発で決める4項目</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog297-1.webp" alt="OpenAI Agents APIでクラウドAIエージェントを開発するイメージ" width="1200" height="675" fetchpriority="high">
+                </div>
+            </header>
+
+            <!-- Summary -->
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>OpenAI Agents APIが公開され、開発者はCodexを支える仕組みをAPIから利用できるようになりました。本記事のゴールは、機能名を追うだけでなく、実行環境、接続するツール、ネットワーク、費用と停止条件を整理し、自社で検証すべき範囲を決められるようにすることです。</p>
+                <p>情報確認日：2026年9月12日。OpenAIの公式発表と開発者向け資料を基に、確認できる仕様とMIRAINAの導入提案を分けて解説します。</p>
+            </section>
+
+            <!-- Table of Contents -->
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. OpenAI Agents APIが公開</a></li>
+                    <li><a href="#section2">2. 4つの要素で仕組みを理解</a></li>
+                    <li><a href="#section3">3. 実行環境とネットワークを選ぶ</a></li>
+                    <li><a href="#section4">4. 小さく試す業務設計</a></li>
+                    <li><a href="#section5">5. 開発前に決める4項目</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <!-- Main Content Body -->
+            <div class="article-body">
+                <h2 id="section1">1. OpenAI Agents APIが公開</h2>
+                <p>OpenAIは2026年9月10日、<strong>OpenAI Agents APIをパブリックベータとして公開</strong>しました。公式発表では、Codexと同じエージェント基盤を、開発者が自社アプリから呼び出せるAPIとして説明しています。複数工程の仕事を長時間動かし、途中経過を受け取り、必要に応じて追加指示を送るための土台です。</p>
+                <p>これはChatGPTの画面でAIに質問する機能や、既製のエージェントを選ぶ機能とは役割が違います。開発者がモデル、指示、ツール、実行環境を組み合わせ、自社サービスや社内システムへ組み込むための開発基盤です。<a href="/blogs/blog176.html">AIエージェントによる業務自動化</a>を検討していて、単発の応答では足りない業務が対象になります。</p>
+                <p>発表時点では全開発者が利用でき、Agents APIそのものへの追加料金はないと案内されています。ただし無料という意味ではありません。選んだモデル、Web検索などのツール、OpenAIが管理するサンドボックスには、それぞれ標準料金がかかります。ベータ版のため、仕様変更を前提に小規模な検証から始める必要があります。</p>
+
+                <h2 id="section2">2. 4つの要素で仕組みを理解</h2>
+                <p>公式ドキュメントはAgents APIを、Agent、Environment、Session、Events and itemsの4要素で整理しています。Agentはモデル・指示・ツールの組み合わせ、Environmentはファイル操作やコマンド実行を行う場所、Sessionは仕事を継続する単位、Events and itemsは入力や処理結果の記録です。</p>
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead><tr><th>要素</th><th>役割</th><th>導入時の確認</th></tr></thead>
+                        <tbody>
+                            <tr><th>Agent</th><td>モデル、指示、ツールを定義</td><td>任せる仕事と禁止事項</td></tr>
+                            <tr><th>Environment</th><td>コードやファイルを扱う実行場所</td><td>保存先とネットワーク範囲</td></tr>
+                            <tr><th>Session</th><td>複数ターンに続く仕事を保持</td><td>再開条件と終了条件</td></tr>
+                            <tr><th>Events / items</th><td>進捗、入力、成果物を伝達</td><td>記録・監視・エラー通知</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>OpenAI側はセッション管理、処理の調整、長い会話の要約、障害からの復帰を担います。一方、自社側には何をツールとして渡すか、どこで動かすか、結果をどう確認するかが残ります。基盤が管理されても、業務ルールまで自動的に正しく設計されるわけではありません。</p>
+
+                <h2 id="section3">3. 実行環境とネットワークを選ぶ</h2>
+                <p>実行環境は大きく、OpenAI-hosted sandboxとself-hosted sandboxに分かれます。OpenAI-hostedでは、Python、Node.js、コマンドラインツールを備えたLinux環境が用意され、ファイルを読み、コードを実行し、成果物を作れます。独自のコンテナ、特別な計算資源、社内のプライベートネットワークが必要なら、自社管理の環境を検討します。</p>
+                <p>特に見落としやすいのが外部通信です。公式資料では、OpenAI-hosted sandboxのネットワークは、テンプレートの制限を引き継がない場合、初期状態で外向き通信が有効です。無効化、または許可したホストだけへ絞るrestrictedを選べます。社内資料だけを処理するなら、必要性を確認せず広い通信を許可しない設計が基本です。</p>
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step"><span class="step-num">Step 01</span><span class="step-text">入力データを限定</span></li>
+                        <li class="process-step"><span class="step-num">Step 02</span><span class="step-text">必要なツールだけ接続</span></li>
+                        <li class="process-step"><span class="step-num">Step 03</span><span class="step-text">外部通信を制限</span></li>
+                        <li class="process-step"><span class="step-num">Step 04</span><span class="step-text">成果物を人が確認</span></li>
+                    </ul>
+                    <p class="diagram-caption">AIの能力より先に、データと操作の境界を決めます。</p>
+                </div>
+                <p>MCP、独自関数、Web検索などを接続できることは利点ですが、接続先が増えるほど誤操作の範囲も広がります。認証情報を指示文へ直接書かず、読み取りと更新の権限を分け、外部送信や削除には人の承認を残しましょう。APIで機密情報を扱う場合は、<a href="/blogs/blog264.html">OpenAIのデータ保持に関する確認項目</a>も併せて整理してください。</p>
+
+                <h2 id="section4">4. 小さく試す業務設計</h2>
+                <p>最初の検証には、正解を人が照合でき、失敗しても顧客や取引先へ直接影響しない業務が向きます。例えば、架空の設備点検記録を読み、未記入欄と数値の不一致候補を抽出し、確認レポートを作る仕事です。元データの更新やメール送信は行わず、指定した出力フォルダへレポートを保存するところで止めます。</p>
+                <p>要件には「対象ファイル」「検査ルール」「成果物」「してはいけない操作」「情報不足時の扱い」を書きます。正常な記録だけでなく、空欄、日付形式の違い、矛盾、壊れたファイルも試します。完成した文章の自然さではなく、見逃し率、誤検出率、人の確認時間、処理費用、途中停止から復帰できた割合を記録すると、導入判断につながります。</p>
+                <p>長時間動く利点を確かめる場合も、最初から複数部署のシステムをつなぎません。10〜20件程度の検証用データで、1つのSessionを開始し、進捗イベントを受け取り、追加指示で修正し、成果物を回収してSessionを終了する流れを確認します。成功例だけでなく、止められることまで含めて合格条件にします。</p>
+
+                <h2 id="section5">5. 開発前に決める4項目</h2>
+                <p><strong>MIRAINAの見解：</strong>Agents APIの価値は、プロンプトを1本増やすことではなく、長い仕事を「再開できるSession」と「制限できるEnvironment」に分けられる点にあります。中小企業では、機能比較より先に次の4項目を1枚にまとめると、開発範囲と見積もりのずれを減らせます。</p>
+                <ol>
+                    <li><strong>目的と成果物：</strong>誰が、どの結果を確認できれば完了か</li>
+                    <li><strong>データと実行環境：</strong>どのファイルを、どこで扱うか</li>
+                    <li><strong>ツールと通信範囲：</strong>読み取り、更新、外部アクセスをどこまで許可するか</li>
+                    <li><strong>停止条件と費用：</strong>失敗時の通知、承認点、1件あたりの上限をどう置くか</li>
+                </ol>
+                <p>料金はモデルだけで見ず、ツールとサンドボックス、再試行、人の確認時間を含めて計測します。予算超過を防ぐ考え方は、<a href="/blogs/blog226.html">OpenAI hard spend limitsの解説</a>も参考になります。公開ベータを本番の重要業務へ直結させる前に、変更履歴を追い、代替手順と停止担当者を決めてください。</p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>OpenAI Agents APIは、Codexを支える管理型の仕組みを使い、長時間動くAIエージェントを自社アプリへ組み込むための新しい選択肢です。公開ベータの今は、実行環境、ツール、ネットワーク、費用と停止条件を明確にし、検証用データと読み取り中心の業務から始めるのが現実的です。</p>
+                <p>自社業務に合わせたAIエージェントの要件整理、試作、既存システム連携を検討している方は、MIRAINAの<a href="/services/ai_develop.html">AI開発</a>をご覧ください。業務選定から安全な運用ルールまで整理したい場合は、<a href="/services/ai_consulting.html">生成AI活用支援</a>でご相談いただけます。</p>
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://openai.com/index/introducing-the-agents-api/" target="_blank" rel="noopener">OpenAI：Introducing the Agents API（2026年9月10日）</a></li>
+                        <li><a href="https://developers.openai.com/api/docs/guides/agents-api/overview" target="_blank" rel="noopener">OpenAI Developers：Agents API overview</a></li>
+                        <li><a href="https://developers.openai.com/api/docs/guides/agents-api/environments/openai-hosted" target="_blank" rel="noopener">OpenAI Developers：OpenAI-hosted sandboxes</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">AIエージェントを自社業務へ組み込みたい方へ</h2>
+                    <p class="cta-text">業務と権限を整理し、小さな検証から<br>運用できるAIシステムを設計します。</p>
+                    <a href="/services/ai_develop.html" class="btn btn-black-fill">AI開発サービスを見る</a>
+                </div>
+            </div>
+
+            <!-- Editorial Information -->
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image"><img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async"></div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。九州大学大学院でLLMに関する研究にも従事。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog176.html" class="related-card">
+                        <div class="related-img"><img src="/images/blogs_images/blog-card176.webp" alt="AIエージェントによる業務自動化と中小企業の始め方" loading="lazy" decoding="async"></div>
+                        <div class="related-content"><div class="related-date">2026.06.23</div><div class="related-text">AIエージェントで業務自動化はどう変わる？中小企業が成果を出す始め方</div></div>
+                    </a>
+                    <a href="/blogs/blog226.html" class="related-card">
+                        <div class="related-img"><img src="/images/blogs_images/blog-card226.webp" alt="OpenAI hard spend limitsでAI料金の使いすぎを止める設定" loading="lazy" decoding="async"></div>
+                        <div class="related-content"><div class="related-date">2026.07.27</div><div class="related-text">OpenAI hard spend limitsとは？AI料金の使いすぎを止める設定方法</div></div>
+                    </a>
+                    <a href="/blogs/blog264.html" class="related-card">
+                        <div class="related-img"><img src="/images/blogs_images/blog-card264.webp" alt="OpenAI Zero Data Retentionと機密データ活用" loading="lazy" decoding="async"></div>
+                        <div class="related-content"><div class="related-date">2026.08.22</div><div class="related-text">OpenAIがZero Data Retentionを強化｜機密データ活用で確認する5項目</div></div>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand"><a href="/index.html"><p class="footer-brand-text">MIRAINA</p></a></div>
+            <div class="footer-center"></div>
+            <div class="footer-menu">
+                <ul class="footer-menu-list"><li><a href="/about.html">私たちについて</a></li><li><a href="/works.html">事例紹介</a></li><li><a href="/blogs.html">ブログ</a></li><li><a href="/contact.html">お問い合わせ</a></li><li><a href="/privacy_policy.html">プライバシーポリシー</a></li></ul>
+                <div class="footer-sns"><a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a><a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a></div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info"><svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"></path></svg></a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="/js/common.js"></script>
+</body>
+</html>

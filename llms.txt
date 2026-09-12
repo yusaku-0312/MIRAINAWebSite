@@ -317,6 +317,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: Google Picsで画像を一部だけ修正｜日本語の指示例と始め方](https://miraina-ai.com/blogs/blog293.html): Google Picsで画像の背景や文字を一部だけ修正する方法を紹介。日本語の指示例、対象プラン、PCでの手順、公開前の確認点を解説します。
 - [最新ブログ: Sheets canvasで案件表を見やすく｜使い方と指示例](https://miraina-ai.com/blogs/blog294.html): Sheets canvasで案件表をカンバンにする方法を紹介。英語対応、対象プラン、元データへの反映、AIへの指示例と共有前の確認点を解説します。
 - [最新ブログ: Geminiで書類を要約｜必要書類と確認事項を整理する方法](https://miraina-ai.com/blogs/blog296.html): Geminiで書類を要約し、必要な準備をチェックリストにする方法を紹介。PDFの読み込み、日本語プロンプト、出典と不足情報の確認方法を解説します。
+- [最新ブログ: OpenAI Agents API公開｜AIエージェント開発で決める4項目](https://miraina-ai.com/blogs/blog297.html): OpenAI Agents APIの公開内容を公式情報から解説。実行環境、ツール、ネットワーク、費用を整理し、中小企業がAIエージェント開発前に決める4項目を紹介します。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)
