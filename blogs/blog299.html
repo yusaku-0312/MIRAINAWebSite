@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="index, follow" name="robots"/>
+<title>Gemini Windows版が公開｜導入手順と仕事で使う指示例 | MIRAINAブログ</title>
+<meta content="Gemini Windows版の導入手順と利用条件を公式情報で確認。Alt＋Spaceでの呼び出し、仕事に使う日本語プロンプト、会社での確認点を解説します。" name="description"/>
+<!-- OGP Tags -->
+<meta content="Gemini Windows版が公開｜導入手順と仕事で使う指示例" property="og:title"/>
+<meta content="article" property="og:type"/>
+<meta content="https://miraina-ai.com/blogs/blog299.html" property="og:url"/>
+<meta content="https://miraina-ai.com/images/blogs_images/blog299-1.webp" property="og:image"/>
+<meta content="Gemini Windows版の導入手順と利用条件を公式情報で確認。Alt＋Spaceでの呼び出し、仕事に使う日本語プロンプト、会社での確認点を解説します。" property="og:description"/>
+<link href="https://miraina-ai.com/blogs/blog299.html" rel="canonical"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Shippori+Mincho:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Favicon -->
+<link href="/images/favicon.ico" rel="icon"/>
+<!-- CSS -->
+<link href="/css/reset.css" rel="stylesheet"/>
+<link href="/css/common.css" rel="stylesheet"/>
+<link href="/css/blog_article.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+<div class="container header-inner">
+<a class="header-logo" href="/">
+<!-- Assuming logo exists or using text fallback for now if image broken -->
+<img alt="MIRAINA" height="40" src="/images/company-logo.webp" width="120"/>
+</a>
+<div class="hamburger" id="js-hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<nav class="header-nav">
+<div class="nav-item has-dropdown">
+<a class="nav-link" href="/services.html">サービス</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="/services/ai_consulting.html">生成AI活用支援</a>
+<a class="dropdown-item" href="/services/ai_training.html">AI研修</a>
+<a class="dropdown-item" href="/services/ai_develop.html">AI開発</a>
+<a class="dropdown-item" href="/services/llmo_insight.html">LLMO Insight</a>
+<a class="dropdown-item" href="/beauty-dx/">美容サロン特化AI活用支援</a>
+
+</div>
+</div>
+<!-- Other required items from spec usually go here, but focusing on user content mapping -->
+<div class="nav-item"><a class="nav-link" href="/about.html">MIRAINAについて</a></div>
+<div class="nav-item"><a class="nav-link" href="/works.html">事例紹介</a></div>
+<div class="nav-item"><a class="nav-link" href="/blogs.html">ブログ</a></div>
+<div class="nav-item"><a class="nav-link btn-contact" href="/contact.html">お問い合わせ</a></div>
+<div class="nav-item">
+<a aria-label="AI info" class="nav-link" href="/llms.txt">
+<svg class="icon-thin" height="20" viewbox="0 0 24 24" width="20">
+<path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"></path>
+</svg>
+</a>
+</div>
+</nav>
+</div>
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="js-mobile-menu">
+<nav class="mobile-nav">
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/services.html">サービス</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/about.html">MIRAINAについて</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/works.html">事例紹介</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/blogs.html">ブログ</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/contact.html">お問い合わせ</a></div>
+</nav>
+</div>
+</header>
+<main>
+<!-- Breadcrumbs -->
+<div class="container breadcrumbs"><ul><li><a href="/">ホーム</a></li><li><a href="/blogs.html">ブログ</a></li><li>Gemini Windows版</li></ul></div>
+<article class="article-container">
+<!-- Article Header -->
+<header class="article-header">
+<div class="article-meta">
+<span class="article-date">2026.09.13</span>
+<div class="article-tags"><span class="article-tag">Gemini</span><span class="article-tag">AI活用</span><span class="article-tag">業務効率化</span></div>
+</div>
+<h1 class="article-title">Gemini Windows版が公開｜導入手順と仕事で使う指示例</h1>
+<div class="article-thumbnail">
+<img alt="Gemini Windows版" fetchpriority="high" height="675" src="/images/blogs_images/blog299-1.webp" width="1200"/>
+<!-- Note: Replace with actual image path -->
+</div>
+</header>
+<!-- Summary -->
+<section class="article-summary"><h2 class="sr-only">記事の概要</h2><p>パソコンでAIをすぐに開きたい方へ。Gemini Windows版の導入条件と手順、仕事に使う指示例を紹介します。自分のPCとアカウントで利用条件を確認し、短い文章の下書きから試せることが本記事のゴールです。</p><p>情報確認日：2026年9月13日。公式仕様とMIRAINAの運用提案を分けて紹介します。</p></section>
+<!-- Table of Contents -->
+<div class="article-toc"><div class="toc-title">目次</div><ul><li><a href="#section1">1. Gemini Windows版で変わること</a></li><li><a href="#section2">2. インストールと利用条件</a></li><li><a href="#section3">3. 最初に試す日本語プロンプト</a></li><li><a href="#section4">4. 会社で使う前の確認点</a></li><li><a href="#section5">5. 定着させる小さな始め方</a></li></ul></div>
+<div class="article-body"><h2 id="section1">1. Gemini Windows版で変わること</h2>
+<p><strong>Gemini Windows版は、パソコンのデスクトップからAIに質問できる専用アプリです。</strong>Googleは2026年9月10日の公式ブログで公開を発表し、翌11日にWorkspace向けの案内も掲載しました。Alt＋Spaceで呼び出せるため、文章を考えている途中でAIに相談し、元の作業へ戻る使い方ができます。出典：<a href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/">Google公式発表</a>。</p>
+<p>AIを使い慣れていない人には、「高性能なモデルを選ぶ」より「困った瞬間に開ける」ことが役立つ場合があります。たとえば案内文の言い回しが決まらないとき、ブラウザーでAIのページを探す手間が減れば、相談する習慣を作りやすくなる、というのがMIRAINAの見方です。これは期待できる使い方であり、導入だけで作業時間が短縮するという実測結果ではありません。</p>
+<p>また、アプリが作業画面の上に開くことと、画面やパソコン内のファイルを自動で理解することは別です。何を読ませるかを明示して依頼しましょう。本記事は公式情報に基づく導入ガイドで、Windows実機での操作検証レポートではありません。</p>
+<h2 id="section2">2. インストールと利用条件</h2>
+<p>導入前に、パソコンの仕様とログインするアカウントを確認します。公式ヘルプが示す条件は以下のとおりです。会社のパソコンでは、条件を満たしていてもインストール手続きが必要な場合があるため、社内の運用に合わせて進めてください。出典：<a href="https://support.google.com/gemini/answer/18263854?hl=en">Gemini Apps Help</a>。</p>
+<div class="article-table-wrapper"><table class="article-table"><thead><tr><th>確認項目</th><th>公式ヘルプの要件</th></tr></thead><tbody><tr><th>OS</th><td>Windows 10以降</td></tr><tr><th>メモリ</th><td>8GB以上</td></tr><tr><th>インストール用空き容量</th><td>200MB以上</td></tr><tr><th>通信</th><td>安定したインターネット接続</td></tr><tr><th>アカウント</th><td>個人用Googleアカウント、または管理者がGeminiを有効にした仕事・学校用アカウント</td></tr></tbody></table></div>
+<figure class="article-figure"><img alt="Gemini公式ヘルプに掲載されたWindows版のOS・メモリ・空き容量の条件" height="450" loading="lazy" src="/images/blogs_images/blog299-2.webp" width="800"/><figcaption>Google公式ヘルプの利用条件。2026年9月13日確認。</figcaption></figure>
+<ol><li>PCで<a href="https://gemini.google/desktop">Google公式のダウンロードページ</a>を開く。</li><li>DownloadからGeminiSetup.exeを保存する。</li><li>ファイルを開き、画面の案内に従ってインストールする。</li><li>スタートメニューからGeminiを開き、Googleアカウントでログインする。</li><li>Alt＋Spaceで呼び出し、短い質問を送って動作を確認する。</li></ol>
+<p>起動できないときは、まずスタートメニューから開けるかを確認すると、アプリそのものの問題とショートカットの問題を切り分けやすくなります。ログインで止まる場合は、使用中のアカウント名とエラー内容を控えて管理者に伝えます。個人アカウントへ切り替えることを、社内設定の回避策にしない運用がおすすめです。</p>
+<h2 id="section3">3. 最初に試す日本語プロンプト</h2>
+<p>以下はMIRAINAが作成した指示例です。公式の操作実演や効果測定ではありません。最初は入力してよい短い文章を用意し、「何のために」「どの形で」「何を変えないか」を添えます。一度に複雑な作業を頼むより、出力を読んで直せる範囲にすると、AIの回答を使う判断がしやすくなります。</p>
+<h3>店舗の案内文を整える</h3>
+<blockquote><p>次の案内文を、お客様が一度で理解できる丁寧な日本語に直してください。日時・料金・予約条件は変えず、本文だけを出してください。不足情報は推測せず、本文の後に確認事項として挙げてください。案内文：［ここに入力］</p></blockquote>
+<p>たとえば営業時間変更の案内なら、日付や対象店舗を元のメモと照合します。「もっと親しみやすく」と追加で頼む場合も、変更してはいけない条件を残してください。文章が自然でも、例外の営業日が抜けていたら修正が必要です。</p>
+<h3>会議メモから確認事項を出す</h3>
+<blockquote><p>次の会議メモを「決まったこと」「担当者」「期限」「まだ決まっていないこと」に整理してください。担当者と期限が書かれていない項目は未定としてください。最後に、次の会議で聞くべき質問を挙げてください。メモ：［ここに入力］</p></blockquote>
+<p>営業チームなら、打ち合わせ後の手書きメモを入力用に整え、担当者へ確認する下書きを作る用途が考えられます。AIが付けた担当や期限をそのまま確定扱いにせず、原文と本人の認識を照合します。書類そのものを読み解きたい場合は、<a href="/blogs/blog296.html">Geminiで書類を要約する手順</a>も参考になります。</p>
+<h2 id="section4">4. 会社で使う前の確認点</h2>
+<p>GoogleのWorkspace向け案内では、Geminiが有効な組織は既存の管理設定の対象となり、管理コンソールの生成AI設定で制御されると説明されています。アプリが配布されていることと、自社アカウントで許可されていることを分けて確認しましょう。出典：<a href="https://workspaceupdates.googleblog.com/2026/09/the-gemini-desktop-app-is-now-available-for-Windows.html">Google Workspace Updates</a>。</p>
+<p>公式発表にはGmailやDriveの情報を使う例もあります。ただし本記事では、連携機能や動画生成などの追加機能を、全員が同じ条件で利用できるとは扱いません。アプリの利用対象と各機能の契約・地域・設定条件を混同しないことが大切です。必要な機能が画面にあるか、接続が認められているかを個別に確認してください。</p>
+<p>社内で配る利用メモには、「入力してよい資料」「回答を確認する担当」「外部へ出す前の確認方法」を短く記載することを提案します。たとえば店舗の公開案内は試行対象にし、顧客名入りの相談履歴は管理者と扱いを決めるまで入力しない、と具体化します。抽象的な注意書きより、実際に使う業務と資料名に沿って決める方が判断しやすくなります。</p>
+<p>日本語の指示例は用意しましたが、Windows版の全機能について日本語対応を一括確認できたわけではありません。日本語の回答品質や必要なメニューの表示は、実際のアカウントで確認してください。アプリの世界展開という説明だけを根拠に、追加機能まで日本で利用可能だと推定しないようにします。</p>
+<h2 id="section5">5. 定着させる小さな始め方</h2>
+<p><strong>MIRAINAの提案：</strong>まずは「案内文の下書き」など、日常的に繰り返す作業を一つ選びます。入力例を渡すと下書きができ、その下書きを担当者が原文と照合し、修正点を次回の指示に戻す。このつながりを作ることが、アプリをインストールした後の実務になります。</p>
+<p>試行中は、AIを呼び出すまでの手間、文章を直す時間、数字や条件の抜けを記録します。下書きが速くできても確認に時間がかかるなら、対象文章を短くする、出力形式を固定するなど、依頼を変えて比較します。導入効果を測る際は、生成時間だけでなく確認と修正まで含めて判断してください。</p>
+<p>Windows版Geminiは、普段のPC作業からAIへ相談する入口を増やします。公式ページから導入し、短い文章で試し、確認できる仕事から広げるのが始め方です。業務に合った指示例と確認手順をそろえたい企業向けに、MIRAINAでは<a href="/services/ai_training.html">AI研修</a>と<a href="/services/ai_consulting.html">生成AI活用支援</a>を提供しています。</p>
+<div class="article-references"><div class="ref-title">参考リンク</div><ul><li><a href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/" rel="noopener" target="_blank">Google：Windows版Geminiの公開（2026年9月10日）</a></li><li><a href="https://support.google.com/gemini/answer/18263854?hl=en" rel="noopener" target="_blank">Google Help：Windows版Geminiの利用方法</a></li></ul></div></div>
+<!-- CTA Button -->
+<div class="article-cta">
+<div class="cta-box">
+<h2 class="cta-title">AI導入でお悩みですか？</h2>
+<p class="cta-text">MIRAINAでは、貴社の課題に合わせた<br/>最適なAI活用プランをご提案します。</p>
+<a class="btn btn-black-fill" href="/contact.html">無料相談する</a>
+</div>
+</div>
+<!-- Editorial Information -->
+<div class="article-editor">
+<div class="editor-header">この記事を監修した人</div>
+<div class="editor-profile">
+<div class="editor-image">
+<img alt="本記事の監修者 芝優作（MIRAINA）" decoding="async" loading="lazy" src="/images/shiba_yusaku.webp"/>
+</div>
+<div class="editor-info">
+<div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+<p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+</div>
+</div>
+</div>
+<!-- Related Articles -->
+<div class="article-related"><h2 class="related-title">関連記事</h2><div class="related-grid"><a class="related-card" href="/blogs/blog284.html"><div class="related-img"><img alt="【2026年9月最新】Geminiのカスタム指示とは？Gmail・Drive・Chatで文体を統一する方法" decoding="async" loading="lazy" src="/images/blogs_images/blog-card284.webp"/></div><div class="related-content"><div class="related-date">2026.09.04</div><div class="related-text">【2026年9月最新】Geminiのカスタム指示とは？Gmail・Drive・Chatで文体を統一する方法</div></div></a><a class="related-card" href="/blogs/blog289.html"><div class="related-img"><img alt="Google VidsでPDFを動画に｜マニュアル共有の始め方" decoding="async" loading="lazy" src="/images/blogs_images/blog-card289.webp"/></div><div class="related-content"><div class="related-date">2026.09.07</div><div class="related-text">Google VidsでPDFを動画に｜マニュアル共有の始め方</div></div></a><a class="related-card" href="/blogs/blog292.html"><div class="related-img"><img alt="Workspace Studioに4機能追加｜ファイル整理と返信を自動化" decoding="async" loading="lazy" src="/images/blogs_images/blog-card292.webp"/></div><div class="related-content"><div class="related-date">2026.09.08</div><div class="related-text">Workspace Studioに4機能追加｜ファイル整理と返信を自動化</div></div></a></div></div> </article>
+</main>
+<!-- Footer -->
+<footer class="footer">
+<div class="container footer-inner">
+<div class="footer-brand">
+<a href="/index.html">
+<p class="footer-brand-text">MIRAINA</p>
+</a>
+</div>
+<div class="footer-center">
+<!-- Empty as requested -->
+</div>
+<div class="footer-menu">
+<ul class="footer-menu-list">
+<li><a href="/about.html">私たちについて</a></li>
+<li><a href="/works.html">事例紹介</a></li>
+<li><a href="/blogs.html">ブログ</a></li>
+<li><a href="/contact.html">お問い合わせ</a></li>
+<li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+</ul>
+<div class="footer-sns">
+<a href="https://www.instagram.com/plus.taime" rel="noopener" target="_blank">Instagram</a>
+<a href="https://www.threads.com/@plus.taime" rel="noopener" target="_blank">Threads</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<a aria-label="AI info" class="footer-robot-icon" href="/llms.txt">
+<svg class="icon-thin" height="24" viewbox="0 0 24 24" width="24">
+<path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"></path>
+</svg>
+</a>
+<p>© MIRAINA All Rights Reserved.</p>
+</div>
+</footer>
+<script src="/js/common.js"></script>
+</body>
+</html>
