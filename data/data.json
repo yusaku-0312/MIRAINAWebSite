@@ -2654,6 +2654,15 @@
       "thumbnail": "/images/blogs_images/blog-card301.webp",
       "alt": "Gemini Notebookの外部共有を4段階で管理する設定イメージ",
       "date": "2026-09-14"
+    },
+    {
+      "id": 302,
+      "title": "GeminiがAndroid版Sheetsに対応｜スマホで売上表を分析",
+      "description": "GeminiがAndroid版Googleスプレッドシートに対応。スマホで売上表を分析する手順、指示例、対象プランとWeb版との違いを解説します。",
+      "link": "/blogs/blog302.html",
+      "thumbnail": "/images/blogs_images/blog-card302.webp",
+      "alt": "Gemini Android スプレッドシート",
+      "date": "2026-09-14"
     }
   ],
   "works": [

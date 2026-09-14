@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="index, follow" name="robots"/>
+<title>GeminiがAndroid版Sheetsに対応｜スマホで売上表を分析 | MIRAINAブログ</title>
+<meta content="GeminiがAndroid版Googleスプレッドシートに対応。スマホで売上表を分析する手順、指示例、対象プランとWeb版との違いを解説します。" name="description"/>
+<!-- OGP Tags -->
+<meta content="GeminiがAndroid版Sheetsに対応｜スマホで売上表を分析" property="og:title"/>
+<meta content="article" property="og:type"/>
+<meta content="https://miraina-ai.com/blogs/blog302.html" property="og:url"/>
+<meta content="https://miraina-ai.com/images/blogs_images/blog302-1.webp" property="og:image"/>
+<meta content="GeminiがAndroid版Googleスプレッドシートに対応。スマホで売上表を分析する手順、指示例、対象プランとWeb版との違いを解説します。" property="og:description"/>
+<link href="https://miraina-ai.com/blogs/blog302.html" rel="canonical"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Shippori+Mincho:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Favicon -->
+<link href="/images/favicon.ico" rel="icon"/>
+<!-- CSS -->
+<link href="/css/reset.css" rel="stylesheet"/>
+<link href="/css/common.css" rel="stylesheet"/>
+<link href="/css/blog_article.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+<div class="container header-inner">
+<a class="header-logo" href="/">
+<!-- Assuming logo exists or using text fallback for now if image broken -->
+<img alt="MIRAINA" height="40" src="/images/company-logo.webp" width="120"/>
+</a>
+<div class="hamburger" id="js-hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<nav class="header-nav">
+<div class="nav-item has-dropdown">
+<a class="nav-link" href="/services.html">サービス</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="/services/ai_consulting.html">生成AI活用支援</a>
+<a class="dropdown-item" href="/services/ai_training.html">AI研修</a>
+<a class="dropdown-item" href="/services/ai_develop.html">AI開発</a>
+<a class="dropdown-item" href="/services/llmo_insight.html">LLMO Insight</a>
+<a class="dropdown-item" href="/beauty-dx/">美容サロン特化AI活用支援</a>
+
+</div>
+</div>
+<!-- Other required items from spec usually go here, but focusing on user content mapping -->
+<div class="nav-item"><a class="nav-link" href="/about.html">MIRAINAについて</a></div>
+<div class="nav-item"><a class="nav-link" href="/works.html">事例紹介</a></div>
+<div class="nav-item"><a class="nav-link" href="/blogs.html">ブログ</a></div>
+<div class="nav-item"><a class="nav-link btn-contact" href="/contact.html">お問い合わせ</a></div>
+<div class="nav-item">
+<a aria-label="AI info" class="nav-link" href="/llms.txt">
+<svg class="icon-thin" height="20" viewbox="0 0 24 24" width="20">
+<path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"></path>
+</svg>
+</a>
+</div>
+</nav>
+</div>
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="js-mobile-menu">
+<nav class="mobile-nav">
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/services.html">サービス</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/about.html">MIRAINAについて</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/works.html">事例紹介</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/blogs.html">ブログ</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/contact.html">お問い合わせ</a></div>
+</nav>
+</div>
+</header>
+<main>
+<!-- Breadcrumbs -->
+<div class="container breadcrumbs"><ul><li><a href="/">ホーム</a></li><li><a href="/blogs.html">ブログ</a></li><li>Gemini Android スプレッドシート</li></ul></div>
+<article class="article-container">
+<!-- Article Header -->
+<header class="article-header">
+<div class="article-meta">
+<span class="article-date">2026.09.14</span>
+<div class="article-tags"><span class="article-tag">Gemini</span><span class="article-tag">AI活用</span><span class="article-tag">業務効率化</span></div>
+</div>
+<h1 class="article-title">GeminiがAndroid版Sheetsに対応｜スマホで売上表を分析</h1>
+<div class="article-thumbnail">
+<img alt="Gemini Android スプレッドシート" fetchpriority="high" height="675" src="/images/blogs_images/blog302-1.webp" width="1200"/>
+<!-- Note: Replace with actual image path -->
+</div>
+</header>
+<!-- Summary -->
+<section class="article-summary"><h2 class="sr-only">記事の概要</h2><p>スマホで売上表を開いても、どこを見ればよいか迷う方へ。Android版GoogleスプレッドシートのGeminiで、表の要約や傾向の分析を頼む方法を紹介します。利用条件を確認し、数字を原表と照合しながら短い報告を作れることが本記事のゴールです。</p><p>情報確認日：2026年9月14日。公式仕様とMIRAINAの運用提案を分けて紹介します。</p></section>
+<!-- Table of Contents -->
+<div class="article-toc"><div class="toc-title">目次</div><ul><li><a href="#section1">1. GeminiがAndroid版Sheetsに対応</a></li><li><a href="#section2">2. スマホでできること・Web版を使うこと</a></li><li><a href="#section3">3. 対象プランと始める手順</a></li><li><a href="#section4">4. 売上表を読み解く指示例</a></li><li><a href="#section5">5. 数字の確認までを業務に組み込む</a></li></ul></div>
+<div class="article-body"><h2 id="section1">1. GeminiがAndroid版Sheetsに対応</h2>
+<p><strong>Android版Googleスプレッドシートで、Geminiに表の要約、傾向の分析、グラフ作成を依頼できるようになりました。</strong>Googleは2026年9月10日に対応を告知し、9月9日から最長15日かけて段階的に提供すると案内しています。スマホで表を確認し、その場で質問を重ねる使い方が中心です。出典：<a href="https://workspaceupdates.googleblog.com/2026/08/gemini-in-google-sheets-is-now-available-on-Android-devices.html" rel="noopener" target="_blank">Google Workspace Updates</a>。</p>
+<p>一方、複雑な編集、書式変更、数式の生成はWeb版のGemini in Sheetsを使うよう説明されています。「スマホでAIに聞ける」ことを「PC版と同じ操作を全部任せられる」ことと捉えないのがポイントです。</p>
+<figure class="article-figure"><img alt="Google公式告知のAndroid版Sheets対応と2026年9月10日の掲載日" decoding="async" height="450" loading="lazy" src="/images/blogs_images/blog302-2.webp" width="800"/><figcaption>Google Workspace Updatesの公式告知。URLは8月の階層ですが、ページの掲載日は9月10日です。</figcaption></figure>
+<h2 id="section2">2. スマホでできること・Web版を使うこと</h2>
+<p>仕事で使い分けるなら、「今ある数字を理解する」作業をスマホで行い、「表の仕組みを作り直す」作業をWeb版へつなぎます。外出前に確認用の表を整え、移動先では数字の変化を質問し、帰社後に必要な修正を行う流れです。次の区分は公式告知に基づき、用途の例はMIRAINAが作成しました。</p>
+<div class="article-table-wrapper"><table class="article-table"><thead><tr><th>作業</th><th>使う環境</th><th>依頼の例</th></tr></thead><tbody><tr><td>表の要約・傾向の分析</td><td>Android版</td><td>今月の売上の特徴を説明</td></tr><tr><td>グラフ作成</td><td>Android版</td><td>月別の推移をグラフにする</td></tr><tr><td>数式生成・書式変更・複雑な編集</td><td>Web版</td><td>集計式の作成や表示形式の変更</td></tr></tbody></table></div>
+<p>一般ヘルプにはWeb版の幅広い機能が掲載されていますが、その一覧をそのままAndroid版の対応表として使うことはできません。詳しい編集操作は<a href="https://support.google.com/docs/answer/14356410?hl=en" rel="noopener" target="_blank">GoogleのSheetsヘルプ</a>、スマホの範囲は上記の専用告知を確認してください。案件表の見せ方を整える用途は、<a href="/blogs/blog294.html">Sheets canvasの解説</a>でも紹介しています。</p>
+<h2 id="section3">3. 対象プランと始める手順</h2>
+<p>告知の対象はBusiness Standard／Plus、Enterprise Standard／Plus、Google AI Pro for Education、個人向けGoogle AI Pro／Ultraです。無料アカウントやBusiness Starterも対象だとは記載されていません。対象ユーザーには標準で提供されますが、会社全体や組織部門のGemini利用設定は適用されます。</p>
+<ol><li>対象のGoogleアカウントでAndroidのGoogleスプレッドシートを開く。</li><li>分析したいスプレッドシートを開き、Ask Geminiのアイコンをタップする。</li><li>表の要約などの候補を選ぶか、確認したい内容を入力する。</li><li>回答を原表と照合し、期間や対象列が違えば条件を付けて聞き直す。</li></ol>
+<p>アイコンが見当たらない場合は、ログイン中のアカウント、契約プラン、会社のGemini設定、段階的な提供期間を順に確認します。この告知だけでは、日本語での全機能の対応範囲やiPhoneへの提供は判断できません。本記事の日本語例は依頼内容の設計例であり、Android実機での動作確認済みプロンプトではありません。利用画面の案内と対応言語を確認して試してください。</p>
+<h2 id="section4">4. 売上表を読み解く指示例</h2>
+<p>「この表を分析して」だけでは、AIが見る期間や売上の定義がずれることがあります。最初は対象のシート、列、期間、答え方を指定します。以下は架空の店舗が、日付・店舗・売上額・客数を記録した表を使う想定です。自社の列名に置き換えてください。いずれもMIRAINAの運用提案です。</p>
+<h3>売上の変化を短く報告する</h3>
+<div class="code-block"><pre style="white-space:pre-wrap;overflow-wrap:anywhere;color:#f1f5f9">「売上日報」シートについて、9月1日から7日と9月8日から14日を比較してください。売上額と客数の合計、増減、確認が必要な点を短く説明してください。参照した列と期間も示し、未入力日はゼロと決めつけず、不足情報として分けてください。</pre></div>
+<p>例えば店長が朝の打ち合わせ前に確認するなら、この結果から「売上」「客数」「未入力」の順に話す準備ができます。ただし、前の週と曜日の構成が違う、休業日がある、入力が途中である場合は比較条件がそろいません。売上が下がったという計算結果と、その理由の推測を分けて扱います。</p>
+<h3>グラフから確認点を探す</h3>
+<div class="code-block"><pre style="white-space:pre-wrap;overflow-wrap:anywhere;color:#f1f5f9">「月次集計」の月と売上額を使い、月別推移のグラフを作成してください。単位を確認し、未確定の月は分かるように説明してください。グラフから読み取れる変化と、追加で調べる必要があることを分けてください。</pre></div>
+<p>営業担当者が訪問前に推移を把握する場面なら、グラフは会話の準備に使えます。作成後は横軸の並び、金額の単位、比較期間を確認します。「山があるからキャンペーンが成功した」と結論づけず、施策日程や取引記録と合わせて担当者が判断しましょう。グラフの見た目が整っていても集計の正しさは別途確かめます。</p>
+<h2 id="section5">5. 数字の確認までを業務に組み込む</h2>
+<p><strong>MIRAINAの提案：</strong>AIが苦手な人ほど、最初の目標は「分析を全部任せる」よりも「いつもの報告で確認する項目をそろえる」と具体化すると取り組みやすくなります。表を用意し、対象を指定して質問し、原表で確かめ、短い報告へまとめる。この一連の流れを同じ担当者が試し、どこで迷ったかを記録します。</p>
+<p>確認用の表は、日付・数量・金額の列を明確にし、合計行と明細行を区別しておきます。税込と税抜、円と千円、空欄とゼロが混在している場合は先に定義をそろえます。AIへの指示に「正確に」と加えるだけでは、元データの曖昧さは解消できません。</p>
+<p>試行では、回答までの時間だけでなく、数字の照合と修正にかかった時間も残します。参照範囲が分からない回答は報告へ転記せず、対象を絞って再質問するかWeb版で確認します。社員向けの説明には、成功した指示文に加えて「未入力があったときの対応」を一緒に残すと、次の担当者へ引き継ぎやすくなります。</p>
+<p>Android版SheetsのGeminiは、外出先で表を読み解く入口になります。まずは自分が内容を理解できる表で要約を試し、確認できた範囲を報告に使ってください。自社の業務に合った入力例や確認手順をそろえる場合は、MIRAINAの<a href="/services/ai_training.html">AI研修</a>や<a href="/services/ai_consulting.html">生成AI活用支援</a>をご活用ください。</p>
+<div class="article-references"><div class="ref-title">参考リンク</div><ul><li><a href="https://workspaceupdates.googleblog.com/2026/08/gemini-in-google-sheets-is-now-available-on-Android-devices.html" rel="noopener" target="_blank">Google：Android版SheetsのGemini対応（2026年9月10日）</a></li><li><a href="https://support.google.com/docs/answer/14356410?hl=en" rel="noopener" target="_blank">Google Help：Gemini in Sheets（Web版の操作を含む）</a></li></ul></div></div>
+<!-- CTA Button -->
+<div class="article-cta">
+<div class="cta-box">
+<h2 class="cta-title">AI導入でお悩みですか？</h2>
+<p class="cta-text">MIRAINAでは、貴社の課題に合わせた<br/>最適なAI活用プランをご提案します。</p>
+<a class="btn btn-black-fill" href="/contact.html">無料相談する</a>
+</div>
+</div>
+<!-- Editorial Information -->
+<div class="article-editor">
+<div class="editor-header">この記事を監修した人</div>
+<div class="editor-profile">
+<div class="editor-image">
+<img alt="本記事の監修者 芝優作（MIRAINA）" decoding="async" loading="lazy" src="/images/shiba_yusaku.webp"/>
+</div>
+<div class="editor-info">
+<div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+<p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+</div>
+</div>
+</div>
+<!-- Related Articles -->
+<div class="article-related"><h2 class="related-title">関連記事</h2><div class="related-grid"><a class="related-card" href="/blogs/blog294.html"><div class="related-img"><img alt="Sheets canvasで案件表を見やすく｜使い方と指示例" decoding="async" loading="lazy" src="/images/blogs_images/blog-card294.webp"/></div><div class="related-content"><div class="related-date">2026.09.10</div><div class="related-text">Sheets canvasで案件表を見やすく｜使い方と指示例</div></div></a><a class="related-card" href="/blogs/blog296.html"><div class="related-img"><img alt="Geminiで書類を要約｜必要書類と確認事項を整理する方法" decoding="async" loading="lazy" src="/images/blogs_images/blog-card296.webp"/></div><div class="related-content"><div class="related-date">2026.09.11</div><div class="related-text">Geminiで書類を要約｜必要書類と確認事項を整理する方法</div></div></a><a class="related-card" href="/blogs/blog299.html"><div class="related-img"><img alt="Gemini Windows版が公開｜導入手順と仕事で使う指示例" decoding="async" loading="lazy" src="/images/blogs_images/blog-card299.webp"/></div><div class="related-content"><div class="related-date">2026.09.13</div><div class="related-text">Gemini Windows版が公開｜導入手順と仕事で使う指示例</div></div></a></div></div> </article>
+</main>
+<!-- Footer -->
+<footer class="footer">
+<div class="container footer-inner">
+<div class="footer-brand">
+<a href="/index.html">
+<p class="footer-brand-text">MIRAINA</p>
+</a>
+</div>
+<div class="footer-center">
+<!-- Empty as requested -->
+</div>
+<div class="footer-menu">
+<ul class="footer-menu-list">
+<li><a href="/about.html">私たちについて</a></li>
+<li><a href="/works.html">事例紹介</a></li>
+<li><a href="/blogs.html">ブログ</a></li>
+<li><a href="/contact.html">お問い合わせ</a></li>
+<li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+</ul>
+<div class="footer-sns">
+<a href="https://www.instagram.com/plus.taime" rel="noopener" target="_blank">Instagram</a>
+<a href="https://www.threads.com/@plus.taime" rel="noopener" target="_blank">Threads</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<a aria-label="AI info" class="footer-robot-icon" href="/llms.txt">
+<svg class="icon-thin" height="24" viewbox="0 0 24 24" width="24">
+<path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"></path>
+</svg>
+</a>
+<p>© MIRAINA All Rights Reserved.</p>
+</div>
+</footer>
+<script src="/js/common.js"></script>
+</body>
+</html>
