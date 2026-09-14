@@ -2663,6 +2663,15 @@
       "thumbnail": "/images/blogs_images/blog-card302.webp",
       "alt": "Gemini Android スプレッドシート",
       "date": "2026-09-14"
+    },
+    {
+      "id": 303,
+      "title": "Search Consoleの生成AIパフォーマンスレポートが全世界公開｜LLMO測定で決める3つのこと",
+      "description": "Google Search Consoleの生成AIパフォーマンスレポートが2026年8月31日に全世界公開。確認できる指標、クリック数がわからない限界、LLMO効果測定で企業が決める3つのことを公式情報から解説します。",
+      "link": "/blogs/blog303.html",
+      "thumbnail": "/images/blogs_images/blog-card303.webp",
+      "alt": "Search Consoleの生成AIパフォーマンスレポートでAI検索の見え方を確認するイメージ",
+      "date": "2026-09-14"
     }
   ],
   "works": [
