@@ -2645,6 +2645,15 @@
       "thumbnail": "/images/blogs_images/blog-card300.webp",
       "alt": "GeminiとGoogleビジネスプロフィールの連携で口コミ管理を効率化するイメージ",
       "date": "2026-09-13"
+    },
+    {
+      "id": 301,
+      "title": "Gemini Notebookの外部共有を4段階で制御｜管理者が決める設定",
+      "description": "Gemini Notebookの外部共有に4段階の管理設定が追加。デフォルトOFF、許可ドメイン、公開リンクの違いと、中小企業が社外共有前に決める運用をGoogle公式情報から解説します。",
+      "link": "/blogs/blog301.html",
+      "thumbnail": "/images/blogs_images/blog-card301.webp",
+      "alt": "Gemini Notebookの外部共有を4段階で管理する設定イメージ",
+      "date": "2026-09-14"
     }
   ],
   "works": [

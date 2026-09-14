@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>Gemini Notebookの外部共有を4段階で制御｜管理者が決める設定 | MIRAINAブログ</title>
+    <meta name="description" content="Gemini Notebookの外部共有に4段階の管理設定が追加。デフォルトOFF、許可ドメイン、公開リンクの違いと、中小企業が社外共有前に決める運用をGoogle公式情報から解説します。">
+    <!-- OGP Tags -->
+    <meta property="og:title" content="Gemini Notebookの外部共有を4段階で制御｜管理者が決める設定">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog301.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog301-1.webp">
+    <meta property="og:description" content="Gemini Notebookの外部共有に4段階の管理設定が追加。デフォルトOFF、許可ドメイン、公開リンクの違いと、中小企業が社外共有前に決める運用をGoogle公式情報から解説します。">
+    <link rel="canonical" href="https://miraina-ai.com/blogs/blog301.html">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Shippori+Mincho:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.ico">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+            <div class="hamburger" id="js-hamburger"><span></span><span></span><span></span></div>
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"></path></svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="container breadcrumbs"><ul><li><a href="/">ホーム</a></li><li><a href="/blogs.html">ブログ</a></li><li>Gemini Notebookの外部共有</li></ul></div>
+        <article class="article-container">
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2026.09.14</span>
+                    <div class="article-tags"><span class="article-tag">Gemini Notebook</span><span class="article-tag">Google Workspace</span><span class="article-tag">情報管理</span></div>
+                </div>
+                <h1 class="article-title">Gemini Notebookの外部共有を4段階で制御｜管理者が決める設定</h1>
+                <div class="article-thumbnail">
+                    <img src="/images/blogs_images/blog301-1.webp" alt="Gemini Notebookの外部共有を4段階で管理する設定イメージ" width="1200" height="675" fetchpriority="high">
+                </div>
+            </header>
+
+            <!-- Summary -->
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>取引先と資料を共有したい一方で、公開範囲が広がりすぎるのは避けたい——。GoogleはGemini Notebookの外部共有を、組織の用途に合わせて4段階で管理できる設定を追加しました。本記事のゴールは、各設定の違いを理解し、自社がどこまで社外共有を許可するかを管理者と業務担当者で決められるようになることです。</p>
+                <p>情報確認日：2026年9月14日。Google公式発表と管理者向けヘルプを基に、確認できる仕様とMIRAINAの運用提案を分けて解説します。</p>
+            </section>
+
+            <!-- Table of Contents -->
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. Gemini Notebookの外部共有に4段階の設定</a></li>
+                    <li><a href="#section2">2. 4つの共有範囲と向いている用途</a></li>
+                    <li><a href="#section3">3. 管理コンソールでの設定手順</a></li>
+                    <li><a href="#section4">4. 中小企業が社外共有前に決めること</a></li>
+                    <li><a href="#section5">5. 監査ログと組み合わせる運用</a></li>
+                    <li><a href="#section6">6. まとめ</a></li>
+                </ul>
+            </div>
+
+            <!-- Main Content Body -->
+            <div class="article-body">
+                <h2 id="section1">1. Gemini Notebookの外部共有に4段階の設定</h2>
+                <p><strong>Googleは2026年9月10日、Gemini Notebookの外部共有を管理コンソールから細かく制御できる機能を発表しました。</strong>従来は組織全体でGemini Notebookをオン・オフする大きな設定が中心でしたが、今回の更新では、社外共有を「禁止」「許可リスト内のドメインだけ」「任意の外部メールアドレス」「リンクを知る全員への公開」まで段階的に選べます。</p>
+                <p>設定はドメイン、組織部門（OU）、グループ単位で適用でき、初期状態は外部共有が<strong>OFF</strong>です。すべてのGoogle Workspace顧客が対象で、2026年9月10日から最長15日かけて段階的に表示されると案内されています。管理画面に項目が見当たらない場合は、契約対象外と断定せず、展開期間と管理者権限を確認してください。出典：<a href="https://workspaceupdates.googleblog.com/2026/09/manage-external-sharing-for-gemini-notebook-in-the-Admin-console.html" target="_blank" rel="noopener">Google Workspace Updates</a>。</p>
+                <p>ここで大切なのは、Gemini Notebook自体を利用できることと、作成したノートブックを社外へ渡せることを分けて考える点です。社内の調査には使わせつつ、営業部門だけ取引先との共有を認める、といった運用が可能になります。</p>
+
+                <h2 id="section2">2. 4つの共有範囲と向いている用途</h2>
+                <p>公式発表の4段階を、中小企業で想定しやすい用途と合わせて整理します。広い設定ほど便利ですが、情報が正しいか、共有する権利があるか、公開後に更新できるかという確認も増えます。</p>
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead><tr><th>設定</th><th>共有できる相手</th><th>想定しやすい用途</th></tr></thead>
+                        <tbody>
+                            <tr><th>OFF（初期値）</th><td>組織外には共有不可</td><td>社内規程、未公開企画、試行段階</td></tr>
+                            <tr><th>許可リストのドメイン</th><td>登録した組織の個別アカウント</td><td>顧問先や継続的な取引先との共同確認</td></tr>
+                            <tr><th>ON</th><td>任意の外部メールアドレス</td><td>案件ごとに参加者が変わる共同プロジェクト</td></tr>
+                            <tr><th>公開共有あり</th><td>リンクを知っている全員</td><td>公開資料、採用案内、一般向けFAQ</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>管理者向けヘルプでは、許可リスト方式で共有できるのは指定ドメイン内の個別アカウントで、Googleグループへの共有はサポートされないと説明されています。社外チームのメーリングリストを登録すれば済む、と想定している場合は注意が必要です。</p>
+                <p>また「ON」と「公開共有あり」は同じではありません。ONは指定した外部メールアドレスとの共有、公開共有はメールアドレスを追加せずリンクで閲覧できる状態です。営業資料を取引先担当者だけに見せたいケースで、公開共有まで有効にする必要はありません。目的に必要な最小範囲を選びましょう。</p>
+
+                <h2 id="section3">3. 管理コンソールでの設定手順</h2>
+                <p>設定には<strong>Gemini Settingsの管理者権限</strong>が必要です。Googleの管理者向けヘルプでは、管理コンソールの「生成AI」から「Gemini Notebook」を開き、対象組織を選んで外部共有の範囲を指定する流れが案内されています。</p>
+                <ol>
+                    <li>Google管理コンソールで「生成AI → Gemini Notebook」を開く。</li>
+                    <li>全社設定か、対象の組織部門・グループかを選ぶ。</li>
+                    <li>外部共有をOFF、許可リスト、ONから選ぶ。</li>
+                    <li>一般公開が必要な場合だけ「Public Sharing」を有効にする。</li>
+                    <li>保存後、テスト用アカウントで共有可否を確認する。</li>
+                </ol>
+                <p>設定変更は通常すぐ反映されますが、公式ヘルプでは最長24時間かかる場合があるとされています。変更直後に共有できなくても設定ミスと決めつけず、保存状態、適用先、継承・上書きの関係、経過時間を順番に確認します。出典：<a href="https://knowledge.workspace.google.com/admin/generative-ai/gemini-notebook/manage-gemini-notebook-sharing-settings" target="_blank" rel="noopener">Google Workspace Help</a>。</p>
+
+                <h2 id="section4">4. 中小企業が社外共有前に決めること</h2>
+                <p><strong>MIRAINAの見解：</strong>設定画面を開く前に、「誰が」「何を」「誰に」「いつまで」共有するかを業務側と管理者で決めることが重要です。機能をONにしてから個別判断に任せると、便利さを優先する人と慎重な人で運用が分かれ、共有範囲が把握しにくくなります。</p>
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step"><span class="step-num">Step 01</span><span class="step-text">公開済み資料か、社外秘を含むかを分類する</span></li>
+                        <li class="process-step"><span class="step-num">Step 02</span><span class="step-text">共有相手をドメインまたは個人で特定する</span></li>
+                        <li class="process-step"><span class="step-num">Step 03</span><span class="step-text">所有者と公開前の確認担当を決める</span></li>
+                        <li class="process-step"><span class="step-num">Step 04</span><span class="step-text">案件終了時の共有解除日を決める</span></li>
+                    </ul>
+                    <p class="diagram-caption">資料分類から共有解除までを一つの流れとして管理します。</p>
+                </div>
+                <p>たとえば制作会社と商品情報を確認する場合、まず公開済みカタログだけを入れた専用ノートブックを作り、制作会社のドメインだけを許可します。担当者が変わるたびに全社設定を広げるのではなく、対象部門と案件を限定すれば、共同作業の利便性と情報管理を両立しやすくなります。</p>
+                <p>公開共有を使う場合は、個人情報・契約条件・著作権上の制約がある資料を除き、リンクを第三者が受け取っても問題ない内容だけにします。Gemini Notebookは資料を根拠に説明を作れますが、元資料を共有する権利まで自動判定してくれるわけではありません。機能の概要から確認したい方は、<a href="/blogs/blog215.html">Gemini Notebookの基本と資料分析</a>もご覧ください。</p>
+
+                <h2 id="section5">5. 監査ログと組み合わせる運用</h2>
+                <p>外部共有設定は「共有できる範囲」を事前に制御する仕組みです。一方、監査ログは「誰が何をしたか」を後から確認するための仕組みで、役割が異なります。どちらか一方だけで十分と考えず、事前の制限と事後の確認をつなげます。</p>
+                <p>月に一度、外部共有を許可した組織部門、許可リストのドメイン、公開ノートブックの有無を見直し、案件終了済みの共有を解除する運用が現実的です。異常を探すだけでなく、不要になった設定を閉じる定期点検として使うと、管理負担を抑えやすくなります。操作履歴の確認方法は、<a href="/blogs/blog288.html">Gemini Notebookの監査ログ解説</a>で整理しています。</p>
+                <p>初回は全社でONにせず、公開済み資料を扱う1部門と信頼できる1社で試します。共有できたかだけでなく、受け手が迷わず閲覧できたか、更新担当が明確だったか、終了時に閉じられたかまで記録してください。自社に合うAIの権限設計や運用ルールを整えたい場合は、MIRAINAの<a href="/services/ai_consulting.html">生成AI活用支援</a>でご相談いただけます。</p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>Gemini Notebookの外部共有は、初期値のOFF、許可リスト内のドメイン、任意の外部メールアドレス、リンクによる公開の4段階で管理できるようになりました。設定は組織構造に合わせて適用でき、必要な範囲だけを開けることができます。</p>
+                <p>まずは共有する資料と相手を限定し、所有者、確認担当、解除日を決めてから設定します。そのうえで監査ログによる定期確認を組み合わせれば、社外共同作業を進めながら不要な公開範囲を残しにくくなります。</p>
+                <div class="article-references">
+                    <div class="ref-title">参考リンク</div>
+                    <ul>
+                        <li><a href="https://workspaceupdates.googleblog.com/2026/09/manage-external-sharing-for-gemini-notebook-in-the-Admin-console.html" target="_blank" rel="noopener">Google Workspace Updates：Gemini Notebookの外部共有管理（2026年9月10日）</a></li>
+                        <li><a href="https://knowledge.workspace.google.com/admin/generative-ai/gemini-notebook/manage-gemini-notebook-sharing-settings" target="_blank" rel="noopener">Google Workspace Help：Gemini Notebook sharing settings（2026年9月10日更新）</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">AIの共有範囲や運用設計にお悩みですか？</h2>
+                    <p class="cta-text">MIRAINAでは、貴社の課題に合わせた<br>安全で実用的なAI活用プランをご提案します。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <!-- Editorial Information -->
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image"><img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async"></div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。九州大学大学院でLLMに関する研究にも従事。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="article-related">
+                <h2 class="related-title">関連記事</h2>
+                <div class="related-grid">
+                    <a href="/blogs/blog215.html" class="related-card">
+                        <div class="related-img"><img src="/images/blogs_images/blog-card215.webp" alt="Gemini Notebookで資料を根拠付きで分析するイメージ" loading="lazy" decoding="async"></div>
+                        <div class="related-content"><div class="related-date">2026.07.20</div><div class="related-text">【2026年7月最新】Gemini Notebookとは？資料を根拠付きで分析する使い方</div></div>
+                    </a>
+                    <a href="/blogs/blog288.html" class="related-card">
+                        <div class="related-img"><img src="/images/blogs_images/blog-card288.webp" alt="Gemini Notebookの監査ログで社内資料の利用履歴を確認" loading="lazy" decoding="async"></div>
+                        <div class="related-content"><div class="related-date">2026.09.06</div><div class="related-text">Gemini Notebookの監査ログ追加｜社内資料の利用履歴を確認</div></div>
+                    </a>
+                    <a href="/blogs/blog278.html" class="related-card">
+                        <div class="related-img"><img src="/images/blogs_images/blog-card278.webp" alt="Google DriveのAI分類と機密ラベルを解説するイメージ" loading="lazy" decoding="async"></div>
+                        <div class="related-content"><div class="related-date">2026.08.30</div><div class="related-text">【2026年8月最新】Google DriveのAI分類とは？Geminiで機密ラベルを自動化する方法</div></div>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand"><a href="/index.html"><p class="footer-brand-text">MIRAINA</p></a></div>
+            <div class="footer-center"></div>
+            <div class="footer-menu">
+                <ul class="footer-menu-list"><li><a href="/about.html">私たちについて</a></li><li><a href="/works.html">事例紹介</a></li><li><a href="/blogs.html">ブログ</a></li><li><a href="/contact.html">お問い合わせ</a></li><li><a href="/privacy_policy.html">プライバシーポリシー</a></li></ul>
+                <div class="footer-sns"><a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a><a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a></div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info"><svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"></path></svg></a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="/js/common.js"></script>
+</body>
+
+</html>

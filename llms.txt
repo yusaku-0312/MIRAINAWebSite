@@ -320,6 +320,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: OpenAI Agents API公開｜AIエージェント開発で決める4項目](https://miraina-ai.com/blogs/blog297.html): OpenAI Agents APIの公開内容を公式情報から解説。実行環境、ツール、ネットワーク、費用を整理し、中小企業がAIエージェント開発前に決める4項目を紹介します。
 - [最新ブログ: Gemini Windows版が公開｜導入手順と仕事で使う指示例](https://miraina-ai.com/blogs/blog299.html): Gemini Windows版の導入手順と利用条件を公式情報で確認。Alt＋Spaceでの呼び出し、仕事に使う日本語プロンプト、会社での確認点を解説します。
 - [最新ブログ: GeminiとGoogleビジネスプロフィールが連携｜口コミ管理で決める4項目](https://miraina-ai.com/blogs/blog300.html): GeminiアプリとGoogleビジネスプロフィールの連携機能を公式情報から解説。口コミ返信の下書き、Business Notebooksでの業績分析、連携条件を整理し、中小企業が導入前に決める4項目を紹介します。
+- [最新ブログ: Gemini Notebookの外部共有を4段階で制御｜管理者が決める設定](https://miraina-ai.com/blogs/blog301.html): Gemini Notebookの外部共有に追加された4段階の管理設定を解説。デフォルトOFF、許可ドメイン、公開リンクの違いと、中小企業が社外共有前に決める運用を整理した記事。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)
