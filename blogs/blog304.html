@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="index, follow" name="robots"/>
+<title>GmailのGeminiで資料作成｜メールを引き継ぎ文書にまとめる方法 | MIRAINAブログ</title>
+<meta content="GmailのGeminiでメールから資料作成する連携が登場。公開時は英語のみ対応です。対象プラン、引き継ぎ文書を作る指示例、共有前の確認点を解説します。" name="description"/>
+<!-- OGP Tags -->
+<meta content="GmailのGeminiで資料作成｜メールを引き継ぎ文書にまとめる方法" property="og:title"/>
+<meta content="article" property="og:type"/>
+<meta content="https://miraina-ai.com/blogs/blog304.html" property="og:url"/>
+<meta content="https://miraina-ai.com/images/blogs_images/blog304-1.webp" property="og:image"/>
+<meta content="GmailのGeminiでメールから資料作成する連携が登場。公開時は英語のみ対応です。対象プラン、引き継ぎ文書を作る指示例、共有前の確認点を解説します。" property="og:description"/>
+<link href="https://miraina-ai.com/blogs/blog304.html" rel="canonical"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Shippori+Mincho:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Favicon -->
+<link href="/images/favicon.ico" rel="icon"/>
+<!-- CSS -->
+<link href="/css/reset.css" rel="stylesheet"/>
+<link href="/css/common.css" rel="stylesheet"/>
+<link href="/css/blog_article.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+<div class="container header-inner">
+<a class="header-logo" href="/">
+<!-- Assuming logo exists or using text fallback for now if image broken -->
+<img alt="MIRAINA" height="40" src="/images/company-logo.webp" width="120"/>
+</a>
+<div class="hamburger" id="js-hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<nav class="header-nav">
+<div class="nav-item has-dropdown">
+<a class="nav-link" href="/services.html">サービス</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="/services/ai_consulting.html">生成AI活用支援</a>
+<a class="dropdown-item" href="/services/ai_training.html">AI研修</a>
+<a class="dropdown-item" href="/services/ai_develop.html">AI開発</a>
+<a class="dropdown-item" href="/services/llmo_insight.html">LLMO Insight</a>
+<a class="dropdown-item" href="/beauty-dx/">美容サロン特化AI活用支援</a>
+
+</div>
+</div>
+<!-- Other required items from spec usually go here, but focusing on user content mapping -->
+<div class="nav-item"><a class="nav-link" href="/about.html">MIRAINAについて</a></div>
+<div class="nav-item"><a class="nav-link" href="/works.html">事例紹介</a></div>
+<div class="nav-item"><a class="nav-link" href="/blogs.html">ブログ</a></div>
+<div class="nav-item"><a class="nav-link btn-contact" href="/contact.html">お問い合わせ</a></div>
+<div class="nav-item">
+<a aria-label="AI info" class="nav-link" href="/llms.txt">
+<svg class="icon-thin" height="20" viewbox="0 0 24 24" width="20">
+<path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"></path>
+</svg>
+</a>
+</div>
+</nav>
+</div>
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="js-mobile-menu">
+<nav class="mobile-nav">
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/services.html">サービス</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/about.html">MIRAINAについて</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/works.html">事例紹介</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/blogs.html">ブログ</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/contact.html">お問い合わせ</a></div>
+</nav>
+</div>
+</header>
+<main>
+<!-- Breadcrumbs -->
+<div class="container breadcrumbs"><ul><li><a href="/">ホーム</a></li><li><a href="/blogs.html">ブログ</a></li><li>GmailのGeminiで資料作成</li></ul></div>
+<article class="article-container">
+<!-- Article Header -->
+<header class="article-header">
+<div class="article-meta">
+<span class="article-date">2026.09.15</span>
+<div class="article-tags"><span class="article-tag">Gemini</span><span class="article-tag">AI活用</span><span class="article-tag">業務効率化</span></div>
+</div>
+<h1 class="article-title">GmailのGeminiで資料作成｜メールを引き継ぎ文書にまとめる方法</h1>
+<div class="article-thumbnail">
+<img alt="GmailのGeminiで資料作成" fetchpriority="high" height="675" src="/images/blogs_images/blog304-1.webp" width="1200"/>
+<!-- Note: Replace with actual image path -->
+</div>
+</header>
+<!-- Summary -->
+<section class="article-summary"><h2 class="sr-only">記事の概要</h2><p>メールのやり取りを資料にまとめるのが苦手な方へ。GmailのGeminiから文書を作る連携について、利用条件、英語の指示例、原文と照合するポイントを紹介します。下書きを確認して引き継ぎに使えることが本記事のゴールです。</p><p><strong>公開時の対応言語は英語のみです。</strong>情報確認日：2026年9月15日。公式仕様とMIRAINAの運用提案を分けて解説します。</p></section>
+<!-- Table of Contents -->
+<div class="article-toc"><div class="toc-title">目次</div><ul><li><a href="#section1">1. GmailのGeminiから資料作成へ</a></li><li><a href="#section2">2. 対象プランとできること</a></li><li><a href="#section3">3. メールから下書きを作る流れ</a></li><li><a href="#section4">4. 仕事で使うプロンプト例</a></li><li><a href="#section5">5. 共有前に確認する項目</a></li><li><a href="#section6">6. まとめ</a></li></ul></div>
+<div class="article-body"><h2 id="section1">1. GmailのGeminiから資料作成へ</h2>
+<p><strong>GmailでGeminiに依頼し、メールの内容をGoogleドキュメントの下書きにまとめる連携が発表されました。</strong>メールを読みながら、別の画面へ情報を転記する手間を減らせる機能です。ただし、公開時点の対応言語は英語のみです。日本語のメールで同じ品質・機能が使えるとは確認されていません。</p>
+<p>Googleの<a href="https://workspaceupdates.googleblog.com/2026/09/create-content-schedule-events-and-coordinate-tasks-across-Workspace-regardless-of-what-app-you-are-in.html" rel="noopener" target="_blank">2026年9月9日の公式告知</a>によると、段階的な提供は9月2日から最長15日間です。発表日と提供開始日は異なります。9月15日に手元で見えなくても、直ちに不具合とは判断できません。</p>
+<figure class="article-figure"><img alt="Google公式告知の提供日程・対象プラン・英語のみ対応という注意書き" decoding="async" height="450" loading="lazy" src="/images/blogs_images/blog304-2.webp" width="800"/><figcaption>Google Workspace Updatesの提供条件。公開時は英語のみで、対象プランにも条件があります。</figcaption></figure>
+<p>この記事のゴールは、メールを「目的・決定事項・未決事項・次の作業」に整理する依頼を作り、下書きを確認できるようになることです。機能の利用条件を満たす方は英語の例で試し、日本語業務が中心の方は、先に資料の項目と確認方法を整える際に使ってください。</p>
+<h2 id="section2">2. 対象プランとできること</h2>
+<p>資料作成の対象として告知されているのは、Business Standard／Plus、Enterprise Standard／Plus、Google AI Pro／Ultra、Google AI Pro for Education、AI Expanded Accessです。無料アカウントやBusiness Starterを対象とは案内していません。Frontline Plusは予定調整のみ、個人向けProは予定調整を除くという違いがあります。利用上限も適用されます。出典：<a href="https://workspaceupdates.googleblog.com/2026/09/create-content-schedule-events-and-coordinate-tasks-across-Workspace-regardless-of-what-app-you-are-in.html" rel="noopener" target="_blank">公式告知のAvailability</a>。</p>
+<p><a href="https://workspace.google.com/blog/product-announcements/less-switching-more-flow-5-new-agentic-capabilities-across-google-workspace-apps" rel="noopener" target="_blank">Google Workspace Blogの利用例</a>では、Gmailの会話と関連する情報をもとに、要点・目標・次の作業をまとめた編集可能な文書を作り、サイドパネルにリンクを表示すると説明しています。参照範囲は選んだ情報源や管理設定に関係します。「開いているメールだけを必ず使う」とは決めつけないでください。</p>
+<p>この連携で作るのは、担当者が確認するための下書きです。例えば営業の引き継ぎでは、顧客が希望した日付と自社が確約した日付を分ける必要があります。文章が自然でも、その区別が消えたまま渡すと、次の担当者が誤った前提で動きます。資料の見栄えより先に、何を決定として扱うかをそろえましょう。</p>
+<h2 id="section3">3. メールから下書きを作る流れ</h2>
+<p>以下は公式のGmail連携例をもとにした、MIRAINAの試行手順です。英語で機能を利用できる環境で、まず社内利用が認められた練習用メールを選びます。実案件を使う場合は、自社の情報取り扱いルールに従ってください。本記事は実機での操作検証レポートではありません。</p>
+<ol><li>対象のメールのやり取りを開き、GmailのGeminiサイドパネルを開く。</li><li>読み手と資料の目的、必要な項目を指定して文書作成を依頼する。</li><li>生成されたドキュメントのリンクを開き、原文と照合する。</li><li>担当者が未決事項を確認し、必要な修正をしてから共有する。</li></ol>
+<p>流れの要点は、メールの記録が下書きへ移り、下書きの不明点が人への確認につながることです。回答が文章だけで返った場合は、文書の作成まで依頼したかを確かめます。機能が表示されなければ、アカウント、対象プラン、言語、組織設定、提供状況を順に確認し、表示中の案内を優先してください。</p>
+<p>Docs側から資料を作る方法もあります。<a href="https://support.google.com/docs/answer/15541879?hl=en" rel="noopener" target="_blank">GoogleのDocsヘルプ</a>では、パソコンで文書を開き、下部の入力欄で作成を依頼し、Sourcesや「@」で参照資料を選ぶ手順が案内されています。こちらの操作説明をGmail画面の手順として読み替えないことが大切です。</p>
+<h2 id="section4">4. 仕事で使うプロンプト例</h2>
+<p>「いい感じにまとめて」から一歩進めるなら、読み手、使う場面、出力項目、不明点の扱いを決めます。以下は架空の案件向けにMIRAINAが作った英語の指示例で、動作や結果を保証するものではありません。日本語の説明は意図を理解するための補足です。</p>
+<h3>営業の引き継ぎ資料</h3>
+<div class="code-block"><pre style="white-space:pre-wrap;overflow-wrap:anywhere;color:#f5f5f5">Create a Google Doc for a colleague taking over this project. Base it on this email thread. Include the client's goal, confirmed decisions, open questions, and next actions. List an owner and deadline only when explicitly stated. Mark missing details as unknown. Do not send any emails.</pre></div>
+<p>意味は「このメールから、引き継ぐ同僚向けの文書を作り、顧客の目的、確定事項、質問、次の作業を整理する」です。担当者や期限が書かれていなければ不明とするよう指定しています。これは文章の作成方針であり、情報源や送信権限をシステムで制限する設定ではありません。</p>
+<p>例えば「来週の納品を希望」と書かれているだけなら、納品確定と記載されていないか確認します。「田中さんに聞いてみます」は田中さんが担当を承諾した証拠にはなりません。下書きでこの二つを見分けられれば、確認すべき質問をそのまま引き継ぎの議題にできます。</p>
+<h3>打ち合わせ前の確認メモ</h3>
+<div class="code-block"><pre style="white-space:pre-wrap;overflow-wrap:anywhere;color:#f5f5f5">Create a short meeting brief in Google Docs from this thread. Separate agreed facts from proposals. Add questions we need to resolve at the meeting. Do not invent prices, dates, or commitments. Identify which messages support the key facts where possible.</pre></div>
+<p>意味は「合意した事実と提案を分け、会議で解決すべき質問を追加する」です。見積もり相談なら、提示済みの金額と検討中の追加作業を分けて読む場面を想定しています。根拠となるメールの表示を依頼しても、必ず正しい引用が付くとは限らないため、重要な金額や日付は自分で原文を開いて確認します。</p>
+<h2 id="section5">5. 共有前に確認する項目</h2>
+<p><strong>MIRAINAの提案：</strong>AIが苦手な人には、長いプロンプトを覚えてもらうより、完成後に見る項目を固定する方法を勧めます。「誰が読むか」を決め、メールを選び、下書きを作り、次の表で確認する流れを一度経験すれば、次回の依頼で何を補えばよいか分かりやすくなります。</p>
+<div class="article-table-wrapper"><table class="article-table"><thead><tr><th>確認対象</th><th>見るポイント</th></tr></thead><tbody><tr><td>日付・金額</td><td>希望と確定、税込と税抜を取り違えていないか</td></tr><tr><td>担当者</td><td>名前が出ただけの人を担当にしていないか</td></tr><tr><td>参照情報</td><td>古いメールや別案件の情報が混ざっていないか</td></tr><tr><td>共有先</td><td>相手に見せてよい情報だけが含まれているか</td></tr></tbody></table></div>
+<p>最初の試行では、資料作成にかかった時間に加え、修正した箇所も残します。日付の訂正が多ければ「希望日と確定日を分ける」を指示に足し、長すぎれば読み手が必要な項目に絞ります。短時間で作れたかと、確認しやすい資料になったかを合わせて評価してください。</p>
+<p>社内の型を整える場合は、<a href="/services/ai_training.html">AI研修</a>や<a href="/services/ai_consulting.html">生成AI活用支援</a>で、実際の業務に沿って依頼文と確認手順を作れます。書類の内容理解から始める方には、<a href="/blogs/blog296.html">Geminiで書類を要約する方法</a>も参考になります。</p>
+<h2 id="section6">6. まとめ</h2>
+<p>Gmailからの資料作成は、メールの内容を仕事で使える形へ移す入口になります。まず利用条件、とくに公開時の英語限定を確認してください。試す際は、目的・確定事項・不明点・次の作業を指定し、原文と照合してから共有します。AIの出力を確認するところまでを、一つの業務として設計することが大切です。</p>
+<div class="article-references"><div class="ref-title">参考リンク</div><ul><li><a href="https://workspaceupdates.googleblog.com/2026/09/create-content-schedule-events-and-coordinate-tasks-across-Workspace-regardless-of-what-app-you-are-in.html" rel="noopener" target="_blank">Google：Workspaceアプリをまたぐ新機能（2026年9月9日）</a></li><li><a href="https://support.google.com/docs/answer/15541879?hl=en" rel="noopener" target="_blank">Google Help：Docsでパーソナライズされた文書を作成</a></li></ul></div></div>
+<!-- CTA Button -->
+<div class="article-cta">
+<div class="cta-box">
+<h2 class="cta-title">AI導入でお悩みですか？</h2>
+<p class="cta-text">MIRAINAでは、貴社の課題に合わせた<br/>最適なAI活用プランをご提案します。</p>
+<a class="btn btn-black-fill" href="/contact.html">無料相談する</a>
+</div>
+</div>
+<!-- Editorial Information -->
+<div class="article-editor">
+<div class="editor-header">この記事を監修した人</div>
+<div class="editor-profile">
+<div class="editor-image">
+<img alt="本記事の監修者 芝優作（MIRAINA）" decoding="async" loading="lazy" src="/images/shiba_yusaku.webp"/>
+</div>
+<div class="editor-info">
+<div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+<p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+</div>
+</div>
+</div>
+<!-- Related Articles -->
+<div class="article-related"><h2 class="related-title">関連記事</h2><div class="related-grid"><a class="related-card" href="/blogs/blog292.html"><div class="related-img"><img alt="Workspace Studioに4機能追加｜ファイル整理と返信を自動化" decoding="async" loading="lazy" src="/images/blogs_images/blog-card292.webp"/></div><div class="related-content"><div class="related-date">2026.09.08</div><div class="related-text">Workspace Studioに4機能追加｜ファイル整理と返信を自動化</div></div></a><a class="related-card" href="/blogs/blog296.html"><div class="related-img"><img alt="Geminiで書類を要約｜必要書類と確認事項を整理する方法" decoding="async" loading="lazy" src="/images/blogs_images/blog-card296.webp"/></div><div class="related-content"><div class="related-date">2026.09.11</div><div class="related-text">Geminiで書類を要約｜必要書類と確認事項を整理する方法</div></div></a><a class="related-card" href="/blogs/blog299.html"><div class="related-img"><img alt="Gemini Windows版が公開｜導入手順と仕事で使う指示例" decoding="async" loading="lazy" src="/images/blogs_images/blog-card299.webp"/></div><div class="related-content"><div class="related-date">2026.09.13</div><div class="related-text">Gemini Windows版が公開｜導入手順と仕事で使う指示例</div></div></a></div></div> </article>
+</main>
+<!-- Footer -->
+<footer class="footer">
+<div class="container footer-inner">
+<div class="footer-brand">
+<a href="/index.html">
+<p class="footer-brand-text">MIRAINA</p>
+</a>
+</div>
+<div class="footer-center">
+<!-- Empty as requested -->
+</div>
+<div class="footer-menu">
+<ul class="footer-menu-list">
+<li><a href="/about.html">私たちについて</a></li>
+<li><a href="/works.html">事例紹介</a></li>
+<li><a href="/blogs.html">ブログ</a></li>
+<li><a href="/contact.html">お問い合わせ</a></li>
+<li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+</ul>
+<div class="footer-sns">
+<a href="https://www.instagram.com/plus.taime" rel="noopener" target="_blank">Instagram</a>
+<a href="https://www.threads.com/@plus.taime" rel="noopener" target="_blank">Threads</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<a aria-label="AI info" class="footer-robot-icon" href="/llms.txt">
+<svg class="icon-thin" height="24" viewbox="0 0 24 24" width="24">
+<path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"></path>
+</svg>
+</a>
+<p>© MIRAINA All Rights Reserved.</p>
+</div>
+</footer>
+<script src="/js/common.js"></script>
+</body>
+</html>

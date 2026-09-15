@@ -2672,6 +2672,15 @@
       "thumbnail": "/images/blogs_images/blog-card303.webp",
       "alt": "Search Consoleの生成AIパフォーマンスレポートでAI検索の見え方を確認するイメージ",
       "date": "2026-09-14"
+    },
+    {
+      "id": 304,
+      "title": "GmailのGeminiで資料作成｜メールを引き継ぎ文書にまとめる方法",
+      "description": "GmailのGeminiでメールから資料作成する連携が登場。公開時は英語のみ対応です。対象プラン、引き継ぎ文書を作る指示例、共有前の確認点を解説します。",
+      "link": "/blogs/blog304.html",
+      "thumbnail": "/images/blogs_images/blog-card304.webp",
+      "alt": "GmailのGeminiで資料作成",
+      "date": "2026-09-15"
     }
   ],
   "works": [

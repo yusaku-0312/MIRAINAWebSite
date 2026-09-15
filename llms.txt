@@ -323,6 +323,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: Gemini Notebookの外部共有を4段階で制御｜管理者が決める設定](https://miraina-ai.com/blogs/blog301.html): Gemini Notebookの外部共有に追加された4段階の管理設定を解説。デフォルトOFF、許可ドメイン、公開リンクの違いと、中小企業が社外共有前に決める運用を整理した記事。
 - [最新ブログ: GeminiがAndroid版Sheetsに対応｜スマホで売上表を分析](https://miraina-ai.com/blogs/blog302.html): GeminiがAndroid版Googleスプレッドシートに対応。スマホで売上表を分析する手順、指示例、対象プランとWeb版との違いを解説します。
 - [最新ブログ: Search Consoleの生成AIパフォーマンスレポートが全世界公開｜LLMO測定で決める3つのこと](https://miraina-ai.com/blogs/blog303.html): Google Search Consoleの生成AIパフォーマンスレポートが2026年8月31日に全世界公開。確認できる指標、クリック数がわからない限界、LLMO効果測定で企業が決める3つのことを公式情報から解説します。
+- [最新ブログ: GmailのGeminiで資料作成｜メールを引き継ぎ文書にまとめる方法](https://miraina-ai.com/blogs/blog304.html): GmailのGeminiでメールから資料作成する連携が登場。公開時は英語のみ対応です。対象プラン、引き継ぎ文書を作る指示例、共有前の確認点を解説します。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)
