@@ -310,20 +310,28 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: 【2026年9月最新】Claude Fable 5.1とは？長時間AIエージェントの選び方](https://miraina-ai.com/blogs/blog282.html): Anthropic公式情報をもとに、Claude Fable 5.1の長時間エージェント用途、API価格、キャッシュ割引、安全対策、導入判断を整理した記事。
 - [最新ブログ: 【2026年9月最新】AIネイティブ企業は何が違う？OpenAIが示した業務設計6ステップ](https://miraina-ai.com/blogs/blog283.html): OpenAI公式情報をもとに、AIネイティブ企業の8.3倍の活用差、AIが苦手な人の検索意図、AI利用者の実務プロンプト、業務設計6ステップを整理した記事。
 - [最新ブログ: 【2026年9月最新】Geminiのカスタム指示とは？Gmail・Drive・Chatで文体を統一する方法](https://miraina-ai.com/blogs/blog284.html): Google公式情報をもとに、Geminiのカスタム指示で文体や書式を揃える方法、検索意図、実務プロンプト、利用条件、ヘルプ追随の差分を整理した記事。
+- [最新ブログ: 【2026年9月最新】GPT-6 Astra公開で企業が決める権限設計5項目](https://miraina-ai.com/blogs/blog285.html): OpenAI公式情報をもとに、GPT-6 AstraのCritical級サイバー能力、安全評価、料金、企業が決める権限設計5項目を整理した記事。
 - [最新ブログ: 【2026年9月最新】Gmail Liveとは？声でメール検索・文書作成する方法](https://miraina-ai.com/blogs/blog286.html): Google公式情報をもとに、Gmail Live、Docs Live、Keep Liveの違い、音声指示例、利用条件、安全な始め方を整理した記事。
+- [最新ブログ: 【2026年9月】AWS Certified AI Business Strategist開始｜4つの試験領域](https://miraina-ai.com/blogs/blog287.html): AWS公式情報をもとに、非技術者向けAI資格の4試験領域、受験条件、日本語対応、企業のAI人材育成への活かし方を整理した記事。
 - [最新ブログ: Gemini Notebookの監査ログ追加｜社内資料の利用履歴を確認](https://miraina-ai.com/blogs/blog288.html): Gemini Notebookの監査ログ追加をGoogle公式情報で解説。社内資料の共有・利用履歴の確認手順、管理者権限、導入条件とAIへの依頼文を紹介します。
 - [最新ブログ: Google VidsでPDFを動画に｜マニュアル共有の始め方](https://miraina-ai.com/blogs/blog289.html): Google VidsでPDF・Wordを動画にする方法を公式情報で解説。利用プラン、日本語対応の確認点、台本の作り方とAIへの依頼例を紹介します。
+- [最新ブログ: OpenAIが「AI研究インターン」に到達｜業務実験5つの設計](https://miraina-ai.com/blogs/blog290.html): OpenAI公式の研究組織データをもとに、AI研究インターンの範囲、人とAIの役割、業務実験を回すための目的・分解・並列・介入・記録の5つの設計を整理した記事。
+- [最新ブログ: 【2026年9月最新】Claude EFSとは？機密データを守るAI導入の3原則](https://miraina-ai.com/blogs/blog291.html): Anthropic公式情報をもとに、顧客管理クラウドへのデータ保存、不正利用検知、最小権限から、機密情報を扱うAI導入の確認項目を整理した記事。
 - [最新ブログ: Workspace Studioに4機能追加｜ファイル整理と返信を自動化](https://miraina-ai.com/blogs/blog292.html): Workspace Studioにファイルのコピー・移動と返信機能が追加。提供時期、利用プラン、最初に試す業務、AIへの依頼例とテスト時の注意点を解説します。
 - [最新ブログ: Google Picsで画像を一部だけ修正｜日本語の指示例と始め方](https://miraina-ai.com/blogs/blog293.html): Google Picsで画像の背景や文字を一部だけ修正する方法を紹介。日本語の指示例、対象プラン、PCでの手順、公開前の確認点を解説します。
 - [最新ブログ: Sheets canvasで案件表を見やすく｜使い方と指示例](https://miraina-ai.com/blogs/blog294.html): Sheets canvasで案件表をカンバンにする方法を紹介。英語対応、対象プラン、元データへの反映、AIへの指示例と共有前の確認点を解説します。
+- [最新ブログ: Data agent登場｜ChatGPTで分析](https://miraina-ai.com/blogs/blog295.html): ChatGPT Data agentをOpenAI公式情報から解説。接続先、既存権限、意味定義、ダッシュボード作成の始め方と共有前の確認項目を整理した記事。
 - [最新ブログ: Geminiで書類を要約｜必要書類と確認事項を整理する方法](https://miraina-ai.com/blogs/blog296.html): Geminiで書類を要約し、必要な準備をチェックリストにする方法を紹介。PDFの読み込み、日本語プロンプト、出典と不足情報の確認方法を解説します。
 - [最新ブログ: OpenAI Agents API公開｜AIエージェント開発で決める4項目](https://miraina-ai.com/blogs/blog297.html): OpenAI Agents APIの公開内容を公式情報から解説。実行環境、ツール、ネットワーク、費用を整理し、中小企業がAIエージェント開発前に決める4項目を紹介します。
+- [最新ブログ: 【2026年9月最新】中小企業の生成AI活用は32.4%｜帝国データバンク調査で分かる3つの壁](https://miraina-ai.com/blogs/blog298.html): 帝国データバンク「生成AIに関する企業の動向調査（2026年3月）」を解説。活用企業34.5%、効果実感86.7%の一方で、中小企業が直面する情報の正確性・人材不足・使いこなし格差の実態と対策を紹介します。
 - [最新ブログ: Gemini Windows版が公開｜導入手順と仕事で使う指示例](https://miraina-ai.com/blogs/blog299.html): Gemini Windows版の導入手順と利用条件を公式情報で確認。Alt＋Spaceでの呼び出し、仕事に使う日本語プロンプト、会社での確認点を解説します。
 - [最新ブログ: GeminiとGoogleビジネスプロフィールが連携｜口コミ管理で決める4項目](https://miraina-ai.com/blogs/blog300.html): GeminiアプリとGoogleビジネスプロフィールの連携機能を公式情報から解説。口コミ返信の下書き、Business Notebooksでの業績分析、連携条件を整理し、中小企業が導入前に決める4項目を紹介します。
 - [最新ブログ: Gemini Notebookの外部共有を4段階で制御｜管理者が決める設定](https://miraina-ai.com/blogs/blog301.html): Gemini Notebookの外部共有に追加された4段階の管理設定を解説。デフォルトOFF、許可ドメイン、公開リンクの違いと、中小企業が社外共有前に決める運用を整理した記事。
 - [最新ブログ: GeminiがAndroid版Sheetsに対応｜スマホで売上表を分析](https://miraina-ai.com/blogs/blog302.html): GeminiがAndroid版Googleスプレッドシートに対応。スマホで売上表を分析する手順、指示例、対象プランとWeb版との違いを解説します。
 - [最新ブログ: Search Consoleの生成AIパフォーマンスレポートが全世界公開｜LLMO測定で決める3つのこと](https://miraina-ai.com/blogs/blog303.html): Google Search Consoleの生成AIパフォーマンスレポートが2026年8月31日に全世界公開。確認できる指標、クリック数がわからない限界、LLMO効果測定で企業が決める3つのことを公式情報から解説します。
 - [最新ブログ: GmailのGeminiで資料作成｜メールを引き継ぎ文書にまとめる方法](https://miraina-ai.com/blogs/blog304.html): GmailのGeminiでメールから資料作成する連携が登場。公開時は英語のみ対応です。対象プラン、引き継ぎ文書を作る指示例、共有前の確認点を解説します。
+- [最新ブログ: SalesforceのAI Control Planeとは｜AIエージェント管理で中小企業が決める3つのこと](https://miraina-ai.com/blogs/blog305.html): Salesforceが2026年9月10日に発表した「AI Control Plane」を解説。IDC調査は導入企業の88%が本番稼働に至らないと報告し、Gartnerは40%超のプロジェクト中止を指摘。中小企業がAIエージェント管理で決めるべき3つのことを整理します。
+- [最新ブログ: Claude for Small Businessが43ワークフローに拡張｜中小企業が使い始める3ステップ](https://miraina-ai.com/blogs/blog306.html): Anthropicが2026年9月15日に発表したClaude for Small Businessの拡張を解説。5月の15から43ワークフローに増え、27の新連携が追加。90万回超インストールの実績と、日本の中小企業が使い始めるための3ステップを整理します。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)

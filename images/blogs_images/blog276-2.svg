@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#132238" flood-opacity=".14"/></filter>
+  </defs>
+  <rect width="1200" height="675" fill="#eef3f7"/>
+  <rect x="42" y="34" width="1116" height="607" rx="18" fill="#fff" filter="url(#shadow)"/>
+  <rect x="42" y="34" width="1116" height="64" rx="18" fill="#f8fafc"/>
+  <rect x="42" y="82" width="1116" height="16" fill="#f8fafc"/>
+  <circle cx="73" cy="66" r="7" fill="#ff6b6b"/><circle cx="96" cy="66" r="7" fill="#ffd166"/><circle cx="119" cy="66" r="7" fill="#42c983"/>
+  <rect x="151" y="52" width="30" height="30" rx="7" fill="#32c878"/>
+  <path d="M160 61h12v12h-12zM164 61v12M168 61v12M160 65h12M160 69h12" stroke="#fff" stroke-width="1.4" fill="none"/>
+  <text x="194" y="73" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans JP',sans-serif" font-size="22" font-weight="700" fill="#172033">業務進捗表（完全ダミー）</text>
+  <rect x="943" y="50" width="92" height="34" rx="8" fill="#ecf8f2"/><text x="989" y="72" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans JP',sans-serif" font-size="14" font-weight="700" fill="#168453">共有設定</text>
+  <rect x="1047" y="50" width="88" height="34" rx="8" fill="#32c878"/><text x="1091" y="72" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans JP',sans-serif" font-size="14" font-weight="700" fill="#fff">共有</text>
+  <rect x="42" y="98" width="1116" height="48" fill="#fff"/><text x="72" y="128" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans JP',sans-serif" font-size="15" fill="#344054">元に戻す　やり直す　書式　データ　自動化</text>
+  <line x1="42" y1="146" x2="1158" y2="146" stroke="#dce3ea"/>
+  <rect x="42" y="146" width="70" height="439" fill="#f7f9fb"/>
+  <rect x="112" y="146" width="1046" height="52" fill="#e9f8f0"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,'Noto Sans JP',sans-serif" font-size="15" fill="#344054">
+    <text x="77" y="178" text-anchor="middle" font-weight="700">#</text>
+    <text x="137" y="178" font-weight="700">管理ID</text><text x="274" y="178" font-weight="700">タスク名</text><text x="526" y="178" font-weight="700">担当</text><text x="660" y="178" font-weight="700">期限</text><text x="792" y="178" font-weight="700">ステータス</text><text x="978" y="178" font-weight="700">優先度</text>
+  </g>
+  <g stroke="#dce3ea" stroke-width="1">
+    <line x1="112" y1="146" x2="112" y2="585"/><line x1="244" y1="146" x2="244" y2="585"/><line x1="496" y1="146" x2="496" y2="585"/><line x1="628" y1="146" x2="628" y2="585"/><line x1="760" y1="146" x2="760" y2="585"/><line x1="948" y1="146" x2="948" y2="585"/><line x1="1070" y1="146" x2="1070" y2="585"/><line x1="1158" y1="146" x2="1158" y2="585"/>
+    <line x1="42" y1="198" x2="1158" y2="198"/><line x1="42" y1="263" x2="1158" y2="263"/><line x1="42" y1="328" x2="1158" y2="328"/><line x1="42" y1="393" x2="1158" y2="393"/><line x1="42" y1="458" x2="1158" y2="458"/><line x1="42" y1="523" x2="1158" y2="523"/><line x1="42" y1="585" x2="1158" y2="585"/>
+  </g>
+  <g font-family="-apple-system,BlinkMacSystemFont,'Noto Sans JP',sans-serif" font-size="15" fill="#344054">
+    <text x="77" y="237" text-anchor="middle">1</text><text x="137" y="237">TEST-001</text><text x="274" y="237">月次レポート確認</text><text x="526" y="237">担当A</text><text x="660" y="237">9/03</text>
+    <text x="77" y="302" text-anchor="middle">2</text><text x="137" y="302">TEST-002</text><text x="274" y="302">見積書テンプレート更新</text><text x="526" y="302">担当B</text><text x="660" y="302">9/05</text>
+    <text x="77" y="367" text-anchor="middle">3</text><text x="137" y="367">TEST-003</text><text x="274" y="367">問い合わせ回答案</text><text x="526" y="367">担当C</text><text x="660" y="367">9/06</text>
+    <text x="77" y="432" text-anchor="middle">4</text><text x="137" y="432">TEST-004</text><text x="274" y="432">週次ミーティング準備</text><text x="526" y="432">担当A</text><text x="660" y="432">9/08</text>
+    <text x="77" y="497" text-anchor="middle">5</text><text x="137" y="497">TEST-005</text><text x="274" y="497">マニュアル校正</text><text x="526" y="497">担当B</text><text x="660" y="497">9/10</text>
+  </g>
+  <g font-family="-apple-system,BlinkMacSystemFont,'Noto Sans JP',sans-serif" font-size="14" font-weight="700">
+    <rect x="786" y="214" width="106" height="30" rx="15" fill="#fff2cc"/><text x="839" y="234" text-anchor="middle" fill="#8a6412">確認中 ▾</text>
+    <rect x="786" y="279" width="106" height="30" rx="15" fill="#e7f8ef"/><text x="839" y="299" text-anchor="middle" fill="#157a4c">完了 ▾</text>
+    <rect x="786" y="344" width="106" height="30" rx="15" fill="#e9f1ff"/><text x="839" y="364" text-anchor="middle" fill="#2761b3">未着手 ▾</text>
+    <rect x="786" y="409" width="106" height="30" rx="15" fill="#fff2cc"/><text x="839" y="429" text-anchor="middle" fill="#8a6412">確認中 ▾</text>
+    <rect x="786" y="474" width="106" height="30" rx="15" fill="#fce8e8"/><text x="839" y="494" text-anchor="middle" fill="#a43b3b">保留 ▾</text>
+    <text x="1008" y="237" fill="#a43b3b">高</text><text x="1008" y="302" fill="#47627a">中</text><text x="1008" y="367" fill="#a43b3b">高</text><text x="1008" y="432" fill="#47627a">中</text><text x="1008" y="497" fill="#607389">低</text>
+  </g>
+  <rect x="760" y="198" width="188" height="65" fill="none" stroke="#32c878" stroke-width="3"/>
+  <path d="M905 251l16 39 8-13 14 14 8-8-14-14 13-8z" fill="#172033" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+  <rect x="42" y="585" width="1116" height="56" rx="0 0 18 18" fill="#f8fafc"/>
+  <rect x="68" y="600" width="126" height="30" rx="6" fill="#e9f8f0"/><text x="131" y="620" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans JP',sans-serif" font-size="14" font-weight="700" fill="#168453">案件一覧</text>
+  <text x="1117" y="620" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans JP',sans-serif" font-size="12" fill="#667085">記事用に作成した架空データ</text>
+</svg>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>SalesforceのAI Control Planeとは｜AIエージェント管理で中小企業が決める3つのこと | MIRAINAブログ</title>
+<meta name="description" content="Salesforceが2026年9月10日に発表した「AI Control Plane」を解説。IDC調査は導入企業の88%が本番稼働に至らないと報告し、Gartnerは40%超のプロジェクト中止を指摘。中小企業がAIエージェント管理で決めるべき3つのことを整理します。">
+<!-- OGP Tags -->
+<meta property="og:title" content="SalesforceのAI Control Planeとは｜AIエージェント管理で中小企業が決める3つのこと">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://miraina-ai.com/blogs/blog305.html">
+<meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog305-1.webp">
+<meta property="og:description" content="Salesforceが2026年9月10日に発表した「AI Control Plane」を解説。IDC調査は導入企業の88%が本番稼働に至らないと報告し、Gartnerは40%超のプロジェクト中止を指摘。中小企業がAIエージェント管理で決めるべき3つのことを整理します。">
+<link rel="canonical" href="https://miraina-ai.com/blogs/blog305.html">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap" rel="stylesheet">
+<!-- Favicon -->
+<link rel="icon" href="/images/favicon.ico">
+<!-- CSS -->
+<link rel="stylesheet" href="/css/reset.css">
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/css/blog_article.css">
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+<div class="container header-inner">
+<a href="/" class="header-logo">
+<img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+</a>
+<div class="hamburger" id="js-hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<nav class="header-nav">
+<div class="nav-item has-dropdown">
+<a href="/services.html" class="nav-link">サービス</a>
+<div class="dropdown-menu">
+<a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+<a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+<a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+<a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+<a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+</div>
+</div>
+<div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+<div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+<div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+<div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+<div class="nav-item">
+<a href="/llms.txt" class="nav-link" aria-label="AI info">
+<svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+<path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"/>
+</svg>
+</a>
+</div>
+</nav>
+</div>
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="js-mobile-menu">
+<nav class="mobile-nav">
+<div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+<div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+<div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+<div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+<div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+</nav>
+</div>
+</header>
+<main>
+<!-- Breadcrumbs -->
+<div class="container breadcrumbs"><ul><li><a href="/">ホーム</a></li><li><a href="/blogs.html">ブログ</a></li><li>SalesforceのAI Control Planeとは</li></ul></div>
+<article class="article-container">
+<!-- Article Header -->
+<header class="article-header">
+<div class="article-meta">
+<span class="article-date">2026.09.16</span>
+<div class="article-tags"><span class="article-tag">Salesforce</span><span class="article-tag">AIエージェント</span><span class="article-tag">AI導入</span></div>
+</div>
+<h1 class="article-title">SalesforceのAI Control Planeとは｜AIエージェント管理で中小企業が決める3つのこと</h1>
+<div class="article-thumbnail">
+<img src="/images/blogs_images/blog305-1.webp" alt="SalesforceのAI Control Planeとは" width="800" height="450" fetchpriority="high">
+</div>
+</header>
+<!-- Summary -->
+<section class="article-summary"><h2 class="sr-only">記事の概要</h2><p>ChatGPT・Gemini・Claudeなど複数のAIエージェントを並行導入する企業が増える中、「誰が何を任せているか分からない」という新しい管理課題が生まれています。Salesforceが2026年9月10日に発表した「AI Control Plane」は、この課題への大企業の回答です。本記事では発表内容を一次情報から確認し、中小企業が今から決めておくべき3つのことに落とし込みます。</p><p>情報確認日：2026年9月16日。海外の一次報道とMIRAINAの提言を分けて解説します。</p></section>
+<!-- Table of Contents -->
+<div class="article-toc"><div class="toc-title">目次</div><ul><li><a href="#section1">1. AI Control Planeとは？発表の概要</a></li><li><a href="#section2">2. なぜ必要か？AIエージェント導入が進まない理由</a></li><li><a href="#section3">3. AI Control Planeの6つの機能</a></li><li><a href="#section4">4. Salesforce以外のエージェントも管理できる仕組み</a></li><li><a href="#section5">5. 中小企業がAIエージェント管理で決める3つのこと</a></li><li><a href="#section6">6. まとめ</a></li></ul></div>
+<div class="article-body">
+<h2 id="section1">1. AI Control Planeとは？発表の概要</h2>
+<p><strong>Salesforceは2026年9月10日、企業内のAIエージェントを一元管理する基盤「Trusted Enterprise AI Harness」を発表しました。</strong>その中核となる新機能が「AI Control Plane」です。海外メディアはこの発表を、Salesforceが「エンタープライズ内すべてのエージェントの管理レイヤーを取りにいく動き」と評しています。</p>
+<figure class="article-figure"><img src="/images/blogs_images/blog305-2.webp" alt="SalesforceのAI Control Plane発表を報じる海外メディアの記事" width="800" height="450" loading="lazy" decoding="async"><figcaption>海外メディアが2026年9月11日付で報じたSalesforceの発表記事。</figcaption></figure>
+<p>Salesforceの President and Chief Platform and Engineering Officer である Rohan Kumar 氏は、発表にあたり「アジェンティック・エンタープライズを定義するのは、どのモデルを選ぶかではない。モデルは変わり続け、知性はどこでも手に入るようになる。企業を差別化するのは、信頼できる独自のコンテキストを、顧客を起点に、安全に行動へ変換できるかどうかだ」と述べています。AIモデル選びよりも、それを安全に使いこなす「統制の仕組み」こそが競争力になるという考え方です。</p>
+<h2 id="section2">2. なぜ必要か？AIエージェント導入が進まない理由</h2>
+<p>この発表の背景には、AIエージェント導入が本番稼働までたどり着かないという業界共通の課題があります。IDCとLenovoの調査によると、<strong>AIエージェントの導入に取り組む企業の88%が本番稼働まで到達していません。</strong>さらにGartnerは、<strong>agentic AIプロジェクトの40%超が、コストの増大と不十分なリスク管理を理由に中止されている</strong>と報告しています。</p>
+<p>この構造は大企業だけの話ではありません。中小企業でもChatGPT・Gemini・Claudeといった複数のAIツールを部署ごとに導入するケースが増えており、「誰がどのAIエージェントに何の権限を与えたか」「どこまで自動で処理させているか」が見えにくくなりがちです。海外の大企業が統制基盤を整え始めたという事実は、AIエージェントが増えるほど管理の仕組みが必要になる、という共通の課題を映し出しています。</p>
+<h2 id="section3">3. AI Control Planeの6つの機能</h2>
+<p>Trusted Enterprise AI Harnessは、Trusted Context・Trusted Agency・Trusted Action・Trusted Governance・Trusted Security・Trusted Modelsという6つの中核機能で構成されます。その中心にあるAI Control Planeが担う役割を整理すると、以下のようになります。</p>
+<div class="article-table-wrapper"><table class="article-table"><thead><tr><th>機能</th><th>できること</th></tr></thead><tbody><tr><td>発見・登録</td><td>社内で動いているAIエージェントを見つけて登録する</td></tr><tr><td>ID・ポリシー設定</td><td>エージェントごとに権限や利用条件を決める</td></tr><tr><td>ライフサイクル管理</td><td>作成から廃止までの状態を管理する</td></tr><tr><td>パフォーマンス評価</td><td>成果や挙動を継続的に確認する</td></tr><tr><td>コスト管理</td><td>AIエージェントの利用コストを可視化・制御する</td></tr></tbody></table></div>
+<p>ポイントは、これが単なる監視ツールではなく「発見→権限設定→運用→評価→コスト確認」という一連のサイクルを一つの基盤でまわす発想である点です。AIエージェントを増やす企業ほど、この5つのどこかが手作業になり、抜け漏れの原因になります。</p>
+<h2 id="section4">4. Salesforce以外のエージェントも管理できる仕組み</h2>
+<p>AI Control Planeが注目される理由の一つは、<strong>Salesforce製のエージェントだけでなく、サードパーティ（他社製）のAIエージェントも管理対象にしている</strong>点です。特定のAIベンダーに閉じない管理レイヤーを目指す設計であり、複数のAIツールを併用する企業の実態に近いアプローチといえます。</p>
+<p>この発表は、Salesforceが直前に打ち出した「Claudeforce」構想の延長線上にあります。Claudeforceは、AnthropicのClaudeをSalesforceプラットフォーム全体の既定の推論エンジンとする連携です。つまりSalesforceは、AIが「考える」層（推論エンジン）と、AIを「管理する」層（AI Control Plane）の両方を押さえにいく戦略を取っています。中小企業にとっての教訓は、AIエージェントを選ぶ基準を「賢さ」だけで判断せず、「どう管理・統制できるか」まで含めて検討する視点が今後さらに重要になるということです。</p>
+<h2 id="section5">5. 中小企業がAIエージェント管理で決める3つのこと</h2>
+<p><strong>MIRAINAの提案：</strong>Salesforce規模の統制基盤をそのまま中小企業に導入する必要はありません。大切なのは、その考え方を自社の規模に合わせて縮小し、今すぐ決められる形にすることです。</p>
+<ol><li><strong>利用範囲を決める：</strong>どのAIエージェントを、誰が、どの業務で使えるかを先にリスト化する。導入してから権限を絞るのは難しいため、最初に決めておく。</li><li><strong>任せる境界を決める：</strong>「AIが下書きを作るところまで」「人が確認してから送信する」など、AIエージェントに任せてよい範囲と、人が必ず確認する範囲を分ける。</li><li><strong>確認する頻度を決める：</strong>成果とコストを月次など定期的に確認する仕組みを作る。導入したまま放置すると、Gartnerが指摘するような「コスト増大」に気づけない。</li></ol>
+<p>この3つは特別なツールがなくても、社内のルールとして今日から始められます。仕組み化を進める際は、<a href="/services/ai_training.html">AI研修</a>や<a href="/services/ai_consulting.html">生成AI活用支援</a>で、自社の業務に合わせた運用ルールづくりを支援できます。AIエージェントの機密データの扱いについては<a href="/blogs/blog291.html">Claude EFSの記事</a>、権限設計の考え方は<a href="/blogs/blog285.html">GPT-6 Astraの記事</a>も参考になります。</p>
+<h2 id="section6">6. まとめ</h2>
+<p>SalesforceのAI Control Planeは、AIエージェントが増え続ける企業に向けた「統制の仕組み」の一つの答えです。IDCの88%、Gartnerの40%超という数字は、AIエージェント導入が「入れること」より「使い続けられる形に管理すること」で苦戦している現実を示しています。中小企業であっても、利用範囲・任せる境界・確認頻度の3つを先に決めておくことが、同じ失敗を避ける最初の一歩になります。</p>
+<div class="article-references"><div class="ref-title">参考リンク</div><ul><li><a href="https://forkast.news/salesforce-formalizes-the-agent-governance-stack-into-a-single-platform/" rel="noopener" target="_blank">Forkast：Salesforce Formalizes the Agent Governance Stack Into a Single Platform（2026年9月11日）</a></li><li><a href="https://www.salesforce.com/news/stories/enterprise-ai-harness/" rel="noopener" target="_blank">Salesforce公式：Trusted Enterprise AI Harnessの発表</a></li></ul></div>
+</div>
+<!-- CTA Button -->
+<div class="article-cta">
+<div class="cta-box">
+<h2 class="cta-title">AI導入でお悩みですか？</h2>
+<p class="cta-text">MIRAINAでは、貴社の課題に合わせた<br>最適なAI活用プランをご提案します。</p>
+<a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+</div>
+</div>
+<!-- Editorial Information -->
+<div class="article-editor">
+<div class="editor-header">この記事を監修した人</div>
+<div class="editor-profile">
+<div class="editor-image">
+<img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+</div>
+<div class="editor-info">
+<div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+<p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+</div>
+</div>
+</div>
+<!-- Related Articles -->
+<div class="article-related"><h2 class="related-title">関連記事</h2><div class="related-grid"><a href="/blogs/blog285.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card285.webp" alt="GPT-6 Astra公開で企業が決める権限設計5項目" loading="lazy" decoding="async"></div><div class="related-content"><div class="related-date">2026.09.05</div><div class="related-text">GPT-6 Astra公開で企業が決める権限設計5項目</div></div></a><a href="/blogs/blog291.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card291.webp" alt="Claude EFSとは？機密データを守るAI導入の3原則" loading="lazy" decoding="async"></div><div class="related-content"><div class="related-date">2026.09.08</div><div class="related-text">Claude EFSとは？機密データを守るAI導入の3原則</div></div></a><a href="/blogs/blog298.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card298.webp" alt="中小企業の生成AI活用は32.4%｜帝国データバンク調査で分かる3つの壁" loading="lazy" decoding="async"></div><div class="related-content"><div class="related-date">2026.09.12</div><div class="related-text">中小企業の生成AI活用は32.4%｜帝国データバンク調査で分かる3つの壁</div></div></a></div></div>
+</article>
+</main>
+<!-- Footer -->
+<footer class="footer">
+<div class="container footer-inner">
+<div class="footer-brand">
+<a href="/index.html">
+<p class="footer-brand-text">MIRAINA</p>
+</a>
+</div>
+<div class="footer-center">
+</div>
+<div class="footer-menu">
+<ul class="footer-menu-list">
+<li><a href="/about.html">私たちについて</a></li>
+<li><a href="/works.html">事例紹介</a></li>
+<li><a href="/blogs.html">ブログ</a></li>
+<li><a href="/contact.html">お問い合わせ</a></li>
+<li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+</ul>
+<div class="footer-sns">
+<a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+<a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+<svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+<path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"/>
+</svg>
+</a>
+<p>&copy; MIRAINA All Rights Reserved.</p>
+</div>
+</footer>
+<script src="/js/common.js"></script>
+</body>
+</html>

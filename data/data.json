@@ -2557,6 +2557,15 @@
       "date": "2026-09-04"
     },
     {
+      "id": 285,
+      "title": "【2026年9月最新】GPT-6 Astra公開で企業が決める権限設計5項目",
+      "description": "GPT-6 Astra公開をOpenAI公式情報で解説。Critical級のサイバー能力、料金、提供条件、企業が決める権限設計5項目を紹介します。",
+      "link": "/blogs/blog285.html",
+      "thumbnail": "/images/blogs_images/blog-card285.webp",
+      "alt": "GPT-6 Astraを企業で安全に使うための権限設計を解説するイメージ",
+      "date": "2026-09-05"
+    },
+    {
       "id": 286,
       "title": "【2026年9月最新】Gmail Liveとは？声でメール検索・文書作成する方法",
       "description": "Gmail LiveをGoogle公式情報で解説。声でメール検索、Docsの文書作成、Keepのメモ整理を行う方法、利用条件、音声指示例を紹介します。",
@@ -2564,6 +2573,15 @@
       "thumbnail": "/images/blogs_images/blog-card286.webp",
       "alt": "Gmail Liveで声からメール検索や文書作成を行うイメージ",
       "date": "2026-09-05"
+    },
+    {
+      "id": 287,
+      "title": "【2026年9月】AWS Certified AI Business Strategist開始｜4つの試験領域",
+      "description": "AWS Certified AI Business StrategistをAWS公式情報で解説。非技術者向けの4試験領域、受験条件、日本語対応、企業のAI人材育成への活かし方を紹介します。",
+      "link": "/blogs/blog287.html",
+      "thumbnail": "/images/blogs_images/blog-card287.webp",
+      "alt": "AWS Certified AI Business Strategistの4つの試験領域を解説するイメージ",
+      "date": "2026-09-06"
     },
     {
       "id": 288,
@@ -2582,6 +2600,24 @@
       "thumbnail": "/images/blogs_images/blog-card289.webp",
       "alt": "Google VidsでPDFを動画にする方法",
       "date": "2026-09-07"
+    },
+    {
+      "id": 290,
+      "title": "OpenAIが「AI研究インターン」に到達｜業務実験5つの設計",
+      "description": "AI研究インターンへの到達をOpenAI公式データで解説。中小企業がAIで業務実験を速く回す5つの設計と、人が判断を残す方法を紹介します。",
+      "link": "/blogs/blog290.html",
+      "thumbnail": "/images/blogs_images/blog-card290.webp",
+      "alt": "AI研究インターンと人が業務実験を進める設計を解説するイメージ",
+      "date": "2026-09-07"
+    },
+    {
+      "id": 291,
+      "title": "【2026年9月最新】Claude EFSとは？機密データを守るAI導入の3原則",
+      "description": "Claude EFSをAnthropic公式情報から解説。機密データを顧客管理クラウドに置きつつ、不正利用検知を組み込むAI導入の3原則と確認項目を紹介します。",
+      "link": "/blogs/blog291.html",
+      "thumbnail": "/images/blogs_images/blog-card291.webp",
+      "alt": "Claude EFSで機密データを守るAI導入の3原則を解説するイメージ",
+      "date": "2026-09-08"
     },
     {
       "id": 292,
@@ -2611,6 +2647,15 @@
       "date": "2026-09-10"
     },
     {
+      "id": 295,
+      "title": "Data agent登場｜ChatGPTで分析",
+      "description": "ChatGPT Data agentをOpenAI公式情報から解説。接続先、権限、意味定義、ダッシュボード作成の始め方と確認項目を紹介します。",
+      "link": "/blogs/blog295.html",
+      "thumbnail": "/images/blogs_images/blog-card295.webp",
+      "alt": "ChatGPT Data agentで会話からダッシュボードを作る方法",
+      "date": "2026-09-11"
+    },
+    {
       "id": 296,
       "title": "Geminiで書類を要約｜必要書類と確認事項を整理する方法",
       "description": "Geminiで書類を要約し、必要な準備をチェックリストにする方法を紹介。PDFの読み込み、日本語プロンプト、出典と不足情報の確認方法を解説します。",
@@ -2626,6 +2671,15 @@
       "link": "/blogs/blog297.html",
       "thumbnail": "/images/blogs_images/blog-card297.webp",
       "alt": "OpenAI Agents APIでクラウドAIエージェントを開発するイメージ",
+      "date": "2026-09-12"
+    },
+    {
+      "id": 298,
+      "title": "【2026年9月最新】中小企業の生成AI活用は32.4%｜帝国データバンク調査で分かる3つの壁",
+      "description": "帝国データバンク「生成AIに関する企業の動向調査（2026年3月）」を解説。活用企業34.5%、効果実感86.7%の一方で、中小企業が直面する情報の正確性・人材不足・使いこなし格差の実態と対策を紹介します。",
+      "link": "/blogs/blog298.html",
+      "thumbnail": "/images/blogs_images/blog-card298.webp",
+      "alt": "中小企業の生成AI活用率32.4%と3つの壁を解説するイメージ",
       "date": "2026-09-12"
     },
     {
@@ -2681,6 +2735,24 @@
       "thumbnail": "/images/blogs_images/blog-card304.webp",
       "alt": "GmailのGeminiで資料作成",
       "date": "2026-09-15"
+    },
+    {
+      "id": 305,
+      "title": "SalesforceのAI Control Planeとは｜AIエージェント管理で中小企業が決める3つのこと",
+      "description": "Salesforceが2026年9月10日に発表した「AI Control Plane」を解説。IDC調査は導入企業の88%が本番稼働に至らないと報告し、Gartnerは40%超のプロジェクト中止を指摘。中小企業がAIエージェント管理で決めるべき3つのことを整理します。",
+      "link": "/blogs/blog305.html",
+      "thumbnail": "/images/blogs_images/blog-card305.webp",
+      "alt": "SalesforceのAI Control Planeとは",
+      "date": "2026-09-16"
+    },
+    {
+      "id": 306,
+      "title": "Claude for Small Businessが43ワークフローに拡張｜中小企業が使い始める3ステップ",
+      "description": "Anthropicが2026年9月15日に発表したClaude for Small Businessの拡張を解説。5月の15から43ワークフローに増え、27の新連携が追加。90万回超インストールの実績と、日本の中小企業が使い始めるための3ステップを整理します。",
+      "link": "/blogs/blog306.html",
+      "thumbnail": "/images/blogs_images/blog-card306.webp",
+      "alt": "Claude for Small Businessが43ワークフローに拡張",
+      "date": "2026-09-18"
     }
   ],
   "works": [
