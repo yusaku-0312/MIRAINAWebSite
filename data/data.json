@@ -2753,6 +2753,15 @@
       "thumbnail": "/images/blogs_images/blog-card306.webp",
       "alt": "Claude for Small Businessが43ワークフローに拡張",
       "date": "2026-09-18"
+    },
+    {
+      "id": 307,
+      "title": "MAI-Transcribe-2が公開｜60言語・1時間0.10ドルの文字起こしで確認する4項目",
+      "description": "Microsoft AIが2026年9月3日に公開した音声認識モデル「MAI-Transcribe-2」を解説。60言語対応、FLEURS平均WER5.2%、GPT-Transcribe比最大10倍速、音声1時間0.10ドル。パブリックプレビューの制約と、議事録自動化の前に確認すべき4項目を整理します。",
+      "link": "/blogs/blog307.html",
+      "thumbnail": "/images/blogs_images/blog-card307.webp",
+      "alt": "MAI-Transcribe-2が公開｜60言語・1時間0.10ドルの文字起こし",
+      "date": "2026-09-19"
     }
   ],
   "works": [

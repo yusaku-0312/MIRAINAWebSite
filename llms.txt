@@ -332,6 +332,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: GmailのGeminiで資料作成｜メールを引き継ぎ文書にまとめる方法](https://miraina-ai.com/blogs/blog304.html): GmailのGeminiでメールから資料作成する連携が登場。公開時は英語のみ対応です。対象プラン、引き継ぎ文書を作る指示例、共有前の確認点を解説します。
 - [最新ブログ: SalesforceのAI Control Planeとは｜AIエージェント管理で中小企業が決める3つのこと](https://miraina-ai.com/blogs/blog305.html): Salesforceが2026年9月10日に発表した「AI Control Plane」を解説。IDC調査は導入企業の88%が本番稼働に至らないと報告し、Gartnerは40%超のプロジェクト中止を指摘。中小企業がAIエージェント管理で決めるべき3つのことを整理します。
 - [最新ブログ: Claude for Small Businessが43ワークフローに拡張｜中小企業が使い始める3ステップ](https://miraina-ai.com/blogs/blog306.html): Anthropicが2026年9月15日に発表したClaude for Small Businessの拡張を解説。5月の15から43ワークフローに増え、27の新連携が追加。90万回超インストールの実績と、日本の中小企業が使い始めるための3ステップを整理します。
+- [最新ブログ: MAI-Transcribe-2が公開｜60言語・1時間0.10ドルの文字起こしで確認する4項目](https://miraina-ai.com/blogs/blog307.html): Microsoft AIが2026年9月3日に公開した音声認識モデル「MAI-Transcribe-2」を解説。60言語対応、FLEURS平均WER5.2%、GPT-Transcribe比最大10倍速、音声1時間0.10ドル。パブリックプレビューの制約と、議事録自動化の前に確認すべき4項目を整理します。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)

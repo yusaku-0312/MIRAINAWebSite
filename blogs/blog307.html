@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>MAI-Transcribe-2が公開｜60言語・1時間0.10ドルの文字起こしで確認する4項目 | MIRAINAブログ</title>
+<meta name="description" content="Microsoft AIが2026年9月3日に公開した音声認識モデル「MAI-Transcribe-2」を解説。60言語対応、FLEURS平均WER5.2%、GPT-Transcribe比最大10倍速、音声1時間0.10ドル。パブリックプレビューの制約と、議事録自動化の前に確認すべき4項目を整理します。">
+<!-- OGP Tags -->
+<meta property="og:title" content="MAI-Transcribe-2が公開｜60言語・1時間0.10ドルの文字起こしで確認する4項目">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://miraina-ai.com/blogs/blog307.html">
+<meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog307-1.webp">
+<meta property="og:description" content="Microsoft AIが2026年9月3日に公開した音声認識モデル「MAI-Transcribe-2」を解説。60言語対応、FLEURS平均WER5.2%、GPT-Transcribe比最大10倍速、音声1時間0.10ドル。パブリックプレビューの制約と、議事録自動化の前に確認すべき4項目を整理します。">
+<link rel="canonical" href="https://miraina-ai.com/blogs/blog307.html">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap" rel="stylesheet">
+<!-- Favicon -->
+<link rel="icon" href="/images/favicon.ico">
+<!-- CSS -->
+<link rel="stylesheet" href="/css/reset.css">
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/css/blog_article.css">
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+<div class="container header-inner">
+<a href="/" class="header-logo">
+<img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+</a>
+<div class="hamburger" id="js-hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<nav class="header-nav">
+<div class="nav-item has-dropdown">
+<a href="/services.html" class="nav-link">サービス</a>
+<div class="dropdown-menu">
+<a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+<a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+<a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+<a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+<a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+</div>
+</div>
+<div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+<div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+<div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+<div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+<div class="nav-item">
+<a href="/llms.txt" class="nav-link" aria-label="AI info">
+<svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+<path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"/>
+</svg>
+</a>
+</div>
+</nav>
+</div>
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="js-mobile-menu">
+<nav class="mobile-nav">
+<div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+<div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+<div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+<div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+<div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+</nav>
+</div>
+</header>
+<main>
+<!-- Breadcrumbs -->
+<div class="container breadcrumbs"><ul><li><a href="/">ホーム</a></li><li><a href="/blogs.html">ブログ</a></li><li>MAI-Transcribe-2が公開</li></ul></div>
+<article class="article-container">
+<!-- Article Header -->
+<header class="article-header">
+<div class="article-meta">
+<span class="article-date">2026.09.19</span>
+<div class="article-tags"><span class="article-tag">Microsoft</span><span class="article-tag">文字起こし</span><span class="article-tag">業務効率化</span></div>
+</div>
+<h1 class="article-title">MAI-Transcribe-2が公開｜60言語・1時間0.10ドルの文字起こしで確認する4項目</h1>
+<div class="article-thumbnail">
+<img src="/images/blogs_images/blog307-1.webp" alt="MAI-Transcribe-2が公開｜60言語・1時間0.10ドルの文字起こし" width="800" height="450" fetchpriority="high">
+</div>
+</header>
+<!-- Summary -->
+<section class="article-summary"><h2 class="sr-only">記事の概要</h2><p>Microsoft AIは2026年9月3日、次世代の音声テキスト変換モデル「MAI-Transcribe-2」を公開しました。60言語に対応し、FLEURSベンチマークの60言語平均で単語誤り率（WER）5.2%、処理速度はGPT-Transcribe比で最大10倍。価格は2026年12月31日までの期間限定で音声1時間あたり0.10ドルです。</p><p>本記事ではMicrosoft公式ドキュメントと日本語報道を一次情報から確認し、数字の意味と「パブリックプレビューである」という重要な前提、そして議事録の自動化に使う前に確認すべき4項目を整理します。情報確認日：2026年9月19日。</p></section>
+<!-- Table of Contents -->
+<div class="article-toc"><div class="toc-title">目次</div><ul><li><a href="#section1">1. 何が公開された？MAI-Transcribe-2の概要</a></li><li><a href="#section2">2. 精度・速度・価格を数字で確認する</a></li><li><a href="#section3">3. 中小企業の実務でどこに効くのか</a></li><li><a href="#section4">4. 使う前に確認する4項目</a></li><li><a href="#section5">5. 今日から試す3ステップ</a></li><li><a href="#section6">6. まとめ</a></li></ul></div>
+<div class="article-body">
+<h2 id="section1">1. 何が公開された？MAI-Transcribe-2の概要</h2>
+<p><strong>Microsoft AIは2026年9月3日、自社開発の音声テキスト変換モデル「MAI-Transcribe-2」を公開しました。</strong>Microsoft Foundry（Azure Speech）経由で利用でき、公式ドキュメントによれば60の言語と「実際のオーディオ条件」での高速かつ正確な文字起こしを提供します。日本語も対応言語に含まれています。</p>
+<figure class="article-figure"><img src="/images/blogs_images/blog307-2.webp" alt="MAI-Transcribe-2の仕様を記載したMicrosoft Learn公式ドキュメント" width="800" height="450" loading="lazy" decoding="async"><figcaption>Microsoft Learn公式ドキュメント。ページタイトルに「（プレビュー）」と明記されている点が重要。</figcaption></figure>
+<p>公式ドキュメントが想定ワークロードとして挙げているのは、ビデオキャプション、会議、臨床ノート、コールセンターのドキュメント、アクセシビリティツール、コンテンツ作成、音声エージェントです。提供される機能は次の通りです。</p>
+<ul><li><strong>話者ダイアライゼーション（話者分離）：</strong>録音を話者別にセグメント化し、各発言を話者に紐づける</li><li><strong>単語レベルのタイムスタンプ：</strong>すべての単語に開始位置と長さを付与し、検索・編集を可能にする</li><li><strong>自動言語識別：</strong>言語を指定しなくてもモデル側が判定する（既定は多言語モード）</li><li><strong>キーワードバイアス：</strong>商品名や略語などの用語リストを渡して認識を寄せる</li><li><strong>コードスイッチング：</strong>発話の途中で言語が切り替わる会話に対応する</li><li><strong>文字起こしスタイルの切り替え：</strong>フィラーを含む「verbatim」と、フィラーを除いた読みやすい「clean」を選べる</li></ul>
+<p>なお公式ドキュメントでは、旧世代の <code>MAI-Transcribe-1</code> が<strong>2026年8月20日付で非推奨</strong>となったことも明記されています。MicrosoftのMAIシリーズ全体の位置づけについては<a href="/blogs/blog170.html">Microsoft独自AIモデルMAI発表の記事</a>もあわせてご覧ください。</p>
+<h2 id="section2">2. 精度・速度・価格を数字で確認する</h2>
+<p>今回の公開が注目されている理由は、精度・速度・価格の3つが同時に改善された点にあります。報道されている数値を整理します。</p>
+<figure class="article-figure"><img src="/images/blogs_images/blog307-3.webp" alt="MAI-Transcribe-2の精度と処理速度を報じる日本語ニュース記事" width="800" height="450" loading="lazy" decoding="async"><figcaption>窓の杜の報道（2026年9月7日付）。「60言語の平均単語誤り率（WER）で比較対象中トップ、処理速度も向上」と見出しに記載。</figcaption></figure>
+<div class="article-table-wrapper"><table class="article-table"><thead><tr><th>指標</th><th>MAI-Transcribe-2</th><th>補足</th></tr></thead><tbody><tr><td>精度（WER）</td><td>60言語平均 5.2%</td><td>FLEURSベンチマーク。比較対象中トップ</td></tr><tr><td>処理速度</td><td>最大10倍</td><td>GPT-Transcribe比。Scribe v2比7倍、Gemini 3.5 Transcribe比5倍</td></tr><tr><td>価格</td><td>音声1時間 0.10ドル</td><td>2026年12月31日までの期間限定価格</td></tr><tr><td>前世代価格</td><td>音声1時間 0.36ドル</td><td>今回の価格は約72%の引き下げにあたる</td></tr><tr><td>対応言語</td><td>60言語</td><td>日本語を含む</td></tr></tbody></table></div>
+<p>WERは「話した単語のうち何%を誤認識したか」を示す指標で、小さいほど高精度です。60言語の平均で5.2%という水準は、Whisper-Large-V3、GPT-Transcribe、Scribe v2、Gemini 3.5 Transcribeといった主要モデルと比較してトップと報じられています。</p>
+<p><strong>ただし「WERが最も低い」という主張には読み方があります。</strong>これは60言語の平均値での比較であり、日本語単体での誤り率が同じ順位になるとは限りません。実務で判断すべきは公表されたベンチマークではなく、自社の会議音声で試した結果です。この点は後述の3ステップで触れます。</p>
+<h2 id="section3">3. 中小企業の実務でどこに効くのか</h2>
+<p>音声認識の価格が下がることは、中小企業にとって「これまで採算が合わなかった記録業務」が現実的になることを意味します。特に効きやすいのは次の領域です。</p>
+<ol><li><strong>会議・商談の議事録：</strong>録音を丸ごとテキスト化し、要約はLLMに渡す。話者分離があるため「誰が何を言ったか」まで残せる。</li><li><strong>電話・問い合わせ対応の記録：</strong>コールセンター用途が公式の想定ワークロードに含まれており、ノイズの多い環境での堅牢性が設計に織り込まれている。</li><li><strong>動画・セミナーの字幕：</strong>単語レベルのタイムスタンプがあるため、字幕ファイルの生成や検索に転用しやすい。</li><li><strong>多言語対応：</strong>インバウンド接客や海外取引先とのやり取りで、自動言語識別とコードスイッチングが活きる。</li></ol>
+<p><strong>コスト感の目安：</strong>週5時間の会議を録音すると月20時間、音声1時間0.10ドルなら月2ドル（1ドル150円換算で約300円）です。もちろんこれはモデル利用料のみで、Azure側のリソース費用や社内で構築・運用する手間は別途かかります。それでも「録音は全部残す」という運用が価格面では成立する水準になった、というのが今回の意味です。</p>
+<p>なお、Google MeetやTeamsのようにグループウェア側に議事録機能が組み込まれている場合、そちらのほうが導入は圧倒的に簡単です。会議ツール内で完結させたい場合は<a href="/blogs/blog197.html">Google MeetのAI議事録の記事</a>もご確認ください。MAI-Transcribe-2が向くのは、<strong>既存の会議ツールでは拾えない音声（電話録音、対面商談のICレコーダー、動画素材）を自社の仕組みに取り込みたいケース</strong>です。</p>
+<h2 id="section4">4. 使う前に確認する4項目</h2>
+<p>数字だけを見て導入を決めると足元をすくわれます。公式ドキュメントに明記されている制約のうち、実務に直結する4点を挙げます。</p>
+<ol><li><strong>パブリックプレビューである：</strong>公式ドキュメントは「このプレビューはサービスレベルアグリーメント（SLA）なしで提供され、運用環境のワークロードには推奨されません」と明記しています。基幹業務に組み込むのは時期尚早で、まずは検証用途に限定するのが妥当です。</li><li><strong>話者分離は長時間の録音で失敗する：</strong>プレビュー時点では、話者分離を有効にした約15分以上の録音がタイムアウト系のエラー（HTTP 408 / 500 / 503）で失敗すると公式に注意書きがあります。長時間の会議では<strong>話者分離をオフにして文字起こしし、返却された単語レベルのタイムスタンプを使って別途話者を割り当てる</strong>のが公式の推奨回避策です。</li><li><strong>0.10ドルは期間限定価格：</strong>この価格は2026年12月31日までとされています。年明け以降の価格は現時点で確定していないため、コスト試算を年間予算に落とし込む際は注意が必要です。</li><li><strong>既定の出力スタイルは「verbatim」：</strong>既定では「えー」「あの」といったフィラーや言い直しがそのまま残ります。読ませる議事録を作るなら <code>clean</code> を指定し、コンプライアンスや品質保証で発言を正確に残す必要があるなら既定のままにする、という使い分けになります。</li></ol>
+<p>もう1点、言語指定には注意があります。公式ドキュメントは <code>locales</code> パラメータについて「モデルに対する非常に強力なヒントであり、録音が特定の言語であると絶対に確信している場合を除き、指定しないでください」と述べています。日本語の会議だからといって反射的に <code>ja</code> を固定すると、英語混じりの発言で精度を落とす可能性があります。</p>
+<h2 id="section5">5. 今日から試す3ステップ</h2>
+<p><strong>MIRAINAの提案：</strong>プレビュー段階の技術に対して正しい向き合い方は、「全社導入の検討」ではなく「自社音声での実測」です。</p>
+<ol><li><strong>15分以内の録音1本で試す：</strong>話者分離の制約に引っかからない長さで、実際の会議音声を1本流す。ベンチマークの5.2%ではなく、自社の音声環境での精度を自分の目で確認する。</li><li><strong>用語リストを渡して再測定する：</strong>自社の商品名・社内略語・取引先名をキーワードバイアス（<code>phraseList</code>）に登録して同じ音声を再実行し、差分を見る。固有名詞の誤認識は議事録の実用性を最も下げる要因で、ここが改善するかどうかが導入判断の分かれ目になります。</li><li><strong>人が確認する範囲を先に決める：</strong>「文字起こしはAI、事実確認と共有は人」のように責任の境界を決めてから運用に乗せる。WER5.2%は<strong>100単語に約5語の誤りが残る</strong>ということであり、無編集で社外に出せる品質ではありません。</li></ol>
+<p>この進め方は、AI導入全般に共通する考え方でもあります。中小企業のAI活用が伸び悩む背景については<a href="/blogs/blog298.html">帝国データバンク調査の記事</a>で整理しています。自社業務に合わせた検証設計や社内ルールづくりは、<a href="/services/ai_consulting.html">生成AI活用支援</a>や<a href="/services/ai_training.html">AI研修</a>でご支援しています。</p>
+<h2 id="section6">6. まとめ</h2>
+<p>MAI-Transcribe-2は、60言語平均WER5.2%・GPT-Transcribe比で最大10倍の処理速度・音声1時間0.10ドルという3拍子が揃ったモデルです。価格が前世代から約72%下がったことで、これまで費用対効果が合わなかった「すべての音声を記録に残す」運用が、少なくともコスト面では射程に入りました。</p>
+<p>一方で、パブリックプレビューであること、話者分離が約15分以上の録音で失敗すること、0.10ドルが2026年末までの期間限定価格であることは、見出しの数字だけでは見えない前提です。中小企業がいま取るべき行動は、全社導入の意思決定ではなく、15分の自社音声で実測して固有名詞の精度を確かめることです。その1本の検証が、年明けの正式提供時に慌てないための最短ルートになります。</p>
+<div class="article-references"><div class="ref-title">参考リンク</div><ul><li><a href="https://learn.microsoft.com/ja-jp/azure/ai-services/speech-service/mai-transcribe" rel="noopener" target="_blank">Microsoft Learn：Azure Speech での MAI-Transcribe（プレビュー）</a></li><li><a href="https://microsoft.ai/models/mai-transcribe-2/" rel="noopener" target="_blank">Microsoft AI公式：MAI-Transcribe-2</a></li><li><a href="https://forest.watch.impress.co.jp/docs/news/2138699.html" rel="noopener" target="_blank">窓の杜：Microsoft、“世界でもっとも高速・高精度で安価”とうたう音声認識モデルを発表、「MAI-Transcribe-2」（2026年9月7日）</a></li></ul></div>
+</div>
+<!-- CTA Button -->
+<div class="article-cta">
+<div class="cta-box">
+<h2 class="cta-title">AI導入でお悩みですか？</h2>
+<p class="cta-text">MIRAINAでは、貴社の課題に合わせた<br>最適なAI活用プランをご提案します。</p>
+<a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+</div>
+</div>
+<!-- Editorial Information -->
+<div class="article-editor">
+<div class="editor-header">この記事を監修した人</div>
+<div class="editor-profile">
+<div class="editor-image">
+<img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+</div>
+<div class="editor-info">
+<div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+<p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+</div>
+</div>
+</div>
+<!-- Related Articles -->
+<div class="article-related"><h2 class="related-title">関連記事</h2><div class="related-grid"><a href="/blogs/blog306.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card306.webp" alt="Claude for Small Businessが43ワークフローに拡張｜中小企業が使い始める3ステップ" loading="lazy" decoding="async"></div><div class="related-content"><div class="related-date">2026.09.18</div><div class="related-text">Claude for Small Businessが43ワークフローに拡張｜中小企業が使い始める3ステップ</div></div></a><a href="/blogs/blog197.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card197.webp" alt="Google MeetのAI議事録とは？会議メモ自動化で何が変わるか" loading="lazy" decoding="async"></div><div class="related-content"><div class="related-date">2026.07.05</div><div class="related-text">【2026年7月最新】Google MeetのAI議事録とは？会議メモ自動化で何が変わるか</div></div></a><a href="/blogs/blog170.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card170.webp" alt="Microsoft独自AIモデルMAI発表で企業のAIベンダー選びはどう変わるか" loading="lazy" decoding="async"></div><div class="related-content"><div class="related-date">2026.06.19</div><div class="related-text">【2026年6月最新】Microsoft独自AIモデルMAI発表で企業のAIベンダー選びはどう変わるか</div></div></a></div></div>
+</article>
+</main>
+<!-- Footer -->
+<footer class="footer">
+<div class="container footer-inner">
+<div class="footer-brand">
+<a href="/index.html">
+<p class="footer-brand-text">MIRAINA</p>
+</a>
+</div>
+<div class="footer-center">
+</div>
+<div class="footer-menu">
+<ul class="footer-menu-list">
+<li><a href="/about.html">私たちについて</a></li>
+<li><a href="/works.html">事例紹介</a></li>
+<li><a href="/blogs.html">ブログ</a></li>
+<li><a href="/contact.html">お問い合わせ</a></li>
+<li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+</ul>
+<div class="footer-sns">
+<a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+<a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+<svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+<path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"/>
+</svg>
+</a>
+<p>&copy; MIRAINA All Rights Reserved.</p>
+</div>
+</footer>
+<script src="/js/common.js"></script>
+</body>
+</html>
