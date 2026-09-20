@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>ChatGPT WorkにData agent登場｜社内データを会話で分析する前に決める4項目 | MIRAINAブログ</title>
+<meta name="description" content="OpenAIが2026年9月10日に発表したChatGPT Workの新機能「Data agent」を解説。BigQuery・Snowflakeなどへの接続、Power BI・Tableau内でのダッシュボード作成、管理者による権限管理の仕組みと、中小企業が社内データをつなぐ前に決めるべき4項目を整理します。">
+<!-- OGP Tags -->
+<meta property="og:title" content="ChatGPT WorkにData agent登場｜社内データを会話で分析する前に決める4項目">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://miraina-ai.com/blogs/blog308.html">
+<meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog308-1.webp">
+<meta property="og:description" content="OpenAIが2026年9月10日に発表したChatGPT Workの新機能「Data agent」を解説。BigQuery・Snowflakeなどへの接続、Power BI・Tableau内でのダッシュボード作成、管理者による権限管理の仕組みと、中小企業が社内データをつなぐ前に決めるべき4項目を整理します。">
+<link rel="canonical" href="https://miraina-ai.com/blogs/blog308.html">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap" rel="stylesheet">
+<!-- Favicon -->
+<link rel="icon" href="/images/favicon.ico">
+<!-- CSS -->
+<link rel="stylesheet" href="/css/reset.css">
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/css/blog_article.css">
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+<div class="container header-inner">
+<a href="/" class="header-logo">
+<img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+</a>
+<div class="hamburger" id="js-hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<nav class="header-nav">
+<div class="nav-item has-dropdown">
+<a href="/services.html" class="nav-link">サービス</a>
+<div class="dropdown-menu">
+<a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+<a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+<a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+<a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+<a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+</div>
+</div>
+<div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+<div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+<div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+<div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+<div class="nav-item">
+<a href="/llms.txt" class="nav-link" aria-label="AI info">
+<svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+<path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"/>
+</svg>
+</a>
+</div>
+</nav>
+</div>
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="js-mobile-menu">
+<nav class="mobile-nav">
+<div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+<div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+<div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+<div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+<div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+</nav>
+</div>
+</header>
+<main>
+<!-- Breadcrumbs -->
+<div class="container breadcrumbs"><ul><li><a href="/">ホーム</a></li><li><a href="/blogs.html">ブログ</a></li><li>ChatGPT WorkにData agent登場</li></ul></div>
+<article class="article-container">
+<!-- Article Header -->
+<header class="article-header">
+<div class="article-meta">
+<span class="article-date">2026.09.20</span>
+<div class="article-tags"><span class="article-tag">OpenAI</span><span class="article-tag">データ分析</span><span class="article-tag">業務効率化</span></div>
+</div>
+<h1 class="article-title">ChatGPT WorkにData agent登場｜社内データを会話で分析する前に決める4項目</h1>
+<div class="article-thumbnail">
+<img src="/images/blogs_images/blog308-1.webp" alt="ChatGPT WorkにData agent登場｜社内データを会話で分析する" width="800" height="450" fetchpriority="high">
+</div>
+</header>
+<!-- Summary -->
+<section class="article-summary"><h2 class="sr-only">記事の概要</h2><p>OpenAIは2026年9月10日（現地時間）、ChatGPT Work向けの新機能「Data agent」を発表しました。社内のデータベースに接続し、クエリを書かずにチャットのやりとりだけで「なぜ売上が落ちたのか」を調べ、インタラクティブなダッシュボードまで作成できる機能です。</p><p>本記事ではOpenAIの発表内容を日英2つの報道で照合し、接続できるデータソース、Power BIやTableauとの連携、管理者が握る権限設計を整理します。そのうえで、中小企業が自社データをAIにつなぐ前に決めるべき4項目を提示します。情報確認日：2026年9月20日。</p></section>
+<!-- Table of Contents -->
+<div class="article-toc"><div class="toc-title">目次</div><ul><li><a href="#section1">1. 何が発表された？Data agentの概要</a></li><li><a href="#section2">2. 何につながり、どこにダッシュボードを作れるのか</a></li><li><a href="#section3">3. 先行導入企業で実際に何が起きたか</a></li><li><a href="#section4">4. 社内データをつなぐ前に決める4項目</a></li><li><a href="#section5">5. 中小企業が今日から始める3ステップ</a></li><li><a href="#section6">6. まとめ</a></li></ul></div>
+<div class="article-body">
+<h2 id="section1">1. 何が発表された？Data agentの概要</h2>
+<p><strong>OpenAIは2026年9月10日（現地時間）、ChatGPT Work向けの新機能「Data agent」を発表しました。</strong>承認された社内データソースに接続し、業績指標に何が起きたのかを調査して、社員が共有できるインタラクティブなダッシュボードを構築するプラグインです。</p>
+<figure class="article-figure"><img src="/images/blogs_images/blog308-2.webp" alt="ChatGPT WorkのData agent発表を報じるITmediaの記事" width="800" height="450" loading="lazy" decoding="async"><figcaption>ITmedia AI＋の報道（2026年9月11日付）。「米OpenAIは9月10日（現地時間）、ChatGPT Work向け新機能『Data agent』を発表した」と記載されている。</figcaption></figure>
+<p>OpenAIが想定しているのは、「なぜ売上が鈍ったのか」「どこで支出が増えているのか」「大口顧客のどの課題が契約更新を脅かしているのか」といった日常的な業務上の問いです。こうした問いはこれまで、レポートが出てくるのを待つか、分析できる人に依頼するしかありませんでした。</p>
+<p>Data agentの特徴は、<strong>ユーザーがSQLなどのクエリを書かず、新しい分析ツールの使い方を覚える必要もなく、1つの会話の中で分析を指示し、調整していける</strong>点にあります。「この数字を部門別に分けて」「先月と比べて」といった追加の問いを重ねながら、分析を深めていく使い方が想定されています。提供形態は、企業向けワークスペース「ChatGPT Work」のプラグイン（ディレクトリ上の名称は「Data」）です。</p>
+<h2 id="section2">2. 何につながり、どこにダッシュボードを作れるのか</h2>
+<p>実務判断で重要なのは「自社の環境とつながるのか」です。発表された接続先を整理しました。</p>
+<div class="article-table-wrapper"><table class="article-table"><thead><tr><th>区分</th><th>対応している主なサービス</th></tr></thead><tbody><tr><td>データソース接続</td><td>Amazon Redshift、Datadog、Google BigQuery、ClickHouse、Databricks、MongoDB、Snowflake など</td></tr><tr><td>ファイル・文書の取り込み</td><td>Google ドライブ、SharePoint</td></tr><tr><td>ビジネス定義の参照元</td><td>dbt、Snowflake Horizon、Databricks Genie Ontology、GitHub、既存のBIダッシュボード</td></tr><tr><td>ダッシュボード作成先</td><td>Omni、Oracle BI、Power BI、Sigma、Tableau、ThoughtSpot</td></tr><tr><td>分析結果の共有</td><td>Slack、メール</td></tr></tbody></table></div>
+<p><strong>見落とされがちですが、重要なのは3行目の「ビジネス定義の参照元」です。</strong>Data agentは単に数字を読むのではなく、その企業独自のビジネス用語、指標の定義、計算式、データ同士の関係を使ってデータを解釈します。これらの定義は、dbtやSnowflake Horizon、Databricks Genie Ontologyといったセマンティックレイヤーや既存のBIダッシュボードから読み込まれます。</p>
+<p>つまり、<strong>「自社にとって『売上』が何を指すのか」が定義されていない会社では、Data agentの精度は上がりません。</strong>AIの性能ではなく、自社のデータ整備状況が結果を左右する構造になっています。</p>
+<p>権限管理については、管理者がどのデータ接続を利用可能にするか、どの役割のユーザーが使えるかを決めます。実行されるクエリは、接続されたアカウントの既存の権限（テーブル単位・行単位・列単位の制限を含む）に従うため、<strong>その社員が本来アクセスできないデータをData agentが勝手に読むことはない</strong>という設計です。AIエージェントの統制については<a href="/blogs/blog305.html">SalesforceのAI Control Planeの記事</a>もあわせてご覧ください。</p>
+<p>また分析して終わりではなく、次に取るべき手順や関わるべき人物を提案し、Slackやメールで結果を共有し、ユーザーが承認した作業を連携ツール経由で実行するところまでが射程に入っています。</p>
+<h2 id="section3">3. 先行導入企業で実際に何が起きたか</h2>
+<p>OpenAIは自社内の状況として、<strong>プロダクトチームのほぼ全員、市場開拓（go-to-market）組織の3分の2以上がChatGPT Workでdata agentsを使っている</strong>と述べています。同社はこの浸透の要因を、社内データチームが共通のビジネス定義を整備し、アクセスルールを定め、機微データへの安全策を講じたことに帰しています。</p>
+<figure class="article-figure"><img src="/images/blogs_images/blog308-3.webp" alt="OpenAIのData agent発表を伝える海外メディアUnite.AIの記事" width="800" height="450" loading="lazy" decoding="async"><figcaption>Unite.AIの報道（2026年9月10日付）。「統制は管理者側に残る」「平易な言葉の質問を共有可能なダッシュボードに変える」と要点が整理されている。</figcaption></figure>
+<p>社外でも、αプログラム参加企業の事例が公表されています。日本企業ではNTTデータが名を連ねています。</p>
+<ul><li><strong>NTTデータ：</strong>同社グループのGlobal AI Office責任者（Yuji Shono氏）は、ライセンス費用・工数・技術的な専門性がダッシュボードの全社展開を阻んでいたとしたうえで、「特に営業部門やコーポレート部門の多くの非エンジニアが、平易な言葉で自分のダッシュボードを構築・更新できるようになった」と述べています。</li><li><strong>ServiceTitan：</strong>同社のAIアシスタント「Atlas」の利用者が、非利用者の<strong>約3倍の頻度でキャンペーンを立ち上げている</strong>ことを示すダッシュボードを構築。この発見がオンボーディングの簡素化につながったとしています。</li><li><strong>micro1：</strong>オペレーションチームが業績追跡用のダッシュボードを<strong>30分で再構築</strong>し、同時に元のダッシュボードに含まれていた誤りを発見したと報告されています。</li></ul>
+<p><strong>ただし、これらはすべてOpenAIの発表資料に掲載された顧客の声である点は割り引いて読む必要があります。</strong>「30分で再構築」も「約3倍」も、すでにBigQuery級のデータ基盤とBI環境を持つ企業での数字であり、データが各担当者のExcelに散らばっている会社で同じ結果が出るわけではありません。</p>
+<h2 id="section4">4. 社内データをつなぐ前に決める4項目</h2>
+<p>Data agentは「AIに社内の生データを読ませる」機能です。便利さと引き換えに、これまで曖昧にできていた論点が一気に表面化します。導入検討の前に決めておくべき4点を挙げます。</p>
+<ol><li><strong>前提となるプラン要件を確認する：</strong>Data agentはChatGPT Workの機能であり、企業向け契約と管理者による有効化が前提です。個人向けプランの延長線上で使えるものではありません。</li><li><strong>「誰がどのデータに触れてよいか」を先に決める：</strong>Data agentは接続アカウントの既存権限に従います。裏を返せば、<strong>現在の権限設定がそのままAIの閲覧範囲になる</strong>ということです。「実は全社員が給与テーブルを参照できた」といった不備はそのまま露出します。接続前に権限の棚卸しを行うのが順序です。</li><li><strong>指標の定義を1つに揃える：</strong>「売上」が受注ベースなのか計上ベースなのか、「アクティブユーザー」の定義は何か。この合意がない状態でAIに問いかけても、返ってくる数字を誰も信用できません。OpenAI自身が社内浸透の要因に「共通のビジネス定義の整備」を挙げている点は示唆的です。</li><li><strong>出てきた数字を誰が検証するかを決める：</strong>自然言語で分析できることは、裏付けなしに数字が独り歩きするリスクと表裏一体です。経営判断に使う数字については、人が一次データに当たって確認する工程を残してください。</li></ol>
+<p>中小企業のAI活用が試用段階で止まりやすい構造的な背景については<a href="/blogs/blog298.html">帝国データバンク調査の記事</a>で整理しています。</p>
+<h2 id="section5">5. 中小企業が今日から始める3ステップ</h2>
+<p><strong>MIRAINAの提案：</strong>Data agentはデータ基盤が整った企業ほど効果が大きい機能です。中小企業にとっての正しい問いは「導入するか」ではなく、<strong>「この種の機能が来たときに使える状態に自社があるか」</strong>です。今すぐ着手できるのは次の3つです。</p>
+<ol><li><strong>主要指標を10個、紙に書き出して定義を確定させる：</strong>売上、粗利、新規顧客数、リピート率など、経営会議で使う数字を列挙し、それぞれ「どのデータから、どう計算するか」を1行で書く。ここで社内の認識がずれていることが判明するのが普通で、それ自体が最大の成果です。</li><li><strong>数字がどこにあるかを1枚にまとめる：</strong>会計ソフト、POS、予約システム、スプレッドシート。データの置き場所と持ち主を可視化します。この棚卸しがないまま「AIでデータ分析」に進むと、必ず「そもそもデータが集まらない」で止まります。</li><li><strong>今ある範囲でAIに分析させてみる：</strong>大規模なデータ基盤がなくても、CSVを書き出してChatGPTやGeminiのデータ分析機能に読ませることは今日からできます（<a href="/blogs/blog302.html">Android版SheetsのGeminiで売上表を分析する記事</a>）。ここで「何を聞けば示唆が出るか」の感覚を掴んでおくと、本格的な仕組みを入れる際の判断が速くなります。</li></ol>
+<p>指標の定義づくりやデータ整備の進め方、社内ルールの設計は、<a href="/services/ai_consulting.html">生成AI活用支援</a>や<a href="/services/ai_training.html">AI研修</a>でご支援しています。</p>
+<h2 id="section6">6. まとめ</h2>
+<p>ChatGPT WorkのData agentは、BigQueryやSnowflakeといった社内データ基盤に接続し、クエリを書かずに会話だけで分析を進め、Power BIやTableauの中にまでダッシュボードを作れる機能です。管理者が接続先と利用権限を統制し、クエリは既存のアクセス権限に従います。</p>
+<p>注目すべきは、OpenAI自身が社内浸透の理由として「共通のビジネス定義の整備、アクセスルールの策定、機微データへの安全策」を挙げている点です。<strong>この機能の成否を決めるのはAIの性能ではなく、つなぐ側のデータが整っているかどうかでした。</strong>中小企業がいま取るべき行動は、高機能なエージェントの導入検討ではなく、主要指標10個の定義を確定させ、データの置き場所を1枚にまとめることです。この地味な作業こそが、次に来るどのAI分析ツールにも効く唯一の準備になります。</p>
+<div class="article-references"><div class="ref-title">参考リンク</div><ul><li><a href="https://www.itmedia.co.jp/aiplus/article/2609/11/2000001391/" rel="noopener" target="_blank">ITmedia AI＋：ChatGPT Work、質問するだけで社内データ分析・グラフやダッシュボードも作る「Data agent」（2026年9月11日）</a></li><li><a href="https://www.unite.ai/openai-introduces-data-agent-in-chatgpt-work-to-analyze-company-data/" rel="noopener" target="_blank">Unite.AI：OpenAI Introduces Data Agent in ChatGPT Work to Analyze Company Data（2026年9月10日）</a></li><li><a href="https://gigazine.net/news/20260911-chatgpt-work-data-agent/" rel="noopener" target="_blank">GIGAZINE：ChatGPT Workに企業データを読み取らせ回答やダッシュボード作成に利用できる「Data agent」が登場</a></li></ul></div>
+</div>
+<!-- CTA Button -->
+<div class="article-cta">
+<div class="cta-box">
+<h2 class="cta-title">AI導入でお悩みですか？</h2>
+<p class="cta-text">MIRAINAでは、貴社の課題に合わせた<br>最適なAI活用プランをご提案します。</p>
+<a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+</div>
+</div>
+<!-- Editorial Information -->
+<div class="article-editor">
+<div class="editor-header">この記事を監修した人</div>
+<div class="editor-profile">
+<div class="editor-image">
+<img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+</div>
+<div class="editor-info">
+<div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+<p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+</div>
+</div>
+</div>
+<!-- Related Articles -->
+<div class="article-related"><h2 class="related-title">関連記事</h2><div class="related-grid"><a href="/blogs/blog307.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card307.webp" alt="MAI-Transcribe-2が公開｜60言語・1時間0.10ドルの文字起こしで確認する4項目" loading="lazy" decoding="async"></div><div class="related-content"><div class="related-date">2026.09.19</div><div class="related-text">MAI-Transcribe-2が公開｜60言語・1時間0.10ドルの文字起こしで確認する4項目</div></div></a><a href="/blogs/blog305.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card305.webp" alt="SalesforceのAI Control Planeとは｜AIエージェント管理で中小企業が決める3つのこと" loading="lazy" decoding="async"></div><div class="related-content"><div class="related-date">2026.09.17</div><div class="related-text">SalesforceのAI Control Planeとは｜AIエージェント管理で中小企業が決める3つのこと</div></div></a><a href="/blogs/blog302.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card302.webp" alt="GeminiがAndroid版Sheetsに対応｜スマホで売上表を分析" loading="lazy" decoding="async"></div><div class="related-content"><div class="related-date">2026.09.14</div><div class="related-text">GeminiがAndroid版Sheetsに対応｜スマホで売上表を分析</div></div></a></div></div>
+</article>
+</main>
+<!-- Footer -->
+<footer class="footer">
+<div class="container footer-inner">
+<div class="footer-brand">
+<a href="/index.html">
+<p class="footer-brand-text">MIRAINA</p>
+</a>
+</div>
+<div class="footer-center">
+</div>
+<div class="footer-menu">
+<ul class="footer-menu-list">
+<li><a href="/about.html">私たちについて</a></li>
+<li><a href="/works.html">事例紹介</a></li>
+<li><a href="/blogs.html">ブログ</a></li>
+<li><a href="/contact.html">お問い合わせ</a></li>
+<li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+</ul>
+<div class="footer-sns">
+<a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+<a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+<svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+<path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"/>
+</svg>
+</a>
+<p>&copy; MIRAINA All Rights Reserved.</p>
+</div>
+</footer>
+<script src="/js/common.js"></script>
+</body>
+</html>

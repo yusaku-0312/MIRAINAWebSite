@@ -2762,6 +2762,15 @@
       "thumbnail": "/images/blogs_images/blog-card307.webp",
       "alt": "MAI-Transcribe-2が公開｜60言語・1時間0.10ドルの文字起こし",
       "date": "2026-09-19"
+    },
+    {
+      "id": 308,
+      "title": "ChatGPT WorkにData agent登場｜社内データを会話で分析する前に決める4項目",
+      "description": "OpenAIが2026年9月10日に発表したChatGPT Workの新機能「Data agent」を解説。BigQuery・Snowflakeなどへの接続、Power BI・Tableau内でのダッシュボード作成、管理者による権限管理の仕組みと、中小企業が社内データをつなぐ前に決めるべき4項目を整理します。",
+      "link": "/blogs/blog308.html",
+      "thumbnail": "/images/blogs_images/blog-card308.webp",
+      "alt": "ChatGPT WorkにData agent登場｜社内データを会話で分析する",
+      "date": "2026-09-20"
     }
   ],
   "works": [
