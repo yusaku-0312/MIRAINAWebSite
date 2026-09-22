@@ -336,6 +336,8 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: ChatGPT WorkにData agent登場｜社内データを会話で分析する前に決める4項目](https://miraina-ai.com/blogs/blog308.html): OpenAIが2026年9月10日に発表したChatGPT Workの新機能「Data agent」を解説。BigQuery・Snowflakeなどへの接続、Power BI・Tableau内でのダッシュボード作成、管理者による権限管理の仕組みと、中小企業が社内データをつなぐ前に決めるべき4項目を整理します。
 - [最新ブログ: Gmail検索のAI要約が拡大｜日本での利用条件とメールの探し方](https://miraina-ai.com/blogs/blog309.html): Gmail検索のAI要約について、日本の個人アカウントの対象外条件、英語対応、会社での設定を整理。使えない場合の検索式と、AIに検索式を作ってもらう指示例を紹介します。
 - [最新ブログ: 生成AI活用企業の29%が配置転換を検討｜東京商工リサーチ調査で中小企業が決めること](https://miraina-ai.com/blogs/blog310.html): 東京商工リサーチの2026年4月調査を解説。組織的に生成AIを活用する企業の29%が「5年内に配置転換の可能性」、大企業は47%。方針未定は50.9%→37.5%に改善。中小企業がいま備えるべきことを整理します。
+- [最新ブログ: ChatGPT for Wordの使い方｜Wordで要約・修正する手順と料金](https://miraina-ai.com/blogs/blog311.html): ChatGPT for Wordを使い、Word文書の要約・下書き・選択範囲の修正を進める手順を解説。導入条件、料金、文書確認の注意点をOpenAI公式情報で整理します。
+- [最新ブログ: GPT-6 Astraとは｜ChatGPTでの使い方・料金とEnterprise導入の注意点](https://miraina-ai.com/blogs/blog312.html): OpenAIが2026年9月3日に発表したGPT-6 Astraを解説。ChatGPT Plus・Pro・Business・Enterpriseでの提供状況、API料金（入力$10・出力$50）、Enterprise管理者が確認すべき設定を整理します。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)

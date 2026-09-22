@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>GPT-6 Astraとは｜ChatGPTでの使い方・料金とEnterprise導入の注意点 | MIRAINAブログ</title>
+    <meta name="description" content="OpenAIが2026年9月3日に発表したGPT-6 Astraを解説。ChatGPT Plus・Pro・Business・Enterpriseでの提供状況、API料金（入力$10・出力$50）、Enterprise管理者が確認すべき設定を整理します。">
+    <!-- OGP Tags -->
+    <meta property="og:title" content="GPT-6 Astraとは｜ChatGPTでの使い方・料金とEnterprise導入の注意点">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog312.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog312-1.webp">
+    <meta property="og:description" content="OpenAIが2026年9月3日に発表したGPT-6 Astraを解説。ChatGPT Plus・Pro・Business・Enterpriseでの提供状況、API料金（入力$10・出力$50）、Enterprise管理者が確認すべき設定を整理します。">
+    <link rel="canonical" href="https://miraina-ai.com/blogs/blog312.html">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.ico">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+            <div class="hamburger" id="js-hamburger"><span></span><span></span><span></span></div>
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"/></svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="container breadcrumbs"><ul><li><a href="/">ホーム</a></li><li><a href="/blogs.html">ブログ</a></li><li>GPT-6 Astraとは</li></ul></div>
+        <article class="article-container">
+            <!-- Article Header -->
+            <header class="article-header"><div class="article-meta"><span class="article-date">2026.09.22</span><div class="article-tags"><span class="article-tag">ChatGPT</span><span class="article-tag">GPT-6 Astra</span><span class="article-tag">業務効率化</span></div></div><h1 class="article-title">GPT-6 Astraとは｜ChatGPTでの使い方・料金とEnterprise導入の注意点</h1><div class="article-thumbnail"><img src="/images/blogs_images/blog312-1.webp" alt="GPT-6 AstraがChatGPTに展開されるイメージ" width="800" height="450" fetchpriority="high"></div></header>
+            <!-- Summary -->
+            <section class="article-summary"><h2 class="sr-only">記事の概要</h2><p>OpenAIは2026年9月3日、新しい基幹モデル「GPT-6 Astra」を発表しました。コーディング、リサーチ、コンピュータ操作、資料作成といった複雑な作業向けに位置づけられており、ChatGPT Plus・Pro・Business・Enterpriseへ順次展開されています。</p><p>この記事では、OpenAI公式情報をもとに、ChatGPTでの提供状況、API料金の仕組み、コンテキストウィンドウなどのスペック、そしてEnterprise管理者が導入前に確認すべき設定を整理します。情報確認日：2026年9月22日。</p></section>
+            <!-- Table of Contents -->
+            <div class="article-toc"><div class="toc-title">目次</div><ul><li><a href="#section1">1. GPT-6 Astraとは——発表の概要</a></li><li><a href="#section2">2. ChatGPTでの使い方：プラン別の提供状況</a></li><li><a href="#section3">3. 料金の仕組み：API単価とChatGPTプランの関係</a></li><li><a href="#section4">4. 性能とスペック：コンテキストウィンドウ・知識カットオフ</a></li><li><a href="#section5">5. Enterprise導入前に確認したい注意点</a></li><li><a href="#section6">6. まとめ：小さく試して社内展開を計画する</a></li></ul></div>
+            <div class="article-body">
+<h2 id="section1">1. GPT-6 Astraとは——発表の概要</h2>
+<p><strong>GPT-6 Astraは、OpenAIが2026年9月3日（米国時間）に発表した新しい基幹モデルです。</strong>コーディング、リサーチ、コンピュータ操作、複数ステップにまたがる作業、資料作成など、負荷の高い一連の業務向けに位置づけられています。API上のモデルIDは「gpt-6-astra」です。</p>
+<p>展開は段階的に進められました。OpenAIによると、まずサイバーセキュリティ関連プログラムに参加する一部組織へ提供が始まり、その後数日をかけてChatGPT Plus・Pro・Business・Enterpriseの全ユーザー、さらにOpenAI API、Microsoft Azure、AWS Bedrockへ広げる計画が案内されています。発表日と、実際に自分のアカウントで使えるようになる日は異なる場合があるため、管理画面やヘルプセンターの案内で提供状況を確かめることが大切です。</p>
+<h2 id="section2">2. ChatGPTでの使い方：プラン別の提供状況</h2>
+<p>OpenAIの案内では、「GPT-6 Astraを搭載したGPT-6 Pro」が、Pro（$100・$200の各プラン）、Business、Enterpriseで利用できます。Plusプランでは、ChatGPT WorkとCodexの中でGPT-6 Astraが利用可能です。また、ChatGPT Voiceも、検索や難しい質問への対応が必要な場面でGPT-5.6またはGPT-6 Astraを使い分けると案内されています。</p>
+<p>どのプランでどの機能名で表示されるかは今後の案内で変わる可能性があります。自社のプランで実際に選べるモデル名は、ChatGPTのモデル選択メニューかヘルプセンターの最新情報で確認してください。特にEnterprise・Eduのワークスペースでは、後述のとおり既定で無効になっているため、管理者による設定が必要です。</p>
+<h2 id="section3">3. 料金の仕組み：API単価とChatGPTプランの関係</h2>
+<p>API標準料金は、入力100万トークンあたり10ドル、出力100万トークンあたり50ドルです。バッチ処理・Flexモードは半額の5ドル・25ドル、Fastモードは倍額の20ドル・100ドルとなり、キャッシュされた入力トークンは1ドルに設定されています。前世代のGPT-5.6 Solより単価が引き上げられたと報じられており、API経由で組み込む場合はトークン消費量の見積もりが重要になります。</p>
+<p>一方、ChatGPTの月額プラン料金（Plus・Pro・Business・Enterprise）自体に変更はなく、既存プランの利用枠の中でGPT-6 Astraを使えます。<strong>「追加料金なしで使える」という案内は、月額料金が上がらないという意味であり、利用量に上限がないという意味ではありません。</strong>プランの利用上限を超えた場合は、追加クレジットの購入が必要になる場合があります。社内で本格利用する前に、想定される利用量と上限を確認しておくと安心です。</p>
+<h2 id="section4">4. 性能とスペック：コンテキストウィンドウ・知識カットオフ</h2>
+<p>OpenAI Developersの公式モデルページによると、GPT-6 Astraのコンテキストウィンドウは1,050,000トークン、最大出力トークン数は128,000トークンです。知識カットオフは2026年4月30日、入力はテキストと画像に対応し、出力はテキストのみです。推論の強さは<code>reasoning.effort</code>パラメータで<code>low</code>・<code>medium</code>・<code>high</code>・<code>xhigh</code>・<code>max</code>の5段階から選べます。</p>
+<figure class="article-figure"><img src="/images/blogs_images/blog312-2.webp" alt="OpenAI DevelopersのGPT-6 Astraモデルページに掲載された料金・スペック情報" width="800" height="450" loading="lazy"><figcaption>OpenAI Developers公式モデルページ。料金（入力$10・出力$50）とコンテキストウィンドウ、知識カットオフを確認（2026年9月22日）。</figcaption></figure>
+<p>長いコンテキストを扱える点はリサーチや複数ドキュメントの横断的な確認に向いていますが、入力トークンが増えるほどAPI利用料も増えます。社内文書をまとめて読み込ませる用途で使う場合は、必要な範囲だけを渡すなど、コンテキストの使い方を工夫するとコストを抑えやすくなります。</p>
+<h2 id="section5">5. Enterprise導入前に確認したい注意点</h2>
+<p>OpenAIのヘルプセンターによると、対象となるChatGPT EnterpriseおよびEduのワークスペースでは、<strong>GPT-6 Astraはリリース時点で既定が無効（オフ）</strong>になっています。ワークスペースの所有者が、ワークスペース設定内のモデルアクセス管理から、ワークスペース全体または特定のロール単位で有効化する必要があります。</p>
+<p>特に注意したいのは、既存の「Early Model Access」設定がAstraには引き継がれないという点です。以前から新モデルへの早期アクセスを有効にしていた組織でも、Astraについては改めて設定し直す必要があります。また、過去のモデルで案内されていた「2週間後に管理者プレビューが自動的に有効になる」仕組みも、Astraのリリース時点では提供されていません。<strong>「そのうち自動で使えるようになるはず」と待つのではなく、管理者が能動的に設定を確認・変更する必要がある</strong>ことを、社内のAI管理担当者と共有しておきましょう。</p>
+<p><strong>MIRAINAの見解：</strong>新モデルの登場は業務効率化のチャンスですが、企業利用では「使えるようになったら試す」ではなく「使う前に社内ルールを決める」順番が安全です。誰がどの業務でGPT-6 Astraを使ってよいか、機密情報の入力可否、API利用時のコスト上限をあらかじめ決めておくと、現場が迷わず使い始められます。導入方針の整理には<a href="/services/ai_consulting.html">MIRAINAの生成AI活用支援</a>、社内への浸透には<a href="/services/ai_training.html">AI研修</a>もご活用いただけます。</p>
+<h2 id="section6">6. まとめ：小さく試して社内展開を計画する</h2>
+<p>GPT-6 Astraは、コーディングやリサーチ、コンピュータ操作など負荷の高い作業向けにOpenAIが投入した新しい基幹モデルです。ChatGPT Plus・Pro・Business・Enterpriseへの展開は段階的に進んでおり、特にEnterprise・Eduでは管理者による有効化が前提となっています。</p>
+<p>まずは自社のプランで実際にモデルが選択できるかを確認し、既存業務の一部で小さく試すところから始めましょう。API経由で組み込む場合はトークン単価の上昇を踏まえたコスト試算を、社内展開ではモデルアクセス設定と利用ルールの整備を並行して進めることをおすすめします。GPT-6 Astra以前の関連ツールとして<a href="/blogs/blog311.html">ChatGPT for Wordの使い方の記事</a>、Work内でのデータ活用は<a href="/blogs/blog308.html">ChatGPT WorkのData agentの記事</a>も参考にしてください。</p>
+<div class="article-references"><div class="ref-title">参考リンク（2026年9月22日確認）</div><ul><li><a href="https://openai.com/index/gpt-6-astra/" rel="noopener" target="_blank">OpenAI：GPT-6 Astra: A new generation of intelligence</a></li><li><a href="https://developers.openai.com/api/docs/models/gpt-6-astra" rel="noopener" target="_blank">OpenAI Developers：GPT-6 Astra Model</a></li><li><a href="https://help.openai.com/en/articles/11165333-chatgpt-enterprise-and-edu-models-limits" rel="noopener" target="_blank">OpenAI Help Center：ChatGPT Enterprise and Edu models & limits</a></li></ul></div>
+</div>
+<!-- CTA Button -->
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h2 class="cta-title">AI導入でお悩みですか？</h2>
+                    <p class="cta-text">MIRAINAでは、貴社の課題に合わせた<br>最適なAI活用プランをご提案します。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+            <!-- Editorial Information -->
+            <div class="article-editor">
+                <div class="editor-header">この記事を監修した人</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Related Articles -->
+            <div class="article-related"><h2 class="related-title">関連記事</h2><div class="related-grid"><a href="/blogs/blog311.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card311.webp" alt="ChatGPT for Wordで文書を要約・修正するイメージ" loading="lazy" decoding="async"></div><div class="related-content"><div class="related-date">2026.09.22</div><div class="related-text">ChatGPT for Wordの使い方｜Wordで要約・修正する手順と料金</div></div></a><a href="/blogs/blog308.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card308.webp" alt="ChatGPT WorkにData agentが登場するイメージ" loading="lazy" decoding="async"></div><div class="related-content"><div class="related-date">2026.09.19</div><div class="related-text">ChatGPT WorkにData agent登場｜社内データを会話で分析する前に決める4項目</div></div></a><a href="/blogs/blog306.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card306.webp" alt="Claude for Small Businessが43ワークフローに拡張" loading="lazy" decoding="async"></div><div class="related-content"><div class="related-date">2026.09.17</div><div class="related-text">Claude for Small Businessが43ワークフローに拡張｜中小企業が使い始める3ステップ</div></div></a></div></div>
+        </article>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/index.html">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+            <div class="footer-center">
+            </div>
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">私たちについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"/></svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="/js/common.js"></script>
+</body>
+</html>

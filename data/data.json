@@ -2798,6 +2798,15 @@
       "thumbnail": "/images/blogs_images/blog-card311.webp",
       "alt": "ChatGPT for Wordで要約と修正をするイメージ",
       "date": "2026-09-22"
+    },
+    {
+      "id": 312,
+      "title": "GPT-6 Astraとは｜ChatGPTでの使い方・料金とEnterprise導入の注意点",
+      "description": "OpenAIが2026年9月3日に発表したGPT-6 Astraを解説。ChatGPT Plus・Pro・Business・Enterpriseでの提供状況、API料金（入力$10・出力$50）、Enterprise管理者が確認すべき設定を整理します。",
+      "link": "/blogs/blog312.html",
+      "thumbnail": "/images/blogs_images/blog-card312.webp",
+      "alt": "GPT-6 AstraがChatGPTに展開されるイメージ",
+      "date": "2026-09-22"
     }
   ],
   "works": [
