@@ -2789,6 +2789,15 @@
       "thumbnail": "/images/blogs_images/blog-card310.webp",
       "alt": "生成AI活用企業の29%が配置転換を検討という東京商工リサーチ調査のイメージ",
       "date": "2026-09-21"
+    },
+    {
+      "id": 311,
+      "title": "ChatGPT for Wordの使い方｜Wordで要約・修正する手順と料金",
+      "description": "ChatGPT for Wordを使い、Word文書の要約・下書き・選択範囲の修正を進める手順を解説。導入条件、料金、文書確認の注意点をOpenAI公式情報で整理します。",
+      "link": "/blogs/blog311.html",
+      "thumbnail": "/images/blogs_images/blog-card311.webp",
+      "alt": "ChatGPT for Wordで要約と修正をするイメージ",
+      "date": "2026-09-22"
     }
   ],
   "works": [

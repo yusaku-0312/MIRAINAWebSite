@@ -368,6 +368,8 @@ MIRAINAの美容業界特化サービス。美容室・サロン向けにAI活�
 - サイト内パス: `/beauty-dx/blogs.html`
 - 内容: 美容×AI・DX・業務効率化・集客に関する最新情報。個別記事は `/beauty-dx/blogs/blogXXX.html`。
 
+- [最新ブログ: ChatGPT for Wordの使い方｜Wordで要約・修正する手順と料金](https://miraina-ai.com/blogs/blog311.html): ChatGPT for Wordを使い、Word文書の要約・下書き・選択範囲の修正を進める手順を解説。導入条件、料金、文書確認の注意点をOpenAI公式情報で整理します。
+
 ### beauty-dx サービス詳細
 
 - [美容室・サロン特化型AI活用支援](https://miraina-ai.com/beauty-dx/services/gen-ai-support.html): 美容室・サロンの業務にAIを活用した効率化・仕組み化を支援。業務棚卸しからAI設計・ワークフロー構築・定着支援まで。月額98,000円〜。
