@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="index, follow" name="robots"/>
+<title>Google MeetのAI議事録、9月29日から設定変更｜自動開始の条件と止め方 | MIRAINAブログ</title>
+<meta content="Google MeetのAI議事録の自動開始設定が9月29日から変更。プラン別の初期値、3人以上の条件、停止方法、日本語と共有範囲を公式情報で解説します。" name="description"/>
+<!-- OGP Tags -->
+<meta content="Google MeetのAI議事録、9月29日から設定変更｜自動開始の条件と止め方" property="og:title"/>
+<meta content="article" property="og:type"/>
+<meta content="https://miraina-ai.com/blogs/blog313.html" property="og:url"/>
+<meta content="https://miraina-ai.com/images/blogs_images/blog313-1.webp" property="og:image"/>
+<meta content="Google MeetのAI議事録の自動開始設定が9月29日から変更。プラン別の初期値、3人以上の条件、停止方法、日本語と共有範囲を公式情報で解説します。" property="og:description"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Shippori+Mincho:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Favicon -->
+<link href="/images/favicon.ico" rel="icon"/>
+<!-- CSS -->
+<link href="/css/reset.css" rel="stylesheet"/>
+<link href="/css/common.css" rel="stylesheet"/>
+<link href="/css/blog_article.css" rel="stylesheet"/>
+<link href="https://miraina-ai.com/blogs/blog313.html" rel="canonical"/><style>.article-body .code-block pre{white-space:pre-wrap;overflow-wrap:anywhere;color:#f5f5f5}.article-body .code-block pre code{color:inherit;background:transparent}.article-body td code{overflow-wrap:anywhere;word-break:break-word}</style></head>
+<body>
+<!-- Header -->
+<header class="header">
+<div class="container header-inner">
+<a class="header-logo" href="/">
+<!-- Assuming logo exists or using text fallback for now if image broken -->
+<img alt="MIRAINA" height="40" src="/images/company-logo.webp" width="120"/>
+</a>
+<div class="hamburger" id="js-hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<nav class="header-nav">
+<div class="nav-item has-dropdown">
+<a class="nav-link" href="/services.html">サービス</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="/services/ai_consulting.html">生成AI活用支援</a>
+<a class="dropdown-item" href="/services/ai_training.html">AI研修</a>
+<a class="dropdown-item" href="/services/ai_develop.html">AI開発</a>
+<a class="dropdown-item" href="/services/llmo_insight.html">LLMO Insight</a>
+<a class="dropdown-item" href="/beauty-dx/">美容サロン特化AI活用支援</a>
+
+</div>
+</div>
+<!-- Other required items from spec usually go here, but focusing on user content mapping -->
+<div class="nav-item"><a class="nav-link" href="/about.html">MIRAINAについて</a></div>
+<div class="nav-item"><a class="nav-link" href="/works.html">事例紹介</a></div>
+<div class="nav-item"><a class="nav-link" href="/blogs.html">ブログ</a></div>
+<div class="nav-item"><a class="nav-link btn-contact" href="/contact.html">お問い合わせ</a></div>
+<div class="nav-item">
+<a aria-label="AI info" class="nav-link" href="/llms.txt">
+<svg class="icon-thin" height="20" viewbox="0 0 24 24" width="20">
+<path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"></path>
+</svg>
+</a>
+</div>
+</nav>
+</div>
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="js-mobile-menu">
+<nav class="mobile-nav">
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/services.html">サービス</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/about.html">MIRAINAについて</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/works.html">事例紹介</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/blogs.html">ブログ</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/contact.html">お問い合わせ</a></div>
+</nav>
+</div>
+</header>
+<main>
+<!-- Breadcrumbs -->
+<div class="container breadcrumbs">
+<ul>
+<li><a href="/index.html">ホーム</a></li>
+<li><a href="/blogs.html">ブログ</a></li>
+<li>Google MeetのAI議事録、9月29日から設定変更｜自動開始の条件と止め方</li>
+</ul>
+</div>
+<article class="article-container">
+<!-- Article Header -->
+<header class="article-header">
+<div class="article-meta">
+<span class="article-date">2026.09.23</span>
+<div class="article-tags"><span class="article-tag">Google Meet</span><span class="article-tag">AI議事録</span><span class="article-tag">業務効率化</span></div>
+</div>
+<h1 class="article-title">Google MeetのAI議事録、9月29日から設定変更｜自動開始の条件と止め方</h1>
+<div class="article-thumbnail">
+<img alt="Google MeetのAI議事録、9月29日から設定変更｜自動開始の条件と止め方" fetchpriority="high" height="675" src="/images/blogs_images/blog313-1.webp" width="1200"/>
+<!-- Note: Replace with actual image path -->
+</div>
+</header>
+<!-- Summary -->
+<section class="article-summary"><h2 class="sr-only">記事の概要</h2><p>Google Meetで議事録を自動化したい方、AIメモが意図せず始まらないか気になる方へ。9月29日から反映予定の設定変更をもとに、自動開始の条件と止め方、日本語対応と共有相手の確認方法を整理します。次の会議で安心して使うための設定を選べることが、この記事のゴールです。</p></section>
+<!-- Table of Contents -->
+<div class="article-toc">
+<div class="toc-title">目次</div>
+<ul><li><a href="#section1">1. Google MeetのAI議事録、自動開始の設定が変更</a></li><li><a href="#section2">2. 「3人以上」は主催者も含む</a></li><li><a href="#section3">3. 自動開始を止める方法と管理者設定</a></li><li><a href="#section4">4. 日本語と共有範囲を先に確認</a></li><li><a href="#section5">5. AIに設定を相談するプロンプト</a></li><li><a href="#section6">6. まとめ：次の会議の設定を確認する</a></li></ul>
+</div>
+<!-- Main Content Body -->
+<div class="article-body"><h2 id="section1">1. Google MeetのAI議事録、自動開始の設定が変更</h2>
+<p><strong>Googleは2026年9月22日、AI議事録「Take notes for me」の新しい自動開始設定を9月29日から反映すると発表しました。</strong>対象はBusiness Standard・Plus、Enterprise Standard・Plus、Frontline Plus、Google AI Pro for Educationです。個人向けプランの機能提供とは区別して読む必要があります。</p>
+<p>Business Standard・Plusでは、3人以上の会議向けの新設定が初期状態でオンになります。それ以外の上記対象プランは初期状態でオフです。Alphaプログラム参加組織には過去の設定が残る場合があります。展開には15日を超える可能性があり、9月29日に全員が一斉に切り替わるとは限りません。出典：<a href="https://workspaceupdates.googleblog.com/2026/09/new-google-meet-take-notes-for-me-settings-for-admins-and-end-users-take-effect-September-29th.html?hl=en" rel="noopener" target="_blank">Google Workspace公式告知（9月22日）</a>。</p>
+<figure class="article-figure"><img alt="Google公式の9月22日告知。自動メモ設定の9月29日開始と契約別の初期値を説明" decoding="async" height="450" loading="lazy" src="/images/blogs_images/blog313-2.webp" width="800"/><figcaption>Google Workspace公式告知。日付とプラン別の初期値を確認（2026年9月23日撮影）。</figcaption></figure>
+<p><strong>日付の注意：</strong>9月23日の確認時点で、管理者ヘルプには「9月21日以降」という記載も残っています。本記事は、より新しい9月22日の告知にある「9月29日開始」を採用しています。すでに利用中の組織は、日付だけで判断せず現在の設定を確認してください。</p>
+<h2 id="section2">2. 「3人以上」は主催者も含む</h2>
+<p>「3人以上」は、自分以外に3人という意味ではありません。Googleの設定ヘルプでは、予定された会議について、主催者を含む3人目が招待先に追加されるとメモが自動設定されると説明されています。たとえば自分と同僚2人の定例会も該当し得ます。実際に3人が入室した瞬間だけを条件にすると考えないようにしましょう。</p>
+<p>利用者側では、PCのMeetで設定を開き、会議の記録に関する項目から自動メモの選択肢を確認し、保存します。今後の予定に自動設定したくない場合はオフを選びます。画面の日本語表記は環境によって異なるため、会議の記録と自動メモに相当する項目を探してください。出典：<a href="https://support.google.com/meet/answer/16909639?hl=en" rel="noopener" target="_blank">Google Meetの設定ヘルプ</a>。</p>
+<p>新しい選択肢が見つからないときは、別のアカウントに切り替わっていないか、展開が届いているかを先に確認します。何度も設定を変えるより、利用アカウントと表示されている選択肢を管理者に伝えると、確認すべき点を絞れます。</p>
+<h2 id="section3">3. 自動開始を止める方法と管理者設定</h2>
+<p>管理者は管理コンソールで、アプリ、Google Workspace、Google Meetの順に進み、Geminiの設定から自動メモを確認します。変更にはMeetの管理権限が必要です。設定を扱うには組織のGeminiメモ機能とスマート機能が有効であることも前提になります。</p>
+<p><strong>自動メモをオフにしても、利用者が自分の設定でオンに戻せます。</strong>そのため、初期値の変更を「会社としてAI議事録を禁止した」と受け取らないことが大切です。管理者ヘルプでは変更の反映に最大24時間かかる場合も案内されています。出典：<a href="https://knowledge.workspace.google.com/admin/meet/upcoming-changes-to-automatic-note-taking" rel="noopener" target="_blank">Google Workspace管理者ヘルプ</a>。</p>
+<p>会議中の停止については、主催者向け管理機能が有効なら主催者・共同主催者が操作します。無効なら主催者の組織内の参加者も停止できます。個別予定のチェック、今後の自動開始、会議中の停止を分けて確認してください。出典：<a href="https://support.google.com/meet/answer/14754931?hl=en" rel="noopener" target="_blank">Google Meetの利用ヘルプ</a>。</p>
+<h2 id="section4">4. 日本語と共有範囲を先に確認</h2>
+<p>Googleのヘルプでは日本語に対応していますが、同じ会議で複数言語を混在させる使い方は現時点で非対応とされています。メモの共有先も確認が必要です。社外を含む招待者、組織内の招待者、主催者・共同主催者だけ、という選択肢があります。出典：<a href="https://support.google.com/meet/answer/16909639?hl=en" rel="noopener" target="_blank">言語・共有設定の公式説明</a>。</p>
+<p>特に注意したいのは、共有対象の「招待者」は実際の出席者だけではない点です。また、予定に添付されたメモが見えることと、文書を開く権限があることは別です。出典：<a href="https://support.google.com/meet/answer/14754931?hl=en" rel="noopener" target="_blank">共有とアクセス権の公式説明</a>。</p>
+<p>以下はMIRAINAの運用提案です。社内の週次会議なら、担当者が決定事項と期限を確認してからチームに案内します。顧客との打ち合わせなら、開始時にメモの利用を伝え、共有相手を確認してから始めます。どちらも「メモができた」を完了にせず、「誰が内容を確認し、次に誰が動くか」まで決めると、会議後の仕事につながります。これは導入事例の実測ではなく、試行用の例です。</p>
+<h2 id="section5">5. AIに設定を相談するプロンプト</h2>
+<p>自分の環境で何をすればよいか迷ったら、契約名、やりたいこと、確認してほしい情報源をセットでAIに伝えると、質問を具体化できます。次の文章はMIRAINAが作成した相談例です。会議内容や顧客名を入力する必要はありません。契約名が不明なら、その部分を「管理者に確認中」に置き換えてください。</p>
+<div class="code-block"><pre><code>Google Workspace Business Standardを使っています。
+社内の定例会ではAI議事録を使い、顧客との会議では開始前に確認したいです。
+Google Meetの自動メモについて、最新の公式情報を調べてください。
+管理者の初期設定、私の設定、個別の会議設定を分け、
+自動開始を止める方法と共有相手の確認項目を整理してください。
+情報源URLと確認日を付け、資料の日付が違う場合は違いも示してください。
+不明な点は推測せず、管理者に聞く質問にしてください。</code></pre></div>
+<p>回答が返ったら、リンク先がGoogleの公式ページか、利用プランが合っているか、設定の変更と利用禁止が混同されていないかを確認します。検索機能がないAIでは最新情報を確認できないこともあるため、本記事の参考リンクを自分で開く方法も併用してください。AIが示した文章だけで操作を確定せず、実際の画面と照らし合わせるのが確実です。</p>
+<p><strong>MIRAINAの視点：</strong>AIが苦手な人に必要なのは、長い機能一覧より「この会議で使うか」「誰に渡るか」「困ったら誰が止めるか」という判断の道筋です。まず定例会を一つ選び、主催者と確認担当者を決めて試す方法をおすすめします。メモの整理先は<a href="/blogs/blog228.html">Google Meetの議事録と録画の保存先の記事</a>も参照できます。</p>
+<h2 id="section6">6. まとめ：次の会議の設定を確認する</h2>
+<p>今回の変更を受けた最初の行動は、契約プランと自動メモの現在の設定を確認することです。そのうえで次の会議の主催者、言語、共有相手を確認し、作成後の内容チェックを担当する人を決めましょう。AI議事録は、会議中の負担を減らすための下書きとして運用すると始めやすくなります。</p>
+<p>自社での会議ルールづくりや、AIに不慣れな社員向けの説明を整えたい場合は、MIRAINAの<a href="/services/ai_training.html">AI研修</a>や<a href="/services/ai_consulting.html">生成AI活用支援</a>にご相談ください。使う場面を絞った試行から、現場で続けられる手順づくりまで支援します。</p>
+<div class="article-references"><div class="ref-title">参考情報</div><p>本記事は2026年9月23日に確認したGoogle公式資料に基づきます。操作説明は公式ヘルプを整理したもので、利用アカウント上での実機検証ではありません。各項目の出典は本文中に掲載しています。</p></div>
+</div>
+<!-- CTA Button -->
+<div class="article-cta">
+<div class="cta-box">
+<h2 class="cta-title">AI導入でお悩みですか？</h2>
+<p class="cta-text">MIRAINAでは、貴社の課題に合わせた<br/>最適なAI活用プランをご提案します。</p>
+<a class="btn btn-black-fill" href="/contact.html">無料相談する</a>
+</div>
+</div>
+<!-- Editorial Information -->
+<div class="article-editor">
+<div class="editor-header">この記事を監修した人</div>
+<div class="editor-profile">
+<div class="editor-image">
+<img alt="本記事の監修者 芝優作（MIRAINA）" decoding="async" loading="lazy" src="/images/shiba_yusaku.webp"/>
+</div>
+<div class="editor-info">
+<div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+<p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+</div>
+</div>
+</div>
+<!-- Related Articles -->
+<div class="article-related">
+<h2 class="related-title">関連記事</h2>
+<div class="related-grid"><a class="related-card" href="/blogs/blog228.html"><div class="related-img"><img alt="【2026年7月最新】Google Meetの議事録と録画はどこ？Drive自動整理で迷わない会議運用" decoding="async" loading="lazy" src="/images/blogs_images/blog-card228.webp"/></div><div class="related-content"><div class="related-date">2026.07.28</div><div class="related-text">【2026年7月最新】Google Meetの議事録と録画はどこ？Drive自動整理で迷わない会議運用</div></div></a><a class="related-card" href="/blogs/blog231.html"><div class="related-img"><img alt="【2026年7月最新】Google Meetの議事録にスライドは入る？Geminiの画面キャプチャ設定を整理" decoding="async" loading="lazy" src="/images/blogs_images/blog-card231.webp"/></div><div class="related-content"><div class="related-date">2026.07.30</div><div class="related-text">【2026年7月最新】Google Meetの議事録にスライドは入る？Geminiの画面キャプチャ設定を整理</div></div></a><a class="related-card" href="/blogs/blog311.html"><div class="related-img"><img alt="ChatGPT for Wordの使い方｜Wordで要約・修正する手順と料金" decoding="async" loading="lazy" src="/images/blogs_images/blog-card311.webp"/></div><div class="related-content"><div class="related-date">2026.09.22</div><div class="related-text">ChatGPT for Wordの使い方｜Wordで要約・修正する手順と料金</div></div></a></div>
+</div>
+</article>
+</main>
+<!-- Footer -->
+<footer class="footer">
+<div class="container footer-inner">
+<div class="footer-brand">
+<a href="/index.html">
+<p class="footer-brand-text">MIRAINA</p>
+</a>
+</div>
+<div class="footer-center">
+<!-- Empty as requested -->
+</div>
+<div class="footer-menu">
+<ul class="footer-menu-list">
+<li><a href="/about.html">私たちについて</a></li>
+<li><a href="/works.html">事例紹介</a></li>
+<li><a href="/blogs.html">ブログ</a></li>
+<li><a href="/contact.html">お問い合わせ</a></li>
+<li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+</ul>
+<div class="footer-sns">
+<a href="https://www.instagram.com/plus.taime" rel="noopener" target="_blank">Instagram</a>
+<a href="https://www.threads.com/@plus.taime" rel="noopener" target="_blank">Threads</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<a aria-label="AI info" class="footer-robot-icon" href="/llms.txt">
+<svg class="icon-thin" height="24" viewbox="0 0 24 24" width="24">
+<path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"></path>
+</svg>
+</a>
+<p>© MIRAINA All Rights Reserved.</p>
+</div>
+</footer>
+<script src="/js/common.js"></script>
+<script>
+        // Copy common script logic for simple viewing
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
