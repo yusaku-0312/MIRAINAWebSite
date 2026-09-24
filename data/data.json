@@ -2825,6 +2825,15 @@
       "alt": "Claude Opus 5.5が公開｜コスト4割減の内訳と乗り換え前の4項目",
       "link": "/blogs/blog314.html",
       "date": "2026-09-23"
+    },
+    {
+      "id": 315,
+      "title": "Google DocsがNotebookと連携｜社内資料から引用付き提案書を作る方法",
+      "description": "Google DocsがGemini Notebookの資料を参照可能に。対象プラン、提案書を作る手順と指示例、引用の確認方法、日本語対応の注意点を解説します。",
+      "link": "/blogs/blog315.html",
+      "thumbnail": "/images/blogs_images/blog-card315.webp",
+      "alt": "Google DocsがNotebookと連携｜社内資料から引用付き提案書を作る方法",
+      "date": "2026-09-24"
     }
   ],
   "works": [

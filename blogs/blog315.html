@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="index, follow" name="robots"/>
+<title>Google DocsがNotebookと連携｜社内資料から引用付き提案書を作る方法 | MIRAINAブログ</title>
+<meta content="Google DocsがGemini Notebookの資料を参照可能に。対象プラン、提案書を作る手順と指示例、引用の確認方法、日本語対応の注意点を解説します。" name="description"/>
+<!-- OGP Tags -->
+<meta content="Google DocsがNotebookと連携｜社内資料から引用付き提案書を作る方法" property="og:title"/>
+<meta content="article" property="og:type"/>
+<meta content="https://miraina-ai.com/blogs/blog315.html" property="og:url"/>
+<meta content="https://miraina-ai.com/images/blogs_images/blog315-1.webp" property="og:image"/>
+<meta content="Google DocsがGemini Notebookの資料を参照可能に。対象プラン、提案書を作る手順と指示例、引用の確認方法、日本語対応の注意点を解説します。" property="og:description"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Shippori+Mincho:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Favicon -->
+<link href="/images/favicon.ico" rel="icon"/>
+<!-- CSS -->
+<link href="/css/reset.css" rel="stylesheet"/>
+<link href="/css/common.css" rel="stylesheet"/>
+<link href="/css/blog_article.css" rel="stylesheet"/>
+<link href="https://miraina-ai.com/blogs/blog315.html" rel="canonical"/><style>.article-body .code-block pre{white-space:pre-wrap;overflow-wrap:anywhere;color:#f5f5f5}.article-body .code-block pre code{color:inherit;background:transparent}.article-body td code{overflow-wrap:anywhere;word-break:break-word}.article-cta .cta-title{color:#fff}</style></head>
+<body>
+<!-- Header -->
+<header class="header">
+<div class="container header-inner">
+<a class="header-logo" href="/">
+<!-- Assuming logo exists or using text fallback for now if image broken -->
+<img alt="MIRAINA" height="40" src="/images/company-logo.webp" width="120"/>
+</a>
+<div class="hamburger" id="js-hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<nav class="header-nav">
+<div class="nav-item has-dropdown">
+<a class="nav-link" href="/services.html">サービス</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="/services/ai_consulting.html">生成AI活用支援</a>
+<a class="dropdown-item" href="/services/ai_training.html">AI研修</a>
+<a class="dropdown-item" href="/services/ai_develop.html">AI開発</a>
+<a class="dropdown-item" href="/services/llmo_insight.html">LLMO Insight</a>
+<a class="dropdown-item" href="/beauty-dx/">美容サロン特化AI活用支援</a>
+
+</div>
+</div>
+<!-- Other required items from spec usually go here, but focusing on user content mapping -->
+<div class="nav-item"><a class="nav-link" href="/about.html">MIRAINAについて</a></div>
+<div class="nav-item"><a class="nav-link" href="/works.html">事例紹介</a></div>
+<div class="nav-item"><a class="nav-link" href="/blogs.html">ブログ</a></div>
+<div class="nav-item"><a class="nav-link btn-contact" href="/contact.html">お問い合わせ</a></div>
+<div class="nav-item">
+<a aria-label="AI info" class="nav-link" href="/llms.txt">
+<svg class="icon-thin" height="20" viewbox="0 0 24 24" width="20">
+<path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"></path>
+</svg>
+</a>
+</div>
+</nav>
+</div>
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="js-mobile-menu">
+<nav class="mobile-nav">
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/services.html">サービス</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/about.html">MIRAINAについて</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/works.html">事例紹介</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/blogs.html">ブログ</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/contact.html">お問い合わせ</a></div>
+</nav>
+</div>
+</header>
+<main>
+<!-- Breadcrumbs -->
+<div class="container breadcrumbs">
+<ul>
+<li><a href="/index.html">ホーム</a></li>
+<li><a href="/blogs.html">ブログ</a></li>
+<li>Google DocsがNotebookと連携｜社内資料から引用付き提案書を作る方法</li>
+</ul>
+</div>
+<article class="article-container">
+<!-- Article Header -->
+<header class="article-header">
+<div class="article-meta">
+<span class="article-date">2026.09.24</span>
+<div class="article-tags"><span class="article-tag">Google Docs</span><span class="article-tag">Gemini</span><span class="article-tag">AI活用</span></div>
+</div>
+<h1 class="article-title">Google DocsがNotebookと連携｜社内資料から引用付き提案書を作る方法</h1>
+<div class="article-thumbnail">
+<img alt="Google DocsがNotebookと連携｜社内資料から引用付き提案書を作る方法" fetchpriority="high" height="675" src="/images/blogs_images/blog315-1.webp" width="1200"/>
+<!-- Note: Replace with actual image path -->
+</div>
+</header>
+<!-- Summary -->
+<section class="article-summary"><h2 class="sr-only">記事の概要</h2><p>AIに提案書を頼んでも、社内資料と違うことを書かれて困っていませんか。Google DocsとGemini Notebookの新しい連携をもとに、資料を指定して下書きを作り、引用を確認する流れを紹介します。使える条件を判断し、最初の一文書を試せることがこの記事のゴールです。</p></section>
+<!-- Table of Contents -->
+<div class="article-toc">
+<div class="toc-title">目次</div>
+<ul><li><a href="#section1">1. Google DocsがNotebookの資料を参照可能に</a></li><li><a href="#section2">2. 利用条件と日本語対応の確認</a></li><li><a href="#section3">3. 社内資料から提案書を作る流れ</a></li><li><a href="#section4">4. そのまま調整できる指示例</a></li><li><a href="#section5">5. 引用の確認と共有前のチェック</a></li><li><a href="#section6">6. まとめ：一つの文書から試す</a></li></ul>
+</div>
+<!-- Main Content Body -->
+<div class="article-body"><h2 id="section1">1. Google DocsがNotebookの資料を参照可能に</h2>
+<p><strong>Google Docsで、Gemini Notebookにまとめた資料を参照しながら、引用付きの下書きを作れるようになりました。</strong>Googleは2026年9月23日にこの連携を発表。サイドパネルまたは下部バーで「@」を入力し、既存のNotebookを指定する方式です。公式告知は提供状況を「利用可能」としています。出典：<a href="https://workspaceupdates.googleblog.com/2026/09/ground-ai-prompts-in-google-docs-on-existing-sources-from-Gemini-Notebook.html" rel="noopener" target="_blank">Google Workspace公式発表</a>。</p>
+<figure class="article-figure"><img alt="2026年9月23日付のGoogle公式発表。Notebookの参照とインライン引用を説明" decoding="async" height="450" loading="lazy" src="/images/blogs_images/blog315-2.webp" width="800"/><figcaption>Google Workspace公式発表。Notebookを参照し、本文中に引用を示す仕組みを説明しています。</figcaption></figure>
+<p>「提案書を作って」とだけ頼むと、欲しい構成と社内の事実が混ざりやすくなります。今回の連携は、先に整理した資料を執筆の根拠として渡せる点が特徴です。ただし、引用の表示は内容の正しさの保証ではありません。元資料にある条件や例外まで文章に反映されたかは、人が確認します。</p>
+<h2 id="section2">2. 利用条件と日本語対応の確認</h2>
+<p>まず、普段使っているアカウントが対象かを確認しましょう。公式発表の主な対象はBusiness Standard・Plus、Enterprise Standard・Plus、個人向けGoogle AI Pro・Ultraです。教育機関向けプランやアドオンも対象に含まれます。Business Starterは今回の対象一覧にありません。契約名が曖昧な場合は、管理担当者に確認してから試す方が確実です。</p>
+<p>組織側のDrive向けGemini設定と、利用者側のWorkspaceスマート機能の有効化も確認します。<a href="https://support.google.com/docs/answer/15541879" rel="noopener" target="_blank">文書作成の公式ヘルプ</a>はデスクトップでの利用を案内しています。最初はパソコンのGoogle Docsで進めてください。</p>
+<p><a href="https://support.google.com/docs/answer/14925782" rel="noopener" target="_blank">対応言語の公式一覧</a>では、Docsの文書生成とサイドパネルに日本語が含まれます。ただし、新しいNotebook連携を個別に説明する言語項目は確認できませんでした。日本語の全動作を保証するものとはせず、手元の環境で確認しましょう。本記事の指示例はMIRAINAの提案であり、実機での機能検証結果ではありません。</p>
+<h2 id="section3">3. 社内資料から提案書を作る流れ</h2>
+<p>作業は<strong>資料を選ぶ→Notebookを指定する→下書きを作る→引用を照合する</strong>という流れです。下書きの誤りが見つかったら、指示を長くする前に、元資料の古さや矛盾を確認します。AIに渡す情報を整えることが、修正の手戻りを減らす出発点になります。</p>
+<ol><li><strong>資料を絞る：</strong>使用が認められた最新版の商品説明、料金表、過去の提案資料などをNotebookに整理します。旧料金や終了したサービスは混在させないようにします。</li><li><strong>Notebookを指定：</strong>Docsのサイドパネルか下部バーで「@」を入力し、参照したい既存のNotebookを選びます。</li><li><strong>用途を伝える：</strong>読み手、目的、必要な見出し、資料にない情報の扱いを指定して下書きを依頼します。</li><li><strong>根拠と照合：</strong>本文中の引用やSourcesを開き、金額、対象条件、納期などを元資料と見比べます。</li></ol>
+<p>Notebookが候補に出ない場合は、正しいアカウントで開いているか、Notebookにアクセスできるか、管理設定が有効かを順に確認します。連携を使えないときは、DocsのSourcesから必要なDriveファイルを追加する方法もあります。ただし、個別ファイルの追加とNotebook参照は別の操作です。出典：<a href="https://support.google.com/a/users/answer/16813283" rel="noopener" target="_blank">Google公式・参照元の設定方法</a>。</p>
+<h2 id="section4">4. そのまま調整できる指示例</h2>
+<p>以下は架空の業務を想定した例です。「@」の後ろは文字を貼るだけで済ませず、実際の候補からNotebookを選んでください。最初から完成版を狙わず、根拠を点検できる短い下書きから始めます。</p>
+<h3>営業担当者：商品説明を提案書に変える</h3>
+<div class="code-block"><pre><code>@［商品資料のNotebookを選択］
+初めて当社サービスを検討する店舗責任者向けに、提案書の下書きを作ってください。
+目的は、導入を判断するための情報を整理することです。
+見出しは「課題」「提案内容」「料金・条件」「導入前に確認すること」。
+資料で確認できる事実には引用を付け、資料にない効果や実績は作らないでください。
+不明な金額・納期は「要確認」とし、推測や提案は事実と分けてください。</code></pre></div>
+<p>この例では、見栄えのよい文章よりも、営業担当者が確認すべき空欄を残すことを優先します。「売上が必ず伸びる」など資料にない表現が出たら削除し、提案できる範囲に戻します。顧客名や個別条件を追加するときは、その情報を入力してよい環境かも確認します。</p>
+<h3>管理担当者：引き継ぎ資料を整理する</h3>
+<div class="code-block"><pre><code>@［業務手順のNotebookを選択］
+新任担当者向けに、月末業務の引き継ぎ文書を作ってください。
+「作業」「期限」「担当」「根拠資料」「未確定事項」の表にしてください。
+複数資料で手順が異なる場合は、勝手に統合せず相違点を示してください。
+最後に、上司に確認すべき質問をまとめてください。</code></pre></div>
+<p>担当者名や締め切りを推測で埋めさせないことが大切です。表の未確定事項を責任者に確認し、決まった内容を元資料へ戻してから再生成すれば、次回の引き継ぎにも使える情報が残ります。メールを起点に整理したい場合は、<a href="/blogs/blog304.html">GmailのGeminiで引き継ぎ文書を作る方法</a>も参考になります。</p>
+<h2 id="section5">5. 引用の確認と共有前のチェック</h2>
+<p>引用が付いていても、結論を支える記述が元資料にあるかを確認します。たとえば「全店舗が対象」と書かれていても、原文には地域や契約期間の条件があるかもしれません。引用元を開き、前後の文脈まで照合してください。元資料自体が古い場合は、引用が正しくても提案内容は誤ります。</p>
+<ul><li><strong>数字：</strong>単位、税の扱い、適用期間は一致しているか。</li><li><strong>条件：</strong>対象者、対象外、例外が省略されていないか。</li><li><strong>未確定事項：</strong>推測が決定事項のように書かれていないか。</li><li><strong>共有：</strong>完成文書に社外へ出せない情報が転記されていないか。</li></ul>
+<p>参照元を追加する操作は、その資料だけに回答を限定する保証とは別です。公式ヘルプでは追加した資料を優先し、検索先の設定も管理できると案内しています。「指定資料だけを使って」という文章上の依頼に加え、画面のSources設定と実際の引用元を確認してください。</p>
+<p><strong>MIRAINAの視点：</strong>AI活用に不慣れなチームには、長大な万能プロンプトよりも「承認済み資料」「短い指示」「確認担当者」の組み合わせを勧めます。まず一種類の提案書で試し、下書き時間だけでなく、確認・修正にかかった時間も記録すると、続ける価値を判断しやすくなります。</p>
+<h2 id="section6">6. まとめ：一つの文書から試す</h2>
+<p>Google DocsとGemini Notebookの連携は、整理済みの情報を文書作成につなげる選択肢です。対象プランと設定を確認し、使ってよい資料を指定して、引用と未確定事項を人が確認するところまでを一つの仕事として設計しましょう。MIRAINAの<a href="/services/ai_training.html">AI研修</a>では、業務に合う指示の作り方と確認手順の定着を支援しています。</p>
+<div class="article-references"><div class="ref-title">参考リンク（2026年9月24日確認）</div><ul>
+<li><a href="https://workspaceupdates.googleblog.com/2026/09/ground-ai-prompts-in-google-docs-on-existing-sources-from-Gemini-Notebook.html" rel="noopener" target="_blank">Google Workspace：DocsとGemini Notebookの連携発表</a></li>
+<li><a href="https://support.google.com/docs/answer/15541879" rel="noopener" target="_blank">Google：Geminiで文書を作成する</a></li>
+<li><a href="https://support.google.com/docs/answer/14925782" rel="noopener" target="_blank">Google：対応言語</a></li>
+<li><a href="https://support.google.com/a/users/answer/16813283" rel="noopener" target="_blank">Google：参照元の使い方</a></li>
+</ul></div>
+</div>
+<!-- CTA Button -->
+<div class="article-cta">
+<div class="cta-box">
+<h2 class="cta-title">AI導入でお悩みですか？</h2>
+<p class="cta-text">MIRAINAでは、貴社の課題に合わせた<br/>最適なAI活用プランをご提案します。</p>
+<a class="btn btn-black-fill" href="/contact.html">無料相談する</a>
+</div>
+</div>
+<!-- Editorial Information -->
+<div class="article-editor">
+<div class="editor-header">この記事を監修した人</div>
+<div class="editor-profile">
+<div class="editor-image">
+<img alt="本記事の監修者 芝優作（MIRAINA）" decoding="async" loading="lazy" src="/images/shiba_yusaku.webp"/>
+</div>
+<div class="editor-info">
+<div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+<p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+</div>
+</div>
+</div>
+<!-- Related Articles -->
+<div class="article-related">
+<h2 class="related-title">関連記事</h2>
+<div class="related-grid"><a class="related-card" href="/blogs/blog288.html"><div class="related-img"><img alt="Gemini Notebookの監査ログ追加｜社内資料の利用履歴を確認" decoding="async" loading="lazy" src="/images/blogs_images/blog-card288.webp"/></div><div class="related-content"><div class="related-date">2026.09.06</div><div class="related-text">Gemini Notebookの監査ログ追加｜社内資料の利用履歴を確認</div></div></a><a class="related-card" href="/blogs/blog304.html"><div class="related-img"><img alt="GmailのGeminiで資料作成｜メールを引き継ぎ文書にまとめる方法" decoding="async" loading="lazy" src="/images/blogs_images/blog-card304.webp"/></div><div class="related-content"><div class="related-date">2026.09.15</div><div class="related-text">GmailのGeminiで資料作成｜メールを引き継ぎ文書にまとめる方法</div></div></a><a class="related-card" href="/blogs/blog311.html"><div class="related-img"><img alt="ChatGPT for Wordの使い方｜Wordで要約・修正する手順と料金" decoding="async" loading="lazy" src="/images/blogs_images/blog-card311.webp"/></div><div class="related-content"><div class="related-date">2026.09.22</div><div class="related-text">ChatGPT for Wordの使い方｜Wordで要約・修正する手順と料金</div></div></a></div>
+</div>
+</article>
+</main>
+<!-- Footer -->
+<footer class="footer">
+<div class="container footer-inner">
+<div class="footer-brand">
+<a href="/index.html">
+<p class="footer-brand-text">MIRAINA</p>
+</a>
+</div>
+<div class="footer-center">
+<!-- Empty as requested -->
+</div>
+<div class="footer-menu">
+<ul class="footer-menu-list">
+<li><a href="/about.html">私たちについて</a></li>
+<li><a href="/works.html">事例紹介</a></li>
+<li><a href="/blogs.html">ブログ</a></li>
+<li><a href="/contact.html">お問い合わせ</a></li>
+<li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+</ul>
+<div class="footer-sns">
+<a href="https://www.instagram.com/plus.taime" rel="noopener" target="_blank">Instagram</a>
+<a href="https://www.threads.com/@plus.taime" rel="noopener" target="_blank">Threads</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<a aria-label="AI info" class="footer-robot-icon" href="/llms.txt">
+<svg class="icon-thin" height="24" viewbox="0 0 24 24" width="24">
+<path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"></path>
+</svg>
+</a>
+<p>© MIRAINA All Rights Reserved.</p>
+</div>
+</footer>
+<script src="/js/common.js"></script>
+<script>
+        // Copy common script logic for simple viewing
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
