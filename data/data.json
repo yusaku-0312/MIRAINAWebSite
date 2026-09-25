@@ -2834,6 +2834,15 @@
       "thumbnail": "/images/blogs_images/blog-card315.webp",
       "alt": "Google DocsがNotebookと連携｜社内資料から引用付き提案書を作る方法",
       "date": "2026-09-24"
+    },
+    {
+      "id": 316,
+      "title": "Gemini 3.8 LiveにLive Avatar追加｜多言語の音声接客で確認する4項目",
+      "description": "GoogleがGemini 3.8 LiveにLive Avatarを追加し企業向けに一般提供。97言語対応の中身、提供条件と制限、接客での使いどころ、導入前に確認する4項目を解説します。",
+      "link": "/blogs/blog316.html",
+      "thumbnail": "/images/blogs_images/blog-card316.webp",
+      "alt": "Gemini 3.8 LiveにLive Avatar追加｜多言語の音声接客で確認する4項目",
+      "date": "2026-09-25"
     }
   ],
   "works": [

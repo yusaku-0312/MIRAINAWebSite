@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="index, follow" name="robots"/>
+<title>Gemini 3.8 LiveにLive Avatar追加｜多言語の音声接客で確認する4項目 | MIRAINAブログ</title>
+<meta content="GoogleがGemini 3.8 LiveにLive Avatarを追加し企業向けに一般提供。97言語対応の中身、提供条件と制限、接客での使いどころ、導入前に確認する4項目を解説します。" name="description"/>
+<!-- OGP Tags -->
+<meta content="Gemini 3.8 LiveにLive Avatar追加｜多言語の音声接客で確認する4項目" property="og:title"/>
+<meta content="article" property="og:type"/>
+<meta content="https://miraina-ai.com/blogs/blog316.html" property="og:url"/>
+<meta content="https://miraina-ai.com/images/blogs_images/blog316-1.webp" property="og:image"/>
+<meta content="GoogleがGemini 3.8 LiveにLive Avatarを追加し企業向けに一般提供。97言語対応の中身、提供条件と制限、接客での使いどころ、導入前に確認する4項目を解説します。" property="og:description"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Shippori+Mincho:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Favicon -->
+<link href="/images/favicon.ico" rel="icon"/>
+<!-- CSS -->
+<link href="/css/reset.css" rel="stylesheet"/>
+<link href="/css/common.css" rel="stylesheet"/>
+<link href="/css/blog_article.css" rel="stylesheet"/>
+<link href="https://miraina-ai.com/blogs/blog316.html" rel="canonical"/><style>.article-body .code-block pre{white-space:pre-wrap;overflow-wrap:anywhere;color:#f5f5f5}.article-body .code-block pre code{color:inherit;background:transparent}.article-body td code{overflow-wrap:anywhere;word-break:break-word}.article-cta .cta-title{color:#fff}</style></head>
+<body>
+<!-- Header -->
+<header class="header">
+<div class="container header-inner">
+<a class="header-logo" href="/">
+<!-- Assuming logo exists or using text fallback for now if image broken -->
+<img alt="MIRAINA" height="40" src="/images/company-logo.webp" width="120"/>
+</a>
+<div class="hamburger" id="js-hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<nav class="header-nav">
+<div class="nav-item has-dropdown">
+<a class="nav-link" href="/services.html">サービス</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="/services/ai_consulting.html">生成AI活用支援</a>
+<a class="dropdown-item" href="/services/ai_training.html">AI研修</a>
+<a class="dropdown-item" href="/services/ai_develop.html">AI開発</a>
+<a class="dropdown-item" href="/services/llmo_insight.html">LLMO Insight</a>
+<a class="dropdown-item" href="/beauty-dx/">美容サロン特化AI活用支援</a>
+
+</div>
+</div>
+<!-- Other required items from spec usually go here, but focusing on user content mapping -->
+<div class="nav-item"><a class="nav-link" href="/about.html">MIRAINAについて</a></div>
+<div class="nav-item"><a class="nav-link" href="/works.html">事例紹介</a></div>
+<div class="nav-item"><a class="nav-link" href="/blogs.html">ブログ</a></div>
+<div class="nav-item"><a class="nav-link btn-contact" href="/contact.html">お問い合わせ</a></div>
+<div class="nav-item">
+<a aria-label="AI info" class="nav-link" href="/llms.txt">
+<svg class="icon-thin" height="20" viewbox="0 0 24 24" width="20">
+<path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"></path>
+</svg>
+</a>
+</div>
+</nav>
+</div>
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="js-mobile-menu">
+<nav class="mobile-nav">
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/services.html">サービス</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/about.html">MIRAINAについて</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/works.html">事例紹介</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/blogs.html">ブログ</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/contact.html">お問い合わせ</a></div>
+</nav>
+</div>
+</header>
+<main>
+<!-- Breadcrumbs -->
+<div class="container breadcrumbs">
+<ul>
+<li><a href="/index.html">ホーム</a></li>
+<li><a href="/blogs.html">ブログ</a></li>
+<li>Gemini 3.8 LiveにLive Avatar追加｜多言語の音声接客で確認する4項目</li>
+</ul>
+</div>
+<article class="article-container">
+<!-- Article Header -->
+<header class="article-header">
+<div class="article-meta">
+<span class="article-date">2026.09.25</span>
+<div class="article-tags"><span class="article-tag">Gemini</span><span class="article-tag">AIエージェント</span><span class="article-tag">AI活用</span></div>
+</div>
+<h1 class="article-title">Gemini 3.8 LiveにLive Avatar追加｜多言語の音声接客で確認する4項目</h1>
+<div class="article-thumbnail">
+<img alt="Gemini 3.8 LiveにLive Avatar追加｜多言語の音声接客で確認する4項目" fetchpriority="high" height="675" src="/images/blogs_images/blog316-1.webp" width="1200"/>
+<!-- Note: Replace with actual image path -->
+</div>
+</header>
+<!-- Summary -->
+<section class="article-summary"><h2 class="sr-only">記事の概要</h2><p>「話すAIアバターで接客できる」と聞いて、自社でも使えるか気になっていませんか。GoogleがGemini 3.8 Liveに追加したLive Avatarをもとに、何ができるのか、どこに制限があるのかを整理します。導入を検討するかどうかを、公開情報から判断できることがこの記事のゴールです。</p></section>
+<!-- Table of Contents -->
+<div class="article-toc">
+<div class="toc-title">目次</div>
+<ul><li><a href="#section1">1. Gemini 3.8 LiveにLive Avatarが追加</a></li><li><a href="#section2">2. 97言語対応と「考えながら話す」の中身</a></li><li><a href="#section3">3. 導入前に確認する4項目</a></li><li><a href="#section4">4. 接客・案内での使いどころ</a></li><li><a href="#section5">5. 中小企業が先に決めておくこと</a></li><li><a href="#section6">6. まとめ：一つの窓口から試す</a></li></ul>
+</div>
+<!-- Main Content Body -->
+<div class="article-body"><h2 id="section1">1. Gemini 3.8 LiveにLive Avatarが追加</h2>
+<p><strong>Googleは、音声対話モデル「Gemini 3.8 Live」に映像アバターを組み合わせた「Gemini 3.8 Live with Live Avatar」を、企業向けに一般提供（GA）しました。</strong>発表は2026年9月24日（米国時間）で、Google Cloud公式ブログは9月25日付でGAを告知しています。提供先は企業向けAIエージェント基盤「Gemini Enterprise」と、開発者向けの「Live API」です。出典：<a href="https://cloud.google.com/blog/products/ai-machine-learning/gemini-3-8-live-with-live-avatar-is-now-generally-available" rel="noopener" target="_blank">Google Cloud公式ブログ</a>。</p>
+<figure class="article-figure"><img alt="Gemini 3.8 Live with Live AvatarのGAを告知するGoogle Cloud公式ブログ" decoding="async" height="450" loading="lazy" src="/images/blogs_images/blog316-2.webp" width="800"/><figcaption>Google Cloud公式ブログ（2026年9月25日付）のスクリーンショット。Live Avatarの一般提供開始を告知しています。</figcaption></figure>
+<p>これまでの音声AIは「声だけ」でした。Live Avatarは、その対話に低遅延の映像ストリーミングを組み合わせ、話す内容に合わせて口の動きや表情を生成します。Googleはこれを「リアルタイムの視覚的な存在感（real-time visual presence）」と説明しています。画面の向こうに人が立っているように見える案内役を、ソフトウェアとして置けるようになったという位置づけです。</p>
+<p>注意したいのは、これが<strong>企業向けの基盤機能であり、個人のGeminiアプリにアバターが付いた話ではない</strong>点です。無料プランや個人向け有料プランで今日から使える機能ではありません。まずは自社がGemini Enterpriseの対象になるのかを確認するところから始まります。</p>
+<h2 id="section2">2. 97言語対応と「考えながら話す」の中身</h2>
+<p>Live Avatarは<strong>97言語に対応し、話されている言語を自動で判別します。</strong>会話の途中で言語が切り替わっても、その音声に合わせた口の動きと表情を映像として生成します。多言語の受付や案内を、言語ごとに別の担当者を置かずに扱える可能性があるということです。</p>
+<figure class="article-figure"><img alt="Gemini 3.8 Live with Live Avatarを紹介するGoogle公式発表ページ" decoding="async" height="450" loading="lazy" src="/images/blogs_images/blog316-3.webp" width="800"/><figcaption>Google公式発表ページ（2026年9月24日付）のスクリーンショット。ライブ対話機能と低遅延の映像配信を組み合わせた仕組みを説明しています。</figcaption></figure>
+<p>土台になるGemini 3.8 Liveは、音声から音声を直接生成する方式です。発話の途中で割り込まれても文脈を保ち、会話を止めずに裏側でツールを呼び出す動作にも対応します。「在庫を確認しますね」と話しながら在庫APIを叩き、待ち時間の沈黙を減らすといった使い方が想定されています。</p>
+<p>もう一つの特徴は、生成された音声と映像のすべてに、人の目には見えない電子透かし<strong>「SynthID」</strong>が埋め込まれることです。AIが生成した映像であることを後から判別できる仕組みで、なりすまし対策として用意されています。ただし、視聴者が自分でSynthIDを確認できるわけではないため、<strong>接客で使う場合はAIが応対していることを画面や音声で明示する運用が別途必要です。</strong></p>
+<p>なお、上位版の「Gemini 3.8 Live Extended Thinking」は、今回のGAには含まれず限定プレビューのままです。より深く考えさせる用途を前提に検討している場合は、提供状況が異なる点に注意してください。</p>
+<h2 id="section3">3. 導入前に確認する4項目</h2>
+<p>できることだけを見て判断すると、要件に合わないまま検証に入ってしまいます。公開情報の時点で分かっている制限は、次の4項目に整理できます。</p>
+<div class="article-table-wrapper"><table class="article-table">
+<thead><tr><th>確認項目</th><th>公開情報の内容</th><th>判断のポイント</th></tr></thead>
+<tbody>
+<tr><td>提供地域</td><td>米国とEUのエンドポイントで提供</td><td>日本国内でのデータ処理条件は公式告知に明記がない。個人情報を扱う応対では要確認</td></tr>
+<tr><td>カスタムアバター</td><td>参照画像から独自の顔を作れるが、Googleの許可リストに登録され審査を通った企業に限定。既製アバターのライブラリは利用可能</td><td>自社タレントや店長の顔で作る前提なら、まず許可の可否を確認する</td></tr>
+<tr><td>連続利用時間</td><td>モデルカードでは「数時間ではなく数分程度の連続対話」を想定と説明</td><td>長時間の常設受付には向かない。1件ずつ完結する用件から選ぶ</td></tr>
+<tr><td>出力の上限</td><td>アバター利用時の出力は24Kトークンに制限（コンテキストは最大128Kトークン）</td><td>長い説明を一気に読み上げる用途は分割設計が必要</td></tr>
+</tbody>
+</table>
+</div>
+<p>加えて、料金は今回の公式ブログに金額の記載がなく、Google Cloudの料金ページで確認する案内になっています。第三者サイトには単価の記載も見られますが、<strong>見積りは必ず公式の料金ページと営業窓口で確認してください。</strong>音声と映像を扱うため、テキストのみのAI利用とは費用の出方が変わります。</p>
+<p>もう一点、モデルカードは知識のカットオフを2025年1月とし、ハルシネーション（誤った内容の生成）や応答の遅延・タイムアウトが起こりうることも明記しています。価格や在庫のような変動する情報は、モデルの知識に任せず、必ず自社データを参照させる設計が前提になります。</p>
+<h2 id="section4">4. 接客・案内での使いどころ</h2>
+<p>Googleは導入事例として、インドのEqual AIが9つのインド言語で<strong>1日100万件を超えるライブ通話</strong>を処理していることを挙げています。ほかにCox Automotive（Autotrader）のショッピングアシスタント、SalesforceのAgentforceとの連携などが紹介されています。いずれも大規模な事例ですが、そこから使いどころの共通点は読み取れます。</p>
+<ul><li><strong>同じ質問が繰り返される窓口：</strong>営業時間、持ち物、料金プラン、アクセスなど、答えが決まっている用件。</li><li><strong>多言語の一次対応：</strong>インバウンド向けの施設案内や、外国人スタッフ向けの手順説明。</li><li><strong>受付の入口：</strong>ホテルのチェックイン、来店受付、保険の請求受付など、聞き取って次の担当へ渡す役割。</li><li><strong>画面を見ながらの説明：</strong>カメラ映像や画面共有を音声と同時に理解できるため、「これはどう使うのか」に答える場面。</li></ul>
+<p>逆に向かないのは、判断の責任が重い用件です。クレーム対応、契約内容の最終確認、医療や法務に関わる助言などは、AIアバターで完結させず人へつなぐ設計にします。「数分で終わる用件をAIが受け、それ以外は人に渡す」という線引きが現実的です。</p>
+<p>音声を扱う業務の効率化という点では、応対の録音を文字にして振り返る方法も併用できます。文字起こし側の選択肢は<a href="/blogs/blog307.html">MAI-Transcribe-2の公開で確認する4項目</a>も参考にしてください。</p>
+<h2 id="section5">5. 中小企業が先に決めておくこと</h2>
+<p>アバターは見た目のインパクトが大きく、「とりあえず作ってみる」に流れやすい技術です。導入の成否は、映像の質よりも運用の設計で決まります。着手前に次の4点を決めておくと、検証が判断材料になります。</p>
+<ol><li><strong>対象の用件を1つに絞る：</strong>「よくある質問すべて」ではなく、「営業時間と予約方法の案内だけ」のように限定します。正解が確認できる範囲から始めます。</li><li><strong>参照させる情報を確定する：</strong>料金表や案内文の最新版を1セット用意し、そこにない内容は答えさせない方針を決めます。古い資料が混在すると、流暢な誤答が生まれます。</li><li><strong>人に渡す条件を書き出す：</strong>「金額の交渉」「苦情」「例外対応」などを列挙し、その場合の引き継ぎ方法まで決めておきます。</li><li><strong>AI応対であることの表示を決める：</strong>画面表示と冒頭の音声の両方で伝えるか、記録の扱いをどう案内するかを、公開前に社内で確認します。</li></ol>
+<p><strong>MIRAINAの視点：</strong>アバター接客の相談をいただくと、最初の論点は「顔をどうするか」になりがちです。しかし効果を左右するのは、答えられる範囲の狭さと、人に渡す線の明確さです。まず既製アバターで1つの用件を試し、応対件数だけでなく「人が引き取った件数」と「誤答の内容」を記録してください。その2つが、拡大するかどうかの判断に直結します。日本国内での提供条件が固まるまでは、社内向けの案内や多言語の手順説明など、個人情報を扱わない場面での検証が安全です。</p>
+<h2 id="section6">6. まとめ：一つの窓口から試す</h2>
+<p>Gemini 3.8 LiveのLive Avatarは、97言語の音声対話に映像の存在感を加えた企業向け機能です。一方で、提供地域は米国とEU、カスタムアバターは許可制、連続対話は数分程度という制限があります。<strong>できることと制限を並べて、自社の用件が「数分で終わり、答えが確認できる範囲」に収まるかを先に見極めてください。</strong>MIRAINAの<a href="/services/ai_consulting.html">生成AI活用支援</a>では、対象業務の切り出しから運用ルールづくりまでを支援しています。</p>
+<div class="article-references"><div class="ref-title">参考リンク（2026年9月25日確認）</div><ul>
+<li><a href="https://cloud.google.com/blog/products/ai-machine-learning/gemini-3-8-live-with-live-avatar-is-now-generally-available" rel="noopener" target="_blank">Google Cloud：Gemini 3.8 Live with Live Avatar is now generally available</a></li>
+<li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar/" rel="noopener" target="_blank">Google：Introducing Gemini 3.8 Live with Live Avatar</a></li>
+<li><a href="https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing" rel="noopener" target="_blank">Google Cloud：Agent Platform 料金</a></li>
+</ul></div>
+</div>
+<!-- CTA Button -->
+<div class="article-cta">
+<div class="cta-box">
+<h2 class="cta-title">AI導入でお悩みですか？</h2>
+<p class="cta-text">MIRAINAでは、貴社の課題に合わせた<br/>最適なAI活用プランをご提案します。</p>
+<a class="btn btn-black-fill" href="/contact.html">無料相談する</a>
+</div>
+</div>
+<!-- Editorial Information -->
+<div class="article-editor">
+<div class="editor-header">この記事を監修した人</div>
+<div class="editor-profile">
+<div class="editor-image">
+<img alt="本記事の監修者 芝優作（MIRAINA）" decoding="async" loading="lazy" src="/images/shiba_yusaku.webp"/>
+</div>
+<div class="editor-info">
+<div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+<p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+</div>
+</div>
+</div>
+<!-- Related Articles -->
+<div class="article-related">
+<h2 class="related-title">関連記事</h2>
+<div class="related-grid"><a class="related-card" href="/blogs/blog307.html"><div class="related-img"><img alt="MAI-Transcribe-2が公開｜60言語・1時間0.10ドルの文字起こしで確認する4項目" decoding="async" loading="lazy" src="/images/blogs_images/blog-card307.webp"/></div><div class="related-content"><div class="related-date">2026.09.19</div><div class="related-text">MAI-Transcribe-2が公開｜60言語・1時間0.10ドルの文字起こしで確認する4項目</div></div></a><a class="related-card" href="/blogs/blog305.html"><div class="related-img"><img alt="SalesforceのAI Control Planeとは｜AIエージェント管理で中小企業が決める3つのこと" decoding="async" loading="lazy" src="/images/blogs_images/blog-card305.webp"/></div><div class="related-content"><div class="related-date">2026.09.16</div><div class="related-text">SalesforceのAI Control Planeとは｜AIエージェント管理で中小企業が決める3つのこと</div></div></a><a class="related-card" href="/blogs/blog306.html"><div class="related-img"><img alt="Claude for Small Businessが43ワークフローに拡張｜中小企業が使い始める3ステップ" decoding="async" loading="lazy" src="/images/blogs_images/blog-card306.webp"/></div><div class="related-content"><div class="related-date">2026.09.18</div><div class="related-text">Claude for Small Businessが43ワークフローに拡張｜中小企業が使い始める3ステップ</div></div></a></div>
+</div>
+</article>
+</main>
+<!-- Footer -->
+<footer class="footer">
+<div class="container footer-inner">
+<div class="footer-brand">
+<a href="/index.html">
+<p class="footer-brand-text">MIRAINA</p>
+</a>
+</div>
+<div class="footer-center">
+<!-- Empty as requested -->
+</div>
+<div class="footer-menu">
+<ul class="footer-menu-list">
+<li><a href="/about.html">私たちについて</a></li>
+<li><a href="/works.html">事例紹介</a></li>
+<li><a href="/blogs.html">ブログ</a></li>
+<li><a href="/contact.html">お問い合わせ</a></li>
+<li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+</ul>
+<div class="footer-sns">
+<a href="https://www.instagram.com/plus.taime" rel="noopener" target="_blank">Instagram</a>
+<a href="https://www.threads.com/@plus.taime" rel="noopener" target="_blank">Threads</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<a aria-label="AI info" class="footer-robot-icon" href="/llms.txt">
+<svg class="icon-thin" height="24" viewbox="0 0 24 24" width="24">
+<path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"></path>
+</svg>
+</a>
+<p>© MIRAINA All Rights Reserved.</p>
+</div>
+</footer>
+<script src="/js/common.js"></script>
+<script>
+        // Copy common script logic for simple viewing
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

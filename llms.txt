@@ -341,6 +341,7 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: Google MeetのAI議事録、9月29日から設定変更｜自動開始の条件と止め方](https://miraina-ai.com/blogs/blog313.html): Google MeetのAI議事録の自動開始設定が9月29日から変更。プラン別の初期値、3人以上の条件、停止方法、日本語と共有範囲を公式情報で解説します。
 - [最新ブログ: Claude Opus 5.5が公開｜コスト4割減の内訳と乗り換え前の4項目](https://miraina-ai.com/blogs/blog314.html): Claude Opus 5.5が2026年9月22日に公開。入力4ドル・出力20ドル、キャッシュ読み取り0.20ドルという「40%安い」の内訳と、利用上限の変更・性能の見方を公式情報で解説します。
 - [最新ブログ: Google DocsがNotebookと連携｜社内資料から引用付き提案書を作る方法](https://miraina-ai.com/blogs/blog315.html): Google DocsがGemini Notebookの資料を参照可能に。対象プラン、提案書を作る手順と指示例、引用の確認方法、日本語対応の注意点を解説します。
+- [最新ブログ: Gemini 3.8 LiveにLive Avatar追加｜多言語の音声接客で確認する4項目](https://miraina-ai.com/blogs/blog316.html): GoogleがGemini 3.8 LiveにLive Avatarを追加し2026年9月24日に企業向けへ一般提供。97言語対応の中身、米国・EU限定などの提供条件と制限、接客での使いどころを解説します。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)
