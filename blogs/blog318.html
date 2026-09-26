@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="index, follow" name="robots"/>
+<title>ChatGPT広告にSponsored Agents｜クリック後の会話導線と確認する4項目 | MIRAINAブログ</title>
+<meta content="OpenAIがChatGPT広告でSponsored Agentsのテストを開始。広告クリック後に企業AIと会話する導線の仕組み、対象範囲、Ads Managerの新機能、出稿前に確認する4項目を解説します。" name="description"/>
+<!-- OGP Tags -->
+<meta content="ChatGPT広告にSponsored Agents｜クリック後の会話導線と確認する4項目" property="og:title"/>
+<meta content="article" property="og:type"/>
+<meta content="https://miraina-ai.com/blogs/blog318.html" property="og:url"/>
+<meta content="https://miraina-ai.com/images/blogs_images/blog318-1.webp" property="og:image"/>
+<meta content="OpenAIがChatGPT広告でSponsored Agentsのテストを開始。広告クリック後に企業AIと会話する導線の仕組み、対象範囲、Ads Managerの新機能、出稿前に確認する4項目を解説します。" property="og:description"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Shippori+Mincho:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Favicon -->
+<link href="/images/favicon.ico" rel="icon"/>
+<!-- CSS -->
+<link href="/css/reset.css" rel="stylesheet"/>
+<link href="/css/common.css" rel="stylesheet"/>
+<link href="/css/blog_article.css" rel="stylesheet"/>
+<link href="https://miraina-ai.com/blogs/blog318.html" rel="canonical"/><style>.article-body .code-block pre{white-space:pre-wrap;overflow-wrap:anywhere;color:#f5f5f5}.article-body .code-block pre code{color:inherit;background:transparent}.article-body td code{overflow-wrap:anywhere;word-break:break-word}</style></head>
+<body>
+<!-- Header -->
+<header class="header">
+<div class="container header-inner">
+<a class="header-logo" href="/">
+<!-- Assuming logo exists or using text fallback for now if image broken -->
+<img alt="MIRAINA" height="40" src="/images/company-logo.webp" width="120"/>
+</a>
+<div class="hamburger" id="js-hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<nav class="header-nav">
+<div class="nav-item has-dropdown">
+<a class="nav-link" href="/services.html">サービス</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="/services/ai_consulting.html">生成AI活用支援</a>
+<a class="dropdown-item" href="/services/ai_training.html">AI研修</a>
+<a class="dropdown-item" href="/services/ai_develop.html">AI開発</a>
+<a class="dropdown-item" href="/services/llmo_insight.html">LLMO Insight</a>
+<a class="dropdown-item" href="/beauty-dx/">美容サロン特化AI活用支援</a>
+
+</div>
+</div>
+<!-- Other required items from spec usually go here, but focusing on user content mapping -->
+<div class="nav-item"><a class="nav-link" href="/about.html">MIRAINAについて</a></div>
+<div class="nav-item"><a class="nav-link" href="/works.html">事例紹介</a></div>
+<div class="nav-item"><a class="nav-link" href="/blogs.html">ブログ</a></div>
+<div class="nav-item"><a class="nav-link btn-contact" href="/contact.html">お問い合わせ</a></div>
+<div class="nav-item">
+<a aria-label="AI info" class="nav-link" href="/llms.txt">
+<svg class="icon-thin" height="20" viewbox="0 0 24 24" width="20">
+<path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"></path>
+</svg>
+</a>
+</div>
+</nav>
+</div>
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="js-mobile-menu">
+<nav class="mobile-nav">
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/services.html">サービス</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/about.html">MIRAINAについて</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/works.html">事例紹介</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/blogs.html">ブログ</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/contact.html">お問い合わせ</a></div>
+</nav>
+</div>
+</header>
+<main>
+<!-- Breadcrumbs -->
+<div class="container breadcrumbs">
+<ul>
+<li><a href="/index.html">ホーム</a></li>
+<li><a href="/blogs.html">ブログ</a></li>
+<li>ChatGPT広告にSponsored Agents｜クリック後の会話導線と確認する4項目</li>
+</ul>
+</div>
+<article class="article-container">
+<!-- Article Header -->
+<header class="article-header">
+<div class="article-meta">
+<span class="article-date">2026.09.26</span>
+<div class="article-tags"><span class="article-tag">ChatGPT</span><span class="article-tag">LLMO</span><span class="article-tag">マーケティング</span></div>
+</div>
+<h1 class="article-title">ChatGPT広告にSponsored Agents｜クリック後の会話導線と確認する4項目</h1>
+<div class="article-thumbnail">
+<img alt="ChatGPT広告にSponsored Agents｜クリック後の会話導線と確認する4項目" fetchpriority="high" height="675" src="/images/blogs_images/blog318-1.webp" width="1200"/>
+<!-- Note: Replace with actual image path -->
+</div>
+</header>
+<!-- Summary -->
+<section class="article-summary"><h2 class="sr-only">記事の概要</h2><p>広告をクリックした人が、自社サイトに来る前にAIへ質問する——。OpenAIがテストを始めたSponsored Agentsは、そんな導線を広告の中に作ります。仕組みと対象範囲、同時に更新されたAds Managerの機能、出稿前に確認する4項目を整理します。日本の担当者が「今すべきこと」と「まだ不要なこと」を切り分けられるようになることがこの記事のゴールです。</p></section>
+<!-- Table of Contents -->
+<div class="article-toc">
+<div class="toc-title">目次</div>
+<ul><li><a href="#section1">1. ChatGPT広告にSponsored Agentsが登場</a></li><li><a href="#section2">2. 「広告→LP」から「広告→会話」への変化</a></li><li><a href="#section3">3. 日本から使えるのか｜提供範囲の確認</a></li><li><a href="#section4">4. 同時に更新されたAds Managerの新機能</a></li><li><a href="#section5">5. 出稿前に確認する4項目と準備の指示例</a></li><li><a href="#section6">6. まとめ：聞かれる質問を先に書き出す</a></li></ul>
+</div>
+<!-- Main Content Body -->
+<div class="article-body"><h2 id="section1">1. ChatGPT広告にSponsored Agentsが登場</h2>
+<p><strong>Sponsored Agentsは、ChatGPT内の広告をクリックした人が、その企業が用意したAIエージェントと会話を始められる広告形式です。</strong>OpenAIは2026年9月16日、この形式のテストを開始したと広告主向けに案内しました。OpenAIの説明によれば、ユーザーは「もっと深く知る選択肢」を与えられ、明示的にラベル付けされた会話へ進みます。出典：<a href="https://www.seroundtable.com/openai-chatgpt-sponsored-agents-42104.html" rel="noopener" target="_blank">Search Engine Roundtable（OpenAIの広告主向け案内を引用）</a>。</p>
+<figure class="article-figure"><img alt="ChatGPT広告のSponsored Agentsテスト開始を報じるページ" decoding="async" height="450" loading="lazy" src="/images/blogs_images/blog318-2.webp" width="800"/><figcaption>Sponsored Agentsの発表を報じる記事（2026年9月16日付）。OpenAIが広告主へ送った案内文が引用されています。</figcaption></figure>
+<p>重要なのは、この会話がChatGPT本体の回答とは切り離されている点です。OpenAIは「Sponsored Agentとの会話は、ChatGPTの独立した回答とは区別され、ユーザーが最初に始めた会話とも別のものである」と明記しています。つまり、企業のAIが話した内容がChatGPTの中立的な回答として扱われるわけではありません。ユーザーは質問を重ねたうえで、納得したタイミングで企業サイトへのリンクをたどります。</p>
+<h2 id="section2">2. 「広告→LP」から「広告→会話」への変化</h2>
+<p>これまでの広告は、クリックの受け皿がランディングページ（LP）でした。Sponsored Agentsでは、その手前に会話が入ります。OpenAIが挙げた例は、ダイニングテーブルの広告をクリックした買い物客です。サイズ、何人掛けか、表面の手入れ方法といった疑問を、ページを読み込む前にその場で尋ねられます。</p>
+<p>この違いは、準備するものを変えます。LPは「読ませる順番」を設計する仕事でした。会話は「答える中身」を用意する仕事です。ページ上で目立たせていなかった細かな条件——納期、対応エリア、最低ロット、キャンセル規定——が、最初に聞かれる可能性があります。</p>
+<div class="article-table-wrapper"><table class="article-table"><thead><tr><th>比較軸</th><th>従来の広告→LP</th><th>広告→Sponsored Agent</th></tr></thead><tbody><tr><td>最初の接点</td><td>用意した構成で読ませる</td><td>相手の関心から聞かれる</td></tr><tr><td>準備するもの</td><td>見出し・画像・導線</td><td>質問への答えと一次情報</td></tr><tr><td>想定外への対応</td><td>問い合わせフォームで受ける</td><td>会話の中で即座に問われる</td></tr></tbody></table></div>
+<p>これはMIRAINAによる整理です。実際の画面仕様や回答範囲は広告主の設定によって異なります。ただし「聞かれてから困る項目を洗い出す」という準備は、どの設定でも先に効きます。AI検索経由の流入を扱ってきた企業なら、<a href="/blogs/blog303.html">Search Consoleの生成AIパフォーマンスレポート</a>で見た「質問の形で来る流入」と同じ性質だと捉えると分かりやすいはずです。</p>
+<h2 id="section3">3. 日本から使えるのか｜提供範囲の確認</h2>
+<p><strong>2026年9月26日時点で、Sponsored Agentsは米国の一部広告主を対象としたテストです。</strong>OpenAIは「米国の選定された広告主とテストしている」と案内しており、一般申込は案内されていません。日本での提供開始日も公表されていません。今すぐ運用設計を変える必要はない、というのが現時点の結論です。</p>
+<p>一方、ChatGPT広告そのものは複数市場で展開が進んでいます。同じ案内には、米国のShopify加盟店がShopifyアプリストアのChatGPT Adsアプリから商品カタログと計測を接続できること、国際展開を同月中に予定していることが含まれていました。HubSpotを使う企業は、HubSpot内でChatGPT Ads アカウントを接続し、広告作成から成果追跡、リード対応までを行えます。</p>
+<p>したがって、日本の担当者が確認すべきは「Sponsored Agentsが使えるか」ではなく、「自社が使っているCRMやECの管理画面側に、ChatGPT広告の接続先が増えていないか」です。広告の出稿可否は、OpenAIの広告管理画面と各国の提供状況に依存します。代理店や販売パートナーの説明だけで判断せず、自社アカウントの管理画面で確認してください。</p>
+<h2 id="section4">4. 同時に更新されたAds Managerの新機能</h2>
+<p>Sponsored Agentsは同時発表の一部です。広告主向け案内では、測定と入稿に関わる複数の更新が並んでいました。すでにChatGPT広告を運用している企業には、こちらのほうが先に影響します。</p>
+<ul><li><strong>インプレッション課金のコンバージョン最適化：</strong>一般提供開始。クリック経由だけでなく広告表示経由のコンバージョンも最適化対象とし、課金はインプレッション基準になります。</li><li><strong>アトリビューション期間の選択：</strong>Ads Managerの列設定で、クリックは7日・14日・30日、ビューは0日・1日から選べます。設定はコンバージョン列全体に適用されます。</li><li><strong>プラットフォーム別のターゲティング：</strong>Androidアプリ、Android web、デスクトップweb、iOSアプリ、iOS webを個別に指定でき、成果もプラットフォーム別に分解できます。</li><li><strong>AIによる入稿補助：</strong>ランディングページと目的から文言・画像の案を提示します。広告主が確認・編集してから採用する流れで、案内時点ではテスト中とされています。</li><li><strong>テキストのカスタマイズ：</strong>既存の見出しと説明文を会話の文脈に合わせて調整し、ユーザーの言語へ翻訳します。オプトイン方式で、有効にするかは広告主が制御します。</li><li><strong>Event Quality Score：</strong>Tools内のConversionsから確認でき、PixelとConversions APIのデータソースに1〜10のセットアップ品質スコアと改善提案が表示されます。</li></ul>
+<p>とくに注意が必要なのは、上の2つです。課金方式とアトリビューション期間が変わると、変更前後の数字をそのまま並べた比較が成立しません。切り替える場合は、設定を変えた日付を記録し、期間をまたぐレポートに注記を残してください。「成果が伸びた／落ちた」の判断を、設定変更と取り違えないための最低限の手当てです。</p>
+<h2 id="section5">5. 出稿前に確認する4項目と準備の指示例</h2>
+<p>会話型の広告に備えるなら、順序は<strong>提供範囲を確認する→想定質問を洗い出す→答えの一次情報を固める→誰が確認するか決める</strong>です。以下はMIRAINAが提案する確認項目です。</p>
+<ul><li><strong>提供範囲：</strong>自社のアカウントと地域で使える機能はどれか。テスト対象か一般提供かを分けて記録する。</li><li><strong>回答の元データ：</strong>価格、在庫、納期、対応エリア、規約。AIに渡す情報が最新かを誰が更新するか。</li><li><strong>言語と表現：</strong>テキストのカスタマイズを有効にするか。翻訳後の表現を掲載前に誰が読むか。</li><li><strong>測定の前提：</strong>アトリビューション期間と課金方式の変更を、いつ・どのレポートに反映するか。</li></ul>
+<h3>想定質問を洗い出す</h3>
+<div class="code-block"><pre><code>当社の［商品・サービス名］について、広告をクリックした見込み客が
+購入前に聞きそうな質問を30個挙げてください。
+以下の資料だけを根拠にしてください：［LPのテキスト／FAQ／料金表を貼り付け］。
+資料内で答えられる質問と、答えられない質問を分けて表にしてください。
+答えられない質問には、回答するために必要な情報を書き添えてください。
+資料にない条件を推測で補わないでください。</code></pre></div>
+<p>「答えられない質問」の一覧が、そのまま準備すべき項目になります。ここで出てくるのは多くの場合、納期・例外対応・他社との違いです。LPに書いていなかった理由が「書くと長くなるから」であれば、会話なら扱えます。社内で結論が出ていないから書けなかった項目は、先に決めるべき課題です。</p>
+<h3>回答用のファクトシートを作る</h3>
+<div class="code-block"><pre><code>前の手順で「答えられない」に分類した質問について、
+回答用のファクトシートの下書きを作ってください。
+1行1項目で、［質問／回答／根拠資料／確認日／確認者］の列にしてください。
+回答は社外に出せる表現にし、断定できない項目は「要確認」と記入してください。
+金額と期間は、条件付きであれば条件も併記してください。
+当社が公開していない数値を、一般論から推測して埋めないでください。</code></pre></div>
+<p>この表は、Sponsored Agentsが日本で使えるようになるまでの間も無駄になりません。問い合わせ対応の標準回答、FAQページ、社内の新人教育にそのまま転用できます。AI検索に引用されやすい形で情報を整えるという点では、LLMO施策の下地でもあります。</p>
+<p><strong>MIRAINAの視点：</strong>会話型の広告で差がつくのは、AIの出来ではなく、答えられる情報を持っているかどうかです。価格が「要問い合わせ」のままなら、会話になっても同じ場所で止まります。まず一つの商材で、聞かれて困る項目を潰してください。AI経由の流入を測る体制づくりは<a href="/services/llmo_insight.html">LLMO Insight</a>で支援しています。</p>
+<h2 id="section6">6. まとめ：聞かれる質問を先に書き出す</h2>
+<p>Sponsored Agentsは米国でのテスト段階で、日本の提供時期は未公表です。今すぐ出稿方法を変える必要はありません。ただし、Ads Managerの課金方式とアトリビューション期間の変更は、すでにChatGPT広告を運用している企業の数字に影響します。設定の確認と、想定質問の洗い出しから始めてください。MIRAINAの<a href="/services/ai_consulting.html">生成AI活用支援</a>や<a href="/services/ai_training.html">AI研修</a>では、こうした情報整備から実務への落とし込みまで伴走しています。</p>
+<div class="article-references"><div class="ref-title">参考リンク（2026年9月26日確認）</div><ul><li><a href="https://www.seroundtable.com/openai-chatgpt-sponsored-agents-42104.html" rel="noopener" target="_blank">Search Engine Roundtable：OpenAI Testing Sponsored Agents For ChatGPT Ads</a></li><li><a href="https://openai.com/index/reimagining-advertising-with-ai/" rel="noopener" target="_blank">OpenAI：Reimagining advertising with AI</a></li><li><a href="https://help.openai.com/en/articles/20001524-sponsored-agents-in-chatgpt-ads" rel="noopener" target="_blank">OpenAI Help Center：Sponsored Agents in ChatGPT Ads</a></li><li><a href="https://ppc.land/openai-lets-advertisers-run-chatgpt-ads-from-hubspot-and-shopify/" rel="noopener" target="_blank">PPC Land：HubSpot・Shopify連携の詳細</a></li></ul></div>
+</div>
+<!-- CTA Button -->
+<div class="article-cta">
+<div class="cta-box">
+<h2 class="cta-title" style="color:#fff">AI導入でお悩みですか？</h2>
+<p class="cta-text">MIRAINAでは、貴社の課題に合わせた<br/>最適なAI活用プランをご提案します。</p>
+<a class="btn btn-black-fill" href="/contact.html">無料相談する</a>
+</div>
+</div>
+<!-- Editorial Information -->
+<div class="article-editor">
+<div class="editor-header">この記事を監修した人</div>
+<div class="editor-profile">
+<div class="editor-image">
+<img alt="本記事の監修者 芝優作（MIRAINA）" decoding="async" loading="lazy" src="/images/shiba_yusaku.webp"/>
+</div>
+<div class="editor-info">
+<div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+<p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+</div>
+</div>
+</div>
+<!-- Related Articles -->
+<div class="article-related">
+<h2 class="related-title">関連記事</h2>
+<div class="related-grid"><a class="related-card" href="/blogs/blog303.html"><div class="related-img"><img alt="Search Consoleの生成AIパフォーマンスレポートが全世界公開｜LLMO測定で決める3つのこと" decoding="async" loading="lazy" src="/images/blogs_images/blog-card303.webp"/></div><div class="related-content"><div class="related-date">2026.09.14</div><div class="related-text">Search Consoleの生成AIパフォーマンスレポートが全世界公開｜LLMO測定で決める3つのこと</div></div></a><a class="related-card" href="/blogs/blog312.html"><div class="related-img"><img alt="GPT-6 Astraとは｜ChatGPTでの使い方・料金とEnterprise導入の注意点" decoding="async" loading="lazy" src="/images/blogs_images/blog-card312.webp"/></div><div class="related-content"><div class="related-date">2026.09.22</div><div class="related-text">GPT-6 Astraとは｜ChatGPTでの使い方・料金とEnterprise導入の注意点</div></div></a><a class="related-card" href="/blogs/blog300.html"><div class="related-img"><img alt="GeminiとGoogleビジネスプロフィールが連携｜口コミ管理で決める4項目" decoding="async" loading="lazy" src="/images/blogs_images/blog-card300.webp"/></div><div class="related-content"><div class="related-date">2026.09.13</div><div class="related-text">GeminiとGoogleビジネスプロフィールが連携｜口コミ管理で決める4項目</div></div></a></div>
+</div>
+</article>
+</main>
+<!-- Footer -->
+<footer class="footer">
+<div class="container footer-inner">
+<div class="footer-brand">
+<a href="/index.html">
+<p class="footer-brand-text">MIRAINA</p>
+</a>
+</div>
+<div class="footer-center">
+<!-- Empty as requested -->
+</div>
+<div class="footer-menu">
+<ul class="footer-menu-list">
+<li><a href="/about.html">私たちについて</a></li>
+<li><a href="/works.html">事例紹介</a></li>
+<li><a href="/blogs.html">ブログ</a></li>
+<li><a href="/contact.html">お問い合わせ</a></li>
+<li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+</ul>
+<div class="footer-sns">
+<a href="https://www.instagram.com/plus.taime" rel="noopener" target="_blank">Instagram</a>
+<a href="https://www.threads.com/@plus.taime" rel="noopener" target="_blank">Threads</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<a aria-label="AI info" class="footer-robot-icon" href="/llms.txt">
+<svg class="icon-thin" height="24" viewbox="0 0 24 24" width="24">
+<path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"></path>
+</svg>
+</a>
+<p>© MIRAINA All Rights Reserved.</p>
+</div>
+</footer>
+<script src="/js/common.js"></script>
+<script>
+        // Copy common script logic for simple viewing
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -345,6 +345,9 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: Claude Marketplaceが公開｜業務用プラグインの選び方と始め方](https://miraina-ai.com/blogs/blog317.html)
   - **更新日**: 2026.09.26
   - **概要**: Claude Marketplaceの公開を受け、業務用プラグインの選び方を整理。コネクターとの違い、利用条件、操作権限、週報づくりの指示例を解説します。
+- [最新ブログ: ChatGPT広告にSponsored Agents｜クリック後の会話導線と確認する4項目](https://miraina-ai.com/blogs/blog318.html)
+  - **更新日**: 2026.09.26
+  - **概要**: OpenAIがChatGPT広告でSponsored Agentsのテストを開始。広告クリック後に企業AIと会話する導線の仕組み、対象範囲、Ads Managerの新機能、出稿前に確認する4項目を解説します。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)

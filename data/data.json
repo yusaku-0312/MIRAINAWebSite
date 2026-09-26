@@ -2852,6 +2852,15 @@
       "thumbnail": "/images/blogs_images/blog-card317.webp",
       "alt": "Claude Marketplaceが公開｜業務用プラグインの選び方と始め方",
       "date": "2026-09-26"
+    },
+    {
+      "id": 318,
+      "title": "ChatGPT広告にSponsored Agents｜クリック後の会話導線と確認する4項目",
+      "description": "OpenAIがChatGPT広告でSponsored Agentsのテストを開始。広告クリック後に企業AIと会話する導線の仕組み、対象範囲、Ads Managerの新機能、出稿前に確認する4項目を解説します。",
+      "link": "/blogs/blog318.html",
+      "thumbnail": "/images/blogs_images/blog-card318.webp",
+      "alt": "ChatGPT広告にSponsored Agents｜クリック後の会話導線と確認する4項目",
+      "date": "2026-09-26"
     }
   ],
   "works": [
