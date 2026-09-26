@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="index, follow" name="robots"/>
+<title>Claude Marketplaceが公開｜業務用プラグインの選び方と始め方 | MIRAINAブログ</title>
+<meta content="Claude Marketplaceの公開を受け、業務用プラグインの選び方を整理。コネクターとの違い、利用条件、操作権限、週報づくりの指示例を解説します。" name="description"/>
+<!-- OGP Tags -->
+<meta content="Claude Marketplaceが公開｜業務用プラグインの選び方と始め方" property="og:title"/>
+<meta content="article" property="og:type"/>
+<meta content="https://miraina-ai.com/blogs/blog317.html" property="og:url"/>
+<meta content="https://miraina-ai.com/images/blogs_images/blog317-1.webp" property="og:image"/>
+<meta content="Claude Marketplaceの公開を受け、業務用プラグインの選び方を整理。コネクターとの違い、利用条件、操作権限、週報づくりの指示例を解説します。" property="og:description"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Shippori+Mincho:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Favicon -->
+<link href="/images/favicon.ico" rel="icon"/>
+<!-- CSS -->
+<link href="/css/reset.css" rel="stylesheet"/>
+<link href="/css/common.css" rel="stylesheet"/>
+<link href="/css/blog_article.css" rel="stylesheet"/>
+<link href="https://miraina-ai.com/blogs/blog317.html" rel="canonical"/><style>.article-body .code-block pre{white-space:pre-wrap;overflow-wrap:anywhere;color:#f5f5f5}.article-body .code-block pre code{color:inherit;background:transparent}.article-body td code{overflow-wrap:anywhere;word-break:break-word}</style></head>
+<body>
+<!-- Header -->
+<header class="header">
+<div class="container header-inner">
+<a class="header-logo" href="/">
+<!-- Assuming logo exists or using text fallback for now if image broken -->
+<img alt="MIRAINA" height="40" src="/images/company-logo.webp" width="120"/>
+</a>
+<div class="hamburger" id="js-hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<nav class="header-nav">
+<div class="nav-item has-dropdown">
+<a class="nav-link" href="/services.html">サービス</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="/services/ai_consulting.html">生成AI活用支援</a>
+<a class="dropdown-item" href="/services/ai_training.html">AI研修</a>
+<a class="dropdown-item" href="/services/ai_develop.html">AI開発</a>
+<a class="dropdown-item" href="/services/llmo_insight.html">LLMO Insight</a>
+<a class="dropdown-item" href="/beauty-dx/">美容サロン特化AI活用支援</a>
+
+</div>
+</div>
+<!-- Other required items from spec usually go here, but focusing on user content mapping -->
+<div class="nav-item"><a class="nav-link" href="/about.html">MIRAINAについて</a></div>
+<div class="nav-item"><a class="nav-link" href="/works.html">事例紹介</a></div>
+<div class="nav-item"><a class="nav-link" href="/blogs.html">ブログ</a></div>
+<div class="nav-item"><a class="nav-link btn-contact" href="/contact.html">お問い合わせ</a></div>
+<div class="nav-item">
+<a aria-label="AI info" class="nav-link" href="/llms.txt">
+<svg class="icon-thin" height="20" viewbox="0 0 24 24" width="20">
+<path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"></path>
+</svg>
+</a>
+</div>
+</nav>
+</div>
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="js-mobile-menu">
+<nav class="mobile-nav">
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/services.html">サービス</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/about.html">MIRAINAについて</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/works.html">事例紹介</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/blogs.html">ブログ</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/contact.html">お問い合わせ</a></div>
+</nav>
+</div>
+</header>
+<main>
+<!-- Breadcrumbs -->
+<div class="container breadcrumbs">
+<ul>
+<li><a href="/index.html">ホーム</a></li>
+<li><a href="/blogs.html">ブログ</a></li>
+<li>Claude Marketplaceが公開｜業務用プラグインの選び方と始め方</li>
+</ul>
+</div>
+<article class="article-container">
+<!-- Article Header -->
+<header class="article-header">
+<div class="article-meta">
+<span class="article-date">2026.09.26</span>
+<div class="article-tags"><span class="article-tag">Claude</span><span class="article-tag">業務効率化</span><span class="article-tag">AI活用</span></div>
+</div>
+<h1 class="article-title">Claude Marketplaceが公開｜業務用プラグインの選び方と始め方</h1>
+<div class="article-thumbnail">
+<img alt="Claude Marketplaceが公開｜業務用プラグインの選び方と始め方" fetchpriority="high" height="675" src="/images/blogs_images/blog317-1.webp" width="1200"/>
+<!-- Note: Replace with actual image path -->
+</div>
+</header>
+<!-- Summary -->
+<section class="article-summary"><h2 class="sr-only">記事の概要</h2><p>Claudeで仕事を楽にしたいけれど、どの機能を追加すればよいか迷っていませんか。Claude Marketplaceの公開を受け、プラグインとコネクターの違い、利用条件、選び方を整理します。必要な機能を見極め、一つの業務で試せるようになることがこの記事のゴールです。</p></section>
+<!-- Table of Contents -->
+<div class="article-toc">
+<div class="toc-title">目次</div>
+<ul><li><a href="#section1">1. Claude Marketplaceが公開</a></li><li><a href="#section2">2. プラグインとコネクターの違い</a></li><li><a href="#section3">3. 利用条件と追加前の確認</a></li><li><a href="#section4">4. 業務を絞って試す指示例</a></li><li><a href="#section5">5. 権限設定と成果の確かめ方</a></li><li><a href="#section6">6. まとめ：一つの仕事から始める</a></li></ul>
+</div>
+<!-- Main Content Body -->
+<div class="article-body"><h2 id="section1">1. Claude Marketplaceが公開</h2>
+<p><strong>Claude Marketplaceは、Claudeと組み合わせる連携機能、製品、支援サービスを探す窓口です。</strong>Anthropicは2026年9月23日、これらを一つの場所にまとめたと発表しました。公式発表時点で、コネクターとプラグインは合計2,000以上。すべてが新作のプラグインという意味ではありません。出典：<a href="https://claude.com/blog/claude-marketplace" rel="noopener" target="_blank">Anthropic公式発表</a>。</p>
+<figure class="article-figure"><img alt="Claude Marketplace公式発表のコネクター・プラグインと製品購入の説明" decoding="async" height="450" loading="lazy" src="/images/blogs_images/blog317-2.webp" width="800"/><figcaption>Anthropic公式発表。連携機能の追加、製品の購入、支援会社の利用を別の選択肢として紹介しています。</figcaption></figure>
+<p>初心者がまず見るのは、普段の仕事に使える連携機能です。製品購入にはAnthropicとの契約済み利用額の一部を充てる仕組みも案内されていますが、個人の月額プランですべての掲載製品を使えるという意味ではありません。掲載されていることと、自分の契約で利用できることを分けて確認しましょう。</p>
+<h2 id="section2">2. プラグインとコネクターの違い</h2>
+<p>「資料を毎回貼り付けるのが大変」なら、必要なのは情報への接続かもしれません。「毎回同じ書き方を説明している」なら、作業手順を再利用する仕組みが候補になります。先に困りごとを一つに絞ると、機能名の多さに迷いにくくなります。</p>
+<div class="article-table-wrapper"><table class="article-table"><thead><tr><th>名称</th><th>役割の目安</th><th>最初に確認すること</th></tr></thead><tbody><tr><td>コネクター</td><td>外部サービスの情報や操作につなぐ</td><td>どの情報を読み、何を変更できるか</td></tr><tr><td>スキル</td><td>特定の作業の進め方をまとめる</td><td>自社の書式や確認手順に合うか</td></tr><tr><td>プラグイン</td><td>連携やスキルなどをまとめて追加する</td><td>中身と対応する利用画面</td></tr></tbody></table></div>
+<p>9月25日の<a href="https://claude.com/blog/build-plugins-for-claude" rel="noopener" target="_blank">開発者向け発表</a>でも、プラグインはMCPコネクターやAgent Skillsをまとめる仕組みと説明されています。利用者は開発用の申請をする必要はありません。既存の機能を選ぶ作業と、開発者が自作機能を公開する作業は別です。</p>
+<p>たとえば週報なら、参照資料は自分で渡し、見出しの指示だけ保存する方法でも始められます。毎回使う資料が変わり、探す時間が負担になってから接続を検討する、という順序も有効です。機能を増やすこと自体を目標にしないでください。</p>
+<h2 id="section3">3. 利用条件と追加前の確認</h2>
+<p><a href="https://support.claude.com/en/articles/13837440-use-plugins-in-claude" rel="noopener" target="_blank">プラグインの公式ヘルプ</a>では、Pro・Max・Team・Enterpriseが対象です。追加の基本操作は、左側のCustomizeからPlugins、Discoverへ進み、候補を選んでAdd。画面や組織設定によって利用できる項目は異なります。コネクター単体の利用条件と混同しないようにしましょう。</p>
+<p>また、プラグインの全機能がチャットで動くわけではありません。公式ヘルプでは、フックやサブエージェントはCoworkとClaude Codeで動作し、チャットでは動作しないと説明されています。本記事は公式情報に基づく導入案内で、個別プラグインの実機検証や日本語での動作保証ではありません。</p>
+<ul><li><strong>提供元：</strong>誰が作り、どこに問い合わせできるか。</li><li><strong>費用：</strong>Claude側の契約に加え、接続先の契約や追加料金が必要か。</li><li><strong>操作範囲：</strong>検索だけで済むか、作成・更新・送信まで必要か。</li><li><strong>出力：</strong>日本語、必要な書式、根拠の提示に対応できるか。</li></ul>
+<p>これはMIRAINAが提案する選定項目です。候補の紹介文を読むだけで決めず、自分が使う画面と契約で一件試してください。追加できない場合は、別のアカウントで回避する前に社内管理者へ確認します。</p>
+<h2 id="section4">4. 業務を絞って試す指示例</h2>
+<p>導入は<strong>業務を決める→候補と権限を確認する→小さく試す→出力を点検する</strong>という流れで進めます。うまくいかなければ、接続を追加する前に、参照資料や完成条件を見直します。以下は架空の業務を想定したMIRAINAの指示例です。</p>
+<h3>AIに候補選びを相談する</h3>
+<div class="code-block"><pre><code>Claudeで毎週の営業報告を作りたいです。
+現在は、担当者が承認済み資料を集め、進捗と次の行動を文章にしています。
+まず、連携を追加せずできる方法を示してください。
+次に、接続が必要な場合だけ候補を挙げてください。
+公式情報を調べ、対象プラン、対応画面、追加費用、読み取り・書き込みの範囲を比較してください。
+不明な項目は要確認とし、根拠URLと確認日を添えてください。</code></pre></div>
+<p>この相談段階では顧客名や売上の実データは不要です。検索機能のないAIには、確認した公式ページの情報を渡してください。回答内のリンクを開き、同じ機能・プランを説明しているか照合します。AIが候補を挙げたことだけで、利用可能と判断しないことが大切です。</p>
+<h3>最初の週報を作る</h3>
+<div class="code-block"><pre><code>利用が許可された資料［対象を指定］から、今週の営業報告の下書きを作ってください。
+見出しは「進捗」「未解決の課題」「次の行動」です。
+事実には参照資料名を付け、資料にない数値・期限・担当者は要確認としてください。
+資料同士に矛盾があれば、そのまま示してください。
+今回は文章の下書きまでとし、外部サービスへの送信や更新はしないでください。</code></pre></div>
+<p>完成後は、責任者が数字と担当者を原資料と比べます。たとえば商談中の案件を「受注済み」にまとめていたら、判断基準を指示へ追加して再試行します。総務の引き継ぎでも同様に、「決まった作業」と「確認待ち」を分ければ、読み手が次に動きやすい文書になります。</p>
+<h2 id="section5">5. 権限設定と成果の確かめ方</h2>
+<p>「送信しないで」と書くことは、権限を制限する設定そのものではありません。<a href="https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities" rel="noopener" target="_blank">コネクターの公式ヘルプ</a>では、元サービスの利用者権限を引き継ぐと説明しています。Team・Enterpriseの管理者は、連携先への読み取りを許可しつつ、書き込みを制限する運用も可能です。必要な範囲は設定画面でも確認します。</p>
+<p>試行結果は、下書きの速さだけで判断しないようにしましょう。「資料を集める時間」「AIへの指示時間」「人が修正する時間」を一緒に記録します。文章が早くできても、根拠確認に以前より時間がかかるなら、資料の絞り方や指示を改善する余地があります。</p>
+<p><strong>MIRAINAの視点：</strong>AIに不慣れなチームには、担当者一人が説明できる範囲の業務から始めることを勧めます。「この資料から、この書式で、ここまで作る」と決めれば、プラグインが本当に必要かも判断できます。Googleの文書環境で試したい場合は、<a href="/blogs/blog315.html">Google Docsで引用付き提案書を作る方法</a>も参考になります。</p>
+<h2 id="section6">6. まとめ：一つの仕事から始める</h2>
+<p>Claude Marketplaceを使うときは、まず困っている仕事を一つ書き出してください。候補の役割、契約、対応画面、操作権限を確認し、承認済みの資料で試してから広げます。MIRAINAの<a href="/services/ai_consulting.html">生成AI活用支援</a>や<a href="/services/ai_training.html">AI研修</a>では、業務の選定から指示の作り方、確認手順の定着まで支援しています。</p>
+<div class="article-references"><div class="ref-title">参考リンク（2026年9月26日確認）</div><ul><li><a href="https://claude.com/blog/claude-marketplace" rel="noopener" target="_blank">Anthropic：Claude Marketplace発表</a></li><li><a href="https://claude.com/blog/build-plugins-for-claude" rel="noopener" target="_blank">Anthropic：プラグイン公開ポータル発表</a></li><li><a href="https://support.claude.com/en/articles/13837440-use-plugins-in-claude" rel="noopener" target="_blank">Claude Help：プラグインの利用方法</a></li><li><a href="https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities" rel="noopener" target="_blank">Claude Help：コネクターと操作権限</a></li></ul></div>
+</div>
+<!-- CTA Button -->
+<div class="article-cta">
+<div class="cta-box">
+<h2 class="cta-title" style="color:#fff">AI導入でお悩みですか？</h2>
+<p class="cta-text">MIRAINAでは、貴社の課題に合わせた<br/>最適なAI活用プランをご提案します。</p>
+<a class="btn btn-black-fill" href="/contact.html">無料相談する</a>
+</div>
+</div>
+<!-- Editorial Information -->
+<div class="article-editor">
+<div class="editor-header">この記事を監修した人</div>
+<div class="editor-profile">
+<div class="editor-image">
+<img alt="本記事の監修者 芝優作（MIRAINA）" decoding="async" loading="lazy" src="/images/shiba_yusaku.webp"/>
+</div>
+<div class="editor-info">
+<div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+<p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+</div>
+</div>
+</div>
+<!-- Related Articles -->
+<div class="article-related">
+<h2 class="related-title">関連記事</h2>
+<div class="related-grid"><a class="related-card" href="/blogs/blog314.html"><div class="related-img"><img alt="Claude Opus 5.5が公開｜コスト4割減の内訳と乗り換え前の4項目" decoding="async" loading="lazy" src="/images/blogs_images/blog-card314.webp"/></div><div class="related-content"><div class="related-date">2026.09.23</div><div class="related-text">Claude Opus 5.5が公開｜コスト4割減の内訳と乗り換え前の4項目</div></div></a><a class="related-card" href="/blogs/blog315.html"><div class="related-img"><img alt="Google DocsがNotebookと連携｜社内資料から引用付き提案書を作る方法" decoding="async" loading="lazy" src="/images/blogs_images/blog-card315.webp"/></div><div class="related-content"><div class="related-date">2026.09.24</div><div class="related-text">Google DocsがNotebookと連携｜社内資料から引用付き提案書を作る方法</div></div></a><a class="related-card" href="/blogs/blog304.html"><div class="related-img"><img alt="GmailのGeminiで資料作成｜メールを引き継ぎ文書にまとめる方法" decoding="async" loading="lazy" src="/images/blogs_images/blog-card304.webp"/></div><div class="related-content"><div class="related-date">2026.09.15</div><div class="related-text">GmailのGeminiで資料作成｜メールを引き継ぎ文書にまとめる方法</div></div></a></div>
+</div>
+</article>
+</main>
+<!-- Footer -->
+<footer class="footer">
+<div class="container footer-inner">
+<div class="footer-brand">
+<a href="/index.html">
+<p class="footer-brand-text">MIRAINA</p>
+</a>
+</div>
+<div class="footer-center">
+<!-- Empty as requested -->
+</div>
+<div class="footer-menu">
+<ul class="footer-menu-list">
+<li><a href="/about.html">私たちについて</a></li>
+<li><a href="/works.html">事例紹介</a></li>
+<li><a href="/blogs.html">ブログ</a></li>
+<li><a href="/contact.html">お問い合わせ</a></li>
+<li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+</ul>
+<div class="footer-sns">
+<a href="https://www.instagram.com/plus.taime" rel="noopener" target="_blank">Instagram</a>
+<a href="https://www.threads.com/@plus.taime" rel="noopener" target="_blank">Threads</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<a aria-label="AI info" class="footer-robot-icon" href="/llms.txt">
+<svg class="icon-thin" height="24" viewbox="0 0 24 24" width="24">
+<path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"></path>
+</svg>
+</a>
+<p>© MIRAINA All Rights Reserved.</p>
+</div>
+</footer>
+<script src="/js/common.js"></script>
+<script>
+        // Copy common script logic for simple viewing
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

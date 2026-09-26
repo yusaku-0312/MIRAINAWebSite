@@ -2843,6 +2843,15 @@
       "thumbnail": "/images/blogs_images/blog-card316.webp",
       "alt": "Gemini 3.8 LiveにLive Avatar追加｜多言語の音声接客で確認する4項目",
       "date": "2026-09-25"
+    },
+    {
+      "id": 317,
+      "title": "Claude Marketplaceが公開｜業務用プラグインの選び方と始め方",
+      "description": "Claude Marketplaceの公開を受け、業務用プラグインの選び方を整理。コネクターとの違い、利用条件、操作権限、週報づくりの指示例を解説します。",
+      "link": "/blogs/blog317.html",
+      "thumbnail": "/images/blogs_images/blog-card317.webp",
+      "alt": "Claude Marketplaceが公開｜業務用プラグインの選び方と始め方",
+      "date": "2026-09-26"
     }
   ],
   "works": [
