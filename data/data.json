@@ -2861,6 +2861,15 @@
       "thumbnail": "/images/blogs_images/blog-card318.webp",
       "alt": "ChatGPT広告にSponsored Agents｜クリック後の会話導線と確認する4項目",
       "date": "2026-09-26"
+    },
+    {
+      "id": 319,
+      "title": "YouTube AI編集が強化｜Gemini対話編集と動画ABテストの使い方",
+      "description": "YouTube AI編集がGeminiの対話編集、サムネイル生成、動画ABテストへ拡張。中小企業が動画制作で決める役割分担と検証手順を解説します。",
+      "link": "/blogs/blog319.html",
+      "thumbnail": "/images/blogs_images/blog-card319.webp",
+      "alt": "YouTube AI編集が強化され、Gemini対話編集と動画ABテストを使うイメージ",
+      "date": "2026-09-27"
     }
   ],
   "works": [
