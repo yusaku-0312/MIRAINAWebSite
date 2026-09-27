@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【導入事例】自動投稿AIエージェント内製化で年間120万円以上のコスト削減 | MIRAINA works</title>
+    <meta name="description" content="美容サロン運営企業様の事例。1店舗あたり月約2万円の自動投稿SaaSを複数店舗で契約していた状態から、自社専用の自動投稿AIエージェントを開発・内製化。月10万円以上・年間120万円以上のコスト削減と、スタッフの投稿システム操作時間ゼロを実現しました。">
+    <link rel="canonical" href="https://miraina-ai.com/works/work012.html">
+    <meta property="og:title" content="【導入事例】自動投稿AIエージェントの内製化で年間120万円以上のコスト削減">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/works/work012.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/works_images/work012-1.webp">
+    <meta property="og:description" content="外部SaaSに支払っていた月10万円以上を削減。AIが画面操作まで代行し、スタッフの投稿作業をゼロにした美容サロン運営企業様の事例です。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/work_detail.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINAのロゴ" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/works.html">事例紹介</a></li>
+                <li>美容サロン運営企業様：自動投稿AIエージェント開発</li>
+            </ul>
+        </div>
+
+        <article class="work-container">
+            <!-- 1. 事例タイトル -->
+            <header class="work-header fade-in-section">
+                <div class="work-meta">
+                    <span class="work-date">2026.06.07 公開</span>
+                    <span class="work-cat">業務自動化 / AI開発</span>
+                </div>
+                <h1 class="work-title">【導入事例】美容系プラットフォームへの自動投稿をAI化し、<br>年間120万円以上のコスト削減。</h1>
+            </header>
+
+            <!-- メインビジュアル -->
+            <div class="work-main-image fade-in-section">
+                <img src="/images/works_images/work012-1.webp" alt="美容サロン運営企業様向けに開発した自動投稿AIエージェントの導入事例メインビジュアル" width="1200" height="630" fetchpriority="high">
+            </div>
+
+            <!-- 事例概要 -->
+            <section class="work-section fade-in-section">
+                <div class="work-summary-box">
+                    <div class="summary-label">事例概要</div>
+                    <div class="summary-text">
+                        <p>
+                            複数店舗を展開する美容サロン運営企業様において、美容系プラットフォームへの情報発信を担っていた外部SaaSを、自社専用の自動投稿AIエージェントへ置き換えた事例です。従来は1店舗あたり月額約2万円のSaaSを複数店舗分契約しており、月10万円以上の固定費が発生していました。投稿ネタの選定から原稿作成、プラットフォームへのログイン・画面操作、投稿完了までをAIエージェントが一気通貫で担う仕組みを構築し、<strong>月10万円以上・年間120万円以上のコスト削減</strong>と、<strong>スタッフの投稿システム操作時間ゼロ</strong>を同時に実現しました。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 目次 -->
+            <div class="work-toc fade-in-section">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#client">1. クライアント様について</a></li>
+                    <li><a href="#before">2. 導入前の課題</a></li>
+                    <li><a href="#solution">3. 実施したこと</a></li>
+                    <li><a href="#result">4. 成果</a></li>
+                    <li><a href="#change">5. 導入後の変化</a></li>
+                    <li><a href="#point">6. この事例のポイント</a></li>
+                </ul>
+            </div>
+
+            <!-- 2. クライアント / 業種 -->
+            <section id="client" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">DATA</h2>
+                    <h3 class="work-subheading">クライアント様について</h3>
+
+                    <div class="work-table-wrapper">
+                        <table class="work-table">
+                            <thead>
+                                <tr>
+                                    <th>項目</th>
+                                    <th>内容</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>業種</th>
+                                    <td>美容サロン運営企業（複数店舗展開）</td>
+                                </tr>
+                                <tr>
+                                    <th>対象業務</th>
+                                    <td>美容系プラットフォームへの情報発信・定期投稿</td>
+                                </tr>
+                                <tr>
+                                    <th>提供サービス</th>
+                                    <td>自動投稿AIエージェントの設計・開発・運用保守</td>
+                                </tr>
+                                <tr>
+                                    <th>体制</th>
+                                    <td>投稿業務は本部マネージャー1名が店舗運営と兼任で担当</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="work-text">
+                        美容系プラットフォームでは、店舗情報やスタイル投稿を高い頻度で更新し続けることが露出量に直結します。そのため多くのサロンが「投稿を止めない」ための仕組みを必要としており、このクライアント様も外部の自動投稿SaaSを利用してその状態を維持していました。
+                    </p>
+                </div>
+            </section>
+
+            <!-- 3. 導入前の課題 -->
+            <section id="before" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">BEFORE</h2>
+                    <h3 class="work-subheading">店舗数に比例して増え続ける<br>SaaS固定費と、属人化した運用。</h3>
+
+                    <p class="work-text">
+                        導入前は、美容系プラットフォームへの自動投稿を外部SaaSに依存していました。料金体系は<strong>1店舗あたり月額約2万円</strong>。複数店舗を展開していたため、合計すると<strong>月10万円以上、年間では120万円以上</strong>が固定費として出ていく状態でした。店舗を増やせば増やすほどコストが比例して膨らむ構造だったため、出店計画とセットで見過ごせない負担になっていました。
+                    </p>
+                    <p class="work-text">
+                        コスト以上に問題だったのが、運用が人の手から離れていなかったことです。SaaSは「投稿の自動化」を謳うものの、実際には投稿ネタの決定、原稿の入力、画像の選定、予約設定といった工程が残ります。これらを本部マネージャー1名が店舗運営と兼任で担っており、<strong>1店舗あたり週30分前後、全店舗合計で月10時間程度</strong>が投稿システムの操作に費やされていました。
+                    </p>
+                    <p class="work-text">
+                        さらに、SaaS側の仕様変更やUI改修が入るたびに操作手順を覚え直す必要があり、担当者が不在の週は投稿が止まるという属人化リスクも抱えていました。「お金を払っているのに、結局人が張り付いている」という状態が、内製化を検討する直接のきっかけになりました。
+                    </p>
+
+                    <div class="diagram-container">
+                        <div class="diagram-comparison">
+                            <div class="comparison-item is-bad">
+                                <div class="comparison-header">導入前（外部SaaS利用）</div>
+                                <div class="comparison-content">
+                                    <ul>
+                                        <li>1店舗あたり月額約2万円 × 複数店舗</li>
+                                        <li>月10万円以上・年間120万円以上の固定費</li>
+                                        <li>投稿ネタ決め・原稿入力・画像選定は人の作業</li>
+                                        <li>担当者1名に属人化し、不在週は投稿が停止</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="comparison-arrow">→</div>
+                            <div class="comparison-item is-good">
+                                <div class="comparison-header">目指した状態</div>
+                                <div class="comparison-content">
+                                    <ul>
+                                        <li><strong>固定費としてのSaaS費用をゼロに</strong></li>
+                                        <li>店舗が増えてもコストが比例して増えない</li>
+                                        <li>投稿ネタ選定から投稿完了までAIが担当</li>
+                                        <li>担当者の稼働状況に投稿頻度が左右されない</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="diagram-caption">図解：外部SaaS依存から自社AIエージェントへの移行</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. 実施したこと -->
+            <section id="solution" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">SOLUTION</h2>
+                    <h3 class="work-subheading">AIが画面操作まで代行する、<br>「本当に人が触らない」自動投稿の設計。</h3>
+
+                    <p class="work-text">
+                        MIRAINAが開発したのは、美容系プラットフォームへの投稿を<strong>ネタ選定から投稿完了まで一気通貫で実行するAIエージェント</strong>です。最大のポイントは、原稿を作るところで止めず、<strong>プラットフォームへのログインと画面操作までAIが代行する</strong>設計にしたことでした。
+                    </p>
+                    <p class="work-text">
+                        多くの自動化ツールは「APIが公開されている範囲」でしか動けません。しかし美容系プラットフォームの多くは外部連携APIを公開していないため、従来は人が管理画面を開いて入力するしかありませんでした。今回はAIエージェントにブラウザ操作を担わせることで、API非公開のプラットフォームに対しても人の代わりに投稿を完了させられるようにしています。
+                    </p>
+                    <p class="work-text">
+                        投稿内容についても、店舗ごとのコンセプト・客層・強みをあらかじめ学習させ、店舗が変わればトーンと訴求軸が自動で切り替わるようにしました。全店舗が同じ文面を出す「コピペ投稿」にならないよう、店舗単位のパーソナライズを前提に設計しています。
+                    </p>
+
+                    <div class="diagram-container">
+                        <ul class="diagram-process">
+                            <li class="process-step">
+                                <span class="step-num">Step 01</span>
+                                <span class="step-text">投稿ネタを<br>自動選定</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 02</span>
+                                <span class="step-text">店舗別の<br>原稿を生成</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 03</span>
+                                <span class="step-text">掲載画像を<br>自動選定</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 04</span>
+                                <span class="step-text">管理画面に<br>ログイン・入力</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 05</span>
+                                <span class="step-text">投稿完了を<br>自動チェック</span>
+                            </li>
+                        </ul>
+                        <p class="diagram-caption">図解：自動投稿AIエージェントの処理フロー（すべて無人で完結）</p>
+                    </div>
+
+                    <div class="work-table-wrapper">
+                        <table class="work-table">
+                            <thead>
+                                <tr>
+                                    <th>工程</th>
+                                    <th>導入前（SaaS＋人手）</th>
+                                    <th>導入後（AIエージェント）</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>投稿ネタの決定</th>
+                                    <td>担当者が毎回考える</td>
+                                    <td>店舗の訴求軸から自動選定</td>
+                                </tr>
+                                <tr>
+                                    <th>原稿作成</th>
+                                    <td>担当者が入力</td>
+                                    <td>店舗別トーンで自動生成</td>
+                                </tr>
+                                <tr>
+                                    <th>画像の選定</th>
+                                    <td>担当者がフォルダから探す</td>
+                                    <td>投稿内容に合わせて自動選定</td>
+                                </tr>
+                                <tr>
+                                    <th>管理画面への入力</th>
+                                    <td>担当者が手作業で操作</td>
+                                    <td><strong>AIが画面操作を代行</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>投稿結果の確認</th>
+                                    <td>担当者が目視確認</td>
+                                    <td>投稿完了を自動チェック</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. 成果 -->
+            <section id="result" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">RESULT</h2>
+                    <h3 class="work-subheading">月10万円以上・年間120万円以上を削減し、<br>投稿作業時間はゼロに。</h3>
+
+                    <div class="result-metrics">
+                        <div class="metric-card">
+                            <div class="metric-label">年間コスト削減額</div>
+                            <div class="metric-value">120<span class="metric-unit">万円以上</span></div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">月額コスト削減額</div>
+                            <div class="metric-value">10<span class="metric-unit">万円以上</span></div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">スタッフの投稿操作時間</div>
+                            <div class="metric-value">0<span class="metric-unit">分</span></div>
+                        </div>
+                    </div>
+
+                    <p class="work-text">
+                        外部SaaSを解約し自社エージェントへ完全移行したことで、<strong>月10万円以上、年間換算で120万円以上のコスト削減</strong>を実現しました。加えて、店舗を新規出店してもSaaSのライセンス費用が増えないため、<strong>出店コストの構造そのものが軽くなった</strong>点も大きな効果です。
+                    </p>
+                    <p class="work-text">
+                        運用面では、従来月10時間程度かかっていた投稿システムの操作時間が実質ゼロになりました。本部マネージャーは投稿作業から完全に解放され、店舗の売上改善やスタッフ育成といった本来の業務に時間を充てられるようになっています。
+                    </p>
+
+                    <div class="work-table-wrapper">
+                        <table class="work-table">
+                            <thead>
+                                <tr>
+                                    <th>評価項目</th>
+                                    <th>導入前</th>
+                                    <th>導入後</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>月額のツール費用</th>
+                                    <td>10万円以上</td>
+                                    <td><strong>0円</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>年間のツール費用</th>
+                                    <td>120万円以上</td>
+                                    <td><strong>0円</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>投稿システムの操作時間</th>
+                                    <td>月10時間程度</td>
+                                    <td><strong>0分</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>出店時の追加コスト</th>
+                                    <td>1店舗あたり月2万円増</td>
+                                    <td><strong>増加なし</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>担当者不在時の投稿</th>
+                                    <td>停止するリスクあり</td>
+                                    <td><strong>無人で継続</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. 導入後の変化 -->
+            <section id="change" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">CHANGE</h2>
+                    <h3 class="work-subheading">月10万円以上・年間120万円以上の削減が、<br>出店しても目減りしない。</h3>
+
+                    <p class="work-text">
+                        外部SaaSを解約したことで、<strong>月10万円以上・年間約120万円以上の経費削減</strong>が確定しました。加えて、この削減額は店舗が増えても目減りしません。SaaS利用時は<strong>1店舗増えるごとに月2万円（年24万円）</strong>が上積みされる構造でしたが、自社エージェントにはその増分がないためです。今後3店舗出店すれば、従来の費用構造との差は<strong>年間192万円</strong>まで広がります。
+                    </p>
+                    <p class="work-text">
+                        運用工数も削減されました。従来は投稿システムの操作に<strong>1店舗あたり週30分前後、全店舗で月10時間程度</strong>を要していましたが、AIが画面操作まで代行するため<strong>実質0分</strong>です。年間では約120時間ぶんの工数が本部から外れました。
+                    </p>
+                    <p class="work-text">
+                        投稿頻度が担当者の稼働状況から切り離された結果、<strong>繁忙期に投稿が止まって露出量が落ちる波がなくなりました</strong>。プラットフォーム側のUI改修への対応もMIRAINA側で吸収するため、店舗スタッフの再教育コストも発生しません。
+                    </p>
+
+                    <div class="client-voice-container">
+                        <div class="client-voice-item">
+                            <div class="voice-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                                </svg>
+                            </div>
+                            <div class="voice-content">
+                                <div class="voice-header">クライアント様の声</div>
+                                <div class="voice-text">
+                                    「毎月の固定費が10万円以上、年間だと120万円以上下がったのが一番大きいです。店舗を増やしてもツール代が増えないので、出店の判断もしやすくなりました。」
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. この事例のポイント -->
+            <section id="point" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">POINT</h2>
+                    <h3 class="work-subheading">単なる自動化ではなく、<br>「人が触らない」ところまで設計した。</h3>
+
+                    <div class="project-info-grid">
+                        <div class="info-item">
+                            <div class="info-label">POINT 01｜AIが画面操作まで代行</div>
+                            <div class="info-value">API非公開のプラットフォームに対しても、AIがログインから入力・投稿までブラウザ操作を代行。「原稿だけ作る自動化」で止めず、人の手が完全に離れる状態まで作り込みました。</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">POINT 02｜店舗ごとに文体と訴求軸を最適化</div>
+                            <div class="info-value">店舗のコンセプト・客層・強みを事前に学習させ、店舗が変われば投稿のトーンも自動で切り替わる設計。全店舗が同じ文面を出す「コピペ投稿」を回避しています。</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">POINT 03｜固定費の構造そのものを変えた</div>
+                            <div class="info-value">店舗数に比例して増えるSaaSライセンス費用を撤廃。出店してもツール費用が増えない構造にしたことで、削減効果が将来にわたって積み上がります。</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">POINT 04｜属人化リスクの解消</div>
+                            <div class="info-value">担当者の繁忙・離席・退職に投稿頻度が左右されない体制へ移行。運用ノウハウが個人ではなくエージェント側に蓄積されます。</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 関連リンク -->
+            <section class="work-section fade-in-section">
+                <div class="section-inner">
+                    <div class="work-references">
+                        <div class="ref-title">関連サービス・関連記事</div>
+                        <ul>
+                            <li><a href="/services/ai_develop.html">AI開発サービス（業務特化型AIエージェント開発）</a></li>
+                            <li><a href="/beauty-dx/">美容サロン特化AI活用支援</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- 監修者 -->
+            <section id="supervisor" class="work-section fade-in-section">
+                <div class="article-editor">
+                    <div class="editor-header">この記事を監修した人</div>
+                    <div class="editor-profile">
+                        <div class="editor-image">
+                            <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA代表 / AIコンサルタント）" width="800" height="800" loading="lazy" decoding="async">
+                        </div>
+                        <div class="editor-info">
+                            <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                            <p class="editor-desc">
+                                中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                                九州大学大学院でLLMに関する研究にも従事。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. CTAセクション -->
+            <div class="work-cta fade-in-section">
+                <div class="cta-box">
+                    <h2 class="cta-title">同じ費用構造で悩んでいませんか？</h2>
+                    <p class="cta-text">店舗数に比例して増えるSaaS費用は、<br>自社専用のAIエージェントで置き換えられる場合があります。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">自動化の相談をする</a>
+                </div>
+            </div>
+
+            <!-- 関連事例 -->
+            <section class="work-related fade-in-section">
+                <h2 class="related-title">その他の事例</h2>
+                <div class="related-grid">
+                    <a href="/works/work019.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/works_images/work-card019.webp" alt="コラム投稿AIエージェントの自社事例" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-cat">業務自動化 / 自社事例</div>
+                            <div class="related-txt">Webサイトへのコラム投稿をAIエージェントで完全自動化</div>
+                        </div>
+                    </a>
+                    <a href="/works/work015.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/works_images/work-card015.webp" alt="社内SE AIエージェント構築事例" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-cat">AI開発 / 社内システム</div>
+                            <div class="related-txt">社内SEの役割を担うAIエージェントで、専任エンジニア不在でも社内システムを運用</div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

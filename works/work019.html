@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【自社事例】Webサイトへのコラム投稿をAIエージェントで完全自動化｜情報収集から公開まで無人運用 | MIRAINA works</title>
+    <meta name="description" content="MIRAINAの自社事例。毎朝9時にAIエージェントが自動起動し、情報収集・記事作成・サムネイル生成・挿入画像生成・参考サイトのスクリーンショット取得・内部SEO整備・サイトマップ対応・CTA設置・公開までを一連で自動実行する仕組みを構築しました。">
+    <link rel="canonical" href="https://miraina-ai.com/works/work019.html">
+    <meta property="og:title" content="【自社事例】コラム投稿をAIエージェントで完全自動化。毎朝9時に無人で公開">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/works/work019.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/works_images/work019-1.webp">
+    <meta property="og:description" content="情報収集から記事作成、画像生成、内部SEO整備、公開までを一連で自動化。人手をほぼ介さずコンテンツマーケティングを継続する体制を構築しました。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/work_detail.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINAのロゴ" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/works.html">事例紹介</a></li>
+                <li>自社事例：コラム投稿AIエージェントによる完全自動化</li>
+            </ul>
+        </div>
+
+        <article class="work-container">
+            <!-- 1. 事例タイトル -->
+            <header class="work-header fade-in-section">
+                <div class="work-meta">
+                    <span class="work-date">2026.08.09 公開</span>
+                    <span class="work-cat">業務自動化 / 自社事例</span>
+                </div>
+                <h1 class="work-title">【自社事例】Webサイトへのコラム投稿をAIエージェントで自動化し、<br>情報収集から公開まで無人運用。</h1>
+            </header>
+
+            <!-- メインビジュアル -->
+            <div class="work-main-image fade-in-section">
+                <img src="/images/works_images/work019-1.webp" alt="コラム投稿AIエージェントによるWebサイト更新自動化の自社事例メインビジュアル" width="1200" height="630" fetchpriority="high">
+            </div>
+
+            <!-- 事例概要 -->
+            <section class="work-section fade-in-section">
+                <div class="work-summary-box">
+                    <div class="summary-label">事例概要</div>
+                    <div class="summary-text">
+                        <p>
+                            MIRAINA公式サイトのコラム更新を、AIエージェントによって完全自動化した自社事例です。<strong>毎朝9時にエージェントが自動起動</strong>し、AI関連の最新情報の収集、記事の執筆、サムネイル生成、挿入画像生成、参考サイト・システム画面の自動スクリーンショット取得、内部SEO整備、サイトマップ対応、CTAボタン設置、公開までを一連の流れで実行します。コンテンツマーケティングにおける最大の難所である「継続」を、<strong>人手をほぼ介さずに成立させる運用体制</strong>を構築しました。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 目次 -->
+            <div class="work-toc fade-in-section">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#client">1. 対象業務について</a></li>
+                    <li><a href="#before">2. 導入前の課題</a></li>
+                    <li><a href="#solution">3. 実施したこと</a></li>
+                    <li><a href="#result">4. 成果</a></li>
+                    <li><a href="#change">5. 導入後の変化</a></li>
+                    <li><a href="#point">6. この事例のポイント</a></li>
+                </ul>
+            </div>
+
+            <!-- 2. クライアント / 業種 -->
+            <section id="client" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">DATA</h2>
+                    <h3 class="work-subheading">対象業務について</h3>
+
+                    <div class="work-table-wrapper">
+                        <table class="work-table">
+                            <thead>
+                                <tr>
+                                    <th>項目</th>
+                                    <th>内容</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>対象</th>
+                                    <td>MIRAINA（自社事例）</td>
+                                </tr>
+                                <tr>
+                                    <th>対象業務</th>
+                                    <td>公式サイトへのコラム記事の企画・執筆・画像制作・公開</td>
+                                </tr>
+                                <tr>
+                                    <th>実行タイミング</th>
+                                    <td>毎朝9時に自動起動</td>
+                                </tr>
+                                <tr>
+                                    <th>自動化範囲</th>
+                                    <td>情報収集 / 執筆 / 画像生成 / スクリーンショット取得 / 内部SEO / サイトマップ / CTA設置 / 公開</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="work-text">
+                        コンテンツマーケティングは成果が出るまでに時間がかかる一方、更新が止まった瞬間に積み上げが崩れます。本事例の目的は品質の追求そのものではなく、「止まらない運用体制をどう作るか」にありました。
+                    </p>
+                </div>
+            </section>
+
+            <!-- 3. 導入前の課題 -->
+            <section id="before" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">BEFORE</h2>
+                    <h3 class="work-subheading">更新が止まる理由は、<br>いつも「忙しかったから」だった。</h3>
+
+                    <p class="work-text">
+                        自動化前のコラム更新は、担当者が時間を見つけて執筆する運用でした。1本の記事を公開するまでには、テーマの選定、情報収集と裏取り、構成作成、執筆、サムネイル制作、挿入画像の用意、内部リンクの設定、サイトマップへの追加、CTAの設置といった工程があり、<strong>1本あたり3〜4時間程度</strong>を要していました。
+                    </p>
+                    <p class="work-text">
+                        問題は所要時間そのものではなく、<strong>まとまった時間を確保しなければ着手できない</strong>という構造でした。クライアント業務が立て込んだ週は自然と後回しになり、一度止まると再開時にテーマ選定からやり直すことになるため、さらに腰が重くなるという悪循環が生じていました。
+                    </p>
+                    <p class="work-text">
+                        結果として、更新頻度が月によって大きく変動する状態が続いていました。コンテンツマーケティングは<strong>積み上げが前提の施策</strong>であり、更新が途切れた期間はそのまま機会損失になります。「品質の高い記事を時々出す」よりも「一定水準の記事を止めずに出し続ける」ほうが成果に直結するという判断から、自動化の検討が始まりました。
+                    </p>
+
+                    <div class="diagram-container">
+                        <div class="diagram-comparison">
+                            <div class="comparison-item is-bad">
+                                <div class="comparison-header">自動化前</div>
+                                <div class="comparison-content">
+                                    <ul>
+                                        <li>1本あたり3〜4時間の作業</li>
+                                        <li>まとまった時間がないと着手できない</li>
+                                        <li>繁忙期は更新が止まる</li>
+                                        <li>再開時にテーマ選定からやり直し</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="comparison-arrow">→</div>
+                            <div class="comparison-item is-good">
+                                <div class="comparison-header">目指した状態</div>
+                                <div class="comparison-content">
+                                    <ul>
+                                        <li><strong>毎朝9時に自動で起動・公開</strong></li>
+                                        <li>着手のための時間確保が不要</li>
+                                        <li><strong>繁忙期でも更新が止まらない</strong></li>
+                                        <li>積み上げが途切れない</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="diagram-caption">図解：属人的な更新から、無人での継続運用へ</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. 実施したこと -->
+            <section id="solution" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">SOLUTION</h2>
+                    <h3 class="work-subheading">執筆だけでなく、<br>公開までの全工程をエージェントに載せた。</h3>
+
+                    <p class="work-text">
+                        構築したのは、<strong>毎朝9時に自動起動し、コラム1本を公開状態まで持っていくAIエージェント</strong>です。執筆支援ツールとの決定的な違いは、記事本文の生成にとどまらず、<strong>公開に必要な周辺工程をすべて自動化の範囲に含めた</strong>点にあります。
+                    </p>
+                    <p class="work-text">
+                        実務上、記事の執筆そのものは全工程の一部でしかありません。サムネイルを作り、挿入画像を用意し、参考にした情報源のスクリーンショットを取得し、内部リンクを張り、サイトマップを更新し、CTAを設置する。この周辺工程こそが更新を止める要因であり、ここを残したままでは「止まらない運用」は実現できません。
+                    </p>
+                    <p class="work-text">
+                        情報収集では、AI関連の一次情報を対象に収集と裏取りを行い、参考サイトやシステム画面は<strong>エージェントがブラウザを操作して自動でスクリーンショットを取得</strong>します。画像もサムネイル・挿入画像ともに自動生成し、内部SEOの整備とサイトマップへの反映まで完了させたうえで公開します。
+                    </p>
+
+                    <div class="diagram-container">
+                        <ul class="diagram-process">
+                            <li class="process-step">
+                                <span class="step-num">Step 01</span>
+                                <span class="step-text">毎朝9時に<br>自動起動</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 02</span>
+                                <span class="step-text">情報収集・<br>裏取り</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 03</span>
+                                <span class="step-text">記事執筆・<br>画像生成</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 04</span>
+                                <span class="step-text">参考画面の<br>自動取得</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 05</span>
+                                <span class="step-text">内部SEO・<br>サイトマップ</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 06</span>
+                                <span class="step-text">CTA設置・<br>公開</span>
+                            </li>
+                        </ul>
+                        <p class="diagram-caption">図解：コラム投稿AIエージェントの自動実行フロー</p>
+                    </div>
+
+                    <div class="work-table-wrapper">
+                        <table class="work-table">
+                            <thead>
+                                <tr>
+                                    <th>工程</th>
+                                    <th>自動化前</th>
+                                    <th>自動化後</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>テーマ選定</th>
+                                    <td>担当者が都度検討</td>
+                                    <td><strong>最新情報から自動選定</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>情報収集・裏取り</th>
+                                    <td>手作業で調査</td>
+                                    <td><strong>自動収集・検証</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>記事執筆</th>
+                                    <td>担当者が執筆</td>
+                                    <td><strong>自動生成</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>サムネイル制作</th>
+                                    <td>都度デザイン</td>
+                                    <td><strong>自動生成</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>挿入画像の用意</th>
+                                    <td>素材探し・加工</td>
+                                    <td><strong>自動生成</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>参考サイトの画面取得</th>
+                                    <td>手動でスクリーンショット</td>
+                                    <td><strong>ブラウザ操作で自動取得</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>内部SEO整備</th>
+                                    <td>手作業で内部リンク設定</td>
+                                    <td><strong>自動整備</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>サイトマップ更新</th>
+                                    <td>手作業で追記</td>
+                                    <td><strong>自動反映</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>CTA設置</th>
+                                    <td>都度貼り付け</td>
+                                    <td><strong>自動設置</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>公開</th>
+                                    <td>手動で公開操作</td>
+                                    <td><strong>自動公開</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. 成果 -->
+            <section id="result" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">RESULT</h2>
+                    <h3 class="work-subheading">更新が止まらない。<br>それ自体が最大の成果になった。</h3>
+
+                    <div class="result-metrics">
+                        <div class="metric-card">
+                            <div class="metric-label">1本あたりの人的作業時間</div>
+                            <div class="metric-value">0<span class="metric-unit">分</span></div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">自動化前</div>
+                            <div class="metric-value">3〜4<span class="metric-unit">時間</span></div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">更新頻度</div>
+                            <div class="metric-value" style="font-size: 2.2rem;">毎日</div>
+                        </div>
+                    </div>
+
+                    <p class="work-text">
+                        自動化により、コラム1本あたり3〜4時間かかっていた人的作業が<strong>実質ゼロ</strong>になりました。エージェントは毎朝9時に起動し、人が関与しないまま公開まで完了します。
+                    </p>
+                    <p class="work-text">
+                        定量効果以上に意味があったのは、<strong>更新頻度が担当者の繁忙状況から完全に切り離された</strong>ことです。クライアント業務がどれだけ立て込んでいても更新は止まりません。コンテンツマーケティングにおいて「継続すること」自体が最も難しい条件であることを踏まえると、この構造的な安定性が最大の成果といえます。
+                    </p>
+                    <p class="work-text">
+                        また、情報収集から公開までが1本の流れとして繋がっているため、<strong>工程間の抜け漏れが発生しません</strong>。手作業では起きがちな「サイトマップへの追加を忘れる」「CTAを貼り忘れる」といったミスが、構造上発生しない状態になっています。
+                    </p>
+
+                    <div class="work-table-wrapper">
+                        <table class="work-table">
+                            <thead>
+                                <tr>
+                                    <th>評価項目</th>
+                                    <th>自動化前</th>
+                                    <th>自動化後</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>1本あたりの人的作業</th>
+                                    <td>3〜4時間</td>
+                                    <td><strong>0分</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>更新頻度</th>
+                                    <td>月によって変動</td>
+                                    <td><strong>毎日安定</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>繁忙期の更新</th>
+                                    <td>停止しがち</td>
+                                    <td><strong>影響なし</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>工程の抜け漏れ</th>
+                                    <td>都度発生</td>
+                                    <td><strong>構造上発生しない</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>着手のハードル</th>
+                                    <td>まとまった時間が必要</td>
+                                    <td><strong>不要</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. 導入後の変化 -->
+            <section id="change" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">CHANGE</h2>
+                    <h3 class="work-subheading">1本3〜4時間が0分。<br>毎日更新しても人的工数は発生しない。</h3>
+
+                    <p class="work-text">
+                        コラム1本あたり<strong>3〜4時間かかっていた人的作業が実質0分</strong>になりました。毎朝9時に自動起動し公開まで完了するため、毎日更新しても人の工数は発生しません。仮に月20本を人手で制作した場合<strong>60〜80時間</strong>に相当する工数が、まるごと不要になっています。
+                    </p>
+                    <p class="work-text">
+                        更新頻度が担当者の稼働状況から切り離された点も成果です。コンテンツマーケティングは<strong>更新が止まった時点で積み上げが崩れる</strong>施策ですが、クライアント業務がどれだけ立て込んでも更新は停止しません。情報収集から公開までが1本の流れで繋がっているため、サイトマップへの追加漏れやCTAの貼り忘れといった工程の抜けも構造上発生しません。
+                    </p>
+                    <p class="work-text">
+                        この仕組み自体がMIRAINAのAIエージェント開発における実証環境にもなっています。ブラウザ操作による画面取得や、複数工程をまたぐ長時間タスクの制御といった技術を自社運用で検証し、クライアント様向けの開発にそのまま還元しています。
+                    </p>
+                </div>
+            </section>
+
+            <!-- 7. この事例のポイント -->
+            <section id="point" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">POINT</h2>
+                    <h3 class="work-subheading">執筆の自動化ではなく、<br>「公開まで」の自動化にこだわった。</h3>
+
+                    <div class="project-info-grid">
+                        <div class="info-item">
+                            <div class="info-label">POINT 01｜情報収集から公開まで完全自動</div>
+                            <div class="info-value">記事本文の生成だけでなく、サムネイル・挿入画像の生成、内部SEO整備、サイトマップ対応、CTA設置、公開操作までを自動化の範囲に含めました。周辺工程こそが更新を止める要因だからです。</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">POINT 02｜参考画面のスクリーンショットも自動取得</div>
+                            <div class="info-value">エージェントがブラウザを操作し、参考サイトやシステム画面のスクリーンショットを自動取得。記事の裏付けとなる一次情報の提示まで無人で完結します。</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">POINT 03｜起動タイミングも含めて無人化</div>
+                            <div class="info-value">毎朝9時の自動起動により、人が着手を判断する工程自体を排除。「まとまった時間が取れないから後回し」という最大の停止要因を構造的になくしました。</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">POINT 04｜自社運用が開発の実証環境になる</div>
+                            <div class="info-value">ブラウザ操作による画面取得や、複数工程をまたぐ長時間タスクの制御といった技術を自社運用で検証し、クライアント様向けの開発へ還元しています。</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 関連リンク -->
+            <section class="work-section fade-in-section">
+                <div class="section-inner">
+                    <div class="work-references">
+                        <div class="ref-title">関連サービス・関連記事</div>
+                        <ul>
+                            <li><a href="/blogs.html">実際に自動運用しているMIRAINAのブログ</a></li>
+                            <li><a href="/services/ai_develop.html">AI開発サービス（AIエージェント開発）</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- 監修者 -->
+            <section id="supervisor" class="work-section fade-in-section">
+                <div class="article-editor">
+                    <div class="editor-header">この記事を監修した人</div>
+                    <div class="editor-profile">
+                        <div class="editor-image">
+                            <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA代表 / AIコンサルタント）" width="800" height="800" loading="lazy" decoding="async">
+                        </div>
+                        <div class="editor-info">
+                            <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                            <p class="editor-desc">
+                                中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                                九州大学大学院でLLMに関する研究にも従事。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. CTAセクション -->
+            <div class="work-cta fade-in-section">
+                <div class="cta-box">
+                    <h2 class="cta-title">コンテンツ更新、止まっていませんか？</h2>
+                    <p class="cta-text">情報収集から公開までを一連で自動化すれば、<br>繁忙期でも更新は止まりません。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">コンテンツ自動化の相談をする</a>
+                </div>
+            </div>
+
+            <!-- 関連事例 -->
+            <section class="work-related fade-in-section">
+                <h2 class="related-title">その他の事例</h2>
+                <div class="related-grid">
+                    <a href="/works/work018.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/works_images/work-card018.webp" alt="請求書作成自動化の自社事例" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-cat">業務自動化 / 自社事例</div>
+                            <div class="related-txt">請求書作成からメール下書きまでを完全自動化し、1社15〜20分を約5分に短縮</div>
+                        </div>
+                    </a>
+                    <a href="/works/work012.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/works_images/work-card012.webp" alt="自動投稿AIエージェント開発の事例" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-cat">業務自動化 / AI開発</div>
+                            <div class="related-txt">美容系プラットフォームへの自動投稿をAI化し、年間120万円以上のコスト削減</div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

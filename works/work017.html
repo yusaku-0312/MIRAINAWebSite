@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【導入事例】LINEのパーソナライズ配信AIエージェント開発で、一斉配信から一人ひとり最適化へ | MIRAINA works</title>
+    <meta name="description" content="顧客一人ひとりの情報に応じてLINEの配信内容を個別最適化するAIエージェントを構築した事例。従来の一斉配信から、来店履歴・利用メニュー・経過日数に応じた個別配信へ移行し、流入増加施策を進めています。">
+    <link rel="canonical" href="https://miraina-ai.com/works/work017.html">
+    <meta property="og:title" content="【導入事例】LINEパーソナライズ配信AIエージェントの開発">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/works/work017.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/works_images/work017-1.webp">
+    <meta property="og:description" content="顧客一人ひとりの情報に応じてLINE配信を個別最適化するAIエージェントを構築。一斉配信から個別配信へ移行した事例です。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/work_detail.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINAのロゴ" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/works.html">事例紹介</a></li>
+                <li>LINEパーソナライズ配信AIエージェントの開発</li>
+            </ul>
+        </div>
+
+        <article class="work-container">
+            <!-- 1. 事例タイトル -->
+            <header class="work-header fade-in-section">
+                <div class="work-meta">
+                    <span class="work-date">2026.07.12 公開</span>
+                    <span class="work-cat">AI開発 / CRM</span>
+                </div>
+                <h1 class="work-title">【導入事例】LINEのパーソナライズ配信AIエージェントを開発し、<br>一斉配信から一人ひとりへの最適化へ。</h1>
+            </header>
+
+            <!-- メインビジュアル -->
+            <div class="work-main-image fade-in-section">
+                <img src="/images/works_images/work017-1.webp" alt="LINEパーソナライズ配信AIエージェント開発の導入事例メインビジュアル" width="1200" height="630" fetchpriority="high">
+            </div>
+
+            <!-- 事例概要 -->
+            <section class="work-section fade-in-section">
+                <div class="work-summary-box">
+                    <div class="summary-label">事例概要</div>
+                    <div class="summary-text">
+                        <p>
+                            顧客一人ひとりの情報に応じて、LINEの配信内容を個別最適化するAIエージェントを構築した事例です。従来は全顧客へ同一内容を送る一斉配信が中心で、内容が自分に関係ないと判断された時点でブロックや通知オフにつながるという構造的な課題がありました。来店履歴・利用メニュー・前回来店からの経過日数などをもとに、<strong>一人ひとりに対して配信内容と配信タイミングをAIが個別に組み立てる</strong>仕組みへ移行。現在、個別配信による流入増加施策を実施中で、<strong>具体的な効果数値は検証中</strong>です。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 目次 -->
+            <div class="work-toc fade-in-section">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#client">1. クライアント様について</a></li>
+                    <li><a href="#before">2. 導入前の課題</a></li>
+                    <li><a href="#solution">3. 実施したこと</a></li>
+                    <li><a href="#result">4. 成果</a></li>
+                    <li><a href="#change">5. 導入後の変化</a></li>
+                    <li><a href="#point">6. この事例のポイント</a></li>
+                </ul>
+            </div>
+
+            <!-- 2. クライアント / 業種 -->
+            <section id="client" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">DATA</h2>
+                    <h3 class="work-subheading">クライアント様について</h3>
+
+                    <div class="work-table-wrapper">
+                        <table class="work-table">
+                            <thead>
+                                <tr>
+                                    <th>項目</th>
+                                    <th>内容</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>業種</th>
+                                    <td>店舗型サービス業（リピート来店が売上の中心）</td>
+                                </tr>
+                                <tr>
+                                    <th>対象業務</th>
+                                    <td>LINE公式アカウントによる顧客への情報配信</td>
+                                </tr>
+                                <tr>
+                                    <th>提供サービス</th>
+                                    <td>パーソナライズ配信AIエージェントの設計・開発</td>
+                                </tr>
+                                <tr>
+                                    <th>現況</th>
+                                    <td>個別配信による流入増加施策を実施中（効果数値は検証中）</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="work-text">
+                        リピート来店が売上の中心となる業態では、LINEは最も直接的な再来店の導線になります。一方で、配信内容が自分に関係ないと感じられた瞬間にブロックされるリスクも高く、一斉配信の限界が出やすいチャネルでもあります。
+                    </p>
+                </div>
+            </section>
+
+            <!-- 3. 導入前の課題 -->
+            <section id="before" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">BEFORE</h2>
+                    <h3 class="work-subheading">全員に同じ内容を送るほど、<br>誰にも刺さらなくなっていた。</h3>
+
+                    <p class="work-text">
+                        導入前のLINE配信は、全友だちに対して同じ内容を送る<strong>一斉配信</strong>が基本でした。作成するのは担当者1名で、月に数本のキャンペーン告知を配信する運用です。
+                    </p>
+                    <p class="work-text">
+                        一斉配信の難しさは、<strong>誰に向けて書くかを決められない</strong>点にあります。先月来店したばかりの顧客と、半年以上来ていない顧客、定期的なメンテナンス目的の顧客と初回限定メニューで来た顧客では、送るべき内容がまったく異なります。すべてを満たそうとすると内容が総花的になり、結果として誰にとっても「自分向けではない」通知になっていました。
+                    </p>
+                    <p class="work-text">
+                        その結果、配信のたびに一定数のブロックと通知オフが発生し、<strong>配信すればするほど到達可能な母数が痩せていく</strong>状態に陥っていました。かといって配信を減らせば再来店のきっかけが失われるため、頻度を上げることも下げることもできない膠着状態でした。
+                    </p>
+                    <p class="work-text">
+                        顧客ごとの来店履歴や利用メニューのデータ自体は蓄積されていたものの、配信内容の出し分けに活用するには<strong>セグメントを手作業で切り分ける工数</strong>が現実的でなく、活用されないまま眠っている状態でした。
+                    </p>
+
+                    <div class="diagram-container">
+                        <div class="diagram-comparison">
+                            <div class="comparison-item is-bad">
+                                <div class="comparison-header">導入前（一斉配信）</div>
+                                <div class="comparison-content">
+                                    <ul>
+                                        <li>全友だちに同一内容を配信</li>
+                                        <li>誰に向けた内容か定まらず総花的に</li>
+                                        <li>配信のたびにブロック・通知オフが発生</li>
+                                        <li>来店データはあるが活用できていない</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="comparison-arrow">→</div>
+                            <div class="comparison-item is-good">
+                                <div class="comparison-header">目指した状態</div>
+                                <div class="comparison-content">
+                                    <ul>
+                                        <li><strong>一人ひとりに内容を最適化</strong></li>
+                                        <li>来店履歴・利用メニューに応じた訴求</li>
+                                        <li>自分向けの通知としてブロックを抑制</li>
+                                        <li><strong>蓄積データを配信に直結</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="diagram-caption">図解：一斉配信からパーソナライズ配信への移行</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. 実施したこと -->
+            <section id="solution" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">SOLUTION</h2>
+                    <h3 class="work-subheading">セグメントを切るのではなく、<br>一人ひとりぶんの配信を組み立てる。</h3>
+
+                    <p class="work-text">
+                        MIRAINAが構築したのは、<strong>顧客一人ひとりに対して配信内容を個別生成するAIエージェント</strong>です。一般的なセグメント配信は「30日以上来店がない層」といったグループ単位で出し分けますが、このエージェントは<strong>顧客単位で文面そのものを組み立てます</strong>。
+                    </p>
+                    <p class="work-text">
+                        判断材料としているのは、前回来店からの経過日数、これまでの利用メニュー、来店頻度の傾向、過去の反応履歴などです。これらをもとに、その顧客にとって今もっとも自然な提案と、受け取られやすい配信タイミングをAIが決定します。
+                    </p>
+                    <p class="work-text">
+                        運用面では、担当者が配信文面を1本ずつ作る必要がなくなるよう設計しました。配信の意図と方針を指定すれば、そこから先の個別最適化はエージェント側が担います。<strong>手作業のセグメント切り分けを前提としない</strong>ことが、実運用に乗せるうえで重要な条件でした。
+                    </p>
+
+                    <div class="diagram-container">
+                        <ul class="diagram-process">
+                            <li class="process-step">
+                                <span class="step-num">Step 01</span>
+                                <span class="step-text">顧客データ<br>を参照</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 02</span>
+                                <span class="step-text">経過日数・<br>履歴を判定</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 03</span>
+                                <span class="step-text">個別に文面<br>を生成</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 04</span>
+                                <span class="step-text">最適な<br>タイミングで配信</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 05</span>
+                                <span class="step-text">反応を<br>学習・反映</span>
+                            </li>
+                        </ul>
+                        <p class="diagram-caption">図解：パーソナライズ配信AIエージェントの処理フロー</p>
+                    </div>
+
+                    <div class="work-table-wrapper">
+                        <table class="work-table">
+                            <thead>
+                                <tr>
+                                    <th>観点</th>
+                                    <th>一斉配信</th>
+                                    <th>セグメント配信</th>
+                                    <th>パーソナライズ配信（本事例）</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>出し分けの単位</th>
+                                    <td>なし</td>
+                                    <td>グループ単位</td>
+                                    <td><strong>顧客一人単位</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>文面の作成</th>
+                                    <td>1本を担当者が作成</td>
+                                    <td>セグメント数ぶん作成</td>
+                                    <td><strong>AIが個別生成</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>運用工数</th>
+                                    <td>低いが効果も低い</td>
+                                    <td>セグメントを増やすほど増大</td>
+                                    <td><strong>増えない</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>配信タイミング</th>
+                                    <td>全員同時</td>
+                                    <td>グループごと</td>
+                                    <td><strong>顧客ごとに最適化</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>データの活用度</th>
+                                    <td>ほぼ未活用</td>
+                                    <td>一部活用</td>
+                                    <td><strong>蓄積データを直結</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. 成果 -->
+            <section id="result" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">RESULT</h2>
+                    <h3 class="work-subheading">個別配信の運用を開始。<br>効果数値は現在検証中。</h3>
+
+                    <div class="result-metrics">
+                        <div class="metric-card">
+                            <div class="metric-label">配信の出し分け単位</div>
+                            <div class="metric-value" style="font-size: 2.2rem;">1人<span class="metric-unit">単位</span></div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">文面作成の担当者工数</div>
+                            <div class="metric-value" style="font-size: 2.2rem;">削減</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">流入への効果</div>
+                            <div class="metric-value" style="font-size: 2.2rem;">検証中</div>
+                        </div>
+                    </div>
+
+                    <p class="work-text">
+                        現在は個別配信による流入増加施策を実施している段階で、<strong>具体的な効果数値は検証中</strong>です。パーソナライズ配信の効果は、単発の配信結果ではなく再来店サイクルを通して測る必要があるため、一定期間のデータ蓄積を経て評価する方針としています。
+                    </p>
+                    <p class="work-text">
+                        現時点で確定している変化は運用面です。従来はセグメントを増やすほど文面作成の工数が比例して増える構造でしたが、<strong>顧客単位まで出し分けを細かくしても担当者の作業量が増えない</strong>状態になりました。これは施策の打ち手を広げるうえでの前提条件にあたります。
+                    </p>
+                    <p class="work-text">
+                        効果検証にあたっては、配信からの流入数に加え、ブロック率や通知オフ率といった到達母数に関わる指標も並行して計測しています。
+                    </p>
+
+                    <div class="work-table-wrapper">
+                        <table class="work-table">
+                            <thead>
+                                <tr>
+                                    <th>評価項目</th>
+                                    <th>導入前</th>
+                                    <th>導入後</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>配信の出し分け</th>
+                                    <td>なし（全員同一）</td>
+                                    <td><strong>顧客一人ひとり</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>文面作成の工数</th>
+                                    <td>配信本数に比例</td>
+                                    <td><strong>出し分けを増やしても一定</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>蓄積データの活用</th>
+                                    <td>ほぼ未活用</td>
+                                    <td><strong>配信判断に直結</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>配信タイミング</th>
+                                    <td>全員同時</td>
+                                    <td><strong>顧客ごとに最適化</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>流入への効果</th>
+                                    <td>—</td>
+                                    <td>検証中</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. 導入後の変化 -->
+            <section id="change" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">CHANGE</h2>
+                    <h3 class="work-subheading">出し分けの細かさが、<br>運用工数の制約から外れた。</h3>
+
+                    <p class="work-text">
+                        流入への効果は現在検証中です。パーソナライズ配信の効果は単発の配信結果ではなく再来店サイクルを通して測る必要があるため、一定期間のデータ蓄積を経て評価します。配信からの流入数に加え、ブロック率・通知オフ率も並行して計測しています。
+                    </p>
+                    <p class="work-text">
+                        確定している変化は運用面です。従来はセグメントを増やすほど文面作成の工数が比例して増えるため、<strong>施策の打ち手が運用能力で制限されていました</strong>。「この顧客層には別の訴求を送るべき」と分かっていても作成工数に見合わず実行できない、という状態です。現在は<strong>顧客1人単位まで細かくしても担当者の作業量は変わりません</strong>。
+                    </p>
+                    <p class="work-text">
+                        蓄積していた来店履歴や利用メニューのデータが配信判断に直結するようになり、<strong>取得しても活用先がなかったデータが売上への導線に組み込まれました</strong>。
+                    </p>
+                </div>
+            </section>
+
+            <!-- 7. この事例のポイント -->
+            <section id="point" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">POINT</h2>
+                    <h3 class="work-subheading">セグメント配信の延長ではなく、<br>顧客単位の生成へ踏み込んだ。</h3>
+
+                    <div class="project-info-grid">
+                        <div class="info-item">
+                            <div class="info-label">POINT 01｜出し分けの単位が「1人」</div>
+                            <div class="info-value">グループ単位のセグメント配信ではなく、顧客一人ひとりに対して文面そのものを個別生成。経過日数・利用メニュー・反応履歴をもとにAIが組み立てます。</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">POINT 02｜出し分けを細かくしても工数が増えない</div>
+                            <div class="info-value">従来はセグメントを増やすほど文面作成の工数が比例して増加。AIが生成を担うことで、細分化が運用上のボトルネックにならない構造にしました。</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">POINT 03｜配信タイミングも個別に最適化</div>
+                            <div class="info-value">内容だけでなく、その顧客にとって受け取られやすいタイミングもAIが判断。一斉送信による通知タイミングの画一化を解消しています。</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">POINT 04｜効果は検証フェーズとして明示</div>
+                            <div class="info-value">パーソナライズ配信の効果は再来店サイクルを通して測る必要があるため、一定期間のデータ蓄積後に評価。現時点では効果数値を検証中としています。</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 関連リンク -->
+            <section class="work-section fade-in-section">
+                <div class="section-inner">
+                    <div class="work-references">
+                        <div class="ref-title">関連サービス・関連記事</div>
+                        <ul>
+                            <li><a href="/services/ai_develop.html">AI開発サービス（AIエージェント開発）</a></li>
+                            <li><a href="/services/goal_remind_line.html">目標リマインドLINE</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- 監修者 -->
+            <section id="supervisor" class="work-section fade-in-section">
+                <div class="article-editor">
+                    <div class="editor-header">この記事を監修した人</div>
+                    <div class="editor-profile">
+                        <div class="editor-image">
+                            <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA代表 / AIコンサルタント）" width="800" height="800" loading="lazy" decoding="async">
+                        </div>
+                        <div class="editor-info">
+                            <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                            <p class="editor-desc">
+                                中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                                九州大学大学院でLLMに関する研究にも従事。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. CTAセクション -->
+            <div class="work-cta fade-in-section">
+                <div class="cta-box">
+                    <h2 class="cta-title">LINE配信、全員に同じ内容を送っていませんか？</h2>
+                    <p class="cta-text">蓄積している顧客データは、<br>一人ひとりへの配信最適化に活用できます。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">配信自動化の相談をする</a>
+                </div>
+            </div>
+
+            <!-- 関連事例 -->
+            <section class="work-related fade-in-section">
+                <h2 class="related-title">その他の事例</h2>
+                <div class="related-grid">
+                    <a href="/works/work013.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/works_images/work-card013.webp" alt="口コミ収集支援アプリ開発の事例" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-cat">AI開発 / 店舗DX</div>
+                            <div class="related-txt">口コミ収集支援アプリの開発で1店舗・1か月に約40件の口コミを獲得</div>
+                        </div>
+                    </a>
+                    <a href="/works/work012.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/works_images/work-card012.webp" alt="自動投稿AIエージェント開発の事例" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-cat">業務自動化 / AI開発</div>
+                            <div class="related-txt">美容系プラットフォームへの自動投稿をAI化し、年間120万円以上のコスト削減</div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

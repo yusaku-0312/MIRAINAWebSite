@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【自社事例】資格試験・教材販売システムを2週間で自社構築し、初期費用40万円と販売手数料20%を削減 | MIRAINA works</title>
+    <meta name="description" content="MIRAINAの自社事例。教材販売から受験までを行える資格試験プラットフォームを自社開発。既存システムの導入には初期費用約40万円と売上の約20%の販売手数料が必要でしたが、Claude CodeとCodexを併用し2週間で構築、カスタム機能も実装しました。">
+    <link rel="canonical" href="https://miraina-ai.com/works/work020.html">
+    <meta property="og:title" content="【自社事例】資格試験プラットフォームを2週間で自社構築。初期費用40万円＋手数料20%を削減">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/works/work020.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/works_images/work020-1.webp">
+    <meta property="og:description" content="既存システムの導入見積もりは初期費用約40万円＋売上の約20%。Claude CodeとCodexを併用して2週間で自社構築し、カスタム機能まで実装した事例です。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/work_detail.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINAのロゴ" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/works.html">事例紹介</a></li>
+                <li>自社事例：資格試験・教材販売システムの自社構築</li>
+            </ul>
+        </div>
+
+        <article class="work-container">
+            <!-- 1. 事例タイトル -->
+            <header class="work-header fade-in-section">
+                <div class="work-meta">
+                    <span class="work-date">2026.08.23 公開</span>
+                    <span class="work-cat">自社開発 / 事業システム</span>
+                </div>
+                <h1 class="work-title">【自社事例】資格試験・教材販売システムを2週間で自社構築し、<br>初期費用40万円と販売手数料20%を削減。</h1>
+            </header>
+
+            <!-- メインビジュアル -->
+            <div class="work-main-image fade-in-section">
+                <img src="/images/works_images/work020-1.webp" alt="資格試験・教材販売システムの自社構築事例メインビジュアル" width="1200" height="630" fetchpriority="high">
+            </div>
+
+            <!-- 事例概要 -->
+            <section class="work-section fade-in-section">
+                <div class="work-summary-box">
+                    <div class="summary-label">事例概要</div>
+                    <div class="summary-text">
+                        <p>
+                            教材販売から受験までを一貫して行える資格試験プラットフォームを、MIRAINAが自社開発した事例です。当初は既存の資格試験システムの導入を検討していましたが、<strong>初期費用約40万円に加えて売上の約20%が販売手数料として発生する</strong>ことが判明。Claude CodeとCodexを併用しながら<strong>2週間でシステムを構築</strong>し、自社開発へ切り替えました。結果として初期費用と継続的な販売手数料の双方を削減しただけでなく、<strong>既存システムには存在しなかったカスタム機能まで実装</strong>。一定のAI・ITリテラシーを持つことで、事業システムそのものを自社内で構築できることを示す事例です。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 目次 -->
+            <div class="work-toc fade-in-section">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#client">1. 対象業務について</a></li>
+                    <li><a href="#before">2. 導入前の課題</a></li>
+                    <li><a href="#solution">3. 実施したこと</a></li>
+                    <li><a href="#result">4. 成果</a></li>
+                    <li><a href="#change">5. 導入後の変化</a></li>
+                    <li><a href="#point">6. この事例のポイント</a></li>
+                </ul>
+            </div>
+
+            <!-- 2. クライアント / 業種 -->
+            <section id="client" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">DATA</h2>
+                    <h3 class="work-subheading">対象業務について</h3>
+
+                    <div class="work-table-wrapper">
+                        <table class="work-table">
+                            <thead>
+                                <tr>
+                                    <th>項目</th>
+                                    <th>内容</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>対象</th>
+                                    <td>MIRAINA（自社事例）</td>
+                                </tr>
+                                <tr>
+                                    <th>対象システム</th>
+                                    <td>資格試験プラットフォーム（教材販売〜受験まで）</td>
+                                </tr>
+                                <tr>
+                                    <th>開発期間</th>
+                                    <td>約2週間</td>
+                                </tr>
+                                <tr>
+                                    <th>使用ツール</th>
+                                    <td>Claude Code / Codex を併用</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="work-text">
+                        資格試験システムは、教材の販売、受験者の管理、試験の実施、採点、合否判定、証明書の発行といった機能群を必要とします。一般的には専用のSaaSを契約する領域であり、自社開発の対象として検討されることは多くありません。
+                    </p>
+                </div>
+            </section>
+
+            <!-- 3. 導入前の課題 -->
+            <section id="before" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">BEFORE</h2>
+                    <h3 class="work-subheading">初期費用40万円と、<br>売上の20%が永続的に出ていく構造。</h3>
+
+                    <p class="work-text">
+                        資格試験の実施にあたり、当初は既存の資格試験プラットフォームの導入を前提に検討を進めていました。調査の結果、判明した条件は<strong>初期費用約40万円、加えて売上の約20%を販売手数料として支払う</strong>というものでした。
+                    </p>
+                    <p class="work-text">
+                        初期費用の40万円は一度きりの支出ですが、問題は<strong>売上の約20%という継続的なコスト</strong>です。この手数料は事業が成長するほど絶対額が増えるため、売れれば売れるほど負担が重くなります。事業が軌道に乗った後の利益構造を大きく制約する条件でした。
+                    </p>
+                    <p class="work-text">
+                        もう一つの懸念が機能面でした。既存システムは汎用的に作られているため、<strong>MIRAINAが必要としていた独自の運用に完全には対応できない</strong>ことが分かっていました。手数料を払い続けたうえで、やりたいことの一部を諦める。この構造に納得できなかったことが、自社開発を検討する直接のきっかけです。
+                    </p>
+                    <p class="work-text">
+                        一方で自社開発には、期間とリソースという現実的な制約がありました。専任の開発チームを持たない状態で、事業システムを一から構築するのは従来であれば数ヶ月規模の話になります。
+                    </p>
+
+                    <div class="diagram-container">
+                        <div class="diagram-comparison">
+                            <div class="comparison-item is-bad">
+                                <div class="comparison-header">既存システムを導入する場合</div>
+                                <div class="comparison-content">
+                                    <ul>
+                                        <li>初期費用 約40万円</li>
+                                        <li><strong>売上の約20%を永続的に支払い</strong></li>
+                                        <li>汎用システムのため独自要件に非対応</li>
+                                        <li>事業成長とともに手数料負担が増加</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="comparison-arrow">→</div>
+                            <div class="comparison-item is-good">
+                                <div class="comparison-header">自社構築した場合</div>
+                                <div class="comparison-content">
+                                    <ul>
+                                        <li><strong>初期費用・販売手数料ともに削減</strong></li>
+                                        <li>売上がそのまま事業に残る</li>
+                                        <li><strong>独自のカスタム機能を実装</strong></li>
+                                        <li>成長しても追加コストが発生しない</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="diagram-caption">図解：既存システム導入と自社構築のコスト構造比較</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. 実施したこと -->
+            <section id="solution" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">SOLUTION</h2>
+                    <h3 class="work-subheading">Claude CodeとCodexを併用し、<br>2週間で事業システムを立ち上げた。</h3>
+
+                    <p class="work-text">
+                        自社開発にあたって採用したのが、<strong>Claude CodeとCodexを併用する開発体制</strong>です。2つのコーディングエージェントを用途に応じて使い分けることで、専任の開発チームを持たない状態でも事業システムの構築を現実的な期間で完了させました。
+                    </p>
+                    <p class="work-text">
+                        構築したのは、教材の販売から受験までを一貫して行えるプラットフォームです。教材購入、受験者登録、試験の実施、採点、合否判定、証明書の発行といった機能を実装しています。
+                    </p>
+                    <p class="work-text">
+                        さらに、既存システムの調査過程で「あれば運用が楽になるが、汎用システムには存在しない機能」をいくつか特定していたため、<strong>それらを最初から自社仕様として組み込みました</strong>。既存システムを導入していれば諦めることになっていた要件を、自社開発では制約なく実装できています。
+                    </p>
+                    <p class="work-text">
+                        開発期間は約2週間。従来であれば数ヶ月規模の開発対象を、AIコーディングエージェントを活用することで圧縮しました。
+                    </p>
+
+                    <div class="diagram-container">
+                        <ul class="diagram-process">
+                            <li class="process-step">
+                                <span class="step-num">Step 01</span>
+                                <span class="step-text">既存システム<br>の条件調査</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 02</span>
+                                <span class="step-text">自社構築の<br>意思決定</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 03</span>
+                                <span class="step-text">Claude Code・<br>Codexで開発</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 04</span>
+                                <span class="step-text">カスタム機能<br>の実装</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 05</span>
+                                <span class="step-text">運用開始</span>
+                            </li>
+                        </ul>
+                        <p class="diagram-caption">図解：既存システム検討から自社構築までのプロセス</p>
+                    </div>
+
+                    <div class="work-table-wrapper">
+                        <table class="work-table">
+                            <thead>
+                                <tr>
+                                    <th>比較項目</th>
+                                    <th>既存システム導入</th>
+                                    <th>自社構築（本事例）</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>初期費用</th>
+                                    <td>約40万円</td>
+                                    <td><strong>削減</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>販売手数料</th>
+                                    <td>売上の約20%（継続）</td>
+                                    <td><strong>なし</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>独自要件への対応</th>
+                                    <td>汎用仕様の範囲内</td>
+                                    <td><strong>制約なく実装</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>構築期間</th>
+                                    <td>契約後すぐ利用可</td>
+                                    <td>約2週間</td>
+                                </tr>
+                                <tr>
+                                    <th>仕様変更</th>
+                                    <td>提供元の対応待ち</td>
+                                    <td><strong>自社で即時対応</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>事業成長時のコスト</th>
+                                    <td>手数料が比例増加</td>
+                                    <td><strong>増加なし</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. 成果 -->
+            <section id="result" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">RESULT</h2>
+                    <h3 class="work-subheading">初期費用40万円と手数料20%を削減し、<br>機能は既存システム以上に。</h3>
+
+                    <div class="result-metrics">
+                        <div class="metric-card">
+                            <div class="metric-label">削減した初期費用</div>
+                            <div class="metric-value">約40<span class="metric-unit">万円</span></div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">削減した販売手数料</div>
+                            <div class="metric-value">約20<span class="metric-unit">%</span></div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">構築期間</div>
+                            <div class="metric-value">2<span class="metric-unit">週間</span></div>
+                        </div>
+                    </div>
+
+                    <p class="work-text">
+                        自社構築により、<strong>初期費用約40万円と、今後継続的に発生していたはずの売上約20%の販売手数料</strong>を削減しました。手数料は事業が成長するほど絶対額が増える性質のコストであるため、削減効果は事業の成長に比例して拡大していきます。
+                    </p>
+                    <p class="work-text">
+                        さらに、<strong>既存システムには存在しなかったカスタム機能まで実装</strong>できました。コストを下げたうえで機能面でも上回るという結果になっています。
+                    </p>
+                    <p class="work-text">
+                        ただし、この事例の本質は単純なコスト削減ではありません。重要なのは、<strong>一定のAI・ITリテラシーを持つことで、事業システムそのものを自社内で構築できる</strong>という点です。「外部に払うか、自分たちで作るか」という選択肢を持てること自体が、事業判断の自由度を大きく広げます。
+                    </p>
+
+                    <div class="work-table-wrapper">
+                        <table class="work-table">
+                            <thead>
+                                <tr>
+                                    <th>評価項目</th>
+                                    <th>既存システム導入の場合</th>
+                                    <th>自社構築の結果</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>初期費用</th>
+                                    <td>約40万円</td>
+                                    <td><strong>削減</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>販売手数料</th>
+                                    <td>売上の約20%</td>
+                                    <td><strong>0%</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>事業成長時の負担</th>
+                                    <td>手数料が比例増加</td>
+                                    <td><strong>増加なし</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>機能</th>
+                                    <td>汎用仕様の範囲内</td>
+                                    <td><strong>カスタム機能を追加実装</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>仕様変更の自由度</th>
+                                    <td>提供元に依存</td>
+                                    <td><strong>自社で即時対応</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. 導入後の変化 -->
+            <section id="change" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">CHANGE</h2>
+                    <h3 class="work-subheading">初期費用40万円と、<br>売上の20%が毎年浮く。</h3>
+
+                    <p class="work-text">
+                        既存システムを導入していれば発生していた<strong>初期費用約40万円</strong>と、<strong>売上の約20%という販売手数料</strong>の双方を削減しました。手数料は事業が成長するほど絶対額が増える性質のコストです。<strong>年商500万円なら年100万円、年商1,000万円なら年200万円</strong>が毎年出ていく計算になるため、削減効果は事業の成長に比例して拡大していきます。
+                    </p>
+                    <p class="work-text">
+                        構築期間は<strong>約2週間</strong>。Claude CodeとCodexを併用したことで、専任の開発チームを持たない状態でも事業システムを現実的な期間で立ち上げられました。しかも<strong>既存システムには存在しなかったカスタム機能まで実装</strong>しており、コストを下げたうえで機能面でも上回っています。
+                    </p>
+                    <p class="work-text">
+                        この経験を経て、システムが必要になったときの初動が変わりました。従来は「どのSaaSを契約するか」から始まっていましたが、現在は自社構築した場合のコストと期間を必ず並べて比較します。特に<strong>手数料が売上に連動する課金体系</strong>のサービスについては、比較検討が標準の手順になりました。
+                    </p>
+                </div>
+            </section>
+
+            <!-- 7. この事例のポイント -->
+            <section id="point" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">POINT</h2>
+                    <h3 class="work-subheading">コスト削減事例ではなく、<br>「自社で作れる」ことを示す事例。</h3>
+
+                    <div class="project-info-grid">
+                        <div class="info-item">
+                            <div class="info-label">POINT 01｜売上連動の手数料構造から脱却</div>
+                            <div class="info-value">初期費用40万円よりも本質的だったのが、売上の約20%という継続的な手数料。事業成長に比例して負担が増える構造を、自社構築によって断ち切りました。</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">POINT 02｜Claude CodeとCodexの併用</div>
+                            <div class="info-value">2つのコーディングエージェントを用途に応じて使い分けることで、専任の開発チームなしに約2週間で事業システムを構築。AI活用の実務的な適用例になっています。</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">POINT 03｜既存システムにない機能まで実装</div>
+                            <div class="info-value">汎用システムでは諦めることになっていた独自要件を、自社仕様として最初から組み込み。コストを下げたうえで機能面でも上回る結果になりました。</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">POINT 04｜示したのは「選択肢を持てること」</div>
+                            <div class="info-value">単なるコスト削減ではなく、一定のAI・ITリテラシーがあれば事業システムを自社内で構築できるという事実。契約するか作るかを比較できること自体が事業判断の自由度になります。</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 関連リンク -->
+            <section class="work-section fade-in-section">
+                <div class="section-inner">
+                    <div class="work-references">
+                        <div class="ref-title">関連サービス・関連記事</div>
+                        <ul>
+                            <li><a href="/services/ai_develop.html">AI開発サービス（事業システム開発）</a></li>
+                            <li><a href="/services/ai_training.html">AI研修（AI・ITリテラシーの内製化支援）</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- 監修者 -->
+            <section id="supervisor" class="work-section fade-in-section">
+                <div class="article-editor">
+                    <div class="editor-header">この記事を監修した人</div>
+                    <div class="editor-profile">
+                        <div class="editor-image">
+                            <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA代表 / AIコンサルタント）" width="800" height="800" loading="lazy" decoding="async">
+                        </div>
+                        <div class="editor-info">
+                            <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                            <p class="editor-desc">
+                                中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                                九州大学大学院でLLMに関する研究にも従事。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. CTAセクション -->
+            <div class="work-cta fade-in-section">
+                <div class="cta-box">
+                    <h2 class="cta-title">そのシステム、契約せずに作れるかもしれません。</h2>
+                    <p class="cta-text">売上連動の手数料が発生するサービスは、<br>自社構築との比較検討をおすすめします。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">システム開発の相談をする</a>
+                </div>
+            </div>
+
+            <!-- 関連事例 -->
+            <section class="work-related fade-in-section">
+                <h2 class="related-title">その他の事例</h2>
+                <div class="related-grid">
+                    <a href="/works/work016.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/works_images/work-card016.webp" alt="美容室運営法人様の新規事業立ち上げ支援の事例" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-cat">事業開発支援</div>
+                            <div class="related-txt">美容室運営法人様が自社の集客ノウハウを事業化し、初月から月100万円の新規事業を立ち上げ</div>
+                        </div>
+                    </a>
+                    <a href="/works/work015.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/works_images/work-card015.webp" alt="社内SE AIエージェント構築事例" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-cat">AI開発 / 社内システム</div>
+                            <div class="related-txt">社内SEの役割を担うAIエージェントで、専任エンジニア不在でも社内システムを運用</div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

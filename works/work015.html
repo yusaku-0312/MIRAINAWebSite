@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【導入事例】社内SEの役割を担うAIエージェント構築で、専任エンジニア不在でも社内システムを運用 | MIRAINA works</title>
+    <meta name="description" content="社員管理データ基盤・給与計算システム・入社登録アプリを構築し、その保守運用を担うAIエージェントを導入した事例。インセンティブ率の変更や店舗の追加・統合を、非エンジニアが自然言語で指示するだけで反映できる体制を実現しました。">
+    <link rel="canonical" href="https://miraina-ai.com/works/work015.html">
+    <meta property="og:title" content="【導入事例】社内SEの役割を担うAIエージェントで、非エンジニアが社内システムを運用">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/works/work015.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/works_images/work015-1.webp">
+    <meta property="og:description" content="給与インセンティブ率の変更や店舗の追加・統合を、自然言語の指示だけでシステムに反映。専任エンジニアなしで社内システムを運用できる体制を構築した事例です。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/work_detail.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINAのロゴ" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/works.html">事例紹介</a></li>
+                <li>社内SE AIエージェントの構築</li>
+            </ul>
+        </div>
+
+        <article class="work-container">
+            <!-- 1. 事例タイトル -->
+            <header class="work-header fade-in-section">
+                <div class="work-meta">
+                    <span class="work-date">2026.06.28 公開</span>
+                    <span class="work-cat">AI開発 / 社内システム</span>
+                </div>
+                <h1 class="work-title">【導入事例】社内SEの役割を担うAIエージェントを構築し、<br>非エンジニアでも社内システムを運用可能に。</h1>
+            </header>
+
+            <!-- メインビジュアル -->
+            <div class="work-main-image fade-in-section">
+                <img src="/images/works_images/work015-1.webp" alt="社内SEの役割を担うAIエージェント構築の導入事例メインビジュアル" width="1200" height="630" fetchpriority="high">
+            </div>
+
+            <!-- 事例概要 -->
+            <section class="work-section fade-in-section">
+                <div class="work-summary-box">
+                    <div class="summary-label">事例概要</div>
+                    <div class="summary-text">
+                        <p>
+                            社員管理用データ基盤、給与計算システム、入社登録アプリといった社内システム群を構築したうえで、その<strong>保守・運用そのものをAIエージェントに担わせた</strong>事例です。従来、給与インセンティブ率の変更、店舗の追加・統合、社員の名字変更といった作業は、データ構造を理解した担当者でなければ対応できませんでした。自然言語でAIに指示するだけでシステムへ反映できる仕組みを構築した結果、<strong>非エンジニアのみで社内システムを運用できる状態</strong>を実現。エラー確認やデータ更新などの保守管理もAIエージェントが担うため、専任エンジニアを置かずに運用が回っています。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 目次 -->
+            <div class="work-toc fade-in-section">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#client">1. クライアント様について</a></li>
+                    <li><a href="#before">2. 導入前の課題</a></li>
+                    <li><a href="#solution">3. 実施したこと</a></li>
+                    <li><a href="#result">4. 成果</a></li>
+                    <li><a href="#change">5. 導入後の変化</a></li>
+                    <li><a href="#point">6. この事例のポイント</a></li>
+                </ul>
+            </div>
+
+            <!-- 2. クライアント / 業種 -->
+            <section id="client" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">DATA</h2>
+                    <h3 class="work-subheading">クライアント様について</h3>
+
+                    <div class="work-table-wrapper">
+                        <table class="work-table">
+                            <thead>
+                                <tr>
+                                    <th>項目</th>
+                                    <th>内容</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>業種</th>
+                                    <td>複数店舗を展開するサービス業</td>
+                                </tr>
+                                <tr>
+                                    <th>対象システム</th>
+                                    <td>社員管理データ基盤 / 給与計算システム / 入社登録アプリ</td>
+                                </tr>
+                                <tr>
+                                    <th>提供サービス</th>
+                                    <td>社内システムの設計・開発と、保守運用AIエージェントの構築</td>
+                                </tr>
+                                <tr>
+                                    <th>体制</th>
+                                    <td>社内にシステム専任のエンジニアは不在（バックオフィス担当が兼任）</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="work-text">
+                        店舗数の増減、スタッフの入退社、給与条件の改定が日常的に発生する業態のため、社内システムは「作って終わり」にならず、継続的な変更を前提に設計する必要がありました。
+                    </p>
+                </div>
+            </section>
+
+            <!-- 3. 導入前の課題 -->
+            <section id="before" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">BEFORE</h2>
+                    <h3 class="work-subheading">システムは作れても、<br>変え続けられる人がいなかった。</h3>
+
+                    <p class="work-text">
+                        社内システムを導入する際に最大の壁になるのは、開発そのものよりも<strong>その後の変更対応</strong>です。このクライアント様でも、給与インセンティブ率の改定、新店舗の追加、店舗の統合、社員の名字変更といった変更が毎月のように発生していました。
+                    </p>
+                    <p class="work-text">
+                        これらはいずれも「データ構造を理解していれば数分で終わる作業」ですが、裏を返せば<strong>理解していない人には一切手を出せない作業</strong>でもあります。どのテーブルのどの項目を、どの順番で変えれば整合性が崩れないかを把握している担当者がいなければ実行できません。結果として、変更依頼が特定の人に滞留し、対応待ちが<strong>数日単位</strong>で発生していました。
+                    </p>
+                    <p class="work-text">
+                        さらに深刻だったのが、その担当者が退職・異動した場合に<strong>社内システムが誰にも触れない状態になる</strong>というリスクです。外部の開発会社に保守を委託する選択肢もありましたが、月額の保守費用に加え、軽微な変更のたびに見積もりと納期の調整が発生するため、スピード面でも費用面でも現実的ではありませんでした。
+                    </p>
+
+                    <div class="diagram-container">
+                        <div class="diagram-comparison">
+                            <div class="comparison-item is-bad">
+                                <div class="comparison-header">導入前</div>
+                                <div class="comparison-content">
+                                    <ul>
+                                        <li>変更にはデータ構造の理解が必須</li>
+                                        <li>依頼が特定の担当者に滞留し数日待ち</li>
+                                        <li>担当者の退職で運用が止まるリスク</li>
+                                        <li>外部委託は費用とスピードの両面で不利</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="comparison-arrow">→</div>
+                            <div class="comparison-item is-good">
+                                <div class="comparison-header">目指した状態</div>
+                                <div class="comparison-content">
+                                    <ul>
+                                        <li><strong>自然言語の指示だけで変更が反映</strong></li>
+                                        <li>依頼した人がその場で完結</li>
+                                        <li>属人知がエージェント側に蓄積</li>
+                                        <li>専任エンジニアなしで運用継続</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="diagram-caption">図解：「作れる人」依存から「誰でも変えられる」状態へ</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. 実施したこと -->
+            <section id="solution" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">SOLUTION</h2>
+                    <h3 class="work-subheading">システムではなく、<br>「システムを保守する役割」をAIに置き換えた。</h3>
+
+                    <p class="work-text">
+                        MIRAINAが構築したのは、社員管理データ基盤・給与計算システム・入社登録アプリという3つのシステムと、<strong>それらの保守運用を担うAIエージェント</strong>です。ポイントは、業務システムを作ることではなく、<strong>社内SEというロール自体をAIに担わせた</strong>ところにあります。
+                    </p>
+                    <p class="work-text">
+                        担当者は「A店のインセンティブ率を◯%に変更して」「B店とC店を統合して」「この社員の名字を変更して」といった依頼を、自然言語でそのまま伝えます。AIエージェントは影響範囲を判断し、関連するデータを整合性を保ったまま更新します。どのテーブルを触るか、更新順序はどうかといった判断は、すべてエージェント側が持っています。
+                    </p>
+                    <p class="work-text">
+                        加えて、日次でのエラー検知とデータ整合性チェックもエージェントが担当します。異常を検知した場合は内容と対処方針を平易な日本語で報告するため、<strong>エンジニアでなくても状況を把握して判断できる</strong>運用になっています。
+                    </p>
+
+                    <div class="diagram-container">
+                        <ul class="diagram-process">
+                            <li class="process-step">
+                                <span class="step-num">Step 01</span>
+                                <span class="step-text">自然言語で<br>変更を依頼</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 02</span>
+                                <span class="step-text">AIが影響範囲<br>を判定</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 03</span>
+                                <span class="step-text">整合性を保って<br>データ更新</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 04</span>
+                                <span class="step-text">更新結果を<br>自動検証</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 05</span>
+                                <span class="step-text">日次で<br>エラー監視</span>
+                            </li>
+                        </ul>
+                        <p class="diagram-caption">図解：社内SE AIエージェントによる変更対応フロー</p>
+                    </div>
+
+                    <div class="work-table-wrapper">
+                        <table class="work-table">
+                            <thead>
+                                <tr>
+                                    <th>変更内容</th>
+                                    <th>導入前</th>
+                                    <th>導入後</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>給与インセンティブ率の変更</th>
+                                    <td>データ構造を理解した担当者が対応</td>
+                                    <td><strong>自然言語で指示するだけ</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>新店舗の追加</th>
+                                    <td>マスタ・関連テーブルを手作業で整備</td>
+                                    <td><strong>AIが関連データを一括作成</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>店舗の統合</th>
+                                    <td>影響範囲の洗い出しから実施</td>
+                                    <td><strong>AIが影響範囲を判定し反映</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>社員の名字変更</th>
+                                    <td>複数システムを個別に修正</td>
+                                    <td><strong>横断して自動反映</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>エラー確認・保守</th>
+                                    <td>気づいた人が都度対応</td>
+                                    <td><strong>日次でAIが自動監視</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. 成果 -->
+            <section id="result" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">RESULT</h2>
+                    <h3 class="work-subheading">専任エンジニアゼロ。<br>変更対応は数日待ちから即日へ。</h3>
+
+                    <div class="result-metrics">
+                        <div class="metric-card">
+                            <div class="metric-label">必要な専任エンジニア</div>
+                            <div class="metric-value">0<span class="metric-unit">名</span></div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">変更対応のリードタイム</div>
+                            <div class="metric-value" style="font-size: 2.2rem;">即日</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">対応できる担当者</div>
+                            <div class="metric-value" style="font-size: 2.2rem;">全員</div>
+                        </div>
+                    </div>
+
+                    <p class="work-text">
+                        最大の成果は、<strong>専任エンジニアを置かずに社内システムを運用できる状態</strong>を実現したことです。データ構造の知識がなくても変更が反映できるため、バックオフィス担当者が自分の判断でシステムを更新できるようになりました。
+                    </p>
+                    <p class="work-text">
+                        変更対応のリードタイムも、担当者への依頼待ちで数日かかっていた状態から<strong>即日対応</strong>へ短縮されました。店舗の統合や給与条件の改定といった、期日が決まっている変更に余裕を持って対応できるようになっています。
+                    </p>
+                    <p class="work-text">
+                        また、外部の開発会社に保守を委託した場合に発生する月額保守費用と、変更ごとの見積もり・納期調整のコストも発生していません。
+                    </p>
+
+                    <div class="work-table-wrapper">
+                        <table class="work-table">
+                            <thead>
+                                <tr>
+                                    <th>評価項目</th>
+                                    <th>導入前</th>
+                                    <th>導入後</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>変更に必要なスキル</th>
+                                    <td>データ構造の理解が必須</td>
+                                    <td><strong>不要（自然言語のみ）</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>対応できる人</th>
+                                    <td>特定の担当者のみ</td>
+                                    <td><strong>バックオフィス全員</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>変更のリードタイム</th>
+                                    <td>数日待ち</td>
+                                    <td><strong>即日</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>担当者退職時のリスク</th>
+                                    <td>システムが触れなくなる</td>
+                                    <td><strong>影響なし</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>保守体制</th>
+                                    <td>専任または外部委託が必要</td>
+                                    <td><strong>AIエージェントが担当</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. 導入後の変化 -->
+            <section id="change" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">CHANGE</h2>
+                    <h3 class="work-subheading">専任エンジニア0名。<br>変更対応は数日待ちから即日へ。</h3>
+
+                    <p class="work-text">
+                        社内システムの運用に必要な<strong>専任エンジニアは0名</strong>です。外部の開発会社に保守を委託した場合に発生する月額保守費用と、軽微な変更ごとの見積もり・納期調整のコストも発生していません。
+                    </p>
+                    <p class="work-text">
+                        変更対応のリードタイムは<strong>数日待ちから即日</strong>へ短縮されました。給与インセンティブ率の変更、店舗の追加・統合、社員の名字変更といった作業を、データ構造を理解していないバックオフィス担当者が自然言語の指示だけで完結できます。対応可能な人数が「特定の1名」から「バックオフィス全員」に広がりました。
+                    </p>
+                    <p class="work-text">
+                        保守が個人に紐づかなくなったため、<strong>担当者が退職しても社内システムが止まりません</strong>。採用・異動の要件から「システムが分かる人かどうか」という条件も外れています。
+                    </p>
+                </div>
+            </section>
+
+            <!-- 7. この事例のポイント -->
+            <section id="point" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">POINT</h2>
+                    <h3 class="work-subheading">作るのではなく、<br>「変え続けられる状態」を納品した。</h3>
+
+                    <div class="project-info-grid">
+                        <div class="info-item">
+                            <div class="info-label">POINT 01｜自然言語だけでシステム保守が可能</div>
+                            <div class="info-value">データ構造の知識がなくても、日本語で依頼するだけでシステムへ反映。どのテーブルをどの順で更新するかという判断は、すべてAIエージェント側が保持しています。</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">POINT 02｜社内SEというロール自体をAIに置換</div>
+                            <div class="info-value">業務システムを作るだけでなく、その保守運用を担う役割そのものをAIに移管。「作ったあと誰が面倒を見るのか」という最大の課題を設計段階で解決しました。</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">POINT 03｜属人知をエージェント側に蓄積</div>
+                            <div class="info-value">影響範囲の判断や更新順序といった属人的なノウハウを人ではなくエージェントに持たせることで、担当者の退職・異動が運用リスクにならない体制を実現しています。</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">POINT 04｜保守もAIが自動監視</div>
+                            <div class="info-value">日次でのエラー検知とデータ整合性チェックをAIが実施し、異常時は平易な日本語で報告。非エンジニアでも状況把握と判断ができる運用になっています。</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 関連リンク -->
+            <section class="work-section fade-in-section">
+                <div class="section-inner">
+                    <div class="work-references">
+                        <div class="ref-title">関連サービス・関連記事</div>
+                        <ul>
+                            <li><a href="/services/ai_develop.html">AI開発サービス（社内システム・AIエージェント開発）</a></li>
+                            <li><a href="/services/ai_consulting.html">生成AI活用支援（業務設計・導入伴走）</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- 監修者 -->
+            <section id="supervisor" class="work-section fade-in-section">
+                <div class="article-editor">
+                    <div class="editor-header">この記事を監修した人</div>
+                    <div class="editor-profile">
+                        <div class="editor-image">
+                            <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA代表 / AIコンサルタント）" width="800" height="800" loading="lazy" decoding="async">
+                        </div>
+                        <div class="editor-info">
+                            <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                            <p class="editor-desc">
+                                中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                                九州大学大学院でLLMに関する研究にも従事。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. CTAセクション -->
+            <div class="work-cta fade-in-section">
+                <div class="cta-box">
+                    <h2 class="cta-title">社内システム、誰が面倒を見ていますか？</h2>
+                    <p class="cta-text">「作れる人がいない」だけでなく「変え続けられる人がいない」も、<br>AIエージェントで解消できます。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">社内システムの相談をする</a>
+                </div>
+            </div>
+
+            <!-- 関連事例 -->
+            <section class="work-related fade-in-section">
+                <h2 class="related-title">その他の事例</h2>
+                <div class="related-grid">
+                    <a href="/works/work022.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/works_images/work-card022.webp" alt="プロジェクト環境構築自動化の自社事例" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-cat">業務自動化 / 自社事例</div>
+                            <div class="related-txt">新規クライアント契約後のプロジェクト環境構築を自動化し、30分を実質0分に</div>
+                        </div>
+                    </a>
+                    <a href="/works/work020.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/works_images/work-card020.webp" alt="資格試験プラットフォーム自社構築の事例" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-cat">自社開発 / 事業システム</div>
+                            <div class="related-txt">資格試験・教材販売システムを2週間で自社構築し、初期費用40万円と販売手数料20%を削減</div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

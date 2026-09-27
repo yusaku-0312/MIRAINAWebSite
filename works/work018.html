@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【自社事例】請求書作成からメール下書きまでを完全自動化し、1社あたり15〜20分を約5分に短縮 | MIRAINA works</title>
+    <meta name="description" content="MIRAINAの自社事例。Excelで管理する契約情報をもとに毎月1日に請求書を自動作成し、PDF化してGmailに添付、送信本文の下書きまでを完全自動化。人間の作業を最終確認と個別メッセージの追記のみに削減しました。">
+    <link rel="canonical" href="https://miraina-ai.com/works/work018.html">
+    <meta property="og:title" content="【自社事例】請求書作成からメール下書きまで完全自動化。1社15〜20分が約5分に">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/works/work018.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/works_images/work018-1.webp">
+    <meta property="og:description" content="Excelの契約情報から請求書を自動作成し、PDF化・Gmail添付・本文作成まで自動化。人間の作業は最終確認と個別メッセージの追記だけになりました。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/work_detail.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINAのロゴ" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/works.html">事例紹介</a></li>
+                <li>自社事例：請求書作成〜メール下書きの完全自動化</li>
+            </ul>
+        </div>
+
+        <article class="work-container">
+            <!-- 1. 事例タイトル -->
+            <header class="work-header fade-in-section">
+                <div class="work-meta">
+                    <span class="work-date">2026.07.26 公開</span>
+                    <span class="work-cat">業務自動化 / 自社事例</span>
+                </div>
+                <h1 class="work-title">【自社事例】請求書作成からメール下書きまでを完全自動化し、<br>1社あたり15〜20分を約5分へ短縮。</h1>
+            </header>
+
+            <!-- メインビジュアル -->
+            <div class="work-main-image fade-in-section">
+                <img src="/images/works_images/work018-1.webp" alt="請求書作成からメール下書きまでを完全自動化した自社事例のメインビジュアル" width="1200" height="630" fetchpriority="high">
+            </div>
+
+            <!-- 事例概要 -->
+            <section class="work-section fade-in-section">
+                <div class="work-summary-box">
+                    <div class="summary-label">事例概要</div>
+                    <div class="summary-text">
+                        <p>
+                            MIRAINA自社における請求業務の自動化事例です。Excel上で管理している契約形態・金額・契約期間などの情報を<strong>毎月1日に自動取得し、各社の請求書を自動作成</strong>。さらにPDF化して送付先ごとのGmailに添付し、<strong>送信メールの本文作成から下書き保存までを完全自動化</strong>しました。人間が行う作業は「請求内容の最終確認」と「その月ならではのお礼・エピソードの追記」のみとなり、従来1社あたり15〜20分程度かかっていた請求業務を<strong>約5分まで短縮</strong>しています。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 目次 -->
+            <div class="work-toc fade-in-section">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#client">1. 対象業務について</a></li>
+                    <li><a href="#before">2. 導入前の課題</a></li>
+                    <li><a href="#solution">3. 実施したこと</a></li>
+                    <li><a href="#result">4. 成果</a></li>
+                    <li><a href="#change">5. 導入後の変化</a></li>
+                    <li><a href="#point">6. この事例のポイント</a></li>
+                </ul>
+            </div>
+
+            <!-- 2. クライアント / 業種 -->
+            <section id="client" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">DATA</h2>
+                    <h3 class="work-subheading">対象業務について</h3>
+
+                    <div class="work-table-wrapper">
+                        <table class="work-table">
+                            <thead>
+                                <tr>
+                                    <th>項目</th>
+                                    <th>内容</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>対象</th>
+                                    <td>MIRAINA（自社事例）</td>
+                                </tr>
+                                <tr>
+                                    <th>対象業務</th>
+                                    <td>月次の請求書作成・PDF化・メール添付・送信本文作成</td>
+                                </tr>
+                                <tr>
+                                    <th>元データ</th>
+                                    <td>Excelで管理する契約形態 / 金額 / 契約期間</td>
+                                </tr>
+                                <tr>
+                                    <th>実行タイミング</th>
+                                    <td>毎月1日に自動起動</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="work-text">
+                        請求業務は金額を扱うため、自動化する際に「どこまでをAIに任せ、どこから人が確認するか」の線引きがそのまま設計品質になります。本事例では送信そのものは自動化せず、下書きまでを自動化の範囲としています。
+                    </p>
+                </div>
+            </section>
+
+            <!-- 3. 導入前の課題 -->
+            <section id="before" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">BEFORE</h2>
+                    <h3 class="work-subheading">月初にまとめて発生する、<br>「難しくはないが時間だけかかる」作業。</h3>
+
+                    <p class="work-text">
+                        自動化前の請求業務は、月初にすべてが集中する構造でした。Excelの契約管理表を開き、契約中の各社について金額と期間を確認し、請求書のフォーマットへ転記。PDFに変換して保存し、Gmailで宛先を指定し、添付して、本文を書く。この一連の流れを契約社数ぶん繰り返します。
+                    </p>
+                    <p class="work-text">
+                        1社あたりにかかる時間は<strong>15〜20分程度</strong>。個々の工程はどれも難しくありませんが、転記と確認が中心のため集中力を要し、なおかつ金額を扱うため<strong>ミスが許されない</strong>という性質がありました。
+                    </p>
+                    <p class="work-text">
+                        特に負担が大きかったのが、注意力の配分です。単純作業を繰り返す中に「金額の転記ミスは絶対に避けなければならない」という緊張が混ざるため、作業自体は単純でも消耗が大きい業務でした。加えて、月初は他の業務も立て込むため、<strong>請求業務が他の予定を圧迫する</strong>状態が常態化していました。
+                    </p>
+
+                    <div class="diagram-container">
+                        <div class="diagram-comparison">
+                            <div class="comparison-item is-bad">
+                                <div class="comparison-header">自動化前</div>
+                                <div class="comparison-content">
+                                    <ul>
+                                        <li>契約管理表から1社ずつ手で転記</li>
+                                        <li>PDF化・添付・本文作成をすべて手作業</li>
+                                        <li>1社あたり15〜20分 × 契約社数</li>
+                                        <li>金額ミスへの緊張を伴う単純作業</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="comparison-arrow">→</div>
+                            <div class="comparison-item is-good">
+                                <div class="comparison-header">目指した状態</div>
+                                <div class="comparison-content">
+                                    <ul>
+                                        <li><strong>毎月1日に自動で請求書を作成</strong></li>
+                                        <li>PDF化・Gmail添付・本文作成まで自動</li>
+                                        <li><strong>人の作業は確認と追記のみ</strong></li>
+                                        <li>転記工程が存在しないためミスが起きない</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="diagram-caption">図解：請求業務の自動化範囲</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. 実施したこと -->
+            <section id="solution" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">SOLUTION</h2>
+                    <h3 class="work-subheading">「送信」だけを人に残し、<br>その手前をすべて自動化した。</h3>
+
+                    <p class="work-text">
+                        構築したのは、毎月1日に自動起動し、請求に必要な工程を一気通貫で処理する仕組みです。Excelで管理している契約形態・金額・契約期間を自動取得し、各社ぶんの請求書を作成。PDFへ変換したうえで、送付先ごとのGmailに添付し、送信メールの本文まで作成して<strong>下書き状態で保存</strong>します。
+                    </p>
+                    <p class="work-text">
+                        設計上もっとも重要だったのが、<strong>自動化の範囲を「下書きまで」に限定した</strong>ことです。請求は金額を扱う業務であり、自動送信まで踏み込むと誤送信が即座に信用の問題に直結します。一方で、下書きまで用意されていれば人間の作業は確認と送信ボタンだけになり、工数削減効果はほぼ変わりません。
+                    </p>
+                    <p class="work-text">
+                        人間に残した作業は2つです。1つは<strong>請求内容の最終確認</strong>。もう1つは<strong>その月ならではのお礼やエピソードの追記</strong>です。後者は自動化すべきではない領域だと判断しました。定型文で埋められる部分をAIが担い、人にしか書けない部分に時間を使えるようにする、という役割分担にしています。
+                    </p>
+
+                    <div class="diagram-container">
+                        <ul class="diagram-process">
+                            <li class="process-step">
+                                <span class="step-num">Step 01</span>
+                                <span class="step-text">毎月1日に<br>自動起動</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 02</span>
+                                <span class="step-text">契約情報を<br>自動取得</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 03</span>
+                                <span class="step-text">請求書を作成・<br>PDF化</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 04</span>
+                                <span class="step-text">Gmailに添付・<br>本文生成</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 05</span>
+                                <span class="step-text">下書き保存<br>（送信は人）</span>
+                            </li>
+                        </ul>
+                        <p class="diagram-caption">図解：請求書作成からメール下書きまでの自動化フロー</p>
+                    </div>
+
+                    <div class="work-table-wrapper">
+                        <table class="work-table">
+                            <thead>
+                                <tr>
+                                    <th>工程</th>
+                                    <th>自動化前</th>
+                                    <th>自動化後</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>契約情報の取得</th>
+                                    <td>Excelを開いて目視確認</td>
+                                    <td><strong>自動取得</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>請求書の作成</th>
+                                    <td>フォーマットへ手で転記</td>
+                                    <td><strong>自動生成</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>PDF化・保存</th>
+                                    <td>手動で変換・保存</td>
+                                    <td><strong>自動</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>Gmailへの添付</th>
+                                    <td>宛先指定して手動添付</td>
+                                    <td><strong>自動</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>メール本文の作成</th>
+                                    <td>毎回手で作成</td>
+                                    <td><strong>自動生成</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>内容の最終確認</th>
+                                    <td>作成しながら確認</td>
+                                    <td>人が実施</td>
+                                </tr>
+                                <tr>
+                                    <th>お礼・エピソードの追記</th>
+                                    <td>本文作成と同時</td>
+                                    <td><strong>人が実施（意図的に残す）</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>送信</th>
+                                    <td>人が実施</td>
+                                    <td>人が実施（自動化しない）</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. 成果 -->
+            <section id="result" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">RESULT</h2>
+                    <h3 class="work-subheading">1社あたり15〜20分が、約5分に。<br>残ったのは人にしかできない作業だけ。</h3>
+
+                    <div class="result-metrics">
+                        <div class="metric-card">
+                            <div class="metric-label">1社あたりの所要時間</div>
+                            <div class="metric-value">約5<span class="metric-unit">分</span></div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">自動化前</div>
+                            <div class="metric-value">15〜20<span class="metric-unit">分</span></div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">転記によるミス</div>
+                            <div class="metric-value">0<span class="metric-unit">件</span></div>
+                        </div>
+                    </div>
+
+                    <p class="work-text">
+                        1社あたりの請求業務は<strong>15〜20分程度から約5分へ短縮</strong>されました。残った約5分は、請求内容の最終確認と、その月ならではのメッセージを書き添える時間です。
+                    </p>
+                    <p class="work-text">
+                        定量的な時間短縮以上に効果が大きかったのは、<strong>転記工程そのものが存在しなくなった</strong>ことです。金額を手で写す作業がなくなったため、転記ミスの発生余地が構造的に消えました。確認作業も「自分が入力した数字を見直す」から「自動生成された内容が正しいかを見る」に変わり、チェックとしての精度が上がっています。
+                    </p>
+                    <p class="work-text">
+                        月初に業務が集中する問題も解消されました。起動から下書き作成までは無人で完了するため、出社した時点で全社ぶんの下書きが揃っている状態から作業を始められます。
+                    </p>
+
+                    <div class="work-table-wrapper">
+                        <table class="work-table">
+                            <thead>
+                                <tr>
+                                    <th>評価項目</th>
+                                    <th>自動化前</th>
+                                    <th>自動化後</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>1社あたりの所要時間</th>
+                                    <td>15〜20分</td>
+                                    <td><strong>約5分</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>人が行う工程</th>
+                                    <td>転記・PDF化・添付・本文作成・確認・送信</td>
+                                    <td><strong>確認・追記・送信のみ</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>転記ミスのリスク</th>
+                                    <td>常に存在</td>
+                                    <td><strong>工程自体が消滅</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>月初の業務集中</th>
+                                    <td>他業務を圧迫</td>
+                                    <td><strong>下書きが揃った状態から開始</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>誤送信リスク</th>
+                                    <td>—</td>
+                                    <td><strong>送信は自動化せず回避</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. 導入後の変化 -->
+            <section id="change" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">CHANGE</h2>
+                    <h3 class="work-subheading">1社15〜20分が約5分へ。<br>削減分は契約社数ぶん積み上がる。</h3>
+
+                    <p class="work-text">
+                        請求業務は<strong>1社あたり15〜20分程度から約5分へ</strong>短縮されました。1社あたり毎月10〜15分の削減となり、この削減幅は<strong>契約社数ぶん毎月積み上がります</strong>。契約が増えるほど自動化の効果が大きくなる構造です。
+                    </p>
+                    <p class="work-text">
+                        転記工程そのものが消滅したため、<strong>金額の転記ミスは0件</strong>です。確認作業も「自分が入力した数字を見直す」から「自動生成された内容が正しいかを検証する」に変わり、チェックとしての精度が上がりました。
+                    </p>
+                    <p class="work-text">
+                        起動から下書き作成までが無人で完了するため、出社時点で全社ぶんの下書きが揃っています。<strong>月初に請求業務が集中して他業務を圧迫する状態も解消</strong>されました。送信だけは自動化していないため、誤送信による信用毀損リスクはゼロのままです。
+                    </p>
+                </div>
+            </section>
+
+            <!-- 7. この事例のポイント -->
+            <section id="point" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">POINT</h2>
+                    <h3 class="work-subheading">全自動にしないことを、<br>設計として選んだ。</h3>
+
+                    <div class="project-info-grid">
+                        <div class="info-item">
+                            <div class="info-label">POINT 01｜自動化の範囲を「下書きまで」に限定</div>
+                            <div class="info-value">請求は金額を扱う業務のため、自動送信まで踏み込まず下書き保存で止める設計に。誤送信リスクを排除しつつ、工数削減効果はほぼ維持しています。</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">POINT 02｜転記工程そのものを消滅させた</div>
+                            <div class="info-value">時間短縮だけでなく、金額を手で写す工程自体をなくすことでミスの発生余地を構造的に排除。確認作業の性質も「見直し」から「検証」へ変わりました。</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">POINT 03｜人にしか書けない部分を意図的に残す</div>
+                            <div class="info-value">その月ならではのお礼やエピソードの追記は自動化の対象外に。定型文で埋められる部分をAIが担い、関係構築に関わる部分は人が担う役割分担にしています。</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">POINT 04｜起動タイミングまで含めて無人化</div>
+                            <div class="info-value">毎月1日に自動起動するため、人が「そろそろやらないと」と思い出す必要がありません。実行忘れというリスク自体を設計から排除しました。</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 関連リンク -->
+            <section class="work-section fade-in-section">
+                <div class="section-inner">
+                    <div class="work-references">
+                        <div class="ref-title">関連サービス・関連記事</div>
+                        <ul>
+                            <li><a href="/services/ai_consulting.html">生成AI活用支援（業務自動化の設計・導入伴走）</a></li>
+                            <li><a href="/services/ai_develop.html">AI開発サービス</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- 監修者 -->
+            <section id="supervisor" class="work-section fade-in-section">
+                <div class="article-editor">
+                    <div class="editor-header">この記事を監修した人</div>
+                    <div class="editor-profile">
+                        <div class="editor-image">
+                            <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA代表 / AIコンサルタント）" width="800" height="800" loading="lazy" decoding="async">
+                        </div>
+                        <div class="editor-info">
+                            <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                            <p class="editor-desc">
+                                中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                                九州大学大学院でLLMに関する研究にも従事。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. CTAセクション -->
+            <div class="work-cta fade-in-section">
+                <div class="cta-box">
+                    <h2 class="cta-title">月初の定型業務、まだ手作業ですか？</h2>
+                    <p class="cta-text">転記・PDF化・メール作成といった工程は、<br>下書きまで自動化できます。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">業務自動化の相談をする</a>
+                </div>
+            </div>
+
+            <!-- 関連事例 -->
+            <section class="work-related fade-in-section">
+                <h2 class="related-title">その他の事例</h2>
+                <div class="related-grid">
+                    <a href="/works/work022.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/works_images/work-card022.webp" alt="プロジェクト環境構築自動化の自社事例" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-cat">業務自動化 / 自社事例</div>
+                            <div class="related-txt">新規クライアント契約後のプロジェクト環境構築を自動化し、30分を実質0分に</div>
+                        </div>
+                    </a>
+                    <a href="/works/work019.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/works_images/work-card019.webp" alt="コラム投稿AIエージェントの自社事例" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-cat">業務自動化 / 自社事例</div>
+                            <div class="related-txt">Webサイトへのコラム投稿をAIエージェントで完全自動化</div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

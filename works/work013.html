@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【導入事例】口コミ収集支援アプリの開発で1店舗・1か月に約40件の口コミを獲得 | MIRAINA works</title>
+    <meta name="description" content="美容サロン運営企業様の事例。スタッフの声かけ任せだった口コミ依頼を、独自の口コミ収集支援アプリで仕組み化。1店舗・1か月で約40件の口コミ獲得を実現し、MEO・LLMO双方の評価基盤を強化しました。">
+    <link rel="canonical" href="https://miraina-ai.com/works/work013.html">
+    <meta property="og:title" content="【導入事例】口コミ収集支援アプリで1店舗・1か月に約40件を獲得">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/works/work013.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/works_images/work013-1.webp">
+    <meta property="og:description" content="スタッフの声かけ任せだった口コミ依頼を仕組みに。独自アプリの導入で1店舗・1か月あたり約40件の口コミ獲得を実現した事例です。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/work_detail.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINAのロゴ" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/works.html">事例紹介</a></li>
+                <li>美容サロン運営企業様：口コミ収集支援アプリ開発</li>
+            </ul>
+        </div>
+
+        <article class="work-container">
+            <!-- 1. 事例タイトル -->
+            <header class="work-header fade-in-section">
+                <div class="work-meta">
+                    <span class="work-date">2026.06.14 公開</span>
+                    <span class="work-cat">AI開発 / 店舗DX</span>
+                </div>
+                <h1 class="work-title">【導入事例】口コミ収集支援アプリの開発で、<br>1店舗・1か月に約40件の口コミを獲得。</h1>
+            </header>
+
+            <!-- メインビジュアル -->
+            <div class="work-main-image fade-in-section">
+                <img src="/images/works_images/work013-1.webp" alt="口コミ収集支援アプリ開発の導入事例メインビジュアル" width="1200" height="630" fetchpriority="high">
+            </div>
+
+            <!-- 事例概要 -->
+            <section class="work-section fade-in-section">
+                <div class="work-summary-box">
+                    <div class="summary-label">事例概要</div>
+                    <div class="summary-text">
+                        <p>
+                            店舗での口コミ収集を支援する独自アプリを開発・導入した事例です。従来はスタッフが施術後に口頭で依頼する運用だったため、繁忙時には依頼自体が漏れ、口コミの獲得件数が月数件程度にとどまっていました。依頼のタイミングと導線をアプリ側に組み込み、お客様が迷わず投稿まで到達できる設計に変更した結果、<strong>1店舗・1か月で約40件の口コミ獲得</strong>を実現。Googleマップ上の評価だけでなく、AI検索における引用材料としても機能する情報資産を継続的に積み上げられる体制を構築しました。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 目次 -->
+            <div class="work-toc fade-in-section">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#client">1. クライアント様について</a></li>
+                    <li><a href="#before">2. 導入前の課題</a></li>
+                    <li><a href="#solution">3. 実施したこと</a></li>
+                    <li><a href="#result">4. 成果</a></li>
+                    <li><a href="#change">5. 導入後の変化</a></li>
+                    <li><a href="#point">6. この事例のポイント</a></li>
+                </ul>
+            </div>
+
+            <!-- 2. クライアント / 業種 -->
+            <section id="client" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">DATA</h2>
+                    <h3 class="work-subheading">クライアント様について</h3>
+
+                    <div class="work-table-wrapper">
+                        <table class="work-table">
+                            <thead>
+                                <tr>
+                                    <th>項目</th>
+                                    <th>内容</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>業種</th>
+                                    <td>美容サロン運営企業（複数店舗展開）</td>
+                                </tr>
+                                <tr>
+                                    <th>対象業務</th>
+                                    <td>来店客からの口コミ収集・レビュー依頼</td>
+                                </tr>
+                                <tr>
+                                    <th>提供サービス</th>
+                                    <td>口コミ収集支援アプリの設計・開発・運用定着支援</td>
+                                </tr>
+                                <tr>
+                                    <th>体制</th>
+                                    <td>施術スタッフ全員が口頭で依頼する運用（担当者の固定なし）</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="work-text">
+                        店舗ビジネスにおいて口コミは、Googleマップでの上位表示だけでなく、AI検索が店舗を推薦する際の判断材料にもなります。件数と鮮度の両方を継続的に積み上げられるかどうかが、中長期の集客力を左右します。
+                    </p>
+                </div>
+            </section>
+
+            <!-- 3. 導入前の課題 -->
+            <section id="before" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">BEFORE</h2>
+                    <h3 class="work-subheading">「お願いできた日」と「できなかった日」の差が、<br>そのまま件数の差になっていた。</h3>
+
+                    <p class="work-text">
+                        導入前の口コミ依頼は、施術終了後にスタッフが口頭でお願いする運用でした。依頼するかどうかがスタッフ個人の判断とその日の忙しさに委ねられていたため、<strong>混み合う週末ほど依頼が抜け落ちる</strong>という構造的な問題を抱えていました。
+                    </p>
+                    <p class="work-text">
+                        結果として獲得件数は<strong>1店舗あたり月5件前後</strong>にとどまり、そのうち実際に投稿まで到達するのはさらに一部。お客様側も「アプリを開いて、店舗を検索して、レビュー欄を探して……」という手間を踏む必要があり、依頼を受けた時点では投稿する気があっても、帰宅するまでに離脱してしまうケースが大半でした。
+                    </p>
+                    <p class="work-text">
+                        また、誰がいつ依頼したかが記録に残らないため、<strong>同じお客様に何度も依頼してしまう</strong>、逆に常連のお客様に一度も依頼できていない、といった重複と漏れも発生していました。口コミ収集が「仕組み」ではなく「気合い」で運用されている状態だったといえます。
+                    </p>
+
+                    <div class="diagram-container">
+                        <div class="diagram-comparison">
+                            <div class="comparison-item is-bad">
+                                <div class="comparison-header">導入前（口頭依頼）</div>
+                                <div class="comparison-content">
+                                    <ul>
+                                        <li>依頼するかどうかがスタッフ個人の判断</li>
+                                        <li>繁忙日ほど依頼が漏れる</li>
+                                        <li>お客様が投稿画面にたどり着くまでに離脱</li>
+                                        <li>誰に依頼したかが記録に残らない</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="comparison-arrow">→</div>
+                            <div class="comparison-item is-good">
+                                <div class="comparison-header">目指した状態</div>
+                                <div class="comparison-content">
+                                    <ul>
+                                        <li><strong>依頼が運用フローに組み込まれる</strong></li>
+                                        <li>繁忙状況に関係なく依頼が発生</li>
+                                        <li>数タップで投稿画面まで到達</li>
+                                        <li>依頼履歴が残り、重複と漏れを防止</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="diagram-caption">図解：口コミ依頼を「気合い」から「仕組み」へ</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. 実施したこと -->
+            <section id="solution" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">SOLUTION</h2>
+                    <h3 class="work-subheading">投稿までの距離を短くし、<br>依頼のタイミングを設計し直した。</h3>
+
+                    <p class="work-text">
+                        MIRAINAが開発したのは、<strong>口コミ投稿までの導線を最短化する店舗専用アプリ</strong>です。お客様は会計時に提示されるQRコードを読み取るだけで、店舗のレビュー投稿画面まで直接遷移します。検索したり、店舗を探したりする工程を丸ごと取り除きました。
+                    </p>
+                    <p class="work-text">
+                        同時に見直したのが依頼のタイミングです。従来の「施術直後」は、お客様が支度をしている最中で、投稿まで至る割合が低いタイミングでした。<strong>満足度がもっとも高まる仕上がり確認の直後</strong>に依頼が発生するよう運用へ組み込み、スタッフが迷わず声をかけられるようにしています。
+                    </p>
+                    <p class="work-text">
+                        さらに、投稿前に簡単な満足度の確認を挟むことで、お客様が書く内容の方向性が定まりやすくなる設計にしました。何を書けばいいか分からないまま画面を開いて離脱する、という最大の脱落ポイントを解消しています。
+                    </p>
+
+                    <div class="diagram-container">
+                        <ul class="diagram-process">
+                            <li class="process-step">
+                                <span class="step-num">Step 01</span>
+                                <span class="step-text">仕上がり<br>確認</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 02</span>
+                                <span class="step-text">QRコードを<br>提示</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 03</span>
+                                <span class="step-text">満足度を<br>かんたん入力</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 04</span>
+                                <span class="step-text">レビュー画面へ<br>自動遷移</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 05</span>
+                                <span class="step-text">投稿・<br>件数を自動集計</span>
+                            </li>
+                        </ul>
+                        <p class="diagram-caption">図解：口コミ収集支援アプリの利用フロー</p>
+                    </div>
+
+                    <div class="work-table-wrapper">
+                        <table class="work-table">
+                            <thead>
+                                <tr>
+                                    <th>工程</th>
+                                    <th>導入前</th>
+                                    <th>導入後</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>依頼の発生</th>
+                                    <td>スタッフの判断任せ</td>
+                                    <td>運用フローに組み込み</td>
+                                </tr>
+                                <tr>
+                                    <th>依頼のタイミング</th>
+                                    <td>施術直後（支度中）</td>
+                                    <td><strong>仕上がり確認の直後</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>投稿画面への到達</th>
+                                    <td>お客様が自分で検索</td>
+                                    <td><strong>QRから直接遷移</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>書く内容の迷い</th>
+                                    <td>何を書くか分からず離脱</td>
+                                    <td>満足度入力で方向性が定まる</td>
+                                </tr>
+                                <tr>
+                                    <th>件数の把握</th>
+                                    <td>月末に手集計</td>
+                                    <td>アプリ側で自動集計</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. 成果 -->
+            <section id="result" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">RESULT</h2>
+                    <h3 class="work-subheading">1店舗・1か月で約40件。<br>従来の約8倍の口コミが集まった。</h3>
+
+                    <div class="result-metrics">
+                        <div class="metric-card">
+                            <div class="metric-label">1店舗・1か月の口コミ獲得数</div>
+                            <div class="metric-value">約40<span class="metric-unit">件</span></div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">導入前比</div>
+                            <div class="metric-value">約8<span class="metric-unit">倍</span></div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">件数集計の手作業</div>
+                            <div class="metric-value">0<span class="metric-unit">分</span></div>
+                        </div>
+                    </div>
+
+                    <p class="work-text">
+                        アプリ導入後、<strong>1店舗・1か月あたり約40件の口コミ</strong>が集まりました。導入前の月5件前後と比較すると約8倍の水準です。依頼そのものが運用に組み込まれたこと、そして投稿までの手間を大幅に削減したことが、そのまま件数に反映された結果です。
+                    </p>
+                    <p class="work-text">
+                        件数の増加は、Googleマップ上での評価の厚みだけでなく、AI検索が店舗を推薦する際の判断材料としても効いてきます。生成AIは店舗を推薦する際に口コミの内容を参照するため、<strong>件数と鮮度の両方が継続的に積み上がる状態</strong>を作れたことが、中長期の集客基盤として重要な成果になりました。
+                    </p>
+
+                    <div class="work-table-wrapper">
+                        <table class="work-table">
+                            <thead>
+                                <tr>
+                                    <th>評価項目</th>
+                                    <th>導入前</th>
+                                    <th>導入後</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>月間の口コミ獲得数</th>
+                                    <td>5件前後</td>
+                                    <td><strong>約40件</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>依頼漏れ</th>
+                                    <td>繁忙日に多発</td>
+                                    <td><strong>運用に組み込み解消</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>投稿までのタップ数</th>
+                                    <td>検索を含めて多数</td>
+                                    <td><strong>数タップ</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>依頼の重複</th>
+                                    <td>記録がなく発生</td>
+                                    <td>履歴で防止</td>
+                                </tr>
+                                <tr>
+                                    <th>件数の集計作業</th>
+                                    <td>月末に手集計</td>
+                                    <td><strong>自動集計</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. 導入後の変化 -->
+            <section id="change" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">CHANGE</h2>
+                    <h3 class="work-subheading">1店舗・1か月で約40件。<br>店舗数ぶん積み上がる。</h3>
+
+                    <p class="work-text">
+                        口コミ獲得数は<strong>1店舗・1か月あたり約40件</strong>に到達しました。導入前は月5件前後だったため<strong>約8倍</strong>の水準です。この数字は店舗ごとに独立して積み上がるため、<strong>10店舗展開すれば月400件規模</strong>の獲得ペースになります。
+                    </p>
+                    <p class="work-text">
+                        件数が担当者の裁量ではなく仕組みの出力になった点も重要です。依頼が運用フローに組み込まれているため、誰がシフトに入っていても一定数の依頼が発生します。件数はアプリ側で自動集計されるので、伸びていない店舗については「依頼数が足りないのか」「依頼後の投稿率が低いのか」を工程単位で切り分けられます。
+                    </p>
+                    <p class="work-text">
+                        月末に手作業で件数を集計する作業もなくなり、店長の事務工数が削減されました。
+                    </p>
+                </div>
+            </section>
+
+            <!-- 7. この事例のポイント -->
+            <section id="point" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">POINT</h2>
+                    <h3 class="work-subheading">件数を追うのではなく、<br>離脱する工程を1つずつ潰した。</h3>
+
+                    <div class="project-info-grid">
+                        <div class="info-item">
+                            <div class="info-label">POINT 01｜依頼タイミングの再設計</div>
+                            <div class="info-value">「施術直後」ではなく「仕上がり確認の直後」という、満足度が最大化する瞬間に依頼が発生するよう運用へ組み込み。依頼数を増やすのではなく、依頼あたりの投稿率が最も高くなる地点に合わせる設計です。</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">POINT 02｜投稿までの距離を最短化</div>
+                            <div class="info-value">お客様が自分でアプリを開き店舗を検索する工程を撤廃。QRコードから投稿画面へ直接遷移させることで、最大の離脱ポイントを取り除いています。</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">POINT 03｜「何を書けばいいか」の解消</div>
+                            <div class="info-value">投稿前に簡単な満足度確認を挟むことで、お客様が書く内容の方向性が自然と定まる導線に。書き始められずに離脱するケースを減らしました。</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">POINT 04｜MEOとLLMOの両方に効く資産化</div>
+                            <div class="info-value">口コミはGoogleマップの評価だけでなく、AI検索が店舗を推薦する際の判断材料にもなります。件数と鮮度が積み上がる仕組みは、中長期の集客基盤として機能します。</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 関連リンク -->
+            <section class="work-section fade-in-section">
+                <div class="section-inner">
+                    <div class="work-references">
+                        <div class="ref-title">関連サービス・関連記事</div>
+                        <ul>
+                            <li><a href="/services/ai_develop.html">AI開発サービス（業務特化型アプリ・システム開発）</a></li>
+                            <li><a href="/beauty-dx/">美容サロン特化AI活用支援</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- 監修者 -->
+            <section id="supervisor" class="work-section fade-in-section">
+                <div class="article-editor">
+                    <div class="editor-header">この記事を監修した人</div>
+                    <div class="editor-profile">
+                        <div class="editor-image">
+                            <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA代表 / AIコンサルタント）" width="800" height="800" loading="lazy" decoding="async">
+                        </div>
+                        <div class="editor-info">
+                            <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                            <p class="editor-desc">
+                                中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                                九州大学大学院でLLMに関する研究にも従事。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. CTAセクション -->
+            <div class="work-cta fade-in-section">
+                <div class="cta-box">
+                    <h2 class="cta-title">口コミが「気合い」で回っていませんか？</h2>
+                    <p class="cta-text">依頼のタイミングと導線を設計し直すだけで、<br>獲得件数は大きく変わります。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">店舗DXの相談をする</a>
+                </div>
+            </div>
+
+            <!-- 関連事例 -->
+            <section class="work-related fade-in-section">
+                <h2 class="related-title">その他の事例</h2>
+                <div class="related-grid">
+                    <a href="/works/work014.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/works_images/work-card014.webp" alt="AI経由のWeb流入10倍化の事例" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-cat">LLMOコンサルティング</div>
+                            <div class="related-txt">AI経由のWeb流入を約半年で10件→100件へ、約10倍に増加</div>
+                        </div>
+                    </a>
+                    <a href="/works/work012.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/works_images/work-card012.webp" alt="自動投稿AIエージェント開発の事例" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-cat">業務自動化 / AI開発</div>
+                            <div class="related-txt">美容系プラットフォームへの自動投稿をAI化し、年間120万円以上のコスト削減</div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

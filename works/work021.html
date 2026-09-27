@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【自社事例】クライアント向け業務整理テンプレートをAIで高度化｜業種選択で業務領域が自動反映 | MIRAINA works</title>
+    <meta name="description" content="MIRAINAの自社事例。クライアントごとに手作業で設定していた業務領域を、業種を選ぶだけで自動反映される仕組みへ改修。業種一覧と業種別業務領域の洗い出し自体もAIが担い、テンプレートの設計・アップデートを約15分で完了しました。">
+    <link rel="canonical" href="https://miraina-ai.com/works/work021.html">
+    <meta property="og:title" content="【自社事例】業務整理テンプレートをAIで高度化。業種選択で業務領域が自動反映">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/works/work021.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/works_images/work021-1.webp">
+    <meta property="og:description" content="クライアントごとに手作業で設定していた業務領域を、業種選択で自動反映される仕組みへ。設計・アップデートを約15分で完了した自社事例です。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/work_detail.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINAのロゴ" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/works.html">事例紹介</a></li>
+                <li>自社事例：業務整理テンプレートのAI高度化</li>
+            </ul>
+        </div>
+
+        <article class="work-container">
+            <!-- 1. 事例タイトル -->
+            <header class="work-header fade-in-section">
+                <div class="work-meta">
+                    <span class="work-date">2026.09.06 公開</span>
+                    <span class="work-cat">自社開発 / 提案プロセス</span>
+                </div>
+                <h1 class="work-title">【自社事例】クライアント向け業務整理テンプレートをAIで高度化し、<br>業種を選ぶだけで業務領域が自動反映される仕組みへ。</h1>
+            </header>
+
+            <!-- メインビジュアル -->
+            <div class="work-main-image fade-in-section">
+                <img src="/images/works_images/work021-1.webp" alt="業務整理テンプレートをAIで高度化した自社事例のメインビジュアル" width="1200" height="630" fetchpriority="high">
+            </div>
+
+            <!-- 事例概要 -->
+            <section class="work-section fade-in-section">
+                <div class="work-summary-box">
+                    <div class="summary-label">事例概要</div>
+                    <div class="summary-text">
+                        <p>
+                            MIRAINAが契約前のクライアント様へ配布している「業務棚卸しテンプレート」を、AIで高度化した自社事例です。従来はクライアント様ごとに、マーケティング・営業・CS・施術・SNS運用といった業務領域を<strong>手作業で設定</strong>していました。改修後は<strong>業種を選択するだけで、その業種で一般的な業務領域が自動反映される</strong>仕組みに変更。美容なら「施術」、製造業なら「検品」といった具合に、業種ごとに必要な項目だけが表示されるため、不要な選択肢が大量に並ぶことによるUX低下も防止しています。業種一覧と業種別業務領域の洗い出し自体もAIに行わせ、テンプレートの設計・アップデートを<strong>約15分で完了</strong>しました。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 目次 -->
+            <div class="work-toc fade-in-section">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#client">1. 対象業務について</a></li>
+                    <li><a href="#before">2. 導入前の課題</a></li>
+                    <li><a href="#solution">3. 実施したこと</a></li>
+                    <li><a href="#result">4. 成果</a></li>
+                    <li><a href="#change">5. 導入後の変化</a></li>
+                    <li><a href="#point">6. この事例のポイント</a></li>
+                </ul>
+            </div>
+
+            <!-- 2. クライアント / 業種 -->
+            <section id="client" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">DATA</h2>
+                    <h3 class="work-subheading">対象業務について</h3>
+
+                    <div class="work-table-wrapper">
+                        <table class="work-table">
+                            <thead>
+                                <tr>
+                                    <th>項目</th>
+                                    <th>内容</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>対象</th>
+                                    <td>MIRAINA（自社事例）</td>
+                                </tr>
+                                <tr>
+                                    <th>対象物</th>
+                                    <td>契約前のクライアント様へ配布する業務棚卸しテンプレート</td>
+                                </tr>
+                                <tr>
+                                    <th>改修内容</th>
+                                    <td>業種選択による業務領域の自動反映／業種別マスタのAI生成</td>
+                                </tr>
+                                <tr>
+                                    <th>設計・アップデート所要時間</th>
+                                    <td>約15分</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="work-text">
+                        このテンプレートは、契約前の段階でクライアント様に現在の業務を書き込んでいただき、そこから自動化余地と削減効果を整理した提案書を作成するために使用しています。提案プロセスの起点にあたる資料です。
+                    </p>
+                </div>
+            </section>
+
+            <!-- 3. 導入前の課題 -->
+            <section id="before" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">BEFORE</h2>
+                    <h3 class="work-subheading">配布のたびに、業務領域を<br>手作業で作り直していた。</h3>
+
+                    <p class="work-text">
+                        改修前のテンプレートは、業務領域の選択肢が<strong>固定のリスト</strong>として用意されているだけでした。「接客・施術」「カウンセリング」「顧客対応」「広告・マーケティング」「在庫・発注管理」「教育・人材育成」「採用・人事」「店舗運営・マネジメント」「経理・請求・支払い」「総務・バックオフィス」といった項目が、業種に関係なく常に同じ並びで表示されます。
+                    </p>
+                    <p class="work-text">
+                        この構成には2つの問題がありました。1つは<strong>MIRAINA側の作業負担</strong>です。美容サロンに配布する場合と製造業に配布する場合では必要な業務領域が異なるため、配布のたびに担当者が選択肢を調整していました。業種ごとの業務を洗い出す作業は毎回ゼロから考えることになり、都度時間を要していました。
+                    </p>
+                    <p class="work-text">
+                        もう1つが<strong>受け取る側のUX</strong>です。製造業のクライアント様に「施術」「カウンセリング」という選択肢が並んでいても意味がありません。逆に必要な「検品」が存在しない。自分に関係のない選択肢が大量に並ぶこと自体が、記入のハードルを上げる要因になっていました。契約前に配布する資料である以上、この記入体験の質は提案の入り口に直結します。
+                    </p>
+
+                    <figure class="work-figure">
+                        <img src="/images/works_images/work021-2.webp" alt="改修前の業務棚卸しテンプレート。業務領域の選択肢が業種に関係なく固定のリストとして表示されている画面" width="1200" height="675" loading="lazy" decoding="async">
+                        <figcaption>改修前（BEFORE）：業種に関係なく、常に同じ業務領域リストが表示されていた</figcaption>
+                    </figure>
+
+                    <div class="diagram-container">
+                        <div class="diagram-comparison">
+                            <div class="comparison-item is-bad">
+                                <div class="comparison-header">改修前（BEFORE）</div>
+                                <div class="comparison-content">
+                                    <ul>
+                                        <li>業務領域の選択肢が業種共通の固定リスト</li>
+                                        <li>配布のたびに担当者が手作業で調整</li>
+                                        <li>業種ごとの業務洗い出しを毎回ゼロから検討</li>
+                                        <li>関係のない選択肢が並び記入ハードルが上がる</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="comparison-arrow">→</div>
+                            <div class="comparison-item is-good">
+                                <div class="comparison-header">改修後（AFTER）</div>
+                                <div class="comparison-content">
+                                    <ul>
+                                        <li><strong>業種を選ぶと業務領域が自動で切り替わる</strong></li>
+                                        <li>配布前の調整作業が不要</li>
+                                        <li><strong>業種別マスタをAIが一括生成</strong></li>
+                                        <li>必要な項目だけが表示され記入しやすい</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="diagram-caption">図解：固定リストから、業種連動の自動反映へ</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. 実施したこと -->
+            <section id="solution" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">SOLUTION</h2>
+                    <h3 class="work-subheading">選択肢を作る作業そのものを、<br>AIに任せた。</h3>
+
+                    <p class="work-text">
+                        改修の中心は、<strong>業種の選択と業務領域の連動</strong>です。テンプレート冒頭で業種を選ぶと、その業種で一般的な業務領域が業務一覧シートの選択肢として自動的に切り替わる構造にしました。美容室・理美容を選べば「施術」が、製造業を選べば「検品」が候補に入ります。該当する候補がない場合は自由入力もできるようにしています。
+                    </p>
+                    <p class="work-text">
+                        ここで本質的だったのは、<strong>業種一覧と業種別の業務領域マスタそのものをAIに洗い出させた</strong>ことです。従来は担当者が業種ごとに業務を考えていましたが、この作業自体が「一般的にその業種ではどんな業務があるか」という知識を列挙するタスクであり、AIが得意とする領域でした。
+                    </p>
+                    <p class="work-text">
+                        結果として、美容室・理美容、飲食店、小売・店舗販売、EC・通販、ホテル・宿泊、医療・クリニック、歯科医院、介護・福祉、不動産、建設・工務店、製造業、自動車販売・整備、IT・SaaS・システム開発、広告・Webマーケティング、士業・コンサルティングなど、幅広い業種の業務領域マスタを一括で整備。<strong>テンプレートの設計とアップデートは約15分で完了</strong>しました。
+                    </p>
+                    <p class="work-text">
+                        あわせて、テンプレート自体の使い方も整理しました。「STEP1 コピーを作成 → STEP2 業種を選択 → STEP3 AI導入思想を確認 → STEP4 業務一覧を記入」という4ステップの導線を冒頭に置き、受け取った方が迷わず記入に入れる構成にしています。
+                    </p>
+
+                    <figure class="work-figure">
+                        <img src="/images/works_images/work021-3.webp" alt="改修後の業務棚卸しテンプレートの使用説明シート。4ステップの導線と業種選択欄が配置されている画面" width="1200" height="675" loading="lazy" decoding="async">
+                        <figcaption>改修後（AFTER）：冒頭に4ステップの導線と業種選択欄を配置</figcaption>
+                    </figure>
+
+                    <figure class="work-figure">
+                        <img src="/images/works_images/work021-4.webp" alt="改修後の業務一覧シート。選択中の業種に応じて業務領域の候補が自動で切り替わることを示す画面" width="1200" height="675" loading="lazy" decoding="async">
+                        <figcaption>改修後（AFTER）：選択した業種に応じて、業務領域の候補が自動で切り替わる</figcaption>
+                    </figure>
+
+                    <div class="diagram-container">
+                        <ul class="diagram-process">
+                            <li class="process-step">
+                                <span class="step-num">Step 01</span>
+                                <span class="step-text">業種一覧を<br>AIが洗い出し</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 02</span>
+                                <span class="step-text">業種別業務領域<br>をAIが生成</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 03</span>
+                                <span class="step-text">選択連動を<br>テンプレートに実装</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 04</span>
+                                <span class="step-text">4ステップ導線<br>を整備</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 05</span>
+                                <span class="step-text">配布・提案へ<br>活用</span>
+                            </li>
+                        </ul>
+                        <p class="diagram-caption">図解：テンプレート高度化のプロセス（所要時間 約15分）</p>
+                    </div>
+
+                    <div class="work-table-wrapper">
+                        <table class="work-table">
+                            <thead>
+                                <tr>
+                                    <th>項目</th>
+                                    <th>改修前</th>
+                                    <th>改修後</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>業務領域の選択肢</th>
+                                    <td>業種共通の固定リスト</td>
+                                    <td><strong>業種に応じて自動切替</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>配布前の調整作業</th>
+                                    <td>担当者が都度手作業</td>
+                                    <td><strong>不要</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>業種別業務の洗い出し</th>
+                                    <td>担当者が毎回検討</td>
+                                    <td><strong>AIが一括生成</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>該当なしの場合</th>
+                                    <td>選択肢がなく記入不可</td>
+                                    <td><strong>自由入力が可能</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>記入の導線</th>
+                                    <td>説明なし</td>
+                                    <td><strong>4ステップで明示</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. 成果 -->
+            <section id="result" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">RESULT</h2>
+                    <h3 class="work-subheading">設計・アップデートは約15分。<br>配布ごとの調整作業はゼロに。</h3>
+
+                    <div class="result-metrics">
+                        <div class="metric-card">
+                            <div class="metric-label">テンプレート設計・更新</div>
+                            <div class="metric-value">約15<span class="metric-unit">分</span></div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">配布ごとの調整作業</div>
+                            <div class="metric-value">0<span class="metric-unit">分</span></div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">対応業種数</div>
+                            <div class="metric-value">15<span class="metric-unit">業種以上</span></div>
+                        </div>
+                    </div>
+
+                    <p class="work-text">
+                        業種一覧と業種別業務領域の洗い出しをAIに任せたことで、<strong>テンプレートの設計・アップデートが約15分で完了</strong>しました。担当者が業種ごとに業務を考えていた従来のやり方では、同じ範囲を網羅するのに相当の時間を要していた作業です。
+                    </p>
+                    <p class="work-text">
+                        運用面では、配布のたびに発生していた選択肢の調整作業が<strong>完全にゼロ</strong>になりました。テンプレートをコピーして渡すだけで、クライアント様側が業種を選んだ時点で最適な状態になります。
+                    </p>
+                    <p class="work-text">
+                        受け取る側の記入体験も改善されました。関係のない選択肢が並ばないため、どこに何を書けばよいかが直感的に分かります。契約前に配布する資料であることを踏まえると、この記入しやすさは<strong>そのまま提案の精度と回収率に影響する</strong>要素です。
+                    </p>
+
+                    <div class="work-table-wrapper">
+                        <table class="work-table">
+                            <thead>
+                                <tr>
+                                    <th>評価項目</th>
+                                    <th>改修前</th>
+                                    <th>改修後</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>テンプレート設計・更新</th>
+                                    <td>業種ごとに都度検討</td>
+                                    <td><strong>約15分で一括整備</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>配布ごとの調整</th>
+                                    <td>担当者が手作業</td>
+                                    <td><strong>0分</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>対応業種</th>
+                                    <td>実質1パターン</td>
+                                    <td><strong>15業種以上</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>不要な選択肢の表示</th>
+                                    <td>常に全項目が表示</td>
+                                    <td><strong>業種に必要な項目のみ</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>記入のしやすさ</th>
+                                    <td>何を書くか分かりにくい</td>
+                                    <td><strong>4ステップ導線で明確</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. 導入後の変化 -->
+            <section id="change" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">CHANGE</h2>
+                    <h3 class="work-subheading">設計・更新は約15分。<br>配布ごとの調整は0分に。</h3>
+
+                    <p class="work-text">
+                        業種一覧と業種別業務領域の洗い出しをAIに任せたことで、テンプレートの<strong>設計・アップデートが約15分で完了</strong>しました。同じ範囲を担当者が業種ごとに検討していた従来のやり方では、比較にならない時間を要していた作業です。対応業種は<strong>15業種以上</strong>まで広がりました。
+                    </p>
+                    <p class="work-text">
+                        配布のたびに発生していた選択肢の調整作業は<strong>0分</strong>です。テンプレートをコピーして渡すだけで、クライアント様が業種を選んだ時点で最適な状態になります。
+                    </p>
+                    <p class="work-text">
+                        このテンプレートは提案フロー全体の起点でもあります。「テンプレート請求 → 現状業務の入力 → 個別提案書の作成 → 契約」というフローにより、<strong>契約前の段階で削減見込み工数と対象業務を数値で提示できる</strong>状態を作れています。記入のしやすさがそのまま記入精度と提案の解像度に直結するため、今回の改修は提案品質に直接効いています。
+                    </p>
+
+                    <div class="diagram-container">
+                        <ul class="diagram-process">
+                            <li class="process-step">
+                                <span class="step-num">Step 01</span>
+                                <span class="step-text">テンプレート<br>請求</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 02</span>
+                                <span class="step-text">現状業務の<br>入力</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 03</span>
+                                <span class="step-text">個別提案書の<br>作成</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 04</span>
+                                <span class="step-text">効果の<br>可視化</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 05</span>
+                                <span class="step-text">契約</span>
+                            </li>
+                        </ul>
+                        <p class="diagram-caption">図解：契約前から導入効果を可視化する提案フロー</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. この事例のポイント -->
+            <section id="point" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">POINT</h2>
+                    <h3 class="work-subheading">テンプレートの中身ではなく、<br>「テンプレートを作る作業」を自動化した。</h3>
+
+                    <div class="project-info-grid">
+                        <div class="info-item">
+                            <div class="info-label">POINT 01｜業種ごとに自動でテンプレートを最適化</div>
+                            <div class="info-value">業種を選択すると、その業種で一般的な業務領域が自動反映。美容なら「施術」、製造業なら「検品」といった具合に、必要な項目だけが表示されます。</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">POINT 02｜マスタの洗い出し自体をAIが担当</div>
+                            <div class="info-value">業種一覧と業種別業務領域という「知識を列挙するタスク」をAIに任せることで、15業種以上のマスタ整備を約15分で完了。人が考える工程そのものを置き換えました。</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">POINT 03｜選択肢を減らすことでUXを上げる</div>
+                            <div class="info-value">機能を増やすのではなく、関係のない選択肢を表示しないという引き算の設計。記入のハードルを下げることを最優先にしました。</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">POINT 04｜契約前に効果を可視化する提案フロー</div>
+                            <div class="info-value">テンプレート請求→現状業務の入力→個別提案書作成→契約というフローにより、契約前の段階で導入後の具体像と期待効果を確認できるプロセスを構築しています。</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 関連リンク -->
+            <section class="work-section fade-in-section">
+                <div class="section-inner">
+                    <div class="work-references">
+                        <div class="ref-title">関連サービス・関連記事</div>
+                        <ul>
+                            <li><a href="/services/ai_consulting.html">生成AI活用支援（業務整理・自動化設計）</a></li>
+                            <li><a href="/contact.html">業務棚卸しテンプレートのご請求はこちら</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- 監修者 -->
+            <section id="supervisor" class="work-section fade-in-section">
+                <div class="article-editor">
+                    <div class="editor-header">この記事を監修した人</div>
+                    <div class="editor-profile">
+                        <div class="editor-image">
+                            <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA代表 / AIコンサルタント）" width="800" height="800" loading="lazy" decoding="async">
+                        </div>
+                        <div class="editor-info">
+                            <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                            <p class="editor-desc">
+                                中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                                九州大学大学院でLLMに関する研究にも従事。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. CTAセクション -->
+            <div class="work-cta fade-in-section">
+                <div class="cta-box">
+                    <h2 class="cta-title">契約前に、効果を確かめませんか？</h2>
+                    <p class="cta-text">業務棚卸しテンプレートにご記入いただくだけで、<br>自動化できる業務と削減見込みを整理した提案書をお渡しします。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">テンプレートを請求する</a>
+                </div>
+            </div>
+
+            <!-- 関連事例 -->
+            <section class="work-related fade-in-section">
+                <h2 class="related-title">その他の事例</h2>
+                <div class="related-grid">
+                    <a href="/works/work022.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/works_images/work-card022.webp" alt="プロジェクト環境構築自動化の自社事例" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-cat">業務自動化 / 自社事例</div>
+                            <div class="related-txt">新規クライアント契約後のプロジェクト環境構築を自動化し、30分を実質0分に</div>
+                        </div>
+                    </a>
+                    <a href="/works/work018.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/works_images/work-card018.webp" alt="請求書作成自動化の自社事例" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-cat">業務自動化 / 自社事例</div>
+                            <div class="related-txt">請求書作成からメール下書きまでを完全自動化し、1社15〜20分を約5分に短縮</div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

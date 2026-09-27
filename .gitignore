@@ -22,3 +22,5 @@ miraina_check_*.png
 .playwright-cli/
 
 AGENTS.md
+# 事例サムネ背景の生成作業用（Codex image_gen の出力置き場）
+.tmp_bg/

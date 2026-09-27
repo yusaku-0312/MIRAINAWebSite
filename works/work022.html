@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W9BLFVJ8E4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>【自社事例】新規クライアント契約後のプロジェクト環境構築を自動化し、1社30分を実質0分に | MIRAINA works</title>
+    <meta name="description" content="MIRAINAの自社事例。契約開始時にクライアント企業名を入力するだけで、Google Drive内の専用フォルダ、プロジェクト管理シート、各種管理用ファイルを自動生成。テンプレート内の会社名も自動置換し、1社あたり約30分の初期セットアップを実質0分にしました。">
+    <link rel="canonical" href="https://miraina-ai.com/works/work022.html">
+    <meta property="og:title" content="【自社事例】契約後のプロジェクト環境構築を自動化。1社30分が実質0分に">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/works/work022.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/works_images/work022-1.webp">
+    <meta property="og:description" content="企業名を入力するだけで、専用フォルダ・管理シート・各種ドキュメントを自動生成。会社名の置換まで含めた初期セットアップを自動化した事例です。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/work_detail.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="header-logo">
+                <img src="/images/company-logo.webp" alt="MIRAINAのロゴ" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="/services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="/services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="/services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="/services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="/services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                        <a href="/beauty-dx/" class="dropdown-item">美容サロン特化AI活用支援</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="/llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/works.html">事例紹介</a></li>
+                <li>自社事例：プロジェクト環境構築の自動化</li>
+            </ul>
+        </div>
+
+        <article class="work-container">
+            <!-- 1. 事例タイトル -->
+            <header class="work-header fade-in-section">
+                <div class="work-meta">
+                    <span class="work-date">2026.09.20 公開</span>
+                    <span class="work-cat">業務自動化 / 自社事例</span>
+                </div>
+                <h1 class="work-title">【自社事例】新規クライアント契約後のプロジェクト環境構築を自動化し、<br>1社あたり30分を実質0分に。</h1>
+            </header>
+
+            <!-- メインビジュアル -->
+            <div class="work-main-image fade-in-section">
+                <img src="/images/works_images/work022-1.webp" alt="新規クライアント契約後のプロジェクト環境構築を自動化した自社事例のメインビジュアル" width="1200" height="630" fetchpriority="high">
+            </div>
+
+            <!-- 事例概要 -->
+            <section class="work-section fade-in-section">
+                <div class="work-summary-box">
+                    <div class="summary-label">事例概要</div>
+                    <div class="summary-text">
+                        <p>
+                            新規クライアント様との契約開始時に発生する初期セットアップを自動化した自社事例です。従来は契約のたびに、Google Drive内のフォルダ作成、プロジェクト管理シートの作成、各種管理用ファイルの複製、テンプレート内の会社名の書き換えといった作業を手作業で行っており、<strong>1社あたり約30分</strong>を要していました。<strong>クライアント企業名を入力するだけで、必要な環境一式が自動生成される仕組み</strong>を構築した結果、この初期セットアップ作業は<strong>実質0分</strong>に。契約後すぐにプロジェクトを開始できる状態を実現しました。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 目次 -->
+            <div class="work-toc fade-in-section">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#client">1. 対象業務について</a></li>
+                    <li><a href="#before">2. 導入前の課題</a></li>
+                    <li><a href="#solution">3. 実施したこと</a></li>
+                    <li><a href="#result">4. 成果</a></li>
+                    <li><a href="#change">5. 導入後の変化</a></li>
+                    <li><a href="#point">6. この事例のポイント</a></li>
+                </ul>
+            </div>
+
+            <!-- 2. クライアント / 業種 -->
+            <section id="client" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">DATA</h2>
+                    <h3 class="work-subheading">対象業務について</h3>
+
+                    <div class="work-table-wrapper">
+                        <table class="work-table">
+                            <thead>
+                                <tr>
+                                    <th>項目</th>
+                                    <th>内容</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>対象</th>
+                                    <td>MIRAINA（自社事例）</td>
+                                </tr>
+                                <tr>
+                                    <th>対象業務</th>
+                                    <td>新規契約後のプロジェクト初期セットアップ</td>
+                                </tr>
+                                <tr>
+                                    <th>生成物</th>
+                                    <td>Google Drive専用フォルダ / プロジェクト管理シート / 各種管理用ファイル・ドキュメント</td>
+                                </tr>
+                                <tr>
+                                    <th>トリガー</th>
+                                    <td>クライアント企業名の入力のみ</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="work-text">
+                        初期セットアップは「契約直後の、最も早く動き出したいタイミング」に発生する作業です。所要時間そのものよりも、このタイミングで事務作業が挟まること自体が機会損失になりやすい性質を持っています。
+                    </p>
+                </div>
+            </section>
+
+            <!-- 3. 導入前の課題 -->
+            <section id="before" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">BEFORE</h2>
+                    <h3 class="work-subheading">契約直後の30分が、<br>毎回そのまま消えていた。</h3>
+
+                    <p class="work-text">
+                        自動化前は、新規契約が決まるたびに手作業で環境を用意していました。Google Drive上にクライアント専用フォルダを作り、決まった構成のサブフォルダを切り、プロジェクト管理シートを作成し、各種管理用ファイルやドキュメントのテンプレートを複製する。さらに複製した各ファイルを1つずつ開き、<strong>テンプレート内に残っている会社名をクライアント名へ書き換える</strong>作業が続きます。
+                    </p>
+                    <p class="work-text">
+                        1社あたりの所要時間は<strong>約30分</strong>。単体で見れば大きな数字ではありませんが、問題は発生するタイミングでした。契約が決まった直後は、クライアント様の期待値が最も高く、こちらも最短で動き出したい局面です。その瞬間に30分の事務作業が挟まることは、<strong>体感以上の機会損失</strong>でした。
+                    </p>
+                    <p class="work-text">
+                        加えて、手作業である以上、<strong>置換漏れが一定の確率で発生</strong>します。複製したドキュメントの一部に前のクライアント名が残ったまま共有してしまうリスクは、信頼に直結する問題です。確認作業にも神経を使うため、実際の負荷は30分という数字以上のものがありました。
+                    </p>
+                    <p class="work-text">
+                        また、担当者によってフォルダ構成やファイルの置き場所に微妙な差が生まれ、<strong>プロジェクトごとに環境がばらつく</strong>という副次的な問題も抱えていました。
+                    </p>
+
+                    <div class="diagram-container">
+                        <div class="diagram-comparison">
+                            <div class="comparison-item is-bad">
+                                <div class="comparison-header">自動化前</div>
+                                <div class="comparison-content">
+                                    <ul>
+                                        <li>フォルダ・シート・ファイルを手作業で作成</li>
+                                        <li>テンプレート内の会社名を1つずつ書き換え</li>
+                                        <li>1社あたり約30分</li>
+                                        <li>置換漏れのリスクと環境のばらつき</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="comparison-arrow">→</div>
+                            <div class="comparison-item is-good">
+                                <div class="comparison-header">自動化後</div>
+                                <div class="comparison-content">
+                                    <ul>
+                                        <li><strong>企業名の入力だけで環境一式を自動生成</strong></li>
+                                        <li>会社名も自動で置換</li>
+                                        <li><strong>実質0分</strong></li>
+                                        <li>全プロジェクトで構成が統一</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="diagram-caption">図解：契約後の初期セットアップの自動化</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. 実施したこと -->
+            <section id="solution" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">SOLUTION</h2>
+                    <h3 class="work-subheading">入力項目は、企業名ひとつだけ。</h3>
+
+                    <p class="work-text">
+                        構築したのは、<strong>クライアント企業名を入力するだけで、プロジェクトに必要な環境一式を自動生成する仕組み</strong>です。入力項目を企業名ひとつに絞ったことが設計上のポイントで、実行する側が判断を求められる場面をなくしています。
+                    </p>
+                    <p class="work-text">
+                        実行されると、Google Drive内にクライアント専用フォルダが決まった構成で作成され、プロジェクト管理シート、各種管理用ファイル、必要なドキュメント類が一括で生成されます。
+                    </p>
+                    <p class="work-text">
+                        特に効果が大きかったのが、<strong>各テンプレート内に含まれる会社名の自動置換</strong>です。複製しただけではテンプレート内に元の会社名が残るため、従来はファイルを1つずつ開いて修正する必要がありました。この工程を自動化したことで、作業時間の削減と置換漏れリスクの解消を同時に実現しています。
+                    </p>
+                    <p class="work-text">
+                        また、生成される構成が常に同一であるため、<strong>どのプロジェクトでもファイルの置き場所が一致する</strong>状態になりました。担当者による環境のばらつきが構造的に発生しません。
+                    </p>
+
+                    <div class="diagram-container">
+                        <ul class="diagram-process">
+                            <li class="process-step">
+                                <span class="step-num">Step 01</span>
+                                <span class="step-text">クライアント<br>企業名を入力</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 02</span>
+                                <span class="step-text">専用フォルダを<br>自動生成</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 03</span>
+                                <span class="step-text">管理シート・<br>ファイルを複製</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 04</span>
+                                <span class="step-text">会社名を<br>自動置換</span>
+                            </li>
+                            <li class="process-step">
+                                <span class="step-num">Step 05</span>
+                                <span class="step-text">プロジェクト<br>開始</span>
+                            </li>
+                        </ul>
+                        <p class="diagram-caption">図解：企業名の入力だけで完了する環境構築フロー</p>
+                    </div>
+
+                    <div class="work-table-wrapper">
+                        <table class="work-table">
+                            <thead>
+                                <tr>
+                                    <th>工程</th>
+                                    <th>自動化前</th>
+                                    <th>自動化後</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>専用フォルダの作成</th>
+                                    <td>手作業で作成・構成</td>
+                                    <td><strong>自動生成</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>プロジェクト管理シート</th>
+                                    <td>都度作成</td>
+                                    <td><strong>自動生成</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>各種管理ファイルの複製</th>
+                                    <td>1つずつ複製</td>
+                                    <td><strong>一括生成</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>会社名の書き換え</th>
+                                    <td>ファイルごとに手作業</td>
+                                    <td><strong>自動置換</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>構成の統一</th>
+                                    <td>担当者によりばらつき</td>
+                                    <td><strong>常に同一構成</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>置換漏れ</th>
+                                    <td>一定確率で発生</td>
+                                    <td><strong>発生しない</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. 成果 -->
+            <section id="result" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">RESULT</h2>
+                    <h3 class="work-subheading">1社あたり約30分が実質0分に。<br>契約後すぐに本題へ入れる。</h3>
+
+                    <div class="result-metrics">
+                        <div class="metric-card">
+                            <div class="metric-label">1社あたりの初期セットアップ</div>
+                            <div class="metric-value">0<span class="metric-unit">分</span></div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">自動化前</div>
+                            <div class="metric-value">約30<span class="metric-unit">分</span></div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">会社名の置換漏れ</div>
+                            <div class="metric-value">0<span class="metric-unit">件</span></div>
+                        </div>
+                    </div>
+
+                    <p class="work-text">
+                        契約後の初期セットアップに要していた<strong>1社あたり約30分が実質0分</strong>になりました。企業名を入力した時点で環境一式が揃うため、担当者が作業として認識する工程自体が消えています。
+                    </p>
+                    <p class="work-text">
+                        時間削減以上に価値があったのが、<strong>契約直後にすぐプロジェクトを開始できるようになった</strong>ことです。従来は事務的なセットアップを挟んでから本題に入っていましたが、現在は契約が決まった直後の打ち合わせから中身の議論を始められます。クライアント様の期待値が最も高いタイミングで、事務作業を挟まずに動き出せる意味は小さくありません。
+                    </p>
+                    <p class="work-text">
+                        また、会社名の置換漏れという信頼に直結するリスクが構造的に解消されました。手作業が存在しないため、確認に費やしていた神経も不要になっています。
+                    </p>
+
+                    <div class="work-table-wrapper">
+                        <table class="work-table">
+                            <thead>
+                                <tr>
+                                    <th>評価項目</th>
+                                    <th>自動化前</th>
+                                    <th>自動化後</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>1社あたりの所要時間</th>
+                                    <td>約30分</td>
+                                    <td><strong>実質0分</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>契約後の着手タイミング</th>
+                                    <td>セットアップ完了後</td>
+                                    <td><strong>契約直後から</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>会社名の置換漏れ</th>
+                                    <td>一定確率で発生</td>
+                                    <td><strong>0件</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>プロジェクト環境の統一</th>
+                                    <td>担当者によりばらつき</td>
+                                    <td><strong>常に同一</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>確認作業の負荷</th>
+                                    <td>全ファイルを目視確認</td>
+                                    <td><strong>不要</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. 導入後の変化 -->
+            <section id="change" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">CHANGE</h2>
+                    <h3 class="work-subheading">1社30分が実質0分。<br>契約件数ぶん毎回効いてくる。</h3>
+
+                    <p class="work-text">
+                        契約後の初期セットアップに要していた<strong>1社あたり約30分が実質0分</strong>になりました。この削減は契約のたびに発生するため、<strong>年間20社なら約10時間</strong>ぶんの工数がそのまま消えた計算になります。
+                    </p>
+                    <p class="work-text">
+                        テンプレート内の会社名まで自動置換しているため、<strong>置換漏れは0件</strong>です。前のクライアント名が残ったまま共有してしまう信用毀損リスクが構造的になくなり、全ファイルを目視確認する作業も不要になりました。
+                    </p>
+                    <p class="work-text">
+                        契約と着手のあいだにあった準備期間も消えています。従来は環境を整えてから初回打ち合わせという順序が前提でしたが、現在は<strong>契約直後の打ち合わせから中身の議論に入れます</strong>。全案件で同じ構成の環境が生成されるため、複数案件を並行する際にファイルを探す時間も発生しません。
+                    </p>
+                </div>
+            </section>
+
+            <!-- 7. この事例のポイント -->
+            <section id="point" class="work-section fade-in-section">
+                <div class="section-inner">
+                    <h2 class="section-heading">POINT</h2>
+                    <h3 class="work-subheading">削減時間ではなく、<br>発生するタイミングで自動化対象を選んだ。</h3>
+
+                    <div class="project-info-grid">
+                        <div class="info-item">
+                            <div class="info-label">POINT 01｜入力項目は企業名ひとつだけ</div>
+                            <div class="info-value">実行する側が判断を求められる場面をなくすため、入力項目を企業名のみに限定。設定画面を開いて条件を選ぶといった工程自体を設けていません。</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">POINT 02｜テンプレート内の会社名まで自動置換</div>
+                            <div class="info-value">ファイルを複製するだけでは元の会社名が残るため、置換までを自動化の範囲に含めました。作業時間の削減と、信頼に直結する置換漏れリスクの解消を同時に実現しています。</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">POINT 03｜新規契約後すぐにプロジェクトを開始できる</div>
+                            <div class="info-value">契約と着手のあいだにあった準備期間が消滅。クライアント様の期待値が最も高いタイミングで、事務作業を挟まず本題に入れるようになりました。</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">POINT 04｜「発生頻度 × 1回あたりの時間」で対象を選定</div>
+                            <div class="info-value">1回あたり30分という数字は大きくありません。それでも優先度を上げたのは、契約のたびに必ず発生し、年間では無視できない工数になるうえ、手作業である限り置換漏れという信用毀損リスクを抱え続ける作業だったからです。</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 関連リンク -->
+            <section class="work-section fade-in-section">
+                <div class="section-inner">
+                    <div class="work-references">
+                        <div class="ref-title">関連サービス・関連記事</div>
+                        <ul>
+                            <li><a href="/services/ai_consulting.html">生成AI活用支援（業務自動化の設計・導入伴走）</a></li>
+                            <li><a href="/services/ai_develop.html">AI開発サービス</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- 監修者 -->
+            <section id="supervisor" class="work-section fade-in-section">
+                <div class="article-editor">
+                    <div class="editor-header">この記事を監修した人</div>
+                    <div class="editor-profile">
+                        <div class="editor-image">
+                            <img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA代表 / AIコンサルタント）" width="800" height="800" loading="lazy" decoding="async">
+                        </div>
+                        <div class="editor-info">
+                            <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div>
+                            <p class="editor-desc">
+                                中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                                九州大学大学院でLLMに関する研究にも従事。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. CTAセクション -->
+            <div class="work-cta fade-in-section">
+                <div class="cta-box">
+                    <h2 class="cta-title">毎回発生する30分、残していませんか？</h2>
+                    <p class="cta-text">頻度高く発生する定型セットアップは、<br>入力1つで完結する仕組みに置き換えられます。</p>
+                    <a href="/contact.html" class="btn btn-black-fill">業務自動化の相談をする</a>
+                </div>
+            </div>
+
+            <!-- 関連事例 -->
+            <section class="work-related fade-in-section">
+                <h2 class="related-title">その他の事例</h2>
+                <div class="related-grid">
+                    <a href="/works/work018.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/works_images/work-card018.webp" alt="請求書作成自動化の自社事例" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-cat">業務自動化 / 自社事例</div>
+                            <div class="related-txt">請求書作成からメール下書きまでを完全自動化し、1社15〜20分を約5分に短縮</div>
+                        </div>
+                    </a>
+                    <a href="/works/work021.html" class="related-card">
+                        <div class="related-img">
+                            <img src="/images/works_images/work-card021.webp" alt="業務整理テンプレートAI高度化の自社事例" loading="lazy" decoding="async">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-cat">自社開発 / 提案プロセス</div>
+                            <div class="related-txt">クライアント向け業務整理テンプレートをAIで高度化し、業種選択で業務領域が自動反映</div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="/">
+                    <p class="footer-brand-text">MIRAINA</p>
+                </a>
+            </div>
+
+            <div class="footer-center">
+            </div>
+
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="/about.html">MIRAINAについて</a></li>
+                    <li><a href="/works.html">事例紹介</a></li>
+                    <li><a href="/blogs.html">ブログ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+                </ul>
+                <div class="footer-sns">
+                    <a href="https://www.instagram.com/plus.taime" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.threads.com/@plus.taime" target="_blank" rel="noopener">Threads</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="/llms.txt" class="footer-robot-icon" aria-label="AI info">
+                <svg class="icon-thin" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                </svg>
+            </a>
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>
