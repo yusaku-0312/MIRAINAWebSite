@@ -406,6 +406,12 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: YouTube AI編集が強化｜Gemini対話編集と動画ABテストの使い方](https://miraina-ai.com/blogs/blog319.html)
   - **更新日**: 2026.09.27
   - **概要**: YouTube AI編集がGeminiの対話編集、サムネイル生成、動画ABテストへ拡張。中小企業が動画制作で決める役割分担と検証手順を解説します。
+- [最新ブログ: GPT-6 Prompt Caching｜APIコスト削減の4つの設計](https://miraina-ai.com/blogs/blog320.html)
+  - **更新日**: 2026.09.28
+  - **概要**: GPT-6 Prompt Cachingの改善をOpenAI公式情報から解説。最大90%のキャッシュ入力割引、30分の再利用、Dashboardの見方、APIコストを抑える4つの設計を紹介します。
+- [最新ブログ: Gemini 連携アプリの使い方｜AIに業務を頼む3つのプロンプト](https://miraina-ai.com/blogs/blog321.html)
+  - **更新日**: 2026.09.28
+  - **概要**: Gemini Connected Appsの拡充を起点に、AIへ業務を頼む3つの指示例、権限確認、小さく始める手順を解説します。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-W9BLFVJ8E4');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>GPT-6 Prompt Caching｜APIコスト削減の4つの設計 | MIRAINAブログ</title>
+<meta name="description" content="GPT-6 Prompt Cachingの改善をOpenAI公式情報から解説。最大90%のキャッシュ入力割引、30分の再利用、Dashboardの見方、APIコストを抑える4つの設計を紹介します。">
+<!-- OGP Tags -->
+<meta property="og:title" content="GPT-6 Prompt Caching｜APIコスト削減の4つの設計">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://miraina-ai.com/blogs/blog320.html">
+<meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog320-1.webp">
+<meta property="og:description" content="GPT-6 Prompt Cachingの改善をOpenAI公式情報から解説。最大90%のキャッシュ入力割引、30分の再利用、Dashboardの見方、APIコストを抑える4つの設計を紹介します。">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Shippori+Mincho:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<!-- Favicon -->
+<link rel="icon" href="/images/favicon.ico">
+<!-- CSS -->
+<link rel="stylesheet" href="/css/reset.css">
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/css/blog_article.css">
+<link rel="canonical" href="https://miraina-ai.com/blogs/blog320.html">
+<style>.article-body .code-block pre{white-space:pre-wrap;overflow-wrap:anywhere;color:#f5f5f5}.article-body .code-block pre code{color:inherit;background:transparent}.article-body td code{overflow-wrap:anywhere;word-break:break-word}.article-cta .cta-title{color:#fff}</style>
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+<div class="container header-inner">
+<a class="header-logo" href="/"><img alt="MIRAINA" height="40" src="/images/company-logo.webp" width="120"></a>
+<div class="hamburger" id="js-hamburger"><span></span><span></span><span></span></div>
+<nav class="header-nav">
+<div class="nav-item has-dropdown">
+<a class="nav-link" href="/services.html">サービス</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="/services/ai_consulting.html">生成AI活用支援</a>
+<a class="dropdown-item" href="/services/ai_training.html">AI研修</a>
+<a class="dropdown-item" href="/services/ai_develop.html">AI開発</a>
+<a class="dropdown-item" href="/services/llmo_insight.html">LLMO Insight</a>
+<a class="dropdown-item" href="/beauty-dx/">美容サロン特化AI活用支援</a>
+</div>
+</div>
+<div class="nav-item"><a class="nav-link" href="/about.html">MIRAINAについて</a></div>
+<div class="nav-item"><a class="nav-link" href="/works.html">事例紹介</a></div>
+<div class="nav-item"><a class="nav-link" href="/blogs.html">ブログ</a></div>
+<div class="nav-item"><a class="nav-link btn-contact" href="/contact.html">お問い合わせ</a></div>
+<div class="nav-item"><a aria-label="AI info" class="nav-link" href="/llms.txt"><svg class="icon-thin" height="20" viewBox="0 0 24 24" width="20"><path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"></path></svg></a></div>
+</nav>
+</div>
+<div class="mobile-menu" id="js-mobile-menu"><nav class="mobile-nav">
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/services.html">サービス</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/about.html">MIRAINAについて</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/works.html">事例紹介</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/blogs.html">ブログ</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/contact.html">お問い合わせ</a></div>
+</nav></div>
+</header>
+<main>
+<!-- Breadcrumbs -->
+<div class="container breadcrumbs"><ul><li><a href="/index.html">ホーム</a></li><li><a href="/blogs.html">ブログ</a></li><li>GPT-6 Prompt Caching｜APIコスト削減の4つの設計</li></ul></div>
+<article class="article-container">
+<!-- Article Header -->
+<header class="article-header">
+<div class="article-meta"><span class="article-date">2026.09.28</span><div class="article-tags"><span class="article-tag">OpenAI</span><span class="article-tag">AI開発</span><span class="article-tag">コスト管理</span></div></div>
+<h1 class="article-title">GPT-6 Prompt Caching｜APIコスト削減の4つの設計</h1>
+<div class="article-thumbnail"><img alt="GPT-6 Prompt CachingでAPIコストを抑える設計を解説するイメージ" fetchpriority="high" height="675" src="/images/blogs_images/blog320-1.webp" width="1200"></div>
+</header>
+<!-- Summary -->
+<section class="article-summary"><h2 class="sr-only">記事の概要</h2><p>AIエージェントの利用時間が伸び、同じ社内ルールやツール定義を何度もAPIへ送っていませんか。OpenAIがGPT-6向けPrompt Cachingを改善し、キャッシュの可視化、失敗原因の診断、明示的な再利用範囲の指定を発表しました。本記事では仕組みと料金の考え方を整理し、開発会社へ確認できる4つの設計項目まで解説します。</p></section>
+<!-- Table of Contents -->
+<div class="article-toc"><div class="toc-title">目次</div><ul>
+<li><a href="#section1">1. GPT-6 Prompt Cachingで変わったこと</a></li>
+<li><a href="#section2">2. キャッシュが効く仕組みと料金</a></li>
+<li><a href="#section3">3. Dashboardと診断で見る指標</a></li>
+<li><a href="#section4">4. APIコストを抑える4つの設計</a></li>
+<li><a href="#section5">5. 導入前に確認する注意点</a></li>
+<li><a href="#section6">6. まとめ：まず再利用率を測る</a></li>
+</ul></div>
+<!-- Main Content Body -->
+<div class="article-body">
+<h2 id="section1">1. GPT-6 Prompt Cachingで変わったこと</h2>
+<p><strong>OpenAIは2026年9月22日、GPT-6向けPrompt Cachingの改善を発表しました。</strong>Prompt Cachingは、複数のAPIリクエストで共通する冒頭部分を再利用し、同じ計算を繰り返さない仕組みです。今回、GPT-6では既定のキャッシュヒット率が改善され、キャッシュ入力トークンには最大90%の割引が適用されると案内されました。出典：<a href="https://openai.com/index/better-prompt-caching-for-gpt-6/" rel="noopener" target="_blank">OpenAI公式発表（2026年9月22日）</a>。</p>
+<p>新しく加わった中心機能は、Prompt Caching Dashboard、キャッシュミスの診断、明示的なcache breakpoint、事前に共通部分を準備するprewarmingです。長時間動くAIエージェントでは、社内ルール、ツール定義、過去の会話を何度も送ります。これらが再利用されれば、入力処理の費用と回答開始までの待ち時間を抑えられます。</p>
+<p>ただし、発表された「最大90%割引」は請求総額が必ず90%下がるという意味ではありません。割引対象は再利用された入力トークンです。毎回変わる入力、モデルが生成する出力、外部ツールの利用料などは別に考えます。経営判断では「モデル単価」だけでなく、「入力のうち何%がキャッシュから読まれたか」を見る必要があります。</p>
+
+<h2 id="section2">2. キャッシュが効く仕組みと料金</h2>
+<p>キャッシュの対象は、プロンプト全体ではなく<strong>先頭から一致する共通部分</strong>です。たとえば、毎回同じ業務ルールを最初に置き、その後へ顧客ごとの質問を追加する設計なら、共通ルールを再利用しやすくなります。反対に、冒頭へ現在時刻や顧客名を入れると、その後に同じ説明が続いていても一致部分が短くなります。</p>
+<div class="article-table-wrapper"><table class="article-table"><thead><tr><th>入力の位置</th><th>置く内容</th><th>設計の考え方</th></tr></thead><tbody>
+<tr><td>先頭</td><td>社内ルール、出力形式、共通資料</td><td>変えない情報をまとめる</td></tr>
+<tr><td>中盤</td><td>ツール定義、会話履歴</td><td>順番と定義を安定させる</td></tr>
+<tr><td>末尾</td><td>顧客名、日付、今回の依頼</td><td>毎回変わる情報を後ろへ置く</td></tr>
+</tbody></table></div>
+<p><a href="https://developers.openai.com/api/docs/guides/prompt-caching" rel="noopener" target="_blank">OpenAI APIの公式ガイド</a>によると、GPT-5.6以降は1,024トークン以上の共通部分がキャッシュ対象になり、再利用できる既定の期間は直近の書き込みまたは利用から30分です。キャッシュ書き込みは通常入力の1.25倍、読み取りは0.1倍の料金と説明されています。そのため、一度しか使わない長文を何でもキャッシュするのではなく、繰り返し使う共通部分を選ぶことが重要です。</p>
+<p>OpenAIが紹介した利用事例では、ある開発チームがキャッシュヒット率を83%から91%へ改善し、キャッシュ書き込みを約3分の2、推論コストを36%削減しました。これはOpenAI掲載の個別事例であり、すべての企業で同じ効果が出る保証ではありません。自社のリクエスト量、入力の長さ、再利用頻度で検証してください。</p>
+
+<h2 id="section3">3. Dashboardと診断で見る指標</h2>
+<p>Prompt Caching Dashboardでは、入力のどれだけがキャッシュから提供されたかを時系列で確認できます。まず見るのはキャッシュヒット率と、cached・uncached input tokenの内訳です。システム更新後にヒット率が落ちたら、プロンプトの冒頭、ツール定義、モデル設定を変更していないかを確認します。</p>
+<p>キャッシュミス診断は、現在のリクエストと直前の基準レスポンスを比べ、モデル、ツール、設定、入力のどこが変わったかを示します。<a href="https://developers.openai.com/api/docs/guides/prompt-caching/diagnostics" rel="noopener" target="_blank">公式診断ガイド</a>では、比較機能のために生のプロンプトやモデル出力を保存しないと説明されています。一方で、キャッシュ自体の保持や組織のデータ設定は別論点です。機密情報を扱う場合は、自社契約の保持条件も併せて確認します。</p>
+<h3>週次レポートで確認する項目</h3>
+<div class="code-block"><pre><code>対象期間：［開始日〜終了日］
+対象モデル：［モデル名］
+総入力トークン：［数値］
+キャッシュ読み取り：［数値・比率］
+キャッシュ書き込み：［数値・比率］
+主なキャッシュミス理由：［tools_changed など］
+変更前後の入力費用：［同じ処理件数で比較］
+次回の改善対象：［1項目だけ記載］</code></pre></div>
+<p>請求額だけを比べると、処理件数の増減と設計改善を区別できません。同じ種類の業務100件あたりの入力費用や、1処理あたりのキャッシュ読み取り率で比べると、改善効果を説明しやすくなります。</p>
+
+<h2 id="section4">4. APIコストを抑える4つの設計</h2>
+<p>中小企業が開発担当者や外部ベンダーへ確認したい設計は、次の4つです。</p>
+<ol>
+<li><strong>共通部分を先頭へ置く：</strong>変わらない指示、社内ルール、参照資料を先にまとめ、日付や顧客固有情報は後ろへ置く。</li>
+<li><strong>ツール定義を削除しない：</strong>使わないたびにツール一覧を消すのではなく、定義と順番を保ったまま<code>allowed_tools</code>や<code>tool_choice</code>で利用範囲を変える。</li>
+<li><strong>会話履歴を追記する：</strong>過去の入力を毎回書き直さず、新しいメッセージを末尾へ追加する。要約や圧縮で先頭が変わる場合は、ヒット率への影響を測る。</li>
+<li><strong>よく使う共通情報を事前準備する：</strong>始業前やアプリ起動時にprewarmingを行い、最初の利用者が待つ時間を減らす。ただし再利用されない処理を増やさない。</li>
+</ol>
+<p>たとえば社内FAQなら、就業規則と回答形式を共通部分にし、社員ごとの質問を末尾に置きます。営業提案エージェントなら、商品説明と禁止表現を固定し、顧客情報と今回の目的だけを変えます。こうすると単にプロンプトを短くするのではなく、長い共通情報を安全に使い回す設計になります。</p>
+<p><strong>MIRAINAの視点：</strong>Prompt Cachingは、APIの裏側だけの技術ではありません。社内ルールを共通化し、顧客ごとの変数を分離できているかを可視化する指標でもあります。ヒット率が低い場合、プロンプトだけでなく業務手順そのものが毎回変わっていないかを確認してください。AIエージェントの実装を始める前は、<a href="/blogs/blog297.html">OpenAI Agents APIで決める4項目</a>も参考になります。</p>
+
+<h2 id="section5">5. 導入前に確認する注意点</h2>
+<p>第一に、キャッシュヒットは保証されません。同じ先頭部分でも、保持期間を過ぎた場合、処理する地域が変わった場合、モデルやツール設定に互換性がない場合は再利用されないことがあります。OpenAIはキャッシュを組織間で共有せず、地域の処理境界も越えて共有しないと説明しています。</p>
+<p>第二に、コストだけで品質を落とさないことです。キャッシュを維持するため古い社内ルールを残すと、誤った回答が速く安く繰り返されます。料金表や規約の更新日は共通資料の中に明記し、変更時は意図的にキャッシュが切り替わる設計にします。利用額の上限設定は<a href="/blogs/blog226.html">OpenAI hard spend limitsの解説</a>も併せて確認してください。</p>
+<p>第三に、データ保持要件を確認します。OpenAIはキャッシュで生のトークンそのものではなく、計算済みの状態を保持すると説明していますが、Zero Data Retentionや地域処理の適用条件はモデルと契約で異なります。個人情報や機密資料を扱う場合は、キャッシュ機能だけで安全と判断せず、入力可否、ログ、削除、権限を含めて審査します。</p>
+
+<h2 id="section6">6. まとめ：まず再利用率を測る</h2>
+<p>GPT-6 Prompt Cachingの改善では、最大90%のキャッシュ入力割引、Dashboard、キャッシュミス診断、明示的なbreakpoint、prewarmingが案内されました。最初に行うことは、全面的な作り直しではありません。対象業務を一つ選び、共通情報と毎回変わる情報を分け、現在のキャッシュ読み取り率と1処理あたりの費用を記録してください。</p>
+<p>MIRAINAの<a href="/services/ai_develop.html">AI開発</a>と<a href="/services/ai_consulting.html">生成AI活用支援</a>では、AIエージェントの要件整理からAPIコスト、権限、運用ルールの設計まで支援しています。既存システムの利用明細や処理フローをもとに、どこを共通化すべきか整理したい場合はご相談ください。</p>
+<div class="article-references"><div class="ref-title">参考リンク（2026年9月28日確認）</div><ul>
+<li><a href="https://openai.com/index/better-prompt-caching-for-gpt-6/" rel="noopener" target="_blank">OpenAI：Better prompt caching for GPT-6</a></li>
+<li><a href="https://developers.openai.com/api/docs/guides/prompt-caching" rel="noopener" target="_blank">OpenAI API：Prompt caching guide</a></li>
+<li><a href="https://developers.openai.com/api/docs/guides/prompt-caching/diagnostics" rel="noopener" target="_blank">OpenAI API：Prompt cache diagnostics</a></li>
+</ul></div>
+</div>
+<!-- CTA Button -->
+<div class="article-cta"><div class="cta-box"><h2 class="cta-title">AI導入でお悩みですか？</h2><p class="cta-text">MIRAINAでは、貴社の課題に合わせた<br>最適なAI活用プランをご提案します。</p><a class="btn btn-black-fill" href="/contact.html">無料相談する</a></div></div>
+<!-- Editorial Information -->
+<div class="article-editor"><div class="editor-header">この記事を監修した人</div><div class="editor-profile"><div class="editor-image"><img alt="本記事の監修者 芝優作（MIRAINA）" decoding="async" loading="lazy" src="/images/shiba_yusaku.webp"></div><div class="editor-info"><div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div><p class="editor-desc">中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。九州大学大学院でLLMに関する研究にも従事。</p></div></div></div>
+<!-- Related Articles -->
+<div class="article-related"><h2 class="related-title">関連記事</h2><div class="related-grid">
+<a class="related-card" href="/blogs/blog297.html"><div class="related-img"><img alt="OpenAI Agents API公開｜AIエージェント開発で決める4項目" decoding="async" loading="lazy" src="/images/blogs_images/blog-card297.webp"></div><div class="related-content"><div class="related-date">2026.09.12</div><div class="related-text">OpenAI Agents API公開｜AIエージェント開発で決める4項目</div></div></a>
+<a class="related-card" href="/blogs/blog226.html"><div class="related-img"><img alt="OpenAI hard spend limitsとは？AI料金の使いすぎを止める設定方法" decoding="async" loading="lazy" src="/images/blogs_images/blog-card226.webp"></div><div class="related-content"><div class="related-date">2026.07.27</div><div class="related-text">OpenAI hard spend limitsとは？AI料金の使いすぎを止める設定方法</div></div></a>
+<a class="related-card" href="/blogs/blog305.html"><div class="related-img"><img alt="SalesforceのAI Control Planeとは｜AIエージェント管理で中小企業が決める3つのこと" decoding="async" loading="lazy" src="/images/blogs_images/blog-card305.webp"></div><div class="related-content"><div class="related-date">2026.09.16</div><div class="related-text">SalesforceのAI Control Planeとは｜AIエージェント管理で中小企業が決める3つのこと</div></div></a>
+</div></div>
+</article>
+</main>
+<!-- Footer -->
+<footer class="footer"><div class="container footer-inner"><div class="footer-brand"><a href="/index.html"><p class="footer-brand-text">MIRAINA</p></a></div><div class="footer-center"></div><div class="footer-menu"><ul class="footer-menu-list"><li><a href="/about.html">私たちについて</a></li><li><a href="/works.html">事例紹介</a></li><li><a href="/blogs.html">ブログ</a></li><li><a href="/contact.html">お問い合わせ</a></li><li><a href="/privacy_policy.html">プライバシーポリシー</a></li></ul><div class="footer-sns"><a href="https://www.instagram.com/plus.taime" rel="noopener" target="_blank">Instagram</a><a href="https://www.threads.com/@plus.taime" rel="noopener" target="_blank">Threads</a></div></div></div><div class="footer-bottom"><a aria-label="AI info" class="footer-robot-icon" href="/llms.txt"><svg class="icon-thin" height="24" viewBox="0 0 24 24" width="24"><path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"></path></svg></a><p>© MIRAINA All Rights Reserved.</p></div></footer>
+<script src="/js/common.js"></script>
+<script>document.addEventListener('DOMContentLoaded',()=>{const hamburger=document.getElementById('js-hamburger');const mobileMenu=document.getElementById('js-mobile-menu');if(hamburger&&mobileMenu){hamburger.addEventListener('click',()=>{mobileMenu.classList.toggle('is-active');});}});</script>
+</body>
+</html>
