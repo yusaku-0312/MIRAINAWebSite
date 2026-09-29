@@ -2888,6 +2888,15 @@
       "thumbnail": "/images/blogs_images/blog-card321.webp",
       "alt": "Gemini連携アプリでAIに業務を頼むイメージ",
       "date": "2026-09-28"
+    },
+    {
+      "id": 322,
+      "title": "Claude Sonnet 5.5が公開｜Opus 5.5との違いと業務での選び方",
+      "description": "Claude Sonnet 5.5をAnthropic公式情報で解説。Sonnet 5比30%以上高速、1タスク最大30%低コストの意味、Opus 5.5との料金・用途の違い、切替前の測定項目を紹介します。",
+      "link": "/blogs/blog322.html",
+      "thumbnail": "/images/blogs_images/blog-card322.webp",
+      "alt": "Claude Sonnet 5.5とOpus 5.5の違いと業務での選び方",
+      "date": "2026-09-29"
     }
   ],
   "works": [

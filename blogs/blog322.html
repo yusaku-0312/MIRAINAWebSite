@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W9BLFVJ8E4"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-W9BLFVJ8E4');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Claude Sonnet 5.5が公開｜Opus 5.5との違いと業務での選び方 | MIRAINAブログ</title>
+<meta name="description" content="Claude Sonnet 5.5をAnthropic公式情報で解説。Sonnet 5比30%以上高速、1タスク最大30%低コストの意味、Opus 5.5との料金・用途の違い、切替前の測定項目を紹介します。">
+<!-- OGP Tags -->
+<meta property="og:title" content="Claude Sonnet 5.5が公開｜Opus 5.5との違いと業務での選び方">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://miraina-ai.com/blogs/blog322.html">
+<meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog322-1.webp">
+<meta property="og:description" content="Claude Sonnet 5.5をAnthropic公式情報で解説。Sonnet 5比30%以上高速、1タスク最大30%低コストの意味、Opus 5.5との料金・用途の違い、切替前の測定項目を紹介します。">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Shippori+Mincho:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<!-- Favicon -->
+<link rel="icon" href="/images/favicon.ico">
+<!-- CSS -->
+<link rel="stylesheet" href="/css/reset.css">
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/css/blog_article.css">
+<link rel="canonical" href="https://miraina-ai.com/blogs/blog322.html">
+<style>.article-body .code-block pre{white-space:pre-wrap;overflow-wrap:anywhere;color:#f5f5f5}.article-body .code-block pre code{color:inherit;background:transparent}.article-body td code{overflow-wrap:anywhere;word-break:break-word}.article-cta .cta-title{color:#fff}</style>
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+<div class="container header-inner">
+<a class="header-logo" href="/"><img alt="MIRAINA" height="40" src="/images/company-logo.webp" width="120"></a>
+<div class="hamburger" id="js-hamburger"><span></span><span></span><span></span></div>
+<nav class="header-nav">
+<div class="nav-item has-dropdown">
+<a class="nav-link" href="/services.html">サービス</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="/services/ai_consulting.html">生成AI活用支援</a>
+<a class="dropdown-item" href="/services/ai_training.html">AI研修</a>
+<a class="dropdown-item" href="/services/ai_develop.html">AI開発</a>
+<a class="dropdown-item" href="/services/llmo_insight.html">LLMO Insight</a>
+<a class="dropdown-item" href="/beauty-dx/">美容サロン特化AI活用支援</a>
+</div>
+</div>
+<div class="nav-item"><a class="nav-link" href="/about.html">MIRAINAについて</a></div>
+<div class="nav-item"><a class="nav-link" href="/works.html">事例紹介</a></div>
+<div class="nav-item"><a class="nav-link" href="/blogs.html">ブログ</a></div>
+<div class="nav-item"><a class="nav-link btn-contact" href="/contact.html">お問い合わせ</a></div>
+<div class="nav-item"><a aria-label="AI info" class="nav-link" href="/llms.txt"><svg class="icon-thin" height="20" viewBox="0 0 24 24" width="20"><path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"></path></svg></a></div>
+</nav>
+</div>
+<div class="mobile-menu" id="js-mobile-menu"><nav class="mobile-nav">
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/services.html">サービス</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/about.html">MIRAINAについて</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/works.html">事例紹介</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/blogs.html">ブログ</a></div>
+<div class="mobile-nav-item"><a class="mobile-nav-link" href="/contact.html">お問い合わせ</a></div>
+</nav></div>
+</header>
+<main>
+<!-- Breadcrumbs -->
+<div class="container breadcrumbs"><ul><li><a href="/index.html">ホーム</a></li><li><a href="/blogs.html">ブログ</a></li><li>Claude Sonnet 5.5が公開｜Opus 5.5との違いと業務での選び方</li></ul></div>
+<article class="article-container">
+<!-- Article Header -->
+<header class="article-header">
+<div class="article-meta"><span class="article-date">2026.09.29</span><div class="article-tags"><span class="article-tag">Claude</span><span class="article-tag">AI活用</span><span class="article-tag">業務効率化</span></div></div>
+<h1 class="article-title">Claude Sonnet 5.5が公開｜Opus 5.5との違いと業務での選び方</h1>
+<div class="article-thumbnail"><img alt="Claude Sonnet 5.5とOpus 5.5の違いと業務での選び方" fetchpriority="high" height="675" src="/images/blogs_images/blog322-1.webp" width="1200"></div>
+</header>
+<!-- Summary -->
+<section class="article-summary"><h2 class="sr-only">記事の概要</h2><p>Claude Sonnet 5.5は速くて安いと聞いたものの、「Sonnet 5からすぐ切り替えるべきか」「Opus 5.5とどちらを使えばよいか」が分からない担当者も多いのではないでしょうか。本記事ではAnthropicとAWSの公式情報をもとに、速度・料金・得意業務の違いを整理します。モデル単価ではなく、1件の業務を完了する時間・トークン・修正回数で判断する方法まで解説します。</p></section>
+<!-- Table of Contents -->
+<div class="article-toc"><div class="toc-title">目次</div><ul>
+<li><a href="#section1">1. Claude Sonnet 5.5とは？主な変更点</a></li>
+<li><a href="#section2">2. Sonnet 5・Opus 5.5との違い</a></li>
+<li><a href="#section3">3. 「最大30%低コスト」の正しい見方</a></li>
+<li><a href="#section4">4. 初心者の検索とAIへの質問</a></li>
+<li><a href="#section5">5. 切り替え前に測る4項目</a></li>
+<li><a href="#section6">6. まとめ：小さな定型業務で比較する</a></li>
+</ul></div>
+<!-- Main Content Body -->
+<div class="article-body">
+<h2 id="section1">1. Claude Sonnet 5.5とは？主な変更点</h2>
+<p><strong>Anthropicは2026年9月28日、Claude Sonnet 5.5を公開しました。</strong>同社はSonnet 5からの明確なアップグレードと位置づけ、出力速度は30%以上高速、同じ仕事を終えるための費用は最大30%低いと説明しています。Claudeの各アプリ、Claude Platform、AWS、Google Cloud、Microsoft Azureで利用できます。出典：<a href="https://www.anthropic.com/claude-sonnet-5-5" rel="noopener" target="_blank">Anthropic公式発表（2026年9月28日）</a>。</p>
+<p>改善の中心は、手順と完成条件が決まっている業務を速く実行する能力です。バグ修正、短い資料の作成、表計算の更新、定型分析などで、少ない手順とトークンで結果へ到達しやすくなりました。AnthropicのTerminal-Bench 4.0評価ではSonnet 5.5が70.6%、Sonnet 5が10.3%でした。ただし、この値はエージェント型コーディングの特定評価であり、一般的な事務作業の成功率を直接示すものではありません。</p>
+<p>価格表だけを見ると、Sonnet 5.5はSonnet 5から値下げされていません。100万トークンあたり入力2ドル、出力10ドル、キャッシュ読み取り0.20ドルで据え置きです。今回のポイントは、同じ仕事に必要な出力トークンやツール呼び出しが減り、1件あたりの総費用が下がる可能性があることです。</p>
+<figure class="article-figure"><img alt="Anthropic公式発表に掲載されたClaude Sonnet 5.5の性能・料金・速度の説明" decoding="async" loading="lazy" src="/images/blogs_images/blog322-2.webp"><figcaption>図1：Anthropic公式発表で確認したSonnet 5.5の概要と評価・料金の記載（2026年9月28日確認）</figcaption></figure>
+
+<h2 id="section2">2. Sonnet 5・Opus 5.5との違い</h2>
+<p>Sonnet 5.5は、速さと費用のバランスを重視する日常業務向けです。一方、Opus 5.5は、正解までの方針が決まっていない仕事や、長い資料を読みながら判断を重ねる仕事に向きます。AWSも、Sonnet 5.5は方針が明確な実行、Opus 5.5は慎重な判断が必要な仕事に使い分ける考え方を示しています。</p>
+<div class="article-table-wrapper"><table class="article-table"><thead><tr><th>比較項目</th><th>Sonnet 5</th><th>Sonnet 5.5</th><th>Opus 5.5</th></tr></thead><tbody>
+<tr><td>主な役割</td><td>従来の日常業務</td><td>範囲が明確な業務を速く実行</td><td>複雑で判断の多い業務</td></tr>
+<tr><td>入力料金</td><td>2ドル／100万トークン</td><td>2ドル／100万トークン</td><td>4ドル／100万トークン</td></tr>
+<tr><td>出力料金</td><td>10ドル／100万トークン</td><td>10ドル／100万トークン</td><td>20ドル／100万トークン</td></tr>
+<tr><td>向く仕事</td><td>既存フローの継続</td><td>定型分析、資料修正、バグ修正</td><td>契約レビュー、設計、長期調査</td></tr>
+<tr><td>選ぶ基準</td><td>移行前の基準値</td><td>速度と処理量</td><td>判断品質と完了率</td></tr>
+</tbody></table></div>
+<p>「重要な仕事はすべてOpus」という分け方では、費用が増えるだけでなく処理が遅くなる場合があります。たとえば、提案の方針と評価基準はOpus 5.5で決め、決まった構成に沿ったスライド整形はSonnet 5.5へ渡す方法があります。モデルを役職のように固定せず、<strong>判断と実行を工程で分ける</strong>ことが使い分けの基本です。Opus側の料金変更は<a href="/blogs/blog314.html">Claude Opus 5.5のコスト解説</a>で詳しく整理しています。</p>
+
+<h2 id="section3">3. 「最大30%低コスト」の正しい見方</h2>
+<p>Anthropicが示す「最大30%低コスト」は、APIの入力・出力単価が30%安くなったという意味ではありません。Sonnet 5.5が同じ仕事を少ないトークンや手順で終えた結果、同社テストで<strong>1タスクあたり最大30%安くなった</strong>という説明です。依頼内容、effort設定、ツール利用、やり直し回数によって、自社の削減率は変わります。</p>
+<p>たとえば出力単価が同じでも、報告書1件を2万トークンではなく1万4千トークンで完成できれば、出力費用は下がります。一方、速度が上がったことで利用件数が増えれば、月額請求は増える可能性があります。「月のAI費用が下がったか」だけでなく、完了した業務件数と人の確認時間も一緒に測ってください。</p>
+<h3>1タスク単価の記録例</h3>
+<div class="code-block"><pre><code>対象業務：［例：週次営業レポート］
+使用モデル：［Sonnet 5 / Sonnet 5.5］
+入力トークン：［数値］
+出力トークン：［数値］
+ツール呼び出し回数：［数値］
+完了までの時間：［分］
+人の修正時間：［分］
+合格した件数：［全10件中○件］</code></pre></div>
+<p>Anthropicは、ClaudeアプリとClaude Codeの既定effortをMedium、Claude Platformの既定をHighと説明しています。effortが違えば品質・速度・費用も変わるため、比較時は同じ設定と同じテストデータを使います。ベンチマークの順位だけでモデルを選ばず、自社の完成条件で再現できるかを確認しましょう。</p>
+
+<h2 id="section4">4. 初心者の検索とAIへの質問</h2>
+<p>AI活用にまだ慣れていない人は、最初から「モデルのベンチマーク」を探すより、「Claude Sonnet 5.5 何が変わった」「Claude SonnetとOpusどっち」「Claudeで資料作成できる？」のように、仕事の困りごとから検索するはずです。その後にAIへ「営業資料の下書きならSonnet 5.5で足りる？」「月額費用は下がる？」「確認が必要な箇所はどこ？」と聞き、複数の記事を比較する流れが考えられます。</p>
+<p>その質問に対してAIが引用しやすいのは、「速い」「賢い」という感想ではなく、<strong>公式の発表日、料金単価、対象となる作業、比較の前提、例外</strong>が分かれている記事です。本記事では、30%という数値をAPI単価の値下げと混同せず、Anthropicのテストにおける1タスクあたりの費用と明記しています。自社サイトでも、結論だけでなく出典・条件・確認方法を近くに置くことで、AIにも人にも検証しやすい情報になります。</p>
+<h3>最初にAIへ投げる質問例</h3>
+<div class="code-block"><pre><code>当社では［週次レポート／提案資料の整形／問い合わせ分類］を
+AIに任せたいです。入力は［資料・表・メール］、完成条件は［具体的な形式］です。
+Claude Sonnet 5.5とOpus 5.5のどちらから試すべきか、
+公式に確認できる違いと、当社で比較すべき項目を分けて教えてください。
+根拠URLを示し、分からない点は推測せず「要確認」としてください。</code></pre></div>
+<p>この聞き方なら、AIはモデル名の比較だけでなく、利用目的・必要な根拠・確認の責任範囲を整理しやすくなります。回答に「必ず安くなる」「すべて自動化できる」といった断定があれば、料金表と検証条件へ戻って確認してください。<strong>MIRAINAの視点：</strong>モデル選定で最初に決めるべきなのは「最も賢いAI」ではなく「どこから先を人が判断するか」です。判断基準が言語化された後の実行範囲をSonnet 5.5で試し、複雑な判断だけをOpus 5.5へ渡すと、導入の失敗を小さくできます。AIに仕事を任せる前の分解方法は<a href="/blogs/blog190.html">Claude Sonnet 5の業務設計</a>も参考になります。</p>
+
+<h2 id="section5">5. 切り替え前に測る4項目</h2>
+<p>既存のSonnet 5利用を一度に置き換える必要はありません。まず同じ業務を10〜30件用意し、旧モデルと新モデルを並行比較します。機密情報を含む場合は匿名化した検証データを使い、次の4項目を記録してください。</p>
+<ol>
+<li><strong>完了率：</strong>人の追加指示なしで、定めた完成条件へ到達した割合。</li>
+<li><strong>総時間：</strong>回答時間だけでなく、人が確認・修正した時間まで含める。</li>
+<li><strong>1件あたり総費用：</strong>入力、出力、キャッシュ、外部ツールの費用を合算する。</li>
+<li><strong>重大な誤り：</strong>数字の転記ミス、根拠のない記述、権限外の操作を別枠で数える。</li>
+</ol>
+<p>平均点が上がっても、重大な誤りが1件増えれば切り替えられない業務もあります。反対に、下書き用途なら小さな表現差より速度を優先できます。業務ごとに合格基準を変え、Sonnet 5.5、Opus 5.5、人の担当範囲を決めます。</p>
+<p>Claude APIへ移行する場合、AnthropicはモデルIDとして<code>claude-sonnet-5-5</code>を案内しています。また、thinkingをオフにしてSonnetを使っている場合は、新しい<code>between_tools</code>設定への切り替えが必要とされています。本番変更前に移行ガイドと契約環境の提供条件を確認し、すぐ戻せるよう旧モデルの設定も記録しておきましょう。</p>
+
+<h2 id="section6">6. まとめ：小さな定型業務で比較する</h2>
+<p>Claude Sonnet 5.5は、Sonnet 5と同じAPI単価を維持しながら、30%以上の高速化と1タスクあたり最大30%の低コスト化を掲げるモデルです。方針が明確な実行はSonnet 5.5、複雑で継続的な判断はOpus 5.5という分担が出発点になります。</p>
+<p>まずは週次レポートや定型資料など、完成条件を決めやすい業務を一つ選んでください。同じ入力で完了率、総時間、総費用、重大な誤りを比べれば、「新しいから切り替える」ではなく、自社の数字で判断できます。</p>
+<p>MIRAINAの<a href="/services/ai_consulting.html">生成AI活用支援</a>と<a href="/services/ai_develop.html">AI開発</a>では、業務の切り分け、モデル比較、権限・確認フローの設計まで支援しています。Claudeをどの業務から試すべきか整理したい場合はご相談ください。</p>
+<div class="article-references"><div class="ref-title">参考リンク（2026年9月29日確認）</div><ul>
+<li><a href="https://www.anthropic.com/claude-sonnet-5-5" rel="noopener" target="_blank">Anthropic：Introducing Claude Sonnet 5.5</a></li>
+<li><a href="https://aws.amazon.com/blogs/machine-learning/introducing-claude-sonnet-5-5-on-aws/" rel="noopener" target="_blank">AWS：Introducing Claude Sonnet 5.5 on AWS</a></li>
+</ul></div>
+</div>
+<!-- CTA Button -->
+<div class="article-cta"><div class="cta-box"><h2 class="cta-title">AI導入でお悩みですか？</h2><p class="cta-text">MIRAINAでは、貴社の課題に合わせた<br>最適なAI活用プランをご提案します。</p><a class="btn btn-black-fill" href="/contact.html">無料相談する</a></div></div>
+<!-- Editorial Information -->
+<div class="article-editor"><div class="editor-header">この記事を監修した人</div><div class="editor-profile"><div class="editor-image"><img alt="本記事の監修者 芝優作（MIRAINA）" decoding="async" loading="lazy" src="/images/shiba_yusaku.webp"></div><div class="editor-info"><div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div><p class="editor-desc">中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。九州大学大学院でLLMに関する研究にも従事。</p></div></div></div>
+<!-- Related Articles -->
+<div class="article-related"><h2 class="related-title">関連記事</h2><div class="related-grid">
+<a class="related-card" href="/blogs/blog190.html"><div class="related-img"><img alt="Claude Sonnet 5とは？AIに仕事を任せやすくなる理由" decoding="async" loading="lazy" src="/images/blogs_images/blog-card190.webp"></div><div class="related-content"><div class="related-date">2026.07.01</div><div class="related-text">Claude Sonnet 5とは？AIに仕事を任せやすくなる理由</div></div></a>
+<a class="related-card" href="/blogs/blog314.html"><div class="related-img"><img alt="Claude Opus 5.5が公開｜コスト4割減の内訳と乗り換え前の4項目" decoding="async" loading="lazy" src="/images/blogs_images/blog-card314.webp"></div><div class="related-content"><div class="related-date">2026.09.23</div><div class="related-text">Claude Opus 5.5が公開｜コスト4割減の内訳と乗り換え前の4項目</div></div></a>
+<a class="related-card" href="/blogs/blog282.html"><div class="related-img"><img alt="Claude Fable 5.1とは？長時間AIエージェントの選び方" decoding="async" loading="lazy" src="/images/blogs_images/blog-card282.webp"></div><div class="related-content"><div class="related-date">2026.09.02</div><div class="related-text">Claude Fable 5.1とは？長時間AIエージェントの選び方</div></div></a>
+</div></div>
+</article>
+</main>
+<!-- Footer -->
+<footer class="footer"><div class="container footer-inner"><div class="footer-brand"><a href="/index.html"><p class="footer-brand-text">MIRAINA</p></a></div><div class="footer-center"></div><div class="footer-menu"><ul class="footer-menu-list"><li><a href="/about.html">私たちについて</a></li><li><a href="/works.html">事例紹介</a></li><li><a href="/blogs.html">ブログ</a></li><li><a href="/contact.html">お問い合わせ</a></li><li><a href="/privacy_policy.html">プライバシーポリシー</a></li></ul><div class="footer-sns"><a href="https://www.instagram.com/plus.taime" rel="noopener" target="_blank">Instagram</a><a href="https://www.threads.com/@plus.taime" rel="noopener" target="_blank">Threads</a></div></div></div><div class="footer-bottom"><a aria-label="AI info" class="footer-robot-icon" href="/llms.txt"><svg class="icon-thin" height="24" viewBox="0 0 24 24" width="24"><path d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z"></path></svg></a><p>© MIRAINA All Rights Reserved.</p></div></footer>
+<script src="/js/common.js"></script>
+<script>document.addEventListener('DOMContentLoaded',()=>{const hamburger=document.getElementById('js-hamburger');const mobileMenu=document.getElementById('js-mobile-menu');if(hamburger&&mobileMenu){hamburger.addEventListener('click',()=>{mobileMenu.classList.toggle('is-active');});}});</script>
+</body>
+</html>
