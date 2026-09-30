@@ -415,6 +415,9 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: Claude Sonnet 5.5が公開｜Opus 5.5との違いと業務での選び方](https://miraina-ai.com/blogs/blog322.html)
   - **更新日**: 2026.09.29
   - **概要**: Claude Sonnet 5.5の速度・1タスクあたりの費用・API料金を公式情報で確認し、Sonnet 5やOpus 5.5との違い、業務別の選び方を解説します。
+- [最新ブログ: Copilot Coworkの使い方｜AIに業務を任せる3つの指示](https://miraina-ai.com/blogs/blog323.html)
+  - **更新日**: 2026.09.30
+  - **概要**: Copilot Coworkを起点に、AIへ業務を任せる3つの指示例、費用・権限の確認、小さく始める手順を解説します。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)
