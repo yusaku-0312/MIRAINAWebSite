@@ -418,6 +418,9 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: Copilot Coworkの使い方｜AIに業務を任せる3つの指示](https://miraina-ai.com/blogs/blog323.html)
   - **更新日**: 2026.09.30
   - **概要**: Copilot Coworkを起点に、AIへ業務を任せる3つの指示例、費用・権限の確認、小さく始める手順を解説します。
+- [最新ブログ: Fabric IQとは？AIに社内の数字を任せる前の3つの準備](https://miraina-ai.com/blogs/blog324.html)
+  - **更新日**: 2026.10.01
+  - **概要**: Fabric IQを起点に、AIへ社内の数字を尋ねる前に必要な指標定義、権限、確認手順と質問例を解説します。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)
