@@ -421,6 +421,9 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: Fabric IQとは？AIに社内の数字を任せる前の3つの準備](https://miraina-ai.com/blogs/blog324.html)
   - **更新日**: 2026.10.01
   - **概要**: Fabric IQを起点に、AIへ社内の数字を尋ねる前に必要な指標定義、権限、確認手順と質問例を解説します。
+- [最新ブログ: AIの出典確認｜ChatGPTで調査結果を鵜呑みにしない3つの質問](https://miraina-ai.com/blogs/blog325.html)
+  - **更新日**: 2026.10.03
+  - **概要**: AIの出典確認を、ChatGPTで市場・競合調査をするときの3つの質問例で解説。一次情報、日付、未確認事項を確かめる方法を紹介します。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)

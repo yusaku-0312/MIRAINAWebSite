@@ -2915,6 +2915,15 @@
       "thumbnail": "/images/blogs_images/blog-card324.webp",
       "alt": "Fabric IQでAIに社内の数字を尋ねるための準備",
       "date": "2026-10-01"
+    },
+    {
+      "id": 325,
+      "title": "AIの出典確認｜ChatGPTで調査結果を鵜呑みにしない3つの質問",
+      "description": "AIの出典確認を、ChatGPTで市場・競合調査をするときの3つの質問例で解説。一次情報、日付、未確認事項を確かめる方法を紹介します。",
+      "link": "/blogs/blog325.html",
+      "thumbnail": "/images/blogs_images/blog-card325.webp",
+      "alt": "ChatGPTで調査した情報の出典を確認する方法",
+      "date": "2026-10-03"
     }
   ],
   "works": [
