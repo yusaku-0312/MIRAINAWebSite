@@ -2933,6 +2933,15 @@
       "thumbnail": "/images/blogs_images/blog-card326.webp",
       "alt": "AI研修を小さな会社で始める3つの実践ステップ",
       "date": "2026-10-05"
+    },
+    {
+      "id": 327,
+      "title": "AIエージェントに仕事を任せるには？ChatGPT dotsで決める3つのこと",
+      "description": "AIエージェントに仕事を任せる前に決める、目的・権限・承認の3項目を解説。OpenAIが発表したChatGPT dotsを例に、定例業務で使う指示文と安全な始め方を紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card327.webp",
+      "alt": "AIエージェントに仕事を任せるために決める3つのこと",
+      "link": "/blogs/blog327.html",
+      "date": "2026-10-06"
     }
   ],
   "works": [

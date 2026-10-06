@@ -427,6 +427,9 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: AI研修は何から始める？小さな会社の3つの実践ステップ](https://miraina-ai.com/blogs/blog326.html)
   - **更新日**: 2026.10.05
   - **概要**: Anthropicの10,000人育成発表を起点に、AI研修を実務で定着させる3つのステップと質問プロンプトを解説します。
+- [最新ブログ: AIエージェントに仕事を任せるには？ChatGPT dotsで決める3つのこと](https://miraina-ai.com/blogs/blog327.html)
+  - **更新日**: 2026.10.06
+  - **概要**: AIエージェントに仕事を任せる前に決める、目的・権限・承認の3項目を、ChatGPT dotsと定例業務の指示文を例に解説します。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)
