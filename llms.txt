@@ -433,6 +433,9 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: ChatGPTのプロンプトの書き方｜仕事で使える3つの伝え方](https://miraina-ai.com/blogs/blog328.html)
   - **更新日**: 2026.10.07
   - **概要**: ChatGPTのプロンプトの書き方を、目的・前提・完了条件の3つに分け、仕事で使える質問例とAIが参照しやすい情報の整え方を解説します。
+- [最新ブログ: ChatGPTの表・計画作成｜GPT-6で仕事の相談を形にする3つの質問](https://miraina-ai.com/blogs/blog329.html)
+  - **更新日**: 2026.10.08
+  - **概要**: ChatGPTの表・計画作成を、GPT-6のIntelligent UI発表をもとに解説。比較表、作業計画、簡易計算を仕事で形にする質問例と確認点を紹介します。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)

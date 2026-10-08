@@ -2944,6 +2944,15 @@
       "date": "2026-10-06"
     },
     {
+      "id": 329,
+      "title": "ChatGPTの表・計画作成｜GPT-6で仕事の相談を形にする3つの質問",
+      "description": "ChatGPTの表・計画作成を、GPT-6のIntelligent UI発表をもとに解説。比較表、作業計画、簡易計算を仕事で形にする質問例と確認点を紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card329.webp",
+      "alt": "ChatGPTで仕事の相談を表や計画として整理する方法",
+      "link": "/blogs/blog329.html",
+      "date": "2026-10-08"
+    },
+    {
       "id": 328,
       "title": "ChatGPTのプロンプトの書き方｜仕事で使える3つの伝え方",
       "description": "ChatGPTのプロンプトの書き方を、仕事で使うための目的・前提・完了条件の3つで解説。すぐ使える質問例とAIが参照しやすい情報の整え方を紹介します。",
