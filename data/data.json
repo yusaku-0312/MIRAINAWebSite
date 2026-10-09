@@ -2960,6 +2960,15 @@
       "alt": "ChatGPTのプロンプトの書き方を仕事で使う3つの伝え方",
       "link": "/blogs/blog328.html",
       "date": "2026-10-07"
+    },
+    {
+      "id": 330,
+      "title": "Gemini agentとは？メール・資料・予定をAIに頼む3つの質問",
+      "description": "Gemini agentとは何かを、Google Cloudの発表をもとに解説。メール・資料・予定をAIに頼む3つの質問、確認を残す場面、AIが引用しやすい情報の整え方を紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card330.webp",
+      "alt": "Gemini agentでメール・資料・予定の仕事を整理する方法",
+      "link": "/blogs/blog330.html",
+      "date": "2026-10-09"
     }
   ],
   "works": [
