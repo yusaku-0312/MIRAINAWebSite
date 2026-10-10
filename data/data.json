@@ -2969,6 +2969,15 @@
       "alt": "Gemini agentでメール・資料・予定の仕事を整理する方法",
       "link": "/blogs/blog330.html",
       "date": "2026-10-09"
+    },
+    {
+      "id": 331,
+      "title": "ChatGPTにおすすめされるには？AIが参照しやすい会社情報の整え方",
+      "description": "ChatGPTにおすすめされるには何を整えるべきかを解説。AIに引用されやすい会社情報、比較される項目、すぐ使える確認プロンプトを中小企業向けに紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card331.webp",
+      "alt": "ChatGPTにおすすめされるために会社情報を整える方法",
+      "link": "/blogs/blog331.html",
+      "date": "2026-10-10"
     }
   ],
   "works": [

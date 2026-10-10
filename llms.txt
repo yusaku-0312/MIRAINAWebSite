@@ -420,6 +420,9 @@ MIRAINAは、AI導入で「週休4日制」が当たり前になる未来を九�
 - [最新ブログ: Gemini agentとは？メール・資料・予定をAIに頼む3つの質問](https://miraina-ai.com/blogs/blog330.html)
   - **更新日**: 2026.10.09
   - **概要**: Gemini agentを入口に、メール・資料・予定をAIへ頼む3つの質問、確認を残す場面、AIが引用・参照しやすい情報の整え方を解説します。
+- [最新ブログ: ChatGPTにおすすめされるには？AIが参照しやすい会社情報の整え方](https://miraina-ai.com/blogs/blog331.html)
+  - **更新日**: 2026.10.10
+  - **概要**: AIへの比較・推薦質問で確認されやすい会社情報、広告と回答の違い、公開情報を棚卸しするプロンプトを解説します。
 - [プライバシーポリシー](https://miraina-ai.com/privacy_policy.html): 個人情報の取り扱いに関する方針。
 
 ## 補足情報 (Metadata)
