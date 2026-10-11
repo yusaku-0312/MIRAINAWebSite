@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, follow">
+  <meta name="description" content="MIRAINA Google連携ツールGWS_CLIが取得するGoogleユーザーデータと、その利用、保存、共有、削除について説明します。">
+  <link rel="canonical" href="https://miraina-ai.com/gws-cli-privacy.html">
+  <link rel="icon" href="/images/favicon.ico">
+  <title>GWS_CLI プライバシーポリシー | MIRAINA</title>
+  <style>
+    :root { color-scheme: light; font-family: -apple-system, BlinkMacSystemFont, "Noto Sans JP", sans-serif; color: #202124; background: #f6f7f9; }
+    * { box-sizing: border-box; }
+    body { margin: 0; line-height: 1.9; }
+    a { color: #174ea6; text-underline-offset: .2em; }
+    a:focus-visible { outline: 3px solid #174ea6; outline-offset: 4px; }
+    header, main, footer { width: min(880px, calc(100% - 40px)); margin: auto; }
+    header { padding: 30px 0; }
+    header a { color: inherit; font-weight: 700; text-decoration: none; letter-spacing: .12em; }
+    main { padding: 44px; background: white; border: 1px solid #e0e3e7; border-radius: 16px; }
+    .eyebrow, .date { color: #5f6368; font-size: .9rem; }
+    h1 { margin: 6px 0 14px; font-size: clamp(1.65rem, 5vw, 2.4rem); line-height: 1.5; }
+    h2 { margin: 36px 0 12px; font-size: 1.3rem; line-height: 1.5; }
+    p, ul { margin: 12px 0; }
+    li + li { margin-top: 10px; }
+    footer { padding: 24px 0 40px; font-size: .9rem; color: #5f6368; }
+    @media (max-width: 600px) { main { padding: 26px 22px; } header, main, footer { width: calc(100% - 24px); } }
+  </style>
+</head>
+<body>
+  <header><a href="/">MIRAINA</a></header>
+  <main>
+    <p class="eyebrow">MIRAINA Google連携ツール</p>
+    <h1>GWS_CLI プライバシーポリシー</h1>
+    <p>このポリシーは、MIRAINAが運用するGoogle連携ツール「GWS_CLI」に適用します。Googleアカウントとの連携によって取得するデータの取り扱いを説明します。</p>
+
+    <h2>1. 取得するデータ</h2>
+    <p>利用者がGoogleの認証画面で許可した権限と、依頼した業務の範囲で、次のデータを取得します。</p>
+    <ul>
+      <li>Google Adsの広告アカウント識別情報、アカウント設定、広告の掲載結果、およびキーワード調査の集計情報。</li>
+      <li>Google Analyticsのプロパティ識別情報、アクセス・イベントなどの集計レポート。</li>
+      <li>Google Search Consoleのサイト識別情報、検索クエリ、表示回数、クリック数などの集計データ。</li>
+      <li>利用者が指定するGoogleスプレッドシートの内容と、読み取り・更新に必要な識別情報。</li>
+      <li>Google APIへの接続に必要なOAuth認証情報。Googleアカウントのパスワードは取得しません。</li>
+    </ul>
+
+    <h2>2. 利用目的と操作</h2>
+    <p>データは、利用者が依頼したキーワード調査、広告・サイトの分析、レポート作成、スプレッドシートの整理や更新、および接続の維持・障害対応に利用します。Google Adsの連携は情報の取得と調査に使用します。Google Sheetsへの書き込みは、利用者が依頼した範囲で行います。</p>
+
+    <h2>3. 保存と保護</h2>
+    <p>取得したデータ、分析結果、認証情報は、MIRAINAの業務用実行環境に保存します。依頼内容に応じて、指定されたGoogleスプレッドシートや業務支援サービスの履歴・成果物にも保存される場合があります。</p>
+    <p>認証情報へのアクセスを制限し、公開ページや公開リポジトリには掲載しません。Google APIとの通信には暗号化された接続を使用します。データは業務上必要な期間に限って保管し、不要になったデータは管理する保存先から削除します。</p>
+
+    <h2>4. 外部サービスと共有</h2>
+    <p>利用者がCodexなどのAI業務支援サービスで分析を依頼する場合、依頼の処理に必要なGoogleデータを、利用者の同意のもとでOpenAIなどの当該サービス提供元へ送信することがあります。送信するデータは依頼に必要な範囲に限り、認証情報は送信しません。</p>
+    <p>Googleユーザーデータを販売せず、第三者の独立した目的での利用、広告配信、信用判断のために提供しません。Google APIから取得したデータの利用および他サービスへの転送は、<a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>のLimited Use要件に従います。上記の業務処理を提供する場合、利用者が明示的に同意した場合、セキュリティ対応、または法令への対応が必要な場合に限り共有します。</p>
+
+    <h2>5. 連携の解除と削除</h2>
+    <p>利用者は、<a href="https://myaccount.google.com/connections">Googleアカウントの接続設定</a>からGWS_CLIへのアクセス許可を取り消せます。解除後、取り消した権限による新たなデータ取得は行いません。</p>
+    <p>アクセス許可の取り消しだけでは、取得済みのファイルや分析結果は自動的に削除されません。MIRAINAが管理するデータの削除は下記の窓口へご依頼ください。法令上の保存義務がある情報を除き、不要な取得データと認証情報を削除します。利用者が管理するGoogleスプレッドシートや外部サービスの履歴は、それぞれの保存先でも削除が必要です。</p>
+
+    <h2>6. ポリシーの変更</h2>
+    <p>機能やデータの取り扱いを変更する際は、このページを更新します。新たな種類のデータ取得や利用目的の変更がある場合は、実施前に利用者へ説明し、必要な同意を得ます。</p>
+
+    <h2>7. お問い合わせ</h2>
+    <p>運営者：MIRAINA代表 芝 優作<br>連絡先：<a href="mailto:shiba.yusaku.ai@gmail.com">shiba.yusaku.ai@gmail.com</a></p>
+    <p class="date">最終更新日：2026年10月11日</p>
+    <p><a href="/gws-cli.html">GWS_CLIの説明へ戻る</a> · <a href="/privacy_policy.html">MIRAINA全体のプライバシーポリシー</a></p>
+  </main>
+  <footer>© MIRAINA</footer>
+</body>
+</html>
