@@ -654,6 +654,11 @@
     color: var(--color-white);
 }
 
+.work-service-link {
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+}
+
 .btn-black-fill {
     background-color: var(--color-white);
     color: var(--color-miraina-black);

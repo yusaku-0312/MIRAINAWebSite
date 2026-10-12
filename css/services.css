@@ -179,3 +179,26 @@
     border-radius: 4px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
+
+/* Typography-led introduction for the AI literacy business. */
+.service-detail-statement {
+    flex: 1;
+    width: 100%;
+    max-width: 500px;
+    padding: 3rem 2rem;
+    border-top: 1px solid var(--color-miraina-black);
+    border-bottom: 1px solid var(--color-miraina-black);
+}
+
+.service-statement-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 1.5rem;
+}
+
+.service-statement-copy {
+    font-family: var(--font-mincho);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.6;
+    color: var(--color-miraina-black);
+}

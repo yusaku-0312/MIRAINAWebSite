@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+/* MIRAINA Digital Editorial: shared palette, Mincho headings, asymmetric space. */
+.kentei-page {
+    --kentei-line: rgba(26, 26, 26, 0.18);
+}
+
+.kentei-page a:focus-visible,
+.kentei-page button:focus-visible,
+.kentei-page summary:focus-visible {
+    outline: 2px solid var(--color-intellect-blue);
+    outline-offset: 5px;
+}
+
+.kentei-skip-link { position: fixed; top: -6rem; left: 1rem; z-index: 1100; padding: 0.75rem 1.25rem; background: var(--color-white); }
+.kentei-skip-link:focus { top: 1rem; }
+.kentei-page .mobile-menu { visibility: hidden; }
+.kentei-page .mobile-menu.is-active { visibility: visible; }
+.kentei-page .hamburger { width: 44px; height: 44px; padding: 12px 7px; }
+.kentei-kicker { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.2em; color: var(--color-miraina-black); margin-bottom: 1.5rem; }
+.kentei-text-link { display: inline-block; font-size: 0.875rem; text-decoration: underline; text-underline-offset: 0.35em; line-height: 1.8; }
+.kentei-text-link:hover { color: var(--color-intellect-blue); }
+.kentei-page .btn { text-align: center; }
+
+/* Hero: service identity on the left, intent and action offset on the right. */
+.kentei-hero { padding: 3rem 0 4rem; border-bottom: 1px solid var(--color-miraina-black); }
+.kentei-hero-grid { display: grid; gap: 2.5rem; }
+.kentei-hero-identity { position: relative; }
+.kentei-hero h1 { font-size: clamp(2.5rem, 5vw, 5rem); font-weight: 500; line-height: 1.4; letter-spacing: 0.03em; }
+.kentei-vertical-note { display: none; }
+.kentei-hero-copy h2 { font-size: clamp(1.65rem, 2.8vw, 2.5rem); line-height: 1.7; margin-bottom: 1.5rem; }
+.kentei-lead { font-size: 0.95rem; line-height: 2; }
+.kentei-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 1.5rem; margin-top: 2rem; }
+.kentei-hero-facts { display: grid; gap: 1rem; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--kentei-line); font-size: 0.8rem; }
+.kentei-hero-facts > div { display: grid; grid-template-columns: 5rem 1fr; gap: 1rem; }
+.kentei-hero-facts dt { color: var(--color-text-gray); }
+.kentei-hero-facts dd { color: var(--color-miraina-black); }
+
+/* Contents: numbered editorial index, with the existing link interaction. */
+.kentei-toc { border-bottom: 1px solid var(--kentei-line); }
+.kentei-toc-inner { padding-top: 2rem; padding-bottom: 2rem; }
+.kentei-toc p { font-size: 0.75rem; letter-spacing: 0.15em; margin-bottom: 1.25rem; }
+.kentei-toc p > span { margin-left: 1rem; letter-spacing: 0.05em; }
+.kentei-toc ol { display: flex; flex-wrap: wrap; gap: 0.5rem 2rem; font-size: 0.875rem; }
+.kentei-toc a { display: inline-flex; align-items: baseline; gap: 0.75rem; padding: 0.4rem 0; }
+.kentei-toc a > span { font-size: 0.7rem; }
+.kentei-toc a:hover { color: var(--color-intellect-blue); }
+
+/* Sections share the site spacing scale and one consistent column rhythm. */
+.kentei-section { scroll-margin-top: var(--header-height); }
+.kentei-section-white { background: var(--color-white); }
+.kentei-editorial-grid { display: grid; gap: 2.5rem; }
+.kentei-heading h2 { font-size: clamp(1.75rem, 2.5vw, 2.25rem); line-height: 1.7; }
+.kentei-heading > p:last-child:not(.kentei-kicker) { margin-top: 1.5rem; font-size: 0.95rem; }
+.kentei-prose > p { margin-bottom: 1.5rem; line-height: 2; }
+.kentei-section-lead { font-family: var(--font-mincho); font-size: clamp(1.35rem, 1.9vw, 1.75rem); color: var(--color-miraina-black); }
+.kentei-prose .btn { margin-top: 1rem; }
+
+/* Learning is a ruled list, rather than three isolated visual cards. */
+.kentei-learning-list { border-top: 1px solid var(--kentei-line); }
+.kentei-learning-item { display: grid; grid-template-columns: 2.5rem 1fr; gap: 1rem; border-bottom: 1px solid var(--kentei-line); padding: 2rem 0; }
+.kentei-number { font-family: var(--font-mincho); font-size: 1.75rem; line-height: 1.4; color: var(--color-miraina-black); }
+.kentei-learning-item h3 { font-size: 1.4rem; margin-bottom: 1rem; }
+.kentei-learning-item p { font-size: 0.95rem; line-height: 2; }
+.kentei-curriculum { margin-top: 3rem; }
+.kentei-curriculum h3 { font-size: 1.25rem; margin-bottom: 1rem; }
+.kentei-curriculum dl > div { padding: 1rem 0; border-bottom: 1px solid var(--kentei-line); }
+.kentei-curriculum dt { font-size: 0.85rem; font-weight: 500; margin-bottom: 0.5rem; }
+.kentei-curriculum dd, .kentei-curriculum > p { font-size: 0.9rem; }
+.kentei-curriculum > p { margin-top: 1rem; }
+
+/* A connected flow: knowledge leads to conversation, then to reflection. */
+.kentei-steps { margin-bottom: 3rem; }
+.kentei-steps li { position: relative; display: grid; grid-template-columns: 3rem 1fr; gap: 1.5rem; padding-bottom: 3rem; }
+.kentei-steps li:last-child { padding-bottom: 0; }
+.kentei-step-number { font-family: var(--font-mincho); font-size: 2rem; line-height: 1.4; color: var(--color-miraina-black); }
+.kentei-steps li:not(:last-child)::after { content: '↓'; position: absolute; left: 0.8rem; bottom: 0.5rem; font-size: 1.3rem; color: var(--color-miraina-black); }
+.kentei-step-label { font-size: 0.7rem; letter-spacing: 0.2em; margin-bottom: 0.4rem; }
+.kentei-steps h3 { font-size: 1.5rem; margin-bottom: 0.8rem; }
+.kentei-steps li > div > p:last-child { font-size: 0.95rem; line-height: 2; }
+.kentei-exam { border-top: 1px solid var(--kentei-line); padding-top: 2rem; }
+.kentei-exam h3, .kentei-community h3 { font-size: 1.25rem; }
+.kentei-exam > p { font-size: 0.85rem; margin-top: 0.75rem; }
+.kentei-exam-facts { display: grid; gap: 0 2rem; margin-top: 1.5rem; }
+.kentei-exam-facts > div { display: flex; justify-content: space-between; gap: 1rem; align-items: baseline; padding: 1rem 0; border-bottom: 1px solid var(--kentei-line); }
+.kentei-exam-facts dt { font-size: 0.85rem; }
+.kentei-exam-facts dd { font-size: 1rem; font-weight: 500; color: var(--color-miraina-black); }
+.kentei-community { margin-top: 2.5rem; }
+.kentei-community p { font-size: 0.9rem; margin-top: 1rem; line-height: 2; }
+.kentei-offer-note { font-size: 0.8rem; margin: 1.5rem 0 0.75rem; }
+
+/* FAQ retains native keyboard behavior and a quiet ruled treatment. */
+.kentei-faq details { border-bottom: 1px solid var(--kentei-line); }
+.kentei-faq details:first-child { border-top: 1px solid var(--kentei-line); }
+.kentei-faq summary { cursor: pointer; padding: 1.5rem 0; font-size: 0.95rem; font-weight: 500; line-height: 1.8; }
+.kentei-faq details p { padding-bottom: 1.5rem; font-size: 0.9rem; line-height: 2; }
+.kentei-faq p a { text-decoration: underline; text-underline-offset: 0.3em; }
+
+/* The final action uses the brand ink, without photographic decoration. */
+.kentei-cta { background: var(--color-miraina-black); text-align: center; color: var(--color-white); }
+.kentei-cta .kentei-kicker { color: var(--color-white); }
+.kentei-cta h2 { color: var(--color-white); font-size: clamp(1.9rem, 4vw, 3.5rem); line-height: 1.65; }
+.kentei-cta p:not(.kentei-kicker) { font-size: 0.95rem; line-height: 2; margin: 2rem auto 2.5rem; }
+.kentei-cta .btn { background: var(--color-white); color: var(--color-miraina-black); border-color: var(--color-white); }
+.kentei-cta .btn:hover { background: var(--color-intellect-blue); color: var(--color-white); border-color: var(--color-intellect-blue); }
+
+@media (min-width: 768px) {
+    .kentei-hero { padding: 4rem 0 6rem; }
+    .kentei-hero-facts { grid-template-columns: repeat(3, 1fr); margin-top: 4rem; }
+    .kentei-hero-facts > div { display: block; }
+    .kentei-hero-facts dt { margin-bottom: 0.5rem; }
+    .kentei-exam-facts { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+    .kentei-hero-grid, .kentei-editorial-grid { grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 2rem; }
+    .kentei-hero-identity { grid-column: 1 / 7; padding-left: 3rem; }
+    .kentei-hero-copy { grid-column: 8 / -1; padding-top: 0.4rem; }
+    .kentei-vertical-note { display: block; position: absolute; top: 0.5rem; left: 0; writing-mode: vertical-rl; text-orientation: upright; font-size: 0.75rem; letter-spacing: 0.2em; }
+    .kentei-heading { grid-column: 1 / 5; }
+    .kentei-editorial-grid > :last-child { grid-column: 6 / -1; }
+    .kentei-page .has-dropdown:focus-within .dropdown-menu { opacity: 1; transform: translateY(0); pointer-events: auto; }
+}
+
+@media (max-width: 767px) {
+    .kentei-hero { padding-top: 2rem; }
+    .kentei-hero .kentei-kicker { font-size: 0.65rem; }
+    .kentei-hero-copy h2 { font-size: 1.6rem; }
+    .kentei-page .btn { padding: 1rem 1.5rem; }
+    .kentei-learning-item { grid-template-columns: 2rem 1fr; gap: 0.75rem; }
+    .kentei-steps li { grid-template-columns: 2.5rem 1fr; gap: 1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .kentei-page *, .kentei-page *::before, .kentei-page *::after { transition: none; scroll-behavior: auto; }
+    .kentei-page .fade-in-section { opacity: 1; transform: none; }
+}

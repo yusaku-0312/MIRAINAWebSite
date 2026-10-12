@@ -364,6 +364,22 @@
     min-height: 400px;
 }
 
+/* AI literacy education follows the shared background-image card pattern. */
+.service-card-education {
+    grid-column: 1 / -1;
+}
+
+.service-card-education .service-card-bg { opacity: 0.22; }
+.service-card-education:hover .service-card-bg { opacity: 0.4; }
+.service-card-education::after {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.75));
+}
+.service-card-education .service-card-content { max-width: 48rem; }
+.service-card-education:focus-visible {
+    outline: 2px solid var(--color-intellect-blue);
+    outline-offset: 5px;
+}
+
 @media (min-width: 1024px) {
     .service-card-featured {
         grid-column: 1 / -1;
