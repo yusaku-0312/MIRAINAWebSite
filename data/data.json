@@ -1,5 +1,6 @@
 {
   "blogs": [
+    {"id":335,"title":"【2026年10月】AIに顧客情報を入力していい？確認する3つのこと","description":"AIに顧客情報を入力してよいか、目的・情報の種類・送信先の3つで確認する方法を解説。問い合わせや議事録を安全に扱う手順を紹介します。","thumbnail":"/images/blogs_images/blog-card335.webp","alt":"AIに顧客情報を入力する前の確認方法","link":"/blogs/blog335.html","date":"2026-10-15"},
     {"id":334,"title":"Geminiのタスク機能｜AIに予定とメールを任せる前の3つの確認","description":"Geminiのタスク機能を使う前に、予定・メール・連携アプリをAIへ任せる範囲を確認する3つの質問を解説します。","thumbnail":"/images/blogs_images/blog-card334.webp","alt":"Geminiのタスク機能で予定とメールを安全に任せる確認方法","link":"/blogs/blog334.html","date":"2026-10-14"},
     {"id":333,"title":"【2026年10月】AI問い合わせ対応とは？返信文の下書きから始める3つの質問","description":"AI問い合わせ対応を、返信文の下書き・分類・確認の3つの質問で解説。小さな会社が安全に始める方法を紹介します。","thumbnail":"/images/blogs_images/blog-card333.webp","alt":"AI問い合わせ対応を返信文の下書きから始める方法","link":"/blogs/blog333.html","date":"2026-10-13"},
     {
