@@ -1,5 +1,6 @@
 {
   "blogs": [
+    {"id":337,"title":"AIを仕事で何に使う？最初の業務を選ぶ3つの質問","description":"AIを仕事で何に使うか迷う方へ、業務の選び方とそのまま使える質問例、試した結果の確かめ方を解説します。","thumbnail":"/images/blogs_images/blog-card337.webp","alt":"AIを仕事で何に使うか選ぶ方法","link":"/blogs/blog337.html","date":"2026-10-17"},
     {"id":336,"title":"ChatGPT音声会話の使い方｜仕事で使える3つの話し方","description":"ChatGPT音声会話の使い方を、議事録の整理・メール下書き・相談の壁打ちで使える3つの話し方から解説。確認すべき注意点も紹介します。","thumbnail":"/images/blogs_images/blog-card336.webp","alt":"ChatGPT音声会話を仕事で活用する方法","link":"/blogs/blog336.html","date":"2026-10-16"},
     {"id":335,"title":"【2026年10月】AIに顧客情報を入力していい？確認する3つのこと","description":"AIに顧客情報を入力してよいか、目的・情報の種類・送信先の3つで確認する方法を解説。問い合わせや議事録を安全に扱う手順を紹介します。","thumbnail":"/images/blogs_images/blog-card335.webp","alt":"AIに顧客情報を入力する前の確認方法","link":"/blogs/blog335.html","date":"2026-10-15"},
     {"id":334,"title":"Geminiのタスク機能｜AIに予定とメールを任せる前の3つの確認","description":"Geminiのタスク機能を使う前に、予定・メール・連携アプリをAIへ任せる範囲を確認する3つの質問を解説します。","thumbnail":"/images/blogs_images/blog-card334.webp","alt":"Geminiのタスク機能で予定とメールを安全に任せる確認方法","link":"/blogs/blog334.html","date":"2026-10-14"},
