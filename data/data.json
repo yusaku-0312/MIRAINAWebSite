@@ -1,5 +1,6 @@
 {
   "blogs": [
+    {"id":341,"title":"AIに資料を要約させるプロンプト｜間違いを減らす指示と確認方法","description":"AIに資料を要約させるプロンプトを、目的・出力形式・推測禁止・確認箇所の4点から解説。仕事で使えるひな形と確認方法を紹介します。","thumbnail":"/images/blogs_images/blog-card341.webp","alt":"AIに資料を要約させるプロンプトと確認方法","link":"/blogs/blog341.html","date":"2026-10-21"},
     {"id":340,"title":"AI導入の効果はどう測る？最初に見る3つの数字","description":"AI導入の効果をどう測るかを、時間・品質・事業への影響の3つの数字と、最初の1か月で試す手順から解説します。","thumbnail":"/images/blogs_images/blog-card340.webp","alt":"AI導入の効果を測る3つの数字","link":"/blogs/blog340.html","date":"2026-10-20"},
     {"id":339,"title":"AIのプロンプトを保存する方法｜仕事で繰り返し使うコツ","description":"AIのプロンプトを保存して仕事で繰り返し使う方法を、コピーできるひな形と共有・見直しの手順で解説します。","thumbnail":"/images/blogs_images/blog-card339.webp","alt":"AIのプロンプトを保存して繰り返し使う方法","link":"/blogs/blog339.html","date":"2026-10-19"},
     {"id":338,"title":"AIの回答が間違っている？仕事で使う前の確認方法","description":"AIの回答が間違っていると感じたときに、出典・日付・条件を確かめる方法と、再確認に使える質問例を解説します。","thumbnail":"/images/blogs_images/blog-card338.webp","alt":"AIの回答を仕事で使う前に確認する方法","link":"/blogs/blog338.html","date":"2026-10-18"},
