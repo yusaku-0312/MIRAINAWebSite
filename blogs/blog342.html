@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>ChatGPTで調べるプロンプト｜根拠を確かめる質問の書き方 | MIRAINAブログ</title>
+    <meta name="description" content="ChatGPTで調べるプロンプトを、検索範囲・一次情報・出典確認の指定から解説。仕事で使える質問例と、回答を確かめる手順を紹介します。">
+    <meta property="og:title" content="ChatGPTで調べるプロンプト｜根拠を確かめる質問の書き方">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog342.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog342-1.webp">
+    <meta property="og:description" content="ChatGPTで調べるプロンプトを、検索範囲・一次情報・出典確認の指定から解説。仕事で使える質問例と、回答を確かめる手順を紹介します。">
+    <link rel="canonical" href="https://miraina-ai.com/blogs/blog342.html">
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+    <style>.article-body .code-block pre{white-space:pre-wrap;overflow-wrap:anywhere;color:#f5f5f5}.article-body .code-block pre code{color:inherit;background:transparent}.article-cta .cta-title{color:#fff}</style>
+</head>
+<body>
+    <header class="header"><div class="container header-inner"><a class="header-logo" href="/"><img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40"></a><div class="hamburger" id="js-hamburger"><span></span><span></span><span></span></div><nav class="header-nav"><div class="nav-item"><a href="/services.html" class="nav-link">サービス</a></div><div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div><div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div><div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div><div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div></nav></div><div class="mobile-menu" id="js-mobile-menu"><nav class="mobile-nav"><div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div><div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div><div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div><div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div><div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div></nav></div></header>
+    <main>
+        <div class="container breadcrumbs"><ul><li><a href="/index.html">ホーム</a></li><li><a href="/blogs.html">ブログ</a></li><li>ChatGPTで調べるプロンプト</li></ul></div>
+        <article class="article-container">
+            <header class="article-header"><div class="article-meta"><span class="article-date">2026.10.22</span><div class="article-tags"><span class="article-tag">ChatGPT</span><span class="article-tag">AI検索</span><span class="article-tag">プロンプト</span></div></div><h1 class="article-title">ChatGPTで調べるプロンプト｜根拠を確かめる質問の書き方</h1><div class="article-thumbnail"><img src="/images/blogs_images/blog342-1.webp" alt="ChatGPTで調べるプロンプトと出典確認の方法" width="1200" height="675" fetchpriority="high"></div></header>
+            <section class="article-summary"><h2 class="sr-only">記事の概要</h2><p>「ChatGPTで調べた内容を仕事に使っていい？」「検索結果のどこを見ればよい？」。AI検索は、調べる範囲と確認の仕方まで一緒に頼むと、次の作業に使いやすい下書きになります。この記事では、初めてでも使える質問のひな形と、出典を確かめる手順を紹介します。</p></section>
+            <div class="article-toc"><div class="toc-title">目次</div><ul><li><a href="#section1">1. AIに調べてもらう前に決めること</a></li><li><a href="#section2">2. そのまま使える調査プロンプト</a></li><li><a href="#section3">3. 出典がある回答でも確認する理由</a></li><li><a href="#section4">4. AIが引用しやすい情報を見分ける</a></li><li><a href="#section5">5. 仕事で使う前の確認フロー</a></li><li><a href="#section6">6. まとめ</a></li></ul></div>
+            <div class="article-body">
+                <h2 id="section1">1. AIに調べてもらう前に決めること</h2>
+                <p><strong>ChatGPTで調べるプロンプトは、「何を知りたいか」だけでなく、いつ時点の情報か、何を根拠にするかまで伝えるのが出発点です。</strong>例えば「補助金を教えて」では、対象地域、事業の種類、締切が必要かどうかが分かりません。AIは不足した条件を補おうとしますが、それが自社に当てはまるとは限りません。</p>
+                <p>AI活用がまだ慣れていない方は、「最新情報を調べて」「おすすめを教えて」と短く入力しがちです。まずは、目的、対象、期間、優先する情報源を一文ずつ足してください。回答の使い道も「社内会議の下調べ」「お客様に見せる前の候補整理」のように書くと、必要な粒度を指定しやすくなります。</p>
+                <p>なお、AIの答えは検索結果を整理した下書きです。契約、金額、制度、医療・法律など、間違える影響が大きい内容は、AIの文章だけで決めません。公的機関、提供元、契約先などの一次情報を最後に開く担当を決めておきましょう。</p>
+
+                <h2 id="section2">2. そのまま使える調査プロンプト</h2>
+                <p>次の角括弧を自分の条件に置き換えれば、ChatGPT、Gemini、Claudeなど、出典を表示できるAI検索で試せます。はじめは公開情報だけを対象にし、社内情報や顧客情報を貼り付けない状態で使うと安心です。</p>
+                <div class="code-block"><pre><code>次の条件で、Web検索を使って調べてください。
+
+目的：［何の判断・作業に使うか］
+調べる対象：［商品・制度・競合・業界など］
+対象地域：［日本全体／都道府県／市区町村］
+対象期間：［いつ以降の情報か］
+優先する情報源：公式サイト、公的機関、一次情報
+
+出力形式：
+1. 結論（3行以内）
+2. 確認できた事実（各項目に出典URL・公開日・発行者）
+3. 条件や例外
+4. 情報が足りない点・確認が必要な点
+
+条件：推測で補わない。出典が確認できない内容は「未確認」と書く。重要な数字、日付、料金、締切は原典の記載を引用して示す。</code></pre></div>
+                <p>例えば「福岡市で美容室を新規開業する際に使える制度を、2026年10月時点で調べたい」と具体化します。結論だけを急ぐより、制度名・対象者・期限・出典を並べてもらう方が、後で確認する時間を減らせます。よく使う質問は、<a href="/blogs/blog339.html">プロンプトを保存して使い回す</a>と担当者間でも条件を揃えやすくなります。</p>
+                <p>比較したいときは、比較軸も先に渡します。「料金、契約期間、導入に必要な準備、サポート範囲を表にし、分からない欄は空欄ではなく未確認と書く」と指定すれば、後から確認すべき場所が見えます。AIに最終判断をさせるのではなく、判断材料を同じ形に揃える役割を任せるイメージです。</p>
+
+                <h2 id="section3">3. 出典がある回答でも確認する理由</h2>
+                <p>出典リンクが付いていれば、そのまま正しいとは限りません。OpenAIは、ChatGPTが誤った事実や存在しない引用を示す可能性があるため、重要な情報は信頼できる情報源で確認するよう案内しています。リンクを開き、回答の文を本当に支えているか、公開日や対象条件は合っているかを見ましょう。</p>
+                <p>確認は難しく考える必要はありません。まず発行者を見る、次に公開日・更新日を見る、最後に数字や条件が回答と同じかを照合する、この順番で十分です。古いページ、まとめサイト、広告記事が混ざることもあるため、公式発表や公的機関の原文に戻る習慣が大切です。</p>
+                <figure class="article-figure"><img src="/images/blogs_images/blog342-2.webp" alt="Claude公式ヘルプのWeb検索説明。検索結果には出典を表示し、重要情報の確認を案内している画面。" loading="lazy" decoding="async"><figcaption>出典：Claude Help Center「Enable and use web search」（2026年10月22日確認）。Web検索の回答には出典が表示され、重要情報の照合が案内されています。</figcaption></figure>
+
+                <h2 id="section4">4. AIが引用しやすい情報を見分ける</h2>
+                <p>AIに「どの記事が引用されるか」を完全に指定することはできません。ただし、質問で公式サイト・公的機関・一次情報を優先するよう伝えれば、確認先を絞れます。商品なら提供会社の料金・仕様ページ、制度なら官公庁や自治体の募集要項、業界動向なら調査元の原典が候補です。</p>
+                <p>逆に、誰が書いたか分からない要約、日付のない比較表、出典へのリンクがない数字は、AIの回答に入っていても判断材料にしません。AIが引用した記事を読んだときは、「誰が」「いつ」「どの条件で」書いたかを確認してください。この3点が明確なページは、人にもAIにも内容が伝わりやすくなります。</p>
+                <p>自社の情報を発信する側も同じです。サービス内容、対象地域、料金の条件、更新日、問い合わせ先をページ内で分かるようにしておくと、読む人が確認しやすくなります。AI検索への表示だけを目的に文章を増やすのではなく、見込み客が迷わず原典へたどり着ける情報の置き方を優先しましょう。</p>
+                <p><strong>MIRAINAの視点：</strong>AI検索で成果を出す会社は、便利な質問を一つ覚えるのではなく、情報源の優先順位と確認の担当を決めています。まずは競合調査や公開情報の整理のように、原典へ戻れる業務から始めるのがおすすめです。自社サイトをAI検索で見つけてもらう情報設計については、<a href="/services/ai_consulting.html">生成AI活用支援</a>でご相談いただけます。</p>
+
+                <h2 id="section5">5. 仕事で使う前の確認フロー</h2>
+                <p>実務では、AIに調査させる → 出典URLを一覧にする → 重要な項目だけ原典を開く → 確認済みの内容を社内資料に反映する、という流れがおすすめです。最初から完璧な調査を頼むより、人が確認する場所を少なくする目的でAIを使います。</p>
+                <p>特に金額、期限、対象条件、法令名は、回答をコピーする前に確認します。回答にない条件を後から見つけたら、元のプロンプトに「対象外となる条件も書く」を加えてもう一度調べます。こうして質問と確認項目を少しずつ整えると、AIの回答を仕事で使う前の不安を減らせます。<a href="/blogs/blog338.html">AIの回答を確認する方法</a>もあわせてご覧ください。</p>
+                <p>社内で共有する場合は、回答の本文だけではなく、使ったプロンプト、調べた日、確認した原典を残します。次の担当者が同じ調査をするときに、どこまで確認済みかを引き継げるからです。毎回の調査を小さな型にしておくことが、AIを属人的な便利ツールで終わらせない第一歩になります。</p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>ChatGPTで調べるプロンプトには、目的・対象・期間・優先する情報源・出力形式を入れます。出典が表示されても、発行者、日付、条件を原典で確認してください。まずは一つの公開情報をテーマに、AIで下調べしてから重要な箇所を人が照合する流れを試してみましょう。</p>
+                <div class="article-references"><div class="ref-title">参考リンク（2026年10月22日確認）</div><ul><li><a href="https://help.openai.com/en/articles/8313428-chatgpt-accuracy-and-limitations" target="_blank" rel="noopener">OpenAI Help Center：Does ChatGPT tell the truth?</a></li><li><a href="https://support.claude.com/en/articles/10684626-enable-and-use-web-search" target="_blank" rel="noopener">Claude Help Center：Enable and use web search</a></li><li><a href="https://openai.com/academy/search-and-deep-research/" target="_blank" rel="noopener">OpenAI Academy：Research with ChatGPT</a></li></ul></div>
+            </div>
+            <div class="article-cta"><div class="cta-box"><h2 class="cta-title">AI検索を、確かめられる仕事の流れにしませんか？</h2><p class="cta-text">質問の型づくりから、情報確認のルール設計まで、<br>現場に合わせて伴走します。</p><a href="/contact.html" class="btn btn-black-fill">無料相談する</a></div></div>
+            <div class="article-editor"><div class="editor-header">この記事を監修した人</div><div class="editor-profile"><div class="editor-image"><img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy"></div><div class="editor-info"><div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div><p class="editor-desc">中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。九州大学大学院でLLMに関する研究にも従事。</p></div></div></div>
+            <div class="article-related"><h2 class="related-title">関連記事</h2><div class="related-grid"><a href="/blogs/blog338.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card338.webp" alt="AIの回答を確認する方法" loading="lazy"></div><div class="related-content"><div class="related-date">2026.10.18</div><div class="related-text">AIの回答が間違っている？仕事で使う前の確認方法</div></div></a><a href="/blogs/blog339.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card339.webp" alt="AIのプロンプトを保存する方法" loading="lazy"></div><div class="related-content"><div class="related-date">2026.10.19</div><div class="related-text">AIのプロンプトを保存する方法｜仕事で繰り返し使うコツ</div></div></a><a href="/blogs/blog341.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card341.webp" alt="AIに資料を要約させるプロンプト" loading="lazy"></div><div class="related-content"><div class="related-date">2026.10.21</div><div class="related-text">AIに資料を要約させるプロンプト｜間違いを減らす指示と確認方法</div></div></a></div></div>
+        </article>
+    </main>
+    <footer class="footer"><div class="container footer-inner"><div class="footer-brand"><a href="/index.html"><p class="footer-brand-text">MIRAINA</p></a></div><div class="footer-menu"><ul class="footer-menu-list"><li><a href="/about.html">私たちについて</a></li><li><a href="/works.html">事例紹介</a></li><li><a href="/blogs.html">ブログ</a></li><li><a href="/contact.html">お問い合わせ</a></li></ul></div></div><div class="footer-bottom"><p>© MIRAINA All Rights Reserved.</p></div></footer>
+    <script src="/js/common.js"></script><script>document.addEventListener('DOMContentLoaded',()=>{const h=document.getElementById('js-hamburger'),m=document.getElementById('js-mobile-menu');if(h&&m)h.addEventListener('click',()=>m.classList.toggle('is-active'));});</script>
+</body>
+</html>
