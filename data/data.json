@@ -1,5 +1,14 @@
 {
   "blogs": [
+    {
+      "id": 343,
+      "title": "Google AI検索のリンク強化で何が変わる？AIに選ばれる記事の作り方",
+      "description": "Google AI検索のリンク強化をもとに、AIに選ばれる記事の作り方を解説。特別なAI対策より先に整える本文・内部リンク・一次情報の見せ方を紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card343.webp",
+      "alt": "Google AI検索で参照されやすい記事を作る方法",
+      "link": "/blogs/blog343.html",
+      "date": "2026-10-23"
+    },
     {"id":342,"title":"ChatGPTで調べるプロンプト｜根拠を確かめる質問の書き方","description":"ChatGPTで調べるプロンプトを、検索範囲・一次情報・出典確認の指定から解説。仕事で使える質問例と、回答を確かめる手順を紹介します。","thumbnail":"/images/blogs_images/blog-card342.webp","alt":"ChatGPTで調べるプロンプトと出典確認の方法","link":"/blogs/blog342.html","date":"2026-10-22"},
     {"id":341,"title":"AIに資料を要約させるプロンプト｜間違いを減らす指示と確認方法","description":"AIに資料を要約させるプロンプトを、目的・出力形式・推測禁止・確認箇所の4点から解説。仕事で使えるひな形と確認方法を紹介します。","thumbnail":"/images/blogs_images/blog-card341.webp","alt":"AIに資料を要約させるプロンプトと確認方法","link":"/blogs/blog341.html","date":"2026-10-21"},
     {"id":340,"title":"AI導入の効果はどう測る？最初に見る3つの数字","description":"AI導入の効果をどう測るかを、時間・品質・事業への影響の3つの数字と、最初の1か月で試す手順から解説します。","thumbnail":"/images/blogs_images/blog-card340.webp","alt":"AI導入の効果を測る3つの数字","link":"/blogs/blog340.html","date":"2026-10-20"},
