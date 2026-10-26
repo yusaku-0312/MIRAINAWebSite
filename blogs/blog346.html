@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>AIスキルとは？毎回の指示を減らす仕事の手順書の作り方 | MIRAINAブログ</title>
+    <meta name="description" content="AIスキルとは何かを解説。毎回同じ指示を減らす仕事の手順書として、作り方・質問例・確認項目を中小企業向けに紹介します。">
+    <meta property="og:title" content="AIスキルとは？毎回の指示を減らす仕事の手順書の作り方">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog346.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog346-1.webp">
+    <meta property="og:description" content="AIスキルとは何かを解説。毎回同じ指示を減らす仕事の手順書として、作り方・質問例・確認項目を紹介します。">
+    <link rel="canonical" href="https://miraina-ai.com/blogs/blog346.html">
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+    <style>.article-body .code-block pre{white-space:pre-wrap;overflow-wrap:anywhere;color:#f5f5f5}.article-body .code-block pre code{color:inherit;background:transparent}.article-cta .cta-title{color:#fff}</style>
+</head>
+<body>
+    <header class="header"><div class="container header-inner"><a class="header-logo" href="/"><img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40"></a><div class="hamburger" id="js-hamburger"><span></span><span></span><span></span></div><nav class="header-nav"><div class="nav-item"><a href="/services.html" class="nav-link">サービス</a></div><div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div><div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div><div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div><div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div></nav></div><div class="mobile-menu" id="js-mobile-menu"><nav class="mobile-nav"><div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div><div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div><div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div><div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div><div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div></nav></div></header>
+    <main>
+        <div class="container breadcrumbs"><ul><li><a href="/index.html">ホーム</a></li><li><a href="/blogs.html">ブログ</a></li><li>AIスキルとは？</li></ul></div>
+        <article class="article-container">
+            <header class="article-header"><div class="article-meta"><span class="article-date">2026.10.26</span><div class="article-tags"><span class="article-tag">AI活用</span><span class="article-tag">AIエージェント</span><span class="article-tag">業務効率化</span></div></div><h1 class="article-title">AIスキルとは？毎回の指示を減らす仕事の手順書の作り方</h1><div class="article-thumbnail"><img src="/images/blogs_images/blog346-1.webp" alt="AIスキルを仕事の手順書として作る方法" width="1200" height="675" fetchpriority="high"></div></header>
+            <section class="article-summary"><h2 class="sr-only">記事の概要</h2><p>「ChatGPTに頼むたび、説明を最初から書いている」「担当者ごとに答えの形が違う」。AIを使い始めた人が次にぶつかる悩みです。この記事では、AIに特定の仕事の手順・判断基準・参照資料を渡す「AIスキル」を、難しい開発をせずに仕事の手順書として設計する方法を解説します。何を任せ、どこを人が確認するかまで整理できます。</p></section>
+            <div class="article-toc"><div class="toc-title">目次</div><ul><li><a href="#section1">1. AIスキルとは何か</a></li><li><a href="#section2">2. なぜ今、手順書が重要なのか</a></li><li><a href="#section3">3. 最初に作るべきAIスキル</a></li><li><a href="#section4">4. 仕事の手順書に入れる4つの情報</a></li><li><a href="#section5">5. AIに手順書の下書きを作らせる質問例</a></li><li><a href="#section6">6. まとめ</a></li></ul></div>
+            <div class="article-body">
+                <h2 id="section1">1. AIスキルとは何か</h2>
+                <p><strong>AIスキルとは、AIに特定の仕事を任せるための「仕事の手順書」をまとめたものです。</strong>目的、作業の順番、参照してよい資料、出力の形、確認事項を渡すことで、毎回ゼロから長い指示を書く回数を減らします。例えば「営業会議の議事録を整える」「口コミへの返信案を作る」「見積もり前のヒアリングを整理する」といった、繰り返し発生する仕事に向いています。</p>
+                <p>2026年10月22日、AnthropicはAIエージェント向けのオープン標準「Agent Skills」をAgentic AI Foundationへ寄贈すると発表しました。同社の説明では、スキルは<code>SKILL.md</code>と必要なスクリプト・参照資料を含むフォルダで、ChatGPT、Cursor、GitHub Copilot、VS Codeを含む70超のプラットフォームが対応しています。ここでいう「スキル」は製品固有の魔法の機能ではなく、AIに業務の文脈と手順を渡す考え方として捉えると分かりやすいでしょう。</p>
+                <figure class="article-figure"><img src="/images/blogs_images/blog346-2.webp" alt="AnthropicによるAgent SkillsをAgentic AI Foundationへ寄贈する公式発表画面" loading="lazy" decoding="async"><figcaption>出典：Anthropic「Donating Agent Skills to the Agentic AI Foundation」（2026年10月22日公開）。Agent Skillsの標準化と対応プラットフォームが案内されています。</figcaption></figure>
+
+                <h2 id="section2">2. なぜ今、手順書が重要なのか</h2>
+                <p>AI活用が苦手な人は「何を聞けばよいか分からない」と検索し、AIを使い慣れた人は「この仕事を任せるためのプロンプトを作って」「過去の回答と同じ形式で出して」と頼むようになります。両者に共通するのは、AIの性能ではなく、仕事の条件がAIに共有されていないことです。指示が担当者の頭の中だけにあると、引き継ぎも改善もできません。</p>
+                <p>AIが外部情報を調べて答える場合も、まず引用されやすいのは公式サイト、公的機関、原典資料です。しかし、自社固有の価格条件、承認ルール、過去のお客様との約束は公開記事からは分かりません。AIに任せる仕事ほど、「一般情報を調べる部分」と「社内で決めた事実を参照する部分」を分ける必要があります。前者はURLを確認し、後者は正本の資料を指定する運用にしましょう。</p>
+                <p>これはプロンプトを保存するだけの話ではありません。<a href="/blogs/blog339.html">AIのプロンプトを保存する方法</a>で扱った定型文に、参照資料と確認担当を足すことで、個人の便利技をチームで再現できる仕事の型に変えられます。</p>
+
+                <h2 id="section3">3. 最初に作るべきAIスキル</h2>
+                <p>最初の題材には、失敗しても人がすぐ直せて、週に何度か発生する仕事を選びます。いきなり契約判断、採用の合否、返金処理を任せる必要はありません。おすすめは、議事録の整理、メール下書き、SNS投稿のたたき台、問い合わせ内容の分類です。答えが一つに決まらない仕事でも、完成前に人が確認できるなら小さく試せます。</p>
+                <div class="article-table-wrapper"><table class="article-table"><thead><tr><th>最初の仕事</th><th>AIに任せる部分</th><th>人が確認する部分</th></tr></thead><tbody><tr><th>会議メモ</th><td>決定事項・担当・期限の抽出</td><td>聞き漏れ、担当名、期限</td></tr><tr><th>問い合わせ</th><td>要件ごとの分類、返信案の下書き</td><td>料金、納期、約束してよい範囲</td></tr><tr><th>発信案</th><td>既存素材からの構成案・見出し案</td><td>事実、表現、公開可否</td></tr></tbody></table></div>
+                <p>「AIが最後まで自動でやる」ことを最初のゴールにすると、例外処理が増えて止まりがちです。まずは作業時間のうち、探す・並べる・下書きする部分だけを切り出してください。仕事の選び方は、<a href="/blogs/blog337.html">AIを仕事で何に使うか</a>も参考になります。</p>
+
+                <h2 id="section4">4. 仕事の手順書に入れる4つの情報</h2>
+                <p>AIスキルは長い文章である必要はありません。担当者が変わっても同じ判断をしやすい、次の4点を一枚にまとめることから始めます。公開されていない顧客情報や個人情報を外部AIへ渡す前には、利用中のプラン・契約・社内ルールも必ず確認してください。</p>
+                <div class="article-table-wrapper"><table class="article-table"><thead><tr><th>情報</th><th>書く内容</th><th>例</th></tr></thead><tbody><tr><th>目的</th><td>何を終わらせれば成功か</td><td>会議後15分で、担当者と期限を共有する</td></tr><tr><th>入力・参照先</th><td>使ってよい資料と使ってはいけない情報</td><td>当日の議事メモのみ。顧客台帳は貼らない</td></tr><tr><th>出力形式</th><td>見出し、文字数、並び順</td><td>決定事項・担当・期限・未決事項の順</td></tr><tr><th>確認項目</th><td>人が止めて確認する条件</td><td>金額・日付・社外送信前の表現を確認</td></tr></tbody></table></div>
+                <p><strong>MIRAINAの視点：</strong>AIの回答品質を上げる近道は、指示を毎回長くすることではありません。現場で何度も聞かれる条件、使ってよい資料、最終確認の責任者を決めておくことです。作業を自動化する前に「どんな答えなら使えるか」を言葉にすると、AIを変えても手順が残ります。</p>
+
+                <h2 id="section5">5. AIに手順書の下書きを作らせる質問例</h2>
+                <p>AIスキルの下書きはAI自身に作らせられます。ただし、業務の事実をAIに推測させず、分からない部分は質問として残すよう指定します。下の質問を使い、実際の担当者と一緒に直してください。AIの回答をそのまま運用ルールにせず、現場で一度試してから確定します。</p>
+                <div class="code-block"><pre><code>次の業務を、AIに任せるための仕事の手順書に整理してください。
+
+業務：［例：毎週の営業会議メモを整理する］
+現在使える資料：［例：会議メモ、公開済みの商品資料］
+AIに渡してはいけない情報：［例：顧客の個人情報、未公開の価格表］
+完成形：［例：決定事項・担当者・期限・未決事項を箇条書き］
+最終確認者：［役割または部署］
+
+出力してほしいこと：
+1. 目的
+2. 入力・参照先
+3. 作業手順
+4. 出力形式
+5. 人が確認する項目
+6. 情報が足りず、担当者に確認すべき質問
+
+条件：渡していない事実は補わない。社外送信や金額・契約に関わる判断は、人の確認が必要な状態で止める。</code></pre></div>
+                <p>質問文の作り方に慣れていない場合は、<a href="/blogs/blog345.html">社員が使い始める3つの質問</a>から小さく試すのがおすすめです。完成した手順書は、使った日・直した点・担当者の迷った箇所を残し、月に一度だけ見直すと育てやすくなります。</p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>AIスキルは、AIに特定の仕事を任せるための手順書です。AIが調べられる一般情報と、自社だけが持つ事実を分け、目的・参照先・出力形式・確認項目を決めれば、毎回同じ説明を繰り返す負担を減らせます。まずは会議メモや返信案など、確認しやすい仕事を一つ選んでください。小さな手順書を共有できる形にすることが、個人利用からチーム活用へ進む土台になります。</p>
+                <div class="article-references"><div class="ref-title">参考リンク（2026年10月26日確認）</div><ul><li><a href="https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation" target="_blank" rel="noopener">Anthropic：Donating Agent Skills to the Agentic AI Foundation（2026年10月22日）</a></li><li><a href="https://agentskills.io/" target="_blank" rel="noopener">Agent Skills：オープン標準の仕様サイト</a></li></ul></div>
+            </div>
+            <div class="article-cta"><div class="cta-box"><h2 class="cta-title">AIに任せられる仕事の型を、現場から作りませんか？</h2><p class="cta-text">業務の切り出し、手順書づくり、確認ルールの設計まで、<br>小さく試せるAI活用を一緒に整えます。</p><a href="/contact.html" class="btn btn-black-fill">無料相談する</a></div></div>
+            <div class="article-editor"><div class="editor-header">この記事を監修した人</div><div class="editor-profile"><div class="editor-image"><img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy"></div><div class="editor-info"><div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div><p class="editor-desc">中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。九州大学大学院でLLMに関する研究にも従事。</p></div></div></div>
+            <div class="article-related"><h2 class="related-title">関連記事</h2><div class="related-grid"><a href="/blogs/blog339.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card339.webp" alt="AIのプロンプトを保存する方法" loading="lazy"></div><div class="related-content"><div class="related-date">2026.10.19</div><div class="related-text">AIのプロンプトを保存する方法｜仕事で繰り返し使うコツ</div></div></a><a href="/blogs/blog344.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card344.webp" alt="社内資料をAIで探す方法" loading="lazy"></div><div class="related-content"><div class="related-date">2026.10.24</div><div class="related-text">社内資料をAIで探すには？仕事で使える3つの質問</div></div></a><a href="/blogs/blog345.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card345.webp" alt="AI導入が進まない理由" loading="lazy"></div><div class="related-content"><div class="related-date">2026.10.25</div><div class="related-text">AI導入が進まない理由｜社員が使い始める3つの質問</div></div></a></div></div>
+        </article>
+    </main>
+    <footer class="footer"><div class="container footer-inner"><div class="footer-brand"><a href="/index.html"><p class="footer-brand-text">MIRAINA</p></a></div><div class="footer-menu"><ul class="footer-menu-list"><li><a href="/about.html">私たちについて</a></li><li><a href="/works.html">事例紹介</a></li><li><a href="/blogs.html">ブログ</a></li><li><a href="/contact.html">お問い合わせ</a></li></ul></div></div><div class="footer-bottom"><p>© MIRAINA All Rights Reserved.</p></div></footer>
+    <script src="/js/common.js"></script><script>document.addEventListener('DOMContentLoaded',()=>{const h=document.getElementById('js-hamburger'),m=document.getElementById('js-mobile-menu');if(h&&m)h.addEventListener('click',()=>m.classList.toggle('is-active'));});</script>
+</body>
+</html>
