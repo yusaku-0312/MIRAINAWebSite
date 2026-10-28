@@ -1,6 +1,15 @@
 {
   "blogs": [
     {
+      "id": 347,
+      "title": "ChatGPTの仕事活用は多様化、初心者が自分の業務に落とす方法",
+      "description": "ChatGPTの仕事活用を、OpenAIの最新利用データから解説。AI初心者が自分の業務に落とす方法、最初の依頼文、根拠確認のポイントを紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card347.webp",
+      "alt": "ChatGPTを自分の仕事で活用する方法",
+      "link": "/blogs/blog347.html",
+      "date": "2026-10-28"
+    },
+    {
       "id": 346,
       "title": "AIスキルとは？毎回の指示を減らす仕事の手順書の作り方",
       "description": "AIスキルとは何かを解説。毎回同じ指示を減らす仕事の手順書として、作り方・質問例・確認項目を中小企業向けに紹介します。",
