@@ -6,6 +6,15 @@
     }
 
     if (root && root.document) {
+        // This shared analytics entry is loaded by both common UI scripts and
+        // pages without that UI. Keep the Clarity integration in its own file.
+        if (root.location.origin === 'https://miraina-ai.com' &&
+            !root.document.querySelector('script[src="/js/clarity.js"]')) {
+            const clarityScript = root.document.createElement('script');
+            clarityScript.src = '/js/clarity.js';
+            clarityScript.async = true;
+            root.document.head.appendChild(clarityScript);
+        }
         api.installGa4EventTracking(root.document, root);
     }
 }(typeof window !== 'undefined' ? window : globalThis, function () {
