@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>ChatGPTの指示の書き方｜OpenAIがModel Specを更新、仕事で決める4つのこと | MIRAINAブログ</title>
+    <meta name="description" content="ChatGPTの指示の書き方を、OpenAIのModel Spec更新を手がかりに解説。AIに仕事を頼む前に伝える目的・前提・確認・根拠の4項目と、すぐ使える依頼文を紹介します。">
+    <meta property="og:title" content="ChatGPTの指示の書き方｜OpenAIがModel Specを更新、仕事で決める4つのこと">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog349.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog349-1.webp">
+    <meta property="og:description" content="ChatGPTに仕事を頼む前に、目的・前提・確認・根拠を伝える方法を解説します。">
+    <link rel="canonical" href="https://miraina-ai.com/blogs/blog349.html">
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+    <style>.article-body .code-block pre{white-space:pre-wrap;overflow-wrap:anywhere;color:#f5f5f5}.article-body .code-block pre code{color:inherit;background:transparent}.article-cta .cta-title{color:#fff}</style>
+</head>
+<body>
+    <header class="header"><div class="container header-inner"><a class="header-logo" href="/"><img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40"></a><div class="hamburger" id="js-hamburger"><span></span><span></span><span></span></div><nav class="header-nav"><div class="nav-item"><a href="/services.html" class="nav-link">サービス</a></div><div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div><div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div><div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div><div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div></nav></div><div class="mobile-menu" id="js-mobile-menu"><nav class="mobile-nav"><div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div><div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div><div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div><div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div><div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div></nav></div></header>
+    <main>
+        <div class="container breadcrumbs"><ul><li><a href="/index.html">ホーム</a></li><li><a href="/blogs.html">ブログ</a></li><li>ChatGPTの指示の書き方</li></ul></div>
+        <article class="article-container">
+            <header class="article-header"><div class="article-meta"><span class="article-date">2026.10.30</span><div class="article-tags"><span class="article-tag">ChatGPT</span><span class="article-tag">プロンプト</span><span class="article-tag">AI活用</span></div></div><h1 class="article-title">ChatGPTの指示の書き方｜OpenAIがModel Specを更新、仕事で決める4つのこと</h1><div class="article-thumbnail"><img src="/images/blogs_images/blog349-1.webp" alt="ChatGPTに仕事を頼む前に伝える4つの項目" width="1200" height="675" fetchpriority="high"></div></header>
+            <section class="article-summary"><h2 class="sr-only">記事の概要</h2><p>「ChatGPTに何を頼めばいいか分からない」「もっともらしい答えを、そのまま使ってよいか不安」。AI活用が苦手な人がまず抱える疑問です。一方、すでに使う人は「根拠と未確認点を分けて」「送信前に確認を止めて」と具体的に頼みます。OpenAIのModel Spec更新を手がかりに、AIに仕事を頼む前に決める4項目と、回答の根拠を確かめる依頼文を解説します。</p></section>
+            <div class="article-toc"><div class="toc-title">目次</div><ul><li><a href="#section1">1. OpenAIが更新したModel Spec</a></li><li><a href="#section2">2. 最初に検索・質問されやすいこと</a></li><li><a href="#section3">3. 指示の前に決める4つのこと</a></li><li><a href="#section4">4. 根拠を確かめる依頼文</a></li><li><a href="#section5">5. AIが引用しやすい情報の整え方</a></li><li><a href="#section6">6. まとめ</a></li></ul></div>
+            <div class="article-body">
+                <h2 id="section1">1. OpenAIが更新したModel Spec</h2>
+                <p><strong>2026年10月29日、OpenAIは、モデルに求める振る舞いを記した公開仕様「Model Spec」を更新しました。</strong>同社は、モデルが具体的な指示を文字どおり解釈するだけでなく、人間の意図と監督に従うことの重要性を説明しています。指針は「人間の意図への忠実さ」「害の最小化」「誠実さと透明性」「人間の主体性」「配慮」の5つを軸に整理されました。</p>
+                <p>これは、普段のChatGPTで「一度の指示で必ず正解になる」という意味ではありません。むしろ、仕事で使う側が目的、前提、確認してほしい点を渡すほど、AIの回答を評価・修正しやすくなるという話です。特にメール、提案書、調査、社内向けの案内では、答えの文章だけでなく、何を根拠にしたかを確認できる状態にしましょう。</p>
+                <figure class="article-figure"><img src="/images/blogs_images/blog349-2.webp" alt="OpenAI公式サイトのModel Spec更新発表画面" loading="lazy" decoding="async"><figcaption>出典：OpenAI「より高性能で有益なAIに向けたModel Specの更新」（2026年10月29日公開）。発表日、公開仕様、5つの中核価値を公式画面で確認しています。</figcaption></figure>
+
+                <h2 id="section2">2. 最初に検索・質問されやすいこと</h2>
+                <p>AIに苦手意識がある人は「ChatGPTの使い方 仕事」「ChatGPT プロンプト 例」「AIの回答は正しい？」と検索しがちです。本当に知りたいのは機能一覧ではなく、<strong>今日の仕事で失敗せずに一つ試す方法</strong>です。最初は、会議メモの整理、メールの下書き、公開済み資料からの要約など、元の情報と照らし合わせられる仕事を選びます。</p>
+                <p>一方、すでにAIを使う人は、「この会議メモから決定事項・担当・期限を表にして」「公式サイトだけを根拠に3社を比較して」「不明な部分は推測せず質問として残して」と頼みます。難しい専門用語を知っているからではありません。仕事の対象、使ってよい情報、完成形、確認したい点を分けて伝えているからです。</p>
+                <div class="article-table-wrapper"><table class="article-table"><thead><tr><th>段階</th><th>よくある検索・質問</th><th>最初のゴール</th></tr></thead><tbody><tr><th>使い始める前</th><td>「ChatGPTを仕事で何に使える？」</td><td>人が確認できる一業務を選ぶ</td></tr><tr><th>試している</th><td>「メールの下書きを作って」</td><td>目的と出力形式を指定する</td></tr><tr><th>使い続けたい</th><td>「根拠と未確認点も出して」</td><td>回答を確かめる流れを残す</td></tr></tbody></table></div>
+
+                <h2 id="section3">3. 指示の前に決める4つのこと</h2>
+                <p>良いプロンプトは、長い文章のことではありません。頼む前に、次の4つを小さく決めると、AIが分からない部分を勝手に埋める余地を減らせます。</p>
+                <div class="article-table-wrapper"><table class="article-table"><thead><tr><th>項目</th><th>決めること</th><th>会議メモの例</th></tr></thead><tbody><tr><th>目的</th><td>何が終われば使えるか</td><td>15分で担当者と期限を共有する</td></tr><tr><th>前提・参照先</th><td>何を使ってよいか</td><td>当日のメモだけ。過去の推測はしない</td></tr><tr><th>出力・確認</th><td>どんな形で、何を人が見るか</td><td>決定事項・担当・期限・未決事項の順</td></tr><tr><th>根拠・未確認点</th><td>事実と推測をどう分けるか</td><td>発言箇所を示し、ない情報は質問にする</td></tr></tbody></table></div>
+                <p>たとえば「提案書を作って」だけでは、対象顧客、使える資料、決めてよい表現、締切が不明です。AIは空欄を自然な文章で補おうとするため、もっともらしくても自社の方針と違う提案になることがあります。指示を短くするなら、まず「資料はこれだけ」「分からない点は質問にする」「最終決定はしない」の3点を足してください。</p>
+                <p><strong>MIRAINAの視点：</strong>AIを使い慣れた人ほど、AIに正解を当てさせようとはしません。人が判断する前に、選択肢、根拠、未確認点を並べさせます。この役割分担なら、AIの回答が期待と違っても、どこを直せばよいかが見えます。</p>
+
+                <h2 id="section4">4. 根拠を確かめる依頼文</h2>
+                <p>次のひな形は、調査や下書きに使えます。社外秘・個人情報を入力する前には、利用中のプラン、社内ルール、渡してよい範囲を確認してください。AIには、事実の確定や社外送信を任せず、確認しやすい形にするところまでを頼みます。</p>
+                <div class="code-block"><pre><code>次の仕事の下書きを作ってください。
+
+目的：［例：取引先への案内メールのたたき台を作る］
+参照してよい情報：［例：この資料と公式サイトのURLだけ］
+出力形式：［例：件名、本文、確認事項を分ける］
+確認ルール：
+・事実は参照元のURLまたは資料名を併記する
+・資料にないことは推測せず「要確認」と書く
+・金額、日付、固有名詞、社外送信前の表現を最後に一覧化する
+・送信や公開はせず、下書きだけを作る</code></pre></div>
+                <p>回答を受け取ったら、リンク先・資料名を開き、日付・金額・固有名詞を確認します。「引用がある」ことと「今も正しい」ことは別です。AIに調査を頼むときは、公開日・更新日も一緒に出すよう求め、古い情報しかなければ判断を止める運用にしてください。出典確認の具体例は、<a href="/blogs/blog325.html">AIの出典確認</a>で解説しています。</p>
+
+                <h2 id="section5">5. AIが引用しやすい情報の整え方</h2>
+                <p>利用者がAIに「福岡で中小企業向けのAI研修を探して」「このサービスに近い会社を比較して」と聞くと、AIは公開されている会社情報、公式の料金・条件、実績ページ、第三者の一次情報を探して答えようとします。会社名だけが並ぶページや、更新日・対象・根拠が分からない記事では、回答の根拠にしにくくなります。</p>
+                <p>自社サイトでは、サービスごとに対象者、できること・できないこと、価格または見積条件、事例の前提、更新日、問い合わせ先を近い場所に書きます。主張と根拠を離さず、事例には業種・実施内容・成果の条件を添えることが大切です。AI検索で参照されやすい会社情報の整え方は、<a href="/blogs/blog331.html">ChatGPTにおすすめされるには？</a>も参考にしてください。</p>
+                <p>これは検索順位だけのためではありません。人がサイトを見たときにも、AIが比較したときにも、「何を頼めて、どこは相談が必要か」が同じように伝わります。自社の正しい情報を一つに定め、古い案内を見直すことが、AIへの指示品質と外部からの信頼の両方につながります。</p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>ChatGPTの指示の書き方で最初に整えるべきなのは、巧い言い回しではなく、目的・前提・確認・根拠の4項目です。OpenAIのModel Spec更新も、AIが人間の意図と監督に従う重要性を示しています。まずは、元資料に戻れる会議メモやメール下書きから始め、事実・未確認点・最終確認者を残す依頼文に変えてみてください。</p>
+                <div class="article-references"><div class="ref-title">参考リンク（2026年10月30日確認）</div><ul><li><a href="https://openai.com/ja-JP/index/updated-model-spec/" target="_blank" rel="noopener">OpenAI：より高性能で有益なAIに向けたModel Specの更新（2026年10月29日）</a></li><li><a href="https://model-spec.openai.com/2026-10-29.html" target="_blank" rel="noopener">OpenAI Model Spec（2026年10月29日版）</a></li></ul></div>
+            </div>
+            <div class="article-cta"><div class="cta-box"><h2 class="cta-title">AIへの頼み方を、現場で使える仕事の型にしませんか？</h2><p class="cta-text">業務の整理、プロンプト設計、根拠確認の流れづくりまで、<br>小さく試せるAI活用を一緒に整えます。</p><a href="/contact.html" class="btn btn-black-fill">無料相談する</a></div></div>
+            <div class="article-editor"><div class="editor-header">この記事を監修した人</div><div class="editor-profile"><div class="editor-image"><img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async"></div><div class="editor-info"><div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div><p class="editor-desc">中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。九州大学大学院でLLMに関する研究にも従事。</p></div></div></div>
+            <div class="article-related"><h2 class="related-title">関連記事</h2><div class="related-grid"><a href="/blogs/blog325.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card325.webp" alt="AIの出典確認の方法" loading="lazy" decoding="async"></div><div class="related-content"><div class="related-date">2026.10.03</div><div class="related-text">AIの出典確認｜ChatGPTで調査結果を鵜呑みにしない3つの質問</div></div></a><a href="/blogs/blog328.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card328.webp" alt="ChatGPTのプロンプトの書き方" loading="lazy" decoding="async"></div><div class="related-content"><div class="related-date">2026.10.07</div><div class="related-text">ChatGPTのプロンプトの書き方｜仕事で使える3つの伝え方</div></div></a><a href="/blogs/blog347.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card347.webp" alt="ChatGPTを自分の仕事で活用する方法" loading="lazy" decoding="async"></div><div class="related-content"><div class="related-date">2026.10.28</div><div class="related-text">ChatGPTの仕事活用は多様化、初心者が自分の業務に落とす方法</div></div></a></div></div>
+        </article>
+    </main>
+    <footer class="footer"><div class="container footer-inner"><div class="footer-brand"><a href="/index.html"><p class="footer-brand-text">MIRAINA</p></a></div><div class="footer-center"></div><div class="footer-menu"><ul class="footer-menu-list"><li><a href="/about.html">私たちについて</a></li><li><a href="/works.html">事例紹介</a></li><li><a href="/blogs.html">ブログ</a></li><li><a href="/contact.html">お問い合わせ</a></li><li><a href="/privacy_policy.html">プライバシーポリシー</a></li></ul></div></div><div class="footer-bottom"><p>&copy; MIRAINA All Rights Reserved.</p></div></footer>
+    <script src="/js/common.js"></script>
+</body>
+</html>

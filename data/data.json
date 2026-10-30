@@ -1,6 +1,15 @@
 {
   "blogs": [
     {
+      "id": 349,
+      "title": "ChatGPTの指示の書き方｜OpenAIがModel Specを更新、仕事で決める4つのこと",
+      "description": "ChatGPTの指示の書き方を、OpenAIのModel Spec更新を手がかりに解説。AIに仕事を頼む前に伝える目的・前提・確認・根拠の4項目と、すぐ使える依頼文を紹介します。",
+      "thumbnail": "/images/blogs_images/blog-card349.webp",
+      "alt": "ChatGPTに仕事を頼む前に伝える4つの項目",
+      "link": "/blogs/blog349.html",
+      "date": "2026-10-30"
+    },
+    {
       "id": 348,
       "title": "ChatGPT連携アプリで何ができる？業務を任せる前に決める4つのこと",
       "description": "ChatGPT連携アプリで何ができるかを解説。社内情報・権限・承認・確認者を決めて安全に業務を任せる方法を紹介します。",
