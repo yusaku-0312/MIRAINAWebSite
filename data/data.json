@@ -1,6 +1,15 @@
 {
   "blogs": [
     {
+      "id": 350,
+      "title": "robots.txtでAI学習を拒否できる？ChatGPTの引用とは別に考える理由",
+      "description": "robots.txtのAI学習設定とChatGPTの引用は同じではありません。OpenAIの最新発表をもとに、サイト運営者が決めることを解説します。",
+      "thumbnail": "/images/blogs_images/blog-card350.webp",
+      "alt": "robots.txtのAI学習設定とChatGPTからの引用の違い",
+      "link": "/blogs/blog350.html",
+      "date": "2026-10-31"
+    },
+    {
       "id": 349,
       "title": "ChatGPTの指示の書き方｜OpenAIがModel Specを更新、仕事で決める4つのこと",
       "description": "ChatGPTの指示の書き方を、OpenAIのModel Spec更新を手がかりに解説。AIに仕事を頼む前に伝える目的・前提・確認・根拠の4項目と、すぐ使える依頼文を紹介します。",

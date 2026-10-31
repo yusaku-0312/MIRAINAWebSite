@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>robots.txtでAI学習を拒否できる？ChatGPTの引用とは別に考える理由 | MIRAINAブログ</title>
+    <meta name="description" content="robots.txtのAI学習設定とChatGPTの引用は同じではありません。OpenAIの最新発表をもとに、サイト運営者が決めること、AIに聞かれやすい情報の整え方を解説します。">
+    <meta property="og:title" content="robots.txtでAI学習を拒否できる？ChatGPTの引用とは別に考える理由">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog350.html">
+    <meta property="og:image" content="https://miraina-ai.com/images/blogs_images/blog350-1.webp">
+    <meta property="og:description" content="robots.txtのAI学習設定と、ChatGPTに引用される情報の整え方を解説します。">
+    <link rel="canonical" href="https://miraina-ai.com/blogs/blog350.html">
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/blog_article.css">
+    <style>.article-body .code-block pre{white-space:pre-wrap;overflow-wrap:anywhere;color:#f5f5f5}.article-body .code-block pre code{color:inherit;background:transparent}.article-cta .cta-title{color:#fff}</style>
+</head>
+<body>
+    <header class="header"><div class="container header-inner"><a class="header-logo" href="/"><img src="/images/company-logo.webp" alt="MIRAINA" width="120" height="40"></a><div class="hamburger" id="js-hamburger"><span></span><span></span><span></span></div><nav class="header-nav"><div class="nav-item"><a href="/services.html" class="nav-link">サービス</a></div><div class="nav-item"><a href="/about.html" class="nav-link">MIRAINAについて</a></div><div class="nav-item"><a href="/works.html" class="nav-link">事例紹介</a></div><div class="nav-item"><a href="/blogs.html" class="nav-link">ブログ</a></div><div class="nav-item"><a href="/contact.html" class="nav-link btn-contact">お問い合わせ</a></div></nav></div><div class="mobile-menu" id="js-mobile-menu"><nav class="mobile-nav"><div class="mobile-nav-item"><a href="/services.html" class="mobile-nav-link">サービス</a></div><div class="mobile-nav-item"><a href="/about.html" class="mobile-nav-link">MIRAINAについて</a></div><div class="mobile-nav-item"><a href="/works.html" class="mobile-nav-link">事例紹介</a></div><div class="mobile-nav-item"><a href="/blogs.html" class="mobile-nav-link">ブログ</a></div><div class="mobile-nav-item"><a href="/contact.html" class="mobile-nav-link">お問い合わせ</a></div></nav></div></header>
+    <main>
+        <div class="container breadcrumbs"><ul><li><a href="/index.html">ホーム</a></li><li><a href="/blogs.html">ブログ</a></li><li>robots.txtとAI学習</li></ul></div>
+        <article class="article-container">
+            <header class="article-header"><div class="article-meta"><span class="article-date">2026.10.31</span><div class="article-tags"><span class="article-tag">robots.txt</span><span class="article-tag">AI学習</span><span class="article-tag">LLMO</span></div></div><h1 class="article-title">robots.txtでAI学習を拒否できる？ChatGPTの引用とは別に考える理由</h1><div class="article-thumbnail"><img src="/images/blogs_images/blog350-1.webp" alt="robots.txtのAI学習設定とChatGPTからの引用の違い" width="1200" height="675" fetchpriority="high"></div></header>
+            <section class="article-summary"><h2 class="sr-only">記事の概要</h2><p>「自社サイトをAIに学習させたくない。robots.txtを変えれば、ChatGPTに会社名や記事が出なくなる？」「逆に、AIにおすすめされたいなら何も拒否しない方がよい？」。この二つは混同されやすい疑問です。OpenAIの最新発表を手がかりに、AI学習の利用意向、検索・閲覧、回答での引用を分けて考え、サイト運営者が先に決めることを整理します。</p></section>
+            <div class="article-toc"><div class="toc-title">目次</div><ul><li><a href="#section1">1. OpenAIが発表した共通シグナル</a></li><li><a href="#section2">2. AI学習・閲覧・引用は別の話</a></li><li><a href="#section3">3. 実際に検索・質問されること</a></li><li><a href="#section4">4. AIが根拠にしやすい記事の条件</a></li><li><a href="#section5">5. 今、サイト運営者が決めること</a></li><li><a href="#section6">6. まとめ</a></li></ul></div>
+            <div class="article-body">
+                <h2 id="section1">1. OpenAIが発表した共通シグナル</h2>
+                <p><strong>OpenAIは2026年10月30日、ウェブサイト運営者が生成AIの基盤モデル学習への利用意向を伝えるための、robots.txt上の共通シグナルを尊重する方針を発表しました。</strong>これまで提供企業ごとにクローラーを識別してルールを管理していた運営者が、複数の参加事業者へ同じ意向を伝えやすくするための取り組みです。</p>
+                <p>重要なのは、これは「今すぐ一行追加すれば、すべてのAIへの扱いが確定する」という発表ではないことです。OpenAIは今後数か月での実装を目指すとし、既存のrobots.txtによるクローラー制御も引き続き適用・尊重すると説明しています。具体的な運用や対応範囲は、実装詳細の公開後に確認する必要があります。</p>
+                <figure class="article-figure"><img src="/images/blogs_images/blog350-2.webp" alt="OpenAI公式サイトで公開されたAI学習への利用意向を伝える共通シグナルの発表画面" loading="lazy" decoding="async"><figcaption>出典：OpenAI「AI 学習への利用意向をウェブサイトが伝えやすくする仕組み」（2026年10月30日）。共通シグナルは生成AIの基盤モデル学習に関する利用意向を伝えるものです。</figcaption></figure>
+
+                <h2 id="section2">2. AI学習・閲覧・引用は別の話</h2>
+                <p>「AIに使われる」という言葉には、少なくとも三つの場面があります。第一に、基盤モデルを訓練するためにコンテンツを使うこと。第二に、検索や回答生成の時点でページを見にいくこと。第三に、利用者への回答でサイト名やリンクを根拠として示すことです。目的も技術的な経路も異なるため、一つの設定だけで一律に判断できるとは限りません。</p>
+                <div class="article-table-wrapper"><table class="article-table"><thead><tr><th>場面</th><th>運営者が確認すること</th><th>混同しないための見方</th></tr></thead><tbody><tr><th>AI学習</th><td>基盤モデル訓練への利用意向</td><td>今回の共通シグナルが対象とする中心領域</td></tr><tr><th>検索・閲覧</th><td>検索用クローラーや公開範囲</td><td>検索結果に出ることと学習利用は別</td></tr><tr><th>回答での引用</th><td>質問への適合性、情報の明確さ、公開状態</td><td>引用を保証する設定ではなく、回答時の判断に左右される</td></tr></tbody></table></div>
+                <p>したがって「学習利用を控えてほしい」という意向と、「ユーザーが会社を探したときは正確な公式情報を見てほしい」という意向は、両立し得ます。設定を変える前に、どの利用を許可・制限したいのか、サイトの目的を文章にして分けましょう。</p>
+
+                <h2 id="section3">3. 実際に検索・質問されること</h2>
+                <p>AI活用に不慣れな人は「robots.txt AI 学習 拒否」「ChatGPTに自分のサイトを学習させない方法」「AIに会社情報を出さない方法」と検索し、設定の有無を先に知りたがります。一方、日常的にAIを使う担当者は、ChatGPTやGeminiに「福岡の中小企業向けAI研修会社を、公式サイトを根拠に比較して」「このサービスの料金・対象・できないことを、出典URL付きで整理して」と聞くでしょう。</p>
+                <p>後者の回答でAIが探しやすいのは、サービスの対象、提供内容、価格または見積条件、対応地域、更新日が近い場所にある一次情報です。派手な宣伝文だけのページより、「誰に何を提供し、どの条件では対応できないか」が確認できるページの方が、人にもAIにも使いやすくなります。ただし、内容を整えても、個々のAIや質問で引用されることは保証できません。</p>
+
+                <h2 id="section4">4. AIが根拠にしやすい記事の条件</h2>
+                <p>「AIに引用される記事」を作る目的は、機械をだますことではありません。質問された人が、結論と根拠をたどれる状態を作ることです。たとえば新しい制度や製品機能を説明するなら、発表元、公開日、対象プラン、利用できる地域、分からない点を分けます。主張だけで終わらせず、公式ページへのリンクを置くと、読者が更新後の情報も確認できます。</p>
+                <div class="code-block"><pre><code>AIに、自社に関する回答を確認させる質問例
+
+「［会社名］の［サービス名］について、公式サイトだけを使い、
+対象者・できること・料金または見積条件・導入までの流れを整理してください。
+各項目にURLを付け、公式情報で確認できないことは推測せず
+『要確認』と書いてください。情報の更新日も示してください。」</code></pre></div>
+                <p>この質問で出た回答は、掲載順位や正確性の採点ではありません。リンク先を実際に開き、古い料金、別サービスの説明、対象外の地域が混ざっていないかを見るための点検材料です。AIの出典確認は、<a href="/blogs/blog325.html">ChatGPTの調査結果を鵜呑みにしない3つの質問</a>も参考にしてください。</p>
+
+                <h2 id="section5">5. 今、サイト運営者が決めること</h2>
+                <p>最初に行うべきは、検索順位だけを理由にrobots.txtを編集することではありません。①学習利用についての方針、②検索・閲覧を必要とする公開ページ、③社外に出してよい情報、④回答に使われたときも正確であってほしい公式ページ、を担当者間で決めます。著作物、会員限定ページ、顧客情報を含む資料は、公開設定そのものから確認してください。</p>
+                <p>その上で、各AI提供者の公式ドキュメントと、利用中のCMSや配信基盤の仕様を確認します。今回の共通シグナルは実装予定段階なので、未確定の記述をコピーして本番設定へ入れるのは避けるべきです。公開情報を整える作業は、<a href="/blogs/blog343.html">AIに選ばれる記事の作り方</a>、設定とコンテンツを一緒に点検する際は<a href="/blogs/blog175.html">構造化データとLLMO対策</a>もあわせてご覧ください。</p>
+                <p><strong>MIRAINAの視点：</strong>AIに関する設定は「許可するか、拒否するか」の二択に見えますが、実務では用途ごとに情報を分ける設計が重要です。自社が出すべき公式情報を先に整え、学習・閲覧・引用の目的を分けて判断すれば、後から設定を見直すときにも迷いにくくなります。</p>
+
+                <h2 id="section6">6. まとめ</h2>
+                <p>OpenAIが発表したrobots.txtの共通シグナルは、基盤モデル学習への利用意向を複数のAI提供者に伝えやすくする取り組みです。これは、検索で見つかることやChatGPTなどの回答で引用されることを直接決める仕組みではありません。まずは自社の利用方針を用途別に整理し、正確な公式ページを保ちましょう。設定の詳細が公開されたら、対象・時期・既存ルールとの関係を公式情報で確認してから対応することが安全です。</p>
+                <div class="article-references"><div class="ref-title">参考リンク（2026年10月31日確認）</div><ul><li><a href="https://openai.com/ja-JP/index/helping-websites-express-ai-training-preferences/" target="_blank" rel="noopener">OpenAI：AI 学習への利用意向をウェブサイトが伝えやすくする仕組み（2026年10月30日）</a></li><li><a href="https://developers.openai.com/api/docs/bots" target="_blank" rel="noopener">OpenAI Developers：クローラー制御</a></li><li><a href="https://datatracker.ietf.org/doc/draft-ietf-aipref-vocab/" target="_blank" rel="noopener">IETF：AI Preferences Vocabulary（ドラフト）</a></li></ul></div>
+            </div>
+            <div class="article-cta"><div class="cta-box"><h2 class="cta-title">AIに見つけられても、誤解されにくい情報へ</h2><p class="cta-text">公開情報の棚卸し、AI検索を意識した記事設計、<br>運用ルールづくりまで一緒に整えます。</p><a href="/contact.html" class="btn btn-black-fill">無料相談する</a></div></div>
+            <div class="article-editor"><div class="editor-header">この記事を監修した人</div><div class="editor-profile"><div class="editor-image"><img src="/images/shiba_yusaku.webp" alt="本記事の監修者 芝優作（MIRAINA）" loading="lazy" decoding="async"></div><div class="editor-info"><div class="editor-name">芝 優作 <span class="editor-role">MIRAINA代表 / AIコンサルタント</span></div><p class="editor-desc">中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。九州大学大学院でLLMに関する研究にも従事。</p></div></div></div>
+            <div class="article-related"><h2 class="related-title">関連記事</h2><div class="related-grid"><a href="/blogs/blog325.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card325.webp" alt="AIの出典確認の方法" loading="lazy"></div><div class="related-content"><div class="related-date">2026.10.03</div><div class="related-text">AIの出典確認｜ChatGPTで調査結果を鵜呑みにしない3つの質問</div></div></a><a href="/blogs/blog343.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card343.webp" alt="AIに選ばれる記事の作り方" loading="lazy"></div><div class="related-content"><div class="related-date">2026.10.21</div><div class="related-text">AIに選ばれる記事の作り方｜事実・条件・根拠を伝える</div></div></a><a href="/blogs/blog349.html" class="related-card"><div class="related-img"><img src="/images/blogs_images/blog-card349.webp" alt="ChatGPTの指示の書き方" loading="lazy"></div><div class="related-content"><div class="related-date">2026.10.30</div><div class="related-text">ChatGPTの指示の書き方｜仕事で決める4つのこと</div></div></a></div></div>
+        </article>
+    </main>
+    <footer class="footer"><div class="container footer-inner"><div class="footer-brand"><a href="/index.html"><p class="footer-brand-text">MIRAINA</p></a></div><div class="footer-center"></div><div class="footer-menu"><ul class="footer-menu-list"><li><a href="/about.html">私たちについて</a></li><li><a href="/works.html">事例紹介</a></li><li><a href="/blogs.html">ブログ</a></li><li><a href="/contact.html">お問い合わせ</a></li><li><a href="/privacy_policy.html">プライバシーポリシー</a></li></ul></div></div><div class="footer-bottom"><p>&copy; MIRAINA All Rights Reserved.</p></div></footer>
+    <script src="/js/common.js"></script>
+</body>
+</html>
