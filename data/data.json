@@ -1,5 +1,6 @@
 {
   "blogs": [
+    {"id":352,"title":"AIにパソコン操作を任せる方法｜仕事で使うプロンプト3選","description":"AIにパソコン操作を任せる方法を解説。GPT-6.1 Terraの発表を手がかりに、最初に任せる業務、仕事で使うプロンプト3選、承認と記録の設計を紹介します。","thumbnail":"/images/blogs_images/blog-card352.webp","alt":"AIにパソコン操作を任せる方法","link":"/blogs/blog352.html","date":"2026-11-02"},
     {"id":351,"title":"Geminiで資料を作る方法｜ファイルを直接編集するプロンプト3選","description":"Geminiで資料を作る方法を解説。Googleの最新機能をもとに、文書・表・スライドの下書きから確認、修正までを進める初心者向けプロンプト3選を紹介します。","thumbnail":"/images/blogs_images/blog-card351.webp","alt":"Geminiで資料を作成しファイルを直接編集する方法","link":"/blogs/blog351.html","date":"2026-11-01"},
     {
       "id": 350,
